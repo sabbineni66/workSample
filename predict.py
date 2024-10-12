@@ -50,7 +50,7 @@ def read_file_contents(file):
     file_extension = os.path.splitext(file.name)[1].lower()
     
     try:
-        if file_extension in ['.txt', '.cpp', '.java', '.js', '.py', '.groovy', '.json', '.xml', '.yml', '.go', '.rb', '.scala', '.sql', '.swift', '.php', '.r']:
+        if file_extension in ['.txt', '.cpp', '.java', '.js', '.py', '.groovy', '.json', '.xml', '.yml', '.go', '.scala', '.sql', '.swift', '.php']:
             return file.getvalue().decode("utf-8")
         else:
             return None
@@ -65,7 +65,7 @@ def main():
     st.write("Upload one or more code or configuration files to detect their programming languages or file types using a fine-tuned CodeBERT model.")
     
     # File upload input - allowing multiple files including .yml
-    uploaded_files = st.file_uploader("Choose files", type=["txt", "cpp", "java", "js", "py", "groovy", "json", "xml", "yml", 'go', 'ruby', 'scala', 'sql', 'swift', 'php'], accept_multiple_files=True)
+    uploaded_files = st.file_uploader("Choose files", type=["txt", "cpp", "java", "js", "py", "groovy", "json", "xml", "yml", 'go', 'scala', 'sql', 'swift', 'php'], accept_multiple_files=True)
 
     if uploaded_files:
         start_time = time.time()  # Track the time for performance
