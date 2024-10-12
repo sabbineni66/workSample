@@ -1,0 +1,9 @@
+one:
+  message: MyString
+  project: one
+  user: one
+
+two:
+  message: MyString
+  project: one
+  user: one

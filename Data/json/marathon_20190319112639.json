@@ -1,0 +1,22 @@
+{
+  "id": "marathon-spread",
+  "instances": 1,
+  "cpus": 0.1,
+  "mem": 256,
+  "uris": [
+    "file:///data/docker/docker.tar.gz"
+  ],
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "shirkevich/marathon-spread",
+      "network": "BRIDGE"
+    }
+  },
+  "env": {
+    "MARATHON_URL": "http://marathon.service.consul:8080"
+  },
+  "labels": {
+    "env": "srv"
+  }
+}

@@ -1,0 +1,60 @@
+de:
+  #=authlogic
+  authlogic:
+    page_title:
+      new: Login
+    
+    account: Account
+    login: Login
+    logout: Logout
+    login_page_title: Login
+    change_password: Passwort ?ndern
+    remember_me: Kennwort speichern
+    
+    password_resets:
+      forgot_your_password: "Passwort vergessen?"
+      submit : "Passwort zur?cksetzen"
+      update_my_password: "Passwort aktualisieren und einloggen"
+      new_title: Ihr Passwort zur?cksetzen
+      new_intro: Bitte f?llen Sie das untenstehende Feld aus, damit Ihr Passwort zur?ckgesetzt und Ihnen per E-Mail zugesendet wird.  
+      edit_title: Ihr Passwort ?ndern
+      reset_password_instruct_before_link: Wir haben Ihre Anfrage zur Reinitialisierung Ihres Passwortes erhalten. Falls die Anfrage ungewollt sein sollte, so ignorieren Sie bitte diese Nachricht. Wenn allerdings diese Anfrage korrekt sein sollte, so rufen Sie bitte den untenstehenden Link auf.
+      reset_password_instruct_after_link: Falls der untenstehende Link nicht funktionieren sollte, versuchen Sie diesen zu kopieren und in die Adressleiste Ihres Browsers einzuf?gen. Falls das Problem weiterhin bestehen sollte, so bitten wir Sie uns zu kontaktieren.
+      reset_password_instruct_title: Anfrage zur Passwort?nderung
+    
+    notifier:
+      password_reset:
+        subject: So setzen Sie Ihr Passwort zur?ck
+    
+    flash:
+      require_no_user: "Sie m?ssen sich ausloggen, um auf diese Seite Zugriff zu haben"
+      require_user: "Sie m?ssen sich einloggen, um auf diese Seite Zugriff zu haben"
+      login: Sie sind gerade eingeloggt
+      logout: Sie sind nun ausgeloggt
+      access_denied: Zugang verweigert
+      password_reset_instructions: Eine Beschreibung wie Sie Ihr Passwort zur?cksetzen k?nnen wurde Ihnen per E-Mail zugesendet. Bitte ?berpr?fen Sie Ihre E-Mails.
+      password_reset_no_user: Diese E-Mail ist uns nicht bekannt.
+      password_reset_updated: "Passwort erfolgreich ge?ndert"
+      password_reset_no_token: "Ihr Account wurde leider nicht gefunden. Bei Problemen, versuchen Sie bitte die in Ihrer E-Mail angezeigte URL zu kopieren und in Ihren Browser einzuf?gen oder setzen Sie Ihr Passwort erneut zur?ck."
+      password_reset_no_user: "Es wurde kein Benutzer unter dieser Adresse gefunden"
+      
+    
+    error_messages:
+      login_header_message: Verbindung fehlgeschlagen
+      login_blank: Das Login-Feld darf nicht leer sein
+      login_not_found: Diese E-Mail ist nicht in unserer Datenbank.
+      login_invalid: Login ist ung?ltig
+      consecutive_failed_logins_limit_exceeded: Maximale Anzahl an Versuchen erreicht. Account wurde deaktiviert.
+      email_invalid: E-Mail ist ung?ltig
+      password_blank: Das Passwort-Feld darf nicht leer sein
+      password_invalid: Passwort ist ung?ltig
+      not_active: Ihr Account ist nicht aktiviert
+      not_confirmed: Ihr Account wurde noch nicht best?tigt
+      not_approved: Ihr Account ist nicht freigeschaltet
+      no_authentication_details: Details zur Authentifizierung fehlen
+      password_length: Passwort ist zu kurz
+      email_length: L?nge der E-Mail ist unzul?ssig  (min. 6 Zeichen; max. 100)
+      email_format: Format der E-Mail ist ung?ltig
+      email_uniqueness: Diese E-Mail ist bereits in unserer Datenbank.
+      password_confirmation_length: Passwort-Best?tigung ist ung?ltig
+      confirmation_of_password_field: Passwort-Best?tigung stimmt mit Ihrem Passwort nicht ?berein

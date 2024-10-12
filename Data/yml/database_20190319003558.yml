@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: all_aboard_development
+  user: vagrant
+
+test:
+  adapter: postgresql
+  database: all_aboard_test
+  user: vagrant

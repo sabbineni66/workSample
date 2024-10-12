@@ -1,0 +1,26 @@
+application:
+    service:
+        someProp2: A property value from multiple configuration file (for undefined profile)
+        anotherProp2: another property value from multiple configuration file (for undefined profile)
+
+---
+
+spring:
+    profiles: development
+
+application:
+    service:
+        someProp2: A property value from multiple configuration file (for development profile)
+        anotherProp2: another property value from multiple configuration file (for development profile)
+
+
+---
+
+spring:
+    profiles: production
+
+application:
+    service:
+        someProp2: A property value from multiple configuration file (for production profile)
+        anotherProp2: another property value from multiple configuration file (for production profile)
+

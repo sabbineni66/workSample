@@ -1,0 +1,16 @@
+require: rubocop-rspec
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: when_needed

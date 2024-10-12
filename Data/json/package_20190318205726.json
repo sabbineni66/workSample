@@ -1,0 +1,23 @@
+{
+  "name": "ioreg-api",
+  "version": "0.0.1",
+  "description": "ioreg-api",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jnewland/ioreg-api"
+  },
+  "author": "Jesse Newland <jesse@jnewland.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jnewland/ioreg-api/issues"
+  },
+  "dependencies": {
+    "execa": "0.4.0",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "plist": "1.2.0"
+  }
+}

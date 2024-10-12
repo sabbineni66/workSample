@@ -1,0 +1,53 @@
+<?xml version="1.0">
+<level star1="3" star2="2" star3="1" time1="15" time2="10" time3="5" star_type="timer">
+  <object type="CANNON" x="-25.0f" y="130.0f" />
+  
+  <object type="ACCEL_SWITCH" x="300.0f" y="75.0f" />
+  
+  <object type="CIRCLE" x="115.0f" y="300.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="160.0f" y="120.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="278.0f" y="275.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="215.0f" y="150.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="30.0f" y="20.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="3000f" y="20.0f" radius="30.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="115.0f" y="300.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="175.0f" y="20.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="160.0f" y="120.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="278.0f" y="275.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="215.0f" y="150.0f" radius="30.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="30.0f" y="20.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="300f" y="20.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="30.0f" y="20.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="300.0f" y="20.0f" radius="30.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="115.0f" y="300.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="175.0f" y="20.0f" radius="40.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="160.0f" y="120.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="278.0f" y="275.0f" radius="40.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="215.0f" y="150.0f" radius="30.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="30.0f" y="20.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="CIRCLE" x="300.0f" y="20.0f" radius="20.0f" physics="DYNAMIC" />
+  
+  <object type="GOAL" x="240.0f" y="160.0f" />
+  
+</level>

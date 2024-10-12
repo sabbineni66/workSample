@@ -1,0 +1,4 @@
+check_scheduler:
+  cron: '*/5 * * * *'
+  class: 'ServiceCheckSchedulerJob'
+  queue: 'default'

@@ -1,0 +1,16 @@
+{
+  "Name"     : "Bite",
+  "Kind"     : "HP",
+  "Animation": "melee",
+  "Texture"   : {
+    "Path": "actions/icons/bite.png"
+  },
+  "Ap"       : 5,
+  "Strength" : 10,
+  "Damage"   : 3,
+  "Range"    : 1,
+  "Target_enemies": true,
+  "Sounds"   : {
+    "bite": "Haunts/SFX/Denizens/Bosses/Vampire/Bite"
+    }  
+}

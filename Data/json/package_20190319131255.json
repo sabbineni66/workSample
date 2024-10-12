@@ -1,0 +1,21 @@
+{
+  "name": "help-desk-styleguide",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run styleguide && npm run serve",
+    "styleguide": "rsg \"components/**/*.js\"",
+    "serve": "serve ./styleguide"
+  },
+  "dependencies": {
+    "react": "^0.14.6",
+    "react-bootstrap": "^0.28.2",
+    "react-dom": "^0.14.6",
+    "react-styleguide-generator": "^1.2.1"
+  },
+  "devDependencies": {
+    "serve": "^1.4.0"
+  },
+  "author": "Western Cape Labs (Pty) Ltd",
+  "license": "BSD 3 Clause"
+}

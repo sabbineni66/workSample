@@ -1,0 +1,7 @@
+{
+  "license": "UNLICENSED",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.4.0-dev.20190315"
+  }
+}

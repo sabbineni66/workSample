@@ -1,0 +1,32 @@
+{
+  "name": "duceck",
+  "version": "0.1.1",
+  "description": "Arduino Chess Clock",
+  "keywords": ["chess", "clock", "arduino"],
+  "author": {
+    "name": "Sijawusz Pur Rahnama",
+    "email": "sija@sija.pl"
+  },
+  "homepage": "https://github.com/Sija/duceck",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Sija/duceck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sija/duceck/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Sija/duceck/blob/master/LICENSE"
+    }
+  ],
+  "main": "index",
+  "engines": {
+    "node": ">= 0.6.x"
+  },
+  "dependencies": {
+    "johnny-five": ">= 0.5",
+    "commander": ">= 1.0"
+  }
+}

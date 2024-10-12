@@ -1,0 +1,30 @@
+language: ruby
+script: bundle exec rspec spec
+sudo: false
+cache: bundler
+env:
+  - DB=sqlite3
+  - DB=sqlite3mem
+  - DB=postgresql
+  - DB=mysql
+rvm:
+  - 2.3.1
+  - 2.2.5
+  - 2.1.10
+gemfile:
+  - gemfiles/rails_4.0.gemfile
+  - gemfiles/rails_4.1.gemfile
+  - gemfiles/rails_4.2.gemfile
+  - gemfiles/rails_5.0.gemfile
+  - gemfiles/rails_5.1.gemfile
+matrix:
+  exclude:
+    - rvm: 2.1.10
+      gemfile: gemfiles/rails_5.0.gemfile
+    - rvm: 2.1.10
+      gemfile: gemfiles/rails_5.1.gemfile
+notifications:
+  webhooks:
+    urls:
+      - https://buildlight.collectiveidea.com/
+    on_start: always

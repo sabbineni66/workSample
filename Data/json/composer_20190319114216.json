@@ -1,0 +1,36 @@
+{
+    "name": "divbyzero/logger-aware-bundle",
+    "description": "LoggerAwareBundle is a Symfony2 bundle that automatically injects logger instances into selected services.",
+    "version": "0.1.0",
+    "type": "symfony-bundle",
+    "keywords": ["logging"],
+    "time": "2015-01-11",
+    "license": "Apache License",
+    "authors": [
+        {
+            "name": "Martin Jansen",
+            "email": "martin@divbyzero.net",
+            "homepage": "https://martinjansen.com/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/mj/LoggerAwareBundle"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "psr/log": "~1.0",
+        "symfony/http-kernel": ">=2.3",
+        "symfony/dependency-injection": ">=2.3",
+        "symfony/config": ">=2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=4.8"
+    },
+    "autoload": {
+        "psr-0": {
+            "divbyzero\\LoggerAwareBundle": ""
+        }
+    },
+    "target-dir": "divbyzero/LoggerAwareBundle"
+}

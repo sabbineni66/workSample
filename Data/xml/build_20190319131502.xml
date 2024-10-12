@@ -1,0 +1,43 @@
+<!-- http://ant.apache.org/manual/using.html -->
+<project name="ProcessingSketch" default="dist" basedir=".">
+    <description>
+        Default ant buildfile.
+    </description>
+    <property name="src" location="src" />
+    <property name="build" location="build" />
+    <property name="dist"  location="dist" />
+    <property name="lib"  location="lib" />
+
+    <path id="build-classpath">
+        <fileset dir="${lib}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+    
+    <target name="init">
+        <!-- Create the time stamp -->
+        <tstamp/>
+        <!-- Create the build directory structure used by compile -->
+        <mkdir dir="${build}" />
+    </target>
+    
+    <target name="compile" depends="init" description="compile the source ">
+        <!-- Compile the java code from ${src} into ${build} -->
+        <javac srcdir="${src}" destdir="${build}" includeantruntime="false">
+            <classpath refid="build-classpath" />
+        </javac>
+    </target>
+    
+    <target name="dist" depends="compile" description="generate the distribution">
+        <!-- Create the distribution directory -->
+        <mkdir dir="${dist}/lib" />
+        <!-- Put everything in ${build} into the ${ant.project.name}-${DSTAMP}.jar file -->
+        <jar jarfile="${dist}/lib/${ant.project.name}-${DSTAMP}.jar" basedir="${build}" />
+    </target>
+    
+    <target name="clean" description="clean up">
+        <!-- Delete the ${build} and ${dist} directory trees -->
+        <delete dir="${build}" />
+        <delete dir="${dist}" />
+    </target>
+</project>

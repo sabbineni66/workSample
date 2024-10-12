@@ -1,0 +1,12 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: hay10k_development
+  pool: 10
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: hay10k_test
+  pool: 5
+  min_messages: WARNING

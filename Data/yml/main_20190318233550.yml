@@ -1,0 +1,17 @@
+---
+autoproj_required_jenkins_plugins:
+- workflow-aggregator
+- workflow-scm-step
+- workflow-support
+- workflow-cps
+- workflow-job
+- workflow-step-api
+- pipeline-stage-step
+- pipeline-stage-view
+- pipeline-utility-steps
+- git
+- job-dsl
+- copyartifact
+- xunit
+- credentials-binding
+- subversion

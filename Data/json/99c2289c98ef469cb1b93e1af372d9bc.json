@@ -1,0 +1,18 @@
+{
+  "subtitle": "category subtitle",
+  "uuid": "99c2289c98ef469cb1b93e1af372d9bc",
+  "language": "eng_UK",
+  "title": "Category",
+  "_version": {
+    "package_version": "0.2.5",
+    "language_version": "2.7.6",
+    "language": "python",
+    "language_version_string": "2.7.6 (default, Mar 22 2014, 22:59:56) \n[GCC 4.8.2]",
+    "package": "elastic-git"
+  },
+  "slug": "category",
+  "source": null,
+  "position": 1,
+  "featured_in_navbar": true,
+  "id": "99c2289c98ef469cb1b93e1af372d9bc"
+}

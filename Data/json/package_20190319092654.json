@@ -1,0 +1,42 @@
+{
+  "name": "pad",
+  "version": "0.0.2",
+  "description": "Left and right string padding",
+  "author": {
+    "name": "David Worms",
+    "email": "david@adaltas.com"
+  },
+  "contributors": [
+    {
+      "name": "David Worms",
+      "email": "david@adaltas.com"
+    }
+  ],
+  "dependencies": {
+    "coffee-script": "latest"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "should": "latest"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "keywords": [
+    "string",
+    "pad"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wdavidw/node-pad.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "readme": "\n<pre style=\"font-family:courier\">\n _   _           _        _____          _ \n| \\ | |         | |      |  __ \\        | |\n|  \\| | ___   __| | ___  | |__) |_ _  __| |\n| . ` |/ _ \\ / _` |/ _ \\ |  ___/ _` |/ _` |\n| |\\  | (_) | (_| |  __/ | |  | (_| | (_| |\n|_| \\_|\\___/ \\__,_|\\___| |_|   \\__,_|\\__,_| New BSD License\n</pre>\n\nNode Pad is a simple function to pad strings in the left and right directions.\n\nLeft padding\n------------\n\nNode Pad does left padding when the first argument is a string and the second \nargument is a number.\n\n```bash\nvar assert = require('assert');\nvar pad = require('pad');\nassert.equal('pad   ', pad('pad', 6));\n```\n\nRight padding\n-------------\n\nNode Pad does right padding when the first argument is a number and the second \nargument is a string.\n\n```bash\nvar assert = require('assert');\nvar pad = require('pad');\nassert.equal( '  pad', pad(5, 'pad'));\n```\n\nInstalling\n----------\n\nVia git (or downloaded tarball), copy or link the project from a discoverable Node directory:\n\n```bash\n    $ git clone http://github.com/wdavidw/node-pad.git\n```\n\nVia [npm](http://github.com/isaacs/npm):\n\n```bash\nnpm install pad\n```\n\nTesting\n-------\n\nClone the repo, install the development dependencies and run the suite:\n\n```bash\ngit clone http://github.com/wdavidw/node-pad.git .\nnpm install\nmake test\n```\n",
+  "_id": "pad@0.0.2",
+  "dist": {
+    "shasum": "7b32bad4349e26a9ad1da76864eb91c7ebc995ab"
+  },
+  "_from": "pad"
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0">
+<level star1="7" star2="4" star3="2" star_type="shots">
+  <object type="CANNON" x="180.0f" y="236.0f" />
+  
+  <object type="PLATFORM" x="420.0f" y="100.0f" width="201.0f" angle="90.0f" physics="STATIC" />
+  
+  <object type="PLATFORM" x="420.0f" y="270.0f" width="104.0f" angle="90.0f" physics="STATIC" />
+  
+  <object type="CIRCLE" x="100.0f" y="50.0f" radius="50.0f" physics="DYNAMIC" mass="0.7f" elasticity="1.0f" />
+  
+  <object type="PLATFORM" x="310.0f" y="220.0f" width="201.0f" angle="90.0f" physics="STATIC" />
+  
+  <object type="PLATFORM" x="100.0f" y="100.0f" width="201.0f" angle="20.0f" physics="STATIC" />
+  
+  <object type="GOAL" x="460.0f" y="120.0f" />
+
+</level>

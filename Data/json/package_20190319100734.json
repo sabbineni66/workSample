@@ -1,0 +1,37 @@
+{
+  "name": "wild",
+  "version": "0.0.1-49",
+  "private": true,
+  "scripts": {
+    "start": "$(test -x ~/bin/node && echo ~/bin/node || echo node) app.js",
+    "sauce": "./node_modules/mocha/bin/mocha -R tap tests/test_main.js"
+  },
+  "dependencies": {
+    "express": "3.0.0rc2",
+    "ejs": "latest",
+    "less-middleware": "latest",
+    "socket.io": "latest",
+    "passport": "0.1.x",
+    "passport-twitter": "0.1.x",
+    "passport-local": "~0.1.6",
+    "connect-flash": "~0.1.0",
+    "express-ejs-layouts": "~0.2.0",
+    "express-partials": "0.0.6",
+    "nano": "~3.3.2",
+    "wd-parallel": "0.0.1",
+    "node-transloadit": "0.0.2",
+    "request": "~2.11.4",
+    "mocha": "~1.7.0",
+    "wd": "0.0.26",
+    "wd-gtranslate": "0.0.2"
+  },
+  "subdomain": "wild",
+  "domains": [
+    "wild.io",
+    "www.wild.io"
+  ],
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "error": true,
+  "status": 400,
+  "message": "invalid_base",
+  "description": "Invalid `base` currency [XXX]. Please ensure you use the standard international code, and that it is supported by the API. See our documentation for details: https://openexchangerates.org/documentation/."
+}

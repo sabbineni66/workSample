@@ -1,0 +1,111 @@
+---
+networks:
+- name: rdpg
+  type: manual
+  subnets:
+  - range: 10.244.18.0/24
+    gateway: 10.244.18.1
+    static:
+    - 10.244.18.2 - 10.244.18.60
+
+networks:
+- name: rdpgmc_z1
+  type: manual
+  subnets:
+  - range: (( param "Enter the CIDR address for this subnet" ))
+    gateway: (( param "Enter the Gateway for this subnet" ))
+    dns: (( grab meta.dns ))
+    static: (( param "Enter the static IP ranges for this subnet" ))
+    reserved: (( param "Enter the reserved IP ranges for this subnet" ))
+    cloud_properties:
+      security_groups: (( grab meta.security_groups ))
+      subnet: (( param "Enter the AWS subnet ID for this subnet" ))
+
+- name: rdpgmc_z2
+  type: manual
+  subnets:
+  - range: (( param "Enter the CIDR address for this subnet" ))
+    gateway: (( param "Enter the Gateway for this subnet" ))
+    dns: (( grab meta.dns ))
+    static: (( param "Enter the static IP ranges for this subnet" ))
+    reserved: (( param "Enter the reserved IP ranges for this subnet" ))
+    cloud_properties:
+      security_groups: (( grab meta.security_groups ))
+      subnet: (( param "Enter the AWS subnet ID for this subnet" ))
+
+- name: rdpgmc_z3
+  type: manual
+  subnets:
+  - range: (( param "Enter the CIDR address for this subnet" ))
+    gateway: (( param "Enter the Gateway for this subnet" ))
+    dns: (( grab meta.dns ))
+    static: (( param "Enter the static IP ranges for this subnet" ))
+    reserved: (( param "Enter the reserved IP ranges for this subnet" ))
+    cloud_properties:
+      security_groups: (( grab meta.security_groups ))
+      subnet: (( param "Enter the AWS subnet ID for this subnet" ))
+
+- name: rdpgsc_z1
+  type: manual
+  subnets:
+  - range: (( param "Enter the CIDR address for this subnet" ))
+    gateway: (( param "Enter the Gateway for this subnet" ))
+    dns: (( grab meta.dns ))
+    static: (( param "Enter the static IP ranges for this subnet" ))
+    reserved: (( param "Enter the reserved IP ranges for this subnet" ))
+    cloud_properties:
+      security_groups: (( grab meta.security_groups ))
+      subnet: (( param "Enter the AWS subnet ID for this subnet" ))
+
+
+- name: rdpgsc_z2
+  type: manual
+  subnets:
+  - range: (( param "Enter the CIDR address for this subnet" ))
+    gateway: (( param "Enter the Gateway for this subnet" ))
+    dns: (( grab meta.dns ))
+    static: (( param "Enter the static IP ranges for this subnet" ))
+    reserved: (( param "Enter the reserved IP ranges for this subnet" ))
+    cloud_properties:
+      security_groups: (( grab meta.security_groups ))
+      subnet: (( param "Enter the AWS subnet ID for this subnet" ))
+
+
+- name: rdpgsc_z3
+  type: manual
+  subnets:
+  - range: (( param "Enter the CIDR address for this subnet" ))
+    gateway: (( param "Enter the Gateway for this subnet" ))
+    dns: (( grab meta.dns ))
+    static: (( param "Enter the static IP ranges for this subnet" ))
+    reserved: (( param "Enter the reserved IP ranges for this subnet" ))
+    cloud_properties:
+      security_groups: (( grab meta.security_groups ))
+      subnet: (( param "Enter the AWS subnet ID for this subnet" ))
+
+
+jobs:
+- name: rdpgmc_z1
+  networks:
+  - name: rdpgmc_z1
+
+- name: rdpgmc_z2
+  networks:
+  - name: rdpgmc_z2
+
+- name: rdpgmc_z3
+  networks:
+  - name: rdpgmc_z3
+
+- name: rdpgsc_z1
+  networks:
+  - name: rdpgsc_z1
+
+- name: rdpgsc_z2
+  networks:
+  - name: rdpgsc_z2
+
+- name: rdpgsc_z3
+  networks:
+  - name: rdpgsc_z3
+

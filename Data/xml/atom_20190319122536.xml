@@ -1,0 +1,5 @@
+---
+layout: feed
+feed_type: All Posts
+collection: site.posts.reverse.slice(0, 15)
+---  

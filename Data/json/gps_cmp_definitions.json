@@ -1,0 +1,176 @@
+[
+  {
+	"type" : "prefix",
+	"name" : "None",
+	"value": "0xDADAFEED",
+	 "size": 4
+  },
+  {
+    "type" : "unsigned_long",
+    "name" : "status",
+    "value" : "",
+    "size" : 4
+  },
+  {
+	"type" : "unsigned_long",
+	"name" : "main_loop_counter",
+	"value": "",
+	"size" : 4
+  },
+  {
+    "type" : "sentence",
+    "name" : "gps_sentence0",
+    "value" : "",
+    "size"  : 84
+  },
+  {
+    "type" : "sentence",
+    "name" : "gps_sentence1",
+    "value" : "",
+    "size"  : 84
+  },
+  {
+    "type" : "sentence",
+    "name" : "gps_sentence2",
+    "value" : "",
+    "size"  : 84
+  },
+  {
+    "type" : "sentence",
+    "name" : "gps_sentence3",
+    "value" : "",
+    "size"  : 84
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_latitude",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_longitude",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_hdop",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_pdop",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_vdop",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_msl_altitude_m",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_true_hdg_deg",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_ground_course_deg",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_speed_kmph",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_ground_speed_kt",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_speed_kt",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "unsigned_byte",
+    "name" : "gps_hours",
+    "value" : "",
+    "size"  : 1
+  },
+  {
+    "type" : "unsigned_byte",
+    "name" : "gps_minutes",
+    "value" : "",
+    "size"  : 1
+  },
+  {
+    "type" : "float_value",
+    "name" : "gps_seconds",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "sentence",
+    "name" : "gps_date",
+    "value" : "",
+    "size"  : 8
+  },
+  {
+    "type" : "unsigned_byte",
+    "name" : "gps_satcount",
+    "value" : "",
+    "size"  : 1
+  },
+  {
+    "type" : "unsigned_short",
+    "name" : "heading_raw",
+    "value" : "",
+    "size"  : 2
+  },
+  {
+    "type" : "float_value",
+    "name" : "heading_deg",
+    "value" : "",
+    "size"  : 4
+  },
+  {
+    "type" : "signed_byte",
+    "name" : "pitch_deg",
+    "value" : "",
+    "size"  : 1
+  },
+  {
+    "type" : "signed_byte",
+    "name" : "roll_deg",
+    "value" : "",
+    "size"  : 1
+  },
+  
+  {
+	"type" : "padding",
+	"name" : "None",
+	"value": "",
+	"size" : 93
+  },
+  {
+	"type" : "suffix",
+	"value": "0xCAFEBABE",
+	"size" : 4
+  }
+]

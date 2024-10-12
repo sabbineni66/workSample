@@ -1,0 +1,20 @@
+{
+  "name": "test-env",
+  "environments": {
+    "test": {
+      "env": {
+        "REACT_APP_APP_JSON_ENVIRONMENTS_TEST": {
+          "value": "YES"
+        },
+        "REACT_APP_OVERWRITE": {
+          "value": "ENVIRONMENTS_TEST"
+        }
+      }
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/mars/create-react-app-buildpack.git"
+    }
+  ]
+}

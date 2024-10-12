@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApplicationManifest  ApplicationTypeName="mycontainerType" ApplicationTypeVersion="1.0.0"
+                      xmlns="http://schemas.microsoft.com/2011/01/fabric" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   
+   <ServiceManifestImport>
+      <ServiceManifestRef ServiceManifestName="myservicePkg" ServiceManifestVersion="1.0.0" />
+       <ConfigOverrides />
+    <Policies>
+      <ContainerHostPolicies CodePackageRef="Code">
+        <PortBinding ContainerPort="80" EndpointRef="myServiceTypeEndpoint"/>
+      </ContainerHostPolicies>
+    </Policies>
+  </ServiceManifestImport>
+   
+   <DefaultServices>
+      <Service Name="myservice">
+         <StatelessService ServiceTypeName="myserviceType" InstanceCount="1">
+            <SingletonPartition />
+         </StatelessService>
+      </Service>
+   </DefaultServices>
+   
+</ApplicationManifest>

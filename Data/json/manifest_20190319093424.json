@@ -1,0 +1,19 @@
+{
+    "BundleType": "Application",
+    "AppIcon": {
+        "36x18": "drivetime-icon.png"
+    },
+    "AppName": {
+        "en": "Drivetime"
+    },
+    "SupportedLanguages": [
+        "en"
+    ],
+    "RequiredPermissions": [
+        "http://driveti.me:8081",
+        "https://ajax.googleapis.com"
+    ]
+    "AcceptedLinkTypes": [
+      "playlist"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "dotaccess",
+  "description": "A library to access objects using dot notation strings.",
+  "version": "1.0.5",
+  "homepage": "https://github.com/daaku/nodejs-dotaccess",
+  "author": "Naitik Shah <n@daaku.org>",
+  "main": "lib/dotaccess",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daaku/nodejs-dotaccess"
+  },
+  "scripts": { "test": "NODE_PATH=./lib mocha --ui exports" },
+  "devDependencies": {
+    "mocha": "0.12.x"
+  },
+  "engines": { "node": "0.6.x" }
+}

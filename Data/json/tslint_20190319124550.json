@@ -1,0 +1,12 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    // enable tslint-react rules here
+    "jsx-alignment": true,
+    "jsx-curly-spacing": [true, "never"],
+    "jsx-no-lambda": true,
+    "jsx-no-multiline-js": true,
+    "jsx-no-string-ref": true,
+    "jsx-self-close": true
+  }
+}

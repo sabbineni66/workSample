@@ -1,0 +1,563 @@
+- nom: Licorne Rousse Invisible
+  classe: Class? X
+  plieur: NaPs
+  photographe: NaPs
+
+- nom: Grue
+  classe: Oiseaux
+  plieur: kerdekel
+  photographe: michel v
+  pelage: tract de concert
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Corbeau
+  classe: Oiseaux
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Chouette
+  classe: Oiseaux
+  plieur: kerdekel
+  photographe: michel v
+  pelage: tract de concert
+  provenance: http://www.origami-fun.com/
+  provenance_nom: Origami-Fun
+
+- nom: Cochon
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Souris
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: ?cureuil
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Renard
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Baleine
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.muji.fr/
+  provenance_nom: Livret Muji
+
+#- nom: Escargot
+#  classe: Invert?br?s
+#  plieur: kerdekel
+#  photographe: michel v
+#  pelage: papier origami
+#  provenance: http://www.muji.fr/
+#  provenance_nom: Livret Muji
+
+- nom: H?risson
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.muji.fr/
+  provenance_nom: Livret Muji
+
+- nom: Poisson rouge
+  classe: Poissons
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Grenouille
+  classe: Reptiles
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Lapin
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Pinguoin
+  classe: Oiseaux
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+
+- nom: Lion
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Li?vre et Tortue
+  classe: Class? X
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Chat
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Scorpion
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier imprimerie
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Crabe
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://livre.fnac.com/a1223720/Zulal-Ayture-Scheele-L-encyclopedie-des-origami
+
+- nom: Phoenix chinois
+  classe: Class? X
+  plieur: kerdekel
+  photographe: michel v
+  pelage: tract concert
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Criquet
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage: tract concert
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Dromadaire
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Chauve-souris
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: ?crevisse
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Renne
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Girafe
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Paon
+  classe: Oiseaux
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Singe Gibbon
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Dragon
+  classe: Class? X
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Papillon
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage:  papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Pl?siosaure
+  classe: Esp?ces ?teintes
+  plieur: kerdekel
+  photographe: michel v
+  pelage:  papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Tortue
+  classe: Reptiles
+  plieur: kerdekel
+  photographe: michel v
+  pelage: tract concert
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Serpent
+  classe: Reptiles
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier imprimerie
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Moineau
+  classe: Oiseaux
+  plieur: kerdekel
+  photographe: michel v
+  pelage: tract concert
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Hirondelle
+  classe: Oiseaux
+  plieur: kerdekel
+  photographe: michel v
+  pelage: tract concert
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Mouette
+  classe: Oiseaux
+  plieur: kerdekel
+  photographe: michel v
+  pelage: tract concert
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Spermatozo?de 
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://blog.virgule.info/author/kerdekel
+  provenance_nom: Kerdekel
+
+- nom: Koala
+  classe: Mammif?res 
+  plieur: kerdekel
+  photographe: michel v
+  pelage: tract concert
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Poulet 
+  classe: Oiseaux
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier imprimerie
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom:  Chien
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom:  Santa Claus
+  classe: Class? X
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom:  Mouton
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom:  Taureau
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.muji.fr/
+  provenance_nom: Livret Muji
+
+- nom:  Orque
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom:  Requin
+  classe: Poissons
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom:  Chaetodontidae
+  classe: Poissons
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier imprimerie
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+#- nom:  Pterophyllum
+#  classe: Poissons
+#  plieur: kerdekel
+#  photographe: michel v
+#  pelage: papier imprimerie
+#  provenance: http://www.origami-club.com/en/
+#  provenance_nom: Origami-Club
+
+#- nom:  Zanclidae
+#  classe: Poissons
+#  plieur: kerdekel
+#  photographe: michel v
+#  pelage: papier imprimerie
+#  provenance: http://www.origami-club.com/en/
+#  provenance_nom: Origami-Club
+
+- nom:  Otarie
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier imprimerie
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom:  Crocodile
+  classe: Reptiles
+  plieur: kerdekel
+  photographe: michel v
+  pelage: Papier imprimerie
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom:  Mante Religieuse
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier imprimerie
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom:  Abeille
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier imprimerie
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom:  Elephant
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier imprimerie
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom:  Tyrannosaurus Rex
+  classe: Esp?ces ?teintes
+  plieur: francois
+  photographe: francois 
+  pelage: papier origami
+  provenance: http://fr.youtube.com/watch?v=hA7vO2CyK8Q
+  provenance_nom: Youtube
+
+- nom: Aigle 
+  classe: Oiseaux
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://livre.fnac.com/a1223720/Zulal-Ayture-Scheele-L-encyclopedie-des-origami
+  provenance_nom: Encyclop?die des origamis
+
+- nom:  Cheval
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://livre.fnac.com/a1223720/Zulal-Ayture-Scheele-L-encyclopedie-des-origami
+  provenance_nom: Encyclop?die des origamis
+
+- nom:  Dauphin
+  classe: Mammif?res
+  plieur: francois
+  photographe: francois
+  pelage: papier origami
+  provenance: http://fr.youtube.com/watch?v=1g-G8DQCwzM
+  provenance_nom: Youtube
+
+- nom: Fier Dragon
+  classe: Class? X 
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://livre.fnac.com/a1223720/Zulal-Ayture-Scheele-L-encyclopedie-des-origami
+  provenance_nom: Encyclop?die des origamis
+
+- nom: Mouche
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://livre.fnac.com/a1223720/Zulal-Ayture-Scheele-L-encyclopedie-des-origami
+  provenance_nom: Encyclop?die des origamis
+
+- nom:  Girafe Sophie
+  classe: Mammif?res
+  plieur: francois
+  photographe: francois
+  pelage: papier origami
+  provenance: http://livre.fnac.com/a1223720/Zulal-Ayture-Scheele-L-encyclopedie-des-origami
+  provenance_nom: Encyclop?die des origamis
+
+- nom: Coccinelle
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://livre.fnac.com/a1223720/Zulal-Ayture-Scheele-L-encyclopedie-des-origami
+  provenance_nom: Encyclop?die des origamis
+
+- nom: Li?vre 
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://livre.fnac.com/a1223720/Zulal-Ayture-Scheele-L-encyclopedie-des-origami
+  provenance_nom: Encyclop?die des origamis
+
+- nom: Girafe Gertrude
+  classe: Mammif?res
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://livre.fnac.com/a1223720/Zulal-Ayture-Scheele-L-encyclopedie-des-origami
+  provenance_nom: Encyclop?die des origamis
+
+- nom: Poisson Globe
+  classe: Poissons
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Anchois
+  classe: Poissons
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Elephant Alphonse
+  classe: Mammif?res
+  plieur: francois
+  photographe: francois
+  pelage: papier origami
+  provenance: http://fr.youtube.com/watch?v=TViW-KkIGmM
+  provenance_nom: Youtube
+
+- nom: Machaon
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Jackalope
+  classe: Class? X
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://blog.virgule.info/author/kerdekel
+  provenance_nom: Kerdekel
+
+- nom: Libellule
+  classe: Invert?br?s
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+
+- nom: Seismosaure
+  classe: Esp?ces ?teintes
+  plieur: kerdekel
+  photographe: michel v
+  pelage: papier origami
+  provenance: http://www.origami-club.com/en/
+  provenance_nom: Origami-Club
+

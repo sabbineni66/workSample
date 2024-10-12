@@ -1,0 +1,20 @@
+[
+  { "zone": "whenitships.com",
+    "records": [
+      { "type": "URL", "name": "", "ttl": 60, "value": "http://www.whenitships.com" },
+      { "type": "A", "name": "do", "ttl": 60, "value": "104.236.209.151" },
+      { "type": "CNAME", "name": "www", "ttl": 60, "value": "domains.quickmvp.com" },
+      { "type": "TXT", "name": "", "ttl": 60, "value": "google-site-verification=fUGyc7OnlT5Pb7rukWyt9tbDzq9D4hTFD7QIRCoTeZA" },
+      { "type": "CNAME", "name": "calendar", "ttl": 3600, "value": "ghs.googlehosted.com" },
+      { "type": "CNAME", "name": "docs", "ttl": 3600, "value": "ghs.googlehosted.com" },
+      { "type": "CNAME", "name": "mail", "ttl": 3600, "value": "ghs.googlehosted.com" },
+      { "type": "CNAME", "name": "sites", "ttl": 3600, "value": "ghs.googlehosted.com" },
+      { "type": "MX", "name": "", "ttl": 3600, "value": "alt1.aspmx.l.google.com", "prio": 5 },
+      { "type": "MX", "name": "", "ttl": 3600, "value": "alt2.aspmx.l.google.com", "prio": 5 },
+      { "type": "MX", "name": "", "ttl": 3600, "value": "aspmx2.googlemail.com", "prio": 10 },
+      { "type": "MX", "name": "", "ttl": 3600, "value": "aspmx3.googlemail.com", "prio": 10 },
+      { "type": "MX", "name": "", "ttl": 3600, "value": "aspmx.l.google.com", "prio": 1 },
+      { "type": "SPF", "name": "", "ttl": 3600, "value": "v=spf1 a include:_spf.google.com -all" }
+    ]
+  }
+]

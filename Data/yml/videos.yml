@@ -1,0 +1,279 @@
+courses:
+  - title: Programa??o Funcional com Elixir
+    sub_title: Aprenda programa??o funcional de uma vez por todas!
+    logo_file: pf-elixir-cover.png
+    price: Com certificado
+    category: Elixir
+    level: todos os n?veis
+    html_page: pf-elixir.html
+    html_course: https://www.udemy.com/programacao-funcional-com-elixir/?couponCode=VIDEOSDETI-FIXO
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      Esse curso visa mostrar aos alunos o que ? a programa??o funcional e como ela funciona. Para isso usaremos a linguagem de programa??o Elixir que por sua vez ? de f?cil entendimento permitindo assim que o aprendizado sobre programa??o funcional seja ainda mais simples. O curso est? dividido em 2 m?dulos no intuito de facilitar ainda mais o entendimento do assunto.
+
+  - title: Ruby on Rails 5.x - Do in?cio ao fim!
+    sub_title: Entenda todo ecossistema do Ruby on Rails 5.x criando uma aplica??o do in?cio ao fim!
+    logo_file: rails5x-cover.png
+    price: Com certificado
+    category: Ruby on Rails
+    level: todos os n?veis
+    html_page: rubyonrails-5x.html
+    html_course: http://bit.ly/rubyonrails-5x
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      O curso visa mostrar aos alunos como construir aplica??es usando o framework Ruby on Rails, o mesmo est? dividido em 7 m?dulos que mostrar?o detalhadamente cada uma das etapas enfrentadas por quem est? iniciando nesse mundo de desenvolvimento Web com Rails. Vejamos cada um. No primeiro m?dulo mostraremos os conceitos b?sicos que precisamos para iniciar nossa jornada rumo ao entendimento do Ruby on Rails. No segundo m?dulo vamos estudar um pouco da linguagem Ruby a fim de conhecermos alguns detalhes que precisaremos para um completo entendimento do framework Rails.
+      No m?dulo 3 vamos desenvolver e publicar nossa primeira aplica??o. No m?dulo 4 vamos configurar nosso ambiente de desenvolvimento em nossa m?quina local. Esse ambiente funcionar? em Windows, Linux e Mac. No m?dulo 5 vamos desenvolver nossa segunda aplica??o para nos aprofundar no framework Rails. Aqui tamb?m mostrarei algumas t?cnicas e resolu??es de problemas corriqueiros no desenvolvimento de uma aplica??o.
+      No m?dulo 6 vamos publicar nossa aplica??o em um VPS mostrando passo a passo toda a configura??o necess?ria para colocar uma aplica??o em produ??o. No ?ltimo m?dulo vou colocar alguns v?deos com d?vidas ou coisas que n?o vimos durante os m?dulo as anteriores. Enfim, o curso foi todo remodelado desde a ?ltima vers?o e vai contar com tudo que h? de mais novo na vers?o 5 do Rails.
+
+  - title: Docker para desenvolvedores Javascript / Node.JS
+    sub_title: Use Docker no seu ambiente de desenvolvimento e produ??o com aplica??es Javascript / Node.JS
+    logo_file: docker-js-cover.png
+    price: Com certificado
+    category: DevOps
+    level: iniciante/intermedi?rio
+    html_page: curso-docker-nodejs.html
+    html_course: http://bit.ly/docker-nodejs-34
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      O curso visa mostrar aos alunos como dar os primeiros passos com o Docker para seu uso tanto em ambiente de desenvolvimento como em produ??o. Ser?o abordados assuntos como: Conceitos iniciais do Docker, Dockerfile, Docker Hub, Docker Compose, Volumes, Networks, Portas, etc.
+      ? importante perceber que o curso N?O abordar? "Orquestra??o de Containers", sendo assim, ferramentas como Swarm e Kubernetes n?o far?o parte do escopo desse curso.
+
+  - title: Git e Github - Primeiros Passos
+    sub_title: D? os primeiros passos no entendimento do Git e Github
+    logo_file: git-github-cover.png
+    price: Gr?tis
+    category: Desenvolvedor
+    level: iniciante
+    html_page: git-github-primeiros-passos.html
+    teacher: Jackson Pires
+    video_embedded: >
+      <iframe width="100%" height="600"
+        src="https://www.youtube.com/embed/videoseries?list=PLmSWX0ePcw4h4Hf1nmrvIxJJ_2QjojhVC" frameborder="0" allowfullscreen>
+      </iframe>
+    description: >
+      Gerir vers?es e c?digo-fonte de software pode ser um trabalho ?rduo quando n?o se usa ferramentas para isso, no entanto, a dobradinha git e github trazem essa facilidade para o desenvolvedor. 
+      Nesse minicurso voc? conhecer? tudo necess?rio para dar os primeiros passos no uso dessas ferramentas indispens?veis ao desenvolvedor moderno.
+
+  - title: Google Material Design com Materialize CSS Framework
+    sub_title: D? os primeiros passos rumo ao front-end responsivo e ao Material Design
+    logo_file: materialize-cover.png
+    price: Com certificado
+    category: Front-end
+    level: iniciante/intermedi?rio
+    html_page: iniciando-com-materialize.html
+    html_course: https://www.udemy.com/iniciando-com-materialize/?couponCode=VIDEOSDETI
+    teacher: T?ssio Gon?alves
+    video_embedded: not
+    description: >
+      MaterializeCSS ? um framework CSS que traz o conceito do material design adotado pelo Google de uma forma muito simples e minimalista.
+      Neste curso conheceremos o Framework Materialize CSS para desenvolvimento web front-end, baseada no Material Design do Google facilita a constru??o de aplica??es web responsivas e com visual elegante.
+
+  - title: "Curso Completo de Sass/SCSS: Do Iniciante ao Avan?ado"
+    sub_title: Chega de CSS desorganizado! Elabore projetos organizados, r?pidos e sem frustra??es utilizando Sass
+    logo_file: sass-cover.png
+    price: Com certificado
+    category: Front-end
+    level: iniciante/intermedi?rio
+    html_page: sass-curso-completo.html
+    html_course: https://www.udemy.com/sass-curso-completo/?couponCode=VIDEOSDETI
+    teacher: T?ssio Gon?alves
+    video_embedded: not
+    description: >
+      Aumente suas habilidades em design de p?ginas web com Sass/SCSS - o poderoso pr?-processador CSS!
+      Este curso completo para o desenvolvimento de Sass/SCSS abrange tudo o que voc? precisa saber sobre esta incr?vel tecnologia.
+
+  - title: Docker para desenvolvedores Ruby on Rails
+    sub_title: Use Docker no seu ambiente de desenvolvimento e produ??o com aplica??es Ruby on Rails
+    logo_file: docker-rails-cover.png
+    price: Com certificado
+    category: DevOps
+    level: iniciante/intermedi?rio
+    html_page: curso-docker-rails.html
+    html_course: http://bit.ly/docker-ror-35
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      O curso visa mostrar aos alunos como dar os primeiros passos com o Docker para seu uso tanto em ambiente de desenvolvimento como em produ??o. Ser?o abordados assuntos como: Conceitos iniciais do Docker, Dockerfile, Docker Hub, Docker Compose, Volumes, Networks, Portas, etc.
+      ? importante perceber que o curso N?O abordar? "Orquestra??o de Containers" , sendo assim, ferramentas como Swarm e Kubernetes n?o far?o parte do escopo desse curso.
+
+  - title: TDD com Ruby on Rails, RSpec e Capybara - Curso Completo
+    sub_title: Desenvolva aplica??es guiada a testes com Ruby on Rails
+    logo_file: tdd-rails-cover.png
+    price: Com certificado
+    category: Ruby on Rails
+    level: intermedi?rio/avan?ado
+    html_page: curso-tdd-rails.html
+    html_course: http://bit.ly/tdd-rails
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      O curso visa mostrar aos alunos como utilizar a t?cnicas de desenvolvimento de software guiado a testes (TDD) utilizando o Ruby on Rails em conjunto com as ferramentas RSpec e Capybara. O curso estar? dividido em 7 m?dulos que facilitar?o a o aprendizado do aluno, sendo o m?dulo 1 o b?sico que apresentar? os conceitos de tudo que estudaremos no curso. O m?dulo 2 ser? espec?fico do Rspec onde nos aprofundaremos nessa ferramenta. No m?dulo 3 conheceremos o FactoryGirl e o VCR que ser?o ferramentas important?ssimas para o dia a dia do desenvolvimento com TDD. No m?dulo 4 aprenderemos como testar Models e Controllers do Rails. No m?dulo 5 conheceremos o Capybara e veremos como fazer testes de Views usando essa ferramenta. No m?dulo 6 veremos como testar APIs, e por fim, no m?dulo 7, colocaremos em pr?tica tudo que vimos e desenvolveremos uma pequena aplica??o utilizando os conceitos aprendidos durante os m?dulos anteriores.
+
+  - title: Iniciando com Ruby e Orienta??o a Objetos
+    sub_title: Aprenda de vez Orienta??o a Objetos com Ruby!
+    logo_file: poo-ruby-cover.png
+    price: Com certificado
+    category: Ruby, Ruby on Rails
+    level: iniciantes
+    html_page: curso-poo-ruby.html
+    html_course: http://bit.ly/poo-ruby
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      O curso visa mostrar aos alunos os primeiros passos com Ruby bem como conhecer e trabalhar com Programa??o Orientada a Objetos. O mesmo est? dividido em 3 grandes m?dulos que facilitar?o a explana??o e o aprendizado por parte do aluno. Pretende-se ao final do curso permitir que o aluno conhe?a as bases do Ruby e da Orienta??o a Objetos aplicadas ? linguagem em quest?o.
+
+  - title: Desenvolvendo RESTful APIs com Ruby on Rails
+    sub_title: Aprenda a criar uma aplica??o completa com Ruby on Rails API-only
+    logo_file: ror-api-cover.png
+    price: Com certificado
+    category: Ruby on Rails, RESTful
+    level: intermedi?rio/avan?ado
+    html_page: curso-ror-api.html
+    html_course: http://bit.ly/curso-ror-api
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      O curso visa mostrar aos alunos como construir aplica??es REST/RESTful usando o framework Ruby on Rails API-only. Dentre os assuntos abordados veremos, o funcionamento dos verbos/m?todos HTTP, o uso do Render JSON nativo do Rails, a gem Active Model Serializers, Caching, Versionamento, CORS, Authentica??o, TDD, dentre outras coisas.
+
+  - title: Entendendo e documentando RESTful APIs
+    sub_title: Entenda de uma vez por todas RESTful  APIs
+    logo_file: restful-cover.png
+    price: Com certificado
+    category: RESTful
+    level: todos os n?veis
+    html_page: restful-apis.html
+    html_course: http://bit.ly/restful-apis
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      O curso visa mostrar aos alunos os conceitos sobre  RESTful APIs, bem como document?-lo no intuito de facilitar a cria??o de APIs RESTful em qualquer linguagem de programa??o. O mesmo est? dividido em 2 m?dulos, onde o primeiros falaremos sobre todos os conceitos que permeiam as RESTful APIs e o segundo faremos o uso do framework Swagger para documentar uma API.
+
+  - title: Orienta??o a Objetos com Java
+    sub_title: Aprenda o b?sico
+    logo_file: poo-java-cover.png
+    price: Com certificado
+    category: Java
+    level: iniciantes
+    html_page: poo-java.html
+    html_course: https://bit.ly/poo-java
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      O curso visa mostrar aos alunos como trabalhar com Orienta??o a Objetos utilizando o Java, o mesmo est? dividido em 3 m?dulos que mostrar?o detalhadamente cada uma das etapas enfrentadas por quem est? iniciando no desenvolvimento Orientado a Objetos. No primeiro m?dulo ser? mostrada a hist?ria do Java bem como os conceitos iniciais da Programa??o Orientada a Objetos, no segundo m?dulo vamos instalar o Java e a IDE Eclipse nos tr?s sistemas operacionais (Windows, Linux e Mac), e por fim, no terceiro m?dulo, falaremos sobre alguns assuntos que permeiam o Java e a Orienta??o a Objetos como pacotes, arrays, associa??es e heran?a.
+
+  - title: Ruby on Rails 4.x - Curso Completo
+    sub_title: Aprenda do b?sico ao avan?ado
+    logo_file: rails-completo-cover.png
+    price: Com certificado
+    category: Ruby on Rails
+    level: todos os n?veis
+    html_page: curso-ror.html
+    html_course: https://bit.ly/ror-curso
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      O curso visa mostrar aos alunos como construir aplica??es usando o framework Ruby on Rails, o mesmo est? dividido em 5 m?dulos que mostrar?o detalhadamente cada uma das etapas enfrentadas por quem est? iniciando nesse mundo de desenvolvimento Web com Rails. No primeiro m?dulo mostraremos a parte b?sica do Ruby on Rails, no segundo m?dulo configuraremos um novo ambiente de desenvolvimento, no terceiro criaremos uma aplica??o completa, no quarto m?dulo configuraremos um VPS e por fim, no quinto m?dulo mostraremos assuntos que n?o foram abordados nos m?dulos anteriores.
+
+  - title: Ruby on Rails para iniciantes
+    sub_title: Aprenda o b?sico
+    logo_file: rails-cover.png
+    price: Gr?tis
+    category: Ruby on Rails
+    level: iniciantes
+    html_page: rails.html
+    teacher: Jackson Pires
+    video_embedded: >
+      <iframe width="100%" height="600"
+        src="https://www.youtube.com/embed/videoseries?list=PLe3LRfCs4go-mkvHRMSXEOG-HDbzesyaP" frameborder="0" allowfullscreen>
+      </iframe>
+    description: >
+      Ruby on Rails ? um famoso framework para desenvolvimento de aplica??es Web. Esse mini-curso visa mostrar de forma introdut?ria como dar os primeiros passos com essa maravilhosa ferramenta.
+
+  - title: Conhecendo e Usando o Vagrant
+    sub_title: Aprenda o b?sico
+    logo_file: vagrant-cover.jpg
+    price: Gr?tis
+    category: Vagrant
+    level: iniciantes
+    html_page: vagrant.html
+    teacher: Jackson Pires
+    video_embedded: >
+      <iframe width="100%" height="600"
+        src="https://www.youtube.com/embed/videoseries?list=PLmSWX0ePcw4j6xaMvvTuYI0BgKadati5L" frameborder="0" allowfullscreen>
+      </iframe>
+    description: >
+      Atualmente, muitos desenvolvedores freelance ou mesmo em empresas, trabalham em muitos projetos, muitas vezes ao mesmo tempo. Sendo assim, ? necess?rio manter um ambiente computacional que atenda a cada um dos projetos trabalhados. O Vagrant ajuda o desenvolvedor a manter diversos ambientes computacionais atrav?s da virtualiza??o, permitindo que se possa ter v?rios ambientes isolados, tudo isso de forma r?pida e pr?tica.
+
+  - title: Conhecendo e Usando o VirtualBox
+    sub_title: Aprenda o b?sico
+    logo_file: virtualbox-cover.jpg
+    price: Gr?tis
+    category: VirtualBox
+    level: iniciantes
+    html_page: virtualbox.html
+    teacher: Jackson Pires
+    video_embedded: >
+      <iframe width="100%" height="600"
+        src="https://www.youtube.com/embed/videoseries?list=PLmSWX0ePcw4iYPxSoMx4Fp56SGXfluPCD" frameborder="0" allowfullscreen>
+      </iframe>
+    description: >
+      Aprendendo a usar o VirtualBox, voc? conseguir? instalar/virtualizar v?rios sistemas operacionais em um ?nico computador/notebook.
+
+  - title: Banco de Dados e ANSI SQL para iniciantes
+    sub_title: Aprenda o b?sico
+    logo_file: sql-cover.png
+    price: Com certificado
+    category: Banco de dados e SQL
+    level: iniciantes
+    html_page: bd-ansisql.html
+    html_course: http://bit.ly/bd-ansisql
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      O curso visa mostrar aos alunos os conceitos sobre Banco de Dados e ANSI SQL a fim de permitir cria??o, pesquisas e manipula??o de dados armazenados nos mais diversos tipos de SGDB's. O mesmo est? dividido em 4 m?dulos que facilitar?o a explana??o e o aprendizado por parte do aluno.
+
+  - title: Fundamentos de Programa??o - Aprenda a programar do zero!
+    sub_title: Aprenda algoritmos com Fluxograma, Portugol e Linguagem C
+    logo_file: programacao-zero.png
+    price: Com certificado
+    category: Fluxograma, Portugol, Linguagem C
+    level: iniciante
+    html_page: curso-programacao-do-zero.html
+    html_course: http://bit.ly/programacao-do-zero-30
+    teacher: Jackson Pires
+    video_embedded: not
+    description: >
+      O curso visa mostrar aos alunos os fundamentos da programa??o, baseando o estudo em fluxogramas, uso do portugol e tamb?m a linguagem C. Dessa forma ser? poss?vel dar o primeiro passo para quem deseja ser um desenvolvedor ou mesmo entender os princ?pios que regem a programa??o. Ao final, o aluno estar? apto a escolher qualquer linguagem de programa??o para seguir em sua carreira.
+
+  - title: Conhecendo e Usando o Ubuntu Linux
+    sub_title: Aprenda o b?sico
+    logo_file: linux-cover.png
+    price: Gr?tis
+    category: Ubuntu Linux
+    level: iniciantes
+    html_page: linux.html
+    teacher: Jackson Pires
+    video_embedded: >
+      <iframe width="100%" height="600"
+        src="https://www.youtube.com/embed/videoseries?list=PLmSWX0ePcw4iMR1nTLXmsamnvOnnMNCNO" frameborder="0" allowfullscreen>
+      </iframe>
+    description: >
+      Se voc? est? iniciando na ?rea de Ti, com certeza precisar? conhecer os conceitos b?sicos do Linux, ent?o ? chegada a hora, comece agora mesmo a entrar no mundo open-source e a desvendar os mist?rios do Ubuntu Linux.
+
+  - title: Princ?pios do MS-DOS
+    sub_title: Aprenda o b?sico
+    logo_file: msdos-cover.jpg
+    price: Gr?tis
+    category: MS-DOS
+    level: iniciantes
+    html_page: msdos.html
+    teacher: Jackson Pires
+    video_embedded: >
+      <iframe width="100%" height="600"
+        src="https://www.youtube.com/embed/videoseries?list=PLmSWX0ePcw4gluymiLUqE9pULhdrVqNc8" frameborder="0" allowfullscreen>
+      </iframe>
+    description: >
+      Se voc? pretende conhecer um pouco mais sobre o Sistema Operacional Windows ou ainda, se pretende aprender a programar, ? essencial que saiba o b?sico do famoso MS-DOS.

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Kyash_Kyash>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Kyash_Kyash>
+    </modules>
+</config>

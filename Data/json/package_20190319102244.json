@@ -1,0 +1,15 @@
+{
+  "name": "express-resource-routes",
+  "description": "A simple add-on for Express (Node.js) that helps you build routes to represent a RESTful resource.",
+  "version": "0.1.0",
+  "author": "Tim Morgan <tim@timmorgan.org>",
+  "repository": "git://github.com/seven1m/express-resource-routes",
+  "main": "./index.js",
+  "dependencies": {
+    "underscore": "*"
+  },
+  "devDependencies": {
+    "coffee-script": "*",
+    "jasmine-node": "*"
+  }
+}

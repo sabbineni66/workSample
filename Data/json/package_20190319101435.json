@@ -1,0 +1,51 @@
+{
+  "name": "react-es7",
+  "version": "0.1.1",
+  "description": "Example of using React + Flow types + Reflux + router + ES6 with experimental ES7 syntax + Jest + Semantic-UI",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "BABEL_JEST_STAGE=0 jest --coverage",
+    "coverage": "cd coverage/lcov-report && open http://localhost:8080 && http-server",
+    "bundle": "broccoli build dist",
+    "start": "broccoli serve"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ]
+  },
+  "author": "Jaroslaw Zabiello <hipertracker@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.5.6",
+    "babel-jest": "^5.2.0",
+    "babel-plugin-typecheck": "0.0.3",
+    "broccoli": "^0.16.2",
+    "broccoli-babel-transpiler": "^5.0.0",
+    "broccoli-env": "0.0.1",
+    "broccoli-fast-browserify": "^0.2.6",
+    "broccoli-funnel": "^0.2.3",
+    "broccoli-gzip": "^0.2.1",
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-sass": "^0.6.6",
+    "broccoli-source-map": "^0.2.0",
+    "broccoli-timepiece": "^0.3.0",
+    "broccoli-uglify-js": "^0.1.3",
+    "jest-cli": "^0.4.12",
+    "rimraf": "^2.3.3"
+  },
+  "dependencies": {
+    "lodash": "^3.9.3",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "react-semantify": "^0.3.1",
+    "reflux": "^0.2.7"
+  }
+}

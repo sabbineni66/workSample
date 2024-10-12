@@ -1,0 +1,74 @@
+metadata: 
+  Page-ins/sec:
+    units: ""
+    larger_is_better: "0"
+    delimiter: ","
+    precision: "0"
+    label: Page-ins/sec
+  "% Swap Used":
+    units: "%"
+    larger_is_better: "0"
+    delimiter: ","
+    precision: "0"
+    label: "% swap used"
+  "% Memory Used":
+    units: "%"
+    larger_is_better: "0"
+    delimiter: ","
+    precision: "0"
+    label: "% memory used"
+  Swap Total:
+    units: MB
+    larger_is_better: "0"
+    delimiter: ","
+    precision: "0"
+    label: Swap total
+  Page-outs/sec:
+    units: ""
+    larger_is_better: "0"
+    delimiter: ","
+    precision: "0"
+    label: Page-outs/sec
+  Memory Used:
+    units: MB
+    larger_is_better: "0"
+    delimiter: ","
+    precision: "0"
+    label: Memory used
+  Page Faults/sec:
+    units: ""
+    larger_is_better: "0"
+    delimiter: ","
+    precision: "0"
+    label: Page faults/sec
+  Memory Total:
+    units: MB
+    larger_is_better: "0"
+    delimiter: ","
+    precision: "0"
+    label: Memory total
+  Swap Used:
+    units: MB
+    larger_is_better: "0"
+    delimiter: ","
+    precision: "0"
+    label: Swap used
+triggers: 
+- max_value: 90.0
+  type: peak
+  dname: "% Memory Used"
+  population_size: 0
+- percentage_change: 100
+  type: trend
+  min_value: 50.0
+  window_reference: PRECEDING_WINDOW
+  dname: Page-ins/sec
+  population_size: 0
+  direction: UP
+- percentage_change: 100
+  type: trend
+  min_value: 50.0
+  window_reference: PRECEDING_WINDOW
+  dname: Page-outs/sec
+  population_size: 0
+  direction: UP

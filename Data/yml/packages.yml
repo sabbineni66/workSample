@@ -1,0 +1,37 @@
+- name: "install ruby"
+  apt:
+      name: ruby
+      state: latest
+- name: "install build tool (autoproj-jenkins>jenkins>nokogiri,json,...)"
+  apt:
+      name: build-essential
+      state: latest
+- name: "install ruby development files (autoproj-jenkins>jenkins>nokogiri)"
+  apt:
+      name: ruby-dev
+      state: latest
+- name: "install zlib development files (autoproj-jenkins>jenkins>nokogiri)"
+  apt:
+      name: zlib1g-dev
+      state: latest
+- name: "install git"
+  apt:
+      name: git
+      state: latest
+- name: "add git-lfs repository key"
+  apt_key:
+      url: "https://packagecloud.io/github/git-lfs/gpgkey"
+      state: present
+- name: "add git-lfs repository"
+  apt_repository:
+      repo: "deb https://packagecloud.io/github/git-lfs/ubuntu/ xenial main"
+      state: present
+- name: "install git-lfs"
+  apt:
+      name: git-lfs
+      state: latest
+- name: 'install dependency of the boost-to-XML test result conversion'
+  apt:
+      name: 'libsaxonb-java' 
+      state: latest
+

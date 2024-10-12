@@ -1,0 +1,12 @@
+{
+  "name": "subpackage1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "preact": "^8.3.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.119"
+  }
+}

@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+
+  app:
+    env_file: .env
+
+    build:
+      context: ./
+    depends_on:
+      - redis
+    ports:
+      - "8008:8008"
+    volumes:
+      - /opt/ytdl/localdata:/data
+      - .:/app
+    restart: always
+
+  redis:
+    image: redis:3.2-alpine
+    volumes:
+      - /opt/ytdl/redisdata:/data
+
+  test:
+    env_file: .env
+    build: .
+    depends_on:
+      - app
+
+volumes:
+  redis_data:

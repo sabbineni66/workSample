@@ -1,0 +1,30 @@
+{
+  "name": "chromuxinator-backend",
+  "preferGlobal": true,
+  "version": "0.1.1",
+  "author": "Jason Morrison <jason.p.morrison@gmail.com>",
+  "description": "Launch predefined sets of Chrome instances with different profiles, behaviors, and geometries.",
+  "contributors": [ 
+    {
+      "name": "Jason Morrison",
+      "email": "jason.p.morrison@gmail.com"
+    } 
+  ],
+  "bin": {
+    "chromuxinator-backend": "./bin/chromuxinator-backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonm/chromuxinator-backend.git"
+  },
+  "dependencies" : {
+    "pty.js"   :  "*",
+    "optimist" :  "*",
+    "socket.io":  "*",
+    "mkdirp"   :  "*"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
+  }
+}

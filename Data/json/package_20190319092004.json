@@ -1,0 +1,12 @@
+{
+    "name": "drill",
+    "version": "0.1.0",
+    "description": "Find matches in complex objects",
+    "keywords": [""],
+    "repository": "git://github.com/shanebo/drill.git",
+    "author": "Shane Thacker <shane@steadymade.com>",
+    "dependencies": {
+    },
+    "engine": ">= 0.4.1",
+    "main": "./drill"
+}

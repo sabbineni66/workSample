@@ -1,0 +1,29 @@
+{
+  "uuid": "10dfc62e-4663-4593-aaa3-be41e588d83d",
+  "shortName": "OfflineReminder",
+  "longName": "OfflineReminder",
+  "companyName": "Pontus Freyhult",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt"],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+      "media": [
+	  {
+	      "type": "png",
+	      "name": "WATCHFACE",
+	      "file": "bwwatchface.png"
+	  },
+	  {
+	      "type": "png",
+	      "name": "WATCHFACEINVERTED",
+	      "file": "bwwatchface-inv.png"
+	  }
+       ]
+  }
+}

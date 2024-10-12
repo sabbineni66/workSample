@@ -1,0 +1,17 @@
+{
+  "name": "Full stack testing of your Ruby and JavaScript applications",
+  "sections": [
+    {
+      "section":"01_intro"
+    },
+    {
+      "section":"02_capybara"
+    },
+    {
+      "section":"03_jasmine_and_evergreen"
+    },
+    {
+      "section":"05_closing"
+    }
+  ]
+}

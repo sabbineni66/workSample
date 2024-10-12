@@ -1,0 +1,29 @@
+---
+title: GoTogether
+timezone: America/Los_Angeles
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+email: b@sevenwire.com
+url: https://gotogether.co
+markdown: kramdown
+sass:
+  load_paths:
+  - _sass
+  - node_modules
+plugins:
+- jekyll-feed

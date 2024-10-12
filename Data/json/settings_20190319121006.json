@@ -1,0 +1,49 @@
+{
+  "editor.formatOnType": false,
+  "eslint.options": {
+    "configFile": "node_modules/@amory/eslint-config/.eslintrc.json",
+    "plugins": [
+      "flowtype-comment"
+    ],
+    "rules": {
+      "flowtype/array-style-complex-type": "off",
+      "flowtype/array-style-simple-type": "off",
+      "flowtype/boolean-style": "off",
+      "flowtype/define-flow-type": "off",
+      "flowtype/delimiter-dangle": "off",
+      "flowtype/generic-spacing": "off",
+      "flowtype/newline-after-flow-annotation": "off",
+      "flowtype/no-dupe-keys": "off",
+      "flowtype/no-existential-type": "off",
+      "flowtype/no-flow-fix-me-comments": "off",
+      "flowtype/no-mutable-array": "off",
+      "flowtype/no-primitive-constructor-types": "off",
+      "flowtype/no-types-missing-file-annotation": "off",
+      "flowtype/no-unused-expressions": "off",
+      "flowtype/no-weak-types": "off",
+      "flowtype/object-type-delimiter": "off",
+      "flowtype/require-compound-type-alias": "off",
+      "flowtype/require-exact-type": "off",
+      "flowtype/require-parameter-type": "off",
+      "flowtype/require-return-type": "off",
+      "flowtype/require-types-at-top": "off",
+      "flowtype/require-valid-file-annotation": "off",
+      "flowtype/require-variable-type": "off",
+      "flowtype/semi": "off",
+      "flowtype/sort-keys": "off",
+      "flowtype/space-after-type-colon": "off",
+      "flowtype/space-before-generic-bracket": "off",
+      "flowtype/space-before-type-colon": "off",
+      "flowtype/type-id-match": "off",
+      "flowtype/type-import-style": "off",
+      "flowtype/union-intersection-spacing": "off",
+      "flowtype/use-flow-type": "off"
+    }
+  },
+  "eslint.runtime": "/usr/local/node/shims/node",
+  "flow.pathToFlow": "${workspaceFolder}/node_modules/.bin/flow",
+  "javascript.implicitProjectConfig.checkJs": false,
+  "javascript.validate.enable": false,
+  "prettier.eslintIntegration": true,
+  "typescript.validate.enable": false
+}

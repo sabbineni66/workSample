@@ -1,0 +1,30 @@
+{
+	"name": "NodeJS-IRC-Bot",
+	"description": "An Open Source IRC Bot written with NodeJS",
+	"version": "0.0.1",
+	"author": "Michael Lanman (http://justgizzmo.com)",
+	"main": "bot.js",
+	"repository": {
+		"type" : "git"
+	},
+	"engines": {
+		"node": ">=0.8"
+	},
+	"dependencies": {
+		"pkgconfig": "0.0.4",
+		"optimist": "0.3.5",
+		"winston": "0.7.x"
+	},
+	"devDependencies": {
+		"should": "1.2.x",
+		"mocha": "1.8.x"
+	},
+	"licenses": {
+		"type": "UNLICENSE",
+		"url": "http://unlicense.org/"
+	},
+	"scripts": {
+		"test": "mocha --reporter spec --slow 0 test/*.spec.js",
+		"start": "node bot.js"
+	}
+}

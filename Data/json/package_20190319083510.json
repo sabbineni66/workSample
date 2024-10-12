@@ -1,0 +1,27 @@
+{
+  "name": "property-based-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^3.3.3333",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "chai": "^4.2.0",
+    "fast-check": "^1.11.0",
+    "mocha": "^6.0.2",
+    "ts-node": "^8.0.2"
+  }
+}

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: MyText
+  variable: 
+  item: 
+  gateway: 
+  appearance: 
+  dialogue: 
+
+two:
+  value: MyText
+  variable: 
+  item: 
+  gateway: 
+  appearance: 
+  dialogue: 

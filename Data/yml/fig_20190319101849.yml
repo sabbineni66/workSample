@@ -1,0 +1,18 @@
+memcached:
+  image: memcached
+
+rawdns:
+  image: tianon/rawdns
+  command: rawdns /etc/rawdns.json
+  ports:
+    - "53:53/udp"
+  volumes:
+    - "/var/run/docker.sock:/var/run/docker.sock"
+    - "/src/yarp-docker/rawdns.json:/etc/rawdns.json:ro"
+
+yarp:
+  build: .
+  ports:
+    - "24591:24591"
+  links:
+    - memcached

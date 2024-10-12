@@ -1,0 +1,14 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "!{/__,/bower_components,/elements,/images,/scripts,/styles}/**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

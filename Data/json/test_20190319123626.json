@@ -1,0 +1,32 @@
+{
+      "Verbose":      false
+  
+    , "ServerName":   "www.sample.com"
+    , "BindAddress":  "0.0.0.0"
+    , "BindPort":     4000
+
+    , "CertificateFile"    : "test/cert.pem"
+    , "CertificateKeyFile" : "test/cert.key"
+  
+    , "TemplatePath": "./templates/"
+    , "AssetPath":    "./assets/"
+  
+    , "LogsToWatch": {
+  
+        "DropWizardServices": [
+            "test-service-2"
+        ]
+
+      , "DropWizardDotDPath" : "test/dropwizard.d/"
+  
+      , "StandardLogs" : [
+  	    {   "Description" : "basic log file #1"
+  	      , "Name" : "basic-log-file-1"
+  	      , "Path" : "/tmp/basic-log-file-1.log" }
+            ,
+  	    {   "Description" : "basic log file #2"
+  	      , "Name" : "basic-log-file-2"
+  	      , "Path" : "/tmp/basic-log-file-2.log" }
+          ]
+      }
+}

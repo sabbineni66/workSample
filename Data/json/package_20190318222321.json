@@ -1,0 +1,36 @@
+{
+    "name": "mako",
+    "displayName": "Mako",
+    "description": "Syntax highlighting for the Mako templating language.",
+    "repository": "https://github.com/tommorris/vsc-mako",
+    "version": "0.1.0",
+    "publisher": "tommorris",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "mako",
+                "aliases": [
+                    "Mako",
+                    "mako"
+                ],
+                "extensions": [
+                    ".mako"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mako",
+                "scopeName": "text.html.mako",
+                "path": "./syntaxes/mako.tmLanguage"
+            }
+        ]
+    }
+}

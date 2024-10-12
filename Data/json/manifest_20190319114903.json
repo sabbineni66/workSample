@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "jB History Cleaner",
+  "description": "Cleans all browsing and download history whenever the last browser window was closed. Use at your own risk.",
+  "version": "0.0.0.1",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "history",
+    "tabs",
+    "downloads"
+  ],
+  "icons": {
+    "16": "resources/images/CleanData_16x16.png",
+    "32": "resources/images/CleanData_32x32.png",
+    "48": "resources/images/CleanData_48x48.png",
+    "128": "resources/images/CleanData_128x128.png"
+  }
+}

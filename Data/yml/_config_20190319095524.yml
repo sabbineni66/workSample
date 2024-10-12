@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Rodrigo Costa
+tagline:          'Yet another Blog.'
+description:      'Yet another enthusiast. Follow <a href="" target="_blank">@nivarura</a>.'
+url:              http://127.0.0.1:4000/
+baseurl:          /
+
+author:
+  name:           'Rodrigo Costa'
+  url:            https://twitter.com/nivarura
+
+paginate:         2
+
+# Custom vars
+version:          0.1
+
+github:
+  repo:           https://github.com/poole/hyde

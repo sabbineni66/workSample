@@ -1,0 +1,12 @@
+exclude: ["bin", "docs", "Gemfile", "Gemfile.lock", "Procfile", "README.md", "script", "tmp"]
+
+locales:
+  hr:
+    keywords:
+      index: "iskustvo, pekara, pekarstvo, kruh, peciva, tradiocionalne recepture, kvaliteta, tradicija, tradicionalni kola?i, peciva, rudarska greblica, tradicionalni autohtoni kola?, proces pripreme, za?ti?en, obiteljski posao, samobor, rude"
+      o_nama: "iskustvo, pekara, pekarstvo, kruh, peciva, tradiocionalne recepture, kvaliteta, tradicija, tradicionalni kola?i, peciva, rudarska greblica, tradicionalni autohtoni kola?, proces pripreme, za?ti?en, obiteljski posao, samobor, rude"
+      proizvodi: "kvalitetan, ukusan, zdrav, proizvod, minimalna koli?ina kvasca, beskvasni, bez aditiva,  pakirani pekarski proizvodi, smrznuti pekarski proizvodi, kruh, peciva, tradicionalni kola?i, rudarska greblica,  sir, orah, zelenje, ?trudla, jabuka, sir, vi?nja, tre?nja, gibanica, kuglof, pala?inke, pita, jogut, sir, krafne, samobor, zagreb"
+      rudarska_greblica: "rudarska greblica, autothoni kola?, slani kola?, priprema kola?a, sir, sira, orah, oraha, zelenje, zalenjava, ?uta mrkva, blitva, mladi luk, kopriva, ?pinat, povijest, za?ti?en,  tradicija, nematerijana hrvatska ba?tina, dani rudarske  greblice, izbor najbolje, Nikl, pekarnica, samobor"
+      kvaliteta: "zdrav, kvalitetan,  kvaliteta, doma?a proizvodnja, birani sastojci, higijena, tradicija, tradicionalne recepture, doma?i na?in pripreme, HACCP, kontrola kvalitete, distribucija hrane, zdravlje, samobor"
+      priznanja: "dugogodi?nje,  prisustvo, tr?i?te, sponzorstva, sponzorstvo, humanitarne akcije, sportska doga?anja, podr?ka gra?anima"
+      kontakt: "maloprodaja, veleprodaja, samobor, kiosk, trg, tr?nica, hoteli, restorani, trg"

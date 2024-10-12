@@ -1,0 +1,29 @@
+{
+  "name": "react-es7-amd",
+  "version": "0.0.3",
+  "homepage": "https://github.com/hipertracker/react-es7-amd",
+  "authors": [
+    "Jaroslaw Zabiello <hipertracker@gmail.com>"
+  ],
+  "description": "Example of AMD based project using React + Reflux + router + ES6 with experimental ES7 syntax",
+  "main": "src/index.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.16",
+    "requirejs_text": "requirejs-text#~2.0.12",
+    "jsx_requirejs_plugin": "jsx-requirejs-plugin#*",
+    "reflux": "*",
+    "react_router": "react-router#*",
+    "lodash": "*",
+    "semantic_ui": "semantic-ui#~1.10.0",
+    "font_awesome": "font-awesome#*"
+  }
+}

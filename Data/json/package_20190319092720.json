@@ -1,0 +1,42 @@
+{
+  "name": "tachyons-custom-sass",
+  "description": "Transpiled Sass partials for Tachyons with custom variable support",
+  "author": {
+    "name": "Andrew O'Brien",
+    "email": "obrien.andrew@gmail.com"
+  },
+  "version": "4.9.0",
+  "style": "tachyons.scss",
+  "scripts": {
+    "build": "node build.js",
+    "test": "ava",
+    "lint": "standard --fix"
+  },
+  "repository": "AndrewO/tachyons-custom-sass",
+  "keywords": [
+    "tachyons",
+    "tachyons-css",
+    "css",
+    "sass",
+    "scss"
+  ],
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "adam morse",
+      "email": "hi@mrmrs.cc"
+    },
+    {
+      "name": "john otander",
+      "url": "http://johnotander.com"
+    }
+  ],
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "css-scss": "^0.1.0",
+    "glob": "^7.1.2",
+    "node-sass": "^4.5.3",
+    "standard": "^10.0.3",
+    "tachyons-custom": "^4.9.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/zlokomatic/phpLoL.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/zlokomatic/SabreAMF.git"
+        }
+    ],
+    "require": {
+        "zlokomatic/phpLoL": "*",
+        "react/socket": "*"
+    },
+    "minimum-stability": "dev"
+}

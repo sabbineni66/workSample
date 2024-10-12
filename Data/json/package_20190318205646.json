@@ -1,0 +1,23 @@
+{
+  "name": "airfoil-api",
+  "version": "0.0.1",
+  "description": "airfoil-api",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jnewland/airfoil-api"
+  },
+  "author": "Jesse Newland <jesse@jnewland.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jnewland/airfoil-api/issues"
+  },
+  "dependencies": {
+    "applescript": "^1.0.0",
+    "body-parser": "^1.12.4",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  }
+}

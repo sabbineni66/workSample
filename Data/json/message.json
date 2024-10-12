@@ -1,0 +1,16 @@
+{
+  "event": "message-in",
+  "type": "command_mms",
+  "campaign_id": "76112",
+  "msisdn": "14082502755",
+  "shortcode": "343434",
+  "carrier": "Verizon Wireless",
+  "carrier_id": "4",
+  "message": "Wgfc",
+  "subject": "",
+  "images": [
+    {
+      "image": "http://d2c.bandcon.mogreet.com/mo-mms/images/c49fdd255453d1b3aa00c665dc3811b8.jpeg"
+    }
+  ]
+}

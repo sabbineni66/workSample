@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Partially Applied</title>
+  <link href="http://partiallyapplied.com/atom.xml" rel="self"/>
+  <link href="http://partiallyapplied.com/"/>
+  <updated>2011-08-30T20:31:29-04:00</updated>
+  <id>http://partiallyapplied.com/</id>
+  <author>
+    <name>Louis J Scoras</name>
+    
+  </author>
+
+  
+  <entry>
+    <title>Ruby Methods &amp; Multiple Blocks</title>
+    <link href="http://partiallyapplied.com/blog/2011/08/06/ruby-methods-and-multiple-blocks/"/>
+    <updated>2011-08-06T19:35:00-04:00</updated>
+    <id>http://partiallyapplied.com/blog/2011/08/06/ruby-methods-and-multiple-blocks</id>
+    <content type="html">&lt;h1&gt;Higher order methods?&lt;/h1&gt;
+
+&lt;p&gt;One of the really nice things about working with Ruby has always been how easy
+it is to get your methods to accept a functional parameter via the block syntax.
+It's no wonder that folks new to Ruby often enjoy the use of the &lt;code&gt;Enumerable&lt;/code&gt;
+mixin so much: most all of the methods contained therein leverage blocks to make
+the code concise and readable. For instance,&lt;/p&gt;
+
+&lt;div&gt;&lt;figure role=code&gt;&lt;figcaption&gt;&lt;span&gt;Simple Block  &lt;/span&gt;&lt;/figcaption&gt;
+ &lt;div class=&quot;highlight&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class='line'&gt;1&lt;/span&gt;
+&lt;span class='line'&gt;2&lt;/span&gt;
+&lt;span class='line'&gt;3&lt;/span&gt;
+&lt;span class='line'&gt;4&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class='code' width='100%'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;div class='line'&gt;&lt;span class=&quot;n&quot;&gt;fruit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:apple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:orange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:pineapple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;&lt;span class=&quot;n&quot;&gt;fruit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;I like &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;!&amp;quot;&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p&gt;is so much nicer than the equivalent that lower level constructs like C's &lt;code&gt;for&lt;/code&gt;
+loops. Taking a block parameter let's us easily configure and generalize the
+behavior of our methods. What happens though when we have more than one bit of
+functionality that we want to parameterize?&lt;/p&gt;
+
+&lt;h1&gt;Stand alone &lt;code&gt;Proc&lt;/code&gt;s&lt;/h1&gt;
+
+&lt;p&gt;Unfortunately, we won't get any syntactic support from the language here. If we
+want to accept more than one block, our method needs to accept the additional
+blocks in the same way as any other value. So we need to do something like this:&lt;/p&gt;
+
+&lt;div&gt;&lt;figure role=code&gt;&lt;figcaption&gt;&lt;span&gt;Higher Order Method  &lt;/span&gt;&lt;/figcaption&gt;
+ &lt;div class=&quot;highlight&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class='line'&gt;1&lt;/span&gt;
+&lt;span class='line'&gt;2&lt;/span&gt;
+&lt;span class='line'&gt;3&lt;/span&gt;
+&lt;span class='line'&gt;4&lt;/span&gt;
+&lt;span class='line'&gt;5&lt;/span&gt;
+&lt;span class='line'&gt;6&lt;/span&gt;
+&lt;span class='line'&gt;7&lt;/span&gt;
+&lt;span class='line'&gt;8&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class='code' width='100%'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;div class='line'&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;higher_order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;  &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:x&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;  &lt;span class=&quot;n&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;
+&lt;/div&gt;&lt;div class='line'&gt;&lt;span class=&quot;n&quot;&gt;higher_order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Invoke Proc 2 -- &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Invoke Proc 1 -- &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Needless to say, this code looks like it's been beaten with the ugly stick. The
+&lt;code&gt;Proc&lt;/code&gt; created with &lt;code&gt;lambda&lt;/code&gt; could be assigned to a local variable, but it ends
+up still looking pretty nasty compared to methods that take only a single block.&lt;/p&gt;
+
+&lt;p&gt;Last week on the &lt;a href=&quot;http://robots.thoughtbot.com/&quot; title=&quot;Giant Robots Smashing into other Giant Robots&quot;&gt;Thoughtbot&lt;/a&gt; blog, there was a post about &lt;a href=&quot;http://robots.thoughtbot.com/post/8181879506/if-you-gaze-into-nil-nil-gazes-also-into-you&quot; title=&quot;If you gaze into nil, nil gazes also into you&quot;&gt;dealing
+with &lt;code&gt;nil&lt;/code&gt; objects&lt;/a&gt;. That article discusses some of the problems with
+having methods return &lt;code&gt;nil&lt;/code&gt; as a value since it requires the caller to remember
+to explicitly check for nil when it expects a domain object.&lt;/p&gt;
+
+&lt;p&gt;One way to solve the problem is to have a method that requires two callbacks.
+One is called when there is an actual value to return, the other when an object
+can't be found. Obviously the problem with this is that it would be ugly as
+discussed above. Probably the best we could do is a method as follows. It
+accepts a block which is passed an object which records the two callbacks by
+responding to methods by storing the blocks passed individually to each.&lt;/p&gt;
+
+&lt;div&gt;&lt;figure role=code&gt;&lt;figcaption&gt;&lt;span&gt;Multiple Blocks! Sorta &lt;/span&gt;&lt;/figcaption&gt;
+ &lt;div class=&quot;highlight&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class='line'&gt;1&lt;/span&gt;
+&lt;span class='line'&gt;2&lt;/span&gt;
+&lt;span class='line'&gt;3&lt;/span&gt;
+&lt;span class='line'&gt;4&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class='code' width='100%'&gt;&lt;pre&gt;&lt;code class='ruby'&gt;&lt;div class='line'&gt;&lt;span class=&quot;n&quot;&gt;may_return_nil&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;  &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;one&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Got an object, yeay!: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;  &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;none&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Got nadda!&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/div&gt;&lt;div class='line'&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+
+
+&lt;p&gt;What do you think? What's the best way to handle a method that needs to accept
+many blocks? Should ruby have a built in way to handle this?&lt;/p&gt;
+</content>
+  </entry>
+  
+</feed>

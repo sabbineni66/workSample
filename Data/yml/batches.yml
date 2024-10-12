@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  recipe_id: 1
+  abv: 1.5
+  notes: MyText
+  rating: 1
+  starred: false
+  starting_gravity: 1.5
+
+two:
+  recipe_id: 1
+  abv: 1.5
+  notes: MyText
+  rating: 1
+  starred: false
+  starting_gravity: 1.5

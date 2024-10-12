@@ -1,0 +1,13 @@
+{
+    "name": "Tailwind CSS",
+    "package": "tailwindcss",
+    "index": "index.html",
+    "selectors": {
+        "#content h1": "Component"
+    },
+    "ignore": [
+    ],
+    "icon32x32": "favicon-32x32.png",
+    "allowJS": false,
+    "ExternalURL": "https://tailwindcss.com/docs/"
+}

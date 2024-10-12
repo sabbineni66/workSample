@@ -1,0 +1,26 @@
+version: '2'
+services:
+
+  api:
+    build: api/.
+    volumes:
+      - ./api:/app/user
+    command: 'bash -c ''bundle install && bundle exec ruby check.rb'''
+    working_dir: /app/user
+    # restart: unless-stopped
+    depends_on:
+      - localstack
+    links:
+      - localstack
+
+  localstack:
+    image: localstack/localstack
+    environment:
+      - SERVICES=s3
+      - DEFAULT_REGION=eu-west-1
+      - DEBUG=1
+    ports:
+      - '4572'
+
+networks:
+  default:

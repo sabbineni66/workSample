@@ -1,0 +1,11 @@
+url: http://nick.zadrozny.com
+title: Nick Zadrozny
+author: Nick Zadrozny
+
+markdown: redcarpet
+pygments: true
+
+paginate: 10          # Posts per page on the blog index
+pagination_dir: posts # Directory base for pagination URLs eg. /posts/page/2/
+recent_posts: 5       # Posts in the sidebar Recent Posts section
+permalink: /posts/:year/:month/:day/:title/

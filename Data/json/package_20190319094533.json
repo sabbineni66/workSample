@@ -1,0 +1,24 @@
+{
+  "name": "amp-laterpay-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "good": "^7.0.2",
+    "good-console": "^6.1.2",
+    "good-squeeze": "^4.0.0",
+    "hapi": "^15.0.3",
+    "inert": "^4.0.2"
+  },
+  "devDependencies": {
+  }
+}

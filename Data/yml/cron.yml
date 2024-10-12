@@ -1,0 +1,8 @@
+cron:
+- description: tweet on new top down domains
+  url: /_tweetcheck
+  schedule: every 10 minutes
+
+- description: delete old downer data
+  url: /_downerclear
+  schedule: every 6 hours

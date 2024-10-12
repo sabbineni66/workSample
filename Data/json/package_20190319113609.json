@@ -1,0 +1,27 @@
+{
+  "author": "Kim Joar Bekkelund <mail@kimjoar.net> (http://kimjoar.net/)",
+  "name": "responseFaker.js",
+  "main": "./responseFaker.js",
+  "description": "A high-level API for sinon.js fakeServer",
+  "version": "0.1.3",
+  "repository": {
+    "url": "https://github.com/kjbekkelund/responseFaker.js"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://github.com/kjbekelund/responseFaker.js/blob/master/LICENSE"
+  }],
+  "scripts": {
+    "test": "node_modules/.bin/buster test"
+  },
+  "dependencies": {
+    "sinon": "~1.3"
+  },
+  "devDependencies": {
+    "buster": "~0.6.0"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

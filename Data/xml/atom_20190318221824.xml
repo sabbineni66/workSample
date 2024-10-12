@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Makematics</title>
+ <link href="http://makematics.com/atom.xml" rel="self"/>
+ <link href="http://makematics.com"/>
+ <updated>2012-03-31T20:36:25-04:00</updated>
+ <id>http://makematics.com</id>
+ <author>
+   <name>Greg Borenstein</name>
+   <email>greg.borenstein@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Math for Makers</title>
+   <link href="http://makematics.com/2012/03/23/math-for-makers"/>
+   <updated>2012-03-23T00:00:00-04:00</updated>
+   <id>hhttp://makematics.com/2012/03/23/math-for-makers</id>
+   <content type="html">&lt;p&gt;Artists build on top of science.&lt;/p&gt;
+
+&lt;p&gt;Renaissance painters used Cartesian geometry to invent perspective. Nineteenth century photographers' adapted industrial chemistry into the photographic process. Contemporary filmmakers shoot on cutting edge cameras made possible by the latest in sensor miniaturization. Each generation of artists turns the knowledge of their time into new creative tools.&lt;/p&gt;
+
+&lt;p&gt;No generation of artists has ever been more dependent on scientific and technical advances than today&amp;rsquo;s. Today&amp;rsquo;s artists work on computers. Advances in computer science and related mathematical fields underlie everything that digital artists make. Recently these advances have lead to the advent of whole new creative fields like interactive art, generative graphics, data visualization, and digital fabrication.&lt;/p&gt;
+
+&lt;p&gt;In order to produce excellent and novel work in these new fields, artists have had to learn computational and mathematical techniques. They started with basic material like trigonometry for 2D games and graphics, the rudiments of computer vision for interactive installations, and primitive signal processing for embedded electronics.&lt;/p&gt;
+
+&lt;p&gt;Increasingly these new creative fields are becoming the basis of art and design across our culture. And these techniques are becoming the foundation of a new kind of art and design education. A cohort of today&amp;rsquo;s best art and design schools teach introductory programming and a survey of these basic topics as their core curriculum (&lt;a href=&quot;http://itp.nyu.edu&quot;&gt;NYU ITP&lt;/a&gt;, &lt;a href=&quot;http://studioforcreativeinquiry.org&quot;&gt;CMU&amp;rsquo;s Studio for Creative Inquiry&lt;/a&gt;, &lt;a href=&quot;http://www.newschool.edu/parsons/&quot;&gt;Parson&amp;rsquo;s&lt;/a&gt;, &lt;a href=&quot;http://ciid.dk/&quot;&gt;CIID&lt;/a&gt;, &lt;a href=&quot;http://dma.ucla.edu/&quot;&gt;UCLA Design Media Arts&lt;/a&gt;, etc.).&lt;/p&gt;
+
+&lt;p&gt;However, as these new creative fields advance, driven by their own internal momentum and inspired by the advent of new developments in computer science and technology, they are beginning to require more advanced math and programming techniques. Today&amp;rsquo;s SIGGRAPH papers and academic journal articles are tomorrow&amp;rsquo;s breakthrough creative coding projects.&lt;/p&gt;
+
+&lt;p&gt;Topics like linear algebra, topology, graph theory, and machine learning are becoming vital prerequisites both to doing daily work in these fields and, more importantly, to inventing, popularizing, and teaching the new creative tools that are rapidly arising. Without them, artists are forced to wait for others to digest this new knowledge before they can work with it. Their creative options shrink to those parts of this research selected by Adobe for inclusion in prepackaged tools. Instead of the themes and concerns of creative work driving the selection of tools from a growing technical cornucopia, artists find themselves turned into passive users of tools that are already curated, contextualized, and circumscribed by others.&lt;/p&gt;
+
+&lt;p&gt;So, I want to do something about this. I want to figure out a way to teach myself and others these more advanced mathematical and computational concepts with a specific eye towards applying them in creative technology. For example, I want to be able to read SIGGRAPH papers, understand what&amp;rsquo;s going on in them, explain that to others, and create software libraries that implement their techniques. I want my peers who do data visualization to be able to implement regressions, curve fitting, statistical analysis and machine learning so that their projects are more than just pretty graphs with good typography. I want the hardware hackers who are building the next generation of DIY 3D printers to be able to turn topological algorithms and concepts into open source tool path generation software that creates more efficient gcode and enables the fabrication of previously impossible physical forms.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t know the best way to go about this, but this site is intended to act as home for my experiments. Here, I&amp;rsquo;ll collect research papers with potential as creative tools. I&amp;rsquo;ll catalog the mathematical and computer science terminology and techniques used in these papers. I&amp;rsquo;ll work to explain this terminology in plain English and to translate these techniques into comprehensible, publicly available code. I&amp;rsquo;ll interview other digital artists and researchers who understand parts of this material in order to capture and spread their knowledge. I&amp;rsquo;ll try any approach that has the potential to help us gain some grasp on these new areas and I&amp;rsquo;ll collaborate with anyone&amp;rsquo;s who&amp;rsquo;s interested in helping.&lt;/p&gt;
+
+&lt;p&gt;To inaugurate this site, I conducted &lt;a href=&quot;/research/facetracker&quot;&gt;an interview with Kyle McDonald about FaceTracker&lt;/a&gt;. &lt;a href=&quot;http://kylemcdonald.net&quot;&gt;Kyle&lt;/a&gt; is an artist and researcher who embodies much of the spirit of this site. He&amp;rsquo;s a key member of the &lt;a href=&quot;http://openframeworks.cc&quot;&gt;OpenFrameworks&lt;/a&gt; community and he&amp;rsquo;s done extensive work democratizing 3D scanning. Last October he released the first public results of a library for fast, accurate, face-tracking he built for OpenFrameworks. That library was based on the work of &lt;a href=&quot;http://web.mac.com/jsaragih&quot;&gt;Jason Saragih&lt;/a&gt;, a computer vision researcher at CSIRO. Since the release of Kyle&amp;rsquo;s library, there&amp;rsquo;s been an explosion of projects in the creative coding community using his code to explore the possibilities of face-based interaction. I asked Kyle to explain how he first found Saragih&amp;rsquo;s work and to walk through how the algorithm works. I think the results represent a terrific introduction to many key areas of computer vision and to understanding FaceTracker in particular. In addition to to the video, I&amp;rsquo;ve provided a transcript of the interview that I&amp;rsquo;ve annotated with links and additional media.&lt;/p&gt;
+
+&lt;p&gt;Much of the rest of this site is currently under construction, but I&amp;rsquo;ll be announcing additional sections as well as further interviews and other material soon. You can follow along and get in touch with me about the project through the &lt;a href=&quot;http://twitter.com/makematics&quot;&gt;makematics twitter account&lt;/a&gt;. If you&amp;rsquo;d like to get involved, this site is on Github: &lt;a href=&quot;http://github.com/atduskgreg/makematics&quot;&gt;atduskgreg/makematics&lt;/a&gt;. Contributions of all forms are welcome, from writing to code to graphic design or other media.&lt;/p&gt;
+
+&lt;p&gt;In conclusion, a note about the intended voice of this site. All too frequently the technical and mathematical issues discussed here are written about solely by experts for other experts. And even when it does appear in venues intended for more general consumption, the material is usually presented as if its own internal logic and rigor made it naturally comprehensible. I don&amp;rsquo;t believe this is true.&lt;/p&gt;
+
+&lt;p&gt;I think my greatest advantage in this effort is that I am a  beginner myself. I am not an expert in computer vision, computer science, or mathematics. I&amp;rsquo;m a programmer and an artist who&amp;rsquo;s committed to struggling with this material until I understand it and can make it comprehensible and useful for myself and others. I won&amp;rsquo;t hide the frustrations and confusions that are inevitable in the process. I hope to show that a normal programmer with no special academic training can grapple with these areas of research and find a way in to understanding them and making them part of my creative work. And as I go I aim to create material that will help others do the same.&lt;/p&gt;
+
+&lt;p&gt;If I can do it, there&amp;rsquo;s no reason you can&amp;rsquo;t.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

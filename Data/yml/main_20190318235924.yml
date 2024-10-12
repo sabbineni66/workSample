@@ -1,0 +1,10 @@
+- name: restart postgresql
+  service: name=postgresql state=restarted
+  sudo: true
+  sudo_user: postgres
+  tags: database
+
+
+
+
+

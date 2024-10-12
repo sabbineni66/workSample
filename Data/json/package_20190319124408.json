@@ -1,0 +1,19 @@
+{
+    "name": "docker-autobuilder",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "@moebius/http-graceful-shutdown": "^1.1.0",
+        "bluebird": "^3.5.3",
+        "body-parser": "^1.18.3",
+        "dockerode": "~2.5.8",
+        "express": "^4.16.4",
+        "express-async-handler": "^1.1.4",
+        "fs-extra": "^7.0.1",
+        "lodash": "^4.17.11",
+        "moment": "~2.24.0",
+        "nodegit": "~0.24.0",
+        "pushbullet": "~2.4.0"
+    }
+}

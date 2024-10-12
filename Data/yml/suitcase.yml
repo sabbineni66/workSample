@@ -1,0 +1,10 @@
+package_format:     debian
+version_control:    subversion
+
+build_directory:    ~/work/suitcase/
+package_repo:       ~/work/suitcase/repo
+path_exclusions: ['tests']
+build_exclusions: ['debdiff']
+collections:
+    default:   
+        maintainer: Name <name@example.com>

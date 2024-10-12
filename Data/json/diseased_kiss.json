@@ -1,0 +1,19 @@
+{
+  "Name"     : "Diseased Kiss",
+  "Kind"     : "HP",
+  "Animation": "cast",
+  "Texture"   : {
+    "Path": "actions/icons/kiss.png"
+  },
+  "Ap"       : 6,
+  "Strength" : 10,
+  "Damage"   : 3,
+  "Range"    : 1,
+  "Target_enemies": true,
+  "Sounds"   : {
+    "kiss": "Haunts/SFX/Denizens/Ghosts/Corpse/Diseased Kiss"
+  },
+  "Conditions": [
+     "Poison"
+  ]
+}

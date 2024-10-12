@@ -1,0 +1,29 @@
+AllCops:
+  Exclude:
+    - '.*'
+    - 'Gemfile*'
+    - '*.gemspec'
+
+Style/AlignHash:
+  Enabled: false
+
+Style/AlignParameters:
+  Enabled: false
+
+Style/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/WhileUntilModifier:
+  MaxLineLength: 120
+
+Style/WordArray:
+  Enabled: false

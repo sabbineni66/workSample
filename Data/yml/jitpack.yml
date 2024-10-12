@@ -1,0 +1,6 @@
+jdk:
+  - openjdk10
+before_install:
+  - ./ci asdf install
+install:
+  - ./ci jitpack

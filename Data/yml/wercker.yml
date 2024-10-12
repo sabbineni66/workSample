@@ -1,0 +1,6 @@
+box: joshuamckenty/elder-box
+build:
+    steps:
+        - script:
+            name: compile it
+            code: cd .. && ls -al

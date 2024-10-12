@@ -1,0 +1,139 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - 'bin/**/*'
+    - db/schema.rb
+    - db/migrate/*
+    - 'vendor/**/*'
+
+Rails:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Layout/DotPosition:
+  EnforcedStyle: leading
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 10
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/AbcSize:
+  Enabled: true
+  Max: 15
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 25
+  Exclude:
+    - 'Rakefile'
+    - 'config/routes.rb'
+    - '**/*.rake'
+    - 'spec/**/*'
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 10
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/ParameterLists:
+  Exclude:
+    - 'spec/**/*'
+
+Naming/PredicateName:
+  Enabled: true
+  NamePrefix:
+    - is_
+    - not_
+    - does_
+    - can_
+  NamePrefixBlacklist:
+    - is_
+    - not_
+    - does_
+    - can_
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/DotPosition:
+  EnforcedStyle: leading
+
+Rails/Delegate:
+  EnforceForPrefixed: false
+
+Style/CollectionMethods:
+  Enabled: true
+  PreferredMethods:
+    collect: 'map'
+    collect!: 'map!'
+    inject: 'reduce'
+    detect: 'find'
+    find_all: 'select'
+
+Style/EachWithObject:
+  Enabled: false
+
+Style/GlobalVars:
+  AllowedVariables: [$fog_storage, $redis]
+
+Style/NumericLiterals:
+  Enabled: true
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: ()
+    '%r': '{}'
+    '%w': '()'
+    '%W': '()'
+    '%i': '()'
+    '%I': '()'
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Style/SingleLineMethods:
+  AllowIfMethodIsEmpty: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/WordArray:
+  EnforcedStyle: percent
+
+Style/NumericLiterals:
+  MinDigits: 5
+  Strict: false

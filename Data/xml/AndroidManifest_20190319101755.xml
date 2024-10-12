@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codeundone.mockemailhandler"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="4" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        
+		<activity
+		    android:label="Mock Compose Email"
+		    android:name=".MockEmailActivity">
+            <intent-filter>
+			    <action android:name="android.intent.action.VIEW"/>
+			    <action android:name="android.intent.action.SENDTO"/>
+			    <data android:scheme="mailto"/>
+			    <category android:name="android.intent.category.DEFAULT"/>
+			    <category android:name="android.intent.category.BROWSABLE"/>
+			</intent-filter>
+			<intent-filter android:label="Mock Email Handler">
+			    <action android:name="android.intent.action.SEND"/>
+			    <data android:mimeType="*/*"/>
+			    <category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+			<intent-filter android:label="@string/app_name">
+			    <action android:name="android.intent.action.SEND_MULTIPLE"/>
+			    <data android:mimeType="*/*"/>
+			    <category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+    </application>
+
+</manifest>

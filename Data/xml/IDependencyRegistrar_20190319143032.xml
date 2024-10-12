@@ -1,0 +1,560 @@
+?<IDependencyRegistrar>
+	<SummaryDocumentation>
+		<summary>
+			The IDependencyRegistrar defines the methods used to manage Registration of functions or 
+			instances which will be used to resolve instances of specified types, either without or
+			without a distinguishing name.
+		</summary>
+	</SummaryDocumentation>
+	
+	<Members name="DefaultLifetimeManager">
+		<summary>
+			Gets or sets the LifetimeManger that is used by the IocContainer for new Registrations by
+			default.
+		</summary>
+		<remarks>
+			A value of null is the same as ContainerLifetime, but slightly more efficient.
+		</remarks>
+		<example>
+			The following examples sets the default lifetime for resolved object to the life of the
+			container.  In other words, the same instance will always be returned, effectively making
+			all resolved objects Singletons.
+			<code>
+				var container = new IocContainer();
+				container.DefaultLifetimeManager(new ContainerLifetime());
+			</code>
+		</example>
+	</Members>
+
+	<Members name="Register1">
+		<summary>
+			Adds the function to resolve the unnamed registration of the specified type to the container.
+		</summary>
+		<typeparam name="TType">The type to be registered.</typeparam>
+		<param name="func">
+			The delegate  which will be called to create an instance of the type TType.
+		</param>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			The following code registers a method that creates and instance of MyDatabase to create
+			the object for when resolving the IDatabase interface.
+			<code>
+				var container = new IocContainer();
+				container.Register&lt;IDatabase&gt;( c => new MyDatabase(c.Resolve&lt;ILogger&gt;()));
+				...
+				// get an IDatabase instance
+				var aDatabase = container.Resolve&lt;IDatabase&gt;();
+		</code>
+		</example>
+	</Members>
+	
+	<Members name="Register2">
+		<summary>
+			Adds the function to resolve the named registration of the specified type to the container.
+		</summary>
+		<typeparam name="TType">The type to be registered.</typeparam>
+		<param name="name">
+			The name of the Registration for this type.  Use to distinguish between different
+			Registrations.
+		</param>
+		<param name="func">
+			The delegate  which will be called to create an instance of the type TType.
+		</param>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			The following code registers a method that creates and instance of MyDatabase to create
+			the object for when resolving the IDatabase interface using a named instance.
+			<code>
+				var container = new IocContainer();
+				container.Register&lt;IDatabase&gt;("Article", c => new MyArticleDatabase(c.Resolve&lt;ILogger&gt;()));
+				container.Register&lt;IDatabase&gt;("Blog", c => new MyBlogDatabase(c.Resolve&lt;ILogger&gt;()));
+				...
+				// get an instance of the Article database
+				var articleDatabase = container.Resolve&lt;IDatabase&gt;("Article");
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="Register3">
+		<summary>
+			Adds the function to resolve the unnamed registration of the specified type to the container.
+		</summary>
+		<param name="type">The type to be registered.</param>
+		<param name="func">
+			The delegate which will be called to create an instance of the type.
+		</param>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			The following code registers a method that creates and instance of MyDatabase to create
+			the object for when resolving the IDatabase interface.
+			<code>
+				var container = new IocContainer();
+				container.Register( typeof(IDatabase), c => new MyDatabase(c.Resolve&lt;ILogger&gt;()));
+				...
+				// get an IDatabase instance
+				var aDatabase = container.Resolve&lt;IDatabase&gt;();
+			</code>
+		</example>
+	</Members>
+
+	<Members name="Register4">
+		<summary>
+			Adds the function to resolve the named registration of the specified type to the container.
+		</summary>
+		<param name="name">
+			The name of the Registration for this type.  Use to distinguish between different
+			Registrations.
+		</param>
+		<param name="type">The type to be registered.</param>
+		<param name="func">
+			The delegate which will be called to create an instance of the type.
+		</param>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			The following code registers a method that creates and instance of MyDatabase to create
+			the object for when resolving the IDatabase interface using a named instance.
+			<code>
+				var container = new IocContainer();
+				container.Register("Article", typeof(IDatabase), c => new MyArticleDatabase(c.Resolve&lt;ILogger&gt;()));
+				container.Register("Blog", typeof(IDatabase), c => new MyBlogDatabase(c.Resolve&lt;ILogger&gt;()));
+				...
+				// get an instance of the Article database
+				var articleDatabase = container.Resolve&lt;IDatabase&gt;("Article");
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="RegisterInstance1">
+		<summary>
+			Registers an instance that will be returned whenever the IocContainer resolves the specified
+			type.
+		</summary>
+		<typeparam name="TType">The type that is being registered for resolution.</typeparam>
+		<param name="instance">
+			The instance that will alway be returned when TType is resolved.  The instance must be
+			assignable to a variable of type TType.
+		</param>
+		<remarks>
+			Setting the LifetimeManager will have no affect.  The same instance will always be
+			returned.  The lifetime is effectively ContainerLifetime The instance is a Singleton.
+		</remarks>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			This example shows how to register a instance to be returned whenever a type is resolved.
+			<code>
+				var container = new.IocContainer();
+				var logger = new ErrorLogger();
+				container.Register&lt;ILogger&gt;(logger);
+				...
+				var logger1 = container.Resolve&lt;ILogger&gt;();
+				var logger2 = container.Resolve&lt;ILogger&gt;();
+				
+				// logger1 and logger2 both reference the same object.
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="RegisterInstance2">
+		<summary>
+			Registers an instance that will be returned whenever the IocContainer resolves the specified
+			type and name.
+		</summary>
+		<typeparam name="TType">The type that is being registered for resolution.</typeparam>
+		<param name="name">
+			The name this registration will be registered under.
+		</param>
+		<param name="instance">
+			The instance that will alway be returned when TType is resolved.  The instance must be
+			assignable to a variable of type TType.
+		</param>
+		<remarks>
+			Setting the LifetimeManager will have no affect.  The same instance will always be
+			returned.  The lifetime is effectively ContainerLifetime The instance is a Singleton.
+		</remarks>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			This example shows how to register a instance to be returned whenever a type is resolved.
+			<code>
+				var container = new.IocContainer();
+				var articleRepository = new ArticleRepository();
+				var blogRepository = new BlogRepository();
+				container.Register&lt;IRepository&gt;("Article", articleRepository);
+				container.Register&lt;IRepository&gt;("Blog", blogRepository);
+				...
+				var repository1 = container.Resolve&lt;IRepository&gt;("Article");
+				var repository2 = container.Resolve&lt;IRepository&gt;("Article");
+				var repository3 = container.Resolve&lt;IRepository&gt;("Blog");
+
+				// repository1 and repository2 both reference the same object, while repository3
+				// references a different object.
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="RegisterInstance3">
+		<summary>
+			Registers an instance that will be returned whenever the IocContainer resolves the specified
+			type.
+		</summary>
+		<param name="type">The type that is being registered for resolution.</param>
+		<param name="instance">
+			The instance that will alway be returned when type is resolved.
+		</param>
+		<remarks>
+			Setting the LifetimeManager will have no affect.  The same instance will always be
+			returned.  The lifetime is effectively ContainerLifetime The instance is a Singleton.
+		</remarks>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			This example shows how to register a instance to be returned whenever a type is resolved.
+			<code>
+				var container = new.IocContainer();
+				var logger = new ErrorLogger();
+				container.Register(typeof(ILogger), logger);
+				...
+				var logger1 = container.Resolve&lt;ILogger&gt;();
+				var logger2 = container.Resolve&lt;ILogger&gt;();
+
+				// logger1 and logger2 both reference the same object.
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="RegisterInstance4">
+		<summary>
+			Registers an instance that will be returned whenever the IocContainer resolves the specified
+			type and name.
+		</summary>
+		<param name="type">The type that is being registered for resolution.</param>
+		<param name="name">The name this registration will be registered under.</param>
+		<param name="instance">
+			The instance that will alway be returned when TType is resolved.  The instance must be
+			assignable to a variable of type TType.
+		</param>
+		<remarks>
+			Setting the LifetimeManager will have no affect.  The same instance will always be
+			returned.  The lifetime is effectively ContainerLifetime The instance is a Singleton.
+		</remarks>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			This example shows how to register a instance to be returned whenever a type is resolved.
+			<code>
+				var container = new.IocContainer();
+				var articleRepository = new ArticleRepository();
+				var blogRepository = new BlogRepository();
+				container.Register("Article", typeof(IRepository), articleRepository);
+				container.Register("Blog", typeof(IRepository), blogRepository);
+				...
+				var repository1 = container.Resolve&lt;IRepository&gt;("Article");
+				var repository2 = container.Resolve&lt;IRepository&gt;("Article");
+				var repository3 = container.Resolve&lt;IRepository&gt;("Blog");
+
+				// repository1 and repository2 both reference the same object while repository3
+				// references a different object.
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="RegisterType1">
+		<summary>
+			Registers a implementation type to be instantiated when the the specified type is resolved.
+		</summary>
+		<typeparam name="TType">The type to be registered.</typeparam>
+		<typeparam name="TImpl">
+			The type that will be instantiated when TType is resolved.  The instance is created using
+			the constructor with the most parameters, each parameter is resolved by the IOC Container.
+		</typeparam>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			The following code registers a method that creates and instance of MyDatabase to create
+			the object for when resolving the IDatabase interface.
+			<code>
+				var container = new IocContainer();
+				container.Register&lt;IDatabase, MyDatabase&gt;( );
+				...
+				// get an IDatabase instance
+				var aDatabase = container.Resolve&lt;IDatabase&gt;();
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="RegisterType2">
+		<summary>
+			Registers a implementation type to be instantiated when the the specified type is resolved.
+		</summary>
+		<typeparam name="TType">The type to be registered.</typeparam>
+		<param name="name">
+			The name of the Registration for this type.  Use to distinguish between different
+			Registrations.
+		</param>
+		<typeparam name="TImpl">
+			The type that will be instantiated when TType is resolved.  The instance is created using
+			the constructor with the most parameters, each parameter is resolved by the IOC Container.
+		</typeparam>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			The following code registers a method that creates and instance of MyDatabase to create
+			the object for when resolving the IDatabase interface using a named instance.
+			<code>
+				var container = new IocContainer();
+				container.Register&lt;IDatabase, MyArticleDatabase&gt;("Article");
+				container.Register&lt;IDatabase, MyBlogDatabase&gt;("Blog");
+				...
+				// get an instance of the Article database
+				var articleDatabase = container.Resolve&lt;IDatabase&gt;("Article");
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="RegisterType3">
+		<summary>
+			Registers a implementation type to be instantiated when the the specified type is resolved.
+		</summary>
+		<param name="tType">The type to be registered.</param>
+		<param name="tImpl">
+			The type that will be instantiated when tType is resolved.  The instance is created using
+			the constructor with the most parameters, each parameter is resolved by the IOC Container.
+		</param>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			The following code registers a method that creates and instance of MyDatabase to create
+			the object for when resolving the IDatabase interface.
+			<code>
+				var container = new IocContainer();
+				container.Register( typeof(IDatabase), typeof(MyDatabase));
+				...
+				// get an IDatabase instance
+				var aDatabase = container.Resolve&lt;IDatabase&gt;();
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="RegisterType4">
+		<summary>
+			Registers a implementation type to be instantiated when the the specified type is resolved.
+		</summary>
+		<param name="name">
+			The name of the Registration for this type.  Use to distinguish between different
+			Registrations.
+		</param>
+		<param name="tType">The type to be registered.</param>
+		<param name="tImpl">
+			The type that will be instantiated when tType is resolved.  The instance is created using
+			the constructor with the most parameters, each parameter is resolved by the IOC Container.
+		</param>
+		<returns>
+			An instance of IRegistration that can be used to configure how the get information about
+			the registration, or change the lifetime manager.
+		</returns>
+		<example>
+			The following code registers a method that creates and instance of MyDatabase to create
+			the object for when resolving the IDatabase interface using a named instance.
+			<code>
+				var container = new IocContainer();
+				container.Register("Article", typeof(IDatabase), typeof(MyArticleDatabase));
+				container.Register("Blog", typeof(IDatabase), typeof(MyBlogDatabase));
+				...
+				// get an instance of the Article database
+				var articleDatabase = container.Resolve&lt;IDatabase&gt;("Article");
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="Remove">
+		<summary>
+			Removes the Registration from the IOC Container.
+		</summary>
+		<param name="ireg">
+			The Registration to be removed from the container.
+		</param>
+		<example>
+			The following gets a Registration and removes it from the container.
+			<code>
+				var container = new IocContainer();
+				container.Register&lt;IMagicUser, Elf&gt;("Elf");
+				...
+				// this works
+				var newPlayer = container.Resolve&lt;IMagicUser&gt;("Elf");
+				...
+				// Remove Elf from the possible magic users
+				var registration = container.GetRegistration&lt;IMagicUser&gt;("Elf");
+				container.Remove(registration);
+				...
+				// this throws a KeyNotFoundException
+				var newPlayer = container.Resolve&lt;IMagicUser&gt;("Elf");
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="GetRegistration1">
+		<summary>
+			Returns an Registration of a registered type
+		</summary>
+		<typeparam name="TType">The type to get the Registration for.</typeparam>
+		<returns>An Registration for the type.  Throws a KeyNoFoundException if not registered.</returns>
+		<example>
+			This example gets a Registration and invalidates the cached value.
+			<code>
+				var container = new IocContainer();
+				container.Register&lt;IGameBoard, 3DGameBoard&gt;()
+						 .WithLifetimeManager(new ContainerLifeTime());
+				...
+				// this create the instance, and caches it in the container
+				var gameBoard = container.Resolve&lt;IGameBoard&gt;();
+				...
+				// force a new gameboard
+				var registration = container.GetRegistration&lt;IGameBoard&gt;();
+				registration.InvalidateInstanceCache();
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="GetRegistration2">
+		<summary>
+			Returns an Registration of a registered type
+		</summary>
+		<typeparam name="TType">The type to get the Registration for.</typeparam>
+		<param name="name">The name associated with the named registration to get.</param>
+		<returns>An Registration for the type.  Throws a KeyNoFoundException if not registered.</returns>
+		<example>
+			This example uses GetRegistration to ensure that the interface is Registered.
+			<code>
+				var container = new IocContainer();
+				...
+				IRegistration reg;
+				try
+				{
+					reg = container.GetRegistration&lt;IArmory&gt;();
+				}
+				catch(KeyNotFoundException)
+				{
+					reg = container.Register&lt;IArmor, ElvenFortArmory&gt;();
+				}
+				// make sure it is a new instance.
+				reg.InvalidateInstanceCache();
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="GetRegistration3">
+		<summary>
+			Returns an Registration of a registered type
+		</summary>
+		<param name="type">The type to get the Registration for.</param>
+		<returns>An Registration for the type.  Throws a KeyNoFoundException if not registered.</returns>
+		<example>
+			This example gets a Registration and invalidates the cached value.
+			<code>
+				var container = new IocContainer();
+				container.Register&lt;IGameBoard, 3DGameBoard&gt;()
+				.WithLifetimeManager(new ContainerLifeTime());
+				...
+				// this create the instance, and caches it in the container
+				var gameBoard = container.Resolve&lt;IGameBoard&gt;();
+				...
+				// force a new gameboard
+				var registration = container.GetRegistration(typeof(IGameBoard));
+				registration.InvalidateInstanceCache();
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="GetRegistration4">
+		<summary>
+			Returns an Registration of a registered type
+		</summary>
+		<param name="name">The name associated with the named registration to get.</param>
+		<param name="type">The type to get the Registration for.</param>
+		<returns>An Registration for the type.  Throws a KeyNoFoundException if not registered.</returns>
+		<example>
+			This example uses GetRegistration to ensure that the interface is Registered.
+			<code>
+				var container = new IocContainer();
+				...
+				IRegistration reg;
+				try
+				{
+					reg = container.GetRegistration("Elf",typeof(IArmory));
+				}
+				catch(KeyNotFoundException)
+				{
+					reg = container.Register&lt;IArmor, ElvenFortArmory&gt;("Elf");
+				}
+				// make sure it is a new instance.
+				reg.InvalidateInstanceCache();
+			</code>
+		</example>
+
+	</Members>
+	
+	<Members name="GetRegistrations1">
+		<summary>
+			Gets all Registrations for the specified type.
+		</summary>
+		<typeparam name="TType">The type for which the Registrations are required.</typeparam>
+		<returns>An list of the registration of the specified type.</returns>
+		<example>
+			This example gets a list of the names of plugins registered.
+			<code>
+				...
+				public IList&lt;string&gt; GetPluginNames(IocContainer container)
+				{
+					var registrations = container.GetRegistrations&lt;IPlugin&gt;();
+					return registrations.Select(reg =&gt; reg.Name).ToList();
+				}
+			</code>
+		</example>
+	</Members>
+	
+	<Members name="GetRegistrations2">
+		<summary>
+			Gets all Registrations for the specified type.
+		</summary>
+		<param name="type">The type for which the Registrations are required.</param>
+		<returns>An list of the registration of the specified type.</returns>
+		<example>
+			This example gets a list of the names of plugins registered.
+			<code>
+				...
+				public IList&lt;string&gt; GetPluginNames(IocContainer container)
+				{
+					var registrations = container.GetRegistrations(typeof(IPlugin));
+					return registrations.Select(reg =&gt; reg.Name).ToList();
+				}
+			</code>
+		</example>
+	</Members>
+</IDependencyRegistrar> 

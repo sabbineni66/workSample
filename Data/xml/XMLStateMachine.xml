@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>xmlfsm</name>
+    </assembly>
+    <members>
+        <member name="T:workingcode.util.XMLStateMachine">
+            <remarks>
+            This class implements a table-driven finite state machine.
+            The table is defined by an XML document. The System.Xml.XmlTextReader 
+            class is used for fast scanning of the table and allows larger tables 
+            to be used as opposed to System.Xml.XmlDocument.
+            </remarks>
+        </member>
+        <member name="M:workingcode.util.XMLStateMachine.Next(System.String)">
+            <summary>
+            The Next method gets the next valid state given
+            the current state and the supplied input.
+            </summary>
+            <param name="inputArg">The input used to trigger a state transition.</param>
+            <returns>A string that identifies the next state</returns>
+        </member>
+        <member name="P:workingcode.util.XMLStateMachine.CurrentState">
+            <summary>
+            The CurrentState property contains the current state in the table.
+            </summary>
+        </member>
+        <member name="P:workingcode.util.XMLStateMachine.Action">
+            <summary>
+            The Action property contains a user-defined string
+            that indicates an action to be performed on the current transition.
+            </summary>
+        </member>
+        <member name="P:workingcode.util.XMLStateMachine.StateTable">
+            <summary>
+            The StateTable property contains the state table file name.
+            </summary>
+        </member>
+    </members>
+</doc>

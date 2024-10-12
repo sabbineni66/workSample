@@ -1,0 +1,29 @@
+destination: ./_site
+source:      ./www
+auto:        false
+lsi:         false
+server_port: 4000
+pygments:    true
+markdown:    maruku
+permalink:   date
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_dir:    images/latex
+  png_url:    /images/latex
+# JRuby-specific info here; goes into the "site" jekyll variable
+release:
+  url: /2010/08/20/jruby-1-5-2
+  version: 1.5.2
+  tar: http://jruby.org.s3.amazonaws.com/downloads/1.5.2/jruby-bin-1.5.2.tar.gz
+  zip: http://jruby.org.s3.amazonaws.com/downloads/1.5.2/jruby-bin-1.5.2.zip
+  exe: http://jruby.org.s3.amazonaws.com/downloads/1.5.2/jruby_windows_1_5_2.exe
+  exe64: http://jruby.org.s3.amazonaws.com/downloads/1.5.2/jruby_windows_x64_1_5_2.exe
+  exejre: http://jruby.org.s3.amazonaws.com/downloads/1.5.2/jruby_windowsjre_1_5_2.exe
+urls:
+  s3: http://jruby.org.s3.amazonaws.com/downloads
+  jira: http://jira.codehaus.org/browse/JRUBY
+  wiki: http://kenai.com/projects/jruby/pages/Home
+  lists: http://kenai.com/projects/jruby/pages/MailingLists
+team_email: team@jruby.org
+domain: www.jruby.org

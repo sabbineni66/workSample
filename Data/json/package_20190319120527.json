@@ -1,0 +1,50 @@
+{
+  "name": "@uiengine/adapter-pug",
+  "description": "UIengine template adapter for Pug.",
+  "license": "MIT",
+  "version": "2.0.2",
+  "author": "Dennis Reimann <mail@dennisreimann.de> (https://dennisreimann.de)",
+  "homepage": "https://github.com/dennisreimann/uiengine",
+  "bugs": "https://github.com/dennisreimann/uiengine/issues",
+  "repository": "dennisreimann/uiengine",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10.13"
+  },
+  "main": "./src/index.js",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "uiengine-adapter",
+    "uiengine",
+    "pug"
+  ],
+  "dependencies": {
+    "@uiengine/util": "^2.0.2",
+    "fs-extra": "7.0.1",
+    "globby": "9.0.0",
+    "pug-lexer": "4.0.0",
+    "pug-parser": "5.0.0",
+    "pug-walk": "1.1.7"
+  },
+  "devDependencies": {
+    "lint-staged": "8.1.4",
+    "pug": "2.0.3"
+  },
+  "peerDependencies": {
+    "pug": "^2.0.3"
+  },
+  "scripts": {
+    "lint": "eslint src test",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run lint --fix",
+      "git add"
+    ]
+  }
+}

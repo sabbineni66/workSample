@@ -1,0 +1,34 @@
+#
+# kb-gui
+#
+---
+imports: 
+    nx:
+        git: https://github.com/drudru/nx.git
+    rpi-gpio:
+        git: https://github.com/drudru/rpi-gpio.git
+    kb-libs:
+        git: https://github.com/drudru/kb-libs.git
+    fips-stb:
+        git: https://github.com/fungos/fips-stb.git
+
+#    oryol-imgui:
+#        git: https://github.com/floooh/oryol-imgui.git
+#   exports:
+#       header-dirs:
+#           - RELATIVE HEADER SEARCH PATH
+#           - ...
+#       lib-dirs:
+#           - RELATIVE LIB SEARCH PATH
+#           - ...
+#       defines:
+#           KEY: VALUE (C preprocessor defines)
+#           ...: ...
+#       modules:
+#           NAME:   DIRECTORY WITH CMakeLists.txt of MODULE
+#           ...: ...
+#   run:
+#       TARGET-NAME:
+#           cwd:    WORKING DIRECTORY FOR 'fips run target'
+#       ...
+

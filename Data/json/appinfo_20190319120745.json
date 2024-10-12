@@ -1,0 +1,25 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "luis.barrueco@gmail.com",
+    "longName": "PingPong",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/action_icon_plus.png",
+                "name": "IMAGE_ACTION_ICON_PLUS",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "PingPong",
+    "uuid": "5326f0ba-f8ed-4281-a76e-5f825229657e",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}

@@ -1,0 +1,53 @@
+# # # # # # # #
+#   K i k o   #
+# # # # # # # #
+
+# - markdown: kramdown
+
+# Sass
+sass:
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
+title: "Ole Begemann"
+tagline: ""
+description: "Follow <a href=\"https://micro.blog/ole\">@ole on Micro.blog</a>."
+credits: "Follow <a href=\"https://micro.blog/ole\">@ole on Micro.blog</a>."
+baseurl: ""
+url: "https://ole.micro.blog"
+markdown: "kramdown"
+username: "ole"
+microblog_user: "ole"
+permalink: "/:year/:month/:day/:title.html"
+relative_permalinks: false
+author: "Ole Begemann"
+name: "Ole Begemann"
+gravatar_hash: "d0efc09d023fa0569a2479c9dcfd4620"
+avatar: "https://micro.blog/ole/avatar.jpg"
+full_name: "Ole Begemann"
+bio: ""
+twitter_username: ""
+github_username: ""
+instagram_username: ""
+paginate: 20
+paginate_path: "/page/:num/"
+timezone: "Poland"
+site_id: "1503"
+gems: ["jekyll-paginate"]
+itunes_category: "Society & Culture"
+itunes_subcategory: "Personal Journals"
+itunes_author: "Ole Begemann"

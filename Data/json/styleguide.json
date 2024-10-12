@@ -1,0 +1,11 @@
+{
+  "title": "Help Desk Style Guide",
+  "files": [
+    "styleguide/style.css",
+    "styleguide/example.css"
+  ],
+  "babelConfig": {
+    "stage": 0
+  },
+  "watch": "true"
+}

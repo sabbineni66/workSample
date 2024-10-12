@@ -1,0 +1,19 @@
+{
+  "name": "sc-coding-challenge",
+  "version": "1.0.0",
+  "description": "SparkCentral Coding Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caplis/sc-coding-challenge.git"
+  },
+  "author": "Tim Caplis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caplis/sc-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/caplis/sc-coding-challenge#readme"
+}

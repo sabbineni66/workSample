@@ -1,0 +1,19 @@
+{
+	"ImportPath": "github.com/freeformz/grb",
+	"GoVersion": "go1.4.2",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/codegangsta/inject",
+			"Comment": "v1.0-rc1-10-g33e0aa1",
+			"Rev": "33e0aa1cb7c019ccc3fbe049a8262a6403d30504"
+		},
+		{
+			"ImportPath": "github.com/go-martini/martini",
+			"Comment": "v1.0-41-g7b15d10",
+			"Rev": "7b15d1000edcd8c1b42e9da7b9d160446248f6a1"
+		}
+	]
+}

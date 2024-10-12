@@ -1,0 +1,32 @@
+{
+  "author": "Carlos Villela <cv@lixo.org> (http://lixo.org)",
+  "name": "portunhol",
+  "description": "Pequena biblioteca JavaScript para traducir de portugu?s para lo portu?ol",
+  "version": "0.0.6",
+  "homepage": "http://github.com/cv/portunhol.js",
+  "license" : "BSD",
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cv/portunhol.js.git"
+  },
+
+  "main": "portunhol.js",
+  "bin": "cli.js",
+
+  "dependencies": {
+    "lazy": "*"
+  },
+
+  "devDependencies": {
+    "jasmine-node": "*"
+  },
+
+  "scripts": {
+    "test": "./node_modules/jasmine-node/bin/jasmine-node --verbose specs/"
+  },
+
+  "engines": {
+    "node": "*"
+  }
+}

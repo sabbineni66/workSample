@@ -1,0 +1,22 @@
+{
+  "name": "Ad Cleaner Extension",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Hides ads for some specific sites.",
+  "content_scripts": [
+    {
+      "matches": ["http://*.coolsport.tv/*"],
+      "css": ["adCleaner.css"],
+      "js": ["jquery.js", "coolsport.js"],
+      "all_frames": true
+    },
+    {
+      "matches": ["http://espnwatch.net/*"],
+      "all_frames": true,
+      "js": ["jquery.js", "coolsport.js"]
+     }
+  ],
+  "permissions": [
+    "http://www.coolsport.tv/*",  "http://coolsport.tv/*"
+  ]
+}

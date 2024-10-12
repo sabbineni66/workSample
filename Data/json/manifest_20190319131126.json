@@ -1,0 +1,22 @@
+{
+  "name": "Disable CSS",
+  "version": "0.1",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": {
+      "19": "browser-action.png",
+      "38": "browser-action@2x.png"
+    },
+    "default_title": "Disable CSS"
+  },
+  "background": {
+    "scripts": ["event-page.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "file://*/*"
+  ]
+}

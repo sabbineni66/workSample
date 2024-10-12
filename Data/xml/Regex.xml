@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemizer>
+  
+  <recipe name="named.group">
+    <!--
+      This is bugged. I can get my group's names into the Navigator, but
+      then I'm left with an itemizer that misses it's opening tag as a part of
+      the item. Either of the following should be possible instead:
+          
+          named.capturing.group > group.begin:capture(itemizer-firstused) ~ capture.name:not(punctuation):capture(name)
+          named.capturing.group:has-child(capture.name:not(punctuation):capture(name)) > group.begin
+          
+      Unfortunately, either I've done something wrong, or there's a bug in the
+      engine and we can't do that.
+    -->
+    <start-selector>container.group.capturing.named:capture(itemizer-firstused) ~ capture-name:not(punctuation):capture(name)</start-selector>
+    <end-selector>group.capturing.named.end</end-selector>
+    
+    <subrecipes>
+      <include-root-recipes/>
+    </subrecipes>
+  </recipe>
+  
+  <!--
+    There has to be a way to count the groups, and get the number of the group
+    into the Navigator as a "name". Hmmm?
+  -->
+  <recipe name="numbered.group">
+    <class>ESCodeBlockItem</class>
+    <start-selector>container.group.capturing.numbered > punctuation.group.begin</start-selector>
+    <end-selector>container.group.capturing.numbered > punctuation.group.end</end-selector>
+    
+    <subrecipes>
+      <include-root-recipes/>
+    </subrecipes>
+  </recipe>
+  
+  <recipe name="anonymous.group">
+    <class>ESCodeBlockItem</class>
+    <start-selector>container.group.anonymous > punctuation.group.begin</start-selector>
+    <end-selector>container.group.anonymous > punctuation.group.end</end-selector>
+    
+    <subrecipes>
+      <include-root-recipes/>
+    </subrecipes>
+  </recipe>
+  
+</itemizer>

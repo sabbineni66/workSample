@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "strip-ansi": {
+      "version": "2.0.0",
+      "dependencies": {
+        "ansi-regex": {
+          "version": "1.1.0"
+        }
+      }
+    },
+    "tail": {
+      "version": "0.3.0"
+    }
+  }
+}

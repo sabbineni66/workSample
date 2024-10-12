@@ -1,0 +1,18 @@
+-
+    title: "HIMYM Character -> Actor"
+    description: "you're shown a character's name and you have to pick which of two actors is the one who plays them"
+    file: "people.csv"
+    front: "character"
+    back: "actor"
+-
+    title: "HIMYM Actor -> Character"
+    description: "you're shown an actor's name and you have to pick which of two characters is the one they play"
+    file: "people.csv"
+    front: "actor"
+    back: "character"
+-
+    title: "HIMYM Gender -> Character"
+    description: "you're shown a gender and you have to pick which of two characters is that gender"
+    file: "people.csv"
+    front: "gender"
+    back: "character"

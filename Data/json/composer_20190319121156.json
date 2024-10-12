@@ -1,0 +1,25 @@
+{
+  "name": "kyash/api",
+  "type": "library",
+  "description": "Integrate with the Kyash Payment Gateway.",
+  "keywords": ["kyash","cash","india","payment gateway","collect cash payment"],
+  "homepage": "https://github.com/Gubbi/kyash_php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vinuth Madinur",
+      "email": "vinuth@kyash.com",
+      "homepage": "http://www.kyash.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Kyash": "src"
+    }
+  }
+}

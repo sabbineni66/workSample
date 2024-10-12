@@ -1,0 +1,24 @@
+{
+  "name": "electricimp",
+  "version": "0.0.0",
+  "description": "A library to communicate with the Electric Imp API tools.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:voodootikigod/node-electricimp.git"
+  },
+  "keywords": [
+    "IoT",
+    "Things",
+    "Hardware",
+    "Imp"
+  ],
+  "author": "Chris Williams <voodootikigod@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/voodootikigod/node-electricimp/issues"
+  }
+}

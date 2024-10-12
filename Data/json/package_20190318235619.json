@@ -1,0 +1,55 @@
+{
+  "name": "tintan",
+  "description": "Titanium development with style.  A suite of Jake build tasks which integrate with Sublime Text and Titanium Studio.  Usable on all platforms.",
+  "version": "0.4.2",
+  "license": "Apache 2.0",
+  "contributors": [
+    { "name": "Victor Borja", "url": "https://github.com/vic" },
+    { "name": "Charles Phillips", "url": "https://github.com/doublerebel" },
+    { "name": "Sam Moggach", "url": "https://github.com/ezmicken" }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vic/tintan"
+  },
+  "bugs": "https://github.com/vic/tintan/issues",
+  "keywords": [
+    "titanium",
+    "mobile",
+    "iced",
+    "coffee",
+    "clojure",
+    "sublime",
+    "jasmine",
+    "bdd",
+    "tdd"
+  ],
+  "main": "./index.js",
+  "bin": {
+    "tintan": "./bin/tintan"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "colors": ">=0.6.0",
+    "jake": ">=0.5.17",
+    "libxmljs": ">=0.6.0",
+    "eco": ">=1.0.3",
+    "coffee-script": ">=1.6.3",
+    "deep-extend": ">=0.2.5",
+    "ini": ">=1.1.0",
+    "source-map-support": ">=0.2.3",
+    "touch": ">=0.0.2",
+    "btoa": ">=1.1.1",
+    "rimraf": ">=2.2.6"
+  },
+  "optionalDependencies": {
+    "iced-coffee-script": ">=1.6.3-g",
+    "node-inspector": "doublerebel/node-inspector"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.8"
+  }
+}

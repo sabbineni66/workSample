@@ -1,0 +1,127 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+current:
+  body: |-
+    This is a comment
+  owner: simple_method
+  owner_type: CodeMethod
+  exported: false
+  user: aaron
+  version: 3
+  
+skip:
+  body: lala
+  owner: simple_method
+  owner_type: CodeMethod
+  exported: false
+  user: aaron
+  version: 3
+  
+not_current:
+  body: |-
+    This comment is not current
+  owner: some_class
+  owner_type: CodeContainer
+  exported: false
+  user: aaron
+  version: 2
+  
+nested_class:
+  body: |-
+    This is the comment of a nested class
+  owner: nested_class
+  owner_type: CodeContainer
+  exported: false
+  user: aaron
+  version: 2
+  
+colon_class:
+  body: |-
+    this class has a colon
+  owner: colon_class
+  owner_type: CodeContainer
+  exported: false
+  user: aaron
+  version: 2
+
+no_comment:
+  body: this is the first comment
+  owner: no_comment
+  owner_type: CodeMethod
+  exported: false
+  user: aaron
+  version: 1
+  
+file_comment:
+  body: This is a new file comment
+  owner: file
+  owner_type: CodeContainer
+  exported: false
+  user: aaron
+  version: 2
+  
+first_file_comment:
+  body: This is the first of many
+  owner: file
+  owner_type: CodeContainer
+  exported: false
+  user: aaron
+  version: 1
+  
+long_comment:
+  body: This is a very long comment which has a lot of words and is very very nice
+  owner: file
+  owner_type: CodeContainer
+  exported: false
+  user: aaron
+  version: 1
+  
+begin_comment:
+  body: This is the second version
+  owner: some_class
+  uses_begin: true
+  owner_type: CodeContainer
+  exported: false
+  user: aaron
+  version: 2
+
+begin_tabbed_comment:
+  body: |-
+    This is the second
+      version
+    yup!
+  owner: some_class
+  uses_begin: true
+  owner_type: CodeContainer
+  exported: false
+  user: aaron
+  version: 2
+  
+long_comment:
+  body: This is a very long comment that is longer then 15 words la la la la la
+  owner: some_class
+  owner_type: CodeContainer
+  exported: false
+  user: aaron
+  version: 1
+  
+long_tabbed_comment:
+  body: |-
+    tada
+      This is a very long comment that is longer then 15 words la la la la la
+  owner: some_class
+  owner_type: CodeContainer
+  exported: false
+  user: aaron
+  version: 1
+
+multi_line:
+  body: |-
+    This is a cool comment
+    
+    Aint it?
+  owner: some_class
+  owner_type: CodeContainer
+  exported: false
+  user: aaron
+  version: 1

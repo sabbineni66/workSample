@@ -1,0 +1,141 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.rulers": [100],
+    "editor.tabSize": 2,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "keyword.control"
+                ],
+                "settings": {
+                    "fontStyle": "",
+                    "foreground": "#c792ea"
+                }
+            },
+            {
+                "scope": [
+                    "punctuation.definition.variable.ruby",
+                    "variable.other.readwrite.instance.ruby"
+                ],
+                "settings": {
+                    "foreground": "#f07178"
+                }
+            },
+            {
+                "scope": [
+                    "entity.other.attribute-name.html",
+                    "entity.other.attribute-name.id.html"
+                ],
+                "settings": {
+                    "foreground": "#ffcb6b"
+                }
+            },
+            {
+                "scope": [
+                    "punctuation.section.embedded.begin.erb",
+                    "punctuation.section.embedded.end.erb"
+                ],
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            }
+        ]
+    },
+    "editor.wordWrapColumn": 100,
+    "files.exclude": {
+        "**/._*": true,
+        "**/.rubocop-http*": true,
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/CVS": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "materialTheme.cache.workbench.settings": {
+        "themeColours": "Default"
+    },
+    "perforce.editOnFileModified": true,
+    "ruby.specClearTerminal": false,
+    "ruby.specCommand": "bundle exec rspec",
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/tmp": true
+    },
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.fontSize": 16,
+    "window.titleBarStyle": "native",
+    // "workbench.colorCustomizations": {
+    //     "editorIndentGuide.background": "#2f2f2f",
+    //     "editorInfo.foreground": "#057eff",
+    //     "editorWarning.foreground": "#ff9500",
+    //     "[RailsCasts Plus Theme]": {
+    //         "editorGutter.background": "#222222",
+    //         "sideBar.border": "#202020",
+    //         "statusBar.border": "#1f1f1f",
+    //         "statusBar.background": "#333333",
+    //         "statusBar.noFolderBackground": "#222222",
+    //         "statusBar.foreground": "#b0b0b0",
+    //         "titleBar.border": "#404040"
+    //     }
+    // },
+    "workbench.editor.enablePreview": false,
+    "workbench.iconTheme": "file-icons-colourless",
+    "workbench.startupEditor": "newUntitledFile",
+
+    // Language-specific
+    "[erb]": {
+        "editor.rulers": [],
+        "editor.tabSize": 4
+    },
+    "[html]": {
+        "editor.rulers": [],
+        "editor.tabSize": 4
+    },
+    "[javascript]": {
+        "editor.tabSize": 4
+    },
+    "[json]": {
+        "editor.tabSize": 4
+    },
+    "[jsonc]": {
+        "editor.tabSize": 4
+    },
+    "cSpell.enabledLanguageIds": [
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "go",
+        "handlebars",
+        "html",
+        "jade",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "pub",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ],
+    "workbench.colorTheme": "Solarized Dark"
+}

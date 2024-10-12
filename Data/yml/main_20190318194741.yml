@@ -1,0 +1,19 @@
+---
+
+- name: configure pacman
+  template: src=pacman.conf.j2 dest=/etc/pacman.conf
+  notify: fully refresh pacman
+  tags: pacman
+
+- name: set pacman mirrors
+  template: src=mirrorlist.j2 dest=/etc/pacman.d/mirrorlist
+  notify: fully refresh pacman
+  tags: pacman
+
+- name: remove pacman orphans
+  pacmandb: state=no-orphans
+  tags: pacman
+
+- name: install auxiliary pacman scripts
+  pacman: name=pacaux state=installed
+  tags: pacman

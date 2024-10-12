@@ -1,0 +1,128 @@
+version: "3"
+
+services:
+
+  db:
+    image: postgres:9.6 # latest
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - advocate-net
+    environment: # filled in from local .env
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+    deploy:
+      placement:
+        constraints: [node.labels.role == database]
+
+  proxy:
+    # https://hub.docker.com/_/nginx/ see "complex configuration"
+    image: ${DOCKER_REGISTRY}/advocate-nginx_${DEPLOY_ENV}:latest
+    volumes:
+      - advocate-assets:/app/public/assets
+    networks:
+      - advocate-net
+    links:
+      - advocate
+      - advocate-bridge
+    environment:
+      - ADVOCATE_SERVERS
+      - ADVOCATE_BRIDGE_SERVERS
+    ports:
+      - "${PUBLIC_PORT}:80"
+    deploy:
+      placement:
+        constraints: [node.labels.role == application]
+
+  advocate:
+    image: ${DOCKER_REGISTRY}/advocate_${DEPLOY_ENV}:latest
+    volumes:
+      - advocate-assets:/app/public/assets
+    expose:
+      - "80"
+    networks:
+      - advocate-net
+    environment:
+      - RAILS_ENV
+      - SECRET_KEY_BASE
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+      - POSTGRES_HOST
+    links:
+      - db
+    deploy:
+      # mode: replicated
+      # replicas: 2
+      placement:
+        constraints: [node.labels.role == application]
+
+  advocate-bridge:
+    image: ${DOCKER_REGISTRY}/advocate-bridge_${DEPLOY_ENV}:latest
+    expose:
+      - "80" # phoenix config on 80
+    networks:
+      - advocate-net
+    environment:
+      - PORT=80
+      - MIX_ENV
+      - SECRET_KEY_BASE
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+      - POSTGRES_HOST
+    links:
+      - db
+    deploy:
+      # mode: replicated
+      # replicas: 2
+      placement:
+        constraints: [node.labels.role == application]
+
+  # worker:
+  #   image: tpitale/workers:latest
+  #   networks:
+  #     advocate-net:
+  #       aliases:
+  #         - workers
+  #   depends_on:
+  #     - db
+  #   # service deployment
+  #   deploy:
+  #     mode: replicated
+  #     replicas: 2
+  #     labels: [APP=ADVOCATE]
+  #     # service resource management
+  #     resources:
+  #       # Hard limit - Docker does not allow to allocate more
+  #       limits:
+  #         cpus: '0.25'
+  #         memory: 512M
+  #       # Soft limit - Docker makes best effort to return to it
+  #       reservations:
+  #         cpus: '0.25'
+  #         memory: 256M
+  #     # service restart policy
+  #     restart_policy:
+  #       condition: on-failure
+  #       delay: 5s
+  #       max_attempts: 3
+  #       window: 120s
+  #     # service update configuration
+  #     update_config:
+  #       parallelism: 1
+  #       delay: 10s
+  #       failure_action: continue
+  #       monitor: 60s
+  #       max_failure_ratio: 0.3
+  #     # placement constraint - in this case on 'worker' nodes only
+  #     placement:
+  #       constraints: [node.role == worker]
+
+networks:
+  advocate-net:
+
+volumes:
+  db-data:
+  advocate-assets:

@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- iojs
+- '6'
+- '7'
+- '8'
+deploy:
+  provider: npm
+  email: cuong.tran@gmail.com
+  api_key:
+    secure: RNjKk4hQ/gG92X6dH1e8H4b8nDpYOdpyzvGth4E3OL3KBbU3cDYrnpFO5CQ7fqF0O9agByCtbVfRlz5E0GJbbtpDZRdt6qyVlApF+PK1RY823depP4Rv3lZc2AtA2lA4IyBjJMxXuEZweYGdzxabksZ9Ajtsf0azSNsC4oWgF4vZHhkk6KsCsApTQusubPyzo9FdNF6zfUJZVnmXFZp2HZzvuHrZMOJ91ZkDksPxBpq90yYBSmeXWWpXN0MLajMOdaBQudn1Y+5BOkj0Z9u8cL6+WrPobt27Chim2YzC8NnceIvJVyIgZmJ97XJq/wXE2NmFey+oj0zWUakDz+X1Z3yMLNAMLcdoTZ5VqGOyFgKmz/dMbeCc53Xy/5yde4zpOfpweiYCSjUQf7WIlD9YkY/7StE0WAIPF3yrWfkQ1jg/FJGllXariXasnubmYngrp7ITBDOfoWfavNXToTpM+ctTmsZ1RWSEG2TXO8JSHfjGu+pnZpyLemQX9BCs2nub4mzVfw4iNET1CnQrSk5G/AgNA7m2+LBFbER1q2f9XwTgXx0AflzFeOqHGhITWpXrhsrzYzX9xC/ZDktSi5GmZdHS56VIq8LRftvI1c9LoN5nyl4eKm3fhy1ZT8fpWsIePH5f9V0s5AJB14d+CgY5GO9lYzbPhwoCfj1fsl5+H7I=
+  on:
+    tags: true
+    repo: ctran/nexus-cli

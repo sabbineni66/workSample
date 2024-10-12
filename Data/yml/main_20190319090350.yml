@@ -1,0 +1,7 @@
+- name: Ensure Redis is present
+  apt: pkg=redis-server state=latest
+  sudo: true
+
+- name: Ensure redis service is restarted
+  service: name=redis-server state=restarted
+  sudo: true

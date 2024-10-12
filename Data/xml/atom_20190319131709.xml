@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: The RSpec Book | David Chelimsky]]></title>
+  <link href="http://blog.davidchelimsky.net/blog/categories/the-rspec-book/atom.xml" rel="self"/>
+  <link href="http://blog.davidchelimsky.net/"/>
+  <updated>2016-08-18T07:48:02-05:00</updated>
+  <id>http://blog.davidchelimsky.net/</id>
+  <author>
+    <name><![CDATA[David]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The RSpec Book has entered the production process!]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2010/07/29/the-rspec-book-has-entered-the-production-process/"/>
+    <updated>2010-07-29T21:28:18-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2010/07/29/the-rspec-book-has-entered-the-production-process</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m thrilled to announce that <a href="http://pragprog.com/titles/achbd/the-rspec-book">The RSpec Book</a> has entered the production process!</p>
+
+<p>For those of you unfamiliar with the publishing industry, as I was before this project, &ldquo;has entered the production process&rdquo; does <em>not</em> mean that it&rsquo;s off to the printer. What it <em>does</em> mean is that it is currently being indexed so readers will be able to find the stuff they&rsquo;re looking for. After indexing it will be copyedited (in which someone with better grammar and spelling than any of the authors possess makes the book more readable) and typeset, and <em>then</em> off to the printer.</p>
+
+<p>If all goes to plan (yes, there actually is a plan!), <code>books.should be\_on\_shelves</code> in late September, early October.</p>
+
+<p>That light at the end of the tunnel is, finally, <em>not</em> an oncoming train!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The RSpec Book - Beta 14]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2010/07/23/the-rspec-book-beta-14/"/>
+    <updated>2010-07-23T20:58:41-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2010/07/23/the-rspec-book-beta-14</id>
+    <content type="html"><![CDATA[<p><a href="http://www.pragprog.com/">The Pragmatic Bookshelf</a> has just released Beta-14 of <a href="http://www.pragprog.com/titles/achbd/the-rspec-book">The RSpec Book</a>.</p>
+
+<p>This is the first beta release since we made the rather ambitious decision to update the book for RSpec-2 and Rails-3, and includes updates to the tutorial in Part I of the book, as well as the first chapter in Part III: Code Examples.</p>
+
+<p>We&rsquo;re planning two more beta releases over the next couple of weeks. One to update the rest of Part III, and then a final beta release with Part V (the Rails section) updated to RSpec-2 and Rails-3.</p>
+
+<p>What this means for the short run is that &frac12; of the beta book uses newer gem versions, while the rest uses the old versions. We thought for a long time about whether to delay this beta until it was all up to date, but decided in the end that beta readers had waited long enough&mdash;-now that RSpec 2 and Rails 3 release candidates are just around the corner, we wanted to get this new content out as soon as we could. Keep in mind that this is only for a week or two, while we put the finishing touches on the book.</p>
+
+<p>With that in mind, here is some information that will help you navigate the beta book:</p>
+
+<h3>Ruby 1.8.7</h3>
+
+<p>The code examples in the book were written using Ruby 1.8.7. Most of them, but not all, will work with 1.9.2-rc2.</p>
+
+<h3>Code for the updated chapters in beta-14</h3>
+
+<p>While we&rsquo;re getting these last few beta releases out, the updated chapters all have red headers, like this:</p>
+
+<p><img src="http://blog.davidchelimsky.net/wp-content/uploads/2010/07/screen-shot-2010-07-23-at-75308-pm.png" alt="Updated Section Header" /></p>
+
+<p>The examples in these chapters work with the following gem versions:</p>
+
+<pre><code>rspec-2.0.0.beta.18
+cucumber-0.8.5
+</code></pre>
+
+<h3>Code for the rest of the chapters in beta-14</h3>
+
+<p>The chapters that have not been updated yet have gray headers, like this:</p>
+
+<p><img src="http://blog.davidchelimsky.net/wp-content/uploads/2010/07/screen-shot-2010-07-23-at-75430-pm.png" alt="Non-updated Section Header" /></p>
+
+<p>The examples in these chapters work with the following gem versions:</p>
+
+<pre><code>rspec-1.3.0
+rspec-rails-1.3.2
+rails-2.3.5
+cucumber-0.6.2
+cucumber-rails-0.2.4
+database_cleaner-0.4.3
+webrat-0.7.0
+selenium-client-0.2.18
+</code></pre>
+
+<h3>Reporting Errata</h3>
+
+<h4>Technical errors in the updated chapters</h4>
+
+<p>We are now in the final phases of preparing the book for print. For those of you reading the beta book, we are very interested in <em>technical errata in the updated chapters</em>. If the behaviour of any examples in the updated chapters differs from what the book tells you to expect <em>with the versions listed above</em>, please report that to <a href="http://www.pragprog.com/titles/achbd/errata">http://www.pragprog.com/titles/achbd/errata</a>.</p>
+
+<h4>Copyedit issues</h4>
+
+<p>The book has not been through copyedit yet (that&rsquo;s next), so please don&rsquo;t worry about spelling, grammar, or phrasing. That will all be addressed by our very able copyeditor.</p>
+
+<h4>Typesetting issues</h4>
+
+<p>The book has not been formally typeset yet (that&rsquo;s last), so please don&rsquo;t worry about code examples that span page turns, or issues with syntax highlighting.</p>
+
+<h4>Other technical errors</h4>
+
+<p>If you find that the behaviour works differently with newer Ruby or gem versions than those listed above, please submit bug reports to the appropriate trackers:</p>
+
+<ul>
+<li><a href="http://github.com/rspec/rspec-core">rspec-core (describe/it/etc)</a></li>
+<li><a href="http://github.com/rspec/rspec-expectations">rspec-expectations (should/should_not + matchers)</a></li>
+<li><a href="http://github.com/rspec/rspec-mocks">rspec-mocks</a></li>
+<li><a href="http://github.com/rspec/rspec-rails">rspec-rails</a></li>
+<li><a href="http://rspec.lighthouseapp.com/projects/16211">cucumber</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The RSpec Book -- Beta 10 and Progress Report]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2009/09/23/the-rspec-book-beta-10-and-progress-report/"/>
+    <updated>2009-09-23T08:09:15-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2009/09/23/the-rspec-book-beta-10-and-progress-report</id>
+    <content type="html"><![CDATA[<p>Beta 10????? When the hell are we going to start chopping down some trees? Well, first, here&rsquo;s what&rsquo;s new in Beta 10 of <a href="http://www.pragprog.com/titles/achbd/the-rspec-book">The RSpec Book</a>:</p>
+
+<h3>Automating the Browser with Webrat and Selenium</h3>
+
+<p>This new chapter from Bryan Helmkamp shows you how to drive Cucumber scenarios right through your browser using Webrat and Selenium. You&rsquo;ll type a single command and watch a browser fire up and walk through each scenario step by step right before your very eyes, and then see a standard Cucumber report in the shell. It&rsquo;s a sight to behold, and a great way to drive out behaviour that requires JavaScript.</p>
+
+<p>And now, for your reading pleasure &hellip;</p>
+
+<!-- more -->
+
+
+<h3>Progress Report</h3>
+
+<p>I&rsquo;m sure that all of you post-first-time authors out there know what I mean when I say that working on this book has been a fascinating case study in how <em>not</em> to write a book. First, we&rsquo;re writing about not just one, but no less that six moving targets: RSpec, Cucumber, Rails, Webrat, Selenium and, of course BDD itself.</p>
+
+<p>When we started this book, BDD was seen primarily as <a href="http://techblog.daveastels.com/2005/07/05/a-new-look-at-test-driven-development/">a new look at test driven development</a>. The book was focused only on RSpec and TDD through this new lens. Had we stuck to that we might be talking about the third edition by now, but while we were writing, BDD was on the move.</p>
+
+<h4>BDD in 2009</h4>
+
+<p>Today, BDD has evolved to a full-stack agile process derived from Extreme Programming (XP). Rather than being a variation of TDD, it comprises TDD (and ATDP, DDD, etc, etc). And so has the book evolved to incorporate the application of these ideas to the practical use of an evolving toolset.</p>
+
+<p>Also consider that four of the authors are primary maintainers of said moving targets (including BDD itself). Structuring a project like this leads to a different meaning of BDD entirely &hellip;</p>
+
+<h4>Book Driven Development</h4>
+
+<p>I can&rsquo;t count the number of times that I&rsquo;ve been writing about how to do something or set something up in RSpec or Cucumber and I&rsquo;ve thought &ldquo;Really? We could do better than that!&rdquo; Each of those revelations led to software updates, followed by me poring through the book to update related content.</p>
+
+<p>The end result is better software <em>and</em> a better book, benefiting RSpec and Cucumber users and The RSpec Book readers alike.</p>
+
+<h4>What remains to be done?</h4>
+
+<p>At this point we&rsquo;re pretty close to the end of this journey.
+We&rsquo;ve got two chapters left to write, plus some bookends (and beginnings &ndash; foreword, preface, and appendices). I also need to review pretty much everything because lots of things that we wrote about earlier in the process have changed.</p>
+
+<p>After all that, we&rsquo;ll have a final technical review, copyediting, indexing, and then off to print! So we&rsquo;re in the final phases now and I look forward to reporting that the book is off to print in the not too distant future. How &ldquo;not too distant&rdquo; I hesitate to say, because so far I&rsquo;m batting 000 in terms of release predictions (and I thought estimating software delivery was a challenge!).</p>
+
+<p>In the mean time, I&rsquo;ll be posting updates here as we progress, along with some discussion of the material in the book.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The RSpec Book: Beta 8.0]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2009/07/18/the-rspec-book-beta-80/"/>
+    <updated>2009-07-18T01:49:08-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2009/07/18/the-rspec-book-beta-80</id>
+    <content type="html"><![CDATA[<p><a href="http://pragprog.com/titles/achbd/the-rspec-book">The RSpec Book</a> Beta 8.0 was just released. This release includes a number of fixed <a href="http://pragprog.com/titles/achbd/errata">errata</a> and one new chapter. Yes, only one chapter, but its a doozy:</p>
+
+<h4>Managing Complexity in Step Definitions</h4>
+
+<p>This chapter introduces a random generator to the Codebreaker game. This brings up several issues that can add complexity to Cucumber scenarios, RSpec code examples, and the code we&rsquo;re driving out with the aid of these tools and the BDD process. We address these issues and offer strategies to manage the complexity they introduce.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The RSpec Book: Beta 5.0]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2009/05/18/the-rspec-book-beta-5-0/"/>
+    <updated>2009-05-18T19:19:39-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2009/05/18/the-rspec-book-beta-5-0</id>
+    <content type="html"><![CDATA[<p>This release introduces two new chapters:</p>
+
+<p><strong>Writing Software that Matters</strong></p>
+
+<p>Having laid out the case for Behaviour Driven Development in The Case for BDD, this new chapter explores the principles and strategies that BDD brings to the Agile table.</p>
+
+<p><strong>Mock Objects</strong></p>
+
+<p>One of the most complex and controversial topics in developer testing is that of Mock Objects. In this new chapter, Mock Objects, we review some basic terminology and explore the underlying motivations for two essential tools in the BDD toolkit: test stubs and mock objects.</p>
+]]></content>
+  </entry>
+  
+</feed>

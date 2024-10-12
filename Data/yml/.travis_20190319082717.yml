@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+- 2.2.0
+script: RAILS_ENV=test bin/rake spec assets:precompile assets:clean
+addons:
+  postgresql: '9.3'
+  code_climate:
+    repo_token: 6f5fc545077bc6f909592dc6733fd0d7f1571cf1f98aae4eecd2f7fa7c716140
+cache:
+  bundler: true
+  apt: true
+bundler_args: "--without development:production"
+before_script:
+- mkdir -p tmp/cache
+- cp config/database.travis.yml config/database.yml
+- RAILS_ENV=test bin/rake db:create db:schema:load
+- npm install -g bower
+- bin/rake bower:install

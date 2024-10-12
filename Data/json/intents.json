@@ -1,0 +1,38 @@
+{
+  "intents": [
+    {
+      "intent": "ListStudents",
+      "slots": []
+    },
+    {
+      "intent": "AddStudent",
+      "slots": [
+        {
+          "name": "Student",
+          "type": "LITERAL"
+        }
+      ]
+    },
+    {
+      "intent": "RemoveStudent",
+      "slots": [
+        {
+          "name": "Student",
+          "type": "LITERAL"
+        }
+      ]
+    },
+    {
+      "intent": "PickStudent",
+      "slots": []
+    },
+    {
+      "intent": "ResetStudents",
+      "slots": []
+    },
+    {
+      "intent": "RemainingStudents",
+      "slots": []
+    }
+  ]
+}

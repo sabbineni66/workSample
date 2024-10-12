@@ -1,0 +1,8 @@
+bundler_args: "--without debug"
+rvm:
+  - 1.9.2
+  - 1.9.3
+  - jruby
+  - rbx
+
+script: "bundle exec rake build"

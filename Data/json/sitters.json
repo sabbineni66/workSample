@@ -1,0 +1,98 @@
+[
+  {
+    "uuid": "a3f67b40-3320-45fe-8980-d409e4aa436e",
+    "name": "Ashley",
+    "age": 18,
+    "hours": {
+      "Wed": [[17, 27]],
+      "Fri": [[17, 27]],
+      "Sat": [[17, 24]]
+    }
+  },
+  {
+    "uuid": "3107fca5-01a9-4369-923b-de00e70afcf5",
+    "name": "Kayla",
+    "age": 16,
+    "hours": {
+      "Mon": [[17, 22]],
+      "Tue": [[17, 22]],
+      "Fri": [[17, 22]],
+      "Sat": [[17, 24]]
+    }
+  },
+  {
+    "uuid": "70f81b13-baba-424b-855f-134553717a63",
+    "name": "Kristen Morey",
+    "age": 14,
+    "description": "Susie Morey?s 14-year-old sister. Currently a freshman at Palo Alto High School",
+    "hours": {
+      "Fri": [[17, 24]],
+      "Sat": [[17, 24]]
+    }
+  },
+  {
+    "uuid": "dfee6ddd-6875-490b-ba2a-1acf7e1b40dd",
+    "name": "Amy Gino",
+    "age": 12,
+    "description": "Ken and Stacy Reno?s sitter",
+    "hours": {
+      "Fri": [[18, 20]],
+      "Sat": [[18, 20]],
+      "Sun": [[17, 20]]
+    }
+  },
+  {
+    "uuid": "c23b94cf-e7c7-4d61-9137-ce7a308caab8",
+    "name": "Michelle Shaffer",
+    "age": 16,
+    "description": "Pete and Lisa Shaffer?s daughter",
+    "hours": {
+      "Mon": [[17, 24]],
+      "Sat": [[17, 25]]
+    }
+  },
+  {
+    "uuid": "63b9f331-d27a-496a-bb13-38461a281402",
+    "name": "Maggie McConnell",
+    "age": 28,
+    "description": "Leslie McConnell?s mother",
+    "hours": {
+      "Mon": [[18.5, 27]],
+      "Wed": [[18.5, 27]],
+      "Thu": [[18.5, 27]]
+    }
+  },
+  {
+    "uuid": "3e0236c6-07f1-43a1-b86a-73edce5204c5",
+    "name": "Gina Marelli",
+    "age": 15,
+    "description": "Kayla Brenner?s best friend",
+    "hours": {
+      "Tue": [[17, 23]],
+      "Fri": [[17, 23]],
+      "Sat": [[17, 24]]
+    }
+  },
+  {
+    "uuid": "430bb7db-2df9-47b3-bd00-f8d301b2b4ad",
+    "name": "Gwen Stephenson",
+    "age": 24,
+    "description": "Isabella Moreno?s teacher",
+    "hours": {
+      "Tue": [[17, 23]],
+      "Fri": [[17, 23]],
+      "Sat": [[17, 24]]
+    }
+  },
+  {
+    "uuid": "f834051a-3d69-4880-b546-f7d9f8d56568",
+    "name": "Layla Smith",
+    "age": 16,
+    "description": "Steve and Diane Smith?s sitter",
+    "hours": {
+      "Tue": [[17, 23]],
+      "Fri": [[17, 23]],
+      "Sat": [[17, 24]]
+    }
+  }
+]

@@ -1,0 +1,10 @@
+--- 
+:servers: 
+- irc.mhil.net
+- andromache.mhil.net
+:port: 6667
+:nicks: 
+- ijbetest
+:realname: Marks Hashmap
+:channels: 
+- "#ijbema"

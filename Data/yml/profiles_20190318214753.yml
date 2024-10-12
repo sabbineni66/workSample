@@ -1,0 +1,74 @@
+# Schema as of Sun Nov 26 22:00:45 PST 2006 (schema version 2)
+#
+#  id                  :integer(11)   not null
+#  user_id             :integer(11)   
+#  created_on          :datetime      
+#  updated_on          :datetime      
+#  bio                 :text          
+#  address_line1       :string(255)   
+#  address_line2       :string(255)   
+#  city                :string(255)   
+#  state               :string(255)   
+#  country             :string(255)   
+#  postal_code         :string(255)   
+#  telephone           :string(255)   
+#  fax                 :string(255)   
+#  job_title           :string(255)   default()
+#  company             :string(255)   default()
+#
+
+# Schema as of Fri Oct 27 20:31:51 PDT 2006 (schema version 22)
+#
+#  id                  :integer(11)   not null
+#  user_id             :integer(11)   
+#  created_on          :datetime      
+#  updated_on          :datetime      
+#  bio                 :text          
+#  address_line1       :string(255)   
+#  address_line2       :string(255)   
+#  city                :string(255)   
+#  state               :string(255)   
+#  country             :string(255)   
+#  postal_code         :string(255)   
+#  telephone           :string(255)   
+#  fax                 :string(255)   
+#  job_title           :string(255)   default()
+#  company             :string(255)   default()
+#
+
+normal_user:
+  id: 1
+  bio: I invented Atari and Chuck E Cheeses
+  user_id: 4
+  created_on: <%= 2.days.ago.to_s :db %>
+  updated_on: <%= 2.days.ago.to_s :db %>
+administrator:
+  id: 3
+  bio: My name is administrator I am the sample admin
+  user_id: 1
+  created_on: <%= 2.days.ago.to_s :db %>
+  updated_on: <%= 2.days.ago.to_s :db %>
+user_without_memberships:
+  id: 6
+  user_id: 7
+  bio: ""
+  created_on: <%= 2.days.ago.to_s :db %>
+  updated_on: <%= 2.days.ago.to_s :db %>
+pending_user:
+  id: 7
+  user_id: 8
+  bio: ""
+  created_on: <%= 2.days.ago.to_s :db %>
+  updated_on: <%= 2.days.ago.to_s :db %>
+suspended_user: 
+  id: 8
+  user_id: 9
+  bio: ""
+  created_on: <%= 2.days.ago.to_s :db %>
+  updated_on: <%= 2.days.ago.to_s :db %>
+deleted_user: 
+  id: 9
+  user_id: 11
+  bio: ""
+  created_on: <%= 2.days.ago.to_s :db %>
+  updated_on: <%= 2.days.ago.to_s :db %>

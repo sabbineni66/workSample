@@ -1,0 +1,6 @@
+{
+  "name": "gate-opener",
+  "description": "Web app to open/close a gate.",
+  "version": "1.0.0",
+  "private": true
+}

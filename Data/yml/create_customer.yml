@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://2ND36E1H9HWAMCAR2P8QCJFGPUQVOLF0:868MZR5KHSNQYGVYSYK8N8QN1EV402DG@api.eposnowhq.com/api/V2/Customer/
+    body:
+      encoding: UTF-8
+      string: '{"Title":0,"Forename":"Mr Ex","Surname":"Pired","BusinessName":null,"DateOfBirth":null,"MainAddressID":1,"ContactNumber":"09876543987","ContactNumber2":"98765439876","EmailAddress":"made@up.com","Type":4187,"MaxCredit":0,"CurrentBalance":0,"ExpiryDate":"2013-01-17T00:00:00","CardNumber":"%0003?;1236?","CurrentPoints":0,"SignUpDate":"2013-03-12T11:40:49.323","Notes":null}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache, private
+      Content-Type:
+      - application/json; charset=utf-8
+      Location:
+      - https://api.eposnowhq.com/API/V2/Customer/78156
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 11 Dec 2015 22:23:29 GMT
+      Content-Length:
+      - '423'
+    body:
+      encoding: UTF-8
+      string: '{"CustomerID":78156,"Title":0,"Forename":"Mr Ex","Surname":"Pired","BusinessName":null,"DateOfBirth":null,"ContactNumber":"09876543987","ContactNumber2":"98765439876","EmailAddress":"made@up.com","Type":4187,"MaxCredit":0.0,"CurrentBalance":0.0,"ExpiryDate":"2013-01-17T00:00:00","CardNumber":"%0003?;1236?","CurrentPoints":0,"SignUpDate":"2013-03-12T11:40:49.323","Notes":null,"SignUpLocationID":null,"MainAddressID":null}'
+    http_version: 
+  recorded_at: Fri, 11 Dec 2015 22:23:16 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,17 @@
+{
+    "name": "Bcm2835",
+    "keywords": "gpio, spi, i2c",
+    "description": "Provides access to GPIO and other IO functions on the Broadcom BCM 2835 chip",
+    "authors":
+    {
+        "name": "Mike McCauley",
+        "url": "http://www.airspayce.com/mikem/bcm2835/index.html"
+    },
+    "version": "1.52",
+    "downloadUrl": "http://www.airspayce.com/mikem/bcm2835/bcm2835-1.52.tar.gz",
+    "export": {
+        "include": "bcm2835-1.52"
+    },
+    "frameworks": "wiringpi",
+    "platforms": "linux_arm"
+}

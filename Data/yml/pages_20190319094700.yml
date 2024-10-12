@@ -1,0 +1,13 @@
+--- 
+- :name: home
+  :template: home
+  :position: 1
+- :name: portfolio
+  :template: products
+  :position: 2
+- :name: blog
+  :template: posts
+  :position: 3
+- :name: contact us
+  :template: contact-us
+  :position: 4

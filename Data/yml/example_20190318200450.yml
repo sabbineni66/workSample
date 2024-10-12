@@ -1,0 +1,5 @@
+#cloud-config
+apt_update: true
+disable_root: false
+packages:
+ - git

@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.pivotaltracker.com/services/v5/projects
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"Peetee Test Project","public":true}'
+    headers:
+      Host:
+      - www.pivotaltracker.com
+      Content-Type:
+      - application/json
+      X-Trackertoken:
+      - 1bb3efd2cacd614b697838751feb94da
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '828'
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.14
+      X-Runtime:
+      - '143'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - '"84c554cf6ca0a02b278bc2879e57985b"'
+      X-Tracker-Project-Version:
+      - '1'
+      Server:
+      - nginx/1.2.2 + Phusion Passenger 3.0.14 (mod_rails/mod_rack)
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "initial_velocity": 10,
+          "iteration_length": 1,
+          "name": "Peetee Test Project",
+          "id": 971936,
+          "has_google_domain": false,
+          "public": true,
+          "bugs_and_chores_are_estimatable": false,
+          "kind": "project",
+          "updated_at": "2013-12-07T01:25:33Z",
+          "start_time": "2013-12-02T00:00:00Z",
+          "enable_incoming_emails": true,
+          "number_of_done_iterations_to_show": 12,
+          "enable_planned_mode": false,
+          "point_scale_is_custom": false,
+          "current_iteration_number": 1,
+          "atom_enabled": false,
+          "time_zone": {
+            "offset": "-08:00",
+            "kind": "time_zone",
+            "olson_name": "America/Los_Angeles"
+          },
+          "week_start_day": "Monday",
+          "account_id": 595468,
+          "created_at": "2013-12-07T01:25:33Z",
+          "point_scale": "0,1,2,3",
+          "version": 1,
+          "enable_following": true,
+          "velocity_averaged_over": 3,
+          "enable_tasks": true
+        }
+    http_version: 
+  recorded_at: Sat, 07 Dec 2013 01:25:32 GMT
+recorded_with: VCR 2.8.0

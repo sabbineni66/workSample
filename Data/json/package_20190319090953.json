@@ -1,0 +1,10 @@
+{
+  "name": "json-sourcemap-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lee Henson <lee.m.henson@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.4.0-dev.20190313"
+  }
+}

@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: RSpec | David Chelimsky]]></title>
+  <link href="http://blog.davidchelimsky.net/blog/categories/rspec/atom.xml" rel="self"/>
+  <link href="http://blog.davidchelimsky.net/"/>
+  <updated>2016-08-18T07:48:02-05:00</updated>
+  <id>http://blog.davidchelimsky.net/</id>
+  <author>
+    <name><![CDATA[David]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[rspec-2.12 is released]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2012/11/12/rspec-212-is-released/"/>
+    <updated>2012-11-12T22:37:04-06:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2012/11/12/rspec-212-is-released</id>
+    <content type="html"><![CDATA[<p>rspec-2.12 is a minor release (per <a href="http://semver.org/">SemVer</a>), which
+includes numerous enhancements and bug fixes. It is fully backward compatible
+with previous rspec-2 releases and is a recommended upgrade for all users.</p>
+
+<p>Thanks to all who contributed. Special thanks to Myron Marston and Andy
+Lindeman for their personal contributions to the code as well as a great job
+shepherding pull requests from several new contributors.</p>
+
+<p>UPDATE: If you&rsquo;re an rspec/rails/capybara user, be sure to read <a href="http://alindeman.github.com/2012/11/11/rspec-rails-and-capybara-2.0-what-you-need-to-know.html">Andy Lindeman&rsquo;s blog post on Capybara-2.0 and rspec-rails</a>.</p>
+
+<h2>Docs</h2>
+
+<h3>RDoc</h3>
+
+<ul>
+<li><a href="http://rubydoc.info/gems/rspec-core">http://rubydoc.info/gems/rspec-core</a></li>
+<li><a href="http://rubydoc.info/gems/rspec-expectations">http://rubydoc.info/gems/rspec-expectations</a></li>
+<li><a href="http://rubydoc.info/gems/rspec-mocks">http://rubydoc.info/gems/rspec-mocks</a></li>
+<li><a href="http://rubydoc.info/gems/rspec-rails">http://rubydoc.info/gems/rspec-rails</a></li>
+</ul>
+
+
+<h3>Cucumber features</h3>
+
+<ul>
+<li><a href="http://relishapp.com/rspec/rspec-core">http://relishapp.com/rspec/rspec-core</a></li>
+<li><a href="http://relishapp.com/rspec/rspec-expectations">http://relishapp.com/rspec/rspec-expectations</a></li>
+<li><a href="http://relishapp.com/rspec/rspec-mocks">http://relishapp.com/rspec/rspec-mocks</a></li>
+<li><a href="http://relishapp.com/rspec/rspec-rails">http://relishapp.com/rspec/rspec-rails</a></li>
+</ul>
+
+
+<h2>Release notes</h2>
+
+<h3>rspec-core-2.12.0</h3>
+
+<p><a href="http://github.com/rspec/rspec-core/compare/v2.11.1...v2.12.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>Add support for custom ordering strategies for groups and examples.
+(Myron Marston)</li>
+<li>JSON Formatter (Alex Chaffee)</li>
+<li>Refactor rake task internals (Sam Phippen)</li>
+<li>Refactor HtmlFormatter (Pete Hodgson)</li>
+<li>Autotest supports a path to Ruby that contains spaces (dsisnero)</li>
+<li>Provide a helpful warning when a shared example group is redefined.
+(Mark Burns).</li>
+<li><code>--default_path</code> can be specified as <code>--default-path</code>. <code>--line_number</code> can be
+specified as <code>--line-number</code>. Hyphens are more idiomatic command line argument
+separators (Sam Phippen).</li>
+<li>A more useful error message is shown when an invalid command line option is
+used (Jordi Polo).</li>
+<li>Add <code>format_docstrings { |str| }</code> config option. It can be used to
+apply formatting rules to example group and example docstrings.
+(Alex Tan)</li>
+<li>Add support for an <code>.rspec-local</code> options file. This is intended to
+allow individual developers to set options in a git-ignored file that
+override the common project options in <code>.rspec</code>. (Sam Phippen)</li>
+<li>Support for mocha 0.13.0. (Andy Lindeman)</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Remove override of <code>ExampleGroup#ancestors</code>. This is a core ruby method that
+RSpec shouldn&rsquo;t override. Instead, define <code>ExampleGroup#parent_groups</code>. (Myron
+Marston)</li>
+<li>Limit monkey patching of shared example/context declaration methods
+(<code>shared_examples_for</code>, etc.) to just the objects that need it rather than
+every object in the system (Myron Marston).</li>
+<li>Fix Metadata#fetch to support computed values (Sam Goldman).</li>
+<li>Named subject can now be referred to from within subject block in a nested
+group (tomykaira).</li>
+<li>Fix <code>fail_fast</code> so that it properly exits when an error occurs in a
+<code>before(:all) hook</code> (Bradley Schaefer).</li>
+<li>Make the order spec files are loaded consistent, regardless of the
+order of the files returned by the OS or the order passed at
+the command line (Jo Liss and Sam Phippen).</li>
+<li>Ensure instance variables from <code>before(:all)</code> are always exposed
+from <code>after(:all)</code>, even if an error occurs in <code>before(:all)</code>
+(Sam Phippen).</li>
+<li><code>rspec --init</code> no longer generates an incorrect warning about <code>--configure</code>
+being deprecated (Sam Phippen).</li>
+<li>Fix pluralization of <code>1 seconds</code> (Odin Dutton)</li>
+<li>Fix ANSICON url (Jarmo Pertman)</li>
+<li>Use dup of Time so reporting isn&rsquo;t clobbered by examples that modify Time
+without properly restoring it. (David Chelimsky)</li>
+</ul>
+
+
+<p>Deprecations</p>
+
+<ul>
+<li><code>share_as</code> is no longer needed. <code>shared_context</code> and/or
+<code>RSpec::SharedContext</code> provide better mechanisms (Sam Phippen).</li>
+<li>Deprecate <code>RSpec.configuration</code> with a block (use <code>RSpec.configure</code>).</li>
+</ul>
+
+
+<h3>rspec-expectations-2.12.0</h3>
+
+<p><a href="http://github.com/rspec/rspec-expectations/compare/v2.11.3...v2.12.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>Colorize diffs if the <code>--color</code> option is configured. (Alex Coplan)</li>
+<li>Include backtraces in unexpected errors handled by <code>raise_error</code>
+matcher (Myron Marston)</li>
+<li>Print a warning when users accidentally pass a non-string argument
+as an expectation message (Sam Phippen)</li>
+<li><code>=~</code> and <code>match_array</code> matchers output a more useful error message when
+the actual value is not an array (or an object that responds to <code>#to_ary</code>)
+(Sam Phippen)</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Fix <code>include</code> matcher so that <code>expect({}).to include(:a =&gt; nil)</code>
+fails as it should (Sam Phippen).</li>
+<li>Fix <code>be_an_instance_of</code> matcher so that <code>Class#to_s</code> is used in the
+description rather than <code>Class#inspect</code>, since some classes (like
+<code>ActiveRecord::Base</code>) define a long, verbose <code>#inspect</code>.
+(Tom Stuart)</li>
+</ul>
+
+
+<h3>rspec-mocks-2.12.0</h3>
+
+<p><a href="http://github.com/rspec/rspec-mocks/compare/v2.11.3...v2.12.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li><code>and_raise</code> can accept an exception class and message, more closely
+matching <code>Kernel#raise</code> (e.g., <code>foo.stub(:bar).and_raise(RuntimeError, "message")</code>)
+(Bas Vodde)</li>
+<li>Add <code>and_call_original</code>, which will delegate the message to the
+original method (Myron Marston).</li>
+</ul>
+
+
+<p>Deprecations:</p>
+
+<ul>
+<li>Add deprecation warning when using <code>and_return</code> with <code>should_not_receive</code>
+(Neha Kumari)</li>
+</ul>
+
+
+<h3>rspec-rails-2.12.0</h3>
+
+<p><a href="http://github.com/rspec/rspec-rails/compare/v2.11.4...v2.12.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>Support validation contexts when using <code>#errors_on</code> (Woody Peterson)</li>
+<li>Include RequestExampleGroup in groups in spec/api</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Add <code>should</code> and <code>should_not</code> to <code>CollectionProxy</code> (Rails 3.1+) and
+<code>AssociationProxy</code> (Rails 3.0).  (Myron Marston)</li>
+<li><code>controller.controller_path</code> is set correctly for view specs in Rails 3.1+.
+(Andy Lindeman)</li>
+<li>Generated specs support module namespacing (e.g., in a Rails engine).
+(Andy Lindeman)</li>
+<li><code>render</code> properly infers the view to be rendered in Rails 3.0 and 3.1
+(John Firebaugh)</li>
+<li>AutoTest mappings involving config/ work correctly (Brent J. Nordquist)</li>
+<li>Failures message for <code>be_new_record</code> are more useful (Andy Lindeman)</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[rspec-2.11 is released!]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2012/07/07/rspec-211-is-released/"/>
+    <updated>2012-07-07T17:00:42-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2012/07/07/rspec-211-is-released</id>
+    <content type="html"><![CDATA[<p>rspec-2.11.0 is out and filled with a bunch of new features.  Big thanks to all
+who contributed, especially <a href="http://twitter.com/justinko">Justin Ko</a>, <a href="http://alindeman.github.com/">Andy
+Lindeman</a> (the newest addition to the RSpec core
+team) and <a href="http://myronmars.to/n/dev-blog">Myron Marston</a> for their great job
+addressing issues and shepherding pull requests.</p>
+
+<p>Thanks also to Myron for all his work on two great new features: <a href="http://myronmars.to/n/dev-blog/2012/06/rspecs-new-expectation-syntax">the new
+expectation
+syntax</a>
+and <a href="http://myronmars.to/n/dev-blog/2012/06/constant-stubbing-in-rspec-2-11">support for stubbing
+constants</a>.</p>
+
+<h3>rspec-core-2.11.0</h3>
+
+<p><a href="http://github.com/rspec/rspec-core/compare/v2.10.1...v2.11.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>Support multiple <code>--example</code> options. (Daniel Doubrovkine @dblock)</li>
+<li>Named subject e.g. <code>subject(:article) { Article.new }</code>
+
+<ul>
+<li>see <a href="http://blog.davidchelimsky.net/2012/05/13/spec-smell-explicit-use-of-subject/">http://blog.davidchelimsky.net/2012/05/13/spec-smell-explicit-use-of-subject/</a>
+for background.</li>
+<li>thanks to Bradley Schaefer for suggesting it and Avdi Grimm for almost
+suggesting it.</li>
+</ul>
+</li>
+<li><code>config.mock_with</code> and <code>config.expect_with</code> yield custom config object to a
+block if given
+
+<ul>
+<li>aids decoupling from rspec-core&rsquo;s configuation</li>
+</ul>
+</li>
+<li><code>include_context</code> and <code>include_examples</code> support a block, which gets eval&rsquo;d
+in the current context (vs the nested context generated by <code>it_behaves_like</code>).</li>
+<li>Add <code>config.order = 'random'</code> to the <code>spec_helper.rb</code> generated by <code>rspec
+--init</code>.</li>
+<li>Delay the loading of DRb (Myron Marston).</li>
+<li>Limit monkey patching of <code>describe</code> onto just the objects that need it rather
+than every object in the system (Myron Marston).</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Support alternative path separators. For example, on Windows, you can now do
+this: <code>rspec spec\subdir</code>. (Jarmo Pertman @jarmo)</li>
+<li>When an example raises an error and an after or around hook does as
+well, print out the hook error. Previously, the error was silenced and
+the user got no feedback about what happened. (Myron Marston)</li>
+<li><code>--require</code> and <code>-I</code> are merged among different configuration sources (Andy
+Lindeman)</li>
+<li>Delegate to mocha methods instead of aliasing them in mocha adapter.</li>
+</ul>
+
+
+<h3>rspec-expectations-2.11.0</h3>
+
+<p><a href="http://github.com/rspec/rspec-expectations/compare/v2.10.0...v2.11.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>Expand <code>expect</code> syntax so that it supports expections on bare values
+in addition to blocks (Myron Marston).</li>
+<li>Add configuration options to control available expectation syntaxes
+(Myron Marston):
+
+<ul>
+<li><code>RSpec.configuration.expect_with(:rspec) { |c| c.syntax = :expect }</code></li>
+<li><code>RSpec.configuration.expect_with(:rspec) { |c| c.syntax = :should }</code></li>
+<li><code>RSpec.configuration.expect_with(:rspec) { |c| c.syntax = [:should, :expect] }</code></li>
+<li><code>RSpec.configuration.add_should_and_should_not_to Delegator</code></li>
+</ul>
+</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Allow only <code>Numeric</code> values to be the &ldquo;actual&rdquo; in the <code>be_within</code> matcher.
+This prevents confusing error messages. (Su Zhang @zhangsu)</li>
+<li>Define <code>should</code> and <code>should_not</code> on <code>BasicObject</code> rather than <code>Kernel</code>
+on 1.9. This makes <code>should</code> and <code>should_not</code> work properly with
+<code>BasicObject</code>-subclassed proxy objects like <code>Delegator</code>. (Myron
+Marston)</li>
+</ul>
+
+
+<h3>rspec-mocks-2.11.0</h3>
+
+<p><a href="http://github.com/rspec/rspec-mocks/compare/v2.10.1...v2.11.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>expose ArgumentListMatcher as a formal API
+
+<ul>
+<li>supports use by 3rd party mock frameworks like Surrogate</li>
+</ul>
+</li>
+<li>Add <code>stub_const</code> API to stub constants for the duration of an
+example (Myron Marston).</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Fix regression of edge case behavior. <code>double.should_receive(:foo) { a }</code>
+was causing a NoMethodError when <code>double.stub(:foo).and_return(a, b)</code>
+had been setup before (Myron Marston).</li>
+<li>Infinite loop generated by using <code>any_instance</code> and <code>dup</code>. (Sidu Ponnappa @kaiwren)</li>
+<li><code>double.should_receive(:foo).at_least(:once).and_return(a)</code> always returns a
+even if <code>:foo</code> is already stubbed.</li>
+<li>Prevent infinite loop when interpolating a null double into a string
+as an integer (<code>"%i" % double.as_null_object</code>). (Myron Marston)</li>
+<li>Fix <code>should_receive</code> so that null object behavior (e.g. returning
+self) is preserved if no implementation is given (Myron Marston).</li>
+<li>Fix <code>and_raise</code> so that it raises <code>RuntimeError</code> rather than
+<code>Exception</code> by default, just like ruby does. (Andrew Marshall)</li>
+</ul>
+
+
+<h3>rspec-rails-2.11.0</h3>
+
+<p><a href="http://github.com/rspec/rspec-rails/compare/v2.10.1...v2.11.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>The generated <code>spec/spec_helper.rb</code> sets <code>config.order = "random"</code> so that
+specs run in random order by default.</li>
+<li>rename <code>render_template</code> to <code>have_rendered</code> (and alias to <code>render_template</code>
+for backward compatibility)</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>&ldquo;uninitialized constant&rdquo; errors are avoided when using using gems like
+<code>rspec-rails-uncommitted</code> that define <code>Rspec::Rails</code> before <code>rspec-rails</code>
+loads (Andy Lindeman)</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[rspec-expectations-2.9.1 is released!]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2012/04/03/rspec-expectations-291-is-released/"/>
+    <updated>2012-04-03T14:18:10-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2012/04/03/rspec-expectations-291-is-released</id>
+    <content type="html"><![CDATA[<p>This is a bug-fix only release, and is recommended for everybody using rspec-2.9.</p>
+
+<p><a href="http://github.com/rspec/rspec-expectations/compare/v2.9.0...v2.9.1">full changelog</a></p>
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Provide a helpful message if the diff between two objects is empty.</li>
+<li>Fix bug diffing single strings with multiline strings.</li>
+<li>Fix for error with using custom matchers inside other custom matchers
+(mirasrael)</li>
+<li>Fix using execution context methods in nested DSL matchers (mirasrael)</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[rspec-2.9.0 is released!]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2012/03/17/rspec-290-is-released/"/>
+    <updated>2012-03-17T18:10:59-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2012/03/17/rspec-290-is-released</id>
+    <content type="html"><![CDATA[<p>rspec-2.9.0 is released wtih lots of bug fixes and a few minor feature improvements as well. Enjoy!</p>
+
+<h3>rspec-core-2.9.0 / 2012-03-17</h3>
+
+<p><a href="http://github.com/rspec/rspec-core/compare/v2.8.0...v2.9.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>Support for &ldquo;X minutes X seconds&rdquo; spec run duration in formatter. (uzzz)</li>
+<li>Strip whitespace from group and example names in doc formatter.</li>
+<li>Removed spork-0.9 shim. If you&rsquo;re using spork-0.8.x, you&rsquo;ll need to upgrade
+to 0.9.0.</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Restore <code>--full_backtrace</code> option</li>
+<li>Ensure that values passed to <code>config.filter_run</code> are respected when running
+over DRb (using spork).</li>
+<li>Ensure shared example groups are reset after a run (as example groups are).</li>
+<li>Remove <code>rescue false</code> from calls to filters represented as Procs</li>
+<li>Ensure described_class gets the closest constant (pyromaniac)</li>
+<li>In &ldquo;autorun&rdquo;, don&rsquo;t run the specs in the at_exit hook if there was an
+exception (most likely due to a SyntaxError). (sunaku)</li>
+<li>Don&rsquo;t extend groups with modules already used to extend ancestor groups.</li>
+<li><code>its</code> correctly memoizes nil or false values (Yamada Masaki)</li>
+</ul>
+
+
+<h3>rspec-expectations-2.9.0 / 2012-03-17</h3>
+
+<p><a href="http://github.com/rspec/rspec-expectations/compare/v2.8.0...v2.9.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>Move built-in matcher classes to RSpec::Matchers::BuiltIn to reduce pollution
+of RSpec::Matchers (which is included in every example).</li>
+<li>Autoload files with matcher classes to improve load time.</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Align <code>respond_to?</code> and <code>method_missing</code> in DSL-defined matchers.</li>
+<li>Clear out user-defined instance variables between invocations of DSL-defined
+matchers.</li>
+<li>Dup the instance of a DSL generated matcher so its state is not changed by
+subsequent invocations.</li>
+<li>Treat expected args consistently across positive and negative expectations
+(thanks to Ralf Kistner for the heads up)</li>
+</ul>
+
+
+<h3>rspec-mocks-2.9.0 / 2012-03-17</h3>
+
+<p><a href="http://github.com/rspec/rspec-mocks/compare/v2.8.0...v2.9.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>Support order constraints across objects (preethiramdev)</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Allow a <code>as_null_object</code> to be passed to <code>with</code></li>
+<li>Pass proc to block passed to stub (Aubrey Rhodes)</li>
+<li>Initialize child message expectation args to match any args (#109 &ndash;
+preethiramdev)</li>
+</ul>
+
+
+<h3>rspec-rails-2.9.0 / 2012-03-17</h3>
+
+<p><a href="http://github.com/rspec/rspec-rails/compare/v2.8.1...v2.9.0">full changelog</a></p>
+
+<p>Enhancments</p>
+
+<ul>
+<li>add description method to RouteToMatcher (John Wulff)</li>
+<li>Run &ldquo;db:test:clone_structure&rdquo; instead of &ldquo;db:test:prepare&rdquo; if Active Record&rsquo;s
+schema format is &ldquo;:sql&rdquo;. (Andrey Voronkov)</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li><code>mock_model(XXX).as_null_object.unknown_method</code> returns self again</li>
+<li>Generated view specs use different IDs for each attribute.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Validations are behavior, associations are structure]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2012/02/12/validations-are-behavior-associations-are-structure/"/>
+    <updated>2012-02-12T16:53:27-06:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2012/02/12/validations-are-behavior-associations-are-structure</id>
+    <content type="html"><![CDATA[<h2>TL;DR:</h2>
+
+<ul>
+<li>TDD is about specifying behavior, not structure.</li>
+<li>Validations are behavior, and should be specified.</li>
+<li>Associations are structure, and need not be.</li>
+</ul>
+
+
+<h2>Disclaimer</h2>
+
+<p>This is my personal viewpoint, though it is not mine alone. YMMV.</p>
+
+<h2>Declarations</h2>
+
+<p>ActiveRecord provides a declarative interface for describing the structure and
+behavior of a model:</p>
+
+<p><code>ruby article.rb
+class Article &lt; ActiveRecord::Base
+  validates_presence_of :title
+  has_many :comments
+end
+</code></p>
+
+<p>While syntactically similar, these two declarations do fundamentally different
+things.</p>
+
+<h2>Validations are behavior</h2>
+
+<p>The <code>validates_presence_of :title</code> declaration changes the behavior of
+the <code>save</code> method (and other methods that use <code>save</code>), and should be specified
+explicitly. Here&rsquo;s an example using shoulda matchers:</p>
+
+<p><code>ruby validate_presence_of_title.rb
+describe Article do
+  it { should validate_presence_of(:title) }
+end
+</code></p>
+
+<p>Even though the matcher&rsquo;s name looks just like the likely implementation, the
+<code>validate_presence_of</code> matcher specifies that you can not save an <code>Article</code>
+without a non-nil value for <code>title</code>, not that the
+<code>validates_presence_of(:title)</code> declaration exists.</p>
+
+<h2>Associations are structure</h2>
+
+<p>The <code>has_many</code> declaration exposes a <code>comments</code> method to clients that appears
+to be a collection of <code>Comment</code> objects. Doing Test-Driven Development, you
+would add this declaration when a specified behavior requires it e.g.</p>
+
+<p>```ruby with_comments_by.rb
+describe Article do
+  describe &ldquo;#with_comments_by&rdquo; do</p>
+
+<pre><code>it "finds articles with comments by the submitted comment_author" do
+  article = Factory(:article)
+  article.comments &lt;&lt; Factory.build(:comment, :author =&gt; "jdoe")
+  Article.with_comments_by("jdoe").should eq([article])
+end
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>This example needs a <code>comments</code> method that returns a collection in order to
+pass.  If it doesn&rsquo;t exist already (because no other example drove you to add
+it), this would be all the motivation you need to introduce it. You don&rsquo;t need
+an example that says <code>it "should have_many(:comments)"</code>.</p>
+
+<h2>Testing the framework</h2>
+
+<p>Some will argue that we don&rsquo;t need to spec validations either, suggesting that
+<code>it "should validate_presence_of(:title)"</code> is testing the Rails framework,
+which we trust is already tested.  If you think of TDD as a combination of
+specification, documentation, and regression testing, then this argument falls
+short on the specification/documentation front because the validation is
+behavior and, thus, the spec should specify the validation.</p>
+
+<p>Even if you view testing as nothing more than a safety net against regressions,
+the argument still falls down in the face of refactoring. If we add a <code>Review</code>
+class that also <code>has_many(:comments)</code> and <code>validates_presence_of(:title)</code>, and
+we want to extract that behavior to a <code>Postable</code> module that gets included in
+both <code>Article</code> and <code>Review</code>, we&rsquo;d want a regression test to fail if we failed
+to include either of those declarations in the <code>Postable</code> module.</p>
+
+<h2>But declarations are already declarative!</h2>
+
+<p>Another argument is that declarations supply sufficient documentation. e.g. we
+can look at <code>rental_contract.rb</code> and know that it validates the presence of
+<code>:rentable</code>:</p>
+
+<p>```ruby rental_contract.rb
+class RentalContract &lt; ActiveRecord::Base
+  has_many :monthly_charges
+  has_one :rentable, :polymorphic => true</p>
+
+<p>  validates_presence_of :rentable</p>
+
+<p>  def default_monthly_charge</p>
+
+<pre><code>price / months_applied
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>This is an interesting argument that I think has some merit, but I think it
+would require an extraordinarily disciplined and consistent approach of using
+declarations 100% of the time in model files such that each one <em>is the spec</em>
+for that model, e.g.</p>
+
+<p><code>ruby contract.rb
+class Contract &lt; ActiveRecord::Base
+  validates_presence_of :name
+  has_many :monthly_expenses
+  calculates_default_monthly_charge
+end
+</code></p>
+
+<p>100% may sound extreme, but as soon as we define a single method body in any
+one of the models, the declarative nature of the file begins to degrade, and so
+does its fitness for the purpose of specification. Plus, if we can only
+understand the expected behavior of a model by looking at <em>both</em> its spec and
+its implementation, we&rsquo;ve lost some of the power of a test-driven approach.</p>
+
+<h2>What do you think?</h2>
+
+<p>Do you spec associations? If so, what value do you get from doing so? If not,
+have you run into situations where you wished you had?</p>
+
+<p>Same questions for validations.</p>
+]]></content>
+  </entry>
+  
+</feed>

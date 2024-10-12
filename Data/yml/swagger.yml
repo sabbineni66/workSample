@@ -1,0 +1,73 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger REST Article
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /process:
+    post:
+      operationId: train.process
+      tags:
+        - data
+      summary: Post data to train.
+      description: Post data to process.
+      parameters:
+        - name: data
+          in: body
+          description: Data to process
+          required: True
+          schema:
+            type: object
+            additionalProperties: true
+
+      responses:
+        200:
+          description: Processed object
+          schema:
+            type: object
+            additionalProperties: true
+
+  /train:
+    get:
+      operationId: train.train
+      tags:
+        - data
+      summary: Get trained data
+      description: Trains processed data. Returns accuracy of the classifier.
+      responses:
+        200:
+          description: Model parameters
+          schema:
+            type: object
+            additionalProperties: true
+
+  /predict:
+    post:
+      operationId: train.predict
+      tags:
+        - data
+      summary: Post data to predict.
+      description: Post data to predict. Returns prediction.
+      parameters:
+        - name: data
+          in: body
+          description: Data to return prediction for
+          required: True
+          schema:
+            type: object
+            additionalProperties: true
+
+      responses:
+        200:
+          description: Prediction values
+          schema:
+            type: object
+            additionalProperties: true

@@ -1,0 +1,20 @@
+{
+  "name": "json-server-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server db.json",
+    "start3001": "json-server db.json --port 3001"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.10.1"
+  },
+  "devDependencies": {
+    "json-server-init": "^0.2.4",
+    "now": "^7.0.0"
+  }
+}

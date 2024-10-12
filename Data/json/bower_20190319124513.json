@@ -1,0 +1,11 @@
+{
+  "name": "express-uri-template",
+  "version": "0.1.0",
+  "main": "index.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "package.json",
+    "components"
+  ]
+}

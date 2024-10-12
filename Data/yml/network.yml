@@ -1,0 +1,16 @@
+---
+- hosts: alarmpi
+  user: root
+  gather_facts: no
+  vars:
+    hostname: erich
+    wifi_ssid: cannery rowter
+  tasks:
+  - name: setup hostname
+    command: hostnamectl set-hostname {{ hostname }}
+
+  - name: setup wifi
+    copy: src="files/netctl-wlan0" dest="/etc/netctl/wlan0-{{ wifi_ssid }}"
+
+  - name: connect to wifi automatically
+    command: systemctl enable netctl-auto@wlan0

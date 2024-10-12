@@ -1,0 +1,11 @@
+Performance/Caller:
+  Enabled: false
+
+Performance/Casecmp:
+  Enabled: false
+
+Performance/TimesMap:
+  Enabled: false
+
+Performance/UnfreezeString:
+  Enabled: false

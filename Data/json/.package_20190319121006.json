@@ -1,0 +1,25 @@
+{
+  "babel": {
+    "plugins": [
+      "@babel/plugin-syntax-jsx",
+      [
+        "@babel/plugin-transform-react-jsx",
+        {
+          "pragma": "h",
+          "pragmaFrag": "Fragment"
+        }
+      ],
+      "@babel/plugin-transform-flow-comments"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.4",
+    "@babel/plugin-syntax-jsx": "7.2.0",
+    "@babel/plugin-transform-flow-comments": "7.2.0",
+    "@babel/plugin-transform-react-jsx": "7.3.0"
+  },
+  "scripts": {
+    "build:babel": "f () { babel './src/' -d './web/' -x '.jsx'; }; f"
+  }
+}

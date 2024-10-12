@@ -1,0 +1,24 @@
+# == Schema Information
+# Schema version: 41
+#
+# Table name: project_permissions
+#
+#  id            :integer(11)   not null, primary key
+#  project_id    :integer(11)   
+#  accessor_id   :integer(11)   
+#  accessor_type :string(255)   
+#  created_at    :datetime      
+#  updated_at    :datetime      
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  project_id: 1
+  accessor_id: 1
+  accessor_type: User
+two:
+  id: 2
+  project_id: 1
+  accessor_id: 2
+  accessor_type: User

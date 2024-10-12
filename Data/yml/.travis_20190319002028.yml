@@ -1,0 +1,26 @@
+language: ruby
+bundler_args: --quiet
+rvm:
+  - 1.9.3
+  - 2.0.0
+  - 2.1.1
+  - 2.1.2
+  - 2.2.0-rc1
+  - 2.2.1
+  - 2.2.2
+  - 2.2.3
+  - 2.3.0
+  - 2.3.1
+  - ruby-head
+script: "bundle exec rake"
+gemfile:
+  - Gemfile
+notifications:
+  recipients:
+    - lourens@methodmissing.com
+    - matt.connolly@me.com
+before_install:
+  - if [[ $(ruby -v) =~ rubinius ]]; then travis_retry gem install rubysl; fi; gem list; true
+matrix:
+  allow_failures:
+    - rvm: ruby-head

@@ -1,0 +1,15 @@
+{
+  "mongoUri" : "mongodb://localhost/hubrooms-dev",
+  "githubClientId" : "",
+  "githubClientSecret" : "",
+  "githubCallback" : "http://localhost:3000/auth/github/callback",
+  "port" : 3000,
+  "redisHost" : "127.0.0.1",
+  "redisPort" : 6379,
+  "statsdHost" : "localhost",
+  "statsdPort" : 8125,
+  "statsdDebug" : "false",
+  "googleAnalyticsId" : "1234567890",
+  "googleAnalyticsHostname" : "localhost",
+  "errbitApiKey": ""
+}

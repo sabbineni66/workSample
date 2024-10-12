@@ -1,0 +1,9 @@
+{
+  "watches": [
+    {
+      "type": "event",
+      "name": "chef-client",
+      "handler": "bin/sifter event -d true -m='dsifter' -e 'w'"
+    }
+  ]
+}

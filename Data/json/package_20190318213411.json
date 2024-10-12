@@ -1,0 +1,45 @@
+{
+  "name": "heroku-cli-dashboard",
+  "version": "0.0.17",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "heroku-plugin"
+  ],
+  "license": "ISC",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib --ignore '*.test.js'",
+    "clean": "rimraf lib",
+    "prepare": "npm run clean && npm run build",
+    "test": "eslint . && jest",
+    "release": "np"
+  },
+  "dependencies": {
+    "cli-engine-command": "^9.0.0",
+    "cli-engine-config": "^3.5.0",
+    "cli-engine-heroku": "^5.0.0",
+    "heroku-cli-util": "^7.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^4.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-import": "^2.5.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "flow-bin": "^0.48.0",
+    "flow-typed": "^2.1.2",
+    "jest": "^20.0.4",
+    "np": "^2.16.0",
+    "rimraf": "^2.6.2"
+  }
+}

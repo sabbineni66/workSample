@@ -1,0 +1,38 @@
+{
+  "GitRepos": {
+    "vendor/src/github.com/BurntSushi/toml": {
+      "URI": "https://github.com/BurntSushi/toml",
+      "Ref": "5c4df71dfe9ac89ef6287afc05e4c1b16ae65a1e"
+    },
+    "vendor/src/github.com/deweerdt/gocui": {
+      "URI": "https://github.com/deweerdt/gocui",
+      "Ref": "28fe315e247e3cf30daa4b8cab7336e25ef9ac9e"
+
+    },
+    "vendor/src/github.com/jaytaylor/html2text": {
+      "URI": "https://github.com/jaytaylor/html2text",
+      "Ref": "4936b6c2ae7f89f5eeba2473c31fd27ea8f11068"
+    },
+    "vendor/src/github.com/jroimartin/gocui": {
+      "URI": "https://github.com/jroimartin/gocui",
+      "Ref": "a8eba6db38c8459e1bbccfe38359b0405084a4f2"
+    },
+    "vendor/src/github.com/mattn/go-runewidth": {
+      "URI": "https://github.com/mattn/go-runewidth",
+      "Ref": "e882a96ec18dd43fa283187b66af74497c9101c0"
+    },
+    "vendor/src/github.com/mitchellh/colorstring": {
+      "URI": "https://github.com/mitchellh/colorstring",
+      "Ref": "8631ce90f28644f54aeedcb3e389a85174e067d1"
+    },
+    "vendor/src/github.com/nsf/termbox-go": {
+      "URI": "https://github.com/nsf/termbox-go",
+      "Ref": "362329b0aa6447eadd52edd8d660ec1dff470295"
+    },
+    "vendor/src/golang.org/x/net": {
+      "URI": "https://go.googlesource.com/net",
+      "Ref": "b6d7b1396ec874c3b00f6c84cd4301a17c56c8ed"
+    }
+  },
+  "MercurialRepos": {}
+}

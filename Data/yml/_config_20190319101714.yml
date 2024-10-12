@@ -1,0 +1,7 @@
+theme: jekyll-theme-cayman
+
+title: Sequoyah Council Wood Badge
+description: "April 7-9 and April 21-23, 2017"
+
+gems:
+  - jekyll-feed

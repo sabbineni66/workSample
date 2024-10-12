@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "noImplicitAny": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "lib": [
+        "es2015",
+        "es2017.object",
+        "dom"
+    ],
+    "outDir": "build",
+    "declaration": true
+  },
+  "files": [
+    "index.ts",
+    "src/reducer-component.ts",
+    "src/refs.ts"
+  ]
+}

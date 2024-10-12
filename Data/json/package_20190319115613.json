@@ -1,0 +1,35 @@
+{
+  "name": "commandland",
+  "version": "0.1.3",
+  "description": "terminal emulator with record & playback",
+  "main": "./.build/index.js",
+  "scripts": {
+    "build": "babel index.js -o .build/index.js",
+    "prepublish": "npm run build",
+    "start": "doctoc --notitle README.md",
+    "test": "npm run build && node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/winton/commandland.git"
+  },
+  "keywords": [
+    "nodejs",
+    "process"
+  ],
+  "author": "Winton Welsh <winton@cyclo.ps>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/winton/commandland/issues"
+  },
+  "homepage": "https://github.com/winton/commandland#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-node6": "^11.0.0"
+  },
+  "dependencies": {
+    "node-pty": "^0.7.4"
+  }
+}

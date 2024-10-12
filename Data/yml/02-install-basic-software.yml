@@ -1,0 +1,33 @@
+---
+- command: apt-add-repository -y ppa:brightbox/ruby-ng 
+  sudo: true
+
+- command: apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+  sudo: true
+
+- command: "apt-add-repository 'deb https://get.docker.io/ubuntu docker main'"
+  sudo: true
+
+- name: common | Install software 
+  apt: update_cache=yes
+       cache_valid_time=600
+       name={{ item }}
+       state=latest
+       install_recommends=false
+  sudo: true
+  with_items:        
+    - build-essential
+    - facter
+    - bash-completion
+    - vim
+    - git
+    - mc
+    - software-properties-common
+    - ruby2.2
+    - ruby2.2-dev
+    - bundler
+    - rubygems
+    - lxc-docker
+
+- command: gem install dashing creates=/usr/local/bin/dashing
+  sudo: true

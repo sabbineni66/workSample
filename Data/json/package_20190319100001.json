@@ -1,0 +1,22 @@
+{
+  "name": "hltest2",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "^3.0.2",
+    "coffeescript": "1.12.7",
+    "history": "^4.7.2",
+    "jquery": "^3.2.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "ruby-hyperloop": "^0.0.4",
+    "vue": "^2.4.4",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4"
+  },
+  "devDependencies": {
+    "opalrb-loader": "^0.1.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}

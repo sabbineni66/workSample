@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <language id="name.elliottcable.Regex">
+    <name>Regular expression</name>
+    <name locale="de">Regul?rer ausdruck</name>
+    <name locale="es">Expresi?n regular</name>
+    <name locale="fr">Expression rationnelle</name>
+    <name locale="it">Espressione regolare</name>
+    <name locale="nl">Reguliere expressie</name>
+    <name locale="ru">?????????? ?????????</name>
+    <name locale="ja">????</name>
+    <name locale="da">Regul?re udtryk</name>
+    
+    <root-zone>name.elliottcable.Espresso.Syntax.Expression.Regex</root-zone>
+    
+    <detectors>
+      <extension casesensitive="false">re</extension>
+      <extension casesensitive="false">rgx</extension>
+      <extension casesensitive="false">regex</extension>
+      <extension casesensitive="false">regexp</extension>
+      <extension casesensitive="false">regularexpression</extension>
+    </detectors>
+  </language>
+  
+  <meta>
+    <name>Regex</name>
+    <description>Mostly meant for inclusion into other sugars, this sugar fully describes regular expressions, and allows you to break them down and modify them with ease.</description>
+    <author>elliottcable</author>
+    <identifier>name.elliottcable.Espresso.Sugar.Regex</identifier>
+    <version status="release">1</version>
+    <download format="git">git://github.com/elliottcable/regex.sugar.git</download>
+    <url>http://github.com/elliottcable/regex.sugar</url>
+  </meta>
+</settings>

@@ -1,0 +1,26 @@
+title: mando.github.io
+email: mando@mando.org
+
+baseurl: "" # the subpath of your site, e.g. /blog
+
+url: "http://mando.github.io" # the base hostname & protocol for your site
+
+twitter_username: mandoescamilla
+github_username:  mando
+
+defaults:
+  -
+    values:
+      layout: post
+
+permalink: "/:year/:month/:day/:title.html"
+format:
+  date_long: "%B %-d, %Y"
+  date_short: "%b %d, %y"
+excerpt_separator: "<!--more-->"
+
+github:
+  repository_url: "https://github.com/mando/mando.github.io"
+
+    # Build settings
+markdown: kramdown

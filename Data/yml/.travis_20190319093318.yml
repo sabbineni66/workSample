@@ -1,0 +1,23 @@
+language: r
+cache: packages
+branches:
+  only:
+  - master
+r_github_packages:
+    - rstudio/blogdown
+before_script:
+    - Rscript -e 'blogdown::install_hugo(version = "0.20.7")'
+script:
+    - Rscript -e 'blogdown::build_site()'
+    - sh _build_and_merge.sh
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: "$GITHUB_TOKEN"
+  on:
+    branch: master
+  local_dir: public
+  target_branch: gh-pages
+notifications:
+  slack:
+    secure: hH55wplCxuILgokHc2KTl+74LzKtWUkfzvbYeIRGkuI9MktHIqhyfk7ZJmaIXCDfyTihnrkm8B3zY5r+IuKNwg4dkvYD8w9zm6EODtSDjoRd9plg2mKbWHlTUZVX0SmnbKqGfghNQt797AMlXr5C/4qLhopXO0cgY9AdML+0P8Wp7+Y+O9co4fgPSYjXqibFWcV81sMZr/QciZeSIwfbDDEB88glWdL6WxEsd94v7cceZTqYIap0bXudWsVFZRF33x8YSCmLqE5MWhc8oQfhXcXHdHiO2VGOSiBjCsOGCHhDBQ4a1+Y7BMV1iAWXZ48cre+AZVoJWtt8aljHa+L7n+N8ttaCt8nJouJJo11s9pvCaeqIdXDz9NTGSGYF+B41B0qtsuqE4t6pkgk8p2CwSBNc2ZD0DnjeqBS8fQpZGxmk1k8mqq9QLxZiAKqyR0ppV6yWPixU5GUBvdzNxLeEA0V0tnY8RsqbF2eF9LAQ/5yRpGK3ViEeOWLm0CvKIuSMS+EEc/7OQZb2yXb2HHbQjdFHX2tYA5EHdxyygyBdvV+3313+atRg/PFsCeqjOdzAawqiELo4CcIAk0/F8yodlO13NNbTc1h8xsL9eH7w3ll+maioR+ZrZe3mzkAALDtM96n2zHob8ymMNOtAjxEOROOeffgOfm//daR3TRHwRgM=

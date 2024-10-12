@@ -1,0 +1,106 @@
+{
+  "name": "dev-journal",
+  "version": "1.0.0",
+  "description": "Simple journal application for developers",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && webpack --config config/webpack/webpack.prod.js",
+    "clean": "rm -rf dist",
+    "lint": "eslint --fix src e2e/specs e2e/pageobjects server",
+    "start": "NODE_ENV=production node server",
+    "start:dev": "webpack-dev-server --config config/webpack/webpack.dev.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:update": "npm run test -- -u"
+  },
+  "author": "Vicent Gozalbes <vigosan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "eslint": "^4.16.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.6.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.2.1",
+    "prettier": "^1.10.2",
+    "react-test-renderer": "^16.2.0",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-hot-middleware": "^2.21.0"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-balloon": "^1.0.0-alpha.2",
+    "consign": "^0.1.6",
+    "express": "^4.16.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "semantic-ui-css": "^2.2.14",
+    "semantic-ui-react": "^0.77.2",
+    "styled-components": "^3.1.2"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-2",
+      "react"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie >= 10",
+    "Android >= 4",
+    "ios >= 7"
+  ],
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "semi": true
+        }
+      ]
+    }
+  },
+  "jest": {
+    "cacheDirectory": "/tmp",
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "testPathIgnorePatterns": [
+      "/e2e/"
+    ],
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/config/jest/styleMock.js",
+      "\\.(jpe?g|png|gif|svg)$": "<rootDir>/config/jest/fileMock.js"
+    }
+  }
+}

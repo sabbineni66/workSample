@@ -1,0 +1,11 @@
+{
+  "name": "black-pearl-i-i",
+  "theme": "syntax",
+  "version": "0.5.0",
+  "description": "Atom port of the classic TextMate syntax theme Black Pearl ||",
+  "repository": "https://github.com/mokolabs/black-pearl-ii",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.13 <2.0.0"
+  }
+}

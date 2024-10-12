@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: spring-cloud-config-client-sample
+  cloud:
+    config:
+      profile: development
+      uri: http://localhost:8888

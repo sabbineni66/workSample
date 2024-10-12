@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  rails:
+    build: .
+    image: jacksonpires/ubuntu-rails-ssh
+    volumes:
+      - .:/projects
+    ports:
+      - "3000"
+      - "22"
+    depends_on:
+      - db
+    networks:
+      - my_network
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: mypassword
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - "5432"
+    networks:
+      my_network:
+        aliases:
+          - pgsql
+
+networks:
+  my_network:

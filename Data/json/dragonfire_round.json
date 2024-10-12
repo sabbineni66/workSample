@@ -1,0 +1,17 @@
+{
+  "Name"      : "Dragonfire Round",
+  "Kind"      : "HP",
+  "Ap"        : 5,
+  "Strength"  : 12,
+  "Damage"    : 5,
+  "Range"     : 3,
+  "Diameter"  : 2,
+  "Animation" : "pulse",
+  "Target_enemies": true,
+  "Sounds"   : {
+    "dragon": "Haunts/SFX/Intruders/Detective/Dragonfire"
+  },  
+  "Texture"   : {
+    "Path": "actions/icons/dragonfire.png"
+  }
+}

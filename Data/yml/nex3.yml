@@ -1,0 +1,15 @@
+## Configuration for the blog engine.
+
+blog:
+  site: blog.tld
+  name: Up The Clock
+
+author:
+  name:  Hickory Dawkins
+  email: hickory@blog.tld
+
+## Uncomment to configure Akismet support.
+## The support will simply be disabled if it's not set.
+akismet:
+#  blog: http://blog.wordpress.com
+#  apikey: Your Akismet API key

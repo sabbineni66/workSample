@@ -1,0 +1,106 @@
+{
+  "index": [
+    "menu",
+    [
+      {
+        "message": "Please select an option:"
+      },
+      [
+        "pizza",
+        "Pizza"
+      ],
+      [
+        "coconut",
+        "Coconut"
+      ],
+      [ 
+        "loop", 
+        "Loop for Fun!"
+      ],
+      [ 
+        "url", 
+        "Twitter URL"
+      ],
+      [ 
+        "case",
+        "Case check!"
+      ],
+      [ "db/multiple", 
+        "Database multiple check!"
+      ]
+    ]
+  ],
+  "pizza": [
+    "message",
+    "Ordering pizza..."
+  ],
+  "coconut": [
+    "message",
+    "Ordering coconut..."
+  ],
+  "loop": [
+    "redirect",
+    "index"
+  ],
+  "url": [
+    "url",
+    {
+      "location": "http://twitter.com/statuses/show/123.json",
+      "message_prefix": "",
+      "message_suffix": ""
+    }
+  ],
+  "db/multiple": [
+    "database",
+    {
+      "connection": 
+      {
+        "adapter": "sqlite3",
+        "database": "./test/test.db"
+      },
+      "query": "SELECT value FROM test",
+      "organize": "list"
+    }
+  ],
+  "db": [
+    "database",
+    {
+      "connection": 
+      {
+        "adapter": "sqlite3",
+        "database": "./test/test.db"
+      },
+      "query": "SELECT value FROM test WHERE id = 2;",
+      "organize": "single"
+    }
+  ],
+  "case": [
+    "case",
+    {
+      "left": 
+      { 
+        "uri": "db" 
+      },
+      "right": 
+      { 
+        "value": "world" 
+      },
+      "comparison": "string-=",
+      "true": "case/enough",
+      "false": "case/badbad",
+      "error": "case/error"
+    }
+  ],
+  "case/enough": [
+    "message",
+    "True enough!"
+  ], 
+  "case/badbad": [
+    "message",
+    "Bad, bad!"
+  ],
+  "case/error": [
+    "message",
+    "Whoopsie!"
+  ]
+}

@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Tom Ward</title>
+ <link href="https://tomafro.net/atom.xml" rel="self"/>
+ <updated>2016-01-13T11:01:38+00:00</updated>
+ <id>http://tomafro.net/</id>
+ <author>
+   <name>Tom Ward</name>
+   <email>tom@popdog.net</email>
+ </author>
+ <entry>
+   <id>http://tomafro.net/2012/12/infinite-sequences-in-ruby</id>
+   <link href="https://tomafro.net/2012/12/infinite-sequences-in-ruby"/>
+   <title>Infinite sequences in ruby</title>
+   <author>
+     <name>Tom Ward</name>
+     <email>tom@popdog.net</email>
+   </author>
+   <content type="html">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;a href=&quot;/2012/12/infinite-sequences-in-ruby&quot;&gt;Infinite sequences in ruby&lt;/a&gt;&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;One feature of &lt;a href=&quot;https://harmonia.io&quot;&gt;harmonia&lt;/a&gt; is tasks that recur on a schedule, e.g. every Thursday, or on the 30th day of each month.  For these tasks we need to know not just when they&amp;rsquo;ll next occur, but also things like the next 4 occurrences, or all occurrences this month.&lt;/p&gt;
+
+&lt;p&gt;To do this we&amp;rsquo;ve used a technique more common in &lt;a href=&quot;http://clojure.org/&quot;&gt;clojure&lt;/a&gt;: using an infinite sequence.&lt;/p&gt;
+
+&lt;h2&gt;Defining simple infinite sequences&lt;/h2&gt;
+
+&lt;p&gt;Ruby 1.9 and above let us define infinite sequences using the &lt;code&gt;Enumerator&lt;/code&gt; class.  A simple example is the sequence of integers:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Enumerator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;loop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Here&amp;rsquo;s how this works.  The block passed to &lt;code&gt;Enumerator.new&lt;/code&gt; defines our sequence.  It takes a &lt;code&gt;yielder&lt;/code&gt; argument with a special method &lt;code&gt;#yield&lt;/code&gt;, used to return elements in the sequence.  Whenever &lt;code&gt;#yield&lt;/code&gt; is called, execution of the block stops.  Execution only restarts &lt;em&gt;if&lt;/em&gt; more elements are needed, making the sequence &lt;em&gt;lazy&lt;/em&gt;.  The &lt;code&gt;Enumerator&lt;/code&gt; class handles this stopping and starting execution &amp;mdash; we only need to worry about how to generate each element.&lt;/p&gt;
+
+&lt;p&gt;Most of the code above is concerned with looping and yielding values, not generating them.  We can factor this out, giving us a method that makes it trivial to define new sequences:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;generator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Enumerator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;kp&quot;&gt;loop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;generator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;squares&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;squares&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;36&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;81&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;When using infinite sequences laziness is extremely important, as it&amp;rsquo;s impossible to generate all members of an infinite list in anything less than infinite time.  A sequence that outputs whenever a new value is calculated shows this laziness in action:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Calculating result &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Calculating&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Calculating&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Calculating&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Now we can define sequences, how can we use them?  We&amp;rsquo;ve already seen that we can &lt;code&gt;#take&lt;/code&gt; any number of elements from our sequence.  We can also use &lt;code&gt;#take_while&lt;/code&gt; to take elements until a condition is met, such as finding all square numbers under 250:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;squares&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take_while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;250&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;36&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;81&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;121&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;144&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;169&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;196&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;225&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;In fact all &lt;code&gt;Enumerable&lt;/code&gt; methods are available, but we have to take care in using them.  As our sequences are infinite, any method that iterates over all members has the potential to take an infinite amount of time.  For example calling &lt;code&gt;#any?&lt;/code&gt; will either return true (if a matching element exists) or never return.&lt;/p&gt;
+
+&lt;p&gt;Another big drawback is that when we call &lt;code&gt;Enumerable&lt;/code&gt; methods, laziness isn&amp;rsquo;t preserved.  Suppose we want the first 5 odd square numbers.  We might try the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;squares&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Unfortunately this will never return.  Even though we only want a finite set of results, the call to &lt;code&gt;#select&lt;/code&gt; operates on the full infinite sequence before it returns.  &lt;code&gt;#take(5)&lt;/code&gt; is never called.  The same problem exists with &lt;code&gt;#map&lt;/code&gt;, &lt;code&gt;#drop&lt;/code&gt;, &lt;code&gt;#reject&lt;/code&gt; and more.&lt;/p&gt;
+
+&lt;h2&gt;Preserving laziness across derived sequences&lt;/h2&gt;
+
+&lt;p&gt;Without laziness preservation, our sequences seem of limited use.  In ruby 2.0 we can use &lt;code&gt;#lazy&lt;/code&gt; to make our sequences lazier, but in 1.9 this isn&amp;rsquo;t available to us.  Thankfully we can get around this by generating lazy versions of Enumerable methods ourselves.  Let&amp;rsquo;s take the previous example, finding the first 5 odd square numbers.  We hit a roadblock because &lt;code&gt;#select&lt;/code&gt; never returned.  If instead of using &lt;code&gt;#select&lt;/code&gt; we use a new &lt;code&gt;Enumerator&lt;/code&gt; to do our selecting, we can work around this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;odd_squares&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Enumerator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;squares&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;square&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;square&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;square&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;odd_squares&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;81&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;odd_squares&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;81&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;121&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;169&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;225&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;289&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;361&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Our new &lt;code&gt;Enumerator&lt;/code&gt; iterates &lt;em&gt;lazily&lt;/em&gt; through our original sequence, yielding only odd values.  We&amp;rsquo;ve chained two enumerators together to preserve laziness.&lt;/p&gt;
+
+&lt;p&gt;This is all a bit cumbersome as is, but we can turn this into a &amp;lsquo;#select&amp;rsquo; method on a new &lt;code&gt;LazyEnumerator&lt;/code&gt; class:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LazyEnumerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Enumerator&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lazy_sequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;generator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;LazyEnumerator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;kp&quot;&gt;loop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;generator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lazy_squares&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lazy_sequence&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lazy_squares&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;81&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;#reject&lt;/code&gt; and &lt;code&gt;#map&lt;/code&gt; can be chained in a similar way to &lt;code&gt;#select&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LazyEnumerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Enumerator&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;#drop&lt;/code&gt; and &lt;code&gt;#drop_while&lt;/code&gt; are slightly more complicated, but follow a similar pattern.  The main difference being that they need to keep track of how much to drop:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LazyEnumerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Enumerator&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;dropped_enough&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;dropped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dropped_enough&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dropped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dropped_enough&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dropped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dropped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;drop_while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;match_found&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;match_found&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match_found&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Together, these methods give us a &lt;code&gt;LazyEnumerator&lt;/code&gt; that can be chained in a great number of ways, giving our sequences a lot of power.  &lt;code&gt;#take&lt;/code&gt; and &lt;code&gt;#drop&lt;/code&gt; let us select which members of a sequence we&amp;rsquo;re interested, while &lt;code&gt;#select&lt;/code&gt;, &lt;code&gt;#reject&lt;/code&gt; and &lt;code&gt;#map&lt;/code&gt; allow us to build new sequences from existing ones:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lazy_sequence&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;squares&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;odd_squares&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;squares&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;odd_squares&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;441&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;529&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;625&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;729&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;841&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;961&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1089&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1225&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1369&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1521&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Using only a few simple methods, we&amp;rsquo;ve been able to answer a complicated (though contrived) question, what are the second ten odd square numbers?  This particular answer may not be interesting, but the technique of defining and deriving infinite sequences is much more general and useful.  This is only a small sample of what you can do with them.&lt;/p&gt;
+
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;span class=&#39;author&#39;&gt;&lt;a rel=&#39;author&#39; href=&#39;http://tomafro.net&#39;&gt;Tom Ward&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&#39;date&#39;&gt;&lt;a href=&quot;/2012/12&quot;&gt;31st December 2012&lt;/a&gt;&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/ruby&quot; rel=&quot;tag&quot;&gt;ruby&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/sequence&quot; rel=&quot;tag&quot;&gt;sequence&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/enumerator&quot; rel=&quot;tag&quot;&gt;enumerator&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/lazy-enumerator&quot; rel=&quot;tag&quot;&gt;lazy-enumerator&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/infinite&quot; rel=&quot;tag&quot;&gt;infinite&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</content>
+   <updated>2012-12-31T00:00:00+00:00</updated>
+   <category scheme="https://tomafro.net/tags/" term="ruby" label="ruby" />
+   <category scheme="https://tomafro.net/tags/" term="sequence" label="sequence" />
+   <category scheme="https://tomafro.net/tags/" term="enumerator" label="enumerator" />
+   <category scheme="https://tomafro.net/tags/" term="lazy-enumerator" label="lazy-enumerator" />
+   <category scheme="https://tomafro.net/tags/" term="infinite" label="infinite" />
+ </entry>
+ <entry>
+   <id>http://tomafro.net/2012/12/deploying-harmonia-with-recap</id>
+   <link href="https://tomafro.net/2012/12/deploying-harmonia-with-recap"/>
+   <title>Deploying a rails app from scratch using recap</title>
+   <author>
+     <name>Tom Ward</name>
+     <email>tom@popdog.net</email>
+   </author>
+   <content type="html">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;a href=&quot;/2012/12/deploying-harmonia-with-recap&quot;&gt;Deploying a rails app from scratch using recap&lt;/a&gt;&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;If you follow &lt;a href=&quot;http://gofreerange.com/blog&quot;&gt;our company blog&lt;/a&gt; you&amp;rsquo;ll know that we&amp;rsquo;re working on &lt;a href=&quot;http://harmonia.io&quot;&gt;Harmonia&lt;/a&gt;, our virtual office manager.  I thought I&amp;rsquo;d explain how we use &lt;a href=&quot;https://github.com/freerange/recap&quot;&gt;recap&lt;/a&gt; to deploy harmonia, to show how easy and fast &lt;a href=&quot;https://github.com/freerange/recap&quot;&gt;recap&lt;/a&gt; makes application deployment.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://harmonia.io&quot;&gt;Harmonia&lt;/a&gt; is a fairly standard rails application.  As well as a web front-end, it has two other processes.  A queue &lt;code&gt;worker&lt;/code&gt; is used to send outgoing emails, whilst the core of the application is the &lt;code&gt;ticker&lt;/code&gt;; a process which &amp;lsquo;ticks&amp;rsquo; every minute, assigning tasks to team members.  We use &lt;a href=&quot;https://github.com/ddollar/foreman&quot;&gt;foreman&lt;/a&gt; to declare these processes in the following &lt;code&gt;Procfile&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;web: bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;unicorn -p &lt;span class=&quot;nv&quot;&gt;$PORT&lt;/span&gt; -c unicorn.conf.rb
+ticker: bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rails runner script/ticker.rb
+worker: bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake environment resque:work &lt;span class=&quot;nv&quot;&gt;QUEUE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;assignments &lt;span class=&quot;nv&quot;&gt;VVERBOSE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;All of these processes touch application code, so whenever we deploy a new version of the app (which we do frequently) they need to be restarted.  Our app also has a database with associated migrations, uses environment variables like &lt;code&gt;DATABASE_URL&lt;/code&gt; for configuration, and has a number of gem dependencies managed by bundler.&lt;/p&gt;
+
+&lt;p&gt;This is all handled by &lt;a href=&quot;https://github.com/freerange/recap&quot;&gt;recap&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Getting started &amp;ndash; adding recap to the project&lt;/h2&gt;
+
+&lt;p&gt;Using recap with a rails project is simple.  First add &lt;code&gt;gem &#39;recap&#39;&lt;/code&gt; to the &lt;code&gt;Gemfile&lt;/code&gt; and run &lt;code&gt;bundle install&lt;/code&gt;.  Next run &lt;code&gt;bundle exec recap setup&lt;/code&gt;, which will generate a &lt;code&gt;Capfile&lt;/code&gt;, guessing values for the git repository and app name.  You should check these values and change the server to point to your app server.  As an example, the complete &lt;code&gt;Capfile&lt;/code&gt; for harmonia is shown below:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;recap/recipes/rails&amp;#39;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;harmonia&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:repository&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;git@github.com:freerange/harmonia.git&amp;#39;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;bison.harmonia.io&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:app&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Applications deployed with &lt;a href=&quot;https://github.com/freerange/recap&quot;&gt;recap&lt;/a&gt; need their own user, owning all files and processes.  Assuming we can &lt;code&gt;ssh&lt;/code&gt; into our server and are listed as a &lt;code&gt;sudoer&lt;/code&gt;, we can create this user automatically  running &lt;code&gt;cap bootstrap&lt;/code&gt;.  This will also add our own &lt;code&gt;ssh&lt;/code&gt; user to the application group, allowing it to deploy the application.&lt;/p&gt;
+
+&lt;p&gt;Next we can set any environment variables we need for configuration.  These are loaded in the application user&amp;rsquo;s &lt;code&gt;.profile&lt;/code&gt;, so are available to all processes started by &lt;a href=&quot;https://github.com/freerange/recap&quot;&gt;recap&lt;/a&gt;.  In harmonia we set our smtp credentials, the server port, some api keys and more, using commands like &lt;code&gt;cap env:set PORT=7000&lt;/code&gt; and &lt;code&gt;cap env:set SMTP_PASSWORD=secret&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The app is now almost ready to deploy.  We can prepare it for deployment with &lt;code&gt;cap deploy:setup&lt;/code&gt;, which clones the code repository, installs our gem bundle, sets up the database and precompiles our assets.&lt;/p&gt;
+
+&lt;p&gt;Finally, running &lt;code&gt;cap deploy&lt;/code&gt; will start the app for the first time, launching each process defined in the &lt;code&gt;Procfile&lt;/code&gt; with the environment variables we previously set.&lt;/p&gt;
+
+&lt;h2&gt;Really fast deployments&lt;/h2&gt;
+
+&lt;p&gt;While &lt;a href=&quot;https://github.com/freerange/recap&quot;&gt;recap&lt;/a&gt; makes it very easy to get apps up and running the first time, it comes into its doing subsequent deployments.  At &lt;a href=&quot;http://gofreerange.com&quot;&gt;Go Free Range&lt;/a&gt; we like to deploy apps we&amp;rsquo;re working on very frequently.  One thing that helps ensure we do this is making each deployment as fast as it can be.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;code&gt;git&lt;/code&gt; as recap does is already a very quick way to get code changes onto servers, but recap takes things a step further.  By testing to see which files have changed it knows which tasks can be skipped.  For example, database migrations won&amp;rsquo;t be run if &lt;code&gt;db/schema.rb&lt;/code&gt; has not changed; the gem bundle won&amp;rsquo;t be re-installed unless &lt;code&gt;Gemfile.lock&lt;/code&gt; has been updated, and foreman process scripts won&amp;rsquo;t be exported if the &lt;code&gt;Procfile&lt;/code&gt; is unchanged.  In fact, if these files don&amp;rsquo;t exist, these tasks will never run at all.&lt;/p&gt;
+
+&lt;h2&gt;The future&lt;/h2&gt;
+
+&lt;p&gt;Using &lt;a href=&quot;https://github.com/freerange/recap&quot;&gt;recap&lt;/a&gt; with &lt;a href=&quot;https://harmonia.io&quot;&gt;Harmonia&lt;/a&gt; has made our deployment process very fast and simple.  When the main harmonia server became over-burdened and we decided to commission a new machine dedicated to harmonia, recap made that process quick and painless.  As well as harmonia, recap is also used to deploy &lt;a href=&quot;http://gofreerange.com&quot;&gt;the Go Free Range website&lt;/a&gt;, &lt;a href=&quot;http://tomafro.net&quot;&gt;this blog&lt;/a&gt;, and a number of other small sites and projects where it has proven itself well.  For larger projects, there are some features (such as more control as to what processes run where) that are missing, but I plan to add these in the next release.  For all other sites, recap has proven itself a lightweight and capable alternative to the standard Capistrano deployment recipes.&lt;/p&gt;
+
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;span class=&#39;author&#39;&gt;&lt;a rel=&#39;author&#39; href=&#39;http://tomafro.net&#39;&gt;Tom Ward&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&#39;date&#39;&gt;&lt;a href=&quot;/2012/12&quot;&gt;27th December 2012&lt;/a&gt;&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/recap&quot; rel=&quot;tag&quot;&gt;recap&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/harmonia&quot; rel=&quot;tag&quot;&gt;harmonia&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/deployment&quot; rel=&quot;tag&quot;&gt;deployment&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</content>
+   <updated>2012-12-27T00:00:00+00:00</updated>
+   <category scheme="https://tomafro.net/tags/" term="recap" label="recap" />
+   <category scheme="https://tomafro.net/tags/" term="harmonia" label="harmonia" />
+   <category scheme="https://tomafro.net/tags/" term="deployment" label="deployment" />
+ </entry>
+ <entry>
+   <id>http://tomafro.net/2012/11/past-present-future</id>
+   <link href="https://tomafro.net/2012/11/past-present-future"/>
+   <title>Past, Present and Future</title>
+   <author>
+     <name>Tom Ward</name>
+     <email>tom@popdog.net</email>
+   </author>
+   <content type="html">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;a href=&quot;/2012/11/past-present-future&quot;&gt;Past, Present and Future&lt;/a&gt;&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;For me and the rest of &lt;a href=&quot;https://gofreerange.com&quot;&gt;Go Free Range&lt;/a&gt;, the big event this week was the public launch of &lt;a href=&quot;https://www.gov.uk/government&quot;&gt;Inside Government&lt;/a&gt;, the government focussed part of &lt;a href=&quot;https://www.gov.uk&quot;&gt;GOV.UK&lt;/a&gt;.  Inside Government aims to replace the majority of government department and agency websites with a single place for all news, policies, publications and consultations.  On Wednesday, the first two department websites (for the &lt;a href=&quot;https://www.gov.uk/dft&quot;&gt;Department for Transport&lt;/a&gt; and the &lt;a href=&quot;https://www.gov.uk/dclg&quot;&gt;Department for Communities and Local Government&lt;/a&gt;) were moved across.&lt;/p&gt;
+
+&lt;div class=&quot;browsershots&quot;&gt;
+&lt;a href=&quot;https://www.gov.uk/government&quot;&gt;&lt;img class=&quot;browsershot&quot; src=&quot;/images/inside-government.png&quot;/&gt;&lt;/a&gt;
+&lt;a href=&quot;https://www.gov.uk/government/organisations/department-for-communities-and-local-government&quot;&gt;&lt;img class=&quot;browsershot&quot; src=&quot;/images/inside-government-dclg.png&quot;/&gt;&lt;/a&gt;
+&lt;a href=&quot;https://www.gov.uk/government/policies/bringing-people-together-in-strong-united-communities&quot;&gt;&lt;img class=&quot;browsershot&quot; src=&quot;/images/inside-government-policy.png&quot;/&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;We&amp;rsquo;ve been working on this project for 14 months, from the &lt;a href=&quot;https://github.com/alphagov/whitehall/commit/8fa2772&quot;&gt;initial commit&lt;/a&gt;, through the &lt;a href=&quot;http://tomafro.net/2012/02/working-inside-government&quot;&gt;beta launch&lt;/a&gt; right up until today.  I&amp;rsquo;ve enjoyed it, but it has been extremely hard work.  And although there are hundreds of things I&amp;rsquo;d still like to change, there are hundreds more I&amp;rsquo;m proud of.&lt;/p&gt;
+
+&lt;h2&gt;Harmonia&lt;/h2&gt;
+
+&lt;p&gt;As well as &lt;a href=&quot;https://www.gov.uk/government&quot;&gt;Inside Government&lt;/a&gt;, we&amp;rsquo;ve also been slowly inviting people to &lt;a href=&quot;https://harmonia.io&quot;&gt;Harmonia&lt;/a&gt;, our &amp;lsquo;virtual office manager&amp;rsquo;.  In case you haven&amp;rsquo;t read the &lt;a href=&quot;http://gofreerange.com/blog&quot;&gt;Go Free Range blog&lt;/a&gt;, &lt;a href=&quot;https://harmonia.io&quot;&gt;Harmonia&lt;/a&gt; is a tool we use to assign all the tasks needed to keep our company running.  Rather than use a schedule, each piece of work is assigned in a way designed to be both random and fair.&lt;/p&gt;
+
+&lt;div class=&quot;browsershots&quot;&gt;
+&lt;a href=&quot;https://harmonia.io&quot;&gt;&lt;img class=&quot;browsershot&quot; src=&quot;/images/harmonia-signup.png&quot;/&gt;&lt;/a&gt;
+&lt;a href=&quot;https://harmonia.io&quot;&gt;&lt;img class=&quot;browsershot&quot; src=&quot;/images/harmonia-dashboard.png&quot;/&gt;&lt;/a&gt;
+&lt;a href=&quot;https://harmonia.io&quot;&gt;&lt;img class=&quot;browsershot&quot; src=&quot;/images/harmonia-task.png&quot;/&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;One variation or another of &lt;a href=&quot;https://harmonia.io&quot;&gt;Harmonia&lt;/a&gt; has been helping us for well over a year, but now we&amp;rsquo;ve built a web app for everyone to use.  It&amp;rsquo;s still a bit rough around the edges, but we&amp;rsquo;d love it if people &lt;a href=&quot;https://harmonia.io&quot;&gt;signed up&lt;/a&gt; and gave us feedback.  We&amp;rsquo;re building this because we want to learn how to build better products, for the future of &lt;a href=&quot;http://gofreerange.com&quot;&gt;Go Free Range&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;span class=&#39;author&#39;&gt;&lt;a rel=&#39;author&#39; href=&#39;http://tomafro.net&#39;&gt;Tom Ward&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&#39;date&#39;&gt;&lt;a href=&quot;/2012/11&quot;&gt;16th November 2012&lt;/a&gt;&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/gds&quot; rel=&quot;tag&quot;&gt;gds&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/government&quot; rel=&quot;tag&quot;&gt;government&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/freerange&quot; rel=&quot;tag&quot;&gt;freerange&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/harmonia&quot; rel=&quot;tag&quot;&gt;harmonia&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</content>
+   <updated>2012-11-16T00:00:00+00:00</updated>
+   <category scheme="https://tomafro.net/tags/" term="gds" label="gds" />
+   <category scheme="https://tomafro.net/tags/" term="government" label="government" />
+   <category scheme="https://tomafro.net/tags/" term="freerange" label="freerange" />
+   <category scheme="https://tomafro.net/tags/" term="harmonia" label="harmonia" />
+ </entry>
+ <entry>
+   <id>http://tomafro.net/2012/06/tip-bundler-with-binstubs</id>
+   <link href="https://tomafro.net/2012/06/tip-bundler-with-binstubs"/>
+   <title>Tip: Bundler with --binstubs</title>
+   <author>
+     <name>Tom Ward</name>
+     <email>tom@popdog.net</email>
+   </author>
+   <content type="html">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;a href=&quot;/2012/06/tip-bundler-with-binstubs&quot;&gt;Tip: Bundler with --binstubs&lt;/a&gt;&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;In &lt;a href=&quot;/2011/09/tip-automatic-bundle-exec-for-rake-and-more&quot;&gt;a previous blog&lt;/a&gt;, I wrote how I&amp;rsquo;d aliased commands such as &lt;code&gt;rake&lt;/code&gt;, &lt;code&gt;cap&lt;/code&gt; and &lt;code&gt;rspec&lt;/code&gt; to run either with or without &lt;code&gt;bundle exec&lt;/code&gt;, based on the presence of a &lt;code&gt;Gemfile&lt;/code&gt;.  I gave up on that a while ago.  Instead, I&amp;rsquo;ve started installing all my bundles like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;bundle install --path .bundle/gems --binstubs .bundle/bin
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;I often use features like &lt;code&gt;bundle open &amp;lt;gem&amp;gt;&lt;/code&gt; to debug and edit failing gems, so I like to keep each application&amp;rsquo;s gems isolated.  The &lt;code&gt;--path .bundle/gems&lt;/code&gt; installs them within an application&amp;rsquo;s &lt;code&gt;.bundle&lt;/code&gt; directory.  As well as isolating my gems, it has the added benefit that I can blow away the gemset with &lt;code&gt;rm -rf .bundle&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;--binstubs .bundle/bin&lt;/code&gt; option installs bundle-aware scripts for each command provided by a bundled gem.  For example, a bundle including &lt;code&gt;rake&lt;/code&gt; will generate a &lt;code&gt;.bundle/bin/rake&lt;/code&gt; script.  By adding &lt;code&gt;./.bundle/bin&lt;/code&gt; to the front of my environment &lt;code&gt;PATH&lt;/code&gt;, the bundled version of &lt;code&gt;rake&lt;/code&gt; will run when I&amp;rsquo;m in the application folder.  I never have to type &lt;code&gt;bundle exec&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;Obviously typing that long &lt;code&gt;bundle install&lt;/code&gt; command each time is tedious, so I&amp;rsquo;ve aliased it to &lt;code&gt;bi&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;bi&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;bundle install --path .bundle/gems --binstubs .bundle/bin&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;I&amp;rsquo;ve been using these options for a few months, and so far I&amp;rsquo;m very happy with them.&lt;/p&gt;
+
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;span class=&#39;author&#39;&gt;&lt;a rel=&#39;author&#39; href=&#39;http://tomafro.net&#39;&gt;Tom Ward&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&#39;date&#39;&gt;&lt;a href=&quot;/2012/06&quot;&gt;21st June 2012&lt;/a&gt;&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/ruby&quot; rel=&quot;tag&quot;&gt;ruby&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/gem&quot; rel=&quot;tag&quot;&gt;gem&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/rake&quot; rel=&quot;tag&quot;&gt;rake&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/bundler&quot; rel=&quot;tag&quot;&gt;bundler&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/tip&quot; rel=&quot;tag&quot;&gt;tip&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</content>
+   <updated>2012-06-21T00:00:00+01:00</updated>
+   <category scheme="https://tomafro.net/tags/" term="ruby" label="ruby" />
+   <category scheme="https://tomafro.net/tags/" term="gem" label="gem" />
+   <category scheme="https://tomafro.net/tags/" term="rake" label="rake" />
+   <category scheme="https://tomafro.net/tags/" term="bundler" label="bundler" />
+   <category scheme="https://tomafro.net/tags/" term="tip" label="tip" />
+ </entry>
+ <entry>
+   <id>http://tomafro.net/2012/02/working-inside-government</id>
+   <link href="https://tomafro.net/2012/02/working-inside-government"/>
+   <title>Working inside government</title>
+   <author>
+     <name>Tom Ward</name>
+     <email>tom@popdog.net</email>
+   </author>
+   <content type="html">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;a href=&quot;/2012/02/working-inside-government&quot;&gt;Working inside government&lt;/a&gt;&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;Since September, I and the other &lt;a href=&quot;http://gofreerange.com&quot;&gt;Go Free Range&lt;/a&gt; guys have been working for the government.  We&amp;rsquo;ve been helping the able and growing &lt;a href=&quot;http://digital.cabinetoffice.gov.uk/&quot;&gt;Government Digital Service&lt;/a&gt; to build &lt;a href=&quot;https://github.com/alphagov/whitehall&quot;&gt;whitehall&lt;/a&gt;, our code name for the &lt;a href=&quot;https://www.gov.uk/government&quot;&gt;Inside Government section of gov.uk&lt;/a&gt;.  Yesterday we removed the password and opened our doors to the public.&lt;/p&gt;
+
+&lt;div class=&quot;browsershots&quot;&gt;
+&lt;a href=&quot;https://www.gov.uk/government/organisations/department-for-international-development&quot;&gt;&lt;img class=&quot;browsershot&quot; src=&quot;/images/dfid.thumb.png&quot;/&gt;&lt;/a&gt;
+&lt;a href=&quot;https://www.gov.uk/government/policies/human-rights&quot;&gt;&lt;img class=&quot;browsershot&quot; src=&quot;/images/promoting-human-rights.thumb.png&quot;/&gt;&lt;/a&gt;
+&lt;a href=&quot;https://www.gov.uk/government/organisations&quot;&gt;&lt;img class=&quot;browsershot&quot; src=&quot;/images/departments.thumb.png&quot;/&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;For those who don&amp;rsquo;t know, &lt;a href=&quot;https://www.gov.uk&quot;&gt;gov.uk&lt;/a&gt; is the UK government&amp;rsquo;s attempt to not only consolidate government websites to a single domain, but also build these sites in the right way.  That means &lt;a href=&quot;https://www.pivotaltracker.com/projects/367813&quot;&gt;public&lt;/a&gt;, &lt;a href=&quot;https://github.com/alphagov/whitehall&quot;&gt;open source&lt;/a&gt;, continual delivery and more.&lt;/p&gt;
+
+&lt;p&gt;While the first part of &lt;a href=&quot;https://www.gov.uk&quot;&gt;gov.uk&lt;/a&gt; focussed on helping citizens, &lt;a href=&quot;https://www.gov.uk/government&quot;&gt;Inside Government&lt;/a&gt; is about the business of government.  &lt;a href=&quot;https://www.gov.uk/government/policy-topics&quot;&gt;What policies&lt;/a&gt; the government has, &lt;a href=&quot;https://www.gov.uk/government/policies/launching-the-single-domain&quot;&gt;how it&amp;rsquo;s implementing them&lt;/a&gt;, not to mention the &lt;a href=&quot;https://www.gov.uk/government/news-and-speeches&quot;&gt;news and speeches&lt;/a&gt;, &lt;a href=&quot;https://www.gov.uk/government/publications&quot;&gt;publications&lt;/a&gt;, &lt;a href=&quot;https://www.gov.uk/government/consultations&quot;&gt;consultations&lt;/a&gt; and other things the government does each day.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s only the first release of many, a small glimpse into what will one day be.  How it ends up will be shaped by &lt;a href=&quot;https://www.gov.uk/feedback&quot;&gt;feedback from the people who use it&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;span class=&#39;author&#39;&gt;&lt;a rel=&#39;author&#39; href=&#39;http://tomafro.net&#39;&gt;Tom Ward&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&#39;date&#39;&gt;&lt;a href=&quot;/2012/02&quot;&gt;29th February 2012&lt;/a&gt;&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/gds&quot; rel=&quot;tag&quot;&gt;gds&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/government&quot; rel=&quot;tag&quot;&gt;government&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/whitehall&quot; rel=&quot;tag&quot;&gt;whitehall&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/freerange&quot; rel=&quot;tag&quot;&gt;freerange&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</content>
+   <updated>2012-02-29T00:00:00+00:00</updated>
+   <category scheme="https://tomafro.net/tags/" term="gds" label="gds" />
+   <category scheme="https://tomafro.net/tags/" term="government" label="government" />
+   <category scheme="https://tomafro.net/tags/" term="whitehall" label="whitehall" />
+   <category scheme="https://tomafro.net/tags/" term="freerange" label="freerange" />
+ </entry>
+ <entry>
+   <id>http://tomafro.net/2011/09/geohash-toy-code-released</id>
+   <link href="https://tomafro.net/2011/09/geohash-toy-code-released"/>
+   <title>Geohash toy: code released</title>
+   <author>
+     <name>Tom Ward</name>
+     <email>tom@popdog.net</email>
+   </author>
+   <content type="html">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;a href=&quot;/2011/09/geohash-toy-code-released&quot;&gt;Geohash toy: code released&lt;/a&gt;&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;A couple of weeks ago I &lt;a href=&quot;http://tomafro.net/2011/09/a-small-toy-to-explore-geohashes&quot;&gt;wrote about a small toy app&lt;/a&gt; I&amp;rsquo;d written to explore geohashes.  Now I&amp;rsquo;ve cleaned the code up a little, upgraded it to rails 3.1 and released it &lt;a href=&quot;https://github.com/tomafro/geohash-explorer&quot;&gt;here on github&lt;/a&gt;.  Enjoy.&lt;/p&gt;
+
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;span class=&#39;author&#39;&gt;&lt;a rel=&#39;author&#39; href=&#39;http://tomafro.net&#39;&gt;Tom Ward&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&#39;date&#39;&gt;&lt;a href=&quot;/2011/09&quot;&gt;24th September 2011&lt;/a&gt;&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/geohash&quot; rel=&quot;tag&quot;&gt;geohash&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/toy&quot; rel=&quot;tag&quot;&gt;toy&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/code&quot; rel=&quot;tag&quot;&gt;code&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/app&quot; rel=&quot;tag&quot;&gt;app&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/github&quot; rel=&quot;tag&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/tiny&quot; rel=&quot;tag&quot;&gt;tiny&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</content>
+   <updated>2011-09-24T00:00:00+01:00</updated>
+   <category scheme="https://tomafro.net/tags/" term="geohash" label="geohash" />
+   <category scheme="https://tomafro.net/tags/" term="toy" label="toy" />
+   <category scheme="https://tomafro.net/tags/" term="code" label="code" />
+   <category scheme="https://tomafro.net/tags/" term="app" label="app" />
+   <category scheme="https://tomafro.net/tags/" term="github" label="github" />
+   <category scheme="https://tomafro.net/tags/" term="tiny" label="tiny" />
+ </entry>
+ <entry>
+   <id>http://tomafro.net/2011/09/a-small-toy-to-explore-geohashes</id>
+   <link href="https://tomafro.net/2011/09/a-small-toy-to-explore-geohashes"/>
+   <title>A small toy to explore geohashes</title>
+   <author>
+     <name>Tom Ward</name>
+     <email>tom@popdog.net</email>
+   </author>
+   <content type="html">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;a href=&quot;/2011/09/a-small-toy-to-explore-geohashes&quot;&gt;A small toy to explore geohashes&lt;/a&gt;&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;For an app I&amp;rsquo;ve been building, I&amp;rsquo;ve been looking into &lt;a href=&quot;http://geohash.org/&quot;&gt;geohashes&lt;/a&gt;.  For those who don&amp;rsquo;t know, the &lt;a href=&quot;http://en.wikipedia.org/wiki/Geohash&quot;&gt;geohash&lt;/a&gt; format is a simple way to encode latitude and longitude into a single string.  As an example, Nelson&amp;rsquo;s Column in London (51.507794, -0.127952) has the geohash &lt;code&gt;gcpvj0dyds&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Geohashes have a couple of interesting features.  First, as you remove characters, you lose precision. &lt;code&gt;gcpvj0dyds&lt;/code&gt; fairly accurately points to Nelson&amp;rsquo;s Column; &lt;code&gt;gcpvj0d&lt;/code&gt; represents the South-West of Trafalgar Square and some of the Mall; and &lt;code&gt;gcpvj&lt;/code&gt; covers most of Central London, as well as Islington and King&amp;rsquo;s Cross.  A geohash doesn&amp;rsquo;t really represent a point, but rather a bounding area within which a point may lie.  The longer the geohash, the smaller that bounding area.&lt;/p&gt;
+
+&lt;p&gt;The other interesting property geohashes have is that nearby locations usually (but not always) share similar prefixes.  So much of North London is in &lt;code&gt;gcpv&lt;/code&gt;, while much of South London is in &lt;code&gt;gcpu&lt;/code&gt;.  However, due to the &lt;a href=&quot;http://en.wikipedia.org/wiki/Prime_Meridian&quot;&gt;Prime Meridian&lt;/a&gt; passing through Greenwhich, South East London has the geohash &lt;code&gt;u10h&lt;/code&gt; &amp;ndash; wildly different than the other two.&lt;/p&gt;
+
+&lt;p&gt;This probably sounds a bit complicated.  I was having trouble getting my head around the concept, so to try and get to grips with geohashes I&amp;rsquo;ve written a toy app that draws them on a map.  To try it out, go to &lt;a href=&quot;http://geohash.gofreerange.com&quot;&gt;http://geohash.gofreerange.com&lt;/a&gt;, click the map, zoom and play.  If you find it useful, let me know.&lt;/p&gt;
+
+&lt;div class=&quot;update&quot;&gt;
+Update: This code is now available [on github](https://github.com/tomafro/geohash-explorer).
+&lt;/div&gt;
+
+
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;span class=&#39;author&#39;&gt;&lt;a rel=&#39;author&#39; href=&#39;http://tomafro.net&#39;&gt;Tom Ward&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&#39;date&#39;&gt;&lt;a href=&quot;/2011/09&quot;&gt;15th September 2011&lt;/a&gt;&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/geohash&quot; rel=&quot;tag&quot;&gt;geohash&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/toy&quot; rel=&quot;tag&quot;&gt;toy&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/app&quot; rel=&quot;tag&quot;&gt;app&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</content>
+   <updated>2011-09-15T00:00:00+01:00</updated>
+   <category scheme="https://tomafro.net/tags/" term="geohash" label="geohash" />
+   <category scheme="https://tomafro.net/tags/" term="toy" label="toy" />
+   <category scheme="https://tomafro.net/tags/" term="app" label="app" />
+ </entry>
+ <entry>
+   <id>http://tomafro.net/2011/09/tip-automatic-bundle-exec-for-rake-and-more</id>
+   <link href="https://tomafro.net/2011/09/tip-automatic-bundle-exec-for-rake-and-more"/>
+   <title>Tip: Automatic bundle exec for rake and other gems</title>
+   <author>
+     <name>Tom Ward</name>
+     <email>tom@popdog.net</email>
+   </author>
+   <content type="html">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;a href=&quot;/2011/09/tip-automatic-bundle-exec-for-rake-and-more&quot;&gt;Tip: Automatic bundle exec for rake and other gems&lt;/a&gt;&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;It&amp;rsquo;s irritating to run gem commands like &lt;code&gt;rake&lt;/code&gt;, &lt;code&gt;cap&lt;/code&gt;, &lt;code&gt;rspec&lt;/code&gt; and others, only to find they needed to be executed via &lt;code&gt;bundle exec&lt;/code&gt;.  As a simple solution, I use a simple zsh function, combined with aliases for commonly used commands.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s the function (which I&amp;rsquo;ve named &lt;code&gt;be&lt;/code&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -a Gemfile &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;  &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$*&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$*&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;It&amp;rsquo;s very simple.  If there&amp;rsquo;s a &lt;code&gt;Gemfile&lt;/code&gt; in the pwd, it runs commands through bundle exec.  Otherwise it just runs them.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve combined this with some aliases for much less pain and less frustration:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rake&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;be rake&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;be cap&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rspec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;be rspec&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+
+
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;span class=&#39;author&#39;&gt;&lt;a rel=&#39;author&#39; href=&#39;http://tomafro.net&#39;&gt;Tom Ward&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&#39;date&#39;&gt;&lt;a href=&quot;/2011/09&quot;&gt; 1st September 2011&lt;/a&gt;&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/zsh&quot; rel=&quot;tag&quot;&gt;zsh&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/ruby&quot; rel=&quot;tag&quot;&gt;ruby&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/gem&quot; rel=&quot;tag&quot;&gt;gem&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/rake&quot; rel=&quot;tag&quot;&gt;rake&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/bundler&quot; rel=&quot;tag&quot;&gt;bundler&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/tip&quot; rel=&quot;tag&quot;&gt;tip&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</content>
+   <updated>2011-09-01T00:00:00+01:00</updated>
+   <category scheme="https://tomafro.net/tags/" term="zsh" label="zsh" />
+   <category scheme="https://tomafro.net/tags/" term="ruby" label="ruby" />
+   <category scheme="https://tomafro.net/tags/" term="gem" label="gem" />
+   <category scheme="https://tomafro.net/tags/" term="rake" label="rake" />
+   <category scheme="https://tomafro.net/tags/" term="bundler" label="bundler" />
+   <category scheme="https://tomafro.net/tags/" term="tip" label="tip" />
+ </entry>
+ <entry>
+   <id>http://tomafro.net/2011/08/presenting-the-hashblue-api</id>
+   <link href="https://tomafro.net/2011/08/presenting-the-hashblue-api"/>
+   <title>Presenting the #blue api</title>
+   <author>
+     <name>Tom Ward</name>
+     <email>tom@popdog.net</email>
+   </author>
+   <content type="html">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;a href=&quot;/2011/08/presenting-the-hashblue-api&quot;&gt;Presenting the #blue api&lt;/a&gt;&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;In building &lt;a href=&quot;https://hashblue.com&quot;&gt;#blue&lt;/a&gt; (sign up now!), one of the problems we faced was how to build &lt;code&gt;json&lt;/code&gt; data in response to requests to &lt;a href=&quot;https://api.hashblue.com&quot;&gt;our API&lt;/a&gt;.  The typical rails solution would be to override &lt;code&gt;#as_json&lt;/code&gt; in a model class, then write a controller like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ContactsController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApiController&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;responds_to&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;respond_with&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Contact&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;I always prefer to keep my controllers as skinny as possible, so this looks like a great solution.  The &lt;code&gt;respond_with&lt;/code&gt; call takes care of converting the message to json and responding with the right &lt;code&gt;Content-Type&lt;/code&gt;, all in a simple call.  However it has a number of problems and disadvantages.&lt;/p&gt;
+
+&lt;p&gt;The biggest issue for our API is that rather than expose the &lt;code&gt;id&lt;/code&gt; of each model, we&amp;rsquo;ve tried to encourage the use of the &lt;code&gt;uri&lt;/code&gt; instead.  So the &lt;code&gt;json&lt;/code&gt; returned for a single contact (for example) looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&amp;quot;contact&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&amp;quot;uri&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.example.com/contacts/ccpwjc&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;George&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;george@handmade.org&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&amp;quot;msisdn&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;447897897899&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&amp;quot;phone_number&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;07897897899&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&amp;quot;messages&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://api.example.com/contacts/ccpwjc/messages&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;It doesn&amp;rsquo;t just have a &lt;code&gt;uri&lt;/code&gt; for the actual contact, but also for the messages belonging to that contact (and yes, I regret not calling that attribute &lt;code&gt;messages_uri&lt;/code&gt;).  Models can&amp;rsquo;t generate uris, and shouldn&amp;rsquo;t really be aware of them, so overriding &lt;code&gt;#as_json&lt;/code&gt; doesn&amp;rsquo;t work.  In any case, the json structure is really presentation logic, not business logic.  It doesn&amp;rsquo;t belong in the model.&lt;/p&gt;
+
+&lt;h3&gt;Presenting a single model&lt;/h3&gt;
+
+&lt;p&gt;The solution we&amp;rsquo;ve used is to build a presenter for each model, solely responsible for building the json.  Here&amp;rsquo;s an example for a contact:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ContactPresenter&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;routes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url_helpers&lt;/span&gt;
+
+  &lt;span class=&quot;kp&quot;&gt;attr_accessor&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:subject&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:url_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:to&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:controller&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:to&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:subject&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@controller&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;controller&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@subject&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;as_json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:contact&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:msisdn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msisdn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:phone_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phone_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:messages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;api_contact_messages_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:contact_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;uri&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;api_contact_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;It&amp;rsquo;s now simple to rewrite our controller to use the new presenter:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ContactsController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApiController&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;responds_to&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;respond_with&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ContactPresenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Contact&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;h3&gt;Presenting pages of models&lt;/h3&gt;
+
+&lt;p&gt;The presenter above works well for a single model, but many of our API calls return a page of results.  The &lt;a href=&quot;https://api.hashblue.com/doc/GET%3Acontacts&quot;&gt;/contacts&lt;/a&gt; for example returns all the contacts belonging to a user (of which there may be hundreds).  Luckily it&amp;rsquo;s simple to adapt this pattern to present pages like this.  First, we change our original &lt;code&gt;#as_json&lt;/code&gt; method slightly:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;as_json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{})&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:partial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:msisdn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msisdn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:phone_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phone_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:messages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;api_contact_messages_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:contact_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:contact&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;as_json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:partial&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;This change allows us to call as_json with the options &lt;code&gt;:partial&lt;/code&gt;.  With the option, a hash of data is returned.  Without, the same hash is returned, wrapped in another hash.&lt;/p&gt;
+
+&lt;p&gt;Next, add a page presenter:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ContactPagePresenter&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;routes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url_helpers&lt;/span&gt;
+
+  &lt;span class=&quot;kp&quot;&gt;attr_accessor&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:subject&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:url_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:to&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:controller&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:to&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:subject&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@controller&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;controller&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@subject&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;as_json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{})&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;contacts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ContactPresenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;as_json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:partial&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:contacts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contacts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tap&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previous_page&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:previous_page_uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contacts_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previous_page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_page&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:next_page_uri&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contacts_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Finally, we can add an index action using this presenter:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ContactsController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApiController&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;responds_to&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;index&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;respond_with&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ContactPagePresenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Contact&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paginate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;:page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+      &lt;span class=&quot;ss&quot;&gt;:per_page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;h3&gt;Refactoring common logic&lt;/h3&gt;
+
+&lt;p&gt;The code above is a very much simplified version of what we do in &lt;a href=&quot;https://hashblue.com&quot;&gt;#blue&lt;/a&gt;.  We have many controllers, and several different models, so in our actual code we&amp;rsquo;ve abstracted out as much common logic as possible.  In reality, our contacts controller looks more like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ContactsController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApiController&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;before_filter&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:find_contact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:only&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;present&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@contact&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;index&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;present_page_of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contacts&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@contact&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contacts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@contact&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;present&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@contact&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;update&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@contact&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update_attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;present&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@contact&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;kp&quot;&gt;private&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find_contact&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@contact&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contacts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:not_found&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@contact&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;I think the code looks pretty clean.  The clever stuff happens in the &lt;code&gt;#present&lt;/code&gt; and &lt;code&gt;#present_page_of&lt;/code&gt; methods, defined in the superclass:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;protected&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;present&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{})&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;presenter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;presenter_class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:location&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;presenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty?&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;respond_with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;presenter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;present_page_of&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{})&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;presenter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page_presenter_class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page_of&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;respond_with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;presenter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;page_of&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paginate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:per_page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;presenter_class&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Controller&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;singularize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Presenter&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;constantize&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;page_presenter_class&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Controller&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;singularize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;PagePresenter&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;constantize&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;The &lt;code&gt;#present&lt;/code&gt; and &lt;code&gt;#present_page_of&lt;/code&gt; methods handle determining the correct presenter to us, as well as paginating the collection where required.  They still use rails build in &lt;code&gt;#respond_with&lt;/code&gt; method, which helps provide the correct response headers for each request.  As the ContactPresenter delegates &lt;code&gt;#errors&lt;/code&gt; to its subject, if there are validation errors, &lt;code&gt;#respond_with&lt;/code&gt; correctly returns a 422.&lt;/p&gt;
+
+&lt;p&gt;One further motivation for this pattern (other than moving presentation logic out of the model) is that should we want to release a new version of our API, we&amp;rsquo;ll be able to get a lot of the way there simply by swapping which presenter is used.  We started using this code about 8 months ago, and I&amp;rsquo;m still pretty happy with it.  I hope you find something useful in it too.&lt;/p&gt;
+
+&lt;p&gt;Any comments or suggestions, please get in touch with me &lt;a href=&quot;http://twitter.com/tomafro&quot;&gt;on twitter&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;span class=&#39;author&#39;&gt;&lt;a rel=&#39;author&#39; href=&#39;http://tomafro.net&#39;&gt;Tom Ward&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&#39;date&#39;&gt;&lt;a href=&quot;/2011/08&quot;&gt; 2nd August 2011&lt;/a&gt;&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/hashblue&quot; rel=&quot;tag&quot;&gt;hashblue&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/gofreerange&quot; rel=&quot;tag&quot;&gt;gofreerange&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/o2&quot; rel=&quot;tag&quot;&gt;o2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/api&quot; rel=&quot;tag&quot;&gt;api&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/rails&quot; rel=&quot;tag&quot;&gt;rails&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</content>
+   <updated>2011-08-02T00:00:00+01:00</updated>
+   <category scheme="https://tomafro.net/tags/" term="hashblue" label="hashblue" />
+   <category scheme="https://tomafro.net/tags/" term="gofreerange" label="gofreerange" />
+   <category scheme="https://tomafro.net/tags/" term="o2" label="o2" />
+   <category scheme="https://tomafro.net/tags/" term="api" label="api" />
+   <category scheme="https://tomafro.net/tags/" term="rails" label="rails" />
+ </entry>
+ <entry>
+   <id>http://tomafro.net/2011/03/hashblue-opens-for-business</id>
+   <link href="https://tomafro.net/2011/03/hashblue-opens-for-business"/>
+   <title>#blue opens for business</title>
+   <author>
+     <name>Tom Ward</name>
+     <email>tom@popdog.net</email>
+   </author>
+   <content type="html">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;&lt;a href=&quot;/2011/03/hashblue-opens-for-business&quot;&gt;#blue opens for business&lt;/a&gt;&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;If you&amp;rsquo;re an &lt;a href=&quot;http://o2.co.uk&quot;&gt;O2&lt;/a&gt; customer based in the UK, you might be interested that &lt;a href=&quot;https://hashblue.com&quot;&gt;#blue&lt;/a&gt;, a project &lt;a href=&quot;http://gofreerange.com&quot;&gt;we&amp;rsquo;ve built&lt;/a&gt;, has recently (re)opened for business.  It&amp;rsquo;s a soft launch, but feel free to tell your friends.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hashblue.com&quot;&gt;#blue&lt;/a&gt; gets copies of every SMS message you send or receive, and makes them available to you on the web.  You can search your messages, read whole conversations, and even reply, all from the comfort of your browser.&lt;/p&gt;
+
+&lt;div class=&quot;screenshot&quot;&gt;
+&lt;img src=&quot;/images/20110303-hashblue-messages.png&quot;/&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;As well as a nice-looking web UI, there&amp;rsquo;s also &lt;a href=&quot;https://api.hashblue.com&quot;&gt;an API&lt;/a&gt; that allows other apps to read and manipulate your messages and contacts (once you give them permission). Think automatic posting to twitter, or showing new messages as alerts on your desktop.  The possibilities are endless.&lt;/p&gt;
+
+&lt;div class=&quot;screenshot&quot;&gt;
+&lt;img src=&quot;/images/20110303-hashblue-api.png&quot;/&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Oh, and it&amp;rsquo;s all free.  All you need is an &lt;a href=&quot;http://o2.co.uk&quot;&gt;O2&lt;/a&gt; phone.&lt;/p&gt;
+
+&lt;p&gt;If you think it sounds interesting, &lt;a href=&quot;https://hashblue.com/&quot;&gt;ask for a beta request&lt;/a&gt;.  You should get an invitation very quickly.  Once on board, please send me any suggestions and feedback.  It&amp;rsquo;s going to be interesting to see where we can take this project.&lt;/p&gt;
+
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;span class=&#39;author&#39;&gt;&lt;a rel=&#39;author&#39; href=&#39;http://tomafro.net&#39;&gt;Tom Ward&lt;/a&gt;&lt;/span&gt;
+    &lt;span class=&#39;date&#39;&gt;&lt;a href=&quot;/2011/03&quot;&gt; 3rd March 2011&lt;/a&gt;&lt;/span&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/hashblue&quot; rel=&quot;tag&quot;&gt;hashblue&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/gofreerange&quot; rel=&quot;tag&quot;&gt;gofreerange&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/tags/o2&quot; rel=&quot;tag&quot;&gt;o2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</content>
+   <updated>2011-03-03T00:00:00+00:00</updated>
+   <category scheme="https://tomafro.net/tags/" term="hashblue" label="hashblue" />
+   <category scheme="https://tomafro.net/tags/" term="gofreerange" label="gofreerange" />
+   <category scheme="https://tomafro.net/tags/" term="o2" label="o2" />
+ </entry>
+</feed>

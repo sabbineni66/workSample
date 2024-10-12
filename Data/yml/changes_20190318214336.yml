@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  type: MyString
+  tag_id: 1
+  owner_id: 1
+  owner_type: MyString
+
+two:
+  type: MyString
+  tag_id: 1
+  owner_id: 1
+  owner_type: MyString

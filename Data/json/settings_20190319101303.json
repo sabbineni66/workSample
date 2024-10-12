@@ -1,0 +1,17 @@
+{
+    "go.testOnSave": true,
+    "go.testFlags": ["-v", "-cover", "-race"],
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "counter.go",
+                "cmd": "cd ${workspaceRoot}; go build -o supervisor/_example/plugins/counter ./supervisor/_example/plugins/..."
+            },
+            {
+                "match": "qmux/node/qmux.ts",
+                "cmd": "cd ${workspaceRoot}/qmux/node; tsc --lib es2015 --inlineSourceMap qmux.ts"
+            }
+        ]
+    },
+    "python.linting.pylintEnabled": false
+}

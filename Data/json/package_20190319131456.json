@@ -1,0 +1,39 @@
+{
+  "name": "test-smells",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Some example test smells",
+  "main": "support/js/.not-a-requireable-module.js",
+  "scripts": {
+    "test": "teenytest --helper support/js/helper.js \"smells/**/*.js\" ",
+    "test:one": "teenytest --helper support/js/helper.js",
+    "style": "standard",
+    "ci": "cross-env CI=true npm run test && npm run style"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testdouble/smells.git"
+  },
+  "author": "Justin Searls <searls@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/testdouble/smells/issues"
+  },
+  "homepage": "https://github.com/testdouble/smells#readme",
+  "devDependencies": {
+    "core-assert": "^0.2.0",
+    "cross-env": "^3.0.0",
+    "standard": "^8.3.0",
+    "teenytest": "^5.0.0",
+    "testdouble": "^1.4.2"
+  },
+  "dependencies": {
+    "lodash": "^4.12.0",
+    "stringify-object-with-one-liners": "^1.0.0"
+  },
+  "standard": {
+    "globals": [
+      "assert"
+    ]
+  }
+}

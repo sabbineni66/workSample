@@ -1,0 +1,17 @@
+--- 
+- :name: home
+  :template: home
+  :position: 1
+- :name: our work
+  :path: work
+  :template: products
+  :position: 2
+- :name: jobs
+  :template: jobs
+  :position: 3
+- :name: faqs
+  :template: faqs
+  :position: 4
+- :name: contact us
+  :template: contact-us
+  :position: 5

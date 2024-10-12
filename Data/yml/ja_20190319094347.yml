@@ -1,0 +1,30 @@
+_gloc_rule_default:
+actionview_datehelper_date_select_order: [:year, :month, :day]
+actionview_datehelper_select_day_suffix: ?
+actionview_datehelper_select_month_suffix: ?
+actionview_datehelper_select_year_suffix: ?
+actionview_datehelper_time_in_words_day: %d??
+actionview_datehelper_time_in_words_hour_about: ?%d??
+actionview_datehelper_time_in_words_hour_about_single: ?1??
+actionview_datehelper_time_in_words_minute: %d?
+actionview_datehelper_time_in_words_minute_half: ?30?
+actionview_datehelper_time_in_words_minute_less_than: 1???
+actionview_datehelper_time_in_words_minute_single: 1?
+actionview_datehelper_time_in_words_month: %d???
+actionview_datehelper_time_in_words_month_about: ?1???
+actionview_datehelper_time_in_words_second_less_than: %d???
+actionview_datehelper_time_in_words_year_about: ?1??
+actionview_datehelper_time_in_words_year_over: %d????
+actionview_instancetag_blank_option: ???????
+general_fmt_age: %d?
+general_fmt_date: !!datetime_fmt '%Y?%m?%d?'
+general_fmt_datetime: !!datetime_fmt '%Y?%m?%d? %H:%M'
+general_fmt_time: !!datetime_fmt '%H:%M'
+general_text_No: ???
+general_text_Yes: ??
+general_text_day_names: [???, ???, ???, ???, ???, ???, ???]
+general_text_day_names_abbr: [?, ?, ?, ?, ?, ?, ?]
+general_text_month_names: [1?, 2?, 3?, 4?, 5?, 6?, 7?, 8?, 9?, 10?, 11?, 12?]
+general_text_month_names_abbr: [1?, 2?, 3?, 4?, 5?, 6?, 7?, 8?, 9?, 10?, 11?, 12?]
+general_text_no: ???
+general_text_yes: ??

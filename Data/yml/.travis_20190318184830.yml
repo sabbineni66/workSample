@@ -1,0 +1,36 @@
+rvm:
+  - jruby-9.0.5.0
+  - jruby-9.1.17.0
+  - jruby-9.2.0.0
+branches:
+  only:
+    - master
+    - /-dev|-feature|-fix/
+env:
+  - JRUBY_OPTS="-J-Xmx896M"
+script: bundle exec rake $TASK
+matrix:
+  include:
+    - rvm: jruby-head
+      env: TASK=test
+    - rvm: jruby-9.1.17.0
+      env: TASK=integration
+    - rvm: jruby-9.1.16.0
+      env: RAKE_VERSION="~>10.1"
+    - rvm: jruby-9.1.16.0
+      env: RAKE_VERSION="~>11.2"
+    - rvm: jruby-9.1.16.0
+      env: RAKE_VERSION="~>12.3"
+  allow_failures:
+    - rvm: jruby-head
+notifications:
+  irc:
+    channels:
+      - "irc.freenode.org#jruby"
+    on_success: change
+    on_failure: always
+    template:
+      - "%{repository} (%{branch}:%{commit} by %{author}): %{message} (%{build_url})"
+before_install:
+  - git fetch --unshallow
+  - gem install bundler

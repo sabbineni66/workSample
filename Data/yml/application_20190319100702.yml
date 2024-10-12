@@ -1,0 +1,7 @@
+info:
+  component: Spring Cloud Configuration Sample
+  
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: INFO

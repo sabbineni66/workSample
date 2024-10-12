@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+
+<project name="ddd-sample" basedir="." default="dist">
+
+	<!-- Name of project and version -->
+	<property name="proj.name" value="${ant.project.name}" />
+	<property name="proj.version" value="0.1" />
+
+	<property name="lib.dir" value="../lib" />
+	<property name="src.main.dir" value="src/main/java" />
+	<property name="src.main.resources.dir" value="src/main/resources" />
+	<property name="src.test.dir" value="src/test/java" />
+	<property name="src.test.resources.dir" value="src/test/resources" />
+	<property name="target.dir" value="target" />
+	<property name="target.compile.main.dir" value="target/classes" />
+	<property name="target.compile.test.dir" value="target/test-classes" />
+	<property name="target.reports.test.dir" value="target/test-reports" />
+	<property name="dist.dir" value="target/dist" />
+	<property name="doc.dir" value="target/api-docs" />
+
+	<!-- Classpath declaration -->
+	<path id="master.classpath">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="clean" description="Clean output dir">
+		<delete dir="${target.dir}" />
+	</target>
+
+	<target name="compile" description="Compile main source tree java files.">
+		<mkdir dir="${target.compile.main.dir}" />
+		<javac destdir="${target.compile.main.dir}" source="1.5" target="1.5" debug="true" deprecation="false" optimize="false" failonerror="true">
+			<src path="${src.main.dir}" />
+			<classpath refid="master.classpath" />
+		</javac>
+		<!-- copy the resources to the main compile dir -->
+		<copy todir="${target.compile.main.dir}">
+			<fileset dir="${src.main.resources.dir}">
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="compile-test" description="Compile test source tree java files.">
+		<mkdir dir="${target.compile.test.dir}" />
+		<javac destdir="${target.compile.test.dir}" source="1.5" target="1.5" debug="true" deprecation="false" optimize="false" failonerror="true">
+			<src path="${src.test.dir}" />
+			<classpath refid="master.classpath" />
+			<classpath>
+				<pathelement location="${target.compile.main.dir}"/>
+			</classpath>
+		</javac>
+		<!-- copy the resources to the test compile dir -->
+		<copy todir="${target.compile.test.dir}">
+			<fileset dir="${src.test.resources.dir}">
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="dist" depends="clean, compile" description="Clean, compile, jar">
+		<mkdir dir="${dist.dir}" />
+		<jar jarfile="${dist.dir}/${proj.name}-${proj.version}.jar" compress="true" basedir="${target.compile.main.dir}" />
+	</target>
+
+	<target name="javadoc" depends="clean, compile">
+
+		<javadoc packagenames="org.rapin.*"
+				sourcepath="${src.main.dir}"
+				defaultexcludes="yes"
+				destdir="${doc.dir}"
+				author="true"
+				version="true"
+				use="true"
+				windowtitle="Warp Persist Samples - Named Queries">
+			<packageset dir="src/main/java" defaultexcludes="yes">
+				<include name="org/rapin/**"/>
+			</packageset>
+			<classpath refid="master.classpath"/>
+			<link href="http://java.sun.com/j2se/1.5.0/docs/api"/>
+		</javadoc>
+	</target>
+
+	<target name = "test" depends="compile, compile-test">
+
+		<delete dir="${target.reports.test.dir}" />
+		<mkdir dir="${target.reports.test.dir}" />
+
+		<junit printsummary = "yes" haltonfailure = "yes">
+		<classpath refid="master.classpath" />
+		<classpath>
+			<pathelement location="${target.compile.main.dir}"/>
+			<pathelement location="${target.compile.test.dir}"/>
+		</classpath>
+
+		<formatter type="plain"/>
+		<batchtest fork="yes" todir="${target.reports.test.dir}">
+			<fileset dir="${src.test.dir}">
+				<include name="**/*Test*.java"/>
+			</fileset>
+		</batchtest>
+		</junit>
+	</target>
+
+	<target name="run" depends="compile" description="Runs the test client.">
+		<java classname="org.rapin.app.Startup">
+			<classpath refid="master.classpath"/>
+			<classpath>
+				<pathelement path="${target.compile.main.dir}"/>
+			</classpath>
+		</java>
+	</target>
+
+</project>

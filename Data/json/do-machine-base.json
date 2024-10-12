@@ -1,0 +1,35 @@
+{
+  "builders": [{
+    "type": "digitalocean",
+    "region": "ams3",
+    "size": "512mb",
+    "image": "ubuntu-14-04-x64",
+    "snapshot_name": "base image"
+  }],
+
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "/Users/guillaumegarcera/.ssh/id_rsa.pub",
+      "destination": "/tmp/id_rsa.pub"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sleep 30",
+        "sudo apt-get install software-properties-common",
+        "sudo apt-add-repository ppa:ansible/ansible",
+        "sudo apt-get update",
+        "sudo apt-get install -y ansible"
+      ]
+    },
+    {
+      "type": "ansible-local",
+      "playbook_paths": [
+        "playbook",
+        "templates"
+      ],
+      "playbook_file": "ludomanager.yml"
+    }
+  ]
+}

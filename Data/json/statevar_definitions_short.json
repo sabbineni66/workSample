@@ -1,0 +1,55 @@
+[
+	{
+		"type" : "prefix",
+		"name" : "None",
+		"value": "0xDADAFEED",
+		 "size": 4
+	},
+	{
+		"type" : "unsigned_long",
+		"name" : "main_loop_counter",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "unsigned_byte",
+		"name" : "mission_started",
+		"value": "",
+		"size" : 1
+	},
+	{
+		"type" : "unsigned_short",
+		"name" : "heading_raw",
+		"value": "",
+		"size" : 2
+	},
+	{
+		"type" : "float_value",
+		"name" : "heading_deg",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "signed_byte",
+		"name" : "pitch_deg",
+		"value": "",
+		"size" : 1
+	},
+	{
+		"type" : "signed_byte",
+		"name" : "roll_deg",
+		"value": "",
+		"size" : 1
+	},
+	{
+		"type" : "padding",
+		"name" : "None",
+		"value": "",
+		"size" : 491
+	},
+	{
+		"type" : "suffix",
+		"value": "0xCAFEBABE",
+		"size" : 4
+	}
+]

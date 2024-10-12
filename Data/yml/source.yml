@@ -1,0 +1,12 @@
+name: qtruby3.qt5
+version_control:
+    - smokegen:
+        kde: smokegen
+        branch: Qt5
+    - smokeqt:
+        kde: smokeqt
+        branch: Qt5
+    - qtruby:
+        kde: qtruby
+        branch: qtruby-3.0-qt5
+

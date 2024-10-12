@@ -1,0 +1,11 @@
+{
+  "name": "jest-timeout-issue",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^21.1.0"
+  }
+}

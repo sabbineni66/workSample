@@ -1,0 +1,69 @@
+- title: "Clean Code: A Handbook of Agile Software Craftsmanship"
+  authors: ["Robert C. Martin"]
+  url: "http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"
+  image: "clean-code-a-handbook-of-agile-software-craftsmanship.jpg"
+
+- title: "Design Patterns: Elements of Reusable Object-Oriented Software"
+  authors: ["Erich Gamma", "Richard Helm", "Ralph Johnson", "John Vlissides"]
+  url: "http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612"
+  image: "design-patterns-elements-of-reusable-object-oriented-software.jpg"
+
+- title: "Getting Real"
+  authors: ["David Allen"]
+  url: "http://www.amazon.com/Getting-Real-Jason-Fried-ebook/dp/B0053KHGWM"
+  image: "getting-real.jpg"
+
+- title: "Getting Things Done"
+  authors: ["37signals"]
+  url: "http://www.amazon.com/Getting-Things-Done-Stress-Free-Productivity-ebook/dp/B000WH7PKY"
+  image: "getting-things-done.jpg"
+
+- title: "Growing Object-Oriented Software, Guided by Tests"
+  authors: ["Steve Freeman", "Nat Pryce"]
+  url: "http://www.amazon.com/Growing-Object-Oriented-Software-Guided-Tests/dp/0321503627"
+  image: "growing-object-oriented-software-guided-by-tests.jpg"
+
+- title: "Patterns of Enterprise Application Architecture"
+  authors: ["Martin Fowler"]
+  url: "http://www.amazon.com/Enterprise-Application-Architecture-Addison-Wesley-Signature-ebook/dp/B008OHVDFM"
+  image: "patterns-of-enterprise-application-architecture.jpg"
+
+- title: "Practices of an Agile Developer"
+  authors: ["Venkat Subramaniam", "Andy Hunt"]
+  url: "http://pragprog.com/book/pad/practices-of-an-agile-developer"
+  image: "practices-of-an-agile-developer.jpg"
+
+- title: "Rails AntiPatterns: Best Practice Ruby on Rails Refactoring"
+  authors: ["Chad Pytel", "Tammer Saleh"]
+  url: "http://www.amazon.com/Rails-AntiPatterns-Refactoring-Addison-Wesley-Professional-ebook/dp/B004C04QE0"
+  image: "rails-antipatterns-best-practice-ruby-on-rails-refactoring.jpg"
+
+- title: "Refactoring: Improving the Design of Existing Code"
+  authors: ["Martin Fowler"]
+  url: "http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672"
+  image: "refactoring-improving-the-design-of-existing-code.jpg"
+
+- title: "ReWork: Change the Way You Work Forever"
+  authors: ["Jason Fried", "David Heinemeier Hansson"]
+  url: "http://www.amazon.com/ReWork-Change-Way-Work-Forever-ebook/dp/B003ELY7PG"
+  image: "rework-change-way-work-forever.jpg"
+
+- title: "Technical Blogging"
+  authors: ["Antonio Cangiano"]
+  url: "http://pragprog.com/book/actb/technical-blogging"
+  image: "technical-blogging.jpg"
+
+- title: "The Pragmatic Programmer"
+  authors: ["Andrew Hunt", "David Thomas"]
+  url: "http://pragprog.com/book/tpp/the-pragmatic-programmer"
+  image: "the-pragmatic-programmer.jpg"
+
+- title: "Web Development with Clojure"
+  authors: ["Dmitri Sotnikov"]
+  url: "http://pragprog.com/book/dswdcloj/web-development-with-clojure"
+  image: "web-development-with-clojure.jpg"
+
+- title: "Working Effectively with Legacy Code"
+  authors: ["Michael Feathers"]
+  url: "http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052"
+  image: "working-effectively-with-legacy-code.jpg"

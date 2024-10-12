@@ -1,0 +1,22 @@
+destination: ./public
+
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - bin
+  - public
+  - vendor
+
+highlighter: rouge
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - fenced_code
+    - no_intraemphasis
+    - smart
+
+sitemap:
+  url: http://andre.arko.net

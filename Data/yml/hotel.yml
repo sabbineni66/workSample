@@ -1,0 +1,7 @@
+hotel:
+  id: <%= "10".to_i %>
+  name: "Mandolin Bay"
+  location: "Vegas Strip"
+  phone: "1-800-999-9999"
+  open: true
+  date: <%= Date.today %>

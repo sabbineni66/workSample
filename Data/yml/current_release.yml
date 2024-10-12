@@ -1,0 +1,107 @@
+# Set the status as complete when the feature is complete.
+
+name: September Release
+end: 2015-09-25
+
+features:
+  -
+    name: Premier plan
+    label: pricing & packaging
+    pm: neals
+    marketing: satejap
+    status: complete
+    team: pricing
+    url: https://app.wizeline.com/#/products/0685b9d3-59ec-4878-8f3b-14d608feeb03/features/show/2eb7ed3f-3554-4a1a-8978-b59fd1a68e2f
+  -
+    name: Campaign Monitor for Salesforce
+    label: integrations
+    pm: mercers
+    marketing: satejap
+    status: complete
+    team: integrations
+    url: http://campmon.com/wiki/display/dashboard/Campaign+Monitor+for+Salesforce+Launch
+  -
+    name: Dynamic sender
+    label: automation & journeys
+    status: complete
+    pm: philo
+    marketing: satejap
+    team: automation
+    url: https://app.wizeline.com/#/products/4d7ed074-12f7-4bad-881f-885ffa754ae4/features/show/26787190-a82e-41cb-8472-22982710b584
+  -
+    name: Redesign the getting started page
+    label: onboarding
+    pm: clarev
+    marketing: brigitted
+    team: growth
+    url: https://app.wizeline.com/#/products/0685b9d3-59ec-4878-8f3b-14d608feeb03/features/show/9991b099-dfd4-431f-a8bd-f826b7a2ab77
+  -
+    name: Improve the UX of the 2-step signup process
+    label: onboarding
+    pm: clarev
+    marketing: brigitted
+    team: growth
+    url: https://app.wizeline.com/#/products/69f658fe-3dcf-4042-86e1-2916f2cf6dc4/features/show/db46ab93-72db-467c-bbc2-f0213ba43409
+  -
+    name: GetFeedback integration
+    label: email builder
+    pm: benh
+    marketing: brigitted
+    team: email-builder
+    url: https://app.wizeline.com/#/products/934e407e-e7f3-4744-b18b-d728e9f9c0fe/features/show/352708a2-1c1c-4c49-a668-cbddedca152a
+  -
+    name: Add new marginal rates for credit purchases
+    label: pricing & packaging
+    pm: neals
+    marketing: satejap
+    team: pricing
+    url: https://app.wizeline.com/#/products/0685b9d3-59ec-4878-8f3b-14d608feeb03/features/show/2f554375-cbd9-40d1-a141-2022621f66a4
+  -
+    name: 'Allow users to skip the "send a test" page'
+    label: onboarding
+    pm: neals
+    marketing: brigitted
+    team: growth
+    url: https://app.wizeline.com/#/products/0685b9d3-59ec-4878-8f3b-14d608feeb03/features/show/6fb93fa2-a982-4012-ba56-48f49c0e7f33
+  -
+    name: Reporting by segment for campaigns
+    label: lists, contacts & segments
+    pm: clarev
+    marketing: satejap
+    team: contacts
+    url: https://app.wizeline.com/#/products/69f658fe-3dcf-4042-86e1-2916f2cf6dc4/features/show/91decb51-9a66-4cf1-9079-f1cfea0340c1
+  -
+    name: Button flexibility
+    label: email builder
+    pm: benh
+    marketing: brigitted
+    team: email-builder
+    url: https://app.wizeline.com/#/products/934e407e-e7f3-4744-b18b-d728e9f9c0fe/features/show/c69b6f78-264e-4e02-acdd-37621c8703d5
+  -
+    name: Spacing customisation
+    label: email builder
+    pm: benh
+    marketing: brigitted
+    team: email-builder
+    url: https://app.wizeline.com/#/products/934e407e-e7f3-4744-b18b-d728e9f9c0fe/features/show/2949f2f0-ade1-45da-a6e9-f94db34c0543
+  -
+    name: Social sharing
+    label: email builder
+    pm: benh
+    marketing: brigitted
+    team: email-builder
+    url: https://app.wizeline.com/#/products/934e407e-e7f3-4744-b18b-d728e9f9c0fe/features/show/838d44b1-f78a-4fc9-ab5b-1c7b07c70fd0
+  -
+    name: Header flexibility
+    label: email builder
+    pm: benh
+    marketing: brigitted
+    team: email-builder
+    url: https://app.wizeline.com/#/products/934e407e-e7f3-4744-b18b-d728e9f9c0fe/features/show/f244fb2a-bec2-44cc-8499-122a30448149
+  -
+    name: Campaign Monitor for Wordpress
+    label: integrations
+    pm: mercers
+    marketing: satejap
+    team: integrations
+    url: https://app.wizeline.com/#/products/0f4683b8-0f62-4287-a5db-3bfcd8fdeb24/features/show/817c5836-52bc-41aa-bda3-e36a5b7b78d4

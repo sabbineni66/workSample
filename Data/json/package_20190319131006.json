@@ -1,0 +1,16 @@
+{
+  "name": "polkapants",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "coffeescript": "^2.3.1",
+    "express": "^4.16.3",
+    "pug": "^2.0.3",
+    "response-time": "^2.3.2",
+    "sqlite3": "^4.0.0"
+  },
+  "scripts": {
+    "dev": "coffee index.coffee"
+  }
+}

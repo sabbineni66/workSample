@@ -1,0 +1,40 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: azurestatic
+spec:
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5 
+  template:
+    metadata:
+      labels:
+        app: azurestatic
+    spec:
+      containers:
+      - name: azurestatic
+        image: uswazurecontrainerregistry.azurecr.io/azurestatic:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 25m
+          limits:
+            cpu: 200m
+        env:
+        - name: KWE
+          value: "just-for-memory"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: azurestatic
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: azurestatic

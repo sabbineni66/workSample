@@ -1,0 +1,10 @@
+{
+    "name": "brucep/twig-conditional-link",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {"Brucep\\Twig\\": "src/"}
+    },
+    "require": {
+        "php": "^7.0"
+    }
+}

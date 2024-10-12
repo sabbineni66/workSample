@@ -1,0 +1,1035 @@
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2009 The New York Times Company.  All Rights Reserved.",
+   "results":[
+      {
+         "congress": "111",
+         "chamber": "Senate",
+         
+                  "num_results": "102",
+         "offset": "0",
+         "members": [
+                          {
+                 "id": "A000069",
+                 "name": "Daniel Akaka",
+                 "first_name": "Daniel",
+                 "middle_name": "Kahikina",
+                 "last_name": "Akaka",
+                 "party": "D",
+                 "state": "HI",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "A000360",
+                 "name": "Lamar Alexander",
+                 "first_name": "Lamar",
+                 "middle_name": null,
+                 "last_name": "Alexander",
+                 "party": "R",
+                 "state": "TN",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "93.39"
+               },                           {
+                 "id": "B000243",
+                 "name": "Max Baucus",
+                 "first_name": "Max",
+                 "middle_name": "S.",
+                 "last_name": "Baucus",
+                 "party": "D",
+                 "state": "MT",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "B000382",
+                 "name": "Robert Bennett",
+                 "first_name": "Robert",
+                 "middle_name": "F.",
+                 "last_name": "Bennett",
+                 "party": "R",
+                 "state": "UT",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "95.08"
+               },                           {
+                 "id": "B000444",
+                 "name": "Joseph Biden",
+                 "first_name": "Joseph",
+                 "middle_name": "R.",
+                 "last_name": "Biden",
+                 "party": "D",
+                 "state": "DE",
+                                  "missed_votes_pct": "60.00",
+                 "votes_with_party_pct": "100.00"
+               },                           {
+                 "id": "B000468",
+                 "name": "Jeff Bingaman",
+                 "first_name": "Jeff",
+                 "middle_name": null,
+                 "last_name": "Bingaman",
+                 "party": "D",
+                 "state": "NM",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "96.72"
+               },                           {
+                 "id": "B000611",
+                 "name": "Christopher Bond",
+                 "first_name": "Christopher",
+                 "middle_name": "S.",
+                 "last_name": "Bond",
+                 "party": "R",
+                 "state": "MO",
+                                  "missed_votes_pct": "1.64",
+                 "votes_with_party_pct": "90.00"
+               },                           {
+                 "id": "B000711",
+                 "name": "Barbara Boxer",
+                 "first_name": "Barbara",
+                 "middle_name": null,
+                 "last_name": "Boxer",
+                 "party": "D",
+                 "state": "CA",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "B000944",
+                 "name": "Sherrod Brown",
+                 "first_name": "Sherrod",
+                 "middle_name": null,
+                 "last_name": "Brown",
+                 "party": "D",
+                 "state": "OH",
+                                  "missed_votes_pct": "4.92",
+                 "votes_with_party_pct": "100.00"
+               },                           {
+                 "id": "B000953",
+                 "name": "Sam Brownback",
+                 "first_name": "Sam",
+                 "middle_name": "D.",
+                 "last_name": "Brownback",
+                 "party": "R",
+                 "state": "KS",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "B001066",
+                 "name": "Jim Bunning",
+                 "first_name": "Jim",
+                 "middle_name": null,
+                 "last_name": "Bunning",
+                 "party": "R",
+                 "state": "KY",
+                                  "missed_votes_pct": "4.10",
+                 "votes_with_party_pct": "94.87"
+               },                           {
+                 "id": "B001135",
+                 "name": "Richard Burr",
+                 "first_name": "Richard",
+                 "middle_name": "M.",
+                 "last_name": "Burr",
+                 "party": "R",
+                 "state": "NC",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "98.35"
+               },                           {
+                 "id": "B001210",
+                 "name": "Robert Byrd",
+                 "first_name": "Robert",
+                 "middle_name": "C.",
+                 "last_name": "Byrd",
+                 "party": "D",
+                 "state": "WV",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "B001233",
+                 "name": "Evan Bayh",
+                 "first_name": "Evan",
+                 "middle_name": null,
+                 "last_name": "Bayh",
+                 "party": "D",
+                 "state": "IN",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "91.80"
+               },                           {
+                 "id": "B001261",
+                 "name": "John Barrasso",
+                 "first_name": "John",
+                 "middle_name": "A.",
+                 "last_name": "Barrasso",
+                 "party": "R",
+                 "state": "WY",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "94.26"
+               },                           {
+                 "id": "B001265",
+                 "name": "Mark Begich",
+                 "first_name": "Mark",
+                 "middle_name": "",
+                 "last_name": "Begich",
+                 "party": "D",
+                 "state": "AK",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "99.17"
+               },                           {
+                 "id": "B001266",
+                 "name": "Roland Burris",
+                 "first_name": "Roland",
+                 "middle_name": "",
+                 "last_name": "Burris",
+                 "party": "D",
+                 "state": "IL",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.15"
+               },                           {
+                 "id": "B001267",
+                 "name": "Michael Bennet",
+                 "first_name": "Michael",
+                 "middle_name": "F",
+                 "last_name": "Bennet",
+                 "party": "D",
+                 "state": "CO",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.32"
+               },                           {
+                 "id": "C000127",
+                 "name": "Maria Cantwell",
+                 "first_name": "Maria",
+                 "middle_name": null,
+                 "last_name": "Cantwell",
+                 "party": "D",
+                 "state": "WA",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "96.72"
+               },                           {
+                 "id": "C000141",
+                 "name": "Ben Cardin",
+                 "first_name": "Ben",
+                 "middle_name": "L.",
+                 "last_name": "Cardin",
+                 "party": "D",
+                 "state": "MD",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "100.00"
+               },                           {
+                 "id": "C000174",
+                 "name": "Thomas Carper",
+                 "first_name": "Thomas",
+                 "middle_name": "Richard",
+                 "last_name": "Carper",
+                 "party": "D",
+                 "state": "DE",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "96.72"
+               },                           {
+                 "id": "C000286",
+                 "name": "Saxby Chambliss",
+                 "first_name": "Saxby",
+                 "middle_name": null,
+                 "last_name": "Chambliss",
+                 "party": "R",
+                 "state": "GA",
+                                  "missed_votes_pct": "5.74",
+                 "votes_with_party_pct": "99.13"
+               },                           {
+                 "id": "C000560",
+                 "name": "Tom Coburn",
+                 "first_name": "Tom",
+                 "middle_name": "A.",
+                 "last_name": "Coburn",
+                 "party": "R",
+                 "state": "OK",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "C000567",
+                 "name": "Thad Cochran",
+                 "first_name": "Thad",
+                 "middle_name": null,
+                 "last_name": "Cochran",
+                 "party": "R",
+                 "state": "MS",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "95.90"
+               },                           {
+                 "id": "C000705",
+                 "name": "Kent Conrad",
+                 "first_name": "Kent",
+                 "middle_name": "Kent",
+                 "last_name": "Conrad",
+                 "party": "D",
+                 "state": "ND",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "96.69"
+               },                           {
+                 "id": "C000880",
+                 "name": "Michael Crapo",
+                 "first_name": "Michael",
+                 "middle_name": "D.",
+                 "last_name": "Crapo",
+                 "party": "R",
+                 "state": "ID",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "96.72"
+               },                           {
+                 "id": "C001035",
+                 "name": "Susan Collins",
+                 "first_name": "Susan",
+                 "middle_name": "M.",
+                 "last_name": "Collins",
+                 "party": "R",
+                 "state": "ME",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "22.13"
+               },                           {
+                 "id": "C001041",
+                 "name": "Hillary Clinton",
+                 "first_name": "Hillary",
+                 "middle_name": "Rodham",
+                 "last_name": "Clinton",
+                 "party": "D",
+                 "state": "NY",
+                                  "missed_votes_pct": "16.67",
+                 "votes_with_party_pct": "100.00"
+               },                           {
+                 "id": "C001056",
+                 "name": "John Cornyn",
+                 "first_name": "John",
+                 "middle_name": null,
+                 "last_name": "Cornyn",
+                 "party": "R",
+                 "state": "TX",
+                                  "missed_votes_pct": "1.64",
+                 "votes_with_party_pct": "96.67"
+               },                           {
+                 "id": "C001070",
+                 "name": "Bob Casey Jr.",
+                 "first_name": "Bob",
+                 "middle_name": "",
+                 "last_name": "Casey Jr.",
+                 "party": "D",
+                 "state": "PA",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "C001071",
+                 "name": "Bob Corker",
+                 "first_name": "Bob",
+                 "middle_name": null,
+                 "last_name": "Corker",
+                 "party": "R",
+                 "state": "TN",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "93.44"
+               },                           {
+                 "id": "D000388",
+                 "name": "Christopher Dodd",
+                 "first_name": "Christopher",
+                 "middle_name": "J.",
+                 "last_name": "Dodd",
+                 "party": "D",
+                 "state": "CT",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.18"
+               },                           {
+                 "id": "D000432",
+                 "name": "Byron Dorgan",
+                 "first_name": "Byron",
+                 "middle_name": "L.",
+                 "last_name": "Dorgan",
+                 "party": "D",
+                 "state": "ND",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "95.08"
+               },                           {
+                 "id": "D000563",
+                 "name": "Richard Durbin",
+                 "first_name": "Richard",
+                 "middle_name": "J.",
+                 "last_name": "Durbin",
+                 "party": "D",
+                 "state": "IL",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.18"
+               },                           {
+                 "id": "D000595",
+                 "name": "Jim DeMint",
+                 "first_name": "Jim",
+                 "middle_name": "W.",
+                 "last_name": "DeMint",
+                 "party": "R",
+                 "state": "SC",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "95.90"
+               },                           {
+                 "id": "E000194",
+                 "name": "John Ensign",
+                 "first_name": "John",
+                 "middle_name": "Eric",
+                 "last_name": "Ensign",
+                 "party": "R",
+                 "state": "NV",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "96.69"
+               },                           {
+                 "id": "E000285",
+                 "name": "Michael Enzi",
+                 "first_name": "Michael",
+                 "middle_name": "B.",
+                 "last_name": "Enzi",
+                 "party": "R",
+                 "state": "WY",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "95.08"
+               },                           {
+                 "id": "F000061",
+                 "name": "Russell Feingold",
+                 "first_name": "Russell",
+                 "middle_name": "D.",
+                 "last_name": "Feingold",
+                 "party": "D",
+                 "state": "WI",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "94.26"
+               },                           {
+                 "id": "F000062",
+                 "name": "Dianne Feinstein",
+                 "first_name": "Dianne",
+                 "middle_name": null,
+                 "last_name": "Feinstein",
+                 "party": "D",
+                 "state": "CA",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "98.35"
+               },                           {
+                 "id": "G000359",
+                 "name": "Lindsey Graham",
+                 "first_name": "Lindsey",
+                 "middle_name": "O.",
+                 "last_name": "Graham",
+                 "party": "R",
+                 "state": "SC",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "96.69"
+               },                           {
+                 "id": "G000386",
+                 "name": "Charles Grassley",
+                 "first_name": "Charles",
+                 "middle_name": "E.",
+                 "last_name": "Grassley",
+                 "party": "R",
+                 "state": "IA",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "92.62"
+               },                           {
+                 "id": "G000445",
+                 "name": "Judd Gregg",
+                 "first_name": "Judd",
+                 "middle_name": "A.",
+                 "last_name": "Gregg",
+                 "party": "R",
+                 "state": "NH",
+                                  "missed_votes_pct": "25.41",
+                 "votes_with_party_pct": "92.31"
+               },                           {
+                 "id": "G000555",
+                 "name": "Kirsten Gillibrand",
+                 "first_name": "Kirsten",
+                 "middle_name": "E.",
+                 "last_name": "Gillibrand",
+                 "party": "D",
+                 "state": "NY",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.07"
+               },                           {
+                 "id": "H000206",
+                 "name": "Tom Harkin",
+                 "first_name": "Tom",
+                 "middle_name": null,
+                 "last_name": "Harkin",
+                 "party": "D",
+                 "state": "IA",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "96.69"
+               },                           {
+                 "id": "H000338",
+                 "name": "Orrin Hatch",
+                 "first_name": "Orrin",
+                 "middle_name": "G.",
+                 "last_name": "Hatch",
+                 "party": "R",
+                 "state": "UT",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "94.26"
+               },                           {
+                 "id": "H001016",
+                 "name": "Kay Hutchison",
+                 "first_name": "Kay",
+                 "middle_name": "Bailey",
+                 "last_name": "Hutchison",
+                 "party": "R",
+                 "state": "TX",
+                                  "missed_votes_pct": "5.74",
+                 "votes_with_party_pct": "93.91"
+               },                           {
+                 "id": "H001049",
+                 "name": "Kay Hagan",
+                 "first_name": "Kay",
+                 "middle_name": "",
+                 "last_name": "Hagan",
+                 "party": "D",
+                 "state": "NC",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "I000024",
+                 "name": "James Inhofe",
+                 "first_name": "James",
+                 "middle_name": "M.",
+                 "last_name": "Inhofe",
+                 "party": "R",
+                 "state": "OK",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "I000025",
+                 "name": "Daniel Inouye",
+                 "first_name": "Daniel",
+                 "middle_name": "K.",
+                 "last_name": "Inouye",
+                 "party": "D",
+                 "state": "HI",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "98.35"
+               },                           {
+                 "id": "I000055",
+                 "name": "John Isakson",
+                 "first_name": "John",
+                 "middle_name": "H.",
+                 "last_name": "Isakson",
+                 "party": "R",
+                 "state": "GA",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "J000177",
+                 "name": "Tim Johnson",
+                 "first_name": "Tim",
+                 "middle_name": "P.",
+                 "last_name": "Johnson",
+                 "party": "D",
+                 "state": "SD",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "98.36"
+               },                           {
+                 "id": "J000291",
+                 "name": "Mike Johanns",
+                 "first_name": "Mike",
+                 "middle_name": "",
+                 "last_name": "Johanns",
+                 "party": "R",
+                 "state": "NE",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "K000105",
+                 "name": "Edward M. Kennedy",
+                 "first_name": "Edward M.",
+                 "middle_name": "M.",
+                 "last_name": "Kennedy",
+                 "party": "D",
+                 "state": "MA",
+                                  "missed_votes_pct": "97.54",
+                 "votes_with_party_pct": "100.00"
+               },                           {
+                 "id": "K000148",
+                 "name": "John Kerry",
+                 "first_name": "John",
+                 "middle_name": "Forbes",
+                 "last_name": "Kerry",
+                 "party": "D",
+                 "state": "MA",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "98.36"
+               },                           {
+                 "id": "K000305",
+                 "name": "Herbert Kohl",
+                 "first_name": "Herbert",
+                 "middle_name": "H.",
+                 "last_name": "Kohl",
+                 "party": "D",
+                 "state": "WI",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "98.36"
+               },                           {
+                 "id": "K000352",
+                 "name": "Jon Kyl",
+                 "first_name": "Jon",
+                 "middle_name": null,
+                 "last_name": "Kyl",
+                 "party": "R",
+                 "state": "AZ",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "96.69"
+               },                           {
+                 "id": "K000367",
+                 "name": "Amy Klobuchar",
+                 "first_name": "Amy",
+                 "middle_name": null,
+                 "last_name": "Klobuchar",
+                 "party": "D",
+                 "state": "MN",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.18"
+               },                           {
+                 "id": "K000373",
+                 "name": "Ted Kaufman",
+                 "first_name": "Ted",
+                 "middle_name": "",
+                 "last_name": "Kaufman",
+                 "party": "D",
+                 "state": "DE",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "98.29"
+               },                           {
+                 "id": "L000035",
+                 "name": "Blanche Lincoln",
+                 "first_name": "Blanche",
+                 "middle_name": "Lambert",
+                 "last_name": "Lincoln",
+                 "party": "D",
+                 "state": "AR",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "98.36"
+               },                           {
+                 "id": "L000123",
+                 "name": "Frank Lautenberg",
+                 "first_name": "Frank",
+                 "middle_name": "R.",
+                 "last_name": "Lautenberg",
+                 "party": "D",
+                 "state": "NJ",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.18"
+               },                           {
+                 "id": "L000174",
+                 "name": "Patrick Leahy",
+                 "first_name": "Patrick",
+                 "middle_name": "J.",
+                 "last_name": "Leahy",
+                 "party": "D",
+                 "state": "VT",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.18"
+               },                           {
+                 "id": "L000261",
+                 "name": "Carl Levin",
+                 "first_name": "Carl",
+                 "middle_name": null,
+                 "last_name": "Levin",
+                 "party": "D",
+                 "state": "MI",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.18"
+               },                           {
+                 "id": "L000304",
+                 "name": "Joseph I. Lieberman",
+                 "first_name": "Joseph I.",
+                 "middle_name": "I.",
+                 "last_name": "Lieberman",
+                 "party": "ID",
+                 "state": "CT",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "93.44"
+               },                           {
+                 "id": "L000504",
+                 "name": "Richard Lugar",
+                 "first_name": "Richard",
+                 "middle_name": "G.",
+                 "last_name": "Lugar",
+                 "party": "R",
+                 "state": "IN",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "90.16"
+               },                           {
+                 "id": "L000550",
+                 "name": "Mary Landrieu",
+                 "first_name": "Mary",
+                 "middle_name": "L.",
+                 "last_name": "Landrieu",
+                 "party": "D",
+                 "state": "LA",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "96.69"
+               },                           {
+                 "id": "M000303",
+                 "name": "John McCain",
+                 "first_name": "John",
+                 "middle_name": "S.",
+                 "last_name": "McCain",
+                 "party": "R",
+                 "state": "AZ",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "96.72"
+               },                           {
+                 "id": "M000355",
+                 "name": "Mitch McConnell",
+                 "first_name": "Mitch",
+                 "middle_name": null,
+                 "last_name": "McConnell",
+                 "party": "R",
+                 "state": "KY",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "96.69"
+               },                           {
+                 "id": "M000639",
+                 "name": "Robert Menendez",
+                 "first_name": "Robert",
+                 "middle_name": null,
+                 "last_name": "Menendez",
+                 "party": "D",
+                 "state": "NJ",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.18"
+               },                           {
+                 "id": "M000702",
+                 "name": "Barbara Mikulski",
+                 "first_name": "Barbara",
+                 "middle_name": "A.",
+                 "last_name": "Mikulski",
+                 "party": "D",
+                 "state": "MD",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "100.00"
+               },                           {
+                 "id": "M001111",
+                 "name": "Patty Murray",
+                 "first_name": "Patty",
+                 "middle_name": null,
+                 "last_name": "Murray",
+                 "party": "D",
+                 "state": "WA",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "100.00"
+               },                           {
+                 "id": "M001153",
+                 "name": "Lisa Murkowski",
+                 "first_name": "Lisa",
+                 "middle_name": "A.",
+                 "last_name": "Murkowski",
+                 "party": "R",
+                 "state": "AK",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "84.43"
+               },                           {
+                 "id": "M001162",
+                 "name": "Mel Martinez",
+                 "first_name": "Mel",
+                 "middle_name": null,
+                 "last_name": "Martinez",
+                 "party": "R",
+                 "state": "FL",
+                                  "missed_votes_pct": "1.64",
+                 "votes_with_party_pct": "92.50"
+               },                           {
+                 "id": "M001170",
+                 "name": "Claire McCaskill",
+                 "first_name": "Claire",
+                 "middle_name": null,
+                 "last_name": "McCaskill",
+                 "party": "D",
+                 "state": "MO",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "94.26"
+               },                           {
+                 "id": "M001176",
+                 "name": "Jeff Merkley",
+                 "first_name": "Jeff",
+                 "middle_name": "",
+                 "last_name": "Merkley",
+                 "party": "D",
+                 "state": "OR",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.18"
+               },                           {
+                 "id": "N000032",
+                 "name": "Bill Nelson",
+                 "first_name": "Bill",
+                 "middle_name": null,
+                 "last_name": "Nelson",
+                 "party": "D",
+                 "state": "FL",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "98.36"
+               },                           {
+                 "id": "N000180",
+                 "name": "Ben Nelson",
+                 "first_name": "Ben",
+                 "middle_name": "E.",
+                 "last_name": "Nelson",
+                 "party": "D",
+                 "state": "NE",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "87.70"
+               },                           {
+                 "id": "P000590",
+                 "name": "Mark Pryor",
+                 "first_name": "Mark",
+                 "middle_name": null,
+                 "last_name": "Pryor",
+                 "party": "D",
+                 "state": "AR",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "R000122",
+                 "name": "Jack Reed",
+                 "first_name": "Jack",
+                 "middle_name": "F.",
+                 "last_name": "Reed",
+                 "party": "D",
+                 "state": "RI",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.18"
+               },                           {
+                 "id": "R000146",
+                 "name": "Harry Reid",
+                 "first_name": "Harry",
+                 "middle_name": "M.",
+                 "last_name": "Reid",
+                 "party": "D",
+                 "state": "NV",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "R000307",
+                 "name": "Pat Roberts",
+                 "first_name": "Pat",
+                 "middle_name": null,
+                 "last_name": "Roberts",
+                 "party": "R",
+                 "state": "KS",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "98.35"
+               },                           {
+                 "id": "R000361",
+                 "name": "Jay Rockefeller",
+                 "first_name": "Jay",
+                 "middle_name": "D.",
+                 "last_name": "Rockefeller",
+                 "party": "D",
+                 "state": "WV",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "98.36"
+               },                           {
+                 "id": "R000584",
+                 "name": "Jim Risch",
+                 "first_name": "Jim",
+                 "middle_name": "",
+                 "last_name": "Risch",
+                 "party": "R",
+                 "state": "ID",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "S000033",
+                 "name": "Bernie Sanders",
+                 "first_name": "Bernie",
+                 "middle_name": null,
+                 "last_name": "Sanders",
+                 "party": "I",
+                 "state": "VT",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "S000148",
+                 "name": "Charles Schumer",
+                 "first_name": "Charles",
+                 "middle_name": "E.",
+                 "last_name": "Schumer",
+                 "party": "D",
+                 "state": "NY",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "100.00"
+               },                           {
+                 "id": "S000320",
+                 "name": "Richard Shelby",
+                 "first_name": "Richard",
+                 "middle_name": "C.",
+                 "last_name": "Shelby",
+                 "party": "R",
+                 "state": "AL",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "95.90"
+               },                           {
+                 "id": "S000663",
+                 "name": "Olympia Snowe",
+                 "first_name": "Olympia",
+                 "middle_name": "J.",
+                 "last_name": "Snowe",
+                 "party": "R",
+                 "state": "ME",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "18.03"
+               },                           {
+                 "id": "S000709",
+                 "name": "Arlen Specter",
+                 "first_name": "Arlen",
+                 "middle_name": null,
+                 "last_name": "Specter",
+                 "party": "R",
+                 "state": "PA",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "26.45"
+               },                           {
+                 "id": "S000770",
+                 "name": "Debbie Stabenow",
+                 "first_name": "Debbie",
+                 "middle_name": null,
+                 "last_name": "Stabenow",
+                 "party": "D",
+                 "state": "MI",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "100.00"
+               },                           {
+                 "id": "S001141",
+                 "name": "Jeff Sessions",
+                 "first_name": "Jeff",
+                 "middle_name": "B.",
+                 "last_name": "Sessions",
+                 "party": "R",
+                 "state": "AL",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "95.90"
+               },                           {
+                 "id": "S001163",
+                 "name": "Ken Salazar",
+                 "first_name": "Ken",
+                 "middle_name": null,
+                 "last_name": "Salazar",
+                 "party": "D",
+                 "state": "CO",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "100.00"
+               },                           {
+                 "id": "S001181",
+                 "name": "Jeanne Shaheen",
+                 "first_name": "Jeanne",
+                 "middle_name": "",
+                 "last_name": "Shaheen",
+                 "party": "D",
+                 "state": "NH",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "T000250",
+                 "name": "John Thune",
+                 "first_name": "John",
+                 "middle_name": null,
+                 "last_name": "Thune",
+                 "party": "R",
+                 "state": "SD",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.18"
+               },                           {
+                 "id": "T000464",
+                 "name": "Jon Tester",
+                 "first_name": "Jon",
+                 "middle_name": null,
+                 "last_name": "Tester",
+                 "party": "D",
+                 "state": "MT",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "98.36"
+               },                           {
+                 "id": "U000038",
+                 "name": "Mark Udall",
+                 "first_name": "Mark",
+                 "middle_name": "E.",
+                 "last_name": "Udall",
+                 "party": "D",
+                 "state": "CO",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "96.72"
+               },                           {
+                 "id": "U000039",
+                 "name": "Tom Udall",
+                 "first_name": "Tom",
+                 "middle_name": "S.",
+                 "last_name": "Udall",
+                 "party": "D",
+                 "state": "NM",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               },                           {
+                 "id": "V000126",
+                 "name": "George Voinovich",
+                 "first_name": "George",
+                 "middle_name": "V.",
+                 "last_name": "Voinovich",
+                 "party": "R",
+                 "state": "OH",
+                                  "missed_votes_pct": "2.46",
+                 "votes_with_party_pct": "83.19"
+               },                           {
+                 "id": "V000127",
+                 "name": "David Vitter",
+                 "first_name": "David",
+                 "middle_name": null,
+                 "last_name": "Vitter",
+                 "party": "R",
+                 "state": "LA",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "95.87"
+               },                           {
+                 "id": "W000437",
+                 "name": "Roger Wicker",
+                 "first_name": "Roger",
+                 "middle_name": "F.",
+                 "last_name": "Wicker",
+                 "party": "R",
+                 "state": "MS",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "95.08"
+               },                           {
+                 "id": "W000779",
+                 "name": "Ron Wyden",
+                 "first_name": "Ron",
+                 "middle_name": null,
+                 "last_name": "Wyden",
+                 "party": "D",
+                 "state": "OR",
+                                  "missed_votes_pct": "0.82",
+                 "votes_with_party_pct": "98.35"
+               },                           {
+                 "id": "W000802",
+                 "name": "Sheldon Whitehouse",
+                 "first_name": "Sheldon",
+                 "middle_name": null,
+                 "last_name": "Whitehouse",
+                 "party": "D",
+                 "state": "RI",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "99.18"
+               },                           {
+                 "id": "W000803",
+                 "name": "Jim Webb",
+                 "first_name": "Jim",
+                 "middle_name": null,
+                 "last_name": "Webb",
+                 "party": "D",
+                 "state": "VA",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "94.26"
+               },                           {
+                 "id": "W000805",
+                 "name": "Mark Warner",
+                 "first_name": "Mark",
+                 "middle_name": "",
+                 "last_name": "Warner",
+                 "party": "D",
+                 "state": "VA",
+                                  "missed_votes_pct": "0.00",
+                 "votes_with_party_pct": "97.54"
+               }             ]
+      }
+   ]
+}

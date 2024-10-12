@@ -1,0 +1,7 @@
+---
+applications:
+  - name: webby
+    path: ./target/webby.jar
+    memory: 1024M
+    services:
+      - azuresql-demo

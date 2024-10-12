@@ -1,0 +1,25 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "TODO"
+    ],
+    "rewrites": [
+      {
+        "source": "/api/register",
+        "function": "register"
+      },
+      {
+        "source": "/api/permissions",
+        "function": "permissions"
+      }
+    ]
+  }
+}

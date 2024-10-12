@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Paul Smith</title>
+  <subtitle>HealthCare.gov, DNC, EveryBlock</subtitle>
+  <link href="http://pauladamsmith.com/atom.xml" rel="self" />
+  <link href="http://pauladamsmith.com/" />
+  <id>pauladamsmith.com</id>
+  <updated>{{ last_update }}</updated>
+  <author>
+    <name>Paul Smith</name>
+    <email>paulsmith@pobox.com</email>
+  </author>
+  {% for entry in entries -%}
+  <entry>
+    <title>{{ entry.title }}</title>
+    <link href="http://pauladamsmith.com{{ entry.url }}" />
+    <id>http://pauladamsmith.com{{ entry.url }}</id>
+    <updated>{{ entry.atom_timestamp }}</updated>
+    <content type="html">{{ entry.body|escape }}</content>
+  </entry>
+  {% endfor -%}
+</feed>

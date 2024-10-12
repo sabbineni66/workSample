@@ -1,0 +1,20 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "dependencies": {
+    "core-elements": "Polymer/core-elements#~0.3.3",
+    "paper-elements": "Polymer/paper-elements#~0.3.3",
+    "polymer": "Polymer/polymer#~0.3.3",
+    "firebase-element": "Polymer/firebase-element#master",
+    "geo-location": "ebidel/geo-location#~0.0.5",
+    "pvc-route": "divshot/pvc-route",
+    "pvc-globals": "divshot/pvc-globals",
+    "pvc-spinner": "divshot/pvc-spinner"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "platform": ">=0.3.0 <1.0.0",
+    "core-component-page": ">=0.3.0 <1.0.0",
+    "polymer": ">=0.3.0 <1.0.0"
+  }
+}

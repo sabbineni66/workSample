@@ -1,0 +1,6 @@
+---
+jid: test@hagelb.org
+password: mellon
+recipient: testrecipient@hagelb.org
+urls:
+- http://localhost:8123/

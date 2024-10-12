@@ -1,0 +1,54 @@
+---
+- name: io.js | Import io.js signature
+  command: 'gpg --keyserver pool.sks-keyservers.net --recv-keys DD8F2338BAE7501E3DD5AC78C273792F7D83545D'
+  tags: io.js
+
+- command: 'mkdir -p {{ downloadDir }}/io.js'
+
+- name: io.js | Download io.js
+  get_url: 
+    url='https://iojs.org/dist/{{ iojsVersion }}/iojs-{{ iojsVersion }}-linux-x64.tar.gz' 
+    dest='{{ downloadDir }}/io.js/iojs-{{ iojsVersion }}-linux-x64.tar.gz'
+  tags: io.js
+
+- name: io.js | Download SHASUMS256.txt
+  get_url: 
+    url='https://iojs.org/dist/{{ iojsVersion }}/SHASUMS256.txt' 
+    dest='{{ downloadDir }}/io.js/SHASUMS256.txt'
+  tags: io.js
+
+- name: io.js | Compute checksum
+  shell: 'grep iojs-{{ iojsVersion }}-linux-x64.tar.gz {{ downloadDir }}/io.js/SHASUMS256.txt | sha256sum -c -'
+  args:
+     chdir: '{{ downloadDir }}/io.js'
+  register: result
+  tags: io.js
+
+#- debug: var=result.stdout
+#
+#- fail: msg="invalid checkshum sha"
+#  when: "result.stdout != iojs-{{ iojsVersion }}-linux-x64.tar.gz: OK"
+
+- name: io.js | Download SHASUMS256.txt.asc
+  get_url: 
+    url='https://iojs.org/dist/{{ iojsVersion }}/SHASUMS256.txt.asc' 
+    dest='{{ downloadDir }}/io.js/SHASUMS256.txt.asc'
+  tags: io.js
+
+- name: io.js | Download SHASUMS256.txt.gpg
+  get_url: 
+    url='https://iojs.org/dist/{{ iojsVersion }}/SHASUMS256.txt.gpg' 
+    dest='{{ downloadDir }}/io.js/SHASUMS256.txt.gpg'
+  tags: io.js
+
+- name: io.js | Verify SHASUMS256.txt
+  command: 'gpg --verify {{ downloadDir }}/io.js/SHASUMS256.txt.asc'
+  tags: io.js
+
+- name : io.js | Unpack io.js
+  unarchive: 
+    src='{{ downloadDir }}/io.js/iojs-{{ iojsVersion }}-linux-x64.tar.gz'
+    dest='/opt'
+    creates='/opt/iojs-{{ iojsVersion }}/-linux-x64'
+    copy=false
+  sudo: true

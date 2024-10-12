@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  database: bingbong_development
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+
+test:
+  adapter: postgresql
+  database: bingbong_test
+  pool: 5
+  timeout: 5000
+  encoding: unicode

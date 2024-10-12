@@ -1,0 +1,57 @@
+---
+
+- name: Do not send ICMP redirects
+  sysctl:
+    name="net.ipv4.conf.all.send_redirects"
+    value=0
+    sysctl_set=yes
+    state=present
+    reload=yes
+
+- name: Do not accept IP source route packets
+  sysctl:
+    name="net.ipv4.conf.all.accept_source_route"
+    value=0
+    sysctl_set=yes
+    state=present
+    reload=yes
+
+- name: Prevent ICMP broadcast (smurf amplifier) storms
+  sysctl:
+    name="net.ipv4.icmp_echo_ignore_broadcasts"
+    value=1
+    sysctl_set=yes
+    state=present
+    reload=yes
+
+- name: Prevent the TCP metrics from being saves so the window size is fresh per-connection
+  sysctl:
+    name="net.ipv4.tcp_no_metrics_save"
+    value=1
+    sysctl_set=yes
+    state=present
+    reload=yes
+
+- name: Disable TCP slow start after idle
+  sysctl:
+    name="net.ipv4.tcp_slow_start_after_idle"
+    value=0
+    sysctl_set=yes
+    state=present
+    reload=yes
+
+- name: Enable TCP SYN cookies
+  sysctl:
+    name="net.ipv4.tcp_syncookies"
+    value=1
+    sysctl_set=yes
+    state=present
+    reload=yes
+
+- name: Disable TCP timestamps
+  sysctl:
+    name="net.ipv4.tcp_timestamps"
+    value=0
+    sysctl_set=yes
+    state=present
+    reload=yes

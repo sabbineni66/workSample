@@ -1,0 +1,38 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "authors": [
+    "?yvind Saltvik <oyvind.saltvik@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "text": "~2.0.14",
+    "backbone": "~1.2.3",
+    "underscore": "~1.8.3",
+    "select2": "~4.0.1",
+    "backbone-filtered-collection": "https://github.com/samwgoldman/backbone-filtered-collection.git#swg-sort-reset-issue",
+    "bootstrap-sass": "~3.3.7",
+    "backbone.validation": "backbone-validation#~0.11.5",
+    "backbone.stickit": "~0.9.2",
+    "parsleyjs": "~2.4.4",
+    "almond": "~0.3.2",
+    "backbone.marionette": "~3.0.0",
+    "backbone.radio": "~2.0.0",
+    "eonasdan-bootstrap-datetimepicker": "~4.17.37",
+    "backgrid": "~0.3.7",
+    "validate": "validate.js#~0.10.0",
+    "backbone-validator": "~0.3.3"
+  }
+}

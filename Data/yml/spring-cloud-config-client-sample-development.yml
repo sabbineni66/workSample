@@ -1,0 +1,4 @@
+application:
+    service:
+        someProp: Some development property value
+        anotherProp: another development property value

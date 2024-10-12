@@ -1,0 +1,22 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+centroid:
+  id: 1
+  name: example address
+  street_address: 123 anywhere st.
+  city: anytown
+  state: or
+  zip: 12345
+single_point:
+  id: 2
+  name: address with only one geocoding
+  street_address: 123 anywhere st.
+  city: anytown
+  state: or
+  zip: 12345
+two_points:
+  id: 3
+  name: address with two geocodings
+  street_address: 123 anywhere st.
+  city: anytown
+  state: or
+  zip: 12345

@@ -1,0 +1,8 @@
+git_repo: git@github.com:rubaidh/puppet.git
+ssh_key_file: modules/users/files/keys/root.keys
+vagrant:
+  domain_name: rubaidh.vagrant.vm
+lxc:
+  lxc_host: 'hyp-01.ovh.rubaidh.net'
+  puppetmaster_ip: 5.39.117.102
+  domain_name: rubaidh.net

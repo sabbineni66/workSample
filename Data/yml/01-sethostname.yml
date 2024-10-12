@@ -1,0 +1,11 @@
+---
+- name: common | get sha1 hostname
+  script: sha1hostname.sh
+  register: sh1hostname
+  tags: base
+
+- name: common | update hostname
+  sudo: yes
+  script: sethostname.sh
+  when: sh1hostname.stdout != ansible_hostname
+  tags: base

@@ -1,0 +1,7 @@
+{
+  "directory_name": "new_express_project",
+  "template_language": ["Mustache", "None"],
+  "use_sequelize": ["y", "n"],
+  "database": ["PostgreSQL", "MySQL", "SQLite", "None"],
+  "run_sequelize_init": ["y", "n"]
+}

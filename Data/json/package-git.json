@@ -1,0 +1,8 @@
+{
+    "private": true,
+    "dependencies": {
+        "classnames": "^2.2.5",
+        "lodash": "git+ssh://git@github.com/lodash/lodash.git#4.17.4"
+    }
+}
+

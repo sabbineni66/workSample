@@ -1,0 +1,8 @@
+---
+jid: watcher-in-the-water@jabber.org
+password: mellon
+recipient: phil@hagelb.org
+urls:
+- fixtures/west_gate
+- fixtures/durins_bridge
+- fixtures/dimrill_gate

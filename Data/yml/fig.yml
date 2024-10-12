@@ -1,0 +1,20 @@
+web:
+  build: .
+  ports: 
+    - 4567:4567
+  links: 
+    - db
+  command: /pfennig/start.sh
+  working_dir: /pfennig
+  environment: 
+    DATABASE_URL: postgresql://postgres:@db:5432/pfennig
+    ROOT_DIR: /pfennig
+    DATABASE_DDL_RUN: 1
+    WALLET_PATH: /pfennig/wallets/main.wallet
+    BITCOIN_NETWORK: org.bitcoin.test
+    WATCHING_KEY: your watching key
+    
+db: 
+  image: postgres
+  ports:
+    - "5432"

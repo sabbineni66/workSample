@@ -1,0 +1,6 @@
+{
+  "url": "http://randomword.setgetgo.com/get.php",
+  "method": "GET",
+  "content_type": "text/plain",
+  "body": "randomword"
+}

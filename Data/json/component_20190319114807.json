@@ -1,0 +1,17 @@
+{
+  "name": "attr",
+  "repo": "weepy/attr",
+  "description": "Simple property with get/set and events",
+  "version": "0.0.2",
+  "keywords": [],
+  "dependencies": {
+    "component/emitter": "*"
+  },
+  "development": {
+    "component/assert": "*"
+  },
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}

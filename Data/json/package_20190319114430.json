@@ -1,0 +1,23 @@
+{
+  "name": "TestDataBuilders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "AssignmentBuilder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mpfilbin/Test-Data-Builders-Spike.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mpfilbin/Test-Data-Builders-Spike/issues"
+  },
+  "homepage": "https://github.com/mpfilbin/Test-Data-Builders-Spike",
+  "dependencies": {
+    "lodash": "^3.9.3",
+    "uuid": "^2.0.1"
+  }
+}

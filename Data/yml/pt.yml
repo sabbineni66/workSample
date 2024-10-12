@@ -1,0 +1,102 @@
+pt:
+
+  lang: 'pt-br'
+
+  head:
+    title: Aplica??es web 2.0 em Ruby on Rails e PostgreSQL ? Softa
+    description: "Aplica??es web 2.0. O melhor do open source: Ruby on Rails e PostgreSQL. Utilizamos as melhores tecnologias aliadas aos m?todos certos para desenvolver seus projetos no menor tempo e com a maior qualidade."
+    keywords: "web 2.0, web2, ruby on rails, ruby, rails, postgres, postgresql, m?todos ?geis, agile programming, extreme programming, xp, ajax, javascript, aplica??es web 2.0, sistemas web, desenvolvimento, diogo biazus, daniel weinmann, juan maiz, pedro axelrud, felipe cabral, design, softa, programa??o, arquitetura de informa??o, usabilidade, web2.0, interface de usu?rio, experi?ncia de uso, ui, ux"
+
+  softa:
+    hello: Ol?. Seja bem vindo ao site da Softa.
+    happy_hacking: "Por favor, n?o perca seu tempo copiando nada daqui. O c?digo completo est? em http://github.com/softa. Happy hacking."
+
+  nav:
+    method: Metodologia
+    staff: Quem somos
+    social: "Twitter, Blog & Agenda"
+    contact: Contato
+
+  description:
+    punchline: "Desenvolvemos aplica??es <em class='web_two'>web 2.0</em> usando <em class='ruby_on_rails'>Ruby on Rails</em> e <em class='postgresql'>PostgreSQL</em>, aliando o melhor do <em class='open_source'>Open Source</em> aos <em class='methods'>m?todos certos</em> para realizar seus projetos no <em class='methods'>menor tempo</em> e com a <em class='methods'>maior qualidade</em>."
+    call_to_action: Envie seu projeto
+
+  mailee:
+    description: "Mailee.me ? um aplicativo web 2.0 para email marketing. Desenvolvido em Ruby on Rails e PostgreSQL, e focado em usabilidade, possui criador de templates, geolocaliza??o, integra??o com redes sociais e inteligentes recursos anti-SPAM."
+    screenshots: Veja algumas telas
+    signup: Cadastre-se gr?tis
+
+  catarse:
+    description: "O Catarse ? a primeira plataforma de financiamento colaborativo de projetos criativos do Brasil. Financie projetos de maneira colaborativa e torne-se parte de algo maior. Junte-se a todo mundo que quer ver um projeto sair e fa?a ele virar realidade. Voc? ? a pe?a que falta nesta hist?ria."
+    screenshots: Veja algumas telas
+    signup: Cadastre-se e contribua
+
+  method:
+    title: Metodologia
+    contact: entre em contato
+    agile:
+      title: M?todos ?geis
+      desc: "<p>Utilizar m?todos ?geis significa colocar as pessoas em primeiro lugar. O sucesso de um projeto de software come?a com um time qualificado e que ama o que faz. Cliente como parte da equipe, comunica??o aberta e foco no resultado complementam a receita.</p><p>Acreditamos que n?o existem dogmas em desenvolvimento de software e que o mais importante ? o aprendizado cont?nuo.</p>"
+    quality:
+      title: Qualidade
+      desc: "<p>A experi?ncia de uso determina a qualidade de um software. Por isto, dedicamos a maior parte de nossos esfor?os para a cria??o de interfaces bem projetadas e desenhadas.</p><p>Al?m disso, utilizamos uma s?rie de t?cnicas para criar sistemas de alta qualidade. Controle de vers?es com git, testes automatizados, verifica??o da cobertura de testes, integra??o cont?nua e deployment automatizado s?o algumas delas.</p>"
+    tech:
+      title: Tecnologia
+      desc: "<p>Empresas de tecnologia n?o devem ter medo de experimentar. Estamos sempre estudando novas ferramentas e testando novas plataformas. Hoje, trabalhamos principalmente com Ruby on Rails e PostgreSQL.</p><p>Nosso cinto de utilidades conta tamb?m com linguagens como C, JavaScript (Node.js), Python, Erlang e Haskell.</p>"
+
+  labs:
+    hstore:
+      desc: Suporte ao campo <samp>hstore</samp> do PostgreSQL no <samp>ActiveRecord</samp>. Adeus <samp>serialize</samp>.
+    hercules:
+      desc: Deploy ? la Heroku encontra integra??o cont?nua.
+    source: ver o c?digo fonte
+
+  staff:
+    who_we_are: Quem somos
+    dw: "Gerente do ?cio criativo. Tanguero, m?sico, e apaixonado pelo marketing do respeito."
+    db: "Arquiteto de Dados. Gosta de estruturas auto-explicativas, auto-referentes e auto-limpantes."
+    fc: "Suporte incans?vel, aikidoka e ciclista amador. Amante de cervejas artesanais e RP nas horas vagas."
+    jm: "Desenvolvedor Rails, JavaScript e de outras coisas menos ortodoxas. Comemora efusivamente quando realiza entregas com zero bugs."
+    pa: "Malabarista de infraestrutura, desenvolvedor Rails e o que mais precisar. Ele mora na internet e gosta de todas as novas buzzwords."
+    xkcd:
+      dw: "N?o se preocupe: ele sempre aparece."
+      db: "Tamb?m gosta de alts engra?adinhos."
+      fc: "Smell like a man, Man!"
+      jm: "#TODO escrever 'alt' para pr?xima vers?o."
+      pa: "Como assim caiu a internet!?"
+
+  social:
+    agenda: agenda
+    interested: "Interessado em uma palestra, curso ou evento?"
+    contact: Entre em contato ?
+    with: com
+    blog:
+      read_more: "[leia mais]"
+
+  rsonrails:
+    we_organize: N?s organizamos o
+    about: "Evento realizado no sul do Brasil, apresentando <em>palestras t?cnicas</em>, <em>cases</em> e <em>lightning talks</em>, e voltado para programadores e entusiastas em desenvolvimento de aplica??es usando o framework <em>Ruby on Rails</em>."
+
+  contact:
+    title: Entre em contato
+    name: Nome
+    name_placeholder: Seu nome completo
+    name_required: Voc? precisa preencher seu nome para poder enviar.
+    email_required: Voc? precisa preencher seu email para poder enviar.
+    invalid_email: Formato de email inv?lido. Tente novamente.
+    message_required: Voc? precisa escrever uma mensagem para poder enviar.
+    email_placeholder: usuario@dominio.com
+    message: Mensagem
+    send:  Enviar
+    wait: Aguarde...
+    message_placeholder: Escreva sua mensagem
+    send_ok_title: Mensagem enviada com sucesso!
+    send_ok_message: Obrigado. Em breve retornaremos seu contato.
+    send_error_title: Ooops. Ocorreu um erro ao enviar a mensagem.
+    send_error_message: "Tente novamente ou, se preferir, envie um email para contato@softa.com.br."
+    send_another_message: Enviar outra mensagem.
+    try_again: Tentar novamente.
+
+  colophon:
+    age: 6 anos
+

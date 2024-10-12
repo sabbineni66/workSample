@@ -1,0 +1,32 @@
+{
+  "name": "asana-summary",
+  "description": "Generating a summary of the last week's tasks from Asana.",
+  "tags": [
+    "productivity"
+  ],
+  "version": "0.0.1",
+  "author": "Adam Christian <adam.christian@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/admc/summary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/admc/summary/issues"
+  },
+  "engines": [
+    "node"
+  ],
+  "main": "./lib/main.js",
+  "bin": {
+    "asana-summary": "./lib/bin.js"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "asana-api": "~0.1.1",
+    "underscore": "~1.4.3",
+    "date-utils": "~1.2.12",
+    "colors": "~0.6.0-1"
+  }
+}

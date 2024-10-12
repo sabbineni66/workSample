@@ -1,0 +1,26 @@
+<project name="webdav.js" basedir="." default="test">
+
+  <target name="test" depends="jsspec, jslint"/>
+
+  <target name="jsspec">
+    <javac srcdir="spec" destdir="spec"/>
+    <java classname="org.mozilla.javascript.tools.shell.Main" fork="true">
+      <arg value="spec/webdav_spec.js"/>
+      <classpath>
+        <pathelement location="rhino1_7R1/js.jar" />
+        <pathelement location="spec" />
+      </classpath>
+    </java>
+  </target>
+
+  <target name="jslint">
+    <taskdef name="jslint"
+      classname="net.happygiraffe.jslint.ant.JSLintTask"
+      classpath="jslint4java-1.2.1/jslint4java-1.2.1.jar" />
+
+    <jslint options="undef">
+      <formatter type="plain" />
+      <fileset dir="src" includes="webdav.js" />
+    </jslint>
+  </target>
+</project>

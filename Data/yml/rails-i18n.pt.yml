@@ -1,0 +1,199 @@
+# encoding: UTF-8
+# pt-BR translations for Ruby on Rails
+pt:
+  # formatos de data e hora
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d de %B"
+      long: "%d de %B de %Y"
+
+    day_names: [Domingo, Segunda, Ter?a, Quarta, Quinta, Sexta, S?bado]
+    abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, S?b]
+
+    month_names: [~, Janeiro, Fevereiro, Mar?o, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+    abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+    order:
+      - :day
+      - :month
+      - :year
+  
+  time:
+    formats:
+      default: "%A, %d de %B de %Y, %H:%M h"
+      short: "%d/%m, %H:%M h"
+      long: "%A, %d de %B de %Y, %H:%M h"
+    am: ''
+    pm: ''
+
+  # Usado no Array.to_sentence
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " e "
+      last_word_connector: " e "
+
+    select:
+      prompt: "Por favor selecione"
+
+  number:
+    format:
+      separator: ','
+      delimiter: '.'
+      precision: 3
+      significant: false
+      strip_insignificant_zeros: false
+
+    currency:
+      format:
+        format: '%u %n'
+        unit: 'R$'
+        separator: ','
+        delimiter: '.'
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+
+    percentage:
+      format:
+        delimiter: '.'
+
+    precision:
+      format:
+        delimiter: '.'
+
+    human:
+      format:
+        delimiter: '.'
+        precision: 2
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      # number_to_human()
+      # new in rails 3: please add to other locales
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""     
+          thousand: "mil"
+          million:
+            one: milh?o
+            other: milh?es
+          billion:
+            one: bilh?o
+            other: bilh?es
+          trillion:
+            one: trilh?o
+            other: trilh?es
+          quadrillion:
+            one: quatrilh?o
+            other: quatrilh?es
+
+  # distancia do tempo em palavras
+  datetime:
+    distance_in_words:
+      half_a_minute: 'meio minuto'
+      less_than_x_seconds:
+        one: 'menos de 1 segundo'
+        other: 'menos de %{count} segundos'
+      x_seconds:
+        one: '1 segundo'
+        other: '%{count} segundos'
+      less_than_x_minutes:
+        one: 'menos de um minuto'
+        other: 'menos de %{count} minutos'
+      x_minutes:
+        one: '1 minuto'
+        other: '%{count} minutos'
+      about_x_hours:
+        one: 'aproximadamente 1 hora'
+        other: 'aproximadamente %{count} horas'
+      x_days:
+        one: '1 dia'
+        other: '%{count} dias'
+      about_x_months:
+        one: 'aproximadamente 1 m?s'
+        other: 'aproximadamente %{count} meses'
+      x_months:
+        one: '1 m?s'
+        other: '%{count} meses'
+      about_x_years:
+        one: 'aproximadamente 1 ano'
+        other: 'aproximadamente %{count} anos'
+      over_x_years:
+        one: 'mais de 1 ano'
+        other: 'mais de %{count} anos'
+      almost_x_years:
+        one: 'quase 1 ano'
+        other: 'quase %{count} anos'
+    prompts:
+      year:   "Ano"
+      month:  "M?s"
+      day:    "Dia"
+      hour:   "Hora"
+      minute: "Minuto"
+      second: "Segundo"
+
+  helpers:
+    select:
+      prompt: "Por favor selecione"
+
+    submit:
+      create: 'Criar %{model}'
+      update: 'Atualizar %{model}'
+      submit: 'Salvar %{model}'
+
+  errors:
+    format: "%{attribute} %{message}"
+
+    template:
+      header:
+        one: "N?o foi poss?vel gravar %{model}: 1 erro"
+        other: "N?o foi poss?vel gravar %{model}: %{count} erros."
+      body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+
+    messages: &errors_messages
+      inclusion: "n?o est? inclu?do na lista"
+      exclusion: "n?o est? dispon?vel"
+      invalid: "n?o ? v?lido"
+      confirmation: "n?o est? de acordo com a confirma??o"
+      accepted: "deve ser aceito"
+      empty: "n?o pode ficar vazio"
+      blank: "n?o pode ficar em branco"
+      too_long: "? muito longo (m?ximo: %{count} caracteres)"
+      too_short: "? muito curto (m?nimo: %{count} caracteres)"
+      wrong_length: "n?o possui o tamanho esperado (%{count} caracteres)"
+      not_a_number: "n?o ? um n?mero"
+      not_an_integer: "n?o ? um n?mero inteiro"
+      greater_than: "deve ser maior que %{count}"
+      greater_than_or_equal_to: "deve ser maior ou igual a %{count}"
+      equal_to: "deve ser igual a %{count}"
+      less_than: "deve ser menor que %{count}"
+      less_than_or_equal_to: "deve ser menor ou igual a %{count}"
+      odd: "deve ser ?mpar"
+      even: "deve ser par"
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "N?o foi poss?vel gravar %{model}: 1 erro"
+          other: "N?o foi poss?vel gravar %{model}: %{count} erros."
+        body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+
+      messages:
+        taken: "j? est? em uso"
+        record_invalid: "A valida??o falhou: %{errors}"
+        <<: *errors_messages
+
+      full_messages:
+        format: "%{attribute} %{message}"

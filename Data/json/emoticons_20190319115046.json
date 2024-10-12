@@ -1,0 +1,1088 @@
+[
+  {
+    "shortcut": ":D",
+    "width": 18,
+    "height": 18,
+    "file": "bigsmile.png"
+  },
+  {
+    "shortcut": ":-D",
+    "width": 18,
+    "height": 18,
+    "file": "bigsmile.png"
+  },
+  {
+    "shortcut": ":o",
+    "width": 18,
+    "height": 18,
+    "file": "gasp.png"
+  },
+  {
+    "shortcut": ":Z",
+    "width": 18,
+    "height": 18,
+    "file": "sealed.png"
+  },
+  {
+    "shortcut": ":p",
+    "width": 18,
+    "height": 18,
+    "file": "tongue.png"
+  },
+  {
+    "shortcut": ";p",
+    "width": 18,
+    "height": 18,
+    "file": "winktongue.gif"
+  },
+  {
+    "shortcut": ">:-(",
+    "width": 18,
+    "height": 18,
+    "file": "angry.png"
+  },
+  {
+    "shortcut": "8)",
+    "width": 18,
+    "height": 18,
+    "file": "cool.png"
+  },
+  {
+    "shortcut": "8-)",
+    "width": 18,
+    "height": 18,
+    "file": "cool.png"
+  },
+  {
+    "shortcut": ":'(",
+    "width": 18,
+    "height": 18,
+    "file": "cry.png"
+  },
+  {
+    "shortcut": ":(",
+    "width": 18,
+    "height": 18,
+    "file": "frown.png"
+  },
+  {
+    "shortcut": ":#",
+    "width": 18,
+    "height": 18,
+    "file": "footinmouth.png"
+  },
+  {
+    "shortcut": "(embarrassed)",
+    "width": 18,
+    "height": 18,
+    "file": "embarrassed.png"
+  },
+  {
+    "shortcut": ":')",
+    "width": 18,
+    "height": 18,
+    "file": "happytear.gif"
+  },
+  {
+    "shortcut": "O:)",
+    "width": 18,
+    "height": 22,
+    "file": "innocent.png"
+  },
+  {
+    "shortcut": ":-*",
+    "width": 18,
+    "height": 18,
+    "file": "kiss.png"
+  },
+  {
+    "shortcut": ":$",
+    "width": 18,
+    "height": 18,
+    "file": "moneymouth.png"
+  },
+  {
+    "shortcut": "(oops)",
+    "width": 18,
+    "height": 18,
+    "file": "oops.png"
+  },
+  {
+    "shortcut": ":\\",
+    "width": 18,
+    "height": 18,
+    "file": "slant.png"
+  },
+  {
+    "shortcut": ":)",
+    "width": 18,
+    "height": 18,
+    "file": "smile.png"
+  },
+  {
+    "shortcut": ":-)",
+    "width": 18,
+    "height": 18,
+    "file": "smile.png"
+  },
+  {
+    "shortcut": "=)",
+    "width": 18,
+    "height": 18,
+    "file": "smile.png"
+  },
+  {
+    "shortcut": ":|",
+    "width": 18,
+    "height": 18,
+    "file": "straightface.png"
+  },
+  {
+    "shortcut": "(thumbsdown)",
+    "width": 16,
+    "height": 16,
+    "file": "thumbs_down.png"
+  },
+  {
+    "shortcut": "(thumbsup)",
+    "width": 16,
+    "height": 16,
+    "file": "thumbs_up.png"
+  },
+  {
+    "shortcut": ";)",
+    "width": 18,
+    "height": 18,
+    "file": "wink.png"
+  },
+  {
+    "shortcut": ";-)",
+    "width": 18,
+    "height": 18,
+    "file": "wink.png"
+  },
+  {
+    "file": "chris.png",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(chris)"
+  },
+  {
+    "file": "facepalm.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(facepalm)"
+  },
+  {
+    "file": "garret.png",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(garret)"
+  },
+  {
+    "file": "krang.gif",
+    "height": "16",
+    "width": "16",
+    "shortcut": "(krang)"
+  },
+  {
+    "file": "lolwut.png",
+    "height": "16",
+    "width": "12",
+    "shortcut": "(lolwut)"
+  },
+  {
+    "file": "pete.png",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(pete)"
+  },
+  {
+    "file": "pirate.gif",
+    "height": "18",
+    "width": "18",
+    "shortcut": "(pirate)"
+  },
+  {
+    "file": "poo.png",
+    "height": "21",
+    "width": "23",
+    "shortcut": "(poo)"
+  },
+  {
+    "file": "coffee.png",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(coffee)"
+  },
+  {
+    "file": "beer.png",
+    "height": "20",
+    "width": "20",
+    "shortcut": "(beer)"
+  },
+  {
+    "file": "sadpanda.png",
+    "height": "16",
+    "width": "18",
+    "shortcut": "(sadpanda)"
+  },
+  {
+    "file": "tree.png",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(tree)"
+  },
+  {
+    "file": "present.png",
+    "height": "16",
+    "width": "16",
+    "shortcut": "(present)"
+  },
+  {
+    "file": "rudolph.png",
+    "height": "16",
+    "width": "25",
+    "shortcut": "(rudolph)"
+  },
+  {
+    "file": "santa.png",
+    "height": "23",
+    "width": "25",
+    "shortcut": "(santa)"
+  },
+  {
+    "file": "kwanzaa.png",
+    "height": "22",
+    "width": "25",
+    "shortcut": "(kwanzaa)"
+  },
+  {
+    "file": "menorah.png",
+    "height": "25",
+    "width": "23",
+    "shortcut": "(menorah)"
+  },
+  {
+    "file": "cornelius.png",
+    "height": "22",
+    "width": "25",
+    "shortcut": "(cornelius)"
+  },
+  {
+    "file": "bumble.png",
+    "height": "25",
+    "width": "24",
+    "shortcut": "(bumble)"
+  },
+  {
+    "file": "rageguy.png",
+    "height": "25",
+    "width": "24",
+    "shortcut": "(rageguy)"
+  },
+  {
+    "file": "troll.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(troll)"
+  },
+  {
+    "file": "rageguy.png",
+    "height": "25",
+    "width": "24",
+    "shortcut": "(fu)"
+  },
+  {
+    "file": "yey.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(yey)"
+  },
+  {
+    "file": "yuno.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(yuno)"
+  },
+  {
+    "file": "6/itsatrap.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(itsatrap)"
+  },
+  {
+    "file": "heart.png",
+    "height": "16",
+    "width": "16",
+    "shortcut": "(heart)"
+  },
+  {
+    "file": "foreveralone.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(foreveralone)"
+  },
+  {
+    "file": "washington.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(washington)"
+  },
+  {
+    "file": "lincoln.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(lincoln)"
+  },
+  {
+    "file": "jobs.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(jobs)"
+  },
+  {
+    "file": "taft.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(taft)"
+  },
+  {
+    "file": "gates.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(gates)"
+  },
+  {
+    "file": "awyea.png",
+    "height": "25",
+    "width": "41",
+    "shortcut": "(awyeah)"
+  },
+  {
+    "file": "cerealguy.png",
+    "height": "25",
+    "width": "24",
+    "shortcut": "(cereal)"
+  },
+  {
+    "file": "challengeaccepted.png",
+    "height": "25",
+    "width": "20",
+    "shortcut": "(challengeaccepted)"
+  },
+  {
+    "file": "content.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(content)"
+  },
+  {
+    "file": "dumbbitch.png",
+    "height": "25",
+    "width": "18",
+    "shortcut": "(dumb)"
+  },
+  {
+    "file": "lol.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(lol)"
+  },
+  {
+    "file": "megusta.png",
+    "height": "25",
+    "width": "24",
+    "shortcut": "(megusta)"
+  },
+  {
+    "file": "okay.png",
+    "height": "25",
+    "width": "18",
+    "shortcut": "(okay)"
+  },
+  {
+    "file": "omg.png",
+    "height": "23",
+    "width": "25",
+    "shortcut": "(omg)"
+  },
+  {
+    "file": "sadtroll.png",
+    "height": "20",
+    "width": "25",
+    "shortcut": "(sadtroll)"
+  },
+  {
+    "file": "reddit.png",
+    "height": "25",
+    "width": "18",
+    "shortcut": "(reddit)"
+  },
+  {
+    "file": "seomoz.png",
+    "height": "25",
+    "width": "21",
+    "shortcut": "(seomoz)"
+  },
+  {
+    "file": "shamrock.png",
+    "height": "21",
+    "width": "22",
+    "shortcut": "(shamrock)"
+  },
+  {
+    "file": "greenbeer.png",
+    "height": "20",
+    "width": "20",
+    "shortcut": "(greenbeer)"
+  },
+  {
+    "file": "wtf.png",
+    "height": "25",
+    "width": "20",
+    "shortcut": "(wtf)"
+  },
+  {
+    "file": "ohcrap.png",
+    "height": "21",
+    "width": "25",
+    "shortcut": "(ohcrap)"
+  },
+  {
+    "file": "8071/mike.png",
+    "height": "25",
+    "width": "18",
+    "shortcut": "(arrington)"
+  },
+  {
+    "file": "fuckyeah.png",
+    "height": "23",
+    "width": "25",
+    "shortcut": "(fuckyeah)"
+  },
+  {
+    "file": "basket.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(basket)"
+  },
+  {
+    "file": "bunny.png",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(bunny)"
+  },
+  {
+    "file": "cadbury.png",
+    "height": "18",
+    "width": "25",
+    "shortcut": "(cadbury)"
+  },
+  {
+    "file": "chocobunny.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(chocobunny)"
+  },
+  {
+    "file": "zzz.gif",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(zzz)"
+  },
+  {
+    "file": "ducreux.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(ducreux)"
+  },
+  {
+    "file": "android.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(android)"
+  },
+  {
+    "file": "cake.png",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(cake)"
+  },
+  {
+    "file": "rebeccablack.png",
+    "height": "25",
+    "width": "20",
+    "shortcut": "(rebeccablack)"
+  },
+  {
+    "file": "pbr.png",
+    "height": "24",
+    "width": "13",
+    "shortcut": "(pbr)"
+  },
+  {
+    "file": "dosequis.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(dosequis)"
+  },
+  {
+    "file": "ilied.png",
+    "height": "21",
+    "width": "25",
+    "shortcut": "(ilied)"
+  },
+  {
+    "file": "jackie.png",
+    "height": "25",
+    "width": "41",
+    "shortcut": "(jackie)"
+  },
+  {
+    "file": "areyoukiddingme.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(areyoukiddingme)"
+  },
+  {
+    "file": "sweetjesus.png",
+    "height": "24",
+    "width": "25",
+    "shortcut": "(sweetjesus)"
+  },
+  {
+    "file": "farnsworth.png",
+    "height": "23",
+    "width": "25",
+    "shortcut": "(goodnews)"
+  },
+  {
+    "file": "10678/kennypowers.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(kennypowers)"
+  },
+  {
+    "file": "disapproval.png",
+    "height": "18",
+    "width": "23",
+    "shortcut": "(disapproval)"
+  },
+  {
+    "file": "zoidberg.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(zoidberg)"
+  },
+  {
+    "file": "badpokerface.png",
+    "height": "25",
+    "width": "19",
+    "shortcut": "(badpokerface)"
+  },
+  {
+    "file": "notbad.png",
+    "height": "25",
+    "width": "17",
+    "shortcut": "(notbad)"
+  },
+  {
+    "file": "pokerface.png",
+    "height": "25",
+    "width": "20",
+    "shortcut": "(pokerface)"
+  },
+  {
+    "file": "philosoraptor.png",
+    "height": "21",
+    "width": "25",
+    "shortcut": "(philosoraptor)"
+  },
+  {
+    "file": "samuel.png",
+    "height": "25",
+    "width": "19",
+    "shortcut": "(samuel)"
+  },
+  {
+    "file": "chewy.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(chewie)"
+  },
+  {
+    "file": "pumpkin.png",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(pumpkin)"
+  },
+  {
+    "file": "ghost.png",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(ghost)"
+  },
+  {
+    "file": "candycorn.png",
+    "height": "27",
+    "width": "14",
+    "shortcut": "(candycorn)"
+  },
+  {
+    "file": "caruso.png",
+    "height": "25",
+    "width": "37",
+    "shortcut": "(caruso)"
+  },
+  {
+    "file": "haveaseat.png",
+    "height": "25",
+    "width": "18",
+    "shortcut": "(haveaseat)"
+  },
+  {
+    "file": "scumbag.png",
+    "height": "16",
+    "width": "25",
+    "shortcut": "(scumbag)"
+  },
+  {
+    "file": "yodawg.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(yodawg)"
+  },
+  {
+    "file": "truestory.png",
+    "height": "27",
+    "width": "29",
+    "shortcut": "(truestory)"
+  },
+  {
+    "file": "derp.png",
+    "height": "27",
+    "width": "25",
+    "shortcut": "(derp)"
+  },
+  {
+    "file": "stare.png",
+    "height": "25",
+    "width": "34",
+    "shortcut": "(stare)"
+  },
+  {
+    "file": "allthethings.png",
+    "height": "30",
+    "width": "36",
+    "shortcut": "(allthethings)"
+  },
+  {
+    "file": "freddie.png",
+    "height": "35",
+    "width": "17",
+    "shortcut": "(freddie)"
+  },
+  {
+    "file": "wat.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(wat)"
+  },
+  {
+    "file": "skyrim.png",
+    "height": "35",
+    "width": "19",
+    "shortcut": "(skyrim)"
+  },
+  {
+    "file": "dealwithit.gif",
+    "height": "22",
+    "width": "35",
+    "shortcut": "(dealwithit)"
+  },
+  {
+    "file": "nothingtodohere.png",
+    "height": "25",
+    "width": "16",
+    "shortcut": "(nothingtodohere)"
+  },
+  {
+    "file": "orly.png",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(orly)"
+  },
+  {
+    "file": "hipster.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(hipster)"
+  },
+  {
+    "file": "ashton.png",
+    "height": "25",
+    "width": "21",
+    "shortcut": "(ashton)"
+  },
+  {
+    "file": "chompy.gif",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(chompy)"
+  },
+  {
+    "file": "fry.png",
+    "height": "25",
+    "width": "19",
+    "shortcut": "(fry)"
+  },
+  {
+    "file": "dance.gif",
+    "height": "23",
+    "width": "26",
+    "shortcut": "(dance)"
+  },
+  {
+    "file": "atlassian.png",
+    "height": "23",
+    "width": "25",
+    "shortcut": "(atlassian)"
+  },
+  {
+    "file": "drevil.png",
+    "height": "25",
+    "width": "37",
+    "shortcut": "(drevil)"
+  },
+  {
+    "file": "boom.gif",
+    "height": "23",
+    "width": "25",
+    "shortcut": "(boom)"
+  },
+  {
+    "file": "ohgodwhy.jpeg",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(ohgodwhy)"
+  },
+  {
+    "file": "ceilingcat.png",
+    "height": "14",
+    "width": "25",
+    "shortcut": "(ceilingcat)"
+  },
+  {
+    "file": "pingpong.png",
+    "height": "22",
+    "width": "25",
+    "shortcut": "(pingpong)"
+  },
+  {
+    "file": "tea.png",
+    "height": "24",
+    "width": "24",
+    "shortcut": "(tea)"
+  },
+  {
+    "file": "awthanks.png",
+    "height": "30",
+    "width": "31",
+    "shortcut": "(awthanks)"
+  },
+  {
+    "file": "indeed.png",
+    "height": "30",
+    "width": "24",
+    "shortcut": "(indeed)"
+  },
+  {
+    "file": "badass.png",
+    "height": "25",
+    "width": "32",
+    "shortcut": "(badass)"
+  },
+  {
+    "file": "ninja.png",
+    "height": "18",
+    "width": "18",
+    "shortcut": "(ninja)"
+  },
+  {
+    "file": "notsureif-1342015652.png",
+    "height": "25",
+    "width": "19",
+    "shortcut": "(notsureif)"
+  },
+  {
+    "file": "fwp-1342647892.png",
+    "height": "25",
+    "width": "30",
+    "shortcut": "(fwp)"
+  },
+  {
+    "file": "firstworldproblem-1342647915.png",
+    "height": "25",
+    "width": "30",
+    "shortcut": "(firstworldproblem)"
+  },
+  {
+    "file": "chucknorris-1342735388.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(chucknorris)"
+  },
+  {
+    "file": "notsureifgusta-1346093311.png",
+    "height": "25",
+    "width": "24",
+    "shortcut": "(notsureifgusta)"
+  },
+  {
+    "file": "twss-1348262400.png",
+    "height": "25",
+    "width": "20",
+    "shortcut": "(twss)"
+  },
+  {
+    "file": "success-1348262443.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(success)"
+  },
+  {
+    "file": "iseewhatyoudidthere-1348262983.png",
+    "height": "25",
+    "width": "28",
+    "shortcut": "(iseewhatyoudidthere)"
+  },
+  {
+    "file": "gangnamstyle-1349387710.gif",
+    "height": "30",
+    "width": "17",
+    "shortcut": "(gangnamstyle)"
+  },
+  {
+    "file": "shrug-1349463255.png",
+    "height": "12",
+    "width": "56",
+    "shortcut": "(shrug)"
+  },
+  {
+    "file": "tableflip-1349463264.png",
+    "height": "13",
+    "width": "109",
+    "shortcut": "(tableflip)"
+  },
+  {
+    "file": "cerealspit-1349463282.png",
+    "height": "24",
+    "width": "41",
+    "shortcut": "(cerealspit)"
+  },
+  {
+    "file": "bitbucket-1349806629.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(bitbucket)"
+  },
+  {
+    "file": "jira-1350074257.png",
+    "height": "23",
+    "width": "18",
+    "shortcut": "(jira)"
+  },
+  {
+    "file": "obama-1352231289.png",
+    "height": "25",
+    "width": "33",
+    "shortcut": "(obama)"
+  },
+  {
+    "file": "romney-1352231355.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(romney)"
+  },
+  {
+    "file": "trump-1352738237.png",
+    "height": "25",
+    "width": "30",
+    "shortcut": "(trump)"
+  },
+  {
+    "file": "grumpycat-1366734534.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(grumpycat)"
+  },
+  {
+    "file": "confluence-1367948832.png",
+    "height": "22",
+    "width": "25",
+    "shortcut": "(confluence)"
+  },
+  {
+    "file": "yougotitdude-1368219664.gif",
+    "height": "25",
+    "width": "48",
+    "shortcut": "(yougotitdude)"
+  },
+  {
+    "file": "clarence-1369414730.png",
+    "height": "29",
+    "width": "25",
+    "shortcut": "(clarence)"
+  },
+  {
+    "file": "continue-1369948567.png",
+    "height": "16",
+    "width": "16",
+    "shortcut": "(continue)"
+  },
+  {
+    "file": "failed-1369948578.png",
+    "height": "16",
+    "width": "16",
+    "shortcut": "(failed)"
+  },
+  {
+    "file": "successful-1369948592.png",
+    "height": "16",
+    "width": "16",
+    "shortcut": "(successful)"
+  },
+  {
+    "file": "unknown-1369948620.png",
+    "height": "16",
+    "width": "16",
+    "shortcut": "(unknown)"
+  },
+  {
+    "file": "branch-1372171579.png",
+    "height": "16",
+    "width": "16",
+    "shortcut": "(branch)"
+  },
+  {
+    "file": "mindblown-1374883007.gif",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(mindblown)"
+  },
+  {
+    "file": "badjokeeel-1375463017.png",
+    "height": "26",
+    "width": "33",
+    "shortcut": "(badjokeeel)"
+  },
+  {
+    "file": "gtfo-1381428639.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(gtfo)"
+  },
+  {
+    "file": "huh-1381428657.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(huh)"
+  },
+  {
+    "file": "turkey-1386104992.png",
+    "height": "17",
+    "width": "25",
+    "shortcut": "(turkey)"
+  },
+  {
+    "file": "fonzie-1386958620.png",
+    "height": "25",
+    "width": "34",
+    "shortcut": "(fonzie)"
+  },
+  {
+    "file": "stash-1391127729.png",
+    "height": "25",
+    "width": "23",
+    "shortcut": "(stash)"
+  },
+  {
+    "file": "nextgendev-1394050121.png",
+    "height": "29",
+    "width": "23",
+    "shortcut": "(nextgendev)"
+  },
+  {
+    "file": "hodor-1396908720.png",
+    "height": "30",
+    "width": "21",
+    "shortcut": "(hodor)"
+  },
+  {
+    "file": "arya-1396908740.png",
+    "height": "30",
+    "width": "24",
+    "shortcut": "(arya)"
+  },
+  {
+    "file": "tyrion-1396908780.png",
+    "height": "31",
+    "width": "27",
+    "shortcut": "(tyrion)"
+  },
+  {
+    "file": "jaime-1396908791.png",
+    "height": "30",
+    "width": "26",
+    "shortcut": "(jaime)"
+  },
+  {
+    "file": "ned-1396908800.png",
+    "height": "25",
+    "width": "23",
+    "shortcut": "(ned)"
+  },
+  {
+    "file": "jonsnow-1396908809.png",
+    "height": "25",
+    "width": "30",
+    "shortcut": "(jonsnow)"
+  },
+  {
+    "file": "daenerys-1396908819.png",
+    "height": "25",
+    "width": "30",
+    "shortcut": "(daenerys)"
+  },
+  {
+    "file": "joffrey-1396908826.png",
+    "height": "31",
+    "width": "23",
+    "shortcut": "(joffrey)"
+  },
+  {
+    "file": "tywin-1396908839.png",
+    "height": "30",
+    "width": "22",
+    "shortcut": "(tywin)"
+  },
+  {
+    "file": "hipchat-1399396865.png",
+    "height": "25",
+    "width": "25",
+    "shortcut": "(hipchat)"
+  },
+  {
+    "file": "doge-1401134407.png",
+    "height": "25",
+    "width": "24",
+    "shortcut": "(doge)"
+  },
+  {
+    "file": "whynotboth-1402679402.gif",
+    "height": "30",
+    "width": "30",
+    "shortcut": "(whynotboth)"
+  }
+]

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: assets_pipeline | Shiny happy people coding]]></title>
+  <link href="http://blog.shingara.fr/blog/categories/assets-pipeline/atom.xml" rel="self"/>
+  <link href="http://blog.shingara.fr/"/>
+  <updated>2013-06-25T23:44:03+02:00</updated>
+  <id>http://blog.shingara.fr/</id>
+  <author>
+    <name><![CDATA[Cyril Mougel]]></name>
+    <email><![CDATA[cyril.mougel@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Quiet Assets le gem qui limite les logs]]></title>
+    <link href="http://blog.shingara.fr/quiet-assets-le-limiteur-de-log.html"/>
+    <updated>2012-04-25T09:42:00+02:00</updated>
+    <id>http://blog.shingara.fr/quiet-assets-le-limiteur-de-log</id>
+    <content type="html"><![CDATA[<p>Voici une semaine, j'ai d?couvert un gem vraiment pratique.
+<a href="https://github.com/evrone/quiet_assets">quiet_assets</a>.</p>
+
+<p>Ce gems ne fait pas grand chose, mais a de grand avantage quand on
+d?veloppe une application Rails (> 3.1) avec des assets en utilisant la
+technologie 'asset_pipeline'.</p>
+
+<p>Si c'est votre cas, vous vous ?tes d?j? rendu compte que chaques requ?tes faites
+? votre application pour obtenir vos assets est logu?s dans votre
+fichier de log ( development.log en environement de d?velopment ). Des
+requ?tes comme celle-ci :</p>
+
+<p><code>
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-13 13:24:04 +0400
+Served asset /application.js - 304 Not Modified (8ms)
+</code></p>
+
+<p>On se retrouve ainsi ? devoir remonter dans son fichier de logs pour
+obtenir les logs qui nous interresse vraiment ( les log de la requ?te
+courante ). Notre fichier de log est
+vraiment pollu? par ces assets si vous en avez comme moi beaucoup.</p>
+
+<p>C'est l? que <a href="https://github.com/evrone/quiet_assets">quiet_assets</a>
+devient vraiment interressant et pratique. Vous ajoutez ce gem dans
+votre Gemfile au niveau du groupe 'development' et tous vos logs d'assets
+disparaissent. Ils ne sont tous simplement plus loggu?es dans votre fichier
+de log. On retrouve ainsi un fichier de log rapide a consulter et moins
+pollu? par des informations inutiles.</p>
+
+<p>Comme quoi de tout petits gems peuvent nous rendre de grand service.</p>
+
+<p><em>Edit du 27 Avril 2012</em></p>
+
+<p>On pourrait se dire que cela pourrait ?tre directement integr? ? Rails.
+H?las cela ? ?t? fait en partie, mais pas compl?tement.</p>
+
+<p>Depuis la version 3.2.x et l'<a href="https://github.com/rails/rails/issues/2639">issue 2639</a>
+nous pouvons configurer le logger de Sprockets. Mais il n'est pas seul ?
+afficher les informations. Actionpack log toujours les requ?tes faites
+pour obtenir ces assets. Vous ne pourrez donc pas avoir un fichier de
+log compl?tement ?pur?.</p>
+
+<p><a href="http://blog-en.shingara.fr/quiet-assets-help-you-to-have-little-log.html">English translation</a></p>
+]]></content>
+  </entry>
+  
+</feed>

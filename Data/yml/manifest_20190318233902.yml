@@ -1,0 +1,5 @@
+title: Phooey
+layout: layout.erb
+files:
+  - first_chapter.md
+  - second_chapter.md

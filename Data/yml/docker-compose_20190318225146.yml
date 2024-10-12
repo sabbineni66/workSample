@@ -1,0 +1,51 @@
+version: "2"
+
+services:
+  
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+  
+  logstash:
+    image: docker.elastic.co/logstash/logstash:6.4.0
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
+    ports:
+      - "5000:5000"
+      - "9600:9600"
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    depends_on:
+      - elasticsearch
+      - redis
+  
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.4.0
+    ports:
+      - "5601:5601"
+    volumes:
+      - ./kibana/config/:/usr/share/kibana/config:ro
+    depends_on:
+      - elasticsearch
+  
+  cerebro:
+    image: dylanmei/cerebro
+    ports:
+      - "9000:9000"
+    command:
+      - bin/cerebro
+      - -Dhosts.0.host=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+  
+  redis:
+    image: gubanotorious/redis-unstable
+    ports:
+      - "6379:6379"

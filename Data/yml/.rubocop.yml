@@ -1,0 +1,40 @@
+Metrics/AbcSize:
+  Max: 18
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 15
+
+DotPosition:
+  EnforcedStyle: leading
+
+StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/Documentation:
+  Enabled: false
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/PercentLiteralDelimiters:
+  # Rubocop recently changed this from () to [] and I'm not ready to go fix it in all the source files.
+  PreferredDelimiters:
+    default: ()
+    '%i': '()'
+    '%I': '()'
+    '%r': '{}'
+    '%w': '()'
+    '%W': '()'

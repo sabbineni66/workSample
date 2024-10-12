@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Oursement votre]]></title>
+  <link href="http://grosours.github.io/atom.xml" rel="self"/>
+  <link href="http://grosours.github.io/"/>
+  <updated>2013-06-04T02:14:45+02:00</updated>
+  <id>http://grosours.github.io/</id>
+  <author>
+    <name><![CDATA[Guillaume Faure]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A story of Gitolite &amp; SSH Gateway]]></title>
+    <link href="http://grosours.github.io/blog/2013/06/04/a-story-of-gitolite-and-ssh-gateway/"/>
+    <updated>2013-06-04T02:07:00+02:00</updated>
+    <id>http://grosours.github.io/blog/2013/06/04/a-story-of-gitolite-and-ssh-gateway</id>
+    <content type="html"><![CDATA[<p>Gitolite is a really good project. What I like most is that it is
+simple to install and you can wrap your head around it. I got
+interested a lot in other projects like GitLab our Gitorious. But they
+are a pain to install and configure.</p>
+
+<p>My setup for gitolite was quite redimentary unlil now. I had a Debian
+virtual machine hosting gitolite and the repository. Everyone that had
+to access this machine could do it on the private network or a VPN
+connection. Everything worked like a charm&hellip;</p>
+
+<p>Until I had to make the repositories available to the outside world&hellip;
+But git was not the only service that required the SSH port on my
+firewall. I had to make it somehow play nice with other friends. After
+some searching I diceided, thanks to the nicely done article
+<a href="http://tumblr.spantz.org/post/211936636/configuring-an-ssh-gateway">Configuring an SSH Gateway</a>,
+that I had to give access to gitolite through an SSH Gateway. The
+cornerstone of method is the use of SSH keys and the
+<code>authorized_keys</code>&rsquo;s <code>command</code> options. If you do not want to read the
+article, the idea behind the SSH Gateway is to identify an SSH
+&ldquo;service&rdquo; as a user account on the gateway, the real user beeing
+identified thanks to its SSH key. The gateway then connects to the
+right machine and the right user (which it know though its key).
+Nicely simple once you understand the trick. Reminds you of something
+? Yes, yes, the exact same trick that allow gitolite to make its magic
+operate. Gitolite identify the real user though its SSH key and then
+&ldquo;just&rdquo; check some permisions to check if she have the right to acccess
+this repo. I should have though of it before hearing of the SSH
+Gateway.</p>
+]]></content>
+  </entry>
+  
+</feed>

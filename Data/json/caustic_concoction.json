@@ -1,0 +1,20 @@
+{
+  "Name"      : "Caustic Concoction",
+  "Kind"      : "AP",
+  "Ap"        : 5,
+  "Strength"  : 10,
+  "Damage"    : 2,
+  "Range"     : 10,
+  "Diameter"  : 4,
+  "Animation" : "ranged",
+  "Target_enemies": true,
+  "Sounds"   : {
+    "vials": "Haunts/SFX/Intruders/Reporter/Vials"
+  },
+  "Texture"   : {
+    "Path": "actions/icons/beaker.png"
+  },
+  "Conditions": [
+    "AP -2"
+  ]
+}

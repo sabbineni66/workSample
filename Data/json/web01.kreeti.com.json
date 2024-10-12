@@ -1,0 +1,3 @@
+{
+    "run_list": [ "role[memcached_server]", "role[wordpress_webserver]", "role[imagemagick]", "role[rails_webserver]", "role[base_server]" ]
+}

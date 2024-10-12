@@ -1,0 +1,31 @@
+{
+  "name": "leverage",
+  "version": "0.1.0",
+  "description": "Javascript MVC framework",
+  "main": "leverage.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-jasmine": "*"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/peburrows/leverage.js.git"
+  },
+  "keywords": [
+    "leverage",
+    "mvc"
+  ],
+  "author": "Phil Burrows",
+  "license": "MIT"
+}

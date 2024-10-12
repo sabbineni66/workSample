@@ -1,0 +1,66 @@
+{
+  "variables": {
+    "ruby_version": "2.1.1",
+    "rubygems_version": "2.2.2",
+    "puppet_version": "3.5.1",
+    "iso_url": "http://releases.ubuntu.com/10.04.4/ubuntu-10.04.4-server-amd64.iso",
+    "iso_checksum": "796e80702d65f2ee96e88874a1ab437e24df9cd6"
+  },
+  "builders": [{
+    "vm_name": "ubuntu1004",
+    "type": "virtualbox-iso",
+    "http_directory": "http",
+    "iso_url": "{{ user `iso_url` }}",
+    "iso_checksum": "{{ user `iso_checksum` }}",
+    "iso_checksum_type": "sha1",
+    "guest_os_type": "Ubuntu_64",
+    "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+    "virtualbox_version_file": ".vbox_version",
+    "ssh_username": "vagrant",
+    "ssh_password": "vagrant",
+    "ssh_wait_timeout": "10000s",
+    "boot_command": [
+      "<esc><esc><enter><wait>",
+      "/install/vmlinuz auto noapic ",
+      "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
+      "debian-installer=en_US auto locale=en_US kbd-chooser/method=us ",
+      "hostname={{ .Name }} ",
+      "fb=false debconf/frontend=noninteractive ",
+      "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=USA ",
+      "keyboard-configuration/variant=USA console-setup/ask_detect=false ",
+      "console-setup/layoutcode=us console-setup/modelcode=pc105 ",
+      "netcfg/get_domain=vm netcfg/get_hostname=vagrant ",
+      "initrd=/install/initrd.gz -- <enter>"
+    ],
+    "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
+    "disk_size": 51200,
+    "vboxmanage": [
+      ["modifyvm", "{{.Name}}", "--memory", "512"],
+      ["modifyvm", "{{.Name}}", "--cpus", "1"]
+    ]
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "environment_vars": [
+      "RUBY_VERSION={{user `ruby_version`}}",
+      "RUBYGEMS_VERSION={{user `rubygems_version`}}",
+      "PUPPET_VERSION={{user `puppet_version`}}"
+    ],
+    "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+    "scripts": [
+      "script/base.sh",
+      "script/vagrant.sh",
+      "script/sshd.sh",
+      "script/vmtools.sh",
+      "script/ruby.sh",
+      "script/puppet.sh",
+      "script/cleanup.sh",
+      "script/zerodisk.sh"
+    ]
+  }],
+  "post-processors": [{
+    "type": "vagrant",
+    "keep_input_artifact": false,
+    "output": "../../boxes/ubuntu1004-puppet-amd64.box"
+  }]
+}

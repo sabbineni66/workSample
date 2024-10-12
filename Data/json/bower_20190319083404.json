@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "bootstrap": "*",
+    "font-awesome": "*",
+    "html5shiv": "*",
+    "jquery": "*",
+    "purescript-arrays": "*",
+    "purescript-eff": "*",
+    "purescript-leaflet": "*",
+    "purescript-prelude": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules"
+  ],
+  "name": "kh6e",
+  "private": "true"
+}

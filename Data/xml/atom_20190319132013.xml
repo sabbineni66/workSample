@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: m?dia | Marcello Azambuja]]></title>
+  <link href="http://azamba.net/blog/categories/midia/atom.xml" rel="self"/>
+  <link href="http://azamba.net/"/>
+  <updated>2015-08-20T11:20:31-03:00</updated>
+  <id>http://azamba.net/</id>
+  <author>
+    <name><![CDATA[Marcello Azambuja]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Televis?o e os Novos Desafios Tecnol?gicos]]></title>
+    <link href="http://azamba.net/blog/2014/02/05/a-televisao-e-os-novos-desafios-tecnologicos/"/>
+    <updated>2014-02-05T18:14:00-02:00</updated>
+    <id>http://azamba.net/blog/2014/02/05/a-televisao-e-os-novos-desafios-tecnologicos</id>
+    <content type="html"><![CDATA[<p>Na semana passada participei de um painel na <a href="http://www.campus-party.com.br">Campus Party</a> sobre os desafios que a ind?stria de
+m?dia e televisao est?o vivendo.</p>
+
+<p>Participaram do painel os colegas Jose Papo (Amazon), Cezar Taurion (IBM), Andr? Altieri (Cisco) e Salustiano Fagundes (HXD). Mais detalhes no <a href="http://blog.campus-party.com.br/post/74940355653/a-televisao-e-os-novos-desafios-tecnologicos-mais">post de blog da pr?pria Campus Party</a>.</p>
+
+<p>Mas de forma resumida falei sobre as iniciativas das Organiza??es Globo:</p>
+
+<ul>
+<li><a href="http://globotv.globo.com/rede-globo">globo.tv</a> com enfoque no conte?do da Rede Globo</li>
+<li><a href="http://globotv.globo.com/combate">+Combate</a> para assinantes do canal Combate</li>
+<li><a href="http://globotv.globo.com/premiere-fc">PremiereFC.tv</a> para assinantes do canal PremiereFC</li>
+<li><a href="http://telecineplay.com.br">Telecine Play</a> para os assinantes do canal Telecine</li>
+<li><a href="http://muu.globo.com">Muu</a> para diversos outros canais da GloboSat</li>
+</ul>
+
+
+<p><img src="/images/campus-party.png" alt="Campus Party Brasil - Marcello Azambuja" /></p>
+]]></content>
+  </entry>
+  
+</feed>

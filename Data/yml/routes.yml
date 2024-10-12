@@ -1,0 +1,32 @@
+- name: D4
+  stops:
+    - id: 1001223
+      name: K ST NE + 3RD ST NE
+      direction: East to Ivy City
+      times:
+        - 27
+        - 54
+        - 84
+    - id: 1001234
+      name: K ST NE + 2ND ST NE
+      direction: West to Franklin Square
+      times:
+        - 3
+        - 23
+        - 53
+        - 83
+    - id: 1001230
+      name: K ST NE + 3RD ST NE
+      direction: West to Franklin Square
+      times:
+        - 3
+        - 23
+        - 53
+        - 83
+    # - id: 1001232
+    #   name: K ST NE + 4TH ST NE
+    #   direction: East to Ivy City
+    #   times:
+    #     - 27
+    #     - 54
+    #     - 84

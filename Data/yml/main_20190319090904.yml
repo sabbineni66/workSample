@@ -1,0 +1,5 @@
+---
+
+- name: say hello
+  debug: msg="{{ hello.greet }}, {{ item }}!"
+  with_items: hello.names

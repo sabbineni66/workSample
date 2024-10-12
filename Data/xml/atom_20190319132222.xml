@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[mad.science.]]></title>
+  <link href="http://jwilkins.github.com/atom.xml" rel="self"/>
+  <link href="http://jwilkins.github.com/"/>
+  <updated>2013-03-29T00:50:57-07:00</updated>
+  <id>http://jwilkins.github.com/</id>
+  <author>
+    <name><![CDATA[Jonathan Wilkins]]></name>
+    <email><![CDATA[jwilkins@bitland.net]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[DIY HSM for ~$60]]></title>
+    <link href="http://jwilkins.github.com/blog/2013/03/28/hsm/"/>
+    <updated>2013-03-28T22:25:00-07:00</updated>
+    <id>http://jwilkins.github.com/blog/2013/03/28/hsm</id>
+    <content type="html"><![CDATA[<p>Amazon <a href='https://aws.amazon.com/cloudhsm/'>announced their new
+CloudHSM service</a> yesterday. This reminded me that I&#8217;ve been meaning
+to write something up about what an HSM is and what&#8217;s required for
+certification.</p>
+
+<p>First off, HSM stands for Hardware Security Module.  It&#8217;s just a
+separate device that stores keys and performs cryptographic functions
+outside of the system(s) it&#8217;s connected to.  This separation is done in the belief that it&#8217;s harder to steal the private keys from the HSM than the general purpose computer(s) it is servicing.  The required
+features are spelled out by <a href="http://en.wikipedia.org/wiki/Federal_Information_Processing_Standard">FIPS</a> publication <a
+href="http://en.wikipedia.org/wiki/FIPS_140-2">140-2</a>
+(<a href="http://csrc.nist.gov/publications/fips/fips140-2/fips1402.pdf">FIPS 140-2 PDF specification</a>).</p>
+
+<p>The gist of it is that there are 4 levels of certification, 1 being the
+lowest (requiring just that an approved cryptographic algorithm or other
+security function be supported and be built with &#8216;production grade&#8217;
+components.) and 4 highest (tamper evident, physical security mechanisms
+and/or countermeasures like wiping of secrets if the physical
+enviromnent is out of normal operating ranges).</p>
+
+<p>Well, that doesn&#8217;t sound so hard, does it?  Let&#8217;s take:</p>
+
+<ul>
+<li>1 <a href="http://www.raspberrypi.org/">Raspberry pi</a></li>
+<li>1 <a href="<a href="http://www.amazon.com/gp/product/B005T8RZFG/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B005T8RZFG&linkCode=as2&tag=bitland-20">Thermally Conductive Epoxy Potting Compound</a></li>
+<li>Optoisolators <a href="http://img803.imageshack.us/img803/4999/optoschematic.gif">perhaps something like this</a></li>
+<li>using the <a href="https://www.dropbox.com/s/m5l185qxq9w5mzk/raspberry-pi-gpio-cheat-sheet.jpg">SPI on on the pi&#8217;s GPIO</a></li>
+<li>and a DS1820 thermometer on the 1wire.</li>
+</ul>
+
+
+<p>The software is minimal, sample software is all over the place.
+(<a href="http://www.opendnssec.org/softhsm/">SoftHSM</a> perhaps?)</p>
+
+<p>DIY HSM for ~$60.  Instead of the $5000 upfront + $1373/month the
+CloudHSM runs.  It won&#8217;t have the lab validation, but may give you some
+peace of mind if you&#8217;re a paranoid on a budget&#8230;</p>
+]]></content>
+  </entry>
+  
+</feed>

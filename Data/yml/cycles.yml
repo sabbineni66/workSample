@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  starts_on: 2013-04-14
+  workout_name: MyString
+  workout_time: 1
+  workout_score: 1
+  waist: 1.5
+  hips: 1.5
+
+two:
+  starts_on: 2013-04-14
+  workout_name: MyString
+  workout_time: 1
+  workout_score: 1
+  waist: 1.5
+  hips: 1.5

@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://2ND36E1H9HWAMCAR2P8QCJFGPUQVOLF0:868MZR5KHSNQYGVYSYK8N8QN1EV402DG@api.eposnowhq.com/api/V2/Product?page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache, private
+      Content-Type:
+      - application/json; charset=utf-8
+      Location:
+      - https://api.eposnowhq.com/API/V2/Product
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 26 Feb 2016 16:14:35 GMT
+      Content-Length:
+      - '4223'
+    body:
+      encoding: UTF-8
+      string: '[{"ProductID":1163871,"Name":"MerlotBottle","Description":"750ml Bottle
+        of Merlot","CostPrice":6.00000,"SalePrice":14.99000,"EatOutPrice":15.99000,"CategoryID":72657,"Barcode":null,"TaxRateID":7393,"EatOutTaxRateID":null,"BrandID":null,"SupplierID":null,"PopupNoteID":null,"UnitOfSale":1,"VolumeOfSale":750,"MultiChoiceID":null,"ColourID":null,"VariantGroupID":null,"Size":null,"Sku":null,"SellOnWeb":false,"SellOnTill":true,"OrderCode":null,"ButtonColourID":null,"SortPosition":null,"MagentoAttributeSetID":null,"RRPrice":null,"CostPriceTaxRateID":null,"ProductType":0,"TareWeight":null,"ArticleCode":null},{"ProductID":1163872,"Name":"Merlot
+        Large","Description":"250ml glass of Merlot","CostPrice":2.00000,"SalePrice":5.20000,"EatOutPrice":5.20000,"CategoryID":72657,"Barcode":null,"TaxRateID":7393,"EatOutTaxRateID":null,"BrandID":null,"SupplierID":null,"PopupNoteID":null,"UnitOfSale":1,"VolumeOfSale":250,"MultiChoiceID":null,"ColourID":null,"VariantGroupID":null,"Size":null,"Sku":null,"SellOnWeb":false,"SellOnTill":true,"OrderCode":null,"ButtonColourID":null,"SortPosition":null,"MagentoAttributeSetID":null,"RRPrice":null,"CostPriceTaxRateID":null,"ProductType":0,"TareWeight":null,"ArticleCode":null},{"ProductID":1163873,"Name":"Merlot
+        Small","Description":"175ml glass of Merlot","CostPrice":1.50000,"SalePrice":4.10000,"EatOutPrice":4.10000,"CategoryID":72657,"Barcode":null,"TaxRateID":7393,"EatOutTaxRateID":null,"BrandID":null,"SupplierID":null,"PopupNoteID":null,"UnitOfSale":1,"VolumeOfSale":175,"MultiChoiceID":null,"ColourID":null,"VariantGroupID":null,"Size":null,"Sku":null,"SellOnWeb":false,"SellOnTill":true,"OrderCode":null,"ButtonColourID":null,"SortPosition":null,"MagentoAttributeSetID":null,"RRPrice":null,"CostPriceTaxRateID":null,"ProductType":0,"TareWeight":null,"ArticleCode":null},{"ProductID":1163874,"Name":"Crisps","Description":"Crisps","CostPrice":0.30000,"SalePrice":0.60000,"EatOutPrice":0.50000,"CategoryID":72658,"Barcode":"8718114216324","TaxRateID":7393,"EatOutTaxRateID":null,"BrandID":null,"SupplierID":null,"PopupNoteID":null,"UnitOfSale":null,"VolumeOfSale":null,"MultiChoiceID":null,"ColourID":null,"VariantGroupID":null,"Size":null,"Sku":null,"SellOnWeb":false,"SellOnTill":true,"OrderCode":null,"ButtonColourID":null,"SortPosition":null,"MagentoAttributeSetID":null,"RRPrice":null,"CostPriceTaxRateID":null,"ProductType":0,"TareWeight":null,"ArticleCode":null},{"ProductID":1163875,"Name":"Orange
+        Juice","Description":"Freshly squeezed from a carton","CostPrice":0.20000,"SalePrice":1.20000,"EatOutPrice":1.00000,"CategoryID":72657,"Barcode":"5052109982713","TaxRateID":7393,"EatOutTaxRateID":null,"BrandID":null,"SupplierID":null,"PopupNoteID":null,"UnitOfSale":null,"VolumeOfSale":null,"MultiChoiceID":null,"ColourID":null,"VariantGroupID":null,"Size":null,"Sku":null,"SellOnWeb":false,"SellOnTill":true,"OrderCode":null,"ButtonColourID":null,"SortPosition":null,"MagentoAttributeSetID":null,"RRPrice":null,"CostPriceTaxRateID":null,"ProductType":0,"TareWeight":null,"ArticleCode":null},{"ProductID":1163876,"Name":"Tea","Description":"Cup
+        of","CostPrice":0.30000,"SalePrice":1.50000,"EatOutPrice":1.10000,"CategoryID":72657,"Barcode":"123456789","TaxRateID":7393,"EatOutTaxRateID":null,"BrandID":null,"SupplierID":null,"PopupNoteID":null,"UnitOfSale":null,"VolumeOfSale":null,"MultiChoiceID":null,"ColourID":null,"VariantGroupID":null,"Size":null,"Sku":null,"SellOnWeb":false,"SellOnTill":true,"OrderCode":null,"ButtonColourID":null,"SortPosition":null,"MagentoAttributeSetID":null,"RRPrice":null,"CostPriceTaxRateID":null,"ProductType":0,"TareWeight":null,"ArticleCode":null},{"ProductID":2313946,"Name":"Test
+        Product","Description":"","CostPrice":5.95000,"SalePrice":16.95000,"EatOutPrice":16.95000,"CategoryID":null,"Barcode":"","TaxRateID":null,"EatOutTaxRateID":null,"BrandID":null,"SupplierID":null,"PopupNoteID":null,"UnitOfSale":null,"VolumeOfSale":null,"MultiChoiceID":null,"ColourID":null,"VariantGroupID":null,"Size":"","Sku":"2384092342","SellOnWeb":true,"SellOnTill":false,"OrderCode":"","ButtonColourID":null,"SortPosition":null,"MagentoAttributeSetID":null,"RRPrice":null,"CostPriceTaxRateID":null,"ProductType":0,"TareWeight":null,"ArticleCode":null}]'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 16:14:23 GMT
+- request:
+    method: get
+    uri: https://2ND36E1H9HWAMCAR2P8QCJFGPUQVOLF0:868MZR5KHSNQYGVYSYK8N8QN1EV402DG@api.eposnowhq.com/api/V2/Product?page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache, private
+      Content-Type:
+      - application/json; charset=utf-8
+      Location:
+      - https://api.eposnowhq.com/API/V2/Product
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 26 Feb 2016 16:14:35 GMT
+      Content-Length:
+      - '2'
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 16:14:23 GMT
+- request:
+    method: get
+    uri: https://2ND36E1H9HWAMCAR2P8QCJFGPUQVOLF0:868MZR5KHSNQYGVYSYK8N8QN1EV402DG@api.eposnowhq.com/api/V2/ProductStock/?page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache, private
+      Content-Type:
+      - application/json; charset=utf-8
+      Location:
+      - https://api.eposnowhq.com/API/V2/ProductStock
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 26 Feb 2016 16:14:35 GMT
+      Content-Length:
+      - '298'
+    body:
+      encoding: UTF-8
+      string: '[{"StockID":431656,"LocationID":4230,"ProductID":1163872,"CurrentStock":25,"MinStock":5,"MaxStock":100,"CurrentVolume":0,"OnOrder":20,"Alerts":false},{"StockID":370842,"LocationID":4230,"ProductID":1163871,"CurrentStock":6,"MinStock":5,"MaxStock":15,"CurrentVolume":3000,"OnOrder":0,"Alerts":true}]'
+    http_version: 
+  recorded_at: Fri, 26 Feb 2016 16:14:23 GMT
+recorded_with: VCR 2.9.3

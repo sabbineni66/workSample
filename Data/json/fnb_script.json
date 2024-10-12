@@ -1,0 +1,35 @@
+{
+    "name": "FNB Test Up",
+    "description":"Test to see if the FNB USSD service is online",
+    "slug": "FNB-USSD-1",
+    "callback_mode": "email",
+    "callback_value": "your@email.here",
+    "type": "USSD",
+    "tx_mccmnc": "65501",
+    "continue_on_fail": true,
+    "steps": [
+        {
+            "action": "dial",
+            "value": "*120*321#"
+        },
+        {
+            "action": "expect",
+            "value": "FRB"
+        },
+        {
+            "action": "sleep",
+            "value": "0.5"
+        },
+        {
+            "action": "reply",
+            "value": "1"
+        },
+        {
+            "action": "expect",
+            "value": "Cellphone number"
+        },
+        {
+            "action": "cancel"
+        }
+    ]
+}

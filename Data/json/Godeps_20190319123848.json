@@ -1,0 +1,110 @@
+{
+	"ImportPath": "github.com/gregf/localfm",
+	"GoVersion": "go1.5.1",
+	"Deps": [
+		{
+			"ImportPath": "github.com/BurntSushi/toml",
+			"Comment": "v0.1.0-21-g056c9bc",
+			"Rev": "056c9bc7be7190eaa7715723883caffa5f8fa3e4"
+		},
+		{
+			"ImportPath": "github.com/caarlos0/gohome",
+			"Rev": "01f8a21fd04d51d2478161ad4bb3fbb320f49d67"
+		},
+		{
+			"ImportPath": "github.com/cpuguy83/go-md2man/md2man",
+			"Comment": "v1.0.3-2-g71acacd",
+			"Rev": "71acacd42f85e5e82f70a55327789582a5200a90"
+		},
+		{
+			"ImportPath": "github.com/dustin/go-humanize",
+			"Rev": "c20a8bde38c8f5ba06f6600edf473705c96829d1"
+		},
+		{
+			"ImportPath": "github.com/gizak/termui",
+			"Rev": "f9b03512858269e8bfc1c57b12113673ef213dc3"
+		},
+		{
+			"ImportPath": "github.com/inconshreveable/mousetrap",
+			"Rev": "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75"
+		},
+		{
+			"ImportPath": "github.com/jinzhu/gorm",
+			"Rev": "447885d98f9d07a138733a0e65428dd2de1ed60d"
+		},
+		{
+			"ImportPath": "github.com/kr/pretty",
+			"Comment": "go.weekly.2011-12-22-27-ge6ac2fc",
+			"Rev": "e6ac2fc51e89a3249e82157fa0bb7a18ef9dd5bb"
+		},
+		{
+			"ImportPath": "github.com/kr/text",
+			"Rev": "bb797dc4fb8320488f47bf11de07a733d7233e1f"
+		},
+		{
+			"ImportPath": "github.com/lib/pq/hstore",
+			"Comment": "go1.0-cutoff-59-gb269bd0",
+			"Rev": "b269bd035a727d6c1081f76e7a239a1b00674c40"
+		},
+		{
+			"ImportPath": "github.com/magiconair/properties",
+			"Comment": "v1.5.5",
+			"Rev": "337395e44efb4affc8bf11971e22acbd4e27a32d"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-runewidth",
+			"Comment": "travisish-37-g12e0ff7",
+			"Rev": "12e0ff74603c9a3209d8bf84f8ab349fe1ad9477"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-sqlite3",
+			"Comment": "v1.0.0-11-g3b3f1d0",
+			"Rev": "3b3f1d01b2696af5501697c35629048c227586ab"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/mapstructure",
+			"Rev": "281073eb9eb092240d33ef253c404f1cca550309"
+		},
+		{
+			"ImportPath": "github.com/nsf/termbox-go",
+			"Rev": "9914d1c528437633580e9aeda764bfb8c1415a9a"
+		},
+		{
+			"ImportPath": "github.com/qor/inflection",
+			"Rev": "45321e63b98c756df17369c027c1df89298e1288"
+		},
+		{
+			"ImportPath": "github.com/russross/blackfriday",
+			"Comment": "v1.2-80-g8cec3a8",
+			"Rev": "8cec3a854e68dba10faabbe31c089abf4a3e57a6"
+		},
+		{
+			"ImportPath": "github.com/shurcooL/sanitized_anchor_name",
+			"Rev": "244f5ac324cb97e1987ef901a0081a77bfd8e845"
+		},
+		{
+			"ImportPath": "github.com/spf13/cast",
+			"Rev": "ee815aaf958c707ad07547cd62150d973710f747"
+		},
+		{
+			"ImportPath": "github.com/spf13/cobra",
+			"Rev": "68f5a81a722d56241bd70faf6860ceb05eb27d64"
+		},
+		{
+			"ImportPath": "github.com/spf13/jwalterweatherman",
+			"Rev": "3d60171a64319ef63c78bd45bd60e6eab1e75f8b"
+		},
+		{
+			"ImportPath": "github.com/spf13/pflag",
+			"Rev": "8e7dc108ab3a1ab6ce6d922bbaff5657b88e8e49"
+		},
+		{
+			"ImportPath": "github.com/spf13/viper",
+			"Rev": "3c0ff861e3d9906ecc4ebfb7e41557d44d3e277b"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v2",
+			"Rev": "7ad95dd0798a40da1ccdff6dff35fd177b5edf40"
+		}
+	]
+}

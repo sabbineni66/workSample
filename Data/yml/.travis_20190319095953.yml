@@ -1,0 +1,30 @@
+language: ruby
+jdk:
+  - oraclejdk8
+cache: bundler
+rvm:
+  - ruby-2.0.0-p598
+  - ruby-2.2.0
+  - jruby-19mode
+  - jruby-9.0.0.0
+env:
+  global:
+    - NSQ_VERSION=0.3.5
+    - GO_VERSION=1.4.2
+    - NSQ_DOWNLOAD=nsq-$NSQ_VERSION.linux-amd64.go$GO_VERSION
+    - JRUBY_OPTS="--server -J-Dfile.encoding=utf8 --2.0"
+install:
+  - wget https://s3.amazonaws.com/bitly-downloads/nsq/$NSQ_DOWNLOAD.tar.gz
+  - tar zxvf $NSQ_DOWNLOAD.tar.gz
+  - export PATH=$NSQ_DOWNLOAD/bin:$PATH
+  - $NSQ_DOWNLOAD/bin/nsqd --data-path=/tmp &
+  - bundle install --jobs=3 --retry=3
+script:
+  - bundle exec rspec
+notifications:
+  email:
+    recipients:
+      - aemadrid@gmail.com
+    on_success: change
+    on_failure: change
+sudo: false

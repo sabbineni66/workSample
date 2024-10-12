@@ -1,0 +1,12 @@
+mysql2:
+  adapter: mysql2
+  database: proximal_records
+  username: root
+  encoding: utf8
+
+postgresql:
+  adapter: postgresql
+  database: proximal_records
+  username: postgres
+  password:
+  min_messages: warning

@@ -1,0 +1,27 @@
+---
+- hosts: exoscale
+  remote_user: root
+  vars:
+    password: whatisthis
+    bot_token: "{{ lookup('env','BOT_TOKEN') }}" 
+    papertrail_host: "{{ lookup('env','PAPERTRAIL_HOST') }}" 
+    papertrail_port: "{{ lookup('env', 'PAPERTRAIL_PORT') }}"
+    logz_host: "{{ lookup('env','LOGZ_HOST') }}" 
+    logz_token: "{{ lookup('env', 'LOGZ_TOKEN') }}"
+  tasks:
+    - name: Crea usuario
+      user: name=bot shell=/bin/bash groups=users,sudo append=yes password={{password}}
+    - name: Crea directorios
+      file: path=/home/bot/lib/go/bin owner=bot state=directory mode=0755
+    - name: Instala supervisor
+      apt: name=supervisor state=present
+    - name: Configura supervisor
+      copy: src=supervisord.conf dest=/etc/supervisor/supervisord.conf 
+    - name: Configura programa para supervisor
+      template: src=gobot.j2 dest=/etc/supervisor/conf.d/gobot.conf 
+    - name: Ejecuta supervisor
+      service: name=supervisor state=started
+    - name: Descarga aplicaci?n
+      become: yes
+      become_user: bot
+      git: repo=http://github.com/JJ/CuantoQuedaBot dest=/home/bot/CuantoQuedaBot

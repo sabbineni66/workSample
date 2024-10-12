@@ -1,0 +1,23 @@
+{
+  "name": "pipecleaner",
+  "version": "1.0.1",
+  "description": "Filter system using STDIN/STDOUT to be used with UNIX pipes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./test.sh"
+  },
+  "repository": "https://github.com/kevwil/pipecleaner",
+  "keywords": [
+    "pipe",
+    "stdin",
+    "stdout",
+    "stream",
+    "filter"
+  ],
+  "author": "Kevin Williams <kevwil@gmail.com>",
+  "license": "WTFPL",
+  "dependencies": {
+    "cli-color": "~1.0.0",
+    "bufferstream": "~0.6.2"
+  }
+}

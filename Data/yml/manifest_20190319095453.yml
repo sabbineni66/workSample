@@ -1,0 +1,10 @@
+applications:
+- name: queen-anne-cam
+  path: .
+  memory: 64MB
+  instances: 2
+  disk_quota: 1024M
+  hosts:
+  - queen-anne
+  no-hostname: true
+  domain: seattle.watch

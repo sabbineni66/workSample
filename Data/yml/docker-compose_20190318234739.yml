@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+  ruby:
+    build: .
+    command: "bash -c 'bundle install && npm install && bundle exec jekyll server -H 0.0.0.0 --watch --incremental --drafts'"
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/app
+      - gem_data:/usr/local/bundle
+    working_dir: /app
+
+volumes:
+  gem_data:

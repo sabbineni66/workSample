@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+simple_method:
+  code_container: some_class
+  name: simple_method
+  parameters: '(foo)'
+  singleton: false
+  visibility: public
+  force_documentation: false
+  source_code: |-
+    def simple_method(foo)
+      echo "Hello World!"
+    end
+    
+no_comment:
+  code_container: some_class
+  name: no_comment

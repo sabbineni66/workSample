@@ -1,0 +1,155 @@
+---
+meta:
+  azs:
+    z1: (( param "What availability zone should the *_z1 vms be placed in?" ))
+    z2: (( param "What availability zone should the *_z2 vms be placed in?" ))
+    z3: (( param "What availability zone should the *_z3 vms be placed in?" ))
+
+  resource_pools:
+    small:
+      stemcell: (( grab meta.stemcell ))
+      cloud_properties:
+        instance_type: t2.small
+        root_disk:
+          size: 8_000
+        ephemeral_disk:
+          size: 10_240
+          type: gp2
+    medium:
+      stemcell: (( grab meta.stemcell ))
+      cloud_properties:
+        instance_type: t2.medium
+        root_disk:
+          size: 8_000
+        ephemeral_disk:
+          size: 10_240
+          type: gp2
+    large:
+      stemcell: (( grab meta.stemcell ))
+      cloud_properties:
+        instance_type: t2.large
+        root_disk:
+          size: 8_000
+        ephemeral_disk:
+          size: 40_960
+          type: gp2
+
+    rdpgmc:
+      stemcell: (( grab meta.stemcell ))
+      cloud_properties:
+        instance_type: t2.small
+        root_disk:
+          size: 8_000
+        ephemeral_disk:
+          size: 10_240
+
+    rdpg_svc_lb:
+      stemcell: (( grab meta.stemcell ))
+      cloud_properties:
+        instance_type: t2.small
+        root_disk:
+          size: 8_000
+        ephemeral_disk:
+          size: 10_240
+
+resource_pools:
+  - name: errand
+    stemcell: (( grab meta.stemcell ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z1 ))
+      instance_type: t2.small
+      root_disk:
+        size: 8_000
+      ephemeral_disk:
+        size: 10_240
+
+  - name: small_z1
+    .: (( inject meta.resource_pools.small ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z1 ))
+  - name: small_z2
+    .: (( inject meta.resource_pools.small ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z2 ))
+  - name: small_z3
+    .: (( inject meta.resource_pools.small ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z3 ))
+
+  - name: medium_z1
+    .: (( inject meta.resource_pools.medium ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z1 ))
+  - name: medium_z2
+    .: (( inject meta.resource_pools.medium ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z2 ))
+  - name: medium_z3
+    .: (( inject meta.resource_pools.medium ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z3 ))
+
+  - name: large_z1
+    .: (( inject meta.resource_pools.large ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z1 ))
+  - name: large_z2
+    .: (( inject meta.resource_pools.large ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z2 ))
+  - name: large_z3
+    .: (( inject meta.resource_pools.large ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z3 ))
+
+  - name: rdpgmc_z1
+    .: (( inject meta.resource_pools.rdpgmc ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z1 ))
+  - name: rdpgmc_z2
+    .: (( inject meta.resource_pools.rdpgmc ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z2 ))
+  - name: rdpgmc_z3
+    .: (( inject meta.resource_pools.rdpgmc ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z3 ))
+
+  - name: rdpgsc_z1
+    .: (( inject meta.resource_pools.rdpgsc ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z1 ))
+  - name: rdpgsc_z2
+    .: (( inject meta.resource_pools.rdpgsc ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z2 ))
+  - name: rdpgsc_z3
+    .: (( inject meta.resource_pools.rdpgsc ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z3 ))
+
+  - name: rdpg_svc_lb_z1
+    .: (( inject meta.resource_pools.rdpg_svc_lb ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z1 ))
+  - name: rdpg_svc_lb_z2
+    .: (( inject meta.resource_pools.rdpg_svc_lb ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z2 ))
+  - name: rdpg_svc_lb_z3
+    .: (( inject meta.resource_pools.rdpg_svc_lb ))
+    cloud_properties:
+      availability_zone: (( grab meta.azs.z3 ))
+
+compilation:
+  workers: 3
+  network: rdpgmc_z3
+  reuse_compilation_vms: true
+  cloud_properties:
+    instance_type: c4.2xlarge
+    root_disk:
+      size: 8_000
+    ephemeral_disk:
+      size: 10_240
+    availability_zone: (( grab meta.azs.z1 ))
+

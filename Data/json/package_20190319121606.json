@@ -1,0 +1,35 @@
+{
+  "name": "bablog",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "SET DEBUG='express-blog:*' SET NODE_ENV='development' nodemon --inspect bin/www",
+    "dev1": "nodemon --inspect bin/www",
+    "dev2": "SET DEBUG=express set DEBUG",
+    "lint": "yarn eslint .",
+    "migrate": "knex migrate:latest"
+  },
+  "dependencies": {
+    "body-parser": "1.18.x",
+    "bookshelf": "^0.10.4",
+    "checkit": "^0.7.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "3.1.x",
+    "express": "4.16.x",
+    "knex": "^0.13.0",
+    "moment": "^2.19.2",
+    "morgan": "1.9.x",
+    "node-sass-middleware": "0.x",
+    "pg": "7.3.x",
+    "pug": "2.0.0-rc.4",
+    "ramda": "0.25.x",
+    "serve-favicon": "2.4.x"
+  },
+  "devDependencies": {
+    "eslint": "4.x",
+    "eslint-config-airbnb-base": "12.x",
+    "eslint-plugin-import": "2.8.x",
+    "nodemon": "^1.12.1"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "purescreeps",
+  "main": "index.js",
+  "authors": [
+    "Lee Henson <lee.m.henson@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/leemhenson/purescreeps",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purescript-screeps": "^0.1.4"
+  }
+}

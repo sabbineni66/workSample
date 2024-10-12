@@ -1,0 +1,33 @@
+cs:
+  will_paginate:
+    previous_label: "&#8592; P?edchoz?"
+    next_label: "Dal?? &#8594;"
+    page_gap: "&hellip;"
+
+    page_entries_info:
+      single_page:
+        zero:  "%{model} nenalezen"
+        one:   "Zobrazuji 1 %{model}"
+        other: "Zobrazuji v?echny %{count} %{model}"
+      single_page_html:
+        zero:  "%{model} nenalezen"
+        one:   "Zobrazuji <b>1</b> %{model}"
+        other: "Zobrazuji <b>v?echny&nbsp;%{count}</b> %{model}"
+
+      multi_page: "Zobrazuji: %{model} %{from} - %{to} z %{count} celkem"
+      multi_page_html: "<h6 class='pull-left'>Zobrazuji:</h6>&nbsp;%{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> z <b>%{count}</b> celkem"
+
+    models:
+      entry:
+        zero: z?znam
+        one:  z?znam
+        few:  z?znamy
+        other: z?znamy
+
+    # line_item:
+    #   page_entries_info:
+    #     single_page:
+    #       zero:  "Your shopping cart is empty"
+    #       one:   "Displaying one item in your cart"
+    #       other: "Displaying all %{count} items"
+    #     multi_page: "Displaying items %{from} - %{to} of %{count} in total"

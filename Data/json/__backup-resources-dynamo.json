@@ -1,0 +1,217 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "IAM and DynamoDB Resources for SOBS",
+  "Resources": {
+    "FrontEndS3": {
+      "Type": "AWS::S3::Bucket",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "AccessControl": "PublicRead",
+        "BucketName": "sobs.client.${stage}.${region}",
+        "WebsiteConfiguration": {
+          "IndexDocument": "index.html",
+          "ErrorDocument": "error.html"
+        }
+      }
+    },
+    "FrontEndS3Policy": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "FrontEndS3"
+        },
+        "PolicyDocument": {
+          "Version": "2008-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": "*"
+              },
+              "Action": "s3:GetObject",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:aws:s3:::",
+                    {
+                      "Ref": "FrontEndS3"
+                    },
+                    "/*"
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "DynamoDbConfigTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "id",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "id",
+            "KeyType": "HASH"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "TableName": "${project}-config-${stage}"
+      }
+    },
+    "DynamoDbSObjectTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "id",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "sobject_type",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "id",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "sobject_type",
+            "KeyType": "RANGE"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "TableName": "${project}-sobjects-${stage}"
+      }
+    },
+    "DynamoDbMetadataTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "name",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "type",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "name",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "type",
+            "KeyType": "RANGE"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "TableName": "${project}-metadata-${stage}"
+      }
+    },
+    "IamRoleLambda": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "lambda.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "Path": "/"
+      }
+    },
+    "IamPolicyLambda": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyName": "${stage}-${project}-lambda",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Resource": "arn:aws:logs:${region}:*:*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": "*",
+              "Resource": "arn:aws:dynamodb:${region}:*:table/${project}-sobjects-${stage}"
+            },
+            {
+              "Effect": "Allow",
+              "Action": "*",
+              "Resource": "arn:aws:dynamodb:${region}:*:table/${project}-metadata-${stage}"
+            },
+            {
+              "Effect": "Allow",
+              "Action": "*",
+              "Resource": "arn:aws:dynamodb:${region}:*:table/${project}-config-${stage}"
+            }
+          ]
+        },
+        "Roles": [
+          {
+            "Ref": "IamRoleLambda"
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "WebsiteURL": {
+      "Value": {
+        "Fn::GetAtt": [
+          "FrontEndS3",
+          "WebsiteURL"
+        ]
+      },
+      "Description": "URL for website hosted on S3"
+    },
+    "IamRoleArnLambda": {
+      "Description": "ARN of the lambda IAM role",
+      "Value": {
+        "Fn::GetAtt": [
+          "IamRoleLambda",
+          "Arn"
+        ]
+      }
+    }
+  }
+}

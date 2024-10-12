@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  start_date: 2017-05-21
+  end_date: 2017-05-21
+  multiplier: 1
+  tournament: one
+
+two:
+  year: 1
+  start_date: 2017-05-21
+  end_date: 2017-05-21
+  multiplier: 1
+  tournament: two

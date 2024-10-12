@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "jasmine-node": "*",
+    "underscore" : "*"
+  },
+
+  "scripts": {
+    "test": "./node_modules/jasmine-node/bin/jasmine-node --verbose specs/"
+  }
+}

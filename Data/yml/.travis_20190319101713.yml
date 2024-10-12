@@ -1,0 +1,28 @@
+language: objective-c
+before_install:
+  - ruby --version
+  - sudo chown -R travis ~/Library/RubyMotion
+# Figure out if we have latest RubyMotion
+  - motion --version
+  - sudo motion update
+  - motion --version
+install:
+  - ruby -S bundle install
+# rvm:
+#   - "1.9.3"
+script:
+  - bundle install
+  - bundle exec rake clean
+  - bundle exec rake spec
+
+# before_install:
+#     - (ruby --version)
+#     - sudo chown -R travis ~/Library/RubyMotion
+#     - mkdir -p ~/Library/RubyMotion/build
+#     - sudo motion update
+# script:
+#     - bundle install
+#     - bundle exec rake clean
+#     - bundle exec rake spec
+#     - bundle exec rake clean
+#     - bundle exec rake spec osx=true

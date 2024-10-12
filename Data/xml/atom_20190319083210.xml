@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: talks | Share what you know]]></title>
+  <link href="http://pablete.github.io/blog/categories/talks/atom.xml" rel="self"/>
+  <link href="http://pablete.github.io/"/>
+  <updated>2014-04-01T00:36:16-07:00</updated>
+  <id>http://pablete.github.io/</id>
+  <author>
+    <name><![CDATA[Pablo Delgado]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Neo4j for Ruby on Rails]]></title>
+    <link href="http://pablete.github.io/blog/2010/11/05/neo4j-and-jruby/"/>
+    <updated>2010-11-05T12:00:00-07:00</updated>
+    <id>http://pablete.github.io/blog/2010/11/05/neo4j-and-jruby</id>
+    <content type="html"><![CDATA[<p>?Neo4j is a graph database. It is an embedded, disk-based, fully transactional Java persistence engine that stores data structured in graphs rather than in tables. A graph (mathematical lingo for a network) is a flexible data structure that allows a more agile and rapid style of development.?</p>
+
+<p>Neo4j allows you to map objects to nodes and relations, that is a more natural fit than mapping them to relational tables.
+Modeling with elements of a graph is substantially faster for semi?structured data (Recall that semi?structured data is data that has few mandatory but many optional attributes).</p>
+
+<p>Neo4j is a powerful graph database/engine that every rails developer should know.</p>
+
+<p>It turns out that I got involved with neo4j evluating a graph-databse for several graph-intensive operations we had to perform over an 8million vertices/100million edges graph. I decided to give a talk in the Spanish Rails Confenrence 2010 about Neo4j and graph-databases.</p>
+
+<p>The title of my talk was <strong>Neo4j for Ruby on Rails</strong></p>
+
+<p>I did cover:</p>
+
+<ul>
+  <li>An overview of the technology of graph databases (particularly neo4j database)</li>
+  <li>How to model your world with nodes, relationships and properties.</li>
+  <li>How to use neo4j with jruby, neo4j-rails for ruby on rails and neo4j-rest JSON REST API</li>
+  <li>Implement simple graph recommender (using traversals), and compare it to a global recommender (using the whole graph at once)</li>
+</ul>
+
+<p><div class="embed-video-container"><iframe src="http://www.slideshare.net/slideshow/embed_code/5728168" width="600" height="440" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe></div></p>
+
+<p><iframe src="http://player.vimeo.com/video/21961499?color=ffffff" width="600" height="440" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe><p><a href="http://vimeo.com/21961499">Neo4j and Rails - Conferencia Rails 2010</a> from <a href="http://vimeo.com/pablete">pablete</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+</p>
+
+<p>Here are some photos (thanks @valakirka):</p>
+
+<p><img src="/photos/0013_large.jpg" width="600" title="?Pablo Delgado Neo4j: Beginning?" ></p>
+
+<p><img src="/photos/0014_large.jpg" width="600" title="?Pablo Delgado Neo4j: Edges?" ></p>
+
+<p><img src="/photos/0015_large.jpg" width="600" title="?Pablo Delgado Neo4j?" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cassandra and Ruby. Conferencia Rails. Madrid 2009]]></title>
+    <link href="http://pablete.github.io/blog/2009/11/27/cassandra-and-ruby/"/>
+    <updated>2009-11-27T17:30:00-08:00</updated>
+    <id>http://pablete.github.io/blog/2009/11/27/cassandra-and-ruby</id>
+    <content type="html"><![CDATA[<p>I been speaking about Apache Cassandra database at the Spanish Rails Confenrence 2009.</p>
+
+<p>The title of my talk was <a href="http://app.conferenciarails.org/talks/42-cassandra-db-que-tienen-facebook-twitter-y-digg-en-comun">Cassandra DB: ?Qu? tienen Facebook, Twitter y Digg en com?n?</a></p>
+
+<p><iframe src="http://player.vimeo.com/video/11974292?color=ffffff" width="600" height="440" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe><p><a href="http://vimeo.com/11974292">Cassandra - Conferencia Rails 2009</a> from <a href="http://vimeo.com/pablete">pablete</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+</p>
+
+<p><div class="embed-video-container"><iframe src="http://www.slideshare.net/slideshow/embed_code/2834738" width="600" height="440" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe></div></p>
+
+<p>Here are some photos of the talk:</p>
+
+<p><img src="/photos/0009_large.jpg" width="600" title="?Pablo Delgado Cassandra and Ruby: With the microphone?" ></p>
+
+<p><img src="/photos/0010_large.jpg" width="600" title="?Pablo Delgado Cassandra and Ruby: Cassandra?" ></p>
+
+<p><img src="/photos/0011_large.jpg" width="600" title="?Pablo Delgado Cassandra and Ruby: Why Cassandra?" ></p>
+
+<p><img src="/photos/0012_large.jpg" width="600" title="?Pablo Delgado Cassandra and Ruby: From far away?" ></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Euruko 2009 is over]]></title>
+    <link href="http://pablete.github.io/blog/2009/05/11/euruko-2009-is-over/"/>
+    <updated>2009-05-11T12:00:00-07:00</updated>
+    <id>http://pablete.github.io/blog/2009/05/11/euruko-2009-is-over</id>
+    <content type="html"><![CDATA[<p>Euruko 2009 conference in Barcelona, Spain was excelent! The venue was really good. Everything was very well organized by the great people of the SRUG.</p>
+
+<p>My favorite talks were:</p>
+
+<ul>
+  <li>Javier Ramirez with <a href="http://2009.euruko.org/talks/9-fun-with-ruby-and-without-r-s-program-your-own-games-with-gosu/index.html">Fun with ruby (and without r***s) Program your own games with gosu</a></li>
+  <li>Joshua Sierles with <a href="http://2009.euruko.org/talks/12-chef-the-new-ruby-system-management-tool/index.html">Automate Everything: Cooking with Chef</a></li>
+  <li>Aslak Helles?y with <a href="http://2009.euruko.org/talks/22-quality-code-with-cucumber/index.html">Quality code with Cucumber</a></li>
+</ul>
+
+<p>Here are some photos I took:</p>
+
+<p><img src="/photos/0004_large.jpg" width="600" title="?Pablo Delgado?" ></p>
+
+<p><img src="/photos/0007_large.jpg" width="600" title="?Joshua Sierles and Xavi Noria?" ></p>
+
+<p><img src="/photos/0005_large.jpg" width="600" title="?Euruko 2009 is over?" ></p>
+
+<p><img src="/photos/0008_large.jpg" width="600" title="?Spanish Ruby User Group?" ></p>
+
+<p>The rest of the photos can be seen in flickr, just search for the tag <a href="http://www.flickr.com/photos/tags/euruko2009/">#euruko2009</a></p>
+
+<p>Next Euruko will take place in Krakow, Poland on the 22nd and 23rd of May, 2010.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Talking at Conferencia Rails. Madrid 2007]]></title>
+    <link href="http://pablete.github.io/blog/2007/11/23/conferencia-rails-2007/"/>
+    <updated>2007-11-23T12:00:00-08:00</updated>
+    <id>http://pablete.github.io/blog/2007/11/23/conferencia-rails-2007</id>
+    <content type="html"><![CDATA[<h2 id="intro">Intro</h2>
+
+<p>I escaped London for a few days to go to Conferencia Rails 2007 in Madrid. There I gave a talk about much ranted Rails Scalability.</p>
+
+<p>The title of the talk in spanish was ?Escalabilidad y las cosas de las que nadie se atrevio a hablar?.</p>
+
+<p>Summary of the talk:</p>
+
+<ul>
+  <li>Architecture and typical Rails deployment configurations.</li>
+  <li>Use of Nginx as a static assets server.</li>
+  <li>Mongrel and Evented Mongrel.</li>
+  <li>Multithreaded image Uploads with mongrel and/or merb (instead of attatchment_fu)</li>
+  <li>Activerecord optimizations (hacks, active_record_context plugin)</li>
+  <li>Caches, pasive expirations. Cache observing daemons.</li>
+  <li>Configuration and monitoring of a production Server. (monit, munin tools)</li>
+</ul>
+
+<p>Here is the video of the talk, and of course, the slides.</p>
+
+<p><div class="embed-video-container"><iframe width="600" height="400" src="http://www.youtube.com/embed/IVwgHUgdLy4" frameborder="0" allowfullscreen></iframe></div></p>
+
+<p>The talk went fine, I have had so much fun speaking spanish again.</p>
+
+<p>Here are some photos:</p>
+
+<p><img src="/photos/0001_large.jpg" width="600" title="?Conferencia Rails 2007?" ></p>
+
+<p><img src="/photos/0002_large.jpg" width="600" title="?Merb framework?" ></p>
+
+<p><img src="/photos/0003_large.jpg" width="600" title="?Rails stack?" ></p>
+
+]]></content>
+  </entry>
+  
+</feed>

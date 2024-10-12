@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "name": "now-tester-123",
+  "builds": [
+    {
+      "src": "**/*.php",
+      "use": "@now/php"
+    },
+    {
+      "src": "**/*.html",
+      "use": "@now/static"
+    },
+    {
+      "src": "**/*.js",
+      "use": "@now/node"
+    },
+    {
+      "src": "**/*.md",
+      "use": "@now/md"
+    },
+    {
+      "src": "**/*.sh",
+      "use": "@now/bash"
+    }
+  ]
+}

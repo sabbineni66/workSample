@@ -1,0 +1,3 @@
+{
+  "references": [{ "path": "./stacks/project-one" }]
+}

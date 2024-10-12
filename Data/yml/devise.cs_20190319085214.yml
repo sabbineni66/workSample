@@ -1,0 +1,96 @@
+#   Copyright (c) 2010, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+cs:
+  devise:
+    confirmations:
+      confirmed: "V?? ??et byl usp??n? potvrzen. Nyn? jste p?ihl??eni."
+      new:
+        resend_confirmation: "Zaslat instrukce o potvrzen?"
+      send_instructions: "B?hem n?kolika minut obdr??te email s instrukcemi k potvrzen? va?eho ??tu."
+    failure:
+      inactive: "V?? ??et je?t? nebyl aktivov?n."
+      invalid: "Neplatn? email nebo heslo."
+      invalid_token: "Neplatn? autentiza?n? token."
+      locked: "V?? ??et je uzam?en."
+      timeout: "Va?e sezen? vypr?elo, pro pokra?ov?n? se pros?m p?ihla?te znovu."
+      unauthenticated: "Pro pokra?ov?n? se mus?te p?ihl?sit nebo si vytvo?it ??et."
+      unconfirmed: "P?ed pokra?ov?n?m mus?te potvrdit sv?j ??et."
+    invitations:
+      invitation_token_invalid: "Pozv?nka je neplatn?!"
+      send_instructions: "Va?e pozv?nka byla odesl?na."
+      updated: "Va?e heslo bylo ?sp??n? zm?n?no. Nyn? jste p?ihl??en."
+    mailer:
+      confirmation_instructions:
+        confirm: "Potvrdit m?j ??et"
+        subject: "Informace o potvrzen?"
+        you_can_confirm: "V?? ??et m??ete potvrdit kliknut?m na tento odkaz:"
+      hello: "Zdrav?m %{email}!"
+      invitation:
+        accept: "Potvrdit pozv?nku"
+        ignore: "Pokud nechcete potvrdit pozv?n?, tento e-mail pros?m ignorujte."
+        no_account_till: "Pro dokon?en? registrace klikn?te pros?m na odkaz uveden? n??e."
+        subject: "Byl jste pozv?n na Diasporu!"
+      inviters:
+        accept_at: ", na %{url}, akceptujte kliknut?m na odkaz."
+        has_invited_you: "%{name} V?s pozval na Diasporu"
+        have_invited_you: "%{names} V?s pozvali na Diasporu"
+      reset_password_instructions:
+        change: "Zm?nit moje heslo"
+        ignore: "Pokud nechcete potvrdit pozv?n?, tento e-mail pros?m ignorujte."
+        someone_requested: "Vy??dali jste si zm?nu hesla, kterou m??ete prov?st kliknut?m na n??e uveden? odkaz."
+        subject: "Instrukce ke zm?n? hesla"
+        wont_change: "Va?e heslo nen? mo?n? zm?nit dokud nekliknete na uveden? odkaz a nevytvo??te si nov?."
+      unlock_instructions:
+        account_locked: "V?? ??et byl zablokovan? kv?li vysok?mu po?tu ne?sp??n?ch p?ihl??en?."
+        click_to_unlock: "Kliknut?m na uveden? odkaz odemknete sv?j ??et:"
+        subject: "Instrukce k odemknut? ??tu."
+        unlock: "Odemknout m?j ??et"
+      welcome: "V?tej %{email}!"
+    passwords:
+      edit:
+        change_password: "Zm?nit heslo"
+      new:
+        forgot_password: "Zapomn?li jste heslo?"
+        no_account: "S touto emailovou adresou neexistuje ??dn? ??et. Pokud ?ek?te na pozv?n?, budeme je vyd?vat co nejd??ve to bude mo?n?"
+        send_password_instructions: "Zaslat instrukce k zasl?n? nov?ho hesla."
+      send_instructions: "B?h?m n?kolika minut obdr??te email s instrukcemi k resetnut? hesla."
+      updated: "Va?e heslo bylo ?sp??n? zm?n?no. Nyn? jste p?ihl??eni"
+    registrations:
+      destroyed: "Sbohem! V?? ??et byl ?sp??n? zru?en. Brzy navid?nou."
+      signed_up: "?sp??n? jste vytvo?ili ??et. Pokud je tak server nastaven, byl v?m zasl?n potvrzovac? email."
+      updated: "?sp??n? jste upravili sv?j ??et."
+    sessions:
+      new:
+        alpha_software: "Pou??v?te testovac? verzi."
+        bugs_and_feedback: "Upozor?ujeme na mo?nost v?skytu chyb. Doporu?ujeme v?m pou??t tla??tko Zp?tn? vazba na prav? stran? va?eho prohl??e?e pro nahl??en? probl?m?! Budeme pracovat nejrychleji jak m??eme, abychom vy?e?ili nahl??en? probl?my."
+        bugs_and_feedback_mobile: "Upozor?ujeme na mo?nost v?skytu chyb. Doporu?ujeme v?m, abyste hl?sili jak?koli probl?my. Budeme pracovat nejrychleji jak m??eme, abychom vy?e?ili nahl??en? probl?my."
+        login: "P?ihl?sit"
+        modern_browsers: "podporuje pouze modern? prohl??e?e."
+        password: "Heslo"
+        remember_me: "Zapamatovat si m?"
+        sign_in: "P?ihl?sit"
+        username: "U?ivatelsk? jm?no"
+      signed_in: "P?ihl??en? prob?hlo ?sp??n?."
+      signed_out: "Odhl??en? prob?hlo ?sp??n?."
+    shared:
+      links:
+        forgot_your_password: "Zapomn?li jste heslo?"
+        receive_confirmation: "Neobdr?eli jste instrukce na potvrzen??"
+        receive_unlock: "Neobdr?eli jste instrukce na odblokov?n??"
+        sign_in: "P?ihl??en?"
+        sign_up: "Zapsat se"
+        sign_up_closed: "Moment?ln? jsou dal?? registrace pozastaven?."
+      mail_signup_form:
+        sign_up_for_an_invite: "Po??dat o pozv?nku!"
+    unlocks:
+      new:
+        resend_unlock: "Instrukce ke zm?n? hesla"
+      send_instructions: "B?hem n?kolika minut obdr??te email s instrukcemi k odemknut? va?eho ??tu."
+      unlocked: "V?? ??et byl ?sp??n? odemknut. Nyn? jste p?ihl??eni."
+  errors:
+    messages:
+      already_confirmed: "ji? bylo potvrzeno"
+      not_found: "nenalezeno"
+      not_locked: "nebylo zam?eno"

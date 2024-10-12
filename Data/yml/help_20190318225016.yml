@@ -1,0 +1,6 @@
+help:
+    load: load will accept and parse a CSV file.
+    "queue count": queue count outputs the number of records in the current queue.
+    "queue clear": queue clear empties the queue.
+    "queue print": queue print will print out a tab-delimited data table with a header row.
+    find: find loads the queue with all records matching the criteria for the given attribute. Example usage - find zipcode 20011

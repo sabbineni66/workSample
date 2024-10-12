@@ -1,0 +1,23 @@
+enemy_count: 6
+tank:
+  enemy:
+    bullet:
+      image: 'assets/bullet.png'
+      burst: 3.0  
+      reload_time: 10 
+      track_time: 30
+    images:
+      ready: 'assets/green_creature.png'
+      waiting: 'assets/green_creature.png'
+    size: 25
+  player:
+    bullet:
+      image: 'assets/red_bullet.png'
+      burst: 7.0
+      reload_time: 10
+    has_recoil: true
+    images:
+      ready: 'assets/pink_creature_ready.png'
+      waiting: 'assets/pink_creature.png'
+    size: 25 
+    

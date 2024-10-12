@@ -1,0 +1,17 @@
+---
+- hosts: agents
+  vars:
+    - setHostname: true
+    - iojsVersion: 'v1.2.0'
+    - downloadDir: '{{ ansible_env.HOME }}/download'
+  tasks:
+    - include: roles/common/tasks/01-sethostname.yml
+      when: setHostname
+    - include: roles/common/tasks/02-install-basic-software.yml
+    - include: roles/common/tasks/io.js.yml
+
+  roles:
+    - { role: database }
+    - { role: monitoring }
+    - { role: web }
+    - { role: dns }

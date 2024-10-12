@@ -1,0 +1,33 @@
+{
+  "name": "markov-mashup",
+  "version": "1.0.0",
+  "description": "A markov-chain-based text-generator featuring explicit source-matter crossover options.",
+  "main": "index.js",
+  "bin": "cli-bin.js",
+  "scripts": {
+    "build": "tsc && echo '#!/usr/bin/env node' > cli-bin.js && cat cli.js >> cli-bin.js",
+    "clean": "rm *.js test/*.js",
+    "format": "find . -iname \"*.ts\" -o -iname \"*.js\" | grep -v node_modules | xargs clang-format --style=file -i",
+    "test": "mocha",
+    "watch": "tsc-watch --onSuccess \"npm test\""
+  },
+  "author": "Brendan Baldwin <brendan@usergenic.com>",
+  "license": "TBD",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/chalk": "^2.2.0",
+    "@types/minimist": "^1.2.0",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.5.4",
+    "chai": "^4.1.2",
+    "clang-format": "^1.2.3",
+    "mocha": "^5.2.0",
+    "source-map-support": "^0.5.6",
+    "tsc-watch": "^1.0.26",
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "minimist": "^1.2.0"
+  }
+}

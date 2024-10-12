@@ -1,0 +1,18 @@
+---
+
+- name: install media applications
+  pacman: name={{ item }} state=installed
+  with_items:
+    - alsa-utils
+    - mpv
+    - libva-intel-driver
+    - spotify
+    - python2-youtube-dl
+    - sxiv
+    - gphoto2
+    - gimp
+    - mupdf
+    - rtorrent
+    - p7zip
+    - unrar
+  tags: media

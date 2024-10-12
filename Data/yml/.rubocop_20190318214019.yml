@@ -1,0 +1,20 @@
+Metrics/AbcSize:
+  Max: 21
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 12
+
+Style/AlignHash:
+  Enabled: true
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Style/Documentation:
+  Enabled: false
+
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses
+
+Style/SpaceAroundOperators:
+  Enabled: false

@@ -1,0 +1,27 @@
+{
+  // Required
+  "name": "Focused Reading Mode",
+  "version": "0.0.1",
+
+  // Recommended
+  "description": "__MSG_description__",
+  "default_locale": "en",
+
+//  "background_page": "background.html",
+
+//  "browser_action": {
+//      "default_icon": "images/main.png",
+//      "default_title": "__MSG_rootTooltip__"
+//  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery.js", "main.js"]
+    }
+  ]
+
+//  "permissions": [
+//      "tabs"
+//  ]
+}

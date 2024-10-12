@@ -1,0 +1,15 @@
+production:
+  adapter:    mysql
+  encoding:   utf8
+  reconnect:  false
+  database:   zomg_production
+  pool:       5
+  username:   root
+  socket:     /tmp/mysql.sock
+
+# production:
+#   adapter:    postgresql
+#   encoding:   unicode
+#   database:   zomg_production
+#   pool:       5
+#   username:   carllerche

@@ -1,0 +1,14 @@
+{
+    "name": "10ft"
+  , "version": "0.1.0"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.8"
+    , "ejs": "*"
+    , "mongoose": "*"
+    , "semver": "*"
+    , "async": "*"
+    , "request": "*"
+    , "ntwitter": "*"
+  }
+}

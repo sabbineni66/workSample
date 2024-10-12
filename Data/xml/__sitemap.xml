@@ -1,0 +1,42 @@
+<?
+if(!$filters) $filters = array();
+if(!$scope) $scope = "live";
+if($image_sitemap && !$image_scope) $image_scope = "available";
+if($image_sitemap && !$image_class) $image_class = "WildfireMedia";
+if($image_sitemap && !$image_types) $image_types = array("image");
+if($nodes === false && $model){
+  if($filters) foreach($filters as $filter) if(is_array($filter)) $model->filter($filter['col'], $filter['val'], $filter['operator']);
+  $nodes = $model->scope($scope)->roots();
+}
+?>
+
+  <?foreach($nodes as $branch):?>
+    <url>
+      <loc>http<?if($_SERVER['HTTPS']):?>s<?endif?>://<?=$_SERVER['HTTP_HOST']?><?=htmlspecialchars($branch->permalink)?></loc>
+  	<lastmod><?=date("Y-m-d", strtotime($branch->date_modified))?></lastmod>
+  	<changefreq><?=$change?></changefreq>
+  	<priority><?=$level?></priority>
+    <?if($image_sitemap === true && ($joins = $branch->file_meta_get(false, $image_types)) && $joins->count() ):?>
+    <?foreach($joins as $join):?>
+      <?if($img = new $image_class($join->wildfire_media_id)):?>
+      <image:image>
+        <image:loc>http<?if($_SERVER['HTTPS']):?>s<?endif?>://<?=$_SERVER['HTTP_HOST']?><?=htmlspecialchars($img->permalink(false))?></image:loc>
+        <?if($join->title):?><image:caption><![CDATA[<?=$join->title?>]]></image:caption><?endif?>
+        <image:title><![CDATA[<?=$img->title?>]]></image:title>
+      </image:image>
+      <?endif?>
+    <?endforeach?>
+    <?endif?>
+  	</url>
+  	<?
+  	$kids = $branch->children;
+  	if($kids){
+  	  $kids = $kids->scope($scope);
+  	  if($filters) foreach($filters as $filter) if(is_array($filter)) $kids->filter($filter['col'], $filter['val'], $filter['operator']);
+  	  $kids = $kids->all();
+  	}
+  	?>
+    <?if($kids && ($kids = $kids->all()) && $kids->count()):?>
+      <?=partial("__sitemap", array('filters'=>$filters, "scope"=>$scope, 'nodes'=>$kids, 'level'=>($level-0.2), 'change'=>"monthly", 'image_sitemap'=>$image_sitemap, 'image_scope'=>$image_scope, 'image_class'=>$image_class, 'image_types'=>$image_types), "xml")?>
+    <?endif?>
+  <?endforeach?>

@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ldml>
+	<identity>
+		<version number="$Revision: 1.88 $"/>
+		<generation date="$Date: 2009/06/15 03:46:23 $"/>
+		<language type="am"/>
+	</identity>
+	<localeDisplayNames>
+		<languages>
+			<language type="aa">????</language>
+			<language type="ab">?????</language>
+			<language type="af">???????</language>
+			<language type="am">????</language>
+			<language type="ar">????</language>
+			<language type="as">?????</language>
+			<language type="ay">?????</language>
+			<language type="az">????????</language>
+			<language type="ba">?????</language>
+			<language type="be">?????</language>
+			<language type="bg">?????</language>
+			<language type="bh">???</language>
+			<language type="bi">?????</language>
+			<language type="bn">?????</language>
+			<language type="bo">?????</language>
+			<language type="br">?????</language>
+			<language type="bs">??????</language>
+			<language type="byn">???</language>
+			<language type="ca">?????</language>
+			<language type="co">?????</language>
+			<language type="cs">???</language>
+			<language type="cy">???</language>
+			<language type="da">???</language>
+			<language type="de">????</language>
+			<language type="dz">??????</language>
+			<language type="el">????</language>
+			<language type="en">??????</language>
+			<language type="eo">??????</language>
+			<language type="es">????</language>
+			<language type="et">??????</language>
+			<language type="eu">????</language>
+			<language type="fa">?????</language>
+			<language type="fi">???</language>
+			<language type="fil">?????</language>
+			<language type="fj">???</language>
+			<language type="fo">???</language>
+			<language type="fr">??????</language>
+			<language type="fy">????</language>
+			<language type="ga">????</language>
+			<language type="gd">????? ????</language>
+			<language type="gez">????</language>
+			<language type="gl">????</language>
+			<language type="gn">????</language>
+			<language type="gu">?????</language>
+			<language type="ha">????</language>
+			<language type="he">?????</language>
+			<language type="hi">????</language>
+			<language type="hr">??????</language>
+			<language type="hu">?????</language>
+			<language type="hy">?????</language>
+			<language type="ia">???????</language>
+			<language type="id">??????</language>
+			<language type="ie">????????</language>
+			<language type="ik">??????</language>
+			<language type="is">???????</language>
+			<language type="it">?????</language>
+			<language type="iu">???????</language>
+			<language type="ja">????</language>
+			<language type="jv">????</language>
+			<language type="ka">??????</language>
+			<language type="kk">????</language>
+			<language type="kl">??????</language>
+			<language type="km">????</language>
+			<language type="kn">????</language>
+			<language type="ko">????</language>
+			<language type="ks">?????</language>
+			<language type="ku">?????</language>
+			<language type="ky">?????</language>
+			<language type="la">????</language>
+			<language type="ln">?????</language>
+			<language type="lo">????</language>
+			<language type="lt">??????</language>
+			<language type="lv">?????</language>
+			<language type="mg">?????</language>
+			<language type="mi">????</language>
+			<language type="mk">?????</language>
+			<language type="ml">??????</language>
+			<language type="mn">??????</language>
+			<language type="mo">??????</language>
+			<language type="mr">????</language>
+			<language type="ms">????</language>
+			<language type="mt">?????</language>
+			<language type="my">????</language>
+			<language type="na">???</language>
+			<language type="ne">????</language>
+			<language type="nl">??</language>
+			<language type="nn">???? ??? ???????</language>
+			<language type="no">??????</language>
+			<language type="oc">?????</language>
+			<language type="om">????</language>
+			<language type="or">????</language>
+			<language type="pa">?????</language>
+			<language type="pl">???</language>
+			<language type="ps">????</language>
+			<language type="pt">??????</language>
+			<language type="pt_BR">?????? (?????)</language>
+			<language type="pt_PT">?????? (??????)</language>
+			<language type="qu">???</language>
+			<language type="rm">????</language>
+			<language type="rn">????</language>
+			<language type="ro">?????</language>
+			<language type="ru">???</language>
+			<language type="rw">????????</language>
+			<language type="sa">???????</language>
+			<language type="sd">?????</language>
+			<language type="sg">????</language>
+			<language type="sh">???-??????</language>
+			<language type="si">?????</language>
+			<language type="sid">????</language>
+			<language type="sk">?????</language>
+			<language type="sl">????</language>
+			<language type="sm">????</language>
+			<language type="sn">???</language>
+			<language type="so">????</language>
+			<language type="sq">????</language>
+			<language type="sr">????</language>
+			<language type="ss">????</language>
+			<language type="st">???</language>
+			<language type="su">????</language>
+			<language type="sv">?????</language>
+			<language type="sw">?????</language>
+			<language type="ta">????</language>
+			<language type="te">????</language>
+			<language type="tg">????</language>
+			<language type="th">???</language>
+			<language type="ti">????</language>
+			<language type="tig">???</language>
+			<language type="tk">??????</language>
+			<language type="tl">?????</language>
+			<language type="tlh">???????</language>
+			<language type="tn">?????</language>
+			<language type="to">???</language>
+			<language type="tr">????</language>
+			<language type="ts">????</language>
+			<language type="tt">????</language>
+			<language type="tw">???</language>
+			<language type="ug">??????</language>
+			<language type="uk">?????</language>
+			<language type="und">??????</language>
+			<language type="ur">????</language>
+			<language type="uz">?????</language>
+			<language type="vi">?????</language>
+			<language type="vo">?????</language>
+			<language type="wo">????</language>
+			<language type="xh">???</language>
+			<language type="yi">?????</language>
+			<language type="yo">?????</language>
+			<language type="za">?????</language>
+			<language type="zh">????</language>
+			<language type="zu">???</language>
+		</languages>
+		<scripts>
+			<script type="Arab">????</script>
+			<script type="Armn">?????? ???</script>
+			<script type="Beng">????</script>
+			<script type="Bopo">????</script>
+			<script type="Brai">????</script>
+			<script type="Buhd">???</script>
+			<script type="Cans">????? ???? ???? ?????</script>
+			<script type="Cher">???</script>
+			<script type="Copt">????</script>
+			<script type="Cprt">?????</script>
+			<script type="Cyrl">????</script>
+			<script type="Deva">?????</script>
+			<script type="Dsrt">????</script>
+			<script type="Ethi">???</script>
+			<script type="Geor">????? ???</script>
+			<script type="Goth">???</script>
+			<script type="Grek">???</script>
+			<script type="Gujr">????</script>
+			<script type="Guru">????</script>
+			<script type="Hang">????</script>
+			<script type="Hani">??</script>
+			<script type="Hano">???</script>
+			<script type="Hans">??? ??</script>
+			<script type="Hant">???? ??</script>
+			<script type="Hebr">??????</script>
+			<script type="Hira">????</script>
+			<script type="Hrkt">???? ???? ????</script>
+			<script type="Kana">?????</script>
+			<script type="Khmr">????</script>
+			<script type="Knda">???</script>
+			<script type="Laoo">??</script>
+			<script type="Latn">???</script>
+			<script type="Limb">???</script>
+			<script type="Lina">???? ?</script>
+			<script type="Linb">???? ?</script>
+			<script type="Mlym">?????</script>
+			<script type="Mong">?????? ???</script>
+			<script type="Mymr">?????</script>
+			<script type="Ogam">????</script>
+			<script type="Orya">???</script>
+			<script type="Osma">?????</script>
+			<script type="Qaai">?????</script>
+			<script type="Runr">???</script>
+			<script type="Shaw">???? ???</script>
+			<script type="Sinh">????</script>
+			<script type="Syrc">???</script>
+			<script type="Tagb">??????</script>
+			<script type="Tale">?? ?</script>
+			<script type="Talu">??? ?? ?</script>
+			<script type="Taml">???</script>
+			<script type="Telu">???</script>
+			<script type="Tglg">????</script>
+			<script type="Thaa">???</script>
+			<script type="Thai">??</script>
+			<script type="Tibt">????</script>
+			<script type="Ugar">?????</script>
+			<script type="Vaii">??</script>
+			<script type="Yiii">?</script>
+		</scripts>
+		<territories>
+			<territory type="001">???</territory>
+			<territory type="002">????</territory>
+			<territory type="005">???? ????</territory>
+			<territory type="009">????</territory>
+			<territory type="011">????? ????</territory>
+			<territory type="013">????? ???? [013]</territory>
+			<territory type="014">????? ????</territory>
+			<territory type="015">???? ????</territory>
+			<territory type="017">????? ????</territory>
+			<territory type="018">???? ????</territory>
+			<territory type="019">??????</territory>
+			<territory type="021">???? ????</territory>
+			<territory type="029">?????</territory>
+			<territory type="030">???-????? ??? [030]</territory>
+			<territory type="034">????? ???</territory>
+			<territory type="035">???-????? ??? [035]</territory>
+			<territory type="039">???? ????</territory>
+			<territory type="053">??????? ?? ?? ????</territory>
+			<territory type="054">?????</territory>
+			<territory type="057">?????? [057]</territory>
+			<territory type="061">?????</territory>
+			<territory type="142">???</territory>
+			<territory type="143">????? ???? [143]</territory>
+			<territory type="145">????? ???</territory>
+			<territory type="150">????</territory>
+			<territory type="151">????? ????</territory>
+			<territory type="154">???? ????</territory>
+			<territory type="155">????? ????</territory>
+			<territory type="AD">????</territory>
+			<territory type="AE">?????? ??? ?????</territory>
+			<territory type="AF">???????</territory>
+			<territory type="AG">???? ?? ???</territory>
+			<territory type="AI">?????</territory>
+			<territory type="AL">?????</territory>
+			<territory type="AM">?????</territory>
+			<territory type="AN">??????? ?????</territory>
+			<territory type="AO">????</territory>
+			<territory type="AQ">???????</territory>
+			<territory type="AR">??????</territory>
+			<territory type="AS">????? ???</territory>
+			<territory type="AT">?????</territory>
+			<territory type="AU">???????</territory>
+			<territory type="AW">???</territory>
+			<territory type="AX">????? ????</territory>
+			<territory type="AZ">??????</territory>
+			<territory type="BA">???? ?? ???????</territory>
+			<territory type="BB">?????</territory>
+			<territory type="BD">??????</territory>
+			<territory type="BE">????</territory>
+			<territory type="BF">???? ??</territory>
+			<territory type="BG">?????</territory>
+			<territory type="BH">????</territory>
+			<territory type="BI">????</territory>
+			<territory type="BJ">???</territory>
+			<territory type="BM">????</territory>
+			<territory type="BN">???</territory>
+			<territory type="BO">????</territory>
+			<territory type="BR">????</territory>
+			<territory type="BS">????</territory>
+			<territory type="BT">????</territory>
+			<territory type="BV">????? ???</territory>
+			<territory type="BW">?????</territory>
+			<territory type="BY">????</territory>
+			<territory type="BZ">???</territory>
+			<territory type="CA">???</territory>
+			<territory type="CC">??? ???? ????</territory>
+			<territory type="CD">???</territory>
+			<territory type="CF">??????? ???? ?????</territory>
+			<territory type="CG">???</territory>
+			<territory type="CH">???????</territory>
+			<territory type="CI">?? ???</territory>
+			<territory type="CK">?? ????</territory>
+			<territory type="CL">??</territory>
+			<territory type="CM">????</territory>
+			<territory type="CN">???</territory>
+			<territory type="CO">?????</territory>
+			<territory type="CR">??? ??</territory>
+			<territory type="CS">????</territory>
+			<territory type="CU">??</territory>
+			<territory type="CV">?? ???</territory>
+			<territory type="CX">??? ????</territory>
+			<territory type="CY">?????</territory>
+			<territory type="CZ">?? ?????</territory>
+			<territory type="DE">????</territory>
+			<territory type="DJ">???</territory>
+			<territory type="DK">?????</territory>
+			<territory type="DM">????</territory>
+			<territory type="DO">???? ?????</territory>
+			<territory type="DZ">?????</territory>
+			<territory type="EC">????</territory>
+			<territory type="EE">?????</territory>
+			<territory type="EG">???</territory>
+			<territory type="EH">????? ???</territory>
+			<territory type="ER">????</territory>
+			<territory type="ES">???</territory>
+			<territory type="ET">?????</territory>
+			<territory type="FI">?????</territory>
+			<territory type="FJ">??</territory>
+			<territory type="FK">??????? ????</territory>
+			<territory type="FM">??????</territory>
+			<territory type="FO">???? ????</territory>
+			<territory type="FR">?????</territory>
+			<territory type="GA">???</territory>
+			<territory type="GB">?????</territory>
+			<territory type="GD">????</territory>
+			<territory type="GE">????</territory>
+			<territory type="GF">?????? ????</territory>
+			<territory type="GH">??</territory>
+			<territory type="GI">??????</territory>
+			<territory type="GL">??????</territory>
+			<territory type="GM">????</territory>
+			<territory type="GN">??</territory>
+			<territory type="GP">?????</territory>
+			<territory type="GQ">?????? ??</territory>
+			<territory type="GR">???</territory>
+			<territory type="GS">??? ???? ?? ???? ????? ????</territory>
+			<territory type="GT">?????</territory>
+			<territory type="GU">???</territory>
+			<territory type="GW">???</territory>
+			<territory type="GY">???</territory>
+			<territory type="HK">??? ???</territory>
+			<territory type="HM">???? ?? ??????? ????</territory>
+			<territory type="HN">?????</territory>
+			<territory type="HR">?????</territory>
+			<territory type="HT">???</territory>
+			<territory type="HU">????</territory>
+			<territory type="ID">??????</territory>
+			<territory type="IE">??????</territory>
+			<territory type="IL">?????</territory>
+			<territory type="IN">???</territory>
+			<territory type="IO">?????? ??? ????? ???</territory>
+			<territory type="IQ">???</territory>
+			<territory type="IR">???</territory>
+			<territory type="IS">??????</territory>
+			<territory type="IT">????</territory>
+			<territory type="JM">????</territory>
+			<territory type="JO">????</territory>
+			<territory type="JP">???</territory>
+			<territory type="KE">???</territory>
+			<territory type="KH">?????</territory>
+			<territory type="KI">????</territory>
+			<territory type="KM">????</territory>
+			<territory type="KN">??? ??? ?? ???</territory>
+			<territory type="KP">??? ???</territory>
+			<territory type="KR">??? ???</territory>
+			<territory type="KW">???</territory>
+			<territory type="KY">???? ????</territory>
+			<territory type="LA">???</territory>
+			<territory type="LB">????</territory>
+			<territory type="LC">??? ???</territory>
+			<territory type="LI">????????</territory>
+			<territory type="LK">?????</territory>
+			<territory type="LR">?????</territory>
+			<territory type="LS">???</territory>
+			<territory type="LT">?????</territory>
+			<territory type="LU">???????</territory>
+			<territory type="LV">????</territory>
+			<territory type="LY">???</territory>
+			<territory type="MA">???</territory>
+			<territory type="MC">???</territory>
+			<territory type="MD">????</territory>
+			<territory type="MG">??????</territory>
+			<territory type="MH">???? ?????</territory>
+			<territory type="MK">?????</territory>
+			<territory type="ML">??</territory>
+			<territory type="MM">?????</territory>
+			<territory type="MN">?????</territory>
+			<territory type="MO">???</territory>
+			<territory type="MP">????? ???? ????</territory>
+			<territory type="MQ">?????</territory>
+			<territory type="MR">?????</territory>
+			<territory type="MS">??????</territory>
+			<territory type="MT">???</territory>
+			<territory type="MU">????</territory>
+			<territory type="MV">?????</territory>
+			<territory type="MW">???</territory>
+			<territory type="MX">????</territory>
+			<territory type="MY">????</territory>
+			<territory type="MZ">?????</territory>
+			<territory type="NA">????</territory>
+			<territory type="NC">?? ?????</territory>
+			<territory type="NE">???</territory>
+			<territory type="NF">????? ???</territory>
+			<territory type="NG">?????</territory>
+			<territory type="NI">????</territory>
+			<territory type="NL">??????</territory>
+			<territory type="NO">???</territory>
+			<territory type="NP">???</territory>
+			<territory type="NR">???</territory>
+			<territory type="NU">???</territory>
+			<territory type="NZ">?? ????</territory>
+			<territory type="OM">???</territory>
+			<territory type="PA">???</territory>
+			<territory type="PE">??</territory>
+			<territory type="PF">?????? ?????</territory>
+			<territory type="PG">??? ?? ??</territory>
+			<territory type="PH">?????</territory>
+			<territory type="PK">?????</territory>
+			<territory type="PL">????</territory>
+			<territory type="PM">??? ??? ?? ?????</territory>
+			<territory type="PN">??????</territory>
+			<territory type="PR">??? ??</territory>
+			<territory type="PS">?????? ???</territory>
+			<territory type="PT">?????</territory>
+			<territory type="PW">???</territory>
+			<territory type="PY">????</territory>
+			<territory type="QA">???</territory>
+			<territory type="QO">?? ?? ????</territory>
+			<territory type="RE">?????</territory>
+			<territory type="RO">????</territory>
+			<territory type="RU">???</territory>
+			<territory type="RW">????</territory>
+			<territory type="SA">???????</territory>
+			<territory type="SB">???? ???</territory>
+			<territory type="SC">????</territory>
+			<territory type="SD">???</territory>
+			<territory type="SE">????</territory>
+			<territory type="SG">?????</territory>
+			<territory type="SH">??? ???</territory>
+			<territory type="SI">?????</territory>
+			<territory type="SJ">??????? ?? ?? ??? ????</territory>
+			<territory type="SK">?????</territory>
+			<territory type="SL">?????</territory>
+			<territory type="SM">?? ???</territory>
+			<territory type="SN">????</territory>
+			<territory type="SO">???</territory>
+			<territory type="SR">????</territory>
+			<territory type="ST">?? ?? ?? ?????</territory>
+			<territory type="SV">?? ?????</territory>
+			<territory type="SY">???</territory>
+			<territory type="SZ">??????</territory>
+			<territory type="TC">?????? ????? ????</territory>
+			<territory type="TD">??</territory>
+			<territory type="TF">?????? ???? ????</territory>
+			<territory type="TG">??</territory>
+			<territory type="TH">?????</territory>
+			<territory type="TJ">??????</territory>
+			<territory type="TK">????</territory>
+			<territory type="TL">???? ???</territory>
+			<territory type="TM">????????</territory>
+			<territory type="TN">????</territory>
+			<territory type="TO">???</territory>
+			<territory type="TR">???</territory>
+			<territory type="TT">????? ?? ???</territory>
+			<territory type="TV">???</territory>
+			<territory type="TW">????</territory>
+			<territory type="TZ">?????</territory>
+			<territory type="UA">????</territory>
+			<territory type="UG">????</territory>
+			<territory type="UM">????? ?? ?? ??? ????</territory>
+			<territory type="US">????</territory>
+			<territory type="UY">????</territory>
+			<territory type="UZ">???????</territory>
+			<territory type="VA">????</territory>
+			<territory type="VC">??? ????? ?? ??????</territory>
+			<territory type="VE">?????</territory>
+			<territory type="VG">?????? ???? ????</territory>
+			<territory type="VI">????? ???? ????</territory>
+			<territory type="VN">????</territory>
+			<territory type="VU">????</territory>
+			<territory type="WF">??? ?? ??? ????</territory>
+			<territory type="WS">???</territory>
+			<territory type="YE">???</territory>
+			<territory type="YT">????</territory>
+			<territory type="ZA">??? ????</territory>
+			<territory type="ZM">????</territory>
+			<territory type="ZW">????</territory>
+		</territories>
+		<keys>
+			<key type="calendar">??? ?????</key>
+			<key type="collation">????? ????</key>
+			<key type="currency">????</key>
+		</keys>
+		<types>
+			<type type="big5han" key="collation">???? ???? ??? ???? (Big5)</type>
+			<type type="buddhist" key="calendar">???? ??? ?????</type>
+			<type type="chinese" key="calendar">???? ??? ?????</type>
+			<type type="direct" key="collation">??? ???? ????</type>
+			<type type="gb2312han" key="collation">???? ?? ???? (GB2312) ??? ????</type>
+			<type type="gregorian" key="calendar">????? ??? ?????</type>
+			<type type="hebrew" key="calendar">??????? ??? ?????</type>
+			<type type="islamic" key="calendar">????? ??? ?????</type>
+			<type type="islamic-civil" key="calendar">????? ???? ??? ?????</type>
+			<type type="japanese" key="calendar">???? ??? ?????</type>
+			<type type="phonebook" key="collation">???? ??? ??? ????</type>
+			<type type="pinyin" key="collation">????? ??? ????</type>
+			<type type="stroke" key="collation">????/????? ??? ????</type>
+			<type type="traditional" key="collation">???? ??? ????</type>
+		</types>
+		<measurementSystemNames>
+			<measurementSystemName type="metric">????</measurementSystemName>
+		</measurementSystemNames>
+	</localeDisplayNames>
+	<characters>
+		<exemplarCharacters>[\u135F ?-? ?-? ? ?-? ?-? ? ?-? ?-? ? ?-? ?-? ?-? ?-? ?-? ?-? ? ?-? ?-?]</exemplarCharacters>
+		<exemplarCharacters type="auxiliary">[?-? ? ? ?-? ?-? ? ?-? ? ?-? ?-? ?-? ? ?-? ? ? ?-? ? ? ? ?-? ? ? ? ?-? ?-? ?-? ?-? ? ?-? ?-? ?-? ?-? ?-? ?-? ?-? ?-?]</exemplarCharacters>
+	</characters>
+	<delimiters>
+		<quotationStart>?</quotationStart>
+		<quotationEnd>?</quotationEnd>
+		<alternateQuotationStart>?</alternateQuotationStart>
+		<alternateQuotationEnd>?</alternateQuotationEnd>
+	</delimiters>
+	<dates>
+		<calendars>
+			<calendar type="coptic">
+				<eras>
+					<eraAbbr>
+						<era type="0">?/?</era>
+						<era type="1">?/?</era>
+					</eraAbbr>
+				</eras>
+			</calendar>
+			<calendar type="ethiopic">
+				<months>
+					<monthContext type="format">
+						<monthWidth type="abbreviated">
+							<month type="1">???</month>
+							<month type="2">???</month>
+							<month type="3">???</month>
+							<month type="4">???</month>
+							<month type="5">??</month>
+							<month type="6">???</month>
+							<month type="7">???</month>
+							<month type="8">???</month>
+							<month type="9">???</month>
+							<month type="10">??</month>
+							<month type="11">???</month>
+							<month type="12">???</month>
+							<month type="13">???</month>
+						</monthWidth>
+						<monthWidth type="wide">
+							<month type="1">?????</month>
+							<month type="2">????</month>
+							<month type="3">???</month>
+							<month type="4">????</month>
+							<month type="5">??</month>
+							<month type="6">????</month>
+							<month type="7">????</month>
+							<month type="8">????</month>
+							<month type="9">????</month>
+							<month type="10">??</month>
+							<month type="11">???</month>
+							<month type="12">???</month>
+							<month type="13">????</month>
+						</monthWidth>
+					</monthContext>
+				</months>
+			</calendar>
+			<calendar type="gregorian">
+				<months>
+					<monthContext type="format">
+						<monthWidth type="abbreviated">
+							<month type="1">???</month>
+							<month type="2">???</month>
+							<month type="3">???</month>
+							<month type="4">???</month>
+							<month type="5">??</month>
+							<month type="6">??</month>
+							<month type="7">???</month>
+							<month type="8">???</month>
+							<month type="9">???</month>
+							<month type="10">???</month>
+							<month type="11">???</month>
+							<month type="12">???</month>
+						</monthWidth>
+						<monthWidth type="wide">
+							<month type="1">?????</month>
+							<month type="2">?????</month>
+							<month type="3">???</month>
+							<month type="4">????</month>
+							<month type="5">??</month>
+							<month type="6">??</month>
+							<month type="7">???</month>
+							<month type="8">????</month>
+							<month type="9">??????</month>
+							<month type="10">??????</month>
+							<month type="11">?????</month>
+							<month type="12">?????</month>
+						</monthWidth>
+					</monthContext>
+					<monthContext type="stand-alone">
+						<monthWidth type="narrow">
+							<month type="1">?</month>
+							<month type="2">?</month>
+							<month type="3">?</month>
+							<month type="4">?</month>
+							<month type="5">?</month>
+							<month type="6">?</month>
+							<month type="7">?</month>
+							<month type="8">?</month>
+							<month type="9">?</month>
+							<month type="10">?</month>
+							<month type="11">?</month>
+							<month type="12">?</month>
+						</monthWidth>
+					</monthContext>
+				</months>
+				<days>
+					<dayContext type="format">
+						<dayWidth type="abbreviated">
+							<day type="sun">???</day>
+							<day type="mon">??</day>
+							<day type="tue">???</day>
+							<day type="wed">???</day>
+							<day type="thu">???</day>
+							<day type="fri">???</day>
+							<day type="sat">???</day>
+						</dayWidth>
+						<dayWidth type="wide">
+							<day type="sun">???</day>
+							<day type="mon">??</day>
+							<day type="tue">????</day>
+							<day type="wed">???</day>
+							<day type="thu">???</day>
+							<day type="fri">???</day>
+							<day type="sat">???</day>
+						</dayWidth>
+					</dayContext>
+					<dayContext type="stand-alone">
+						<dayWidth type="narrow">
+							<day type="sun">?</day>
+							<day type="mon">?</day>
+							<day type="tue">?</day>
+							<day type="wed">?</day>
+							<day type="thu">?</day>
+							<day type="fri">?</day>
+							<day type="sat">?</day>
+						</dayWidth>
+					</dayContext>
+				</days>
+				<quarters>
+					<quarterContext type="format">
+						<quarterWidth type="abbreviated">
+							<quarter type="1">Q1</quarter>
+							<quarter type="2">Q2</quarter>
+							<quarter type="3">Q3</quarter>
+							<quarter type="4">Q4</quarter>
+						</quarterWidth>
+						<quarterWidth type="wide">
+							<quarter type="1">Q1</quarter>
+							<quarter type="2">Q2</quarter>
+							<quarter type="3">Q3</quarter>
+							<quarter type="4">Q4</quarter>
+						</quarterWidth>
+					</quarterContext>
+				</quarters>
+				<am>???</am>
+				<pm>????</pm>
+				<eras>
+					<eraAbbr>
+						<era type="0">?/?</era>
+						<era type="1">?/?</era>
+					</eraAbbr>
+				</eras>
+				<dateFormats>
+					<dateFormatLength type="full">
+						<dateFormat>
+							<pattern>EEEE? dd MMMM ?? y G</pattern>
+						</dateFormat>
+					</dateFormatLength>
+					<dateFormatLength type="long">
+						<dateFormat>
+							<pattern>dd MMMM y</pattern>
+						</dateFormat>
+					</dateFormatLength>
+					<dateFormatLength type="medium">
+						<dateFormat>
+							<pattern>MMM d y</pattern>
+						</dateFormat>
+					</dateFormatLength>
+					<dateFormatLength type="short">
+						<dateFormat>
+							<pattern>dd/MM/yy</pattern>
+						</dateFormat>
+					</dateFormatLength>
+				</dateFormats>
+				<timeFormats>
+					<timeFormatLength type="full">
+						<timeFormat>
+							<pattern>hh:mm:ss a zzzz</pattern>
+						</timeFormat>
+					</timeFormatLength>
+					<timeFormatLength type="long">
+						<timeFormat>
+							<pattern>hh:mm:ss a z</pattern>
+						</timeFormat>
+					</timeFormatLength>
+					<timeFormatLength type="medium">
+						<timeFormat>
+							<pattern>h:mm:ss a</pattern>
+						</timeFormat>
+					</timeFormatLength>
+					<timeFormatLength type="short">
+						<timeFormat>
+							<pattern>h:mm a</pattern>
+						</timeFormat>
+					</timeFormatLength>
+				</timeFormats>
+				<dateTimeFormats>
+					<availableFormats>
+						<dateFormatItem id="MMdd">dd/MM</dateFormatItem>
+						<dateFormatItem id="MMMMd">MMMM d</dateFormatItem>
+						<dateFormatItem id="MMMMdd">dd MMMM</dateFormatItem>
+						<dateFormatItem id="yyMM">MM/yy</dateFormatItem>
+						<dateFormatItem id="yyQ">Q yy</dateFormatItem>
+						<dateFormatItem id="yyyyMMMM">MMMM y</dateFormatItem>
+					</availableFormats>
+					<intervalFormats>
+						<intervalFormatFallback>{0} - {1}</intervalFormatFallback>
+						<intervalFormatItem id="d">
+							<greatestDifference id="d">d-d</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="h">
+							<greatestDifference id="h">HH-HH</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="hm">
+							<greatestDifference id="h">HH:mm-HH:mm</greatestDifference>
+							<greatestDifference id="m">HH:mm-HH:mm</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="hmv">
+							<greatestDifference id="h">HH:mm-HH:mm v</greatestDifference>
+							<greatestDifference id="m">HH:mm-HH:mm v</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="hv">
+							<greatestDifference id="h">HH-HH v</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="M">
+							<greatestDifference id="M">M-M</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="Md">
+							<greatestDifference id="d">MM-dd - MM-dd</greatestDifference>
+							<greatestDifference id="M">MM-dd - MM-dd</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="MEd">
+							<greatestDifference id="d">E, MM-dd - E, MM-dd</greatestDifference>
+							<greatestDifference id="M">E, MM-dd - E, MM-dd</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="MMM">
+							<greatestDifference id="M">MMM-MMM</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="MMMd">
+							<greatestDifference id="d">MMM d-d</greatestDifference>
+							<greatestDifference id="M">MMM d - MMM d</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="MMMEd">
+							<greatestDifference id="d">E, MMM d - E, MMM d</greatestDifference>
+							<greatestDifference id="M">E, MMM d - E, MMM d</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="y">
+							<greatestDifference id="y">y-y</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="yM">
+							<greatestDifference id="M">yyyy-MM - yyyy-MM</greatestDifference>
+							<greatestDifference id="y">yyyy-MM - yyyy-MM</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="yMd">
+							<greatestDifference id="d">yyyy-MM-dd - yyyy-MM-dd</greatestDifference>
+							<greatestDifference id="M">yyyy-MM-dd - yyyy-MM-dd</greatestDifference>
+							<greatestDifference id="y">yyyy-MM-dd - yyyy-MM-dd</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="yMEd">
+							<greatestDifference id="d">E, yyyy-MM-dd - E, yyyy-MM-dd</greatestDifference>
+							<greatestDifference id="M">E, yyyy-MM-dd - E, yyyy-MM-dd</greatestDifference>
+							<greatestDifference id="y">E, yyyy-MM-dd - E, yyyy-MM-dd</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="yMMM">
+							<greatestDifference id="M">y MMM-MMM</greatestDifference>
+							<greatestDifference id="y">y MMM - y MMM</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="yMMMd">
+							<greatestDifference id="d">y MMM d-d</greatestDifference>
+							<greatestDifference id="M">y MMM d - MMM d</greatestDifference>
+							<greatestDifference id="y">y MMM d - y MMM d</greatestDifference>
+						</intervalFormatItem>
+						<intervalFormatItem id="yMMMEd">
+							<greatestDifference id="d">E, y MMM dd - E, y MMM dd</greatestDifference>
+							<greatestDifference id="M">E, y MMM dd - E, y MMM dd</greatestDifference>
+							<greatestDifference id="y">E, y MMM dd - E, y MMM dd</greatestDifference>
+						</intervalFormatItem>
+					</intervalFormats>
+				</dateTimeFormats>
+				<fields>
+					<field type="era">
+						<displayName>???</displayName>
+					</field>
+					<field type="year">
+						<displayName>???</displayName>
+					</field>
+					<field type="month">
+						<displayName>??</displayName>
+					</field>
+					<field type="week">
+						<displayName>????</displayName>
+					</field>
+					<field type="day">
+						<displayName>??</displayName>
+					</field>
+					<field type="hour">
+						<displayName>???</displayName>
+					</field>
+					<field type="minute">
+						<displayName>???</displayName>
+					</field>
+				</fields>
+			</calendar>
+			<calendar type="islamic">
+				<months>
+					<monthContext type="format">
+						<monthWidth type="wide">
+							<month type="1">????</month>
+							<month type="2">???</month>
+							<month type="3">???? ???</month>
+							<month type="4">???? ???</month>
+							<month type="5">???? ???</month>
+							<month type="6">???? ???</month>
+							<month type="7">???</month>
+							<month type="8">????</month>
+							<month type="9">????</month>
+							<month type="10">???</month>
+							<month type="11">?????</month>
+							<month type="12">?????</month>
+						</monthWidth>
+					</monthContext>
+				</months>
+			</calendar>
+		</calendars>
+		<timeZoneNames>
+			<hourFormat>+HHmm;-HHmm</hourFormat>
+			<gmtFormat>GMT{0}</gmtFormat>
+			<regionFormat>{0}</regionFormat>
+			<zone type="Antarctica/Rothera">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Antarctica/Palmer">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Antarctica/South_Pole">
+				<exemplarCity>South_Pole</exemplarCity>
+			</zone>
+			<zone type="Antarctica/Syowa">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Antarctica/Mawson">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Antarctica/Davis">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Antarctica/Vostok">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Antarctica/Casey">
+				<exemplarCity>??</exemplarCity>
+			</zone>
+			<zone type="Antarctica/DumontDUrville">
+				<exemplarCity>????????</exemplarCity>
+			</zone>
+			<zone type="Antarctica/McMurdo">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Argentina/Rio_Gallegos">
+				<exemplarCity>Rio_Gallegos</exemplarCity>
+			</zone>
+			<zone type="America/Mendoza">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Argentina/San_Juan">
+				<exemplarCity>San_Juan</exemplarCity>
+			</zone>
+			<zone type="America/Argentina/La_Rioja">
+				<exemplarCity>La_Rioja</exemplarCity>
+			</zone>
+			<zone type="America/Catamarca">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Jujuy">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="America/Cordoba">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Buenos_Aires">
+				<exemplarCity>????-????</exemplarCity>
+			</zone>
+			<zone type="Australia/Perth">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Australia/Darwin">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Australia/Adelaide">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Australia/Broken_Hill">
+				<exemplarCity>???? ??</exemplarCity>
+			</zone>
+			<zone type="Australia/Melbourne">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Australia/Hobart">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Australia/Lindeman">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Australia/Sydney">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Australia/Brisbane">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Australia/Lord_Howe">
+				<exemplarCity>??? ??</exemplarCity>
+			</zone>
+			<zone type="America/Eirunepe">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Rio_Branco">
+				<exemplarCity>?? ????</exemplarCity>
+			</zone>
+			<zone type="America/Porto_Velho">
+				<exemplarCity>??? ???</exemplarCity>
+			</zone>
+			<zone type="America/Boa_Vista">
+				<exemplarCity>?? ???</exemplarCity>
+			</zone>
+			<zone type="America/Manaus">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Cuiaba">
+				<exemplarCity>??</exemplarCity>
+			</zone>
+			<zone type="America/Campo_Grande">
+				<exemplarCity>Campo_Grande</exemplarCity>
+			</zone>
+			<zone type="America/Belem">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="America/Araguaina">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="America/Sao_Paulo">
+				<exemplarCity>?? ???</exemplarCity>
+			</zone>
+			<zone type="America/Bahia">
+				<exemplarCity>America/Bahia</exemplarCity>
+			</zone>
+			<zone type="America/Fortaleza">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Maceio">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="America/Recife">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Noronha">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="America/Dawson">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Whitehorse">
+				<exemplarCity>???????</exemplarCity>
+			</zone>
+			<zone type="America/Inuvik">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Vancouver">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Dawson_Creek">
+				<exemplarCity>???? ???</exemplarCity>
+			</zone>
+			<zone type="America/Yellowknife">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="America/Edmonton">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="America/Swift_Current">
+				<exemplarCity>???? ????</exemplarCity>
+			</zone>
+			<zone type="America/Cambridge_Bay">
+				<exemplarCity>????? ??</exemplarCity>
+			</zone>
+			<zone type="America/Regina">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="America/Winnipeg">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Rainy_River">
+				<exemplarCity>?? ???</exemplarCity>
+			</zone>
+			<zone type="America/Rankin_Inlet">
+				<exemplarCity>???? ????</exemplarCity>
+			</zone>
+			<zone type="America/Thunder_Bay">
+				<exemplarCity>???? ??</exemplarCity>
+			</zone>
+			<zone type="America/Nipigon">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Toronto">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Montreal">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="America/Iqaluit">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Pangnirtung">
+				<exemplarCity>????????</exemplarCity>
+			</zone>
+			<zone type="America/Halifax">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Goose_Bay">
+				<exemplarCity>?? ??</exemplarCity>
+			</zone>
+			<zone type="America/Glace_Bay">
+				<exemplarCity>??? ??</exemplarCity>
+			</zone>
+			<zone type="America/St_Johns">
+				<exemplarCity>??? ???</exemplarCity>
+			</zone>
+			<zone type="Africa/Kinshasa">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Africa/Lubumbashi">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Easter">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Santiago">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Asia/Kashgar">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Asia/Urumqi">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Asia/Chongqing">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="Asia/Shanghai">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Asia/Harbin">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Galapagos">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Guayaquil">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Atlantic/Canary">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Africa/Ceuta">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Europe/Madrid">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Truk">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Pacific/Ponape">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Pacific/Kosrae">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Europe/London">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Thule">
+				<exemplarCity>??</exemplarCity>
+			</zone>
+			<zone type="America/Godthab">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Scoresbysund">
+				<exemplarCity>????????</exemplarCity>
+			</zone>
+			<zone type="America/Danmarkshavn">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Asia/Jakarta">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Asia/Pontianak">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="Asia/Makassar">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Asia/Jayapura">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Enderbury">
+				<exemplarCity>???????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Kiritimati">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Tarawa">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Asia/Aqtau">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Asia/Oral">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Asia/Aqtobe">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Asia/Qyzylorda">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="Asia/Almaty">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Kwajalein">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Majuro">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Africa/Bamako">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Asia/Hovd">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Asia/Ulaanbaatar">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="Asia/Choibalsan">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="America/Tijuana">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Hermosillo">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Mazatlan">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Chihuahua">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Monterrey">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Mexico_City">
+				<exemplarCity>???? ??</exemplarCity>
+			</zone>
+			<zone type="America/Merida">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="America/Cancun">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Asia/Kuala_Lumpur">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="Asia/Kuching">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Chatham">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Auckland">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Tahiti">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Pacific/Marquesas">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Gambier">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Atlantic/Azores">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Atlantic/Madeira">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Europe/Lisbon">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Europe/Kaliningrad">
+				<exemplarCity>???????</exemplarCity>
+			</zone>
+			<zone type="Europe/Moscow">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Europe/Samara">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Asia/Yekaterinburg">
+				<exemplarCity>????????</exemplarCity>
+			</zone>
+			<zone type="Asia/Omsk">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Asia/Novosibirsk">
+				<exemplarCity>???????</exemplarCity>
+			</zone>
+			<zone type="Asia/Krasnoyarsk">
+				<exemplarCity>???????</exemplarCity>
+			</zone>
+			<zone type="Asia/Irkutsk">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="Asia/Yakutsk">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Asia/Vladivostok">
+				<exemplarCity>???????</exemplarCity>
+			</zone>
+			<zone type="Asia/Sakhalin">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Asia/Magadan">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Asia/Kamchatka">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Asia/Anadyr">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="Europe/Uzhgorod">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Europe/Kiev">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Europe/Simferopol">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="Europe/Zaporozhye">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Midway">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="Pacific/Johnston">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Pacific/Wake">
+				<exemplarCity>??</exemplarCity>
+			</zone>
+			<zone type="America/Adak">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="America/Nome">
+				<exemplarCity>??</exemplarCity>
+			</zone>
+			<zone type="Pacific/Honolulu">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Anchorage">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Yakutat">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Juneau">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Los_Angeles">
+				<exemplarCity>?? ?????</exemplarCity>
+			</zone>
+			<zone type="America/Boise">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="America/Phoenix">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Denver">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/North_Dakota/Center">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Chicago">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="America/Menominee">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Indiana/Knox">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Indiana/Marengo">
+				<exemplarCity>????</exemplarCity>
+			</zone>
+			<zone type="America/Indianapolis">
+				<exemplarCity>????????</exemplarCity>
+			</zone>
+			<zone type="America/Louisville">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Indiana/Vevay">
+				<exemplarCity>???</exemplarCity>
+			</zone>
+			<zone type="America/Kentucky/Monticello">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/Detroit">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="America/New_York">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+			<zone type="Asia/Samarkand">
+				<exemplarCity>??????</exemplarCity>
+			</zone>
+			<zone type="Asia/Tashkent">
+				<exemplarCity>?????</exemplarCity>
+			</zone>
+		</timeZoneNames>
+	</dates>
+	<numbers>
+		<symbols>
+			<decimal>.</decimal>
+			<group>,</group>
+		</symbols>
+		<currencyFormats>
+			<currencyFormatLength>
+				<currencyFormat>
+					<pattern>#,##0.00??</pattern>
+				</currencyFormat>
+			</currencyFormatLength>
+		</currencyFormats>
+		<currencies>
+			<currency type="BRL">
+				<displayName>????? ??</displayName>
+			</currency>
+			<currency type="CNY">
+				<displayName>???? ??? ?????</displayName>
+			</currency>
+			<currency type="ETB">
+				<displayName>?????? ??</displayName>
+				<symbol>??</symbol>
+			</currency>
+			<currency type="EUR">
+				<displayName>??</displayName>
+			</currency>
+			<currency type="GBP">
+				<displayName>?????? ???? ??????</displayName>
+			</currency>
+			<currency type="INR">
+				<displayName>???? ??</displayName>
+			</currency>
+			<currency type="JPY">
+				<displayName>???? ??</displayName>
+			</currency>
+			<currency type="RUB">
+				<displayName>??? ???</displayName>
+			</currency>
+			<currency type="USD">
+				<displayName>?????? ???</displayName>
+			</currency>
+		</currencies>
+	</numbers>
+	<posix>
+		<messages>
+			<yesstr>???:y</yesstr>
+			<nostr>??:n</nostr>
+		</messages>
+	</posix>
+</ldml>
+

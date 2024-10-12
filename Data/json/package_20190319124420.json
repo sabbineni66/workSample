@@ -1,0 +1,14 @@
+{
+  "name": "hubot-hubrooms",
+  "version": "0.0.1",
+  "author": "Ted Kulp <ted@tedkulp.com>",
+  "description": "A hubot adapter for Hubrooms.com",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tedkulp/hubot-hubrooms.git"
+  },
+  "dependencies": {
+    "socket.io-client": "0.9.11"
+  },
+  "main": "./src/hubrooms"
+}

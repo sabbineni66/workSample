@@ -1,0 +1,16 @@
+# Site settings
+title: T'nir Coda
+email: rae@tnir.ca
+description: >
+  GitHub site for Reid Ellis,
+  Toronto iOS developer
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://rae.github.io" # the base hostname & protocol for your site
+twitter_username: clith
+github_username:  rae
+
+# Build settings
+markdown: kramdown
+highliter: pygments
+
+theme: jekyll-theme-architect

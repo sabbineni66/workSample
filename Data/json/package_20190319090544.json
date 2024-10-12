@@ -1,0 +1,30 @@
+{
+  "name": "mikan",
+  "version": "0.1.3",
+  "description": "Flat-file API-first CMS",
+  "main": "index.js",
+  "bin": {
+    "mikan": "./bin/mikan"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "lab -c test"
+  },
+  "author": "Nicolas Merouze",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "code": "^2.1.0",
+    "lab": "^8.2.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.1.2",
+    "commander": "^2.9.0",
+    "csv": "^0.4.6",
+    "hapi": "^12.1.0",
+    "inert": "^3.2.0",
+    "js-yaml": "^3.5.2",
+    "jsonwebtoken": "^5.5.4",
+    "marked": "^0.3.5",
+    "sift": "^3.1.1"
+  }
+}

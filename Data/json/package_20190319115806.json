@@ -1,0 +1,25 @@
+{
+  "name": "jQuery.TextFill",
+  "title": "jQuery TextFill",
+  "description": "original by mekwall",
+  "version": "v0.1",
+  "keywords": ["select", "jQuery select", "selectBox", "jQuery"],
+  "homepage": "https://github.com/olivM/jQuery-TextFill",
+  "author": {
+    "name": "mekwall",
+    "url": "https://gist.github.com/mekwall/1263939"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/olivM/jQuery-TextFill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olivM/jQuery-TextFill/issues"
+  }
+}

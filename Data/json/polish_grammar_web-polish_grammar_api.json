@@ -1,0 +1,34 @@
+{
+  "consumer": {
+    "name": "Polish Grammar Web"
+  },
+  "provider": {
+    "name": "Polish Grammar API"
+  },
+  "interactions": [
+    {
+      "description": "a request for a PracticeActivitySession",
+      "provider_state": "a PracticeActivitySession exists",
+      "request": {
+        "method": "get",
+        "path": "/practice_activity_session/123"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "id": "123",
+          "question": {
+            "lemma": "je??",
+            "prompt": "ja dzisiaj"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecificationVersion": "1.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "table-of-contents": false,
+  "section-numbers": false,
+  "postamble": true,
+  "fancy-lists": true,
+  "fancy-icons": true,
+  "back-to-top": true,
+  "back-to-top-text": "Back to top",
+  "collection": {
+    "enabled": false,
+    "avatar": "",
+    "title": "",
+    "url": "/"
+  }
+}

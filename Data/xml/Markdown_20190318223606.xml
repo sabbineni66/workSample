@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--	*	MARKDOWN Sugar Syntax file version 0.9.1
+		*	by David Czihak and elliottcable
+		*	http://www.davidczihak.com, http://elliottcable.name
+-->
+
+<syntax name="text.markdown">
+	<zones>
+		
+		<!-- HEADER -->
+		<zone name="header.hashed.markdown">
+			<expression>([#]{1,6})(.*)$\n?</expression>
+			<capture number="1" name="punctuation.header.delimeter.hashed"/>
+			<capture number="2" name="name"/>
+		</zone>
+		
+		<!--
+		  this really isn't ideal, the haeder text itself should be selected
+		  somehow - since we can't have multi-line regexen in Espresso, though, I
+		  have no idea how to go about that.
+		-->
+		<zone name="header.underlined.markdown">
+			<expression>^((=|-)+)$</expression>
+			<capture number="1" name="punctuation.header.delimiter.underline"/>
+		</zone>
+		
+		<!-- ITALIC -->
+		<zone name="string.quoted.markdown">
+			<expression>([\*_]{1}[^\*_\n]+[\*_]{1})</expression>
+		</zone>
+		
+		<!-- BOLD -->
+		<zone name="string.quoted.markdown">
+			<expression>([\*_]{2}[^\*_\n]+[\*_]{2})</expression>
+		</zone>
+		
+		<!-- CODE TAG -->
+		<zone name="meta.function.markdown">
+			<expression>([`]{1,2}[^`]*[`]{1,2})</expression>
+			<capture number="1" name="entity.name.function.markdown"/>
+		</zone>
+		
+		<!-- PRE BLOCK TAG -->
+		<zone name="comment.block.markdown">
+			<expression>^(\t{1}|\s{4}).*$([\n]{2})?</expression>
+			<capture number="0" name="punctuation.definition.end"/>
+		</zone>
+		
+		<!-- BLOCKQUOTE -->
+		<zone name="comment.block.markdown">
+			<expression>^([>]{1}).*$([\n]{2})?</expression>
+			<capture number="1" name="punctuation.definition.begin"/>
+		</zone>
+		
+		<!-- UNORDERED LIST -->
+		<zone name="attribute-name">
+			<expression>^([-+\*]{1}[^-+\*])(.*)$\n?</expression>
+			<capture number="1" name="punctuation.definition.begin"/>
+		</zone>
+		
+		<!-- ORDERED LIST -->
+		<zone>
+			<expression>^([0-9]\.)(.*)$\n?</expression>
+			<capture number="1" name="keyword.control"/>
+			<capture number="2" name="attribute-name"/>
+		</zone>
+		
+		<!-- HORIZONTAL RULER -->
+		<zone>
+			<expression>^([-\*_]{3,})</expression>
+			<capture number="1" name="keyword.control"/>
+		</zone>
+		
+		<!-- AUTO LINK / E-MAIL -->
+		<zone name="attribute-name">
+			<starts-with>
+				<expression>(&lt;)</expression>
+			</starts-with>
+			<ends-with>
+				<expression>(>)</expression>
+			</ends-with>
+		</zone>
+		
+		<!-- NORMAL LINK -->
+		<zone>
+			<expression>([^!])([\[])(.*)([\]][ ]{0,1})([\(])(.*)([\)])</expression>
+			<capture number="3" name="attribute-name"/>
+			<capture number="6" name="string.quoted"/>
+		</zone>
+		
+		<!-- REFERENCE LINK -->
+		<zone>
+			<expression>([\[])(.*)([\]])([\[])(.*)([\]])</expression>
+			<capture number="2" name="attribute-name"/>
+			<capture number="5" name="attribute-name"/>
+		</zone>
+				
+		<!-- NORMAL IMAGE -->
+		<zone>
+			<expression>!([\[])(.*)([\]])([\(])(.*)([\)])</expression>
+			<capture number="2" name="attribute-name"/>
+			<capture number="5" name="string.quoted"/>
+		</zone>
+		
+		<!-- REFERENCE IMAGE -->
+		<zone>
+			<expression>!([\[])(.*)([\]])([\[])(.*)([\]])</expression>
+			<capture number="2" name="attribute-name"/>
+			<capture number="5" name="attribute-name"/>
+		</zone>
+		
+		<!-- REFERENCE DEFINITION -->
+		<zone>
+			<expression>^([\[])(.*)([\]])(:[ \t]{0,1})(.*)</expression>
+			<capture number="2" name="attribute-name"/>
+			<capture number="5" name="string.quoted"/>
+		</zone>
+		
+	</zones>
+</syntax>

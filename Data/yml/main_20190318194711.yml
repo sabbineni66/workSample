@@ -1,0 +1,15 @@
+---
+
+- name: install fonts
+  pacman: name={{ item }} state=installed
+  with_items:
+    - terminus-font
+    - gohufont
+    - ttf-dejavu
+    - ttf-gentium
+    - ttf-ms-win8
+  tags: font
+
+- name: setup local font dir
+  command: /usr/bin/mkfontdir chdir=/usr/share/fonts/local
+           creates=/usr/share/fonts/local/fonts.dir

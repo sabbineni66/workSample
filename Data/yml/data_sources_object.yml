@@ -1,0 +1,28 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://apps.db.ripe.net/whois/sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 15 Apr 2013 14:34:35 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "{\n\t\t\"whois-resources\":{\n\t\t\"service\":\"getSupportedDataSources\",\n\t\t\"link\":{\n\t\t\"xlink:type\":\"locator\",\n\t\t\"xlink:href\":\"http://apps.db.ripe.net/whois/sources\"}\n\t\t,\n\t\t\"sources\":{\n\t\t\"source\":[\n\t\t{\n\t\t\"name\":\"RIPE\",\n\t\t\"id\":\"ripe\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"APNIC\",\n\t\t\"id\":\"apnic\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"AfriNIC\",\n\t\t\"id\":\"afrinic\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"TEST\",\n\t\t\"id\":\"test\"}\n\t\t]\n\t\t}\n\t\t,\n\t\t\"grs-sources\":{\n\t\t\"source\":[\n\t\t{\n\t\t\"name\":\"RIPE-GRS\",\n\t\t\"id\":\"ripe-grs\",\n\t\t\"grs-id\":\"ripe-grs\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"AFRINIC-GRS\",\n\t\t\"id\":\"afrinic-grs\",\n\t\t\"grs-id\":\"afrinic-grs\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"APNIC-GRS\",\n\t\t\"id\":\"apnic-grs\",\n\t\t\"grs-id\":\"apnic-grs\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"ARIN-GRS\",\n\t\t\"id\":\"arin-grs\",\n\t\t\"grs-id\":\"arin-grs\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"LACNIC-GRS\",\n\t\t\"id\":\"lacnic-grs\",\n\t\t\"grs-id\":\"lacnic-grs\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"JPIRR-GRS\",\n\t\t\"id\":\"jpirr-grs\",\n\t\t\"grs-id\":\"jpirr-grs\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"RADB-GRS\",\n\t\t\"id\":\"radb-grs\",\n\t\t\"grs-id\":\"radb-grs\"}\n\t\t]\n\t\t}\n\t\t}\n\t\t}\n\t\t"
+    http_version: 
+  recorded_at: Mon, 15 Apr 2013 14:34:35 GMT
+recorded_with: VCR 2.4.0

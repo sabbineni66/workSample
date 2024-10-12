@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "attributes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object",
+          "required": [
+            "full-name",
+            "email",
+            "jwt",
+            "created-at",
+            "updated-at"
+          ],
+          "properties": {
+            "full-name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "jwt": {
+              "type": "string"
+            },
+            "created-at": {
+              "type": "string"
+            },
+            "updated-at": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

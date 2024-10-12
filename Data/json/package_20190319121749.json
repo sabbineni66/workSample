@@ -1,0 +1,14 @@
+{
+  "name": "newman-example",
+  "version": "1.0.0",
+  "description": "test newman command line",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^3.4.2"
+  }
+}

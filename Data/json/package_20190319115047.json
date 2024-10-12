@@ -1,0 +1,11 @@
+{
+  "name": "bible",
+  "version": "0.1.0",
+  "description": "Game design and reference for Realmatic Theory",
+  "author": "Shane Sveller <shane@shanesveller.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gitbook": "^3.2.3",
+    "gitbook-cli": "^2.3.2"
+  }
+}

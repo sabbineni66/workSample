@@ -1,0 +1,35 @@
+{
+  "has_more": false,
+  "cursor": "AAGsh3Rp...",
+  "entries": [
+    ["/ryandaigle.com", {
+      "bytes": 0,
+      "rev": "b34673ff1",
+      "revision": 11,
+      "icon": "folder",
+      "path": "/ryandaigle.com",
+      "is_dir": true,
+      "thumb_exists": false,
+      "root": "app_folder",
+      "modified": "Wed, 08 Apr 2015 20:47:54 +0000",
+      "size": "0 bytes"
+    }],
+    ["/ryandaigle.com/index.html", {
+      "rev": "c34673ff1",
+      "thumb_exists": false,
+      "path": "/ryandaigle.com/index.html",
+      "is_dir": false,
+      "client_mtime": "Wed, 08 Apr 2015 20:49:00 +0000",
+      "icon": "page_white_code",
+      "bytes": 12,
+      "modified": "Wed, 08 Apr 2015 20:49:02 +0000",
+      "size": "12 bytes",
+      "root": "app_folder",
+      "mime_type": "text/html",
+      "revision": 12
+    }],
+    ["/ryandaigle.com/old", null],
+    ["/ryandaigle.com/index-test.html", null]
+  ],
+  "reset": true
+}

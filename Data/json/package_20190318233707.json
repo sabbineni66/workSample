@@ -1,0 +1,16 @@
+{
+  "name": "minecraft-modloader-armor-stand",
+  "version": "1.4.7",
+  "description": "minecraft armor-stand module for use with modloader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "files" : [ "jar-files" ],
+  "dependencies" : {
+    "minecraft-mineloader" : "git://github.com/steve/minecraft-modloader.git#v1.47"
+  }
+}

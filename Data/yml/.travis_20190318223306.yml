@@ -1,0 +1,9 @@
+language: go
+
+go:
+  - 1.3
+
+script:
+  - uname -a
+  - grep "_NS\|CGROUP\|MEMCG" /boot/config* | sort
+  - make test-sudo

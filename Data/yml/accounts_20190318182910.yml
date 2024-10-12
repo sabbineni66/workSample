@@ -1,0 +1,34 @@
+checking:
+  family: beausoleil
+  name: Checking
+  purpose: asset
+
+credit_card:
+  family: beausoleil
+  name: Credit Card
+  purpose: liability
+
+credit_card_repayment:
+  family: beausoleil
+  name: Credit Card Repayment
+  purpose: expense
+
+cell_phone_service:
+  family: beausoleil
+  name: Cell Phone Service
+  purpose: expense
+
+gifts:
+  family: beausoleil
+  name: Gifts
+  purpose: expense
+
+movies:
+  family: beausoleil
+  name: Movies
+  purpose: expense
+
+salary:
+  family: beausoleil
+  name: Salary
+  purpose: income

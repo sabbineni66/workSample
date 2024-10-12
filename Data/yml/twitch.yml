@@ -1,0 +1,563 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.crunchbase.com/v/2/organization/twitch?user_key=DUMMY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, private, max-age=0, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 12 Nov 2014 20:52:19 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - openresty
+      Status:
+      - 200 OK
+      Vary:
+      - X-Requested-With
+      X-Cache:
+      - HIT - 10
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 38994495-832f-4647-b3a2-099560c32406
+      X-Run-Esi:
+      - 'true'
+      X-Runtime:
+      - '3.055482'
+      X-Ua-Compatible:
+      - chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '4102'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "metadata": {
+            "version": 2,
+            "www_path_prefix": "http://www.crunchbase.com/",
+            "api_path_prefix": "http://api.crunchbase.com/v/2/",
+            "image_path_prefix": "http://images.crunchbase.com/"
+          },
+          "data": {
+            "uuid": "3dfd8d9c748079e8a983dcf1d0f8e1a5",
+            "type": "Organization",
+            "properties": {
+              "secondary_role_for_profit": true,
+              "role_company": true,
+              "description": "Founded in June 2011, Twitch is social video for gamers. It is the world\u2019s leading video platform and community for gamers where more than 55 million gather every month to broadcast, watch and talk about video games. Twitch\u2019s video platform is the backbone of both live and on-demand distribution for the entire video game ecosystem. This includes game developers, publishers, media outlets, events, user generated content, and the entire esports scene. In February 2014, Wall Street Journal ranked Twitch as the 4th largest website in terms of peak internet traffic in the U.S. fortifying the brand as an entertainment industry leader and the epicenter of social video for gamers. \n",
+              "short_description": "Twitch is a social video platform for gamers.",
+              "permalink": "twitch",
+              "primary_role": "company",
+              "is_closed": false,
+              "closed_on_trust_code": 0,
+              "name": "Twitch",
+              "founded_on_day": 1,
+              "founded_on_month": 1,
+              "founded_on_year": 2007,
+              "founded_on": "2007-01-01",
+              "founded_on_trust_code": 4,
+              "homepage_url": "http://www.twitch.tv",
+              "closed_on_day": null,
+              "closed_on_month": null,
+              "closed_on_year": null,
+              "closed_on": null,
+              "num_employees_max": 100,
+              "num_employees_min": 51,
+              "also_known_as": "[\"twitchtv\"]",
+              "created_at": 1348087401,
+              "updated_at": 1414708550,
+              "total_funding_usd": 35000000,
+              "number_of_investments": 0,
+              "number_of_employees": 160
+            },
+            "relationships": {
+              "past_team": {
+                "paging": {
+                  "total_items": 4,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/past_team",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "first_name": "Nik",
+                    "last_name": "Adams",
+                    "title": "Instream Video Advertisement. Europe & Russia",
+                    "started_on": "2011-01-01",
+                    "ended_on": null,
+                    "path": "person/nik-adams",
+                    "created_at": 1371978029,
+                    "updated_at": 1397989173
+                  },
+                  {
+                    "first_name": "Matthew",
+                    "last_name": "DiPietro",
+                    "title": "VP of Marketing",
+                    "started_on": "2010-08-01",
+                    "ended_on": null,
+                    "path": "person/matthew-dipietro",
+                    "created_at": 1223967288,
+                    "updated_at": 1409592810
+                  },
+                  {
+                    "first_name": "Matthew",
+                    "last_name": "DiPietro",
+                    "title": "VP of Marketing",
+                    "started_on": "2010-09-01",
+                    "ended_on": null,
+                    "path": "person/matthew-dipietro",
+                    "created_at": 1223967288,
+                    "updated_at": 1409592810
+                  },
+                  {
+                    "first_name": "Kyle",
+                    "last_name": "Vogt",
+                    "title": "Co-Founder",
+                    "started_on": null,
+                    "ended_on": null,
+                    "path": "person/kyle-vogt",
+                    "created_at": 1182603773,
+                    "updated_at": 1410820745
+                  }
+                ]
+              },
+              "board_members_and_advisors": {
+                "paging": {
+                  "total_items": 2,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/board_members_and_advisors",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "first_name": "Ethan",
+                    "last_name": "Kurzweil",
+                    "title": "Member, Board of Directors",
+                    "started_on": null,
+                    "path": "person/ethan-kurzweil",
+                    "created_at": 1368157411,
+                    "updated_at": 1410945149
+                  },
+                  {
+                    "first_name": "Mackey",
+                    "last_name": "Craven",
+                    "title": "Board Observer",
+                    "started_on": "2012-09-01",
+                    "path": "person/mackey-craven",
+                    "created_at": 1378818428,
+                    "updated_at": 1411129544
+                  }
+                ]
+              },
+              "current_team": {
+                "paging": {
+                  "total_items": 5,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/current_team",
+                  "sort_order": "custom"
+                },
+                "items": [
+                  {
+                    "first_name": "Emmett",
+                    "last_name": "Shear",
+                    "title": "CEO and Founder",
+                    "started_on": "2011-06-01",
+                    "path": "person/emmett-shear",
+                    "created_at": 1182603748,
+                    "updated_at": 1414604986
+                  },
+                  {
+                    "first_name": "Justin",
+                    "last_name": "Kan",
+                    "title": "Founder",
+                    "started_on": null,
+                    "path": "person/justin-kan",
+                    "created_at": 1182603589,
+                    "updated_at": 1415305110
+                  },
+                  {
+                    "first_name": "Kevin",
+                    "last_name": "Lin",
+                    "title": "COO",
+                    "started_on": null,
+                    "path": "person/kevin-lin",
+                    "created_at": 1406299839,
+                    "updated_at": 1406300074
+                  },
+                  {
+                    "first_name": "Kym",
+                    "last_name": "Nelson",
+                    "title": "SVP Sales",
+                    "started_on": "2013-01-01",
+                    "path": "person/kym-nelson",
+                    "created_at": 1283235761,
+                    "updated_at": 1409567009
+                  },
+                  {
+                    "first_name": "Jonathan",
+                    "last_name": "Simpson-Bint",
+                    "title": "CRO",
+                    "started_on": "2011-09-01",
+                    "path": "person/jonathan-simpson-bint",
+                    "created_at": 1241501984,
+                    "updated_at": 1397989050
+                  }
+                ]
+              },
+              "acquired_by": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/acquired_by",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "announced_on": "2014-08-25",
+                    "type": "Acquisition",
+                    "name": "Acquisition",
+                    "path": "acquisition/b3a7a87cff3f357a3928b9d51ace822d",
+                    "created_at": 1408998597,
+                    "updated_at": 1411737939
+                  }
+                ]
+              },
+              "offices": {
+                "paging": {
+                  "total_items": 2,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/offices",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Address",
+                    "name": "Europe Office",
+                    "street_1": null,
+                    "street_2": null,
+                    "postal_code": null,
+                    "city": "London",
+                    "city_path": "location/london/aad17950576b8c448fd4f44dbeb59220",
+                    "region": "London, City of",
+                    "region_path": "location/london-city-of/79eb923b9e93e0db2fe075f0c430c2cb",
+                    "country": "United Kingdom",
+                    "country_path": "location/united-kingdom/a30e342c17426b1c66e9461de680e54b",
+                    "latitude": null,
+                    "longitude": null,
+                    "created_at": 1398261616,
+                    "updated_at": 1411679427
+                  },
+                  {
+                    "type": "Address",
+                    "name": "Headquarters",
+                    "street_1": null,
+                    "street_2": null,
+                    "postal_code": null,
+                    "city": "San Francisco",
+                    "city_path": "location/san-francisco/528f5e3c90d111115d1c2e4ff979d58e",
+                    "region": "California",
+                    "region_path": "location/california/eb879a83c91a121e0bb8829782dbcf04",
+                    "country": "United States",
+                    "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+                    "latitude": 37.7749295,
+                    "longitude": -122.4194155,
+                    "created_at": 1398261577,
+                    "updated_at": 1398261577
+                  }
+                ]
+              },
+              "headquarters": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/headquarters",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Address",
+                    "name": "Headquarters",
+                    "street_1": null,
+                    "street_2": null,
+                    "postal_code": null,
+                    "city": "San Francisco",
+                    "city_path": "location/san-francisco/528f5e3c90d111115d1c2e4ff979d58e",
+                    "region": "California",
+                    "region_path": "location/california/eb879a83c91a121e0bb8829782dbcf04",
+                    "country": "United States",
+                    "country_path": "location/united-states/f110fca2105599f6996d011c198b3928",
+                    "latitude": 37.7749295,
+                    "longitude": -122.4194155,
+                    "created_at": 1398261577,
+                    "updated_at": 1398261577
+                  }
+                ]
+              },
+              "funding_rounds": {
+                "paging": {
+                  "total_items": 2,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/funding_rounds",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "FundingRound",
+                    "name": "Twitch raises 20000000 in venture round",
+                    "path": "funding-round/f32296af5e9f78429f3c2919412b9c17",
+                    "created_at": 1380546692,
+                    "updated_at": 1398010085
+                  },
+                  {
+                    "type": "FundingRound",
+                    "name": "Twitch raises 15000000 in venture round",
+                    "path": "funding-round/0691041dbf6b33624bc4e1c10b1ec112",
+                    "created_at": 1348063456,
+                    "updated_at": 1398010173
+                  }
+                ]
+              },
+              "categories": {
+                "paging": {
+                  "total_items": 4,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/categories",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Category",
+                    "name": "Video Streaming",
+                    "uuid": "b1b3b2d785ed2cb1fc603e2b6a3b5ddd",
+                    "path": "category/video streaming/b1b3b2d785ed2cb1fc603e2b6a3b5ddd",
+                    "created_at": 1397980727,
+                    "updated_at": 1415700546
+                  },
+                  {
+                    "type": "Category",
+                    "name": "Video Games",
+                    "uuid": "dabab6afbf1200cab18585cead095097",
+                    "path": "category/video games/dabab6afbf1200cab18585cead095097",
+                    "created_at": 1397980727,
+                    "updated_at": 1415264651
+                  },
+                  {
+                    "type": "Category",
+                    "name": "Social Media",
+                    "uuid": "5349a2f214d89727c32a19ebea5db78c",
+                    "path": "category/social media/5349a2f214d89727c32a19ebea5db78c",
+                    "created_at": 1397980726,
+                    "updated_at": 1415700768
+                  },
+                  {
+                    "type": "Category",
+                    "name": "Video",
+                    "uuid": "c6adf8227fa3c0b35188556e08d72128",
+                    "path": "category/video/c6adf8227fa3c0b35188556e08d72128",
+                    "created_at": 1397980726,
+                    "updated_at": 1415699165
+                  }
+                ]
+              },
+              "founders": {
+                "paging": {
+                  "total_items": 2,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/founders",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "Person",
+                    "name": "Emmett Shear",
+                    "path": "person/emmett-shear",
+                    "created_at": 1182603748,
+                    "updated_at": 1414604986
+                  },
+                  {
+                    "type": "Person",
+                    "name": "Justin Kan",
+                    "path": "person/justin-kan",
+                    "created_at": 1182603589,
+                    "updated_at": 1415305110
+                  }
+                ]
+              },
+              "primary_image": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/primary_image",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "ImageAsset",
+                    "title": null,
+                    "path": "image/upload/v1409258691/hneg6djphcfm6klf9kqc.png",
+                    "created_at": 1398018503,
+                    "updated_at": 1409258695
+                  }
+                ]
+              },
+              "images": {
+                "paging": {
+                  "total_items": 1,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/images",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "type": "ImageAsset",
+                    "title": null,
+                    "path": "image/upload/v1397184156/213b3be4cdd214be97460215f94bc117.jpg",
+                    "created_at": 1398018503,
+                    "updated_at": 1398018503
+                  }
+                ]
+              },
+              "websites": {
+                "paging": {
+                  "total_items": 5,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/websites",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "url": "http://www.linkedin.com/company/2320329",
+                    "type": "WebPresence",
+                    "title": "linkedin",
+                    "created_at": 1403502317,
+                    "updated_at": 1409462169
+                  },
+                  {
+                    "url": "http://www.facebook.com/twitch",
+                    "type": "WebPresence",
+                    "title": "facebook",
+                    "created_at": 1397877760,
+                    "updated_at": 2014
+                  },
+                  {
+                    "url": "http://twitter.com/twitchtv",
+                    "type": "WebPresence",
+                    "title": "twitter",
+                    "created_at": 1348062201,
+                    "updated_at": 1409427357
+                  },
+                  {
+                    "url": "http://blog.twitch.tv/",
+                    "type": "WebPresence",
+                    "title": "blog",
+                    "created_at": 1348062201,
+                    "updated_at": 1397988217
+                  },
+                  {
+                    "url": "http://www.twitch.tv",
+                    "type": "WebPresence",
+                    "title": "homepage",
+                    "created_at": 1348062201,
+                    "updated_at": 1397988217
+                  }
+                ]
+              },
+              "news": {
+                "paging": {
+                  "total_items": 14,
+                  "first_page_url": "http://api.crunchbase.com/v/2/organization/twitch/news",
+                  "sort_order": "created_at DESC"
+                },
+                "items": [
+                  {
+                    "url": "http://techcrunch.com/2014/08/25/for-just-one-play/",
+                    "author": null,
+                    "posted_on": "2014-08-25",
+                    "type": "PressReference",
+                    "title": "Nerds Love Twitch Because There, They Can Be Heroes | TechCrunch",
+                    "created_at": 1409032094,
+                    "updated_at": 1409032094
+                  },
+                  {
+                    "url": "http://techcrunch.com/2014/08/07/twitch-on-defense-after-abrupt-changes-to-its-content-policies-anger-users/",
+                    "author": null,
+                    "posted_on": "2014-08-07",
+                    "type": "PressReference",
+                    "title": "Twitch On Defense After Abrupt Changes To Its Content Policies Anger Users | TechCrunch",
+                    "created_at": 1407486474,
+                    "updated_at": 1407486474
+                  },
+                  {
+                    "url": "http://www.techinasia.com/youtube-buy-twitch-1b-chinas-hardcore-gamers/",
+                    "author": null,
+                    "posted_on": null,
+                    "type": "PressReference",
+                    "title": "Youtube might buy Twitch for $1B. What are China\u2019s hardcore gamers using instead?",
+                    "created_at": 1406603356,
+                    "updated_at": 1406603356
+                  },
+                  {
+                    "url": "http://techcrunch.com/2014/07/25/twitch-ceo-emmett-shear-and-coo-kevin-lin-to-speak-at-disrupt-sf/",
+                    "author": null,
+                    "posted_on": "2014-07-25",
+                    "type": "PressReference",
+                    "title": "Twitch CEO Emmett Shear And COO Kevin Lin To Speak At Disrupt SF | TechCrunch",
+                    "created_at": 1406354593,
+                    "updated_at": 1406354593
+                  },
+                  {
+                    "url": "http://techcrunch.com/2014/05/27/tc-cribs-tours-twitch-tv-gaming-office-headquarters/",
+                    "author": null,
+                    "posted_on": "2014-05-27",
+                    "type": "PressReference",
+                    "title": "TC Cribs Tours Twitch, Where Playing Games Is Part Of The Job | TechCrunch",
+                    "created_at": 1401303253,
+                    "updated_at": 1401303253
+                  },
+                  {
+                    "url": "http://techcrunch.com/2013/06/10/twitch-xbox-one/",
+                    "author": "Ryan Lawler",
+                    "posted_on": "2013-06-10",
+                    "type": "PressReference",
+                    "title": "Twitch Integrates With Xbox One For Live Broadcasting And Viewing Of Video Game Streams",
+                    "created_at": 1370887227,
+                    "updated_at": 2013
+                  },
+                  {
+                    "url": "http://techcrunch.com/2013/06/10/thanks-to-twitch-watch-microsofts-2013-e3-press-conference-right-here/",
+                    "author": "Matt Burns",
+                    "posted_on": "2013-06-10",
+                    "type": "PressReference",
+                    "title": "Thanks To Twitch, Watch Microsoft's 2013 E3 Press Conference Right Here",
+                    "created_at": 1370877610,
+                    "updated_at": 2013
+                  },
+                  {
+                    "url": "http://techcrunch.com/2013/06/10/twitch-updated-sdk/",
+                    "author": "Ryan Lawler",
+                    "posted_on": "2013-06-10",
+                    "type": "PressReference",
+                    "title": "Twitch Updates SDK To Boost Engagement, Get Its Streams Embedded In More Video Games",
+                    "created_at": 1370848811,
+                    "updated_at": 2013
+                  }
+                ]
+              }
+            }
+          }
+        }
+    http_version:
+  recorded_at: Wed, 12 Nov 2014 20:51:51 GMT
+recorded_with: VCR 2.9.3

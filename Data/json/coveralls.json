@@ -1,0 +1,8 @@
+{
+  "skip_files": [
+    "test",
+    "lib/tunedrop.ex",
+    "lib/tunedrop/endpoint.ex",
+    "lib/tunedrop/repo.ex"
+  ]
+}

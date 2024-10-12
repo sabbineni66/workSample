@@ -1,0 +1,28 @@
+{
+  "name": "hubot-slack-bugsnag-listen",
+  "version": "1.0.0",
+  "description": "A hubot script to listen for bugsnag.com links and send a Slack attachment.",
+  "main": "index.js",
+  "author": "Martin Emde <me@martinemde.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/martinemde/hubot-slack-bugsnag-listen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/martinemde/hubot-slack-bugsnag-listen/issues"
+  },
+  "scripts": {
+    "start": "hubot --adapter shell --disable-httpd",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "bugsnag"
+  ],
+  "devDependencies": {
+    "coffee-script": "^1.12.7",
+    "hubot": "^2.19.0"
+  }
+}

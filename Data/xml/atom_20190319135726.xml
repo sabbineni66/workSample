@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | Dave Rapin]]></title>
+  <link href="http://rapind.github.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://rapind.github.com/"/>
+  <updated>2015-10-17T13:08:35-04:00</updated>
+  <id>http://rapind.github.com/</id>
+  <author>
+    <name><![CDATA[Dave Rapin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[RubyMotion Provisioning Profiles]]></title>
+    <link href="http://rapind.github.com/blog/2013/02/05/rubymotion-provisioning-profiles/"/>
+    <updated>2013-02-05T14:16:00-05:00</updated>
+    <id>http://rapind.github.com/blog/2013/02/05/rubymotion-provisioning-profiles</id>
+    <content type="html"><![CDATA[<p>I recently ran into an issue with RubyMotion where I couldn't build to a development device without explicitly setting the provisioning profile in the Rakefile. Not only is this annoying, but it's a big problem for team development because you'll always want to check your Rakefile into source control and each team member would have a different Rakefile.</p>
+
+<p>So I started hunting for a solution.</p>
+
+<h2>Official Documentation is Misleading</h2>
+
+<p>The <a href="http://www.rubymotion.com/developer-center/guides/project-management/#_configuration">RubyMotion official project configuration documentation</a> states that it look for and use the first provisioning profile it finds on your computer. This is false though, at least when you have multiple profiles, because even if each of your profiles contains the device UID you're building to, this still won't work.</p>
+
+<h2>Existing Solutions Insufficient</h2>
+
+<p>The existing solutions are simply to explicitly refer to your provisioning profile in your Rakefile. That's OK for solo development (but still annoying), however it's not a good solution for team development.</p>
+
+<p>See this <a href="http://stackoverflow.com/questions/13539743/rubymotion-build-error-cant-find-a-provisioning-profile-named-mixios-tea">stackoverflow Discussion</a></p>
+
+<h2>My Solution</h2>
+
+<p>After a <a href="https://github.com/HipByte/RubyMotion/blob/master/lib/motion/project/config.rb">little light reading</a> I discovered that the RubyMotion build will check for a default profile named "iOS Team Provisioning Profile".</p>
+
+<p>So we simply need to create a new provisioning profile via the <a href="https://developer.apple.com/ios/manage/overview/index.action">iOS provisioning portal</a> named "iOS Team Provisioning Profile" and containing the device(s) we want to be able to run development builds on.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOS Development with Ruby Motion]]></title>
+    <link href="http://rapind.github.com/blog/2012/10/24/ios-development-with-ruby-motion/"/>
+    <updated>2012-10-24T01:32:00-04:00</updated>
+    <id>http://rapind.github.com/blog/2012/10/24/ios-development-with-ruby-motion</id>
+    <content type="html"><![CDATA[<p>I've been building an iOS app with RubyMotion for a while now, and the verdict is...</p>
+
+<p>I'm in love with <a href="http://www.rubymotion.com/">RubyMotion</a>.</p>
+
+<p>Here's why:</p>
+
+<ul>
+<li>Ruby syntax runs circles around Objective-C syntax. If you've used Ruby and Objective-C for anything significant, and you're not a masochist, then you know what I'm talking about.</li>
+<li>It already has some amazing libraries like Teacup, BubbleWrap, and Formotion.</li>
+<li>Building and deploying is a cinch with Rake. There's even a testflight gem.</li>
+<li>Bundler and CocoaPods for dependency management.</li>
+<li>The REPL. I actually haven't found this that big of a deal, but it can come in handy now and then.</li>
+<li>I can continue using a text editor (vim or Sublime Text) instead of that hog called Xcode.</li>
+<li>Really small archives.</li>
+<li>The only (minor) downside so far has been occasionally translating example Objective-C code to RubyMotion code from Apple's docs and Stack Overflow.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Code School - Rails Best Practices Reviewed]]></title>
+    <link href="http://rapind.github.com/blog/2011/03/24/code-school-rails-best-practices-reviewed/"/>
+    <updated>2011-03-24T07:31:00-04:00</updated>
+    <id>http://rapind.github.com/blog/2011/03/24/code-school-rails-best-practices-reviewed</id>
+    <content type="html"><![CDATA[<p>Yesterday I ran through the "Rails Best Practices" course over at <a href="http://www.codeschool.com/">Code School</a>.</p>
+
+<p>I really like this interactive format. You watch a video / screencast covering a topic or set of topics, then you're required to code up some excersizes to review the content of the video's material before you can move on to the next topic.</p>
+
+<p>Overall the format worked really well. The gamification (points etc.) didn't make a difference for me, but it might be a motivator for some people. I do think they're on to something here, and from the looks of it (also from the workd marketplace in their tagline) they'll be refining this as a platform for use with other third party content.</p>
+
+<p>The online editor was actually really well done. It's not vim or emacs obviously, but it's not super cludgy like you'd expect, so it works well enough for the small amount of material you're covering.</p>
+
+<p>I think there's an opportunity to add in some social features so students can help each other if they get some harder topics going.</p>
+
+<p>As for the content of the "Rails Best Practices" course itself, you can get the same content from here; <a href="http://rails-bestpractices.com/">http://rails-bestpractices.com/</a>, however the code school environment was enjoyable enough.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,17 @@
+{
+  "flow-coverage-report": {
+    "globExcludePatterns": [
+      "src/**/*.test.js",
+      "src/vendor/*.js"
+    ],
+    "globIncludePatterns": [
+      "src/**/*.js"
+    ]
+  },
+  "scripts": {
+    "fcov": "f () { flow-coverage-report || exit 0; }; f",
+    "fcov:file": "f () { flow-coverage-report --include-glob ${1}.js || exit 0; }; f",
+    "flow": "f () { flow || exit 0; }; f",
+    "flow:file": "f () { flow focus-check ${1}.js || exit 0; }; f"
+  }
+}

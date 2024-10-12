@@ -1,0 +1,15 @@
+<% 1000.times do |i| %>
+business_<%= i %>:
+  uuid: <%= SecureRandom.uuid %>
+  name: Business <%= i %>
+  address: <%= i %> 123 Main St.
+  address2: Suite <%= i %>
+  city: City <%= i %>
+  state: TX
+  zip: 78704
+  country: US
+  phone: 1788019<%= i %>85
+  website: http://business<%= i %>.com/
+  created_at: <%= Time.zone.now - (i.days) %>
+  updated_at: <%= Time.zone.now %>
+<% end %>

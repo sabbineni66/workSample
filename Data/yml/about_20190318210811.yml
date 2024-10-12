@@ -1,0 +1,7 @@
+author: timocratic
+summary: A hack on topfunky's hack to see which tests are slowest
+homepage: http://timocracy.com
+plugin: http://github.com/timocratic/test_benchmark
+license: MIT
+version: 0.4.7
+rails_version: 2.3.x

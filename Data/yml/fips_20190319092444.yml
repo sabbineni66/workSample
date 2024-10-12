@@ -1,0 +1,6 @@
+# nx
+---
+
+exports:
+    header-dirs:
+        - nx

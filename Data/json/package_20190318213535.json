@@ -1,0 +1,24 @@
+{
+  "name": "streamhttpd",
+  "version": "0.0.1",
+  "description": "Bot based web server backed by Redis.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lancecarlson/streamhttpd.git"
+  },
+  "author": "Lancelot Carlson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lancecarlson/streamhttpd/issues"
+  },
+  "homepage": "https://github.com/lancecarlson/streamhttpd",
+  "dependencies": {
+    "morgan": "^1.6.1",
+    "node-uuid": "^1.4.3",
+    "redis": "^0.12.1"
+  }
+}

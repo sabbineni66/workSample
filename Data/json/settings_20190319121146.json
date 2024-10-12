@@ -1,0 +1,7 @@
+{
+    "window.zoomLevel": 1,
+    "window.titleBarStyle": "custom",
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "Solarized Dark",
+    "terminal.integrated.drawBoldTextInBrightColors": false
+}

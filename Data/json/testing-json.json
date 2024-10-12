@@ -1,0 +1,10 @@
+---
+id: contact
+layout: default
+title: "Contact us"
+primarynavorder: 5
+---
+{
+  "title": "Contact us",
+  "image": "{% asset_path s.gif %}"
+}

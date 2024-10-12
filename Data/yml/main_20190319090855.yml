@@ -1,0 +1,24 @@
+---
+
+galaxy_info:
+  author: ptdorf
+  description: "Is it me you're looking for?"
+  company: Acme
+  license: license (MIT)
+  min_ansible_version: 1.4
+  platforms:
+   - name: EL
+     versions:
+      - all
+   - name: Fedora
+     versions:
+      - all
+   - name: Ubuntu
+     versions:
+      - all
+  galaxy_tags:
+   - from
+   - the
+   - other
+   - side
+dependencies: []

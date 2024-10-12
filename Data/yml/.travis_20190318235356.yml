@@ -1,0 +1,12 @@
+language: julia
+os:
+  - linux
+  - osx
+julia:
+  - nightly
+notifications:
+  email: false
+script:
+  - julia --check-bounds=yes -e 'Pkg.clone(pwd()); Pkg.build("ErrorFreeTransforms"); Pkg.test("ErrorFreeTransforms"; coverage=true)'
+after_success:
+  - julia -e 'cd(Pkg.dir("ErrorFreeTransforms")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'

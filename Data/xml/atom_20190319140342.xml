@@ -1,0 +1,36 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Myles B. Pull List</title>
+	<link href="http://pull-list.mylesbraithwaite.com/atom.xml" rel="self"/>
+	<link href="http://pull-list.mylesbraithwaite.com/"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>http://pull-list.mylesbraithwaite.com/</id>
+	<author>
+		<name>Myles Braithwaite</name>
+		<email>me@mylesbraithwaite.com</email>
+		<uri>http://mylesbraithwaite.com/</uri>
+	</author>
+	<rights type="html">{{ site.time | date: "%Y" }} Myles Braithwaite</rights>
+	
+	{% for post in site.posts %}
+	<entry>
+		<title>{{ post.title }}</title>
+		<link href="http://pull-list.mylesbraithwaite.com{{ post.url }}"/>
+		<updated>{{ post.date | date_to_xmlschema }}</updated>
+		<id>http://pull-list.mylesbraithwaite.com{{ post.id }}</id>
+		<author>
+			<name>Myles Braithwaite</name>
+			<email>me@mylesbraithwaite.com</email>
+			<uri>http://mylesbraithwaite.com/</uri>
+		</author>
+    	<content type="html">{{ post.content | xml_escape }}</content>
+    	<rights type="html">{{ post.date | date: "%Y" }} Myles Braithwaite</rights>
+    	{% for cat in post.categories %}
+    	<category term="{{ cat }}" label="{{ cat }}"/>
+    	{% endfor %}
+	</entry>
+	{% endfor %}
+</feed>

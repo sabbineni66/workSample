@@ -1,0 +1,26 @@
+{
+  "name": "karma-growl12-reporter",
+  "version": "0.1.2",
+  "description": "A Karma reporter plugin that sends status to Growl.  This plugin uses node-growl which works with Growl 1.2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ctran/karma-growl12-reporter.git"
+  },
+  "keywords": [
+    "karma-plugin",
+    "reporter",
+    "growl"
+  ],
+  "author": "Cuong Tran <cuong.tran@gmail.com>",
+  "dependencies": {
+    "growl": "~1.7.0"
+  },
+  "peerDependencies": {
+    "karma": "~0.10"
+  },
+  "license": "MIT"
+}

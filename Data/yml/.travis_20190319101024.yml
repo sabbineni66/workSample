@@ -1,0 +1,6 @@
+sudo: false
+language: ruby
+jdk: oraclejdk8
+rvm:
+  - jruby-1.7.2
+before_install: gem install bundler -v 1.14.5

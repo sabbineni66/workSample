@@ -1,0 +1,5 @@
+---
+meta:
+  rdpg:
+    consul:
+      servers: (( grab jobs.rdpgmc_z1.networks.rdpgmc_z1.static_ips jobs.rdpgmc_z2.networks.rdpgmc_z2.static_ips jobs.rdpgmc_z3.networks.rdpgmc_z3.static_ips ))

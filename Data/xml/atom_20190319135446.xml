@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: cluster | No F*cking Idea]]></title>
+  <link href="http://no-fucking-idea.com/blog/categories/cluster/atom.xml" rel="self"/>
+  <link href="http://no-fucking-idea.com/"/>
+  <updated>2014-08-25T19:37:27+01:00</updated>
+  <id>http://no-fucking-idea.com/</id>
+  <author>
+    <name><![CDATA[Jakub Oboza]]></name>
+    <email><![CDATA[jakub.oboza@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up redis cluster]]></title>
+    <link href="http://no-fucking-idea.com/blog/2012/04/16/setting-up-redis-cluster/"/>
+    <updated>2012-04-16T19:54:00+01:00</updated>
+    <id>http://no-fucking-idea.com/blog/2012/04/16/setting-up-redis-cluster</id>
+    <content type="html"><![CDATA[<p>redis cluster in currently unstable, i used todays master HEAD (93a74949d7bb5d0c4115d1bf45f856c368badf31) commit to build my redis server and client. Setting redis cluster requires only few settings to go! :)</p>
+
+<p>Here is link to overview how redis cluster works <a href="http://redis.io/presentation/Redis_Cluster.pdf">http://redis.io/presentation/Redis_Cluster.pdf</a></p>
+
+<h1>redis.conf</h1>
+
+<p>Regular nodes can&rsquo;t be part of cluster :( so you have to prepare separate redis configs for your cluster servers.
+Most important thing is to setup <code>cluster-enabled</code> and <code>cluster-config-file</code> I decided to name my config files <code>redis-cluster-&lt;port&gt;.conf</code>. I used ports 4444, 4445 4446
+Here is my sample config
+``` bash
+daemonize yes
+timeout 0
+loglevel notice
+logfile stdout
+databases 16
+save 900 1
+save 300 10
+save 60 10000
+stop-writes-on-bgsave-error yes
+rdbcompression yes
+rdbchecksum yes
+dbfilename dump.rdb
+dir ./cluster_4444
+slave-serve-stale-data yes
+slave-read-only yes
+appendonly no
+appendfsync everysec
+no-appendfsync-on-rewrite no
+auto-aof-rewrite-percentage 100
+auto-aof-rewrite-min-size 64mb
+lua-time-limit 5000</p>
+
+<h1>Cluster</h1>
+
+<p>#
+pidfile /var/run/redis-4444.pid
+port 4444
+cluster-enabled yes
+cluster-config-file redis-cluster-4444.conf</p>
+
+<p>slowlog-log-slower-than 10000
+slowlog-max-len 1024
+hash-max-ziplist-entries 512
+hash-max-ziplist-value 64
+list-max-ziplist-entries 512
+list-max-ziplist-value 64
+set-max-intset-entries 512
+zset-max-ziplist-entries 128
+zset-max-ziplist-value 64
+activerehashing yes
+client-output-buffer-limit normal 0 0 0
+client-output-buffer-limit slave 256mb 64mb 60
+client-output-buffer-limit pubsub 32mb 8mb 60
+<code>``
+For each node i created directory</code>cluster_<port><code>and that was the hardest part actually to do. With this all you have to do is to start ( for debug you can set daemonize to no) all nodes using</code>redis-server path/to/redis-cluster-<port>.conf` and then use magic ruby tool :)</p>
+
+<h1>redis-tribe.rb</h1>
+
+<p>In <code>src/</code> directory of source you can find ruby script for creating and managing cluster. But first you need to have ruby installed with <code>redis</code> gem. i just did <code>gem install redis</code> but if you don&rsquo;t have ruby you have to google how to install it etc (hint: get 1.9.2).</p>
+
+<p>now you can run the script. <code>./redis-tribe.rb</code> and see</p>
+
+<p>``` bash
+? ./redis-trib.rb   <br/>
+Usage: redis-trib <command> <arguments ...></p>
+
+<p>  create               host1:port host2:port &hellip; hostN:port
+  check                host:port
+  reshard              host:port
+```</p>
+
+<p>To start cluster we will type &ldquo;create&rdquo; (useless comment)</p>
+
+<p><code>bash
+? ./redis-trib.rb create 127.0.0.1:4444 127.0.0.1:4445 127.0.0.1:4446
+Creating cluster
+Connecting to node 127.0.0.1:4444: OK
+Connecting to node 127.0.0.1:4445: OK
+Connecting to node 127.0.0.1:4446: OK
+Performing hash slots allocation on 3 nodes...
+[FAIL] 5a2f6df453f1cd52bcb22c2afc45580283bcce87 127.0.0.1:4444 slots:0-1364 (1365 slots)
+[FAIL] 35d107017bc726ece9b57e1ea2f21678555cf6a8 127.0.0.1:4445 slots:1365-2729 (1365 slots)
+[FAIL] 76d06b0d3cb1b3829cb60574260dff2d06964cea 127.0.0.1:4446 slots:2730-4095 (1366 slots)
+Can I set the above configuration? (type 'yes' to accept): yes
+** Nodes configuration updated
+** Sending CLUSTER MEET messages to join the cluster
+Performing Cluster Check (using node 127.0.0.1:4444)
+[FAIL] 5a2f6df453f1cd52bcb22c2afc45580283bcce87 127.0.0.1:4444 slots:0-1364 (1365 slots)
+[FAIL] 35d107017bc726ece9b57e1ea2f21678555cf6a8 127.0.0.1:4445 slots:1365-2729 (1365 slots)
+[FAIL] 76d06b0d3cb1b3829cb60574260dff2d06964cea 127.0.0.1:4446 slots:2730-4095 (1366 slots)
+[OK] All 4096 slots covered.
+</code>
+Nice we have our cluster running :) now we can connect to any node and try it out.</p>
+
+<p><code>bash
+? ./redis-cli -h 127.0.0.1 -p 4445
+redis 127.0.0.1:4445&gt; set "jakub" "oboza"
+(error) MOVED 198 127.0.0.1:4444
+</code></p>
+
+<p>Sweet :D</p>
+
+<p>Using this tool you can also reshard :D I did on my 15 keys worked :-F.</p>
+
+<h1>Smart clients</h1>
+
+<p>In redis doc we can read that you will require &ldquo;smart client&rdquo; to make it low latency. Yes, you can read from output that it was moved so you will have to cache where the key is now and reset temp cache when it will be moved (resharding)</p>
+
+<h1>Fire!</h1>
+
+<p>You can now test how it will behaves under fire by killing and restarting your nodes eg.
+<code>bash
+[19008] 16 Apr 19:44:09.945 # Server started, Redis version 2.9.7
+[19008] 16 Apr 19:44:09.946 * The server is now ready to accept connections on port 4444
+[19008] 16 Apr 19:45:14.414 * Connecting with Node c20290a7b70a2a840a168c3309f00e3de1b1844d at 127.0.0.1:14446
+[19008] 16 Apr 19:45:15.424 * Connecting with Node ab93647957ed4bb93fc43b1dc76202a6cdb94f49 at 127.0.0.1:14445
+[19008] 16 Apr 19:59:10.047 * 1 changes in 900 seconds. Saving...
+[19008] 16 Apr 19:59:10.047 * Background saving started by pid 19321
+[19321] 16 Apr 19:59:10.080 * DB saved on disk
+[19008] 16 Apr 19:59:10.248 * Background saving terminated with success
+[19008] 16 Apr 20:08:29.837 * I/O error reading from node link: connection closed
+[19008] 16 Apr 20:08:29.837 * I/O error reading from node link: connection closed
+[19008] 16 Apr 20:08:30.056 * Connecting with Node 76d06b0d3cb1b3829cb60574260dff2d06964cea at 127.0.0.1:14446
+[19008] 16 Apr 20:08:30.056 * I/O error writing to node link: Broken pipe
+[19008] 16 Apr 20:08:30.525 * I/O error reading from node link: connection closed
+[19008] 16 Apr 20:08:30.526 * I/O error reading from node link: connection closed
+[19008] 16 Apr 20:08:31.063 * Connecting with Node 35d107017bc726ece9b57e1ea2f21678555cf6a8 at 127.0.0.1:14445
+[19008] 16 Apr 20:08:31.064 * Connecting with Node 76d06b0d3cb1b3829cb60574260dff2d06964cea at 127.0.0.1:14446
+</code></p>
+
+<h1>Summary</h1>
+
+<p>Even if i think this is a great tool, and is unstable i saw after few minutes play that some things just don&rsquo;t work as intended and some keys are not pushed. But it is pulled from unstable branch so i&rsquo;m crossing my fingers for this project because it looks sweet! Go Go Antirez.</p>
+]]></content>
+  </entry>
+  
+</feed>

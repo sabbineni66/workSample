@@ -1,0 +1,65 @@
+{
+    "callback_mode": "email",
+    "callback_value": "your@email.here",
+    "name": "FNB Test Up",
+    "slug": "FNB-USSD-1",
+    "type": "USSD",
+    "tx_mccmnc": "65501",
+    "start_time": "2013-06-09 22:48:53.006000",
+    "steps": [
+        {
+            "action": "dial",
+            "duration": 778000,
+            "response": "Welcome to FNB Cellphone Banking.\n1.Switch to FNB\n2.Apply for Loan\n3.Get a Cellphone\nFNB, A Div of FRB Ltd.",
+            "start_time": "2013-06-09 22:48:55.786000",
+            "step": 1,
+            "step_pass": true,
+            "value": "*120*321#"
+        },
+        {
+            "action": "expect",
+            "duration": 1000,
+            "start_time": "2013-06-09 22:48:55.787000",
+            "step": 2,
+            "step_pass": true,
+            "value": "FRB"
+        },
+        {
+            "action": "sleep",
+            "duration": 500000,
+            "start_time": "2013-06-09 22:48:56.288000",
+            "step": 3,
+            "step_pass": true,
+            "value": "0.5"
+        },
+        {
+            "action": "reply",
+            "duration": 427000,
+            "response": "To open any FNB account, credit card and more, simply enter your ID number and someone will contact you on this Cellphone number.",
+            "start_time": "2013-06-09 22:48:57.716000",
+            "step": 4,
+            "step_pass": true,
+            "value": "1"
+        },
+        {
+            "action": "expect",
+            "duration": 1000,
+            "start_time": "2013-06-09 22:48:57.717000",
+            "step": 5,
+            "step_pass": true,
+            "value": "Cellphone number"
+        },
+        {
+            "action": "cancel",
+            "duration": 3000,
+            "start_time": "2013-06-09 22:48:57.720000",
+            "step": 6,
+            "step_pass": true
+        }
+    ],
+    "stop_time": "2013-06-09 22:48:57.720000",
+    "terminal_log": ">>> AT+CUSD=1,\"*120*321#\",15\r\n<<< OK\n<<< +CUSD: 1,\"Welcome to FNB Cellphone Banking.\n1.Switch to FNB\n2.Apply for Loan\n3.Get a Cellphone\nFNB, A Div of FRB Ltd.\",0\n>>> AT+CUSD=1,\"1\",15\r\n<<< OK\n<<< +CUSD: 1,\"To open any FNB account, credit card and more, simply enter your ID number and someone will contact you on this Cellphone number.\",0\n>>> AT+CUSD=2\r\n<<< OK\n",
+    "test_duration": 714000,
+    "test_pass": true,
+    "uuid": "c4cd7426e8af40afa68287546ed23015"
+}

@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch test-project in Chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/test/tmp/"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch test-project",
+      "cwd": "${workspaceFolder}/test/project",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "--inspect",
+        "./node_modules/.bin/uiengine",
+        "build",
+        "-s",
+        "-w"
+      ],
+      "port": 9229
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch tests",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": [
+        "test",
+        "--inspect"
+      ],
+      "port": 9229
+    }
+  ]
+}

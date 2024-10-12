@@ -1,0 +1,4 @@
+parts:
+  organo:
+    keyboard: false
+    source: continuo

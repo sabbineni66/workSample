@@ -1,0 +1,42 @@
+---
+
+- name: install nginx
+  pacman: name=nginx state=installed
+  tags: nginx
+
+- name: configure nginx
+  template: src=nginx.conf.j2 dest=/etc/nginx/nginx.conf
+  notify: reload nginx
+  tags: nginx
+
+- name: update nginx mime types
+  copy: src=mime.types dest=/etc/nginx/mime.types
+  notify: reload nginx
+  tags: nginx
+
+- name: configure nginx logrotate
+  copy: src=logrotate.conf dest=/etc/logrotate.d/nginx
+  tags: nginx
+
+- name: create nginx conf.d
+  file: name=/etc/nginx/conf.d state=directory
+  tags: nginx
+
+- name: create base http root
+  file: name=/srv/http state=directory owner=root group=http mode=750
+  tags: nginx
+
+- name: create http root for sites
+  file: name={{ item.root }} state=directory owner=root group=http mode=750
+  with_items: nginx_sites
+  tags: nginx
+
+- name: configure nginx sites
+  template: src=site.conf.j2 dest=/etc/nginx/conf.d/{{ item.fqdn }}.conf
+  notify: reload nginx
+  with_items: nginx_sites
+  tags: nginx
+
+- name: start and enable nginx
+  service: name=nginx state=started enabled=yes
+  tags: nginx

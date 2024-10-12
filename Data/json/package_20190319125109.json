@@ -1,0 +1,25 @@
+{
+  "name": "mintpeaks-alexa-skill",
+  "version": "1.0.0",
+  "description": "Support Mint Peaks home monitoring on Alexa",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "localenv": "^0.2.2",
+    "superagent": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihar/mintpeaks-alexa-skill.git"
+  },
+  "author": "Miha Rebernik <miha at rebernik.info>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmihar/mintpeaks-alexa-skill/issues"
+  },
+  "homepage": "https://github.com/mihar/mintpeaks-alexa-skill#readme"
+}

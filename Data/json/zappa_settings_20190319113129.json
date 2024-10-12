@@ -1,0 +1,11 @@
+{
+    "dev": {
+        "aws_region": "{{ cookiecutter.aws_region }}",
+        "app_function": "{{ cookiecutter.module_name }}.app",
+        "s3_bucket": "{{ cookiecutter.s3_bucket_name }}",
+        "callbacks": {
+            "post": "{{ cookiecutter.module_name }}.upload_static_assets"
+        },
+        "runtime": "python3.6"
+    }
+}

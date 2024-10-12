@@ -1,0 +1,203 @@
+# Heuristics are used to "sniff" a project folder once found
+# and determine whether it is of some kind, e.g. a Rails project.
+# Heuristic code should be a ruby expression returning true or
+# false. The value of 'project_path' will be bound to the found
+# path when the heuristic is run.
+#
+heuristics:
+  rails: |
+    File.exists?( File.join( project_path, "config", "environment.rb" ) ) &&
+    File.exists?( File.join( project_path, "config", "environments", "development.rb" ) ) &&
+    File.exists?( File.join( project_path, "config", "environments", "test.rb" ) )
+  rspec: |
+    File.exists?( File.join( project_path, "spec" ) )
+  svn: |
+    File.exists?( File.join( project_path, ".svn" ) )
+  git: |
+    File.exists?( File.join( project_path, ".git" ) )
+  true: |
+    true
+
+# Actions are shell commands that are run in their own terminal session (by default
+# this will be a new tab in iTerm). Each action can optionally label the terminal
+# session.
+#
+# Where the session should not hang around after the command has run (e.g. opening
+# a GUI app) then specify
+#   exit: true.
+# This will ensure that the session is closes without causing AppleScript
+# errors due to terminal sessions getting re-numbered.
+#
+actions:
+  say:
+    command: "say #{project_path}"
+    exit: true
+  mongrel:
+    label: mongrel
+    command: mongrel_rails start
+  devlog:
+    label: dev-log
+    command: tail -f log/development.log
+  reqlog:
+    label: req-log
+    command: tail -f log/request.log
+  autotest-unit:
+    label: tests
+    command: autotest
+  autotest-spec:
+    label: specs
+    command: autotest
+  console:
+    label: console
+    command: ruby script/console
+  irb:
+    label: IRB
+    command: irb
+  diffly:
+    command: diffly .
+    exit: true
+  browser:
+    command: open -a BonEcho http://localhost:3000/
+    exit: true
+  terminal:
+    label: Con-#{counter(:terminal)}
+  textmate:
+    command: mate .
+    exit: true
+  view-git:
+    command: (PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin:/usr/local/bin nohup gitk &)
+    exit: true
+
+# A list of paths that should be ignored when searching for the project path
+#
+ignores:
+  - \.svn
+  - \.git
+  - CVS
+  - app
+  - lib
+  - vendor
+  - config
+  - db
+  - log
+  - public
+  - script
+  - test
+  - spec
+  - tmp
+  - doc
+  - components
+  - rdoc
+  - generators
+  - data
+  - man
+  - build
+  - backup
+  - bin
+  - include
+  - .*\.lproj
+  - .*\.xcodeproj
+  - .*\.wdgtproj
+  - .*\.app
+
+# Once the project folder has been identified each listed matcher, in turn, gets to run
+# its heuristics against the folder. Once a matcher has all of its heuristics succeed
+# that matcher is selected and its action are run.
+#
+# Where matchers share common heuristics they should be listed in order of most to least
+# specific, e.g. rail+spec+svn should be listed before rails+svn otherwise the more
+# specific matcher will not get a chance to run.
+#
+matchers:
+  -
+    name: rails+spec+svn
+    heuristics:
+      - rspec
+      - rails
+      - svn
+    actions:
+      - mongrel
+      - devlog
+      - reqlog
+      - autotest-spec
+      - console
+      - irb
+      - terminal
+      - terminal
+      - diffly
+      - browser
+      - textmate
+  -
+    name: rails+spec+git
+    heuristics:
+      - rails
+      - rspec
+      - git
+    actions:
+      - mongrel
+      - devlog
+      - reqlog
+      - autotest-spec
+      - console
+      - irb
+      - terminal
+      - terminal
+      - view-git
+      - browser
+      - textmate
+  -
+    name: rails+svn
+    heuristics:
+      - rails
+      - svn
+    actions:
+      - mongrel
+      - devlog
+      - reqlog
+      - autotest-unit
+      - console
+      - irb
+      - terminal
+      - terminal
+      - diffly
+      - browser
+      - textmate
+  -
+    name: rails+git
+    heuristics:
+      - rails
+      - git
+    actions:
+      - mongrel
+      - devlog
+      - reqlog
+      - autotest-unit
+      - console
+      - irb
+      - terminal
+      - terminal
+      - view-git
+      - browser
+      - textmate
+  -
+    name: default
+    heuristics:
+      - true
+    actions:
+      - terminal
+
+# A list of project root paths to be searched
+projects:
+  - ~/Projects/ruby
+  - ~/Projects/rails
+  - ~/Projects/Cocoa
+
+# Specifies how far down to search into the project root paths,
+# defaults to unlimited depth.
+# max_depth: 2
+
+# The session controller to use. Will autodetect iTerm and Apple Terminal
+# using the TERM_PROGRAM environment variable. Specify to use a custom class
+# or to override for a specific project.
+# sessions: ITermSession
+# sessions: TerminalSession

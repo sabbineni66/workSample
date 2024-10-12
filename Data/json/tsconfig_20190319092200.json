@@ -1,0 +1,20 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "module": "ES6",
+    "moduleResolution": "node",
+    "target": "ES5",
+    "sourceMap": true,
+    "jsx": "react",
+    "jsxFactory": "Snabbdom.createElement",
+    "noImplicitReturns": true,
+    "strict": true,
+    "allowJs": true,
+    "lib": ["ES7", "ES6", "ES5", "DOM"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "custom-typings.d.ts"
+  ],
+  "exclude": ["node_modules"],
+}

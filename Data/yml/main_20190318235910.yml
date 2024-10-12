@@ -1,0 +1,29 @@
+---
+- apt : name={{ item }}
+  with_items:
+    - postgresql
+    - postgresql-client
+    - postgresql-contrib
+    - postgresql-server-dev-all
+    - libpq-dev
+  sudo: true
+  notify: restart postgresql
+  tags: database
+
+- copy: src=main dest=/etc/postgresql
+  sudo: true
+  tags: database
+  notify:
+    - restart postgresql
+
+- copy: src=main dest=/etc/postgresql/9.4
+  sudo: true
+  tags: database
+  notify:
+    - restart postgresql
+
+- command: psql -c "ALTER USER postgres with encrypted password 'apple';"
+  sudo: true
+  sudo_user: postgres
+  tags: database
+  notify: restart postgresql

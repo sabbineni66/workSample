@@ -1,0 +1,5 @@
+{
+	"ImportPath": "github.com/weppos/digweb",
+	"GoVersion": "go1.3.3",
+	"Deps": []
+}

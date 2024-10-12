@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "purescript-quickcheck": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules"
+  ],
+  "name": "purescript-winston"
+}

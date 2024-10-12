@@ -1,0 +1,52 @@
+{
+  "name": "GifBar",
+  "productName": "Gif Bar",
+  "description": "A minimal Giphy menubar app",
+  "version": "0.0.5",
+  "author": "Pete Roome <pete.roome@gmail.com> (http://peteroome.com/)",
+  "copyright": "? 2017, Pete Roome",
+  "homepage": "http://peteroome.com",
+  "license": "MIT",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "NODE_ENV=development electron .",
+    "package": "NODE_ENV=production ./node_modules/.bin/electron-packager-compile . --out dist --platform darwin --version 1.4.12 --icon resources/osx/icon.icns --overwrite",
+    "test": "mocha --require ./test/helpers/setup.js --recursive --compilers js:babel-register test/**/*.spec.js --require chai --reporter nyan",
+    "test-watch": "npm test -- --watch"
+  },
+  "dependencies": {
+    "electron-compile": "^5.1.1",
+    "jquery": "^2.2.3",
+    "menubar": "^5.1.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.0.1",
+    "react-ga": "^2.1.2",
+    "react-hotkeys": "^0.9.0",
+    "react-masonry-component": "^4.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-preset-es2016-node5": "^1.1.2",
+    "babel-preset-react": "^6.16.0",
+    "chai": "*",
+    "del": "^2.2.2",
+    "electron-connect": "^0.6.1",
+    "electron-packager": "^8.4.0",
+    "electron-prebuilt-compile": "^1.4.12",
+    "enzyme": "^2.2.0",
+    "eslint": "^3.6.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "jsdom": "^9.2.1",
+    "mocha": "*",
+    "mockery": "^1.7.0",
+    "react-addons-test-utils": "^15.3.1",
+    "react-test-renderer": "^15.3.1",
+    "sinon": "^1.17.5",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

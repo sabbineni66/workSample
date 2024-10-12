@@ -1,0 +1,16 @@
+- name: restart influxdb
+  service: name= {{ item }}  enabled=true state=restarted
+  with_items:
+    - influxdb
+  sudo: true
+  tags: monitoring
+
+- name: restart diamond
+  service: name= {{ item }}  enabled=true state=restarted
+  with_items:
+    - diamond
+  sudo: true
+  tags: monitoring
+
+
+

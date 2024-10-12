@@ -1,0 +1,7 @@
+bob_mobile:
+  number: 18001234567
+  type: cell
+
+bob_home:
+  number: 18009876543
+  type: home

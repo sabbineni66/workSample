@@ -1,0 +1,9 @@
+{
+  "project": "marvin",
+  "stage": "dev",
+  "body": {
+    "game": "The Messengers of Blemma",
+    "title": "Thali",
+    "body": "Male Dwarf Paladin, Good.\n\n | **Attribute** | **Value** |\n|---|---|\n| Str | 12 |\n| Dex | 10 |\n| Con | 9 |\n| Int | 7 |\n| Wis | 11 |\n| Cha | 11 |\n\n Thali is thin, with black hair and green eyes. He wears ring mail and wields a battleaxe and shield."
+  }
+}

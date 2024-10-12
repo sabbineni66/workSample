@@ -1,0 +1,11 @@
+en:
+  feature: Feature
+  chore: Chore
+  bug: Bug
+  
+  unscheduled: Unscheduled
+  unstarted: Unstarted
+  started: Started
+  finished: Finished
+  delivered: Delivered
+  accepted: Accepted

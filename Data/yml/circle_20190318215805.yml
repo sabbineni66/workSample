@@ -1,0 +1,10 @@
+# dependencies:
+#   override:
+#     - sudo apt-get update -qq && sudo apt-get install -qy luarocks
+#     - sudo luarocks install luacheck
+test:
+  override:
+    - make ci
+notify:
+  webhooks:
+    - url: http://home.hagelb.org:8808

@@ -1,0 +1,11 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_location_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00000000"
+    android:cacheColorHint="#00000000"
+    android:baselineAligned="false"
+    android:focusable="false"
+    android:orientation="horizontal" >
+
+</FrameLayout>

@@ -1,0 +1,26 @@
+{
+    "name": "phpwax/wildfire-frontend",
+    "description": "Composable frontend for Wildfire CMS site",
+    "license": "Proprietary",
+    "authors": [
+        {
+            "name": "Ross Riley",
+            "email": "riley.ross@gmail.com"
+        }
+    ],
+
+
+
+
+    "minimum-stability": "dev",
+    "require": {
+      "symfony/http-foundation": "~2.3",
+      "twig/twig": "1.15.*",
+      "phpwax/slimmodel": "1.0.*@dev"
+    },
+
+    "autoload": {
+      "psr-0": { "": "./" }
+    }
+
+}

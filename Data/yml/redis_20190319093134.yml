@@ -1,0 +1,9 @@
+--- 
+development: 
+  server: 127.0.0.1
+test: 
+  server: 127.0.0.1
+staging: 
+  server: 127.0.0.1
+production: 
+  server: 127.0.0.1

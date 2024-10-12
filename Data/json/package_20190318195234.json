@@ -1,0 +1,19 @@
+{
+  "name": "my-homebridge",
+  "version": "1.0.0",
+  "description": "homebridge for me, indirect",
+  "main": "index.js",
+  "dependencies": {
+    "foreman": "^2.0.0",
+    "homebridge": "^0.4.6",
+    "homebridge-misfit-bolt": "^0.1.4",
+    "misfit-bolt-http": "^1.0.1"
+  },
+  "devDependencies": {},
+  "repository": "https://github.com/indirect/my-homebridge.git",
+  "scripts": {
+    "homebridge": "nf start"
+  },
+  "author": "Andr? Arko",
+  "license": "ISC"
+}

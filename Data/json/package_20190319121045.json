@@ -1,0 +1,30 @@
+{
+  "name": "hubot-lmk",
+  "description": "Respond when people say 'let me know'",
+  "version": "0.2.0",
+  "author": "Eric Watson <wasnotrice@gmail.com>",
+  "license": "MIT",
+
+  "keywords": ["hubot","hubot-scripts"],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wasnotrice/hubot-lmk.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/wasnotrice/hubot-lmk/issues"
+  },
+
+  "dependencies": {
+    "coffee-script": "~1.6"
+  },
+
+  "devDependencies": {
+  },
+
+  "main": "index.coffee",
+
+  "scripts": {
+  }
+}

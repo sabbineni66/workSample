@@ -1,0 +1,19 @@
+{
+  "name": "dialup-mail",
+  "description": "Configures a dialup mail server.",
+
+  "recipes": [
+    "hectic",
+    "postfix",
+    "fetchmail",
+    "dovecot",
+    "pppd",
+    "mgetty"
+  ],
+
+  "default_attributes": {},
+  "override_attributes": {},
+
+  "json_class": "Chef::Role",
+  "chef_type": "role"
+}

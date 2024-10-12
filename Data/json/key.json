@@ -1,0 +1,9 @@
+{
+  "watches": [
+    {
+      "type": "key",
+      "key": "singlekey",
+      "handler": "bin/sifter key -d true -m='dsifter' -e 'w'"
+    }
+  ]
+}

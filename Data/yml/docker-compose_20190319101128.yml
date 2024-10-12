@@ -1,0 +1,34 @@
+version: '2'
+
+networks:
+  development:
+    driver: bridge
+
+services:
+  web:
+    image: gitlab/gitlab-ce:latest
+    networks:
+      - development
+    hostname: "${GITLAB_HOSTNAME}"
+    container_name: gitlab
+    restart: always
+    privileged: true
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        registry_external_url "https://${GITLAB_HOSTNAME}:4567"
+        registry_nginx['ssl_certificate'] = "/etc/mycerts/ssl/server.crt"
+        registry_nginx['ssl_certificate_key'] = "/etc/mycerts/ssl/server.key"
+    ports:
+      - 80:80
+      - 443:443
+      - 4567:4567
+    volumes:
+      - ./ssl:/etc/mycerts/ssl
+      - etcgitlab:/etc/gitlab
+      - varloggitlab:/var/log/gitlab
+      - varoptgitlab:/var/opt/gitlab
+
+volumes:
+  etcgitlab: {}
+  varloggitlab: {}
+  varoptgitlab: {}

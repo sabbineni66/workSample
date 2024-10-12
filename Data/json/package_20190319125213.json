@@ -1,0 +1,23 @@
+{
+  "name":        "markbot",
+  "version":     "0.0.1",
+  "author":      "Mark Turner",
+  "keywords":    "campfire bot mark turner amerine",
+  "description": "A little bot for work",
+  "licenses":     [{
+    "type":       "MIT",
+    "url":        "http://github.com/github/hubot/raw/master/LICENSE"
+  }],
+
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/github/hubot.git"
+  },
+
+  "dependencies": {
+    "hubot": "1.1.10",
+    "hubot-scripts": "1.1.6",
+    "optparse": "1.0.3",
+    "time": "0.6.5"
+  }
+}

@@ -1,0 +1,609 @@
+{
+  "elements": [
+    {
+      "id": "v1-228",
+      "slug": "digitalmedia",
+      "courseType": "v1.session",
+      "name": "Creative Programming for Digital Media & Mobile Apps"
+    },
+    {
+      "id": "69Bku0KoEeWZtA4u62x6lQ",
+      "slug": "gamification",
+      "courseType": "v2.ondemand",
+      "name": "Gamification"
+    },
+    {
+      "id": "0HiU7Oe4EeWTAQ4yevf_oQ",
+      "slug": "missing-data",
+      "courseType": "v2.ondemand",
+      "name": "Dealing With Missing Data"
+    },
+    {
+      "id": "5zjIsJq-EeW_wArffOXkOw",
+      "courseType": "v2.ondemand",
+      "slug": "vital-signs",
+      "name": "Vital Signs: Understanding What the Body Is Telling Us"
+    },
+    {
+      "id": "v9CQdBkhEeWjrA6seF25aw",
+      "courseType": "v2.ondemand",
+      "slug": "modern-art-ideas",
+      "name": "Modern Art & Ideas"
+    },
+    {
+      "id": "QgmoVdT2EeSlhSIACx2EBw",
+      "courseType": "v2.ondemand",
+      "name": "The Evolving Universe",
+      "slug": "evolvinguniverse"
+    },
+    {
+      "id": "KXOLVTovEeWnxw5wP_KHTw",
+      "courseType": "v2.ondemand",
+      "slug": "intro-to-big-data",
+      "name": "Introduction to Big Data"
+    },
+    {
+      "id": "QTTRdG3vEeWG0w42Sx-Gkw",
+      "slug": "learntomod",
+      "courseType": "v2.ondemand",
+      "name": "LearnToMod For Educators"
+    },
+    {
+      "id": "v1-1355",
+      "name": "Water: The Essential Resource",
+      "slug": "waterandenvironment",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "5uXCfFu2EeSU0SIACxCMgg",
+      "name": "Bioinformatic Methods I",
+      "courseType": "v2.ondemand",
+      "slug": "bioinformatics-methods-1"
+    },
+    {
+      "id": "Rr2thkIKEeWZtA4u62x6lQ",
+      "name": "Machine Learning Capstone: An Intelligent Application with Deep Learning",
+      "slug": "ml-capstone",
+      "courseType": "v2.capstone"
+    },
+    {
+      "id": "rajsT7UJEeWl_hJObLDVwQ",
+      "courseType": "v2.ondemand",
+      "slug": "jian-ji",
+      "name": "??????????"
+    },
+    {
+      "id": "lfKT5sS3EeWhPQ55lNYVVQ",
+      "courseType": "v2.ondemand",
+      "name": "Turn Down the Heat: From Climate Science to Action",
+      "slug": "climate-science"
+    },
+    {
+      "id": "v1-1250",
+      "slug": "career",
+      "courseType": "v1.session",
+      "name": "Enhance Your Career and Employability Skills"
+    },
+    {
+      "id": "POZJ3uOtEeSoXCIACw4Gzg",
+      "courseType": "v2.ondemand",
+      "name": "???? 2D CAD",
+      "slug": "2d-cad"
+    },
+    {
+      "id": "ugSnwH9hEeSiIiIAC3lQMQ",
+      "courseType": "v2.ondemand",
+      "name": "?ok de?i?kenli Fonksiyon II: Uygulamalar / Multivariable Calculus II: Applications",
+      "slug": "calculus-diferansiyel-hesap"
+    },
+    {
+      "id": "rc5KG0aUEeWG1w6arGoEIQ",
+      "courseType": "v2.ondemand",
+      "slug": "accounting-analytics",
+      "name": "Accounting Analytics"
+    },
+    {
+      "id": "gpAI9GK4EeWFkQ7sUCFGVQ",
+      "courseType": "v2.ondemand",
+      "slug": "solid-waste-management",
+      "name": "Municipal Solid Waste Management in Developing Countries"
+    },
+    {
+      "id": "v1-640",
+      "courseType": "v1.session",
+      "slug": "ccss-math1",
+      "name": "Common Core in Action: Math Classroom Challenges- Using Formative Assessment to Guide Instruction"
+    },
+    {
+      "id": "Kzg9QkDxEeWZtA4u62x6lQ",
+      "name": "Music and Social Action",
+      "courseType": "v2.ondemand",
+      "slug": "music-and-social-action"
+    },
+    {
+      "id": "tEqImn2kEeWb-BLhFdaGww",
+      "courseType": "v2.ondemand",
+      "name": "Pro Tools Basics",
+      "slug": "protools"
+    },
+    {
+      "id": "yO13mkySEeW_MgoxMAgbMQ",
+      "courseType": "v2.ondemand",
+      "name": "Greening the Economy: Sustainable Cities",
+      "slug": "gte-sustainable-cities"
+    },
+    {
+      "id": "FjD-ZB8oEeScWCIACnuVZQ",
+      "slug": "epidemiology",
+      "courseType": "v2.ondemand",
+      "name": "Epidemiology: The Basic Science of Public Health"
+    },
+    {
+      "id": "6tx1Y3LiEeWxvQr3acyajw",
+      "name": "????? (Mechanics of Materials I)",
+      "courseType": "v2.ondemand",
+      "slug": "mechanics-of-materials-1"
+    },
+    {
+      "id": "mwj3ASWcEeWs4gorU6Q1Yw",
+      "name": "???? (Professionalism)",
+      "courseType": "v2.ondemand",
+      "slug": "zhichang-suyang"
+    },
+    {
+      "id": "v1-174",
+      "courseType": "v1.session",
+      "slug": "optimization",
+      "name": "Discrete Optimization"
+    },
+    {
+      "id": "v1-1291",
+      "name": "Configuring the World: A Critical Political Economy Approach",
+      "courseType": "v1.session",
+      "slug": "configuringworld"
+    },
+    {
+      "id": "06EmILV2EeWq2A7HIftJ6w",
+      "slug": "probabilites-2",
+      "courseType": "v2.ondemand",
+      "name": "Al?atoire : une introduction aux probabilit?s - Partie 2"
+    },
+    {
+      "id": "9h_j5XEiEeWbbw5cIAKQrw",
+      "courseType": "v2.ondemand",
+      "name": "Advanced Search Engine Optimization Strategies",
+      "slug": "advanced-seo-strategies"
+    },
+    {
+      "id": "v1-1012",
+      "name": "???????  Data Structures and Algorithms",
+      "slug": "dsalgo",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "xaYbkyBTEeWibgoGfGzczQ",
+      "courseType": "v2.ondemand",
+      "name": "4.- El C?lculo - Otros Modelos",
+      "slug": "calculo-4"
+    },
+    {
+      "id": "yS8ezjDPEeW-zwq84wShFQ",
+      "courseType": "v2.ondemand",
+      "name": "Reason and Persuasion: Thinking Through Three Dialogues By Plato",
+      "slug": "plato-dialogues"
+    },
+    {
+      "id": "IjAlbH3IEeWb-BLhFdaGww",
+      "slug": "power-electronics",
+      "courseType": "v2.ondemand",
+      "name": "Introduction to Power Electronics"
+    },
+    {
+      "id": "v1-2959",
+      "name": "Deafness in the 21st Century",
+      "courseType": "v1.session",
+      "slug": "deafness"
+    },
+    {
+      "id": "v1-1419",
+      "name": "Introduction to Computational Arts: Visual Arts",
+      "courseType": "v1.session",
+      "slug": "compartsvisual"
+    },
+    {
+      "id": "JV2US53WEeW4xRJkiwxnYw",
+      "courseType": "v2.ondemand",
+      "name": "R?daction de contrats",
+      "slug": "contrats"
+    },
+    {
+      "id": "qu8u8vqKEeSDoyIAC1CH0g",
+      "courseType": "v2.ondemand",
+      "name": "What?s Your Big Idea?",
+      "slug": "big-ideas"
+    },
+    {
+      "id": "v1-67",
+      "slug": "nutrition",
+      "name": "Nutrition for Health Promotion and Disease Prevention",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "v1-1432",
+      "slug": "audio",
+      "courseType": "v1.session",
+      "name": "Audio Signal Processing for Music Applications"
+    },
+    {
+      "id": "2prtDtPREeWh-hLKMaYc3w",
+      "name": "Introdu??o ao Controle de Sistemas",
+      "courseType": "v2.ondemand",
+      "slug": "controle"
+    },
+    {
+      "id": "G6m5MzTeEeWWBQrVFXqd1w",
+      "name": "Public Relations Research",
+      "courseType": "v2.ondemand",
+      "slug": "prresearch"
+    },
+    {
+      "id": "k1EoDdm3EeWpMxLJs6PspQ",
+      "slug": "wharton-proyecto-final-empresariales",
+      "name": "Proyecto de Fundamentos Empresariales de Wharton",
+      "courseType": "v2.capstone"
+    },
+    {
+      "id": "QUTOlO03EeSC-CIAC38Bjw",
+      "courseType": "v2.ondemand",
+      "slug": "teaching-elementary",
+      "name": "First Year Teaching (Elementary Grades) - Success from the Start"
+    },
+    {
+      "id": "v1-1045",
+      "slug": "interprofessional",
+      "courseType": "v1.session",
+      "name": "Collaboration and Communication in Healthcare: Interprofessional Practice"
+    },
+    {
+      "id": "v1-938",
+      "name": "?????? (Machine Learning Foundations)",
+      "slug": "ntumlone",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "5epfT7cBEeScDCIAC9REiQ",
+      "courseType": "v2.ondemand",
+      "slug": "future-of-energy",
+      "name": "Our Energy Future"
+    },
+    {
+      "id": "qqP6hnElEeWi0g6YoSAL-w",
+      "courseType": "v2.ondemand",
+      "slug": "gis-data",
+      "name": "GIS Data Formats, Design and Quality"
+    },
+    {
+      "id": "v1-1961",
+      "name": "???(Electromagnetics)",
+      "slug": "ntuem",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "3791_tdbEeS2-SIAC4-TTw",
+      "name": "Fundamentals of Management",
+      "courseType": "v2.ondemand",
+      "slug": "fundamentals-of-management"
+    },
+    {
+      "id": "6eR54Y_nEeWF6gpQJiw6hQ",
+      "courseType": "v2.ondemand",
+      "slug": "chuangxin-siwei",
+      "name": "????"
+    },
+    {
+      "id": "ENhHCTboEeW8ZAoCexam_w",
+      "slug": "data-analysis-tools",
+      "name": "Data Analysis Tools",
+      "courseType": "v2.ondemand"
+    },
+    {
+      "id": "5aTJVUhVEeWJHwqqqPAooQ",
+      "courseType": "v2.ondemand",
+      "name": "Subsistence Marketplaces",
+      "slug": "subsistence-marketplaces"
+    },
+    {
+      "id": "A4W_GyDjEeW5Rwo0txKkgQ",
+      "slug": "matlab",
+      "courseType": "v2.ondemand",
+      "name": "Introduction to Programming with MATLAB"
+    },
+    {
+      "id": "v1-70",
+      "slug": "aboriginaled",
+      "name": "Aboriginal Worldviews and Education",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "eDu3y3Q7EeWKsgrp3VnvAw",
+      "slug": "seo-capstone",
+      "name": "Capstone: Website Optimization Client Report",
+      "courseType": "v2.capstone"
+    },
+    {
+      "id": "WGJsi1UuEeWaMw4b4yEpbw",
+      "slug": "sotsialnaya-set",
+      "name": "?????? ?????????? ??? ?????????? ???? ? ?????, ???????, ?????????? ? ???????????",
+      "courseType": "v2.ondemand"
+    },
+    {
+      "id": "IEE-83HuEeWi0g6YoSAL-w",
+      "courseType": "v2.ondemand",
+      "slug": "shehu-yanjiu-fangfa",
+      "name": "????????? ???Methodologies in Social Research (Part I)"
+    },
+    {
+      "id": "Tr9rK6JtEeSwKiIACiONVg",
+      "name": "Introductory Human Physiology",
+      "slug": "physiology",
+      "courseType": "v2.ondemand"
+    },
+    {
+      "id": "koVAwj03EeWZtA4u62x6lQ",
+      "courseType": "v2.ondemand",
+      "slug": "ingles-empresarial-gestion-liderazgo",
+      "name": "Ingl?s Empresarial: Gesti?n y Liderazgo "
+    },
+    {
+      "id": "v1-304",
+      "name": "TechniCity",
+      "courseType": "v1.session",
+      "slug": "techcity"
+    },
+    {
+      "id": "v1-484",
+      "slug": "extrasolarplanets",
+      "name": "The Diversity of Exoplanets",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "a05nBT8oEeWpogr5ZO8qxQ",
+      "slug": "infertilite",
+      "courseType": "v2.ondemand",
+      "name": "?nfertilite Hem?ireli?i (Infertility Nursing)"
+    },
+    {
+      "id": "v1-2380",
+      "slug": "uidesign2",
+      "name": "Mobile and Ubiquitous Computing",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "iCIGe_T6EeS-1yIAC7MN4w",
+      "courseType": "v2.ondemand",
+      "slug": "experimental-methods",
+      "name": "Experimental Methods in Systems Biology"
+    },
+    {
+      "id": "t2hchZe2EeWjfxIrc5BW9Q",
+      "slug": "upravlinnya-chasom",
+      "courseType": "v2.ondemand",
+      "name": "???????? ?????????, ? ?? ??????: ?????????? ????? ??? ????????? ?? ??????????? ??????????????"
+    },
+    {
+      "id": "v1-1052",
+      "slug": "techethics",
+      "courseType": "v1.session",
+      "name": "Technology and Ethics"
+    },
+    {
+      "id": "NDBJAUWDEeWbNhIvIryYow",
+      "name": "Investment Management in an Evolving and Volatile World by HEC Paris and AXA Investment Managers",
+      "courseType": "v2.ondemand",
+      "slug": "investment-management"
+    },
+    {
+      "id": "O0lyZeVUEeSglCIACzUL2A",
+      "name": "iMOOC102: Mastering American e-Learning",
+      "courseType": "v2.ondemand",
+      "slug": "e-learning"
+    },
+    {
+      "id": "QRDjcWLVEeWFkQ7sUCFGVQ",
+      "slug": "origins-universe-solarsystem",
+      "courseType": "v2.ondemand",
+      "name": "Origins - Formation of the Universe, Solar System, Earth and Life"
+    },
+    {
+      "id": "uVCz9Pp8EeS1ICIAC2sFKA",
+      "slug": "undp-cso",
+      "courseType": "v2.ondemand",
+      "name": "NGO?????? Building Capacity of CSOs in China"
+    },
+    {
+      "id": "eGUHRneUEeWtpg5GoAM5Iw",
+      "name": "TDD ? Desenvolvimento de Software Guiado por Testes",
+      "courseType": "v2.ondemand",
+      "slug": "tdd-desenvolvimento-de-software-guiado-por-testes"
+    },
+    {
+      "id": "v1-773",
+      "name": "21st Century American Foreign Policy",
+      "slug": "afp21stcentury",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "v1-3406",
+      "name": "Feeding the World",
+      "courseType": "v1.session",
+      "slug": "feedingtheworld"
+    },
+    {
+      "id": "v1-1572",
+      "name": "Geospatial Intelligence & the Geospatial Revolution",
+      "courseType": "v1.session",
+      "slug": "geoint"
+    },
+    {
+      "id": "Wa2LIymGEeWFggqB2SRvtQ",
+      "courseType": "v2.ondemand",
+      "name": "Advanced Converter Control Techniques",
+      "slug": "current-control"
+    },
+    {
+      "id": "l-VzSGYDEeWq4RLQvtY_lQ",
+      "courseType": "v2.ondemand",
+      "name": "Alternative Approaches to Valuation and Investment",
+      "slug": "valuation"
+    },
+    {
+      "id": "v1-1330",
+      "name": "From GPS and Google Maps to Spatial Computing",
+      "slug": "spatialcomputing",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "Gtv4Xb1-EeS-ViIACwYKVQ",
+      "courseType": "v2.ondemand",
+      "slug": "machine-learning",
+      "name": "Machine Learning"
+    },
+    {
+      "id": "ct7G8DVLEeWfzhKP8GtZlQ",
+      "name": "Build a Modern Computer from First Principles: From Nand to Tetris (Project-Centered Course)",
+      "courseType": "v2.ondemand",
+      "slug": "build-a-computer"
+    },
+    {
+      "id": "z_MvXQoVEeWCpyIAC3lAyw",
+      "name": "Revolutionary Ideas: Borders, Elections, Constitutions, Prisons",
+      "slug": "political-philosophy-2",
+      "courseType": "v2.ondemand"
+    },
+    {
+      "id": "v1-137",
+      "slug": "earth",
+      "name": "Planet Earth...and You!",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "X4ituSzfEeWl3A7Kuc0JCQ",
+      "courseType": "v2.ondemand",
+      "slug": "internet-of-things-communication",
+      "name": "Internet of Things: Communication Technologies"
+    },
+    {
+      "id": "P--h6zpNEeWYbg7p2_3OHQ",
+      "slug": "python-data",
+      "courseType": "v2.ondemand",
+      "name": "Python Data Structures"
+    },
+    {
+      "id": "Z3yHdBVBEeWvmQrN_lODCw",
+      "courseType": "v2.ondemand",
+      "slug": "user-research",
+      "name": "User Experience: Research & Prototyping"
+    },
+    {
+      "id": "v1-477",
+      "courseType": "v1.session",
+      "name": "How Green Is That Product? An Introduction to Life Cycle Environmental Assessment",
+      "slug": "introtolca"
+    },
+    {
+      "id": "v1-1034",
+      "slug": "highered",
+      "courseType": "v1.session",
+      "name": "History and Future of (Mostly) Higher Education"
+    },
+    {
+      "id": "v1-1973",
+      "name": "The Caltech-JPL Summer School on Big Data Analytics",
+      "slug": "bigdataschool",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "v1-2184",
+      "slug": "assetpricing2",
+      "courseType": "v1.session",
+      "name": "Asset Pricing, Part 2"
+    },
+    {
+      "id": "DJfupMVPEeWLqBIulHpzDw",
+      "courseType": "v2.ondemand",
+      "slug": "economic-growth-part-2",
+      "name": "Economic Growth and Distributive Justice Part II - Maximize Social Wellbeing"
+    },
+    {
+      "id": "orCUF26dEeW8nw5ORrHGtQ",
+      "courseType": "v2.ondemand",
+      "slug": "finance-markets",
+      "name": "Finance for Everyone: Markets"
+    },
+    {
+      "id": "v1-2028",
+      "name": "Rural Health Nursing",
+      "courseType": "v1.session",
+      "slug": "ruralnursing"
+    },
+    {
+      "id": "v1-2147",
+      "slug": "origensdavida",
+      "name": "Origens da Vida no Contexto C?smico",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "v1-376",
+      "name": "Introduction to Classical Music",
+      "slug": "introtoclassical",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "v1-129",
+      "name": "Heterogeneous Parallel Programming",
+      "slug": "hetero",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "v1-380",
+      "slug": "socialepi",
+      "name": "Social Epidemiology",
+      "courseType": "v1.session"
+    },
+    {
+      "id": "zN_XyjlAEeWCYBKNeFwojw",
+      "slug": "wd4e-capstone",
+      "name": "Web Design for Everybody Capstone",
+      "courseType": "v2.capstone"
+    },
+    {
+      "id": "v1-1373",
+      "slug": "socialimpact",
+      "courseType": "v1.session",
+      "name": "Social Entrepreneurship"
+    },
+    {
+      "id": "v1-315",
+      "courseType": "v1.session",
+      "name": "\"Pay Attention!!\" ADHD Through the Lifespan",
+      "slug": "adhd"
+    },
+    {
+      "id": "mUSYT5noEeWqkw5zNB248Q",
+      "name": "Bioconductor for Genomic Data Science",
+      "slug": "bioconductor",
+      "courseType": "v2.ondemand"
+    },
+    {
+      "id": "jq3NGKJ7EeWM5RIHOLu8Dw",
+      "name": "Strategic Leadership and Management Capstone",
+      "slug": "strategic-leadership-capstone",
+      "courseType": "v2.capstone"
+    }
+  ],
+  "paging": {
+    "next": "100",
+    "total": 1881
+  },
+  "linked": null
+}

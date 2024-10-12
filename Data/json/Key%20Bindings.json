@@ -1,0 +1,5 @@
+[
+
+    { "keys": ["Ctrl+n"], "command": "move_cursor_down" },
+    { "keys": ["Ctrl+p"], "command": "move_cursor_up" }
+]

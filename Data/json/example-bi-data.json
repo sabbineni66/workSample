@@ -1,0 +1,469 @@
+{
+  "accounts": [
+    {
+      "institution": "Amex",
+      "name": "Grocery & Gas Card (Amex)",
+      "nick": "\ud83d\uded2\ud83d\udcb3",
+      "note": "number is your Amex card number",
+      "number": "345678901234567",
+      "type": "CREDIT"
+    },
+    {
+      "institution": "Discover Bank",
+      "name": "Emergency Fund (Discover)",
+      "nick": "\ud83c\udfe5\ud83d\udcb0",
+      "note": "number is found by downloading account activity in QuickBooks format (<INTU.USERID> field)",
+      "number": "DISCBANK7331-X-1337",
+      "type": "SAVINGS"
+    },
+    {
+      "institution": "Discover Bank",
+      "name": "Family Spending (Discover)",
+      "nick": "\ud83d\udc6a\ud83d\udcb8",
+      "note": "number is found by downloading account activity in QuickBooks format (<INTU.USERID> field)",
+      "number": "DISCBANK4321-X-1234",
+      "type": "CHECKING"
+    },
+    {
+      "institution": "Discover Bank",
+      "name": "Vacation Savings (Discover)",
+      "nick": "\ud83c\udf34\ud83d\udcb0",
+      "note": "number is found by downloading account activity in QuickBooks format (<INTU.USERID> field)",
+      "number": "DISCBANK4321-X-1234",
+      "type": "SAVINGS"
+    }
+  ],
+  "institutions": [
+    {
+      "fid": "3101",
+      "name": "Amex",
+      "org": "AMEX",
+      "password": "YourPasswordHere",
+      "url": "https://online.americanexpress.com/myca/ofxdl/desktop/desktopDownload.do?request_type=nl_ofxdownload",
+      "username": "YourUsernameHere",
+      "version": "102"
+    },
+    {
+      "fid": "12610",
+      "name": "Discover Bank",
+      "org": "Discover Bank",
+      "password": "YourPasswordHere",
+      "routing": "031100649",
+      "url": "https://ofx.discovercard.com",
+      "username": "YourUsernameHere",
+      "version": "102"
+    }
+  ],
+  "rules": [
+    {
+      "bucket": {
+        "budget": "Transfers",
+        "name": "Transfers",
+        "target": 0.0
+      },
+      "match-criteria": [
+        [
+          {
+            "key": "description",
+            "op": "~",
+            "value": "(Transfer |ACH (Withdrawal|Deposit) |AutoPay|DirectPay|EPay|Payment)"
+          },
+          {
+            "key": "description",
+            "op": "!~",
+            "value": "(Jerb1|Jerb2)"
+          }
+        ]
+      ]
+    },
+    {
+      "bucket": {
+        "budget": "All Income",
+        "name": "Employment",
+        "target": 4000.0
+      },
+      "match-criteria": [
+        [
+          {
+            "key": "account",
+            "op": "in",
+            "value": [
+              "Emergency Fund (Discover)",
+              "Family Spending (Discover)",
+              "Vacation Savings (Discover)"
+            ]
+          },
+          {
+            "key": "description",
+            "op": "~",
+            "value": "(ACH Deposit from (Jerb1|Jerb2))"
+          }
+        ],
+        [
+          {
+            "key": "account",
+            "op": "in",
+            "value": [
+              "Emergency Fund (Discover)",
+              "Vacation Savings (Discover)"
+            ]
+          },
+          {
+            "key": "description",
+            "op": "~",
+            "value": "^Interest"
+          }
+        ]
+      ]
+    },
+    {
+      "bucket": {
+        "budget": "Bills",
+        "name": "Funding",
+        "target": 1350.0
+      },
+      "match-criteria": [
+        [
+          {
+            "key": "account",
+            "op": "=",
+            "value": "Family Spending (Discover)"
+          },
+          {
+            "key": "description",
+            "op": "~",
+            "value": "^Transfer "
+          },
+          {
+            "key": "amount",
+            "op": "=",
+            "value": 1350.0
+          }
+        ]
+      ]
+    },
+    {
+      "bucket": {
+        "budget": "Bills",
+        "name": "Rent",
+        "target": -1000.0
+      },
+      "match-criteria": [
+        [
+          {
+            "key": "account",
+            "op": "=",
+            "value": "Family Spending (Discover)"
+          },
+          {
+            "key": "description",
+            "op": "~",
+            "value": "Property Management"
+          }
+        ]
+      ]
+    },
+    {
+      "bucket": {
+        "budget": "Bills",
+        "name": "Energy",
+        "target": -250.0
+      },
+      "match-criteria": [
+        [
+          {
+            "key": "account",
+            "op": "=",
+            "value": "Family Spending (Discover)"
+          },
+          {
+            "key": "description",
+            "op": "~",
+            "value": "^Commonwealth Edison Co"
+          }
+        ]
+      ]
+    },
+    {
+      "bucket": {
+        "budget": "Bills",
+        "name": "Water",
+        "target": -100.0
+      },
+      "match-criteria": [
+        [
+          {
+            "key": "account",
+            "op": "=",
+            "value": "Family Spending (Discover)"
+          },
+          {
+            "key": "description",
+            "op": "~",
+            "value": "^(WATER|CITY OF .*) *UTILITY"
+          }
+        ]
+      ]
+    },
+    {
+      "bucket": {
+        "budget": "Grocery & Gas",
+        "name": "Groceries",
+        "target": -1000.0
+      },
+      "match-criteria": [
+        [
+          {
+            "key": "account",
+            "op": "=",
+            "value": "Grocery & Gas Card (Amex)"
+          },
+          {
+            "key": "description",
+            "op": "~",
+            "value": "(Kroger|Whole Food|ThriveMark)"
+          }
+        ]
+      ]
+    },
+    {
+      "bucket": {
+        "budget": "Grocery & Gas",
+        "name": "Gas",
+        "target": -250.0
+      },
+      "match-criteria": [
+        [
+          {
+            "key": "account",
+            "op": "=",
+            "value": "Grocery & Gas Card (Amex)"
+          },
+          {
+            "key": "description",
+            "op": "~",
+            "value": "^(BP#|CASEY'S GENERAL ST|EXXON|SHELL OIL)"
+          }
+        ]
+      ]
+    },
+    {
+      "bucket": {
+        "budget": "Grocery & Gas",
+        "name": "Funding",
+        "target": 1250.0
+      },
+      "match-criteria": [
+        [
+          {
+            "key": "account",
+            "op": "=",
+            "value": "Family Spending (Discover)"
+          },
+          {
+            "key": "description",
+            "op": "~",
+            "value": "^Transfer "
+          },
+          {
+            "key": "amount",
+            "op": "=",
+            "value": 1250.0
+          }
+        ]
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "account": "Emergency Fund (Discover)",
+      "amount": 1088.0,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "ACH Deposit From Jerb1",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Family Spending (Discover)",
+      "amount": 1350.0,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "Transfer from Savings 1337",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Emergency Fund (Discover)",
+      "amount": -1350.0,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "Transfer to Checking 1234",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Family Spending (Discover)",
+      "amount": 1250.0,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "Transfer from Savings 1337",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Emergency Fund (Discover)",
+      "amount": -1250.0,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "Transfer to Checking 1234",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Vacation Savings (Discover)",
+      "amount": 250.0,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "Transfer from Savings 1337",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Emergency Fund (Discover)",
+      "amount": -250.0,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "Transfer to Savings 1010",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Vacation Savings (Discover)",
+      "amount": 1.0,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "Interest",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Emergency Fund (Discover)",
+      "amount": 1.0,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "Interest",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Emergency Fund (Discover)",
+      "amount": 1093.0,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "ACH Deposit From Jerb2",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Emergency Fund (Discover)",
+      "amount": 1181.0,
+      "date": {
+        "$date": 1547553600000
+      },
+      "description": "ACH Deposit From Jerb1",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Emergency Fund (Discover)",
+      "amount": 1011.0,
+      "date": {
+        "$date": 1547553600000
+      },
+      "description": "ACH Deposit From Jerb2",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Family Spending (Discover)",
+      "amount": -250.0,
+      "date": {
+        "$date": 1547139600000
+      },
+      "description": "Commonwealth Edison Co.",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Family Spending (Discover)",
+      "amount": -1000.0,
+      "date": {
+        "$date": 1547053200000
+      },
+      "description": "BigMoney Property Management",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Family Spending (Discover)",
+      "amount": -101.0,
+      "date": {
+        "$date": 1547553600000
+      },
+      "description": "City of Fooville # Utility",
+      "source": "https://ofx.discovercard.com"
+    },
+    {
+      "account": "Grocery & Gas Card (Amex)",
+      "amount": -464.03,
+      "date": {
+        "$date": 1547553600000
+      },
+      "description": "Whole Foods Mark",
+      "source": "https://online.americanexpress.com/myca/ofxdl/desktop/desktopDownload.do?request_type=nl_ofxdownload"
+    },
+    {
+      "account": "Grocery & Gas Card (Amex)",
+      "amount": -40.33,
+      "date": {
+        "$date": 1547553600000
+      },
+      "description": "BP#1337",
+      "source": "https://online.americanexpress.com/myca/ofxdl/desktop/desktopDownload.do?request_type=nl_ofxdownload"
+    },
+    {
+      "account": "Grocery & Gas Card (Amex)",
+      "amount": -231.82,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "Kroger Co",
+      "source": "https://online.americanexpress.com/myca/ofxdl/desktop/desktopDownload.do?request_type=nl_ofxdownload"
+    },
+    {
+      "account": "Grocery & Gas Card (Amex)",
+      "amount": -38.93,
+      "date": {
+        "$date": 1546362000000
+      },
+      "description": "BP#1337",
+      "source": "https://online.americanexpress.com/myca/ofxdl/desktop/desktopDownload.do?request_type=nl_ofxdownload"
+    },
+    {
+      "account": "Grocery & Gas Card (Amex)",
+      "amount": -45.13,
+      "date": {
+        "$date": 1547035200000
+      },
+      "description": "BP#1337",
+      "source": "https://online.americanexpress.com/myca/ofxdl/desktop/desktopDownload.do?request_type=nl_ofxdownload"
+    },
+    {
+      "account": "Grocery & Gas Card (Amex)",
+      "amount": -9.03,
+      "date": {
+        "$date": 1547035200000
+      },
+      "description": "OhmNomNom Cookies",
+      "source": "https://online.americanexpress.com/myca/ofxdl/desktop/desktopDownload.do?request_type=nl_ofxdownload"
+    }
+  ],
+  "version": "1.0.0"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Breakthrough for Men",
+  "description": "Breakthrough Men's Community Website",
+  "keywords": [
+    "Breakthrough",
+    "Community"
+  ],
+  "website": "https://breakthroughformen.org",
+  "repository": "https://github.com/shillcock/breakthrough",
+  "logo": "https://avatars3.githubusercontent.com/u/5818546",
+  "scripts": {},
+  "env": {
+    "MANDRILL_USERNAME": {
+      "description": "Your Mandrill address for sending mail.",
+      "value": "user@example.com",
+      "required": false
+    },
+    "MANDRILL_APIKEY": {
+      "description": "Your Mandrill API key for sending mail.",
+      "value": "changeme",
+      "required": false
+    },
+    "RAILS_ENV": "production"
+  }
+}
+

@@ -1,0 +1,32 @@
+{
+  "name": "typed-json",
+  "version": "0.7.1",
+  "description": "Revive JSON objects into custom types",
+  "main": "index.js",
+  "scripts": {
+    "test": "make jshint test cov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pd/typed-json.git"
+  },
+  "keywords": [
+    "json",
+    "revive",
+    "types",
+    "type",
+    "serialize",
+    "deserialize"
+  ],
+  "author": "Kyle Hargraves",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "~1.6.0",
+    "mocha": "~1.9.0",
+    "coveralls": "~2.0.7",
+    "jshint": "~2.0.1",
+    "mocha-lcov-reporter": "0.0.1",
+    "jscoverage": "~0.3.7",
+    "matcha": "~0.2.0"
+  }
+}

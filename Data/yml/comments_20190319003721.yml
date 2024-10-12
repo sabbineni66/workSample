@@ -1,0 +1,20 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+first_comment:
+  content: Nice Blog you got
+  article: article_with_comment
+  author_email: tera.patrick@vivid.com
+  homepage: http://vivid.com
+  type: AnonymousComment
+  
+comment_of_kai_1:
+  content: Ich hab da was zu sagen
+  article: article_of_author_with_article_1
+  author: author_with_comments
+  type: AuthorComment
+  
+comment_of_kai_2:
+  content: Ich hab noch mehr zu sagen
+  article: article_of_author_with_article_2
+  author: author_with_comments
+  type: AuthorComment

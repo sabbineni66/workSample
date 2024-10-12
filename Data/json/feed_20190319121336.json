@@ -1,0 +1,209 @@
+{
+	"version": "https://jsonfeed.org/version/1",
+	"title": "Micro Thing",
+	"home_page_url": "https://micro.thingelstad.com/",
+	"feed_url": "https://micro.thingelstad.com/feed.json",
+	"items": [
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/25/amazing-memorial-service.html",
+	      	
+			"content_html": "<p>Amazing memorial service for David Hussman. A perfect collection of stories, music, poems and reflections ? that he helped design. Tears and love shared by everyone.</p>\n",
+			"date_published": "2018-08-25T15:24:20-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/25/amazing-memorial-service.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/22/a-few-days.html",
+	      	
+			"content_html": "<p>A few days ago my dog Chase injured his CCL (Dog version of ACL) in his right hind leg. Today he injured the other one and is unable to walk. He?s older and also has melanoma, so surgery isn?t an option. Hoping he gets mobility back in a few days. ??????</p>\n",
+			"date_published": "2018-08-21T21:37:42-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/21/a-few-days.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/20/started-allergy-medicine.html",
+	      	
+			"content_html": "<p>Started allergy medicine ? I don?t remember a year that I had to start this early! ????</p>\n",
+			"date_published": "2018-08-19T21:13:11-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/19/started-allergy-medicine.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/19/very-sad-to.html",
+	      	
+			"content_html": "<p>Very sad to hear of the passing of my friend David Hussman (@davidhussman). We will all miss you dude! ?? See his <a href=\"https://www.caringbridge.org/visit/davidhussman2/journal\">CaringBridge site</a>.</p>\n",
+			"date_published": "2018-08-19T16:55:11-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/19/very-sad-to.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/19/013331.html",
+	      	
+			"content_html": "<p>Campfire. ??</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/8c216a2514.jpg\" width=\"600\" height=\"600\" /></p>\n",
+			"date_published": "2018-08-18T20:33:31-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/18/013331.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/18/very-happy-with.html",
+	      	
+			"content_html": "<p>Very happy with the new stone steps down to our dock! ??</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/e672000f25.jpg\" width=\"600\" height=\"600\" /></p>\n",
+			"date_published": "2018-08-18T16:39:24-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/18/very-happy-with.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/17/very-impressive-work.html",
+	      	
+			"content_html": "<p>Very impressive work being shared by the #TeamSPS summer interns! They delivered significant capabilities in products and services core to SPS! We are lucky to have such talented interns! ??</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/c5deab44de.jpg\" width=\"600\" height=\"450\" /></p>\n",
+			"date_published": "2018-08-17T10:22:09-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/17/very-impressive-work.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/14/164806.html",
+	      	
+			"content_html": "<p>Great day for #TeamSPS summer picnic! Thank you all for making SPS such an awesome place to be! ??????</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/b557db6898.jpg\" width=\"600\" height=\"450\" /></p>\n",
+			"date_published": "2018-08-14T11:48:06-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/14/164806.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/14/but-for-now.html",
+	      	
+			"content_html": "<p>?? but for now it sounds like heaven.? Yes it does Jay, yes it does. ???? Thank you for another great show <a href=\"http://sonvolt.net\">Son Volt</a>! ??</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/f2d6a38a78.jpg\" width=\"600\" height=\"600\" /></p>\n",
+			"date_published": "2018-08-13T22:47:04-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/13/but-for-now.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/14/at-my-happy.html",
+	      	
+			"content_html": "<p>At my happy place ??, listening to Jay Farrar / <a href=\"http://sonvolt.net\">Son Volt</a> at the Minnesota Zoo. ??</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/03e80581d6.jpg\" width=\"600\" height=\"337\" /></p>\n",
+			"date_published": "2018-08-13T20:46:18-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/13/at-my-happy.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/13/one-of-the.html",
+	      	
+			"content_html": "<p>One of the best games for time on an airplane? Tetris! But it requires an Internet connection ? for royalty payments! ??</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/a0903935b8.jpg\" width=\"600\" height=\"450\" /></p>\n",
+			"date_published": "2018-08-12T20:27:42-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/12/one-of-the.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/12/we-finished-our.html",
+	      	
+			"content_html": "<p>We finished our vacation by <strong>winning</strong> ?The Wall? room in 57:53 with only four clues at <a href=\"https://enigmabuffalo.com\">Enigma Escape Rooms</a> in Buffalo, NY!</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/d717524404.jpg\" width=\"600\" height=\"600\" /></p>\n",
+			"date_published": "2018-08-12T15:55:37-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/12/we-finished-our.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/12/some-initial-photos.html",
+	      	
+			"content_html": "<p>Some initial photos from our day at Niagara Falls! I?ve wanted to go here for years. It was an awesome experience! ??</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/6101a350b5.jpg\" width=\"600\" height=\"337\" /><img src=\"http://micro.thingelstad.com/uploads/2018/1f5186c4ab.jpg\" width=\"600\" height=\"337\" /><img src=\"http://micro.thingelstad.com/uploads/2018/b9df416890.jpg\" width=\"600\" height=\"337\" /></p>\n",
+			"date_published": "2018-08-11T22:53:24-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/11/some-initial-photos.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/12/spending-the-day.html",
+	      	
+			"content_html": "<p>Spending the day walking around Niagara Falls, on both US and Canadian sides, adds up the steps! ?????? <strong>23,861 steps</strong> for <strong>9.26 miles</strong>.</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/817c0ea7fe.jpg\" width=\"600\" height=\"521\" /></p>\n",
+			"date_published": "2018-08-11T22:40:08-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/11/spending-the-day.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/11/getting-wet-on.html",
+	      	
+			"content_html": "<p>Getting wet on the <a href=\"https://www.maidofthemist.com\">Maid of the Mist</a> in the Horsehoe Falls at Niagara Falls! ????</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/957d9af485.jpg\" width=\"600\" height=\"600\" /></p>\n",
+			"date_published": "2018-08-11T11:40:04-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/11/getting-wet-on.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/11/013052.html",
+	      	
+			"content_html": "<p>We had an amazing dinner at <a href=\"http://restaurantgoodluck.com\">Good Luck</a> in Rochester, NY tonight. ?? The star of the meal was the 1 lb. Good Luck burger buried in French Fries and shared by all. An amazing meal, everything was delicious.</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/435d8776d4.jpg\" width=\"600\" height=\"600\" /></p>\n",
+			"date_published": "2018-08-10T20:30:52-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/10/013052.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/10/after-intense-deliberation.html",
+	      	
+			"content_html": "<p>After intense deliberation Mazie and Tyler each picked one of these to take home from the Corning Museum of Glass. <a href=\"https://en.wikipedia.org/wiki/The_Paradox_of_Choice\">Paradox of Choice</a> was strongly displayed. ??</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/7969ffa668.jpg\" width=\"600\" height=\"600\" /></p>\n",
+			"date_published": "2018-08-09T22:29:45-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/09/after-intense-deliberation.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/10/the-contemporary-galleries.html",
+	      	
+			"content_html": "<p>The Contemporary Galleries of the <a href=\"https://www.cmog.org\">Corning Museum of Glass</a> have stunning art and equally amazing architecture. The way natural light comes into the space and completely changes exhibits is amazing.</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/2ce8bf9183.jpg\" width=\"600\" height=\"450\" /><img src=\"http://micro.thingelstad.com/uploads/2018/32f84a8f10.jpg\" width=\"450\" height=\"600\" /><img src=\"http://micro.thingelstad.com/uploads/2018/2b217b6c12.jpg\" width=\"600\" height=\"600\" /><img src=\"http://micro.thingelstad.com/uploads/2018/8e3ac98d71.jpg\" width=\"600\" height=\"600\" /></p>\n",
+			"date_published": "2018-08-09T22:26:03-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/09/the-contemporary-galleries.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/10/time-for-a.html",
+	      	
+			"content_html": "<p>Time for a drive-in movie at the <a href=\"http://www.elmiradrivein.com/\">Elmira Drive-In</a> to see <a href=\"https://imdb.com/title/tt4575576/\">Christopher Robbin</a>. ??</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/baa5072b00.jpg\" width=\"600\" height=\"599\" /></p>\n",
+			"date_published": "2018-08-09T19:54:36-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/09/time-for-a.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/09/we-had-to.html",
+	      	
+			"content_html": "<p>We had to dodge the rain but we got to see <a href=\"https://parks.ny.gov/parks/62/details.aspx\">Taughannock Falls</a> today! Impressive waterfall!</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/e8fa327c13.jpg\" width=\"600\" height=\"449\" /><img src=\"http://micro.thingelstad.com/uploads/2018/2df60302de.jpg\" width=\"600\" height=\"451\" /></p>\n",
+			"date_published": "2018-08-08T20:02:06-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/08/we-had-to.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/08/193607.html",
+	      	
+			"content_html": "<p>Family selfie at <a href=\"https://ventosavineyards.com\">Ventosa Vineyards</a>! ??</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/8a674fc6ec.jpg\" width=\"600\" height=\"449\" /></p>\n",
+			"date_published": "2018-08-08T14:36:07-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/08/193607.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/08/fun-afternoon-tasting.html",
+	      	
+			"content_html": "<p>Fun afternoon tasting all sorts of beverages at <a href=\"https://www.3brotherswinery.com\">3 Brothers Winery</a>!</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/320dd12db7.jpg\" width=\"600\" height=\"599\" /><img src=\"http://micro.thingelstad.com/uploads/2018/1a0805beb0.jpg\" width=\"600\" height=\"600\" /><img src=\"http://micro.thingelstad.com/uploads/2018/e9c0b15547.jpg\" width=\"600\" height=\"599\" /></p>\n",
+			"date_published": "2018-08-08T14:35:06-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/08/fun-afternoon-tasting.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/08/cairns-by-ithaca.html",
+	      	
+			"content_html": "<p>Cairns by Ithaca Falls.</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/37cfbfdff0.jpg\" width=\"600\" height=\"337\" /></p>\n",
+			"date_published": "2018-08-07T19:49:52-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/07/cairns-by-ithaca.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/08/ithaca-falls.html",
+	      	
+			"content_html": "<p><a href=\"https://en.wikipedia.org/wiki/Ithaca_Falls\">Ithaca Falls</a>. ??????</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/6a7bf32a6c.jpg\" width=\"600\" height=\"450\" /><img src=\"http://micro.thingelstad.com/uploads/2018/1ab3447191.jpg\" width=\"600\" height=\"600\" /></p>\n",
+			"date_published": "2018-08-07T19:45:48-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/07/ithaca-falls.html"
+		},
+		
+		{
+			"id": "http://jthingelstad.micro.blog/2018/08/08/ice-cream-stop.html",
+	      	
+			"content_html": "<p>Ice Cream stop for today at <a href=\"https://living.cornell.edu/dine/wheretoeat/cafescoffeehouses/cornelldairybar.cfm\">Cornell Dairy Bar</a>. ????</p>\n\n<p><img src=\"http://micro.thingelstad.com/uploads/2018/d080fc2ca4.jpg\" width=\"600\" height=\"600\" /><img src=\"http://micro.thingelstad.com/uploads/2018/ba2c678105.jpg\" width=\"600\" height=\"599\" /><img src=\"http://micro.thingelstad.com/uploads/2018/81d5f39b32.jpg\" width=\"600\" height=\"600\" /></p>\n",
+			"date_published": "2018-08-07T19:41:10-05:00",
+			"url": "https://micro.thingelstad.com/2018/08/07/ice-cream-stop.html"
+		}
+		
+	]
+}

@@ -1,0 +1,35 @@
+{ "name": "highbrow"
+, "version": "0.3.8"
+, "description": "A Backbone Base Framework"
+, "main": "lib/highbrow.js"
+, "repository":
+  { "type": "git"
+  , "url": "https://github.com/wvl/highbrow.git"
+  }
+, "homepage": "https://github.com/wvl/highbrow"
+, "bugs": { "url": "https://github.com/wvl/highbrow/issues" }
+, "keywords": [ "backbone" ]
+, "author": "Wayne Larsen"
+, "license": "BSD"
+, "dependencies":
+  { "backbone": "*"
+  , "moment": "*"
+  , "nct": "*"
+  , "underscore": "*"
+  }
+, "devDependencies":
+  { "cheerio": "*"
+  , "express": "*"
+  , "mkdirp": "*"
+  , "chai": "*"
+  , "coffee-script": "^1.7.1"
+  , "mocha": "*"
+  , "sinon": "*"
+  , "sinon-chai": "*"
+  , "uglify-js": "*"
+  }
+, "scripts":
+  { "test": "make all && mocha test/*.test.coffee"
+  , "prepublish": "make all"
+  }
+}

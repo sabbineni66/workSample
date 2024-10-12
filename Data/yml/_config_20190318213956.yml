@@ -1,0 +1,15 @@
+url: http://steelbridge.io
+safe: true
+lsi: false
+source: .
+destination: ./public
+exclude:
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - .gitignore
+  - ./public
+markdown: redcarpet
+pygments: false
+port: 9876

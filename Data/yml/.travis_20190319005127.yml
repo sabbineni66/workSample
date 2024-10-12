@@ -1,0 +1,18 @@
+language: ruby
+services:
+  - redis-server
+script: make
+rvm:
+  - 2.3.1
+  - 2.2
+  - 2.1
+  - ruby-head
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+install: |
+  gem install dep
+  curl https://raw.githubusercontent.com/tonchis/gst/master/bin/gst > gst
+  chmod +x gst
+  ./gst init
+  source ./gst in

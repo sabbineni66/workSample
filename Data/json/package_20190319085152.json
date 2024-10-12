@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack -p -d",
+    "json-server": "json-server api.json"
+  },
+  "devDependencies": {
+    "dragula": "^1.4.1",
+    "riot": "^2.0.14",
+    "riotjs-loader": "^1.1.3",
+    "6to5": "^3.4.1",
+    "6to5-core": "^3.4.1",
+    "6to5-loader": "^3.0.0",
+    "font-awesome-webpack": "latest",
+    "jquery": "latest",
+    "bootstrap": "latest",
+    "bootstrap-sass": "latest",
+    "bootstrap-webpack": "latest",
+    "lodash": "~2.4.1",
+    "coffee-loader": "latest",
+    "sass-loader": "0.4.1",
+    "less-loader": "latest",
+    "file-loader": "latest",
+    "style-loader": "latest",
+    "css-loader": "latest",
+    "url-loader": "latest",
+    "extract-text-webpack-plugin": "latest",
+    "webpack": "^1.9.4",
+    "webpack-dev-server": "latest",
+    "json-server": "latest"
+  }
+}

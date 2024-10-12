@@ -1,0 +1,16 @@
+box: joshuamckenty/cloud-foundry-box
+deploy:
+    steps:
+        - joshuamckenty/cloud-foundry-env:
+            appname: somegood
+            keyname: ORCHESTRATE_KEY
+        - joshuamckenty/cloud-foundry-env:
+            appname: somegood
+            keyname: SOMEGOOD_PHAXIO_KEY
+        - joshuamckenty/cloud-foundry-env:
+            appname: somegood
+            keyname: SOMEGOOD_PHAXIO_SECRET
+        - joshuamckenty/cloud-foundry-env:
+            appname: somegood
+            keyname: SOMEGOOD_SERVER_NAME
+        - joshuamckenty/cloud-foundry-deploy

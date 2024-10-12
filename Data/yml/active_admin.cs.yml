@@ -1,0 +1,43 @@
+cs:
+  active_admin:
+    dashboard: P?ehled
+    dashboard_welcome:
+      welcome: "V?tejte v Active Admin. Toto je n?st?nka. Pro p?id?n? sekc? n?st?nky se pod?vejte do 'app/admin/dashboards.rb'"
+      call_to_action: "To add dashboard sections, checkout 'app/admin/dashboards.rb'"
+    view: "Zobrazit"
+    edit: "Upravit"
+    delete: "Smazat"
+    delete_confirmation: "Jste si jist?, ?e chcete tuto polo?ku smazat?"
+    new_model: "Nov?"
+    edit_model: "Upravit"
+    delete_model: "Smazat"
+    details: "Detaily"
+    cancel: "Zru?it"
+    empty: "Pr?zdn?"
+    previous: "P?ede?l?"
+    next: "N?sleduj?c?"
+    download: "St?hnout:"
+    has_many_new: "P?idat nov?"
+    has_many_delete: "Odstranit"
+    filter: "Filtr"
+    clear_filters: "Vy?istit filtry"
+    search_field: "%{field}"
+    equal_to: "P?esn?"
+    greater_than: "V?t?? ne?"
+    less_than: "Men?? ne?"
+    main_content: "Pros?m implementujte %{model}#main_content pro zobrazen? obsahu."
+    logout: "Odhl??en?"
+    sidebars:
+      filters: "Filtr"
+    pagination:
+      empty: "Nenalezen."
+      one: "Zobrazena  <b>1</b> polo?ka"
+      one_page: "Po?et zobrazen?ch polo?ek %{n}"
+      multiple: "<b>%{from}&nbsp;-&nbsp;%{to}</b> z <b>%{total}</b>"
+      entry:
+        one: "polo?ka"
+        other: "polo?ky"
+    any: "Kter?koliv"
+    blank_slate:
+      content: "Zat?m zde nen? ??dn? obsah."
+      link: "Vytvo?it"

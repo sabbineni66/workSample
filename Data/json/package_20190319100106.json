@@ -1,0 +1,117 @@
+{
+  "name": "jeremyboles.com",
+  "private": true,
+  "description": "The personal website of Jeremy Boles",
+  "version": "0.1.0",
+  "author": "Jeremy Boles <jeremy@centralstandard.com> (https://jeremyboles.com/)",
+  "keywords": [
+    "jeremy boles"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@mdx-js/mdx": "^0.16.6",
+    "@mdx-js/tag": "^0.16.6",
+    "@svgr/webpack": "^4.1.0",
+    "@types/js-cookie": "^2.2.1",
+    "axios": "^0.18.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "cheerio": "^1.0.0-rc.2",
+    "commander": "^2.19.0",
+    "crc": "^3.8.0",
+    "date-fns": "^2.0.0-alpha.27",
+    "date-fns-tz": "^1.0.6",
+    "gatsby": "^2.0.76",
+    "gatsby-image": "^2.0.20",
+    "gatsby-mdx": "^0.3.3",
+    "gatsby-plugin-manifest": "^2.0.9",
+    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-plugin-svgr": "^2.0.1",
+    "gatsby-plugin-typescript": "^2.0.3",
+    "gatsby-plugin-typography": "^2.2.5",
+    "gatsby-remark-figure": "^1.0.0",
+    "gatsby-remark-images": "^3.0.1",
+    "gatsby-remark-smartypants": "^2.0.7",
+    "gatsby-remark-widows": "^1.0.0",
+    "gatsby-source-filesystem": "^2.0.16",
+    "gatsby-transformer-sharp": "^2.1.8",
+    "intersection-observer": "^0.5.1",
+    "js-cookie": "^2.2.0",
+    "lodash": "^4.17.11",
+    "pluralize": "^7.0.0",
+    "polished": "^2.3.3",
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2",
+    "react-helmet": "^5.2.0",
+    "react-map-gl": "^4.0.10",
+    "react-typography": "^0.16.18",
+    "react-vis": "^1.11.6",
+    "resize-observer-polyfill": "^1.5.1",
+    "styled-components": "^4.1.3",
+    "styled-theming": "^2.2.0",
+    "typography": "^0.16.18"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.10",
+    "@types/commander": "^2.12.2",
+    "@types/crc": "^3.4.0",
+    "@types/lodash": "^4.14.120",
+    "@types/node": "^10.12.18",
+    "@types/react-helmet": "^5.0.8",
+    "@types/react-map-gl": "^4.0.2",
+    "@types/styled-components": "^4.1.5",
+    "@types/styled-theming": "^2.2.0",
+    "@types/typography": "^0.16.2",
+    "dotenv": "^6.2.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "prettier-tslint": "^0.4.2",
+    "remove-accents": "^0.4.2",
+    "ts-node": "^8.0.1",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2"
+  },
+  "envDependencies": {
+    "@jeremyboles/connary": "git+https://${GITHUB_ACCESS_TOKEN}:x-oauth-basic@github.com/jeremyboles/connary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "engines": {
+    "node": ">10.12.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,md,mdx}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "prettier-tslint fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "import": "ts-node -r dotenv/config ./bin/import.ts",
+    "make": "ts-node -r dotenv/config ./bin/make.ts",
+    "postinstall": "cp package.json package-cache.json && cp yarn.lock yarn-cache.lock && node -r dotenv/config dependencies.js && mv package-cache.json package.json && mv yarn-cache.lock yarn.lock",
+    "start": "npm run develop",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  }
+}

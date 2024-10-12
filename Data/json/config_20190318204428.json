@@ -1,0 +1,15 @@
+{
+  "blog": {
+    "name": "atmos",
+    "url": "http://tumblr.atmos.org/",
+    "tagline": "i see you're using an old style, i wondered where you learned it from."
+  },
+  "articles": {
+    "urlformat": "{{slug}}",
+    "index": "index.html"
+  },
+  "build": {
+    "outputDir": "public/"
+  },
+  "partials": {}
+}

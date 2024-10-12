@@ -1,0 +1,54 @@
+cs:
+  devise:
+    confirmations:
+      confirmed: V?? ??et byl ?sp??n? potvrzen. Nyn? jste p?ihl??en(a).
+      send_instructions: Za n?kolik minut obdr??te email s instrukcemi k potvrzen? va?eho ??tu.
+      send_paranoid_instructions: Pokud v?? e-mail existuje v na?? datab?zi, za n?kolik minut obdr??te e-mail s pokyny o tom, jak potvrdit sv?j ??et.
+    failure:
+      already_authenticated: P?ihl??en? ji? prob?hlo.
+      inactive: V?? ??et je?t? nebyl aktivov?n.
+      invalid: Neplatn? email nebo heslo.
+      invalid_token: Neplatn? ov??ovac? symbol.
+      locked: V?? ??et je uzam?en.
+      timeout: Va?e relace vypr?ela, p?ihla?te se pros?m znovu, pak m??ete pokra?ovat.
+      unauthenticated: Mus?te se zaregistrovat nebo p?ihl?sit, pak m??ete pokra?ovat.
+      unconfirmed: Mus?te potvrdit sv?j ??et, pak m??ete pokra?ovat.
+    mailer:
+      confirmation_instructions:
+        subject: Potvrzovac? instrukce
+      reset_password_instructions:
+        subject: Instrukce k nastaven? nov?ho hesla
+      unlock_instructions:
+        subject: Instrukce k odemknut? ??tu
+    omniauth_callbacks:
+      failure: 'Nen? mo?n? autorizovat z %{kind}, proto?e: "%{reason}".'
+      success: ?sp??n? autorizace z ??tu %{kind}.
+    passwords:
+      send_instructions: Za n?kolik minut obdr??te email s instrukcemi k nastaven? nov?ho hesla.
+      send_paranoid_instructions: Pokud v?? e-mail existuje v na?? datab?zi, za n?kolik minut obdr??te e-mail s instrukcemi k nastaven? nov?ho hesla.
+      updated: Va?e heslo bylo ?sp??n? zm?n?no. Nyn? jste p?ihl??en(a).
+      updated_not_active: Va?e heslo bylo ?sp??n? zm?n?no.
+    registrations:
+      signed_up: V?tejte! Registrace byla ?sp??n?.
+      signed_up_but_unconfirmed: 'A message with a confirmation link has been sent to your email address. Please open the link to activate your account.'
+      signed_up_but_inactive: 'You have signed up successfully. However, we could not sign you in because your account is not yet activated.'
+      signed_up_but_locked: 'You have signed up successfully. However, we could not sign you in because your account is locked.'
+      destroyed: Nashle! V?? ??et byl ?sp??n? zru?en. Douf?me, ?e se brzy op?t uvid?me.
+      update_needs_confirmation: ?sp??n? jste aktualizoval sv? ??et, ale je?t? mus?te ov??it svou novou e-mailovou adresu. Zkontrolujte pros?m svou schr?nku a klikn?te na odkaz pro dokon?en? ov??en? va?i nov? e-mailov? adresy.
+      updated: V?? ??et byl ?sp??n? aktualizov?n.
+    sessions:
+      signed_in: P?ihl??en? ?sp??n?.
+      signed_out: Odhl??en? ?sp??n?.
+    unlocks:
+      send_instructions: Za n?kolik minut obdr??te email s instrukcemi, jak odemknout sv?j ??et.
+      send_paranoid_instructions: Pokud v?? e-mail existuje v na?? datab?zi, za n?kolik minut obdr??te e-mail s instrukcemi pro odemknut? ??tu.
+      unlocked: V?? ??et byl ?sp??n? odemknut. Nyn? jste p?ihl??en(a).
+  errors:
+    messages:
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      already_confirmed: "was already confirmed, please try signing in"
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"

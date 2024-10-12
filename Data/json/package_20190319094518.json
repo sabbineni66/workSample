@@ -1,0 +1,47 @@
+{
+  "name": "VS-Code-Mac-site",
+  "description": "VS Code Mac site",
+  "version": "1.0.0",
+  "author": "Bob Walsh <bob.walsh@47hats.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BobWalsh/vscodemac"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.3",
+    "bootswatch": "^4.0.0-beta.3",
+    "gatsby": "^1.9.149",
+    "gatsby-link": "^1.6.32",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-sass": "^1.0.15",
+    "gatsby-plugin-styled-components": "^2.0.4",
+    "gatsby-plugin-typography": "^1.7.10",
+    "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-transformer-remark": "^1.7.26",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "reactstrap": "^5.0.0-alpha.4",
+    "styled-components": "^2.4.0",
+    "typography": "^0.16.6",
+    "typography-theme-bootstrap": "^0.16.7",
+    "typography-theme-de-young": "^0.16.9",
+    "typography-theme-judah": "^0.15.10",
+    "typography-theme-lawton": "^0.15.10",
+    "typography-theme-moraga": "^0.15.10"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "gatsby build"
+  },
+  "devDependencies": {
+    "prettier": "^1.9.2"
+  }
+}

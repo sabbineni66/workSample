@@ -1,0 +1,44 @@
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+  TargetRubyVersion: 2.1
+
+Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+
+Style/DotPosition:
+  EnforcedStyle: leading
+  Enabled: true
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+  # If true, strings which span multiple lines using \ for continuation must
+  # use the same type of quotes on each line.
+  ConsistentQuotesInMultiline: false
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'spec/**/*.rb'

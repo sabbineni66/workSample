@@ -1,0 +1,70 @@
+<project name="Waterfront" basedir="." default="compile">
+   <property name="deployment.dir" location="zip/waterfront"/>
+
+   <target name="clean">
+      <delete dir="${deployment.dir}" quiet="true" />
+      <delete dir="bin" quiet="true" />
+   </target>
+
+   <target name="init">
+      <tstamp>
+         <format property="BUILD_GMT" pattern="yyyyMMdd-HHmm" timezone="GMT+0"/>
+      </tstamp>
+   </target>
+
+   <target name="compile" depends="init">
+      <mkdir dir="bin"/>      
+      <javac srcdir="java" destdir="bin" target="1.5" source="1.5">
+         <classpath>
+         </classpath>
+      </javac>
+      <copy todir="bin">
+         <fileset dir="java">
+            <exclude name="**/*.java"/>
+         </fileset>
+      </copy>          
+   </target>
+
+   <target name="prepare" depends="compile">
+      <delete dir="${deployment.dir}" quiet="true"/>
+      <mkdir dir="${deployment.dir}"/>
+      <mkdir dir="${deployment.dir}/java"/>
+      <mkdir dir="${deployment.dir}/bin"/>
+      <mkdir dir="${deployment.dir}/clj"/>
+      <copy todir="${deployment.dir}">
+        <fileset dir=".">
+          <include name="wf.*"/>
+        </fileset>
+      </copy>
+      <copy todir="${deployment.dir}">
+        <fileset dir="root"/>
+      </copy>
+      <copy todir="${deployment.dir}/bin">
+         <fileset dir="bin"/>
+      </copy>          
+      <copy todir="${deployment.dir}/java">
+         <fileset dir="java"/>
+      </copy>          
+      <copy todir="${deployment.dir}/clj">
+         <fileset dir="clj"/>
+      </copy>          
+   </target>
+
+   <target name="zip" depends="clean,prepare">
+      <zip 
+         destfile="waterfront-${BUILD_GMT}.zip" 
+         basedir="zip"/>
+   </target>
+
+</project>
+
+
+
+
+
+
+
+
+
+
+

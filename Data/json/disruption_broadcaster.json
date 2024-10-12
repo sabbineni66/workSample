@@ -1,0 +1,20 @@
+{
+  "Name"     : "Disruption Broadcaster",
+  "Kind"     : "Attack",
+  "Animation": "pulse",
+  "Texture"   : {
+    "Path": "actions/icons/device.png"
+  },
+  "Ap"       : 4,
+  "Strength" : 10,
+  "Damage"   : 0,
+  "Range"    : 15,
+  "Target_enemies": true,
+  "Sounds"   : {
+    "device": "Haunts/SFX/Intruders/Reporter/Device"
+  },  
+  "Conditions": [
+     "Blindness",
+     "Attack -2"
+   ]
+}

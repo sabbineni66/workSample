@@ -1,0 +1,56 @@
+{
+   "user":{
+        "name": "dann",
+        "group" : "staff",
+        "home": "/Users/dann"
+    },
+    "run_list": [
+        "recipe[homebrew]",
+        "recipe[dmg]",
+        "recipe[mac_os_x]",
+        "recipe[brew]",
+        "recipe[apps::ccmenu]",
+        "recipe[apps::chrome]",
+        "recipe[apps::dropbox]",
+        "recipe[config::dock]",
+        "recipe[dotfiles]"
+    ],
+    "homebrew": {
+        "packages": [
+            "bvi",
+            "csshx",
+            "cmake",
+            "coreutils",
+            "gettext",
+            "git",
+            "git-flow",
+            "git-now",
+            "htop",
+            "jsl",
+            "lha",
+            "lv",
+            "lynx",
+            "markdown",
+            "multitail",
+            "neon",
+            "node",
+            "ngrep",
+            "nkf",
+            "nmap",
+            "pkg-config",
+            "pstree",
+            "reattach-to-user-namespace",
+            "rbenv",
+            "ruby-build",
+            "ssh-copy-id",
+            "the_silver_searcher",
+            "tig",
+            "tmux",
+            "tree",
+            "valgrind",
+            "watch",
+            "w3m",
+            "wget"
+        ]
+    }
+}

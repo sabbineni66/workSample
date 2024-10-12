@@ -1,0 +1,23 @@
+{
+	"files.associations": {
+		"*.g": "gcode"
+	},
+	"deploy": {
+		"packages": [
+			{
+				"name": "Duet configuration",
+				"files": [
+					"sys/*.g"
+				]
+			}
+		],
+		"targets": [
+			{
+				"type": "http",
+				"name": "Upload to HyperCube",
+				"url": "http://hypercube/rr_upload?name=0:${VSDeploy-File}",
+				"method": "POST"
+			}
+		]
+	}
+}

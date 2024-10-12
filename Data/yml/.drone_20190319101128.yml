@@ -1,0 +1,7 @@
+# add header to test automatic build
+build:
+  image: golang
+  commands:
+    - go get
+    - go build
+    - go test

@@ -1,0 +1,8 @@
+--- 
+application: 
+  RACK_ROOT: /home/aemadrid/apps/upcasr
+  RACK_ENV: development
+services: 
+  UpcaseService: 
+    singleton: false
+    thread_count: 5

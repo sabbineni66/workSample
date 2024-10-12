@@ -1,0 +1,5 @@
+linters:
+  StringQuotes:
+    style: double_quotes
+  PropertySortOrder:
+    enabled: false

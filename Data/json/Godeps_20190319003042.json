@@ -1,0 +1,23 @@
+{
+	"ImportPath": "github.com/envato/wwwredirector",
+	"GoVersion": "go1.6",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/joho/godotenv",
+			"Comment": "v1-10-g4ed1339",
+			"Rev": "4ed13390c0acd2ff4e371e64d8b97c8954138243"
+		},
+		{
+			"ImportPath": "github.com/joho/godotenv/autoload",
+			"Comment": "v1-10-g4ed1339",
+			"Rev": "4ed13390c0acd2ff4e371e64d8b97c8954138243"
+		},
+		{
+			"ImportPath": "github.com/sebest/xff",
+			"Rev": "325cb7697e6d464fe539cbbdf1e4143e6f6e4f21"
+		}
+	]
+}

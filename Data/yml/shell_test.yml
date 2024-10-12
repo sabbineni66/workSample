@@ -1,0 +1,5 @@
+---
+- hosts: "{{ devices }}"
+  tasks: 
+    - name: Run a shell command.
+      shell: "echo Blah > /tmp/device_test.txt"

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | David Chelimsky]]></title>
+  <link href="http://blog.davidchelimsky.net/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://blog.davidchelimsky.net/"/>
+  <updated>2016-08-18T07:48:02-05:00</updated>
+  <id>http://blog.davidchelimsky.net/</id>
+  <author>
+    <name><![CDATA[David]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[rspec-expectations-2.9.1 is released!]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2012/04/03/rspec-expectations-291-is-released/"/>
+    <updated>2012-04-03T14:18:10-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2012/04/03/rspec-expectations-291-is-released</id>
+    <content type="html"><![CDATA[<p>This is a bug-fix only release, and is recommended for everybody using rspec-2.9.</p>
+
+<p><a href="http://github.com/rspec/rspec-expectations/compare/v2.9.0...v2.9.1">full changelog</a></p>
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Provide a helpful message if the diff between two objects is empty.</li>
+<li>Fix bug diffing single strings with multiline strings.</li>
+<li>Fix for error with using custom matchers inside other custom matchers
+(mirasrael)</li>
+<li>Fix using execution context methods in nested DSL matchers (mirasrael)</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[rspec-2.9.0 is released!]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2012/03/17/rspec-290-is-released/"/>
+    <updated>2012-03-17T18:10:59-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2012/03/17/rspec-290-is-released</id>
+    <content type="html"><![CDATA[<p>rspec-2.9.0 is released wtih lots of bug fixes and a few minor feature improvements as well. Enjoy!</p>
+
+<h3>rspec-core-2.9.0 / 2012-03-17</h3>
+
+<p><a href="http://github.com/rspec/rspec-core/compare/v2.8.0...v2.9.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>Support for &ldquo;X minutes X seconds&rdquo; spec run duration in formatter. (uzzz)</li>
+<li>Strip whitespace from group and example names in doc formatter.</li>
+<li>Removed spork-0.9 shim. If you&rsquo;re using spork-0.8.x, you&rsquo;ll need to upgrade
+to 0.9.0.</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Restore <code>--full_backtrace</code> option</li>
+<li>Ensure that values passed to <code>config.filter_run</code> are respected when running
+over DRb (using spork).</li>
+<li>Ensure shared example groups are reset after a run (as example groups are).</li>
+<li>Remove <code>rescue false</code> from calls to filters represented as Procs</li>
+<li>Ensure described_class gets the closest constant (pyromaniac)</li>
+<li>In &ldquo;autorun&rdquo;, don&rsquo;t run the specs in the at_exit hook if there was an
+exception (most likely due to a SyntaxError). (sunaku)</li>
+<li>Don&rsquo;t extend groups with modules already used to extend ancestor groups.</li>
+<li><code>its</code> correctly memoizes nil or false values (Yamada Masaki)</li>
+</ul>
+
+
+<h3>rspec-expectations-2.9.0 / 2012-03-17</h3>
+
+<p><a href="http://github.com/rspec/rspec-expectations/compare/v2.8.0...v2.9.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>Move built-in matcher classes to RSpec::Matchers::BuiltIn to reduce pollution
+of RSpec::Matchers (which is included in every example).</li>
+<li>Autoload files with matcher classes to improve load time.</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Align <code>respond_to?</code> and <code>method_missing</code> in DSL-defined matchers.</li>
+<li>Clear out user-defined instance variables between invocations of DSL-defined
+matchers.</li>
+<li>Dup the instance of a DSL generated matcher so its state is not changed by
+subsequent invocations.</li>
+<li>Treat expected args consistently across positive and negative expectations
+(thanks to Ralf Kistner for the heads up)</li>
+</ul>
+
+
+<h3>rspec-mocks-2.9.0 / 2012-03-17</h3>
+
+<p><a href="http://github.com/rspec/rspec-mocks/compare/v2.8.0...v2.9.0">full changelog</a></p>
+
+<p>Enhancements</p>
+
+<ul>
+<li>Support order constraints across objects (preethiramdev)</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li>Allow a <code>as_null_object</code> to be passed to <code>with</code></li>
+<li>Pass proc to block passed to stub (Aubrey Rhodes)</li>
+<li>Initialize child message expectation args to match any args (#109 &ndash;
+preethiramdev)</li>
+</ul>
+
+
+<h3>rspec-rails-2.9.0 / 2012-03-17</h3>
+
+<p><a href="http://github.com/rspec/rspec-rails/compare/v2.8.1...v2.9.0">full changelog</a></p>
+
+<p>Enhancments</p>
+
+<ul>
+<li>add description method to RouteToMatcher (John Wulff)</li>
+<li>Run &ldquo;db:test:clone_structure&rdquo; instead of &ldquo;db:test:prepare&rdquo; if Active Record&rsquo;s
+schema format is &ldquo;:sql&rdquo;. (Andrey Voronkov)</li>
+</ul>
+
+
+<p>Bug fixes</p>
+
+<ul>
+<li><code>mock_model(XXX).as_null_object.unknown_method</code> returns self again</li>
+<li>Generated view specs use different IDs for each attribute.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Validations are behavior, associations are structure]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2012/02/12/validations-are-behavior-associations-are-structure/"/>
+    <updated>2012-02-12T16:53:27-06:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2012/02/12/validations-are-behavior-associations-are-structure</id>
+    <content type="html"><![CDATA[<h2>TL;DR:</h2>
+
+<ul>
+<li>TDD is about specifying behavior, not structure.</li>
+<li>Validations are behavior, and should be specified.</li>
+<li>Associations are structure, and need not be.</li>
+</ul>
+
+
+<h2>Disclaimer</h2>
+
+<p>This is my personal viewpoint, though it is not mine alone. YMMV.</p>
+
+<h2>Declarations</h2>
+
+<p>ActiveRecord provides a declarative interface for describing the structure and
+behavior of a model:</p>
+
+<p><code>ruby article.rb
+class Article &lt; ActiveRecord::Base
+  validates_presence_of :title
+  has_many :comments
+end
+</code></p>
+
+<p>While syntactically similar, these two declarations do fundamentally different
+things.</p>
+
+<h2>Validations are behavior</h2>
+
+<p>The <code>validates_presence_of :title</code> declaration changes the behavior of
+the <code>save</code> method (and other methods that use <code>save</code>), and should be specified
+explicitly. Here&rsquo;s an example using shoulda matchers:</p>
+
+<p><code>ruby validate_presence_of_title.rb
+describe Article do
+  it { should validate_presence_of(:title) }
+end
+</code></p>
+
+<p>Even though the matcher&rsquo;s name looks just like the likely implementation, the
+<code>validate_presence_of</code> matcher specifies that you can not save an <code>Article</code>
+without a non-nil value for <code>title</code>, not that the
+<code>validates_presence_of(:title)</code> declaration exists.</p>
+
+<h2>Associations are structure</h2>
+
+<p>The <code>has_many</code> declaration exposes a <code>comments</code> method to clients that appears
+to be a collection of <code>Comment</code> objects. Doing Test-Driven Development, you
+would add this declaration when a specified behavior requires it e.g.</p>
+
+<p>```ruby with_comments_by.rb
+describe Article do
+  describe &ldquo;#with_comments_by&rdquo; do</p>
+
+<pre><code>it "finds articles with comments by the submitted comment_author" do
+  article = Factory(:article)
+  article.comments &lt;&lt; Factory.build(:comment, :author =&gt; "jdoe")
+  Article.with_comments_by("jdoe").should eq([article])
+end
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>This example needs a <code>comments</code> method that returns a collection in order to
+pass.  If it doesn&rsquo;t exist already (because no other example drove you to add
+it), this would be all the motivation you need to introduce it. You don&rsquo;t need
+an example that says <code>it "should have_many(:comments)"</code>.</p>
+
+<h2>Testing the framework</h2>
+
+<p>Some will argue that we don&rsquo;t need to spec validations either, suggesting that
+<code>it "should validate_presence_of(:title)"</code> is testing the Rails framework,
+which we trust is already tested.  If you think of TDD as a combination of
+specification, documentation, and regression testing, then this argument falls
+short on the specification/documentation front because the validation is
+behavior and, thus, the spec should specify the validation.</p>
+
+<p>Even if you view testing as nothing more than a safety net against regressions,
+the argument still falls down in the face of refactoring. If we add a <code>Review</code>
+class that also <code>has_many(:comments)</code> and <code>validates_presence_of(:title)</code>, and
+we want to extract that behavior to a <code>Postable</code> module that gets included in
+both <code>Article</code> and <code>Review</code>, we&rsquo;d want a regression test to fail if we failed
+to include either of those declarations in the <code>Postable</code> module.</p>
+
+<h2>But declarations are already declarative!</h2>
+
+<p>Another argument is that declarations supply sufficient documentation. e.g. we
+can look at <code>rental_contract.rb</code> and know that it validates the presence of
+<code>:rentable</code>:</p>
+
+<p>```ruby rental_contract.rb
+class RentalContract &lt; ActiveRecord::Base
+  has_many :monthly_charges
+  has_one :rentable, :polymorphic => true</p>
+
+<p>  validates_presence_of :rentable</p>
+
+<p>  def default_monthly_charge</p>
+
+<pre><code>price / months_applied
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>This is an interesting argument that I think has some merit, but I think it
+would require an extraordinarily disciplined and consistent approach of using
+declarations 100% of the time in model files such that each one <em>is the spec</em>
+for that model, e.g.</p>
+
+<p><code>ruby contract.rb
+class Contract &lt; ActiveRecord::Base
+  validates_presence_of :name
+  has_many :monthly_expenses
+  calculates_default_monthly_charge
+end
+</code></p>
+
+<p>100% may sound extreme, but as soon as we define a single method body in any
+one of the models, the declarative nature of the file begins to degrade, and so
+does its fitness for the purpose of specification. Plus, if we can only
+understand the expected behavior of a model by looking at <em>both</em> its spec and
+its implementation, we&rsquo;ve lost some of the power of a test-driven approach.</p>
+
+<h2>What do you think?</h2>
+
+<p>Do you spec associations? If so, what value do you get from doing so? If not,
+have you run into situations where you wished you had?</p>
+
+<p>Same questions for validations.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[rspec-rails-2.8.1 is released]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2012/01/04/rspec-rails-281-is-released/"/>
+    <updated>2012-01-04T23:43:28-06:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2012/01/04/rspec-rails-281-is-released</id>
+    <content type="html"><![CDATA[<h2>Bug fix release</h2>
+
+<p>The rails-3.2.0.rc2 release broke <code>stub_model</code> in rspec-rails-2.0.0 > 2.8.0.
+The rspec-rails-2.8.1 release fixes this issue, but it means that when you
+upgrade to rails-3.2.0.rc2 or greater, you&rsquo;ll have to upgrade to
+rspec-rails-2.8.1 or greater.</p>
+
+<p>Because rspec-rails-2.8.1 supports all versions of rails since 3.0, I recommend
+that you upgrade to rspec-rails-2.8.1 first, and then upgrade to
+rails-3.2.0.rc2 (or 3.2.0 once it&rsquo;s out).</p>
+
+<h3>Changelog</h3>
+
+<p><a href="http://rubydoc.info/gems/rspec-rails/file/Changelog.md">http://rubydoc.info/gems/rspec-rails/file/Changelog.md</a></p>
+
+<h3>Docs</h3>
+
+<p><a href="http://rubydoc.info/gems/rspec-rails">http://rubydoc.info/gems/rspec-rails</a></p>
+
+<p><a href="http://relishapp.com/rspec/rspec-rails">http://relishapp.com/rspec/rspec-rails</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RSpec-2.8 is released!]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2012/01/04/rspec-28-is-released/"/>
+    <updated>2012-01-04T20:38:03-06:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2012/01/04/rspec-28-is-released</id>
+    <content type="html"><![CDATA[<p>We released RSpec-2.8.0 today with a host of new features and improvements
+since 2.7. Some of the highlights are described below, but you can see the
+full changelogs at:</p>
+
+<ul>
+<li><a href="http://rubydoc.info/gems/rspec-core/file/Changelog.md">http://rubydoc.info/gems/rspec-core/file/Changelog.md</a></li>
+<li><a href="http://rubydoc.info/gems/rspec-expectations/file/Changelog.md">http://rubydoc.info/gems/rspec-expectations/file/Changelog.md</a></li>
+<li><a href="http://rubydoc.info/gems/rspec-mocks/file/Changelog.md">http://rubydoc.info/gems/rspec-mocks/file/Changelog.md</a></li>
+<li><a href="http://rubydoc.info/gems/rspec-rails/file/Changelog.md">http://rubydoc.info/gems/rspec-rails/file/Changelog.md</a></li>
+</ul>
+
+
+<h2>Documentation</h2>
+
+<p>While not 100% complete yet, we&rsquo;ve made great strides on RSpec&rsquo;s RDoc:</p>
+
+<ul>
+<li><a href="http://rubydoc.info/gems/rspec-core">http://rubydoc.info/gems/rspec-core</a></li>
+<li><a href="http://rubydoc.info/gems/rspec-expectations">http://rubydoc.info/gems/rspec-expectations</a></li>
+<li><a href="http://rubydoc.info/gems/rspec-mocks">http://rubydoc.info/gems/rspec-mocks</a></li>
+<li><a href="http://rubydoc.info/gems/rspec-rails">http://rubydoc.info/gems/rspec-rails</a></li>
+</ul>
+
+
+<p><a href="http://rspec.info">http://rspec.info</a> is now just a one pager (desperate for
+some design love &ndash; volunteers please email <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#114;&#115;&#x70;&#x65;&#99;&#45;&#117;&#115;&#101;&#x72;&#x73;&#64;&#114;&#117;&#98;&#x79;&#102;&#x6f;&#x72;&#103;&#101;&#46;&#111;&#x72;&#x67;">&#x72;&#x73;&#x70;&#x65;&#x63;&#45;&#x75;&#x73;&#x65;&#114;&#x73;&#x40;&#x72;&#x75;&#x62;&#121;&#102;&#x6f;&#x72;&#x67;&#101;&#46;&#x6f;&#x72;&#103;</a>). All the
+old pages are redirects to the relevant RDoc at <a href="http://rubydoc.info.">http://rubydoc.info.</a> RSpec-1
+info is still available at <a href="http://old.rspec.info">http://old.rspec.info</a>.</p>
+
+<p>We&rsquo;ve still got Cucumber features up at
+<a href="http://relishapp.com/rspec">http://relishapp.com/rspec</a>, but we&rsquo;re going to be
+phasing that out as the primary source of documentation. There are a lot of
+reasons for this, and I&rsquo;ll try to follow up with a separate blog post on this
+topic.</p>
+
+<h2>rspec-core</h2>
+
+<h3>Improved support for tags and filtering</h3>
+
+<p>You can now set default tags/filters in either <code>RSpec.configure</code> or a <code>.rspec</code>
+file and override these tags on the command line. For example, this configuration
+tells rspec to run all the examples that are not tagged <code>:slow</code>:</p>
+
+<pre><code># in spec/spec_helper.rb
+RSpec.configure do |c|
+  c.treat_symbols_as_metadata_keys_with_true_values = true
+  c.filter_run_excluding :slow
+end
+</code></pre>
+
+<p>Now when you want run those, you can just do this:</p>
+
+<pre><code>rspec --tag slow
+</code></pre>
+
+<p>This will override the configuration and run onlly the examples tagged <code>:slow</code>.</p>
+
+<h3>&mdash;order rand</h3>
+
+<p>We added an <code>--order</code> option with two supported values: <code>rand</code> and <code>default</code>.</p>
+
+<p><code>rspec --order random</code> (or <code>rand</code>) tells RSpec to run the groups in a random
+order, and then run the examples within each group in random order. We
+implemented it this way (rather than complete randomization of every example)
+because we don&rsquo;t want to re-run expensive before(:all) hooks. A fair tradeoff,
+as the resulting randomization is just as effective at exposing
+order-dependency bugs.</p>
+
+<p>When you use <code>--order random</code>, RSpec prints out the random number it used to
+seed the randomizer. When you think you&rsquo;ve found an order-dependency bug, you
+can pass the seed along and the order will remain consistent:</p>
+
+<pre><code>--order rand:3455
+</code></pre>
+
+<p><code>--order default</code> tells RSpec to load groups and examples as they are declared
+in each file.</p>
+
+<h3>rspec &mdash;init</h3>
+
+<p>We added an <code>--init</code> switch to the <code>rspec</code> command to generate a &ldquo;spec&rdquo;
+directory, and  &ldquo;.rspec&rdquo; and &ldquo;spec/spec_helper.rb&rdquo; files with some starter code
+in them.</p>
+
+<h2>rspec-expectations</h2>
+
+<p>We discovered that <a href="https://github.com/rspec/rspec-expectations/blob/master/benchmarks/matcher_dsl_vs_classes.rb">the matcher DSL generates matchers that run considerably
+slower than classes which implement the matcher
+protocol</a>.
+We made some minor improvements in the DSL, but to really improve things we
+re-implemented every single built-in matcher as a class.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,41 @@
+development: &development
+  # adapter: sqlite3
+  # database: db/development.sqlite3
+  # pool: 5
+  # timeout: 5000
+
+  adapter: mysql2
+  database: halfpx_dev
+  encoding: utf8
+  reconnect: false
+  verify_connection: true
+  pool: 5
+  username: root
+  password:
+
+  socket: <%= ['/opt/local/var/run/mysql5/mysqld.sock', '/tmp/mysql.sock'].detect { |f| File.exist? f } %>
+
+
+test:
+  # adapter: sqlite3
+  # database: db/test.sqlite3
+  # pool: 5
+  # timeout: 5000
+
+  adapter: mysql2
+  database: halfpx_test
+  encoding: utf8
+  reconnect: false
+  verify_connection: true
+  pool: 5
+  username: root
+  password:
+  socket: <%= ['/opt/local/var/run/mysql5/mysqld.sock', '/tmp/mysql.sock'].detect { |f| File.exist? f } %>
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: halfpx
+  pool: 5
+  username: halfpx_db
+  password:

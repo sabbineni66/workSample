@@ -1,0 +1,30 @@
+---
+- hosts: rpm_maker
+  user: vagrant
+  sudo: True
+  vars:
+        username: alexis
+        tomcat_src_url: http://mirror.cc.columbia.edu/pub/software/apache/tomcat/tomcat-7/v7.0.33/src/apache-tomcat-7.0.33-src.tar.gz
+  tasks:
+    - name: create a user account for ${username}
+      user: name=${username} state=present
+    - name: add public key
+      authorized_key: user=${username} key="$FILE(/home/${username}/.ssh/id_rsa.pub)"
+    - name: create a user account for rpmmaker
+      user: name=rpmmaker state=present
+    - name: install some rpm's
+      yum:  name=${item} state=installed
+      with_items:
+        - man
+        - ant
+        - ant-trax
+        - rpmdevtools
+        - vim
+    - name: copy files required to build Tomcat rpm's
+      copy: src=files/${item} dest=/home/rpmmaker owner=rpmmaker group=rpmmaker mode=0644
+      with_items:
+        - apache-tomcat-initscript
+        - apache-tomcat.spec
+    - name: copy build script
+      copy: src=files/make_tomcat_rpm.sh dest=/home/rpmmaker owner=rpmmaker group=rpmmaker mode=0744
+

@@ -1,0 +1,4 @@
+---
+
+- name: fully refresh pacman
+  pacmandb: state=fully-refreshed

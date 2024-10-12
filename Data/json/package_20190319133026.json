@@ -1,0 +1,9 @@
+{
+  "name": "ffi-example",
+  "version": "0.0.1",
+  "description": "ClojureScript FFI example",
+  "dependencies": {
+    "ffi": "^2.2.0"
+  },
+  "devDependencies": {}
+}

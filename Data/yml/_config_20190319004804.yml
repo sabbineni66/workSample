@@ -1,0 +1,15 @@
+name: Beyond the Path
+markdown: redcarpet
+pygments: true
+
+destination: public
+exclude: [ "Gemfile", "Gemfile.lock", "vendor", "bin" ]
+timezone: America/Chicago
+
+paginate: 5
+permalink: pretty
+
+assets:
+  js_compressor: uglifier
+  css_compressor: yui
+  gzip: [ text/css, application/javascript ]

@@ -1,0 +1,31 @@
+{
+  "name": "import-sort-style-tarsolya",
+  "version": "0.0.4",
+  "description": "Import sort style by tarsolya",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc -p src",
+    "build:watch": "tsc -p src -w",
+    "test": "mocha --require ts-node/register --recursive \"test/**/*.ts\"",
+    "test:watch": "mocha -w --require ts-node/register --recursive \"test/**/*.ts\""
+  },
+  "author": "Andras Tarsoly <contact@tarsolya.me> (https://github.com/tarsolya)",
+  "repository": "tarsolya/import-sort",
+  "license": "ISC",
+  "dependencies": {
+    "import-sort-style": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.3",
+    "@types/node": "^10.3.5",
+    "chai": "^4.0.2",
+    "import-sort-parser": "^5.0.0",
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
+  }
+}

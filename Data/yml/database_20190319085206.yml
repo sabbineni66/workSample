@@ -1,0 +1,26 @@
+development: &development
+  adapter: postgresql
+  encoding: unicode
+  database: dumsnadno_development
+  pool: 5
+  username: blahutka
+  password: petr
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: dumsnadno_test
+  pool: 5
+  username: blahutka
+  password: petr
+
+production: &production
+  adapter: postgresql
+  encoding: unicode
+  database: dumsnadno_production
+  pool: 5
+  username: blahutka
+  password: petr
+
+cucumber:
+  <<: *test

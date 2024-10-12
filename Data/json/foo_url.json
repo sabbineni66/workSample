@@ -1,0 +1,9 @@
+{
+  "url": "http://foo/",
+  "method": "POST",
+  "content_type": "application/json; charset=utf-8",
+  "data": "{\"msisdn\":\"1234567\",\"content\":\"foo\"}",
+  "body": {
+    "content": "http://foo/ said foo!"
+  }
+}

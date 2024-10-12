@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Cucumber | David Chelimsky]]></title>
+  <link href="http://blog.davidchelimsky.net/blog/categories/cucumber/atom.xml" rel="self"/>
+  <link href="http://blog.davidchelimsky.net/"/>
+  <updated>2016-08-18T07:48:02-05:00</updated>
+  <id>http://blog.davidchelimsky.net/</id>
+  <author>
+    <name><![CDATA[David]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[RSpec-2.0.0 is released!]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2010/10/10/rspec-200-is-released/"/>
+    <updated>2010-10-10T17:45:54-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2010/10/10/rspec-200-is-released</id>
+    <content type="html"><![CDATA[<p>This marks the end of a year-long effort that improves RSpec in a number of ways, including <a href="http://blog.davidchelimsky.net/2010/01/25/rspec-20-in-the-works/">modularity, cleaner code, and much better integration with Rails-3 than was possible before</a>.</p>
+
+<h3>Docs, with a little bit of relish</h3>
+
+<p>In addition to the documentation available at all the places mentioned <a href="http://blog.davidchelimsky.net/2010/07/01/rspec-2-documentation/">my earlier post</a>, we&rsquo;ve also got all of the <a href="http://github.com/aslakhellesoy/cucumber">Cucumber</a> features posted to Justin Ko&rsquo;s new Cucumber presentation app, relish.</p>
+
+<p><a href="http://relishapp.com/rspec">http://relishapp.com/rspec</a></p>
+
+<p>We&rsquo;ll also have the RDoc up on <a href="http://rdoc.info">http://rdoc.info</a> in a day or so.</p>
+
+<h3>Thanks!</h3>
+
+<p>Big thanks to 80+ contributors who submitted patches for RSpec-2.0.0, including [1]:</p>
+
+<p>Aan, Adam Walters, Akira Matsuda, Alex Crichton, Anderson Dias, Andre Arko, Andreas Neuhaus, Ashley Moran, Ben Armston, Ben Rady, Brasten Sager, Brian J Reath, Carlhuda, Chad Humphries, Charles Lowell, Chris Redinger, Chuck Remes, Corey Ehmke, Corey Haines, Dan Peterson, Dave Newman, David Genord II, David S. Kang, Ethan Gunderson, Gon?alo Silva, Greg Sterndale, Hans de Graaff, Iain Hecker, Jacques Crocker, Jean-Daniel Guyot, Jeff Ramnani, Jim Breen, Johan Kiviniemi, Josep M? Bach, Josh Graham, Joshua Nichols, Kabari Hendrick, Kristian M, Lailson B, Len Smith, Leonardo Bessa, Les Hill, Luis Lavena, Marcin Kulik, Markus Schirp, Matt Remsik, Matt Yoho, Matthew Todd, Michael Niessner, Mike Gehard, Myron Marston, Nate Jackson, Neeraj Singh, Nestor Ovroy, Nick Ang, Nicolas Braem, Paul Rosania, Phil Smith, Postmodern, Prasad, Rob Sanheim, Roman Chernyatchik, Ryan Bigg, Ryan Briones, Sam Pohlenz, Scott Taylor, Shin-ichiro OGAWA, Thibaud Guillaume-Gentil, Tim Connor, Tim Harper, Tom Stuart, V?t Ondruch, Wincent Colaiuta, aslakhellesoy, eira, garren smith, grosser, hasimo, justinko, rup, speedmax, wycats</p>
+
+<p>Extra special thanks go to:</p>
+
+<ul>
+<li><p>Chad Humphries for contributing his Micronaut gem which is the basis for rspec-core-2</p></li>
+<li><p>Yehuda Katz, Carl Lerche, and Jos? Valim, for their assistance with getting rspec-rails-2 to take advantage of new APIs in Rails-3, and for shepherding patches to Rails that made it far simpler for testing extensions like rspec-rails to hook into Rails' testing infrastructure. Their work here has significantly reduced the risk that Rails point-releases will break rspec-rails.</p></li>
+<li><p>Myron Marston for a wealth of thoughtful contributions including Cucumber features that we can all learn from</p></li>
+<li><p>Justin Ko for his direct contributions to rspec, and for <a href="http://relishapp.com/">relish</a>, which makes executable documentation act more like documentation.</p></li>
+</ul>
+
+
+<h3>What&rsquo;s next?</h3>
+
+<h4>rspec-rails-2 for rails-2</h4>
+
+<p>There are a couple of projects floating around that support rspec-2 and rails-2. I haven&rsquo;t had the chance to review any of these myself, but my hope is that we&rsquo;ll have be an official rspec-2 for rails-2 gem in the coming months.</p>
+
+<h4>rspec-1 maintenance</h4>
+
+<p>rspec-1 will continue to get maintenance releases, but these will be restricted, primarily, to bug fixes. Any new features will go into rspec-2, and will likely not be back-ported.</p>
+
+<p>[1] Contributor names were generated from the git commit logs.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The RSpec Book -- Beta 10 and Progress Report]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2009/09/23/the-rspec-book-beta-10-and-progress-report/"/>
+    <updated>2009-09-23T08:09:15-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2009/09/23/the-rspec-book-beta-10-and-progress-report</id>
+    <content type="html"><![CDATA[<p>Beta 10????? When the hell are we going to start chopping down some trees? Well, first, here&rsquo;s what&rsquo;s new in Beta 10 of <a href="http://www.pragprog.com/titles/achbd/the-rspec-book">The RSpec Book</a>:</p>
+
+<h3>Automating the Browser with Webrat and Selenium</h3>
+
+<p>This new chapter from Bryan Helmkamp shows you how to drive Cucumber scenarios right through your browser using Webrat and Selenium. You&rsquo;ll type a single command and watch a browser fire up and walk through each scenario step by step right before your very eyes, and then see a standard Cucumber report in the shell. It&rsquo;s a sight to behold, and a great way to drive out behaviour that requires JavaScript.</p>
+
+<p>And now, for your reading pleasure &hellip;</p>
+
+<!-- more -->
+
+
+<h3>Progress Report</h3>
+
+<p>I&rsquo;m sure that all of you post-first-time authors out there know what I mean when I say that working on this book has been a fascinating case study in how <em>not</em> to write a book. First, we&rsquo;re writing about not just one, but no less that six moving targets: RSpec, Cucumber, Rails, Webrat, Selenium and, of course BDD itself.</p>
+
+<p>When we started this book, BDD was seen primarily as <a href="http://techblog.daveastels.com/2005/07/05/a-new-look-at-test-driven-development/">a new look at test driven development</a>. The book was focused only on RSpec and TDD through this new lens. Had we stuck to that we might be talking about the third edition by now, but while we were writing, BDD was on the move.</p>
+
+<h4>BDD in 2009</h4>
+
+<p>Today, BDD has evolved to a full-stack agile process derived from Extreme Programming (XP). Rather than being a variation of TDD, it comprises TDD (and ATDP, DDD, etc, etc). And so has the book evolved to incorporate the application of these ideas to the practical use of an evolving toolset.</p>
+
+<p>Also consider that four of the authors are primary maintainers of said moving targets (including BDD itself). Structuring a project like this leads to a different meaning of BDD entirely &hellip;</p>
+
+<h4>Book Driven Development</h4>
+
+<p>I can&rsquo;t count the number of times that I&rsquo;ve been writing about how to do something or set something up in RSpec or Cucumber and I&rsquo;ve thought &ldquo;Really? We could do better than that!&rdquo; Each of those revelations led to software updates, followed by me poring through the book to update related content.</p>
+
+<p>The end result is better software <em>and</em> a better book, benefiting RSpec and Cucumber users and The RSpec Book readers alike.</p>
+
+<h4>What remains to be done?</h4>
+
+<p>At this point we&rsquo;re pretty close to the end of this journey.
+We&rsquo;ve got two chapters left to write, plus some bookends (and beginnings &ndash; foreword, preface, and appendices). I also need to review pretty much everything because lots of things that we wrote about earlier in the process have changed.</p>
+
+<p>After all that, we&rsquo;ll have a final technical review, copyediting, indexing, and then off to print! So we&rsquo;re in the final phases now and I look forward to reporting that the book is off to print in the not too distant future. How &ldquo;not too distant&rdquo; I hesitate to say, because so far I&rsquo;m batting 000 in terms of release predictions (and I thought estimating software delivery was a challenge!).</p>
+
+<p>In the mean time, I&rsquo;ll be posting updates here as we progress, along with some discussion of the material in the book.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Windy City Rails]]></title>
+    <link href="http://blog.davidchelimsky.net/blog/2009/07/18/windy-city-rails/"/>
+    <updated>2009-07-18T02:12:50-05:00</updated>
+    <id>http://blog.davidchelimsky.net/blog/2009/07/18/windy-city-rails</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m presenting at <a href="http://windycityrails.org/">Windy City Rails</a> in September. This is just the second year of this exciting midwest Rails conference, but the <a href="http://windycityrails.org/schedule">schedule looks most impressive</a>. Talks range from <a href="http://windycityrails.org/sessions#rappin">How To Test Absolutely Anything</a> to <a href="http://windycityrails.org/sessions#wampler">Better Ruby through Functional Programming</a> to a <a href="http://windycityrails.org/sessions#katz">Rails 3 Update</a> from <a href="http://yehudakatz.com/">Yehuda Katz</a>, Rails core&rsquo;s newest member and the man who is bringing the best of Merb to Rails 3.</p>
+
+<p>Last year I did a <a href="http://vimeo.com/5573653">presentation about BDD</a> and, with such a wide subject, ran out of time before I got through most of it. This year, the  organizers of the conference have given me the opportunity to talk for three full hours! Count &lsquo;em. Three!</p>
+
+<p>It&rsquo;s actually not just me talking (whew!). It&rsquo;s a tutorial entitled <a href="http://windycityrails.org/sessions#chelimsky">Behaviour Driven Rails with RSpec and Cucumber</a>. I&rsquo;m planning an intensive skills development workshop, taking attendees through the development of a feature in a Rails app from planning to writing Cucumber scenarios to driving out code with RSpec. This is going to be about as close as you&rsquo;ll get to a BDD immersion in three hours, so I hope to see you there whether you&rsquo;re just learning about BDD now or you&rsquo;ve already been doing it for a while.</p>
+
+<p>See you in September!</p>
+]]></content>
+  </entry>
+  
+</feed>

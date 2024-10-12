@@ -1,0 +1,8 @@
+package: suitcase
+destination_mapping:
+    root: /srv/suitcase
+    bin/: /usr/bin
+    suitcase.pth: /usr/lib/python2.4/site-packages/
+configs: [etc]
+build_exclusions: ['tests', '*.yml','docs']
+depends: ['python2.4']

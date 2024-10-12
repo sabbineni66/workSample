@@ -1,0 +1,80 @@
+{
+    "name": "brunodebarros/git-deploy-php",
+    "description": "git-deploy-php is a simple php-based tool that deploys your Git repositories to FTP/SFTP servers, and keeps them updated automatically.",
+    "keywords": [
+        "git",
+        "deploy",
+        "ftp",
+        "sftp",
+        "php"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "homepage": "http://brunodebarros.github.io/git-deploy-php/",
+    "support": {
+        "issues": "https://github.com/BrunoDeBarros/git-deploy-php/issues"
+    },
+    "authors": [
+        {
+            "name": "Bruno Moreira De Barros",
+            "email": "bruno@terraduo.com",
+            "homepage": "https://terraduo.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Mangirdas Skripka",
+            "email": "mangirdas@impresspages.org",
+            "homepage": "http://www.impresspages.org",
+            "role": "Developer"
+        },
+        {
+            "name": "sbtsrbayer",
+            "role": "Developer"
+        },
+        {
+            "name": "Tijmen Brommet",
+            "email": "tijmen@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Michael Naurbjerg",
+            "role": "Developer"
+        },
+        {
+            "name": "Sergey Volkov",
+            "email": "sergey.volkov.kh@yandex.ua",
+            "role": "Developer"
+        },
+        {
+            "name": "Jesse Dobbelaere",
+            "email": "jesse@dobbelaere-ae.be",
+            "homepage": "http://www.jessedobbelae.re",
+            "role": "Developer"
+        }
+    ],
+    "bin": [
+        "git-deploy"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Brunodebarros\\Gitdeploy\\": "tools/src/"
+        }
+    },
+    "require-dev": {
+        "phpseclib/phpseclib": "^2.0",
+        "league/climate": "^3.2",
+        "league/flysystem": "^1.0",
+        "phpunit/phpunit": "^5.1"
+    },
+    "config": {
+        "vendor-dir": "tools/vendor",
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": false
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "php tools/build.php"
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "gridmaker",
+  "version": "0.0.0",
+  "description": "makes grids of letters for word games",
+  "main": "gridmaker.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "github.com/jasonm",
+  "license": "MIT",
+  "dependencies": {
+    "event-stream": "^3.3.0",
+    "js-combinatorics": "^0.4.0",
+    "lodash": "^3.6.0",
+    "markov": "0.0.7"
+  }
+}

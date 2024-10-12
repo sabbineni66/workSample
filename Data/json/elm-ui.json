@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "summary": "SOBS Elm-UI Project",
+  "repository": "https://github.com/cdcarter/sobs.git",
+  "license": "MIT",
+  "native-modules": true,
+  "source-directories": [
+    "source"
+  ],
+  "exposed-modules": [],
+  "dependencies": {
+    "evancz/elm-http": "3.0.1 <= v < 4.0.0"
+  },
+  "elm-version": "0.17.0 <= v < 0.18.0"
+}

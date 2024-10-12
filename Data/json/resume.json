@@ -1,0 +1,109 @@
+{
+  "basics": {
+    "name": "Carlos Eduardo Monti",
+    "label": "Software Engineer",
+    "picture": "https://avatars1.githubusercontent.com/u/890?s=460&v=4",
+    "email": "carlos.monti@gmail.com",
+    "phone": "+54 911 5057-4203",
+    "summary": "I'm a software engineer that is very comfortable working across the entire stack down from the network and operating system layers up to what our users see on their screens. I've got experience developing software, maintaining the platforms it runs on, leading teams and architecting new solutions. I thouroughly enjoy learning new technologies, love to automate everything and find really rewarding when my code passes all tests",
+    "location": {
+      "city": "Ciudad Aut?noma de Buenos Aires",
+      "countryCode": "AR",
+      "region": "Buenos Aires"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "slaytanic",
+        "url": "https://github.com/slaytanic"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "Carlos Eduardo Monti",
+        "url": "https://www.linkedin.com/in/carlos-monti-34a22284/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "IBM Argentina SRL",
+      "position": "Technical Specialist",
+      "website": "https://www.ibm.com",
+      "startDate": "2006-10-23",
+      "summary": "IBM (International Business Machines) is an American multinational technology company with operations in over 170 countries. IBM manufactures and markets computer hardware, middleware and software, and provides hosting and consulting services in areas ranging from mainframe computers to nanotechnology. IBM is also a major research organization",
+      "highlights": [
+        "I architected and participated in the development of an AI-driven \"Advisor\" suite of products to be used by the Sales organization in all phases of the client engagement process, backed by IBM?s extensive CRM dataset and built using React/GraphQL/Express/MongoDB",
+        "I participated in the development of a project management offering based on the Kanban system integrated to customer?s IPC (Incident, Problem, Change) systems using Ruby on Rails/MySQL and diverse connection interfaces through DB2, REST/JSON, SOAP/XML, and proprietary formats.",
+        "I designed the software architecture for a software as a service offering that provides real-time analytics from social media using the IBM Watson APIs, Ruby on Rails/PostgreSQL",
+        "I participated in the development of a self-service delivery platform that originated as an IBM Research project including the migration from a monolithic application to a new micro-service oriented architecture built on Ruby on Rails, IBM Business Process Manager, NodeJS and EmberJS. I designed and implemented a DSL (Domain Specific Language) to enable pluggable content to be added to the platform. I expanded the platform to integrate with IBM Control Desk on the front-end and use IPSoft IPCenter, Opscode Chef,IBM Tivoli Workload Scheduler, VMWare vSphere and IBM Hardware Management Console on the back-end. Public link: https://ibm.co/2t9GTsK",
+        "I developed software for a Nao Robot (manufactured by SoftBank) to showcase IBM Watson?s capabilities using Python, the NAOqi SDK and IBM Watson APIs. Media references: http://clar.in/2BpnxB7 (National newspaper), http://bit.ly/2ahAtwt (Public TV coverage)",
+        "I designed software architecture for the inaugural project of IBM Argentina?s IoT (Internet of Things) lab using IBM Watson APIs, Ruby/Ruby on Rails, RabbitMQ, ROS (Robot Operating System) as the software platform of a 3D-printed cognitive assistant built using multiple Arduino and Raspberry Pi boards. Media reference: https://bit.ly/2C57Jaf",
+        "I taught courses to an internal audience on Ruby/Ruby on Rails development, Git version control and the IBM Cloud",
+        "I developed of a case management utility for tracking support requests and ongoing activities performed by third-party hardware and software vendors using Ruby on Rails/MySQL",
+        "I development of a dashboard utility for tracking and reporting on KPIs (Key performance indicators) for the Change, Incident and Problem processes using Ruby on Rails and retrieving data from multiple sources (DB2 on System/z, Domino/Lotus Notes, Websphere MQ,Cognos, ServiceNow)",
+        "I maintained the software for an SSL certificate database built on J2EE/MySQL and automated the underlying certificate renewal process using Perl",
+        "I deployed an updated authentication, role-based access control (RBAC) and audit infrastructure for a high profile client using Sun Directory Services and BeyondTrust Powerbroker",
+        "I developed an integration for a customer notification and alert paging system using Perl, later migrated to Python",
+        "Across multiple projects I was responsible for setting up the CI/CD pipeline. I've used IBM Urbancode Deploy. Github Enterprise, Travis CI, Jenkins, Kubernetes, Docker, Cloudfoundry to build, test, deploy, host and monitor software projects.",
+        "I managed the UNIX systems (AIX, GNU/Linux, Solaris) of application and web hosting systems or Cloud/Cluster instances of the applications I've worked on"
+      ]
+    },
+    {
+      "company": "Cyclelogic Argentina SRL",
+      "position": "Software Engineer",
+      "startDate": "2005-03-01",
+      "endDate": "2006-10-20",
+      "summary": "Cyclelogic was a telecommunications company focused on providing business to business solutions, packaged content for end users, software and services to bridge the gap between telecommunications service providers and other businesses",
+      "highlights": [
+        "I developed an SMPP message broker and gateway using MSMQ and Delphi.",
+        "I developed a system to display incoming SMS messages real-time on broadcast television for a music network using Delphi/SQL Server and a Matrox video adapter",
+        "I developed a dashboard for business partners in order to enable end-to-end visibility of mobile-originated and mobile-terminated messaging using PHP/SQL Server",
+        "I developed an SMPP proxy/bridge to be used between the messaging platform of a Brazilian telecom and their accounting system using the Radius protocol, Python and Berkeley DB (BDB)",
+        "I developed the front-end interface for a mobile content and media virtual store using the C programming language and Brew",
+        "I developed SMS-based games and applications using Python",
+        "I developed the back-end for a content delivery system using ASP",
+        "I managed the UNIX systems (Solaris, GNU/Linux and FreeBSD) of the hosting environment for infrastructure systems"
+      ]
+    },
+    {
+      "company": "Direcci?n Nacional de Migraciones",
+      "position": "Software Engineer",
+      "website": "http://www.migraciones.gov.ar",
+      "startDate": "2004-07-01",
+      "endDate": "2005-02-28",
+      "summary": "Direcci?n Nacional de Migraciones is the department of the national government tasked with the control and tracking of arrivals and departures across all border offices and posts, residency of foreign nationals within the country as well as enforcing relevant laws and directives from the executive branch",
+      "highlights": [
+        "I developed and instrumented software interfaces for biometric devices (Fingerprint readers, photo capture devices) and document scanners (Passport scan and verification devices) as VCL Components for Delphi/C++ Builder",
+        "I developed supporting software for resolution 1169/2004 (Regularize the situation of illegal aliens currently residing in the country) using Delphi/PostgreSQL",
+        "I developed a user control and role based authorization system for the management system used at border control offices and posts using Delphi, PHP and Oracle Database",
+        "I developed software for personnel management and time tracking of the workforce including fingerprint-based check in/check out, printing of credentials with machine-readable ICAO codes using Delphi/PostgreSQL",
+        "I developed software for border control list management and distribution using Delphi, ITU-T V.34 and proprietary exchange formats",
+        "I deployed a custom messaging solution based on Jabber/XMPP",
+        "I managed the Microsoft Windows and UNIX systems (Solaris, HP-UX, OpenBSD and GNU/Linux) used in support of the applications and systems I worked on including web servers, proxy servers, firewalls and database servers"
+      ]
+    },
+    {
+      "company": "Cyberspace Reality SRL",
+      "position": "Software Engineer",
+      "startDate": "2002-11-01",
+      "endDate": "2003-06-30",
+      "summary": "Cyberspace Reality was an SMB dedicated to providing web and e-mail hosting services to local clients",
+      "highlights": [
+        "I developed custom websites for third-party clients using PHP/MySQL",
+        "I developed an e-mail marketing solution using Delphi, PHP and Perl",
+        "I developed software for assessing and monitoring the security of the web and e-mail hosting platform using Delphi",
+        "I managed the GNU/Linux systems of the web and e-mail hosting platform"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ]
+}

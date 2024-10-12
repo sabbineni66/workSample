@@ -1,0 +1,34 @@
+{
+    "name" : "edsonmedina/php_testability",
+    "description": "Analyses and reports testability issues of a php codebase",
+    "authors": [
+        {
+            "name": "Edson Medina",
+            "email": "edsonmedina@gmail.com"
+        }
+    ],
+    "keywords": ["php", "phpunit", "unit", "testing", "testability", "tdd"],
+    "homepage": "https://github.com/edsonmedina/php_testability/",
+    "autoload": {
+        "psr-4": {
+            "edsonmedina\\php_testability\\" : "src/"
+        }
+    },
+    "license": "GPL-2.0+",
+    "require": {
+        "php": ">=5.4",
+        "nikic/php-parser": "*",
+        "nategood/commando": "*",
+        "mustache/mustache": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "phpspec/prophecy": "*"
+    },
+    "bin": [
+        "src/testability"
+    ],
+    "config": {
+        "bin-dir": "bin"
+    }
+}

@@ -1,0 +1,19 @@
+#
+# Common Variables - These will be available in all Builds
+OC_APPLICATION_NAME: "OC-Rails"
+OC_TWITTER_ENABLE: true
+OC_TWITTER_KEY: Twitter_Key_Goes_Here
+OC_TWITTER_SECRET: Twitter_Secret_Goes_Here
+OC_FACEBOOK_ENABLE: true
+OC_FACEBOOK_KEY: Facebook_Key_Goes_Here
+OC_FACEBOOK_SECRET: Facebook_Secret_Goes_Here
+
+#
+# There variables will be available in the Development Environment
+development:
+  OC_APPLICATION_NAME: "OC-Rails (Development Mode)"
+
+#
+# There variables will be available in the Test Environment
+development:
+  OC_APPLICATION_NAME: "OC-Rails (Test Mode)"

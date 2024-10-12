@@ -1,0 +1,16 @@
+{
+  "name": "IndiePants",
+  "description": "Taking back the web one HTTP request at a time.",
+  "repository": "https://github.com/hmans/indiepants",
+  "website": "https://github.com/hmans/indiepants",
+  "keywords": ["rails", "blogging", "social"],
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "scripts": {
+    "postdeploy": "bin/rake db:migrate"
+  },
+  "env": {
+  },
+  "success_url": "/"
+}

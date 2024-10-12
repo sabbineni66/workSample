@@ -1,0 +1,36 @@
+{
+  "name": "ey_node_app_info",
+  "version": "0.1.0",
+  "description": "Parses package.json and provides node paths and shell commands.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "assert": "~0.4.9",
+    "vows": "~0.6.4",
+    "optparse": "~1.0.3",
+    "semver": "~1.0.14",
+    "chai": "~1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node ./test/*.js --spec"
+  },
+  "bin": {
+    "ey_node_app_info": "./bin/ey_node_app_info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/engineyard/ey_node_app_info.git"
+  },
+  "private": true,
+  "keywords": [
+    "ey",
+    "package",
+    "paas",
+    "cloud"
+  ],
+  "author": "Ryan Souza & Jim Lindley",
+  "license": "BSD"
+}

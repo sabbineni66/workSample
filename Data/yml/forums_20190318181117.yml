@@ -1,0 +1,36 @@
+# == Schema Information
+# Schema version: 49
+#
+# Table name: forums
+#
+#  id           :integer(11)     not null, primary key
+#  name         :string(255)     
+#  description  :string(255)     
+#  topics_count :integer(11)     
+#  posts_count  :integer(11)     
+#  position     :integer(11)     default(0)
+#  state        :string(255)     default("public")
+#  permalink    :string(255)     
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  topics_count: 1
+  posts_count: 1
+  position: 1
+  description_html: MyText
+  state: MyString
+  permalink: MyString
+
+two:
+  name: MyString
+  description: MyString
+  topics_count: 1
+  posts_count: 1
+  position: 1
+  description_html: MyText
+  state: MyString
+  permalink: MyString

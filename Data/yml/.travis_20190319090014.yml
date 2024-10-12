@@ -1,0 +1,26 @@
+language: 'ruby'
+
+rvm:
+  - "1.9.3"
+  - "jruby-19mode"
+  - "rbx-19mode"
+  - "jruby-18mode"
+  - "1.8.7"
+
+env:
+  global:
+    - 'ARTIFACTS_AWS_REGION=us-east-1'
+    - 'ARTIFACTS_S3_BUCKET=drogus-artifacts'
+    # artifacts
+    - secure: "Un/nTZp7bEoxAuVLUBClFaTNMRqY585ig1rHM7+/FolDB/g2HCnDlunQ8O8W\n92gun3+3NFUs1zczCXCoRaFOe5we14gU3ElxH15XwjzpOZ4XNy1iluanJ18o\ny9f2/X8eJvOXGTHyNy1hghdduDQnHh6c9O7Ax5D0x7vlU/OV76M="
+    - secure: "dzX4r49qRQIMgXlMNXfUXhiXb6cG0rs1aQLKZCHqXkWwbwWHFcLlyQjIGFuT\nl24tBg/kKZrSKNW+gpIly3ISxJiSlWhNjMx2xGc+3yhYQPexHMk01lN6qtap\nGiVPnO1MZCtDHt111yAD3HjGs8t+0Glmsm3DL/ASv+nZSbyV6mQ="
+
+before_script:
+  - "curl https://gist.github.com/drogus/4089736/raw/install-artifacts.sh | bash"
+
+after_script:
+  - "travis-artifacts upload --path screenshots --path logs"
+after_failure:
+  - "travis-artifacts upload --path debug"
+after_success:
+  - "travis-artifacts upload --path build"

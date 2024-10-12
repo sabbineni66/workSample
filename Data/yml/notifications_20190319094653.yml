@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+scheduled_email:
+  event: scheduled
+  type: EmailNotification
+  address: verified@k1ckr.com
+
+waiting_email:
+  event: waiting
+  type: EmailNotification
+  address: verified@k1ckr.com
+  
+active_email:
+  event: active
+  type: EmailNotification
+  address: verified@k1ckr.com
+
+active_every_hour_email:
+  event: active_every_hour
+  type: EmailNotification
+  address: verified@k1ckr.com
+
+active_once_email:
+  event: active_once
+  type: EmailNotification
+  address: verified@k1ckr.com
+
+active_once_http:
+  event: active_once
+  type: HttpNotification
+  address: http://localhost

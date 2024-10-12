@@ -1,0 +1,10 @@
+[ {
+  "resource" : "business_profile_submission-Update",
+  "sample" : "{\n  'data' : null\n}"
+}, {
+  "resource" : "business_profile_submission",
+  "sample" : "{\n  'data' : null\n}"
+}, {
+  "resource" : "business_profile_submission-Create",
+  "sample" : "{\n  'data' : null\n}"
+} ]

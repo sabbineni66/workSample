@@ -1,0 +1,39 @@
+{
+  "name": "pukkz",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ttcremers/pukkzjs",
+  "authors": [
+    "Thomas T. Cremers <info@vicinitysoftware.com>"
+  ],
+  "description": "Markdown powered single page CMS",
+  "main": "pukkz.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "markdown",
+    "single",
+    "page",
+    "light",
+    "cms",
+    "content",
+    "frontend"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "jasmine",
+    ".gitignore",
+    ".spec",
+    "bower.json",
+    "README.md",
+    "tests"
+  ],
+  "dependencies": {
+    "marked": "~0.3.2",
+    "jquery": "~2.1.1"
+  }
+}

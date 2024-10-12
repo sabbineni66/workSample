@@ -1,0 +1,21 @@
+---
+# This is a sample settings file. Feel free to add your own.
+defaults: &defaults
+  title: "PmpknPi"
+  description: "Blog API written in Merb"
+  author: "Brock Whitten"
+  password: "foobar"
+  filter: "Markdown"
+  timezone_offset: -7
+
+development:
+  <<: *defaults
+  domain: "http://localhost:4000"
+
+test:
+  <<: *defaults
+  domain: "http://localhost:4000"
+  
+production:
+  <<: *defaults
+  domain: "http://demo.pmpknpi.com"

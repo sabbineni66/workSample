@@ -1,0 +1,26 @@
+{
+	"ImportPath": "github.com/tobstarr/wlcli",
+	"GoVersion": "go1.4.3",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/BurntSushi/toml",
+			"Comment": "v0.1.0-21-g056c9bc",
+			"Rev": "056c9bc7be7190eaa7715723883caffa5f8fa3e4"
+		},
+		{
+			"ImportPath": "github.com/dynport/dgtk/cli",
+			"Rev": "0542a8bc57a0e0c31d81a0ed629cf847cd0c0429"
+		},
+		{
+			"ImportPath": "github.com/dynport/dgtk/tagparse",
+			"Rev": "0542a8bc57a0e0c31d81a0ed629cf847cd0c0429"
+		},
+		{
+			"ImportPath": "github.com/dynport/gocli",
+			"Rev": "bc2ff70316964536247422e47f87fc84e2c9d53a"
+		}
+	]
+}

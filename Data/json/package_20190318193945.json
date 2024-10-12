@@ -1,0 +1,38 @@
+{
+  "name": "Surveyor",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "haul": "haul start"
+  },
+  "dependencies": {
+    "asyncstorage-down": "^3.1.1",
+    "buffer": "^5.0.6",
+    "crypto-browserify": "^3.11.0",
+    "events": "^1.1.1",
+    "hyperlog": "^4.12.1",
+    "node-libs-browser": "^2.0.0",
+    "osm-p2p-db": "^3.11.0",
+    "path-browserify": "^0.0.0",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.43.4",
+    "react-native-level": "^3.0.0",
+    "stream-browserify": "^2.0.1",
+    "util": "^0.10.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "eslint": "^3.19.0",
+    "haul-cli": "^0.5.0",
+    "jest": "19.0.2",
+    "prettier": "^1.2.2",
+    "react-test-renderer": "16.0.0-alpha.6"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

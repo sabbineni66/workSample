@@ -1,0 +1,22 @@
+javascript_compressor: closure
+gzip_assets: off
+
+javascripts:
+  common:
+    - public/javascripts/swfobject.js
+    - public/javascripts/jquery.js
+    - public/javascripts/jquery.tablesorter.js
+    - public/javascripts/jquery.formalize.js
+    - public/javascripts/jquery.pjax.js
+    - public/javascripts/rails.js
+    - public/javascripts/application.js
+
+stylesheets:
+  common:
+    - public/stylesheets/lib/reset.css
+    - public/stylesheets/lib/typography.css
+    - public/stylesheets/lib/grid.css
+    - public/stylesheets/lib/forms.css
+    - public/stylesheets/formalize.css
+    - public/stylesheets/sprites.css
+    - public/stylesheets/screen.css

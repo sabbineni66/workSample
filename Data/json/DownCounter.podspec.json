@@ -1,0 +1,22 @@
+{
+  "name": "DownCounter",
+  "version": "0.1.0",
+  "summary": "A short description of DownCounter.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/DownCounter",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Holin": "holin.he@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/DownCounter.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DownCounter/Classes/**/*"
+}

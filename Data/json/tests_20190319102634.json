@@ -1,0 +1,28 @@
+{
+  "header": {
+    "namespace": "Control",
+    "name": "SwitchOnOffRequest"
+  },
+  "payload": {
+    "appliance": {
+      "applianceId": "xmas-lights"
+    },
+    "switchControlAction": "TURN_OFF"
+  }
+}
+
+{
+  "header": {
+    "namespace": "Discovery",
+    "name": "DiscoverAppliancesRequest"
+  },
+  "payload": {}
+}
+
+{
+  "header": {
+    "namespace": "System",
+    "name": "HealthCheckRequest"
+  },
+  "payload": {}
+}

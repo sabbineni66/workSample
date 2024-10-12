@@ -1,0 +1,20 @@
+language: go
+go:
+  - 1.11.5
+
+sudo: required
+
+services:
+  - docker
+
+branches:
+  only:
+    - master
+    - /^test_/
+    - /^test-/
+
+install:
+  - go test -i .
+
+script:
+  - go test . && GOOS=linux GOARCH=amd64 go build -ldflags "-X main.buildSHA=${TRAVIS_COMMIT}" . && ./travis_docker_push.sh

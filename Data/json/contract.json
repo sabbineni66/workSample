@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": [
+    "data"
+  ],
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "attributes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object",
+          "required": [
+            "vendor",
+            "starts-on",
+            "ends-on",
+            "created-at",
+            "updated-at"
+          ],
+          "properties": {
+            "vendor": {
+              "type": "string"
+            },
+            "starts-on": {
+              "type": "string"
+            },
+            "ends-on": {
+              "type": "string"
+            },
+            "created-at": {
+              "type": "string"
+            },
+            "updated-at": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

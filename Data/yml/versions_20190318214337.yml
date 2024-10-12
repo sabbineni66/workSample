@@ -1,0 +1,77 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+current_v2:
+  body: this is version two
+  user: aaron
+  code_comment: current
+  version: 2
+  exported: false
+  
+current_v1:
+  body: this is version 1
+  user: aaron
+  code_comment: current
+  version: 1
+  exported: true
+  
+skip_v1:
+  body: tada
+  user: aaron
+  code_comment: skip
+  version: 1
+  exported: true
+  
+skip_v2:
+  body: tooodoo
+  user: aaron
+  code_comment: skip
+  version: 2
+  skip: true
+  exported: false
+  
+not_current_v1:
+  body: this is not current v1
+  user: quentin
+  code_comment: not_current
+  exported: true
+  version: 1
+  
+nested_v1:
+  body: this is a old comment of a nested class
+  user: aaron
+  code_comment: nested_class
+  exported: true
+  version: 1
+  
+colon_v1:
+  body: this class has an old colon
+  user: aaron
+  code_comment: colon_class
+  exported: true
+  version: 1
+  
+file_v1:
+  body: This is a file comment
+  user: aaron
+  code_comment: file_comment
+  exported: true
+  version: 1
+  
+begin_v1:
+  body: This is the first
+  user: aaron
+  uses_begin: true
+  code_comment: begin_comment
+  exported: true
+  version: 1
+  
+begin_tabbed_v1:
+  body: |-
+    This is the first
+      version
+    yup!
+  user: aaron
+  uses_begin: true
+  code_comment: begin_tabbed_comment
+  exported: true
+  version: 1

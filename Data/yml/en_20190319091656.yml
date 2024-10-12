@@ -1,0 +1,59 @@
+en:
+  application:
+    name: 'Play by Play'
+
+  date:
+    today: 'Today'
+    yesterday: 'Yesterday'
+    formats:
+      short: '%-d %B'
+
+  shared:
+    navigation:
+      log_out: 'Log out'
+
+  reviews:
+    index:
+      new: 'Write a review'
+    new:
+      what: 'What did you see?'
+      when: 'When did you see it?'
+      text: 'What did you think?'
+      production_name: 'Name of production?'
+      looking_for: 'Are you looking for?'
+      editor_instructions: |
+        Type or paste your review below. It can be as long or as short as you like!
+        You can use <b>`**bold**`</b>, <i>`*italics*`</i>, or other
+        [Markdown formatting](https://www.markdownguide.org/cheat-sheet/)
+        to make your text look pretty.
+      editor_placeholder: 'Your review here?'
+      next: 'Next'
+      back: 'Back'
+    create:
+      thanks: 'Thanks for your review.'
+      next: |
+        We've saved your review in your drafts folder so you can edit it.
+        When you're ready, submit your review for feedback and publication.
+
+        If you're ready now, click the button below to submit your review
+        immediately.
+      submit: 'Submit now'
+
+  sessions:
+    login_form:
+      title: 'Hello.'
+      intro: |
+        For our readers to trust your reviews, we?ve made a decision
+        not to allow posting anonymously or under a pseudonym.
+
+        That?s why we ask you to log in using one of these public accounts you probably already have:
+      promise: |
+        We will never use your details to post to your social media.
+        If you?re unsure, we invite you to ask a technically-minded friend to
+        [take a look at our source code](http://github.com/fauxparse/playbyplay.nz)
+        to verify that we really can?t.
+
+      providers:
+        facebook: 'Facebook'
+        twitter: 'Twitter'
+        google: 'Google'

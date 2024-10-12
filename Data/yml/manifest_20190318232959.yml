@@ -1,0 +1,39 @@
+---
+applications:
+  - name: cover-server
+    path: ./cover-server/target/cover-server.jar
+    memory: 1024M
+    services:
+      - registry
+      - config
+      - rabbit
+      - azuresql-demo
+    env:
+      spring_datasource_driver-class-name: 'com.microsoft.sqlserver.jdbc.SQLServerDriver'
+      spring_datasource_url: '${cloud.services.sqlserver.connection.uri}'
+      spring_jpa_properties_hibernate_dialect: 'org.hibernate.dialect.SQLServer2012Dialect'
+
+  - name: cover-client
+    path: ./cover-client/target/cover-client.jar
+    memory: 1024M
+    services:
+      - registry
+      - config
+#      - breaker
+      - rabbit
+
+  - name: frontend
+    path: ./frontend/target/frontend.jar
+    memory: 1024M
+    services:
+      - registry
+      - config
+#      - breaker
+      - rabbit
+
+  - name: cover-zipkin
+    memory: 1024M
+    path: ./zipkin-server/target/zipkin-server.jar
+    services:
+      - rabbit
+      - registry

@@ -1,0 +1,22 @@
+{
+  "source-path":
+    ".",
+  "output":
+    "flex_pilot.swc",
+  "include-classes":
+    [
+      "org.flex_pilot.FlexPilot",
+      "org.flex_pilot.FPController",
+      "org.flex_pilot.FPLocator",
+      "org.flex_pilot.FPLogger",
+      "org.flex_pilot.FPExplorer",
+      "org.flex_pilot.FPRecorder",
+      "org.flex_pilot.FPAssert",
+      "org.flex_pilot.events.Events",
+      "org.flex_pilot.events.FPFocusEvent",
+      "org.flex_pilot.events.FPKeyboardEvent",
+      "org.flex_pilot.events.FPListEvent",
+      "org.flex_pilot.events.FPMouseEvent",
+      "org.flex_pilot.events.FPTextEvent"
+    ]
+}

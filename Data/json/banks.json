@@ -1,0 +1,2789 @@
+[
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "1/?????????;"
+        ],
+        "to": "?????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "13370 - ?????????? ???? ?????"
+        ],
+        "to": "?????????? ???? ?????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "1310 - ???????? ??????,"
+        ],
+        "to": "???????? ??????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "-",
+          "*",
+          "**",
+          "----------"
+        ],
+        "to": ""
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ?? ??????????",
+          "??? ?? ??????????",
+          "??? ?? ??????????"
+        ],
+        "to": "??????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??????????",
+          "??????????",
+          "??????????"
+        ],
+        "to": "??????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "???",
+          "??? "
+        ],
+        "to": ""
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? \"????????\" ",
+          "?? ????????"
+        ],
+        "to": "????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "???.",
+          "???"
+        ],
+        "to": "???."
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "+1843",
+          "1843"
+        ],
+        "to": "+1843"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????????",
+          "????????"
+        ],
+        "to": "r???????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??????????",
+          "??????????"
+        ],
+        "to": "?????? ????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "+5322",
+          "5322"
+        ],
+        "to": "+5322"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????????? ???? ?????",
+          "?????????? ???? ?????"
+        ],
+        "to": "?????????? ???? ?????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????????? ????????",
+          "?????????? ????????"
+        ],
+        "to": "?????????? ????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????? ????????",
+          "????? ????????"
+        ],
+        "to": "????? ????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????? ????",
+          "?????? ????"
+        ],
+        "to": "?????? ????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ????",
+          "??? ????"
+        ],
+        "to": "??? ????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????????? ????",
+          "????????? ????"
+        ],
+        "to": "????????? ????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "(414350)",
+          "414350"
+        ],
+        "to": "(414350)"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????? ????",
+          "?????? ????"
+        ],
+        "to": "??????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Unicredit",
+          "UniCredit"
+        ],
+        "to": "Unicredit"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "55.89%",
+          "55,89%"
+        ],
+        "to": "55.89%"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??????? ??????? ?????",
+          "??????? ??????? ????? ?????"
+        ],
+        "to": "??????? ??????? ?????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????????  5 ?????? ???",
+          "???????? 5 ?????? ???"
+        ],
+        "to": "????????  5 ?????? ???"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ?? \"??????????\n??? ?? \"??????????",
+          "??? ?? \"??????????\n??? ?? \"??????????",
+          "??? ?? \"??????????\n??? ?? \"??????????",
+          "??? ?? \"??????????\n??? ?? ??????????\n??? ?? ??????????\n??? ?? \"??????????"
+        ],
+        "to": "??????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"????? ???????? ????\n??? \"????? ???????? ????",
+          "??? \"????? ???????? ????\n??? \"????? ???????? ????",
+          "??? \"????? ???????? ????\n??? \"????? ???????? ????"
+        ],
+        "to": "????? ???????? ????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"???? \"???????? ????\n??? \"???? \"???????? ????",
+          "??? \"???? ???????? ????\n??? \"???? ???????? ????",
+          "??? ???? \"???????? ????\n??? ???? ???????? ????\n??? ???? \"???????? ????"
+        ],
+        "to": "???????? ????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"??????????\n??? \"??????????",
+          "??? \"??????????\n??? \"??????????"
+        ],
+        "to": "??????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"?????????? ??????? ???????? ????????\n??? \"?????????? ???????-???????? ????????",
+          "??? \"?????????? ???????-???????? ????????\n??? \"?????????? ??????? ???????? ????????"
+        ],
+        "to": "?????????? ???????-???????? ????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"?? \"????????\n??? \"?? \"????????",
+          "??? \"?? \"????????\n??? \"??\" ????????"
+        ],
+        "to": "????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"??????????\n??? \"??????????",
+          "??? \"??????????\n??? \"??????????"
+        ],
+        "to": "??????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? \"?????? ????\n?? \"?????? ????",
+          "?? \"?????? ????\n?? \"?????? ????"
+        ],
+        "to": "?????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"?????????? ???? ?????\n??? \"?????????? ???? ?????"
+        ],
+        "to": "?????????? ???? ?????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "???????? ????"
+        ],
+        "to": "????? ???????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????"
+        ],
+        "to": "?????????? ???? ?????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? \"???? ????????\n?? \"???? ????????"
+        ],
+        "to": "???? ????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? \"?? ????\"; "
+        ],
+        "to": "?? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? \"??????\n??? ?? \"????????"
+        ],
+        "to": "?? ????\n????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? \"????????\n?? \"????????"
+        ],
+        "to": "????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? \"??????????\n?? \"??????????"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "???? \"??????? ? ??????\n???? \"??????? ? ??????"
+        ],
+        "to": "??????? ? ??????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "???? ?????????? ????????"
+        ],
+        "to": "?????????? ????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??????"
+        ],
+        "to": "?????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????????? ????????? ???????"
+        ],
+        "to": "????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ???"
+        ],
+        "to": "???????? ???"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??????? ???"
+        ],
+        "to": "???????? ???"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????. ???"
+        ],
+        "to": "???????? ???"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????."
+        ],
+        "to": "????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????????"
+        ],
+        "to": "???????? ???"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? \"??????????\n?? \"??????????"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? ??????????"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????? ???????? ????"
+        ],
+        "to": "?????? ???????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????? ???????? ????"
+        ],
+        "to": "?????? ???????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????? ???????? ????"
+        ],
+        "to": "????? ???????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??????????"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ????"
+        ],
+        "to": "??? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? Bank"
+        ],
+        "to": "??? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"?????????? ???? ?????\n??? \"?????????? ???? ?????"
+        ],
+        "to": "?????????? ???? ?????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ?? ??????????"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"????? ????\n??? \"????? ????"
+        ],
+        "to": "????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"?????-????\n??? \"?????-????"
+        ],
+        "to": "?????-????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"???? ?????????? ?? ??????????\";"
+        ],
+        "to": "???? ?????????? ?? ??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"?????? ????\n??? \"?????? ????"
+        ],
+        "to": "??? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"??? ????\n??? \"??? ????"
+        ],
+        "to": "??? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"????????? ??????? ???? ???????\n??? \"????????? ??????? ???? ???????"
+        ],
+        "to": "????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"????????? ???? ?????\n??? \"?????????? ???? ?????"
+        ],
+        "to": "????????? ???? ?????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"????????? ???? ?????\n??? \"????????? ???? ?????"
+        ],
+        "to": "????????? ???? ?????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"??????????\n??? \"??????????"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? \"UniCredit Bank\n??? \"UniCreditBank"
+        ],
+        "to": "UniCredit Bank"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ???? \"???????? ????\" ?. ????"
+        ],
+        "to": "???????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ???? \"???????? ????\", ?.????"
+        ],
+        "to": "???????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ???? ???????? ????"
+        ],
+        "to": "???????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ????? ???????"
+        ],
+        "to": "????? ???????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ????????? ??????? ???? ???????"
+        ],
+        "to": "????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????????? ????????"
+        ],
+        "to": "???? ?????????? ????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "???????? ????"
+        ],
+        "to": "???? ???????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ?? \"??????????\n??????????\n??? ?? \"??????????",
+          "??? ??\"??????????\n??? ??\"??????????",
+          "????? \"?????? ????\n????? \"??????????"
+        ],
+        "to": "??????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????????? ???? ?????",
+          "????????? ???? ?????",
+          "??????????????????"
+        ],
+        "to": "????????? ???? ?????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ??????????",
+          "??? ?????? ????"
+        ],
+        "to": "??????????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????? ????",
+          "?????-????"
+        ],
+        "to": "?????-????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????????? ???? ?????",
+          "?????????????? ?????"
+        ],
+        "to": "?????????? ???? ?????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????????? ???? ?????",
+          "????????? ???? ?????"
+        ],
+        "to": "?????????? ???? ?????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??????????? ???????",
+          "??????????? ???????"
+        ],
+        "to": "??????????? ???????"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?????????? ???? ?????",
+          "????????? ???? ?????"
+        ],
+        "to": "?????????? ???? ?????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "2/??????????;"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ?? ?????? ????"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ?? ????????"
+        ],
+        "to": "???? ????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ????? ???????? ????"
+        ],
+        "to": "????? ???????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ??????? ????"
+        ],
+        "to": "???????-????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ??????????"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ??????????"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????? ????????"
+        ],
+        "to": "????? ????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "???? \"?? ????????\n???? \"?? ????????"
+        ],
+        "to": "?? ????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "???? ?? ????????"
+        ],
+        "to": "?? ????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? ?? \"??????????\n?? ?? \"??????????"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "???????? ??????"
+        ],
+        "to": "???? ???????? ??????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? ??? ???????"
+        ],
+        "to": "?? ??? ???????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "?? PZU ???????"
+        ],
+        "to": "?? ??? ???????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??? ???????"
+        ],
+        "to": "?? ??? ???????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????"
+        ],
+        "to": "?????????? ???????-???????? ????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????????"
+        ],
+        "to": "???? ????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "UniCredit Bank"
+        ],
+        "to": "UniCredit"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "UniCredit"
+        ],
+        "to": "Unicredit"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "VAB"
+        ],
+        "to": "??? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "??\"??????????\n??\"??????????"
+        ],
+        "to": "??????????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????? ???????? ????"
+        ],
+        "to": "????? ???????? ????"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "????? ???????? ????"
+        ],
+        "to": "????? ???????? ????"
+      }
+    ]
+  }
+]

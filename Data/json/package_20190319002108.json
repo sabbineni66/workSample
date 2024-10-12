@@ -1,0 +1,31 @@
+{
+  "name": "mariusz.cc",
+  "version": "2.0.0",
+  "description": "Personal website",
+  "main": "build.sh",
+  "repository": "https://github.com/mariusz/mariusz.cc-v2",
+  "author": "Mariusz Ciesla <hello@mariusz.cc>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch --progress --color",
+    "build": "webpack --bail -p"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "postcss": "^6.0.22",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-flexbugs-fixes": "^3.3.1",
+    "postcss-hexrgba": "^1.0.1",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.5",
+    "postcss-nested": "^3.0.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  }
+}

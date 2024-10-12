@@ -1,0 +1,107 @@
+{
+  "java": {
+    "install_flavor": "oracle",
+    "jdk_version" : "7",
+     "oracle": {
+       "accept_oracle_download_terms": true
+     }
+  },
+  "maven" : { 
+    "3": {
+      "version" : "3.1.1"
+    },
+    "version": "3"
+  },
+  "package_installer" : {
+    "packages" : {
+      "scrot": null,
+      "git" : null,
+      "openvpn" : null,
+      "zsh" : null,
+      "tree" : null,
+      "build-essential" : null,
+      "bison" : null, 
+      "openssl" : null, 
+      "libreadline6" : null, 
+      "libreadline6-dev" : null, 
+      "zlib1g" : null, 
+      "zlib1g-dev" : null, 
+      "libssl-dev" : null, 
+      "libyaml-dev" : null, 
+      "libsqlite3-0" : null, 
+      "libsqlite3-dev" : null, 
+      "sqlite3" : null, 
+      "libxml2-dev" : null, 
+      "libxslt-dev" : null, 
+      "autoconf" : null, 
+      "libc6-dev" : null, 
+      "ncurses-dev" : null
+    }
+  },
+  "vim_setup" : {
+    "build_from_source" : true,
+    "build_parameters" : "--prefix=/usr --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-python3interp --enable-luainterp --enable-perlinterp --enable-cscope",
+    "use_vundle" : true
+  },
+  "intellij" : {
+    "install_dir": "/home/baldur/apps/intellij",
+    "version": "13.1.2"
+  },
+  "authorization": {
+    "sudo": {
+       "users": ["baldur", "postgres"],
+       "passwordless": "true"
+    }
+  },
+  "android-sdk" : {
+    "setup_root" : "/home/baldur/sdks",
+    "owner" : "baldur",
+    "group" : "baldur",
+    "version" : "22.6.2",
+    "components" : [
+      "platform-tools",
+      "build-tools-19.0.3", 
+      "android-19",
+      "sysimg-19",
+      "extra-android-support", 
+      "extra-google-google_play_services", 
+      "extra-google-m2repository", 
+      "extra-android-m2repository"
+    ]
+  },
+  "rbenv" : {
+    "user_installs" : [
+/*
+      { "user" : "baldur",
+        "rubies" : ["ruby-2.1.2", "jruby-1.7.12"],
+        //"global" : "ruby-2.1.2",
+        "gems" : {
+          "ruby-2.1.2" : [
+            { "name"    : "bundler" },
+            { "name"    : "rake" }
+          ],
+          "jruby-1.7.12" : [
+            { "name"    : "bundler" },
+            { "name"    : "rake" }
+          ]
+        }
+     }
+*/
+    ]
+  },
+
+  "run_list" : [
+    "recipe[java]",
+    "recipe[package_installer]",
+    //"recipe[vim-setup]",
+    "recipe[intellij]",
+    "recipe[general]",
+    "recipe[android-sdk]",
+    "recipe[maven]",
+    "recipe[sudo]",
+    "recipe[rbenv::user]"
+  ]
+}
+
+
+

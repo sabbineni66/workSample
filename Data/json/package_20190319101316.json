@@ -1,0 +1,35 @@
+{ "name": "whisper-to-me",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "http://zombie.labnotes.org/",
+  "author": "Assaf Arkin <assaf@labnotes.org> (http://labnotes.org/)",
+  "main": "server.coffee",
+  "scripts": {
+    "start": "supervisor server.coffee"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "dependencies": {
+    "coffee-script":    "~1.2.0",
+    "d3":               "~2.7.0",
+    "eco":              "~1.1.0",
+    "glob":             "~2.1.0",
+    "express":          "~2.5.2",
+    "pegjs":            "~0.6.2",
+    "requirejs":        "~1.0.2",
+    "supervisor":       "~0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/assaf/zombie"
+  },
+  "bugs": {
+    "url": "http://github.com/assaf/zombie/issues"
+  },
+  "licenses": [
+    { "type": "MIT",
+      "url": "http://github.com/assaf/zombie/blob/master/MIT-LICENSE"
+    }
+  ]
+}

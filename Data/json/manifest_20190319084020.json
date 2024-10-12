@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "RollingSpider",
+  "short_name": "RollingSpider",
+  "description": "",
+  "version": "0.0.1",
+  "minimum_chrome_version": "38",
+
+  "icons": {
+    "16": "assets/icon_16.png",
+    "128": "assets/icon_128.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+
+  "bluetooth": {
+    "uuids": [ 
+      "9a66fa00-0800-9191-11e4-012d1540cb8e",
+      "9a66fb00-0800-9191-11e4-012d1540cb8e",
+      "9a66fc00-0800-9191-11e4-012d1540cb8e",
+      "9a66fd21-0800-9191-11e4-012d1540cb8e",
+      "9a66fd51-0800-9191-11e4-012d1540cb8e",
+      "9a66fe00-0800-9191-11e4-012d1540cb8e",
+      "00001800-0000-1000-8000-00805f9b34fb", 
+      "00001801-0000-1000-8000-00805f9b34fb"],
+    "socket": true,
+    "low_energy": true
+  }
+}

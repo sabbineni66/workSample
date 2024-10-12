@@ -1,0 +1,38 @@
+{
+    "name": "phpwax/wildfire.categories",
+    "authors": [
+        {
+            "name": "Charles Marshall",
+            "email": "charles@oneblackbear.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    },
+    "license": "MIT",
+    "autoload": {
+      "classmap": [
+        "lib/", "resources/"
+      ],
+      "files": ["ini.php"]
+    }
+
+}
+ymfony/http-foundation": "~2.3"
+    },
+
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+
+
+    "autoload": {
+      "psr-0": { "": "src" }
+    }
+
+
+}

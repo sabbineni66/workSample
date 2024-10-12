@@ -1,0 +1,67 @@
+---
+- hosts: erich
+  user: root
+  gather_facts: no
+  name: hardware configuration
+  tasks:
+  - name: prevent usb audio error messages
+    copy: src=files/snd_usb_audio.conf dest=/etc/modprobe.d/snd_usb_audio.conf
+
+  - name: disable wifi power management
+    copy: src=files/8192cu.conf dest=/etc/modprobe.d/8192cu.conf
+
+  # I don't know how to do this right now.
+  #- name: disable USB2
+  #  TODO: append dwc_otg.speed=1 to /boot/cmdline.txt
+
+- hosts: erich
+  user: root
+  gather_facts: no
+  name: setup SSHFS
+  tasks:
+  - name: install sshfs
+    pacman: name=sshfs state=installed
+
+  - name: make bulk directory
+    file: path=/bulk/ state=directory
+
+  - name: add line to fstab
+    lineinfile: dest=/etc/fstab regexp='/bulk' line='sshfs#erich@mi-go:/bulk /bulk fuse defaults,_netdev 0 0'
+
+  - name: generate us an SSH key
+    user: name=root generate_ssh_key=yes ssh_key_bits=2048
+    register: generated_ssh_key
+
+  - name: get the manual stuff done
+    pause: prompt="Now copy root@erich's id_rsa.pub into mi-go:~erich/.ssh/authorized_keys, and 'ssh erich@mi-go' from this machine to record mi-go in the known_hosts"
+    when: generated_ssh_key.changed
+
+  - name: make sure it's mounted
+    shell: mount | grep /bulk || mount /bulk
+
+- hosts: erich
+  user: root
+  gather_facts: no
+  tasks:
+  - name: install MPD
+    pacman: name=mpd state=installed
+
+  - name: install extras
+    pacman: name=alsa-utils state=installed
+  - pacman: name=rxvt-unicode-terminfo state=installed
+  - pacman: name=vim state=installed
+
+  - name: make MPD directories
+    file: path=/root/.mpd/playlists/ state=directory
+
+  - name: install MPD configuration
+    copy: src=files/mpd.conf dest=/etc/mpd.conf
+
+  - name: autostart MPD
+    service: name=mpd state=restarted enabled=yes
+
+  - name: install MPC
+    pacman: name=mpc state=installed
+
+  - name: update the library
+    command: mpc update

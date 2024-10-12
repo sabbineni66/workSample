@@ -1,0 +1,15 @@
+{
+  "assetsByChunkName": {
+    "js/a-appmain": [
+      "js/a-appmain-e9f5d0.js",
+      "css/styles-js.css"
+    ],
+    "js/p/p-37f29777": "js/p/p-37f29777-a0e39f.js",
+    "js/p/p-f96cea19": "js/p/p-f96cea19-557518.js",
+    "js/c/c-6e11face": "js/c/c-6e11face-aa1ffd.js",
+    "js/b-commons": "js/b-commons-17e00a.js",
+    "js/c/c-8de5a817": "js/c/c-8de5a817-769bd7.js",
+    "js/p/p-cc9ea448": "js/p/p-cc9ea448-a0e39f.js",
+    "js/c/c-29ec1a5e": "js/c/c-29ec1a5e-a0e0d6.js"
+  }
+}

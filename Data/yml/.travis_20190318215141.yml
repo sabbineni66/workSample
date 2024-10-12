@@ -1,0 +1,15 @@
+before_script:
+  - cp config/application{.example,}.yml
+  - cp config/database{.example,}.yml
+  - bundle exec rake db:create db:schema:load
+branches:
+  only:
+    - master
+env:
+  - secure: | # CODECLIMATE_REPO_TOKEN
+      LsYhZM5XscUoWe4wvwIg7BqmGMbbkk1vWW7HpyMmqD5rT8scqzzptRKdZ4/g
+      tH4qgog7bpkwKrOdtqB2L31N1eQ8Ge2GwI7rvqZvAlOY0gxjMaAoCMiAZljO
+      UXeX2If5oHUXPgFHhsZveZHZ3bkOtJDMbl5Nn6L/GXcpaHlrQYA=
+language: ruby
+rvm:
+  - 2.1.1

@@ -1,0 +1,23 @@
+{
+  "name": "channeled",
+  "main": "channeled.js",
+  "version": "0.2.0",
+  "authors": [
+    "Kim Joar Bekkelund <kjbekkelund@gmail.com>"
+  ],
+  "description": "Easily add channels to sockets",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "sinonjs": "~1.7.3"
+  },
+  "dependencies": {
+    "eec.js": "~0.0.1"
+  }
+}

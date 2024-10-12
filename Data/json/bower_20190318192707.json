@@ -1,0 +1,7 @@
+{
+  "name": "NBA Player Tracking",
+  "dependencies": {
+    "d3": "3",
+    "d3-tip": "0"
+  }
+}

@@ -1,0 +1,73 @@
+as-jp:
+  locale_name: "Japanese"
+  active_scaffold:
+    add:                            '??'
+    add_existing:                   '?????'
+    add_existing_model:             '?????{{model}}'
+    are_you_sure:                   '???????????'
+    cancel:                         '?????'
+    click_to_edit:                  '??'
+    close:                          '????'
+    create:                         '??'
+    create_another:                 '???????'
+    create_another_model:           '??????? - {{model}}'
+    create_model:                   '?? {{model}}'
+    created_model:                  '?? {{model}}'
+    create_new:                     '????'
+    customize:                      '??????'
+    delete:                         '??'
+    deleted_model:                  '?? {{model}}'
+    delimiter:                      '????'
+    download:                       '??????'
+    edit:                           '??'
+    export:                         '??????'
+    filtered:                       '(???????)'
+    filtered__click_to_reset:       '(???????)'
+    found:                          '??'
+    hide:                           "Hide"
+    live_search:                    '?????'
+    loading?:                       '?????'
+    nested_for_model:               "{{nested_model}} for {{parent_model}}"
+    next:                           '??'
+    no_entries:                     '???????'
+    omit_header:                    '???????'
+    options:                        '?????'
+    pdf:                            'PDF'
+    previous:                       '??'
+    print:                         'Print'
+    refresh:                        "Refresh"
+    remove:                         '??'
+    remove_file:                    '??/??'
+    replace_with_new:               '?????'
+    reset:                          '????'
+    revisions_for_model:            "Revisions for {{model}}"
+    saving?:                        '????'
+    search:                         '??'
+    search_terms:                   '?????'
+    _select_:                       '- ?? -'
+    show:                           '??'
+    show_model:                     '?? {{model}}'
+    _to_ :                          ' ? '
+    update:                         'U??'
+    update_model:                   '?? {{model}}'
+    udated_model:                   '?? {{model}}'
+    '=':                            '='
+    '>=':                           '>='
+    '<=':                           '<='
+    '>':                            '>'
+    '<':                            '<'
+    '!=':                           '!='
+    is_like:                        'Is like'
+    begins_with:                    'Begins with'
+    ends_with:                      'Ends with'
+    BETWEEN:                        'Is between'
+                                    
+    percentage_example:             "Ex. 10%"
+    phone_example:                  "Ex. 111-333-4444"
+    usa_money_example:              "Ex. 1,333"
+    usa_zip_example:                "Ex. 88888-3333"
+    ssn_example:                    "Ex. 555-22-3333"
+    
+    # error_messages
+    internal_error: "Request Failed (code 500, Internal Error)"
+    version_inconsistency: '????????? - ???????????????????????????????'

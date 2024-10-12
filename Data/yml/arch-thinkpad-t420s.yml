@@ -1,0 +1,15 @@
+- hosts: local
+  vars:
+    ansible_connection: local
+    ansible_python_interpreter: /usr/bin/python2
+    username: "{{ lookup('env','USER') }}"
+    home_directory: "/home/{{username}}"
+    thinkpad_acpi_conf: /etc/modprobe.d/thinkpad_acpi.conf
+  sudo: false
+  user: "{{username}}"
+  roles:
+    - arch-base-system
+    - arch-desktop
+    - arch-networkmanager
+    - arch-devbox
+    - arch-thinkpad-t420s

@@ -1,0 +1,3 @@
+{
+  "less/PROJECT.less": "less/{%= name %}.less"
+}

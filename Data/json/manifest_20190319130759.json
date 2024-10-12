@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "manifest_version": 2,
+
+  "name": "Is on Netlify?",
+  "description": "Check whether a site is on Netlify or not",
+
+  "icons": {
+    "128": "icon-128.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icon-32.png"
+  },
+
+  "permissions": [
+    "webRequest",
+    "<all_urls>"
+  ],
+
+  "background": {
+    "scripts": ["main.js"],
+    "persistent": true
+  }
+}

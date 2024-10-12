@@ -1,0 +1,19 @@
+{
+  "Name"      : "Telepathic Coordination Old",
+  "Kind"      : "Ego",
+  "Ap"        : 3,
+  "Strength"  : 7,
+  "Damage"    : 0,
+  "Range"     : 10,
+  "Diameter"  : 2,
+  "Animation" : "cast",
+  "Texture"   : {
+    "Path": "actions/icons/coordination.png"
+  },
+  "Sounds"   : {
+    "telepathic": "Haunts/SFX/Intruders/Teen/Telepathic Coordination"
+  },
+  "Conditions": [
+    "Telepathic Coordination"
+  ]
+}

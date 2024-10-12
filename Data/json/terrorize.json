@@ -1,0 +1,21 @@
+{
+  "Name"      : "Terrorize",
+  "Kind"      : "AP",
+  "Ap"        : 3,
+  "Strength"  : 10,
+  "Damage"    : 0,
+  "Range"     : 4,
+  "Diameter"  : 4,
+  "Animation" : "pulse",
+  "Target_enemies": true,
+  "Sounds"   : {
+    "blast": "Haunts/SFX/Denizens/Bosses/Vampire/Terror"
+  },
+  "Texture"   : {
+    "Path": "actions/icons/terror.png"
+  },
+  "Conditions": [
+    "Attack -2",
+    "AP -2"
+  ]
+}

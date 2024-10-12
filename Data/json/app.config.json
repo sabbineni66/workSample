@@ -1,0 +1,11 @@
+{
+  "apps" : [{
+    "name"        : "app",
+    "script"      : "./src/app.js",
+    "instances"  : 4,
+    "watch"       : true,
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }]
+}

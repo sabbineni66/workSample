@@ -1,0 +1,73 @@
+{
+  "provisioners": [
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/auto_home.sh",
+        "scripts/dns.sh",
+        "scripts/grub_timeout.sh",
+        "scripts/hostname.sh",
+        "scripts/sshd_config.sh",
+        "scripts/vagrant.sh",
+        "scripts/zero_disk.sh"
+      ]
+    }
+  ],
+
+  "builders": [
+    {
+      "type": "vmware",
+      "guest_os_type": "solaris10-64",
+      "iso_url": "http://omnios.omniti.com/media/OmniOS_Text_r151006l.iso",
+      "iso_checksum": "a5290c784810ed1204536de2c92b7949",
+      "iso_checksum_type": "md5",
+      "ssh_username": "root",
+      "ssh_password": "vagrant",
+      "boot_wait": "30s",
+      "boot_command": [
+        "<enter><wait10><wait5>",
+        "<enter><wait10>",
+        "<f2>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10>",
+        "<f2><wait>",
+        "<f2><wait>",
+        "<f2><wait>",
+        "<f2><wait>",
+        "<f2><wait>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<f8><wait10><wait10>",
+        "<enter><wait10><wait10><wait10><wait10>",
+        "root<enter><wait><enter><wait5>",
+        "ipadm create-addr -T dhcp e1000g0/dhcp<enter><wait10>",
+        "passwd root<enter><wait>",
+        "vagrant<enter><wait>",
+        "vagrant<enter><wait>",
+        "sed -i 's/PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config<enter><wait>",
+        "svcadm enable ssh<enter><wait>",
+        "svcadm refresh ssh<enter><wait>",
+        "useradd -s /usr/bin/bash -m -d /export/home/vagrant vagrant<enter><wait5>",
+        "passwd vagrant<enter><wait5>",
+        "vagrant<enter><wait5>",
+        "vagrant<enter>"
+      ],
+      "floppy_files": [
+        "files/no_pong.txt"
+      ],
+      "tools_upload_flavor": "solaris",
+      "vmx_data": {
+        "memsize": "2048",
+        "ethernet0.virtualDev": "e1000"
+      }
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "omnios_{{.Provider}}.box",
+      "vagrantfile_template": "files/Vagrantfile.template"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "ava": {
+    "babel": false,
+    "extensions": [
+      "js"
+    ],
+    "failFast": false,
+    "files": [
+      "src/**/*.test.js"
+    ],
+    "require": [
+      "esm"
+    ],
+    "sources": [
+      "src/**/*.js"
+    ],
+    "verbose": true
+  },
+  "devDependencies": {
+    "ava": "1.3.1",
+    "esm": "3.2.18",
+    "nyc": "13.3.0",
+    "sinon": "7.2.7"
+  },
+  "nyc": {
+    "all": true,
+    "exclude": [
+      "src/**/*.test.js",
+      "src/vendor/*.js"
+    ],
+    "extension": [
+      ".js"
+    ],
+    "include": [
+      "src/**/*.js"
+    ],
+    "temp-dir": "/tmp/.nyc_output"
+  },
+  "scripts": {
+    "test": "f () { nyc ava || exit 0; }; f",
+    "test:file": "f () { nyc --include ${1}.js ava ${1}.test.js || exit 0; }; f"
+  }
+}

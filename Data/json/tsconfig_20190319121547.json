@@ -1,0 +1,19 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "allowJs": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "pretty": true,
+    "outDir": "build"
+  },
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
+}

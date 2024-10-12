@@ -1,0 +1,38 @@
+{
+  "name": "hapi-nsq",
+  "version": "0.1.0",
+  "description": "NSQ plugin for Hapi.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node node_modules/lab/bin/lab -a code -t 100 -L -v",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shinzui/hapi-nsq.git"
+  },
+  "keywords": [
+    "nsq",
+    "nsqjs",
+    "hapi",
+    "hapi.js"
+  ],
+  "author": "Nadeem Bitar <nadeem@productatelier.com> (https://productatelier.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shinzui/hapi-nsq/issues"
+  },
+  "homepage": "https://github.com/shinzui/hapi-nsq#readme",
+  "dependencies": {
+    "hapi": ">=10.0.0",
+    "hoek": "^3.0.4",
+    "joi": "^7.1.0",
+    "nsqjs": "^0.7.7"
+  },
+  "devDependencies": {
+    "babel-eslint": "^5.0.0-beta6",
+    "code": "^2.0.1",
+    "lab": "^8.0.1"
+  }
+}

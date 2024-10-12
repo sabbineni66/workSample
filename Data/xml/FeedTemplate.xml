@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>{{ title }}</title>
+    <link>http://evanlong.org/</link>
+    <description>{{ description }}</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <language>en</language>
+    <lastBuildDate>{{ dateiso }}</lastBuildDate>
+    <image>
+      <url>{{ rootURL }}art/{{ showImage }}</url>
+    </image>
+    {% for l in links %}
+      <item>
+        <title>{{ l.title }}</title>
+        <guid isPermaLink="false">{{ rootURL }}{{ l.link }}{{ l.guid }}</guid>
+        <enclosure url="{{ rootURL }}{{ l.link }}" length="{{ l.size }}" type="audio/mpeg"/>
+        <pubDate>{{ l.pubDate }}</pubDate>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
+
+

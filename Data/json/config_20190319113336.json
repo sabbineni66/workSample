@@ -1,0 +1,17 @@
+{
+	"host": "irc.quakenet.org",
+	"port": 6667,
+	"nick": "GizBot",
+	"username": "GizBot",
+	"realname": "Powered by NodeJS",
+	"channels": ["#testchannel"],
+	"command": "!",
+	"logLevel": "debug",
+	"showRaw": true,
+
+	"plugins": [
+		"8ball",
+		"insult",
+		"jokes"
+	]
+}

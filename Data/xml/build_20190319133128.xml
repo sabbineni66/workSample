@@ -1,0 +1,63 @@
+<project name="Java application deb packager" default="dist">
+
+    <property file="project.properties"/>
+
+    <path id="classpath">
+        <fileset dir="../../dist" includes="*.jar"/>
+    </path>
+
+    <taskdef resource="ant_deb_task.properties" classpathref="classpath"/>
+    
+    <target name="create-desktop-entry" description="create desktop entry file">
+        <mkdir dir="build"/>
+        <desktopentry
+            toFile="build/autofsck.desktop"
+            name="Periodic Disk Checking"
+            comment="Configure the way periodic disk checking behaves on this system."
+            exec="autofsck --menu"
+            icon="/usr/share/pixmaps/autofsck.png"
+            categories="System;Settings"
+        />
+    </target>
+    
+    <target name="dist" depends="create-desktop-entry" description="build the deb file">
+        <mkdir dir="dist"/>
+        <deb
+            todir="dist"
+            package="${package.name}"
+            section="utils"
+            depends="${depends}"
+            predepends="${pre.depends}"
+            preinst="local/preinst"
+            postinst="local/postinst"
+            prerm="local/prerm"
+        >
+            <version upstream="${version}" debian="${version.debian}"/>
+            <maintainer name="Marius Scurtescu" email="ant.deb.task@gmail.com"/>
+            <description synopsis="Ensures that the automatic disk checks will no longer inconvenience you">
+AutoFsck is a script which automates periodic disk checking in such a way that it no longer bothers the user at boot every 30-ish times, and is streamlined in a friendly graphical user interface.  Instead, when a check is required, the user is prompted at shutdown and given the option to run the checks before powering off the machine (this is unattended).  In this way AutoFsck ensures that the automatic disk check will no longer inconvenience you by making your boot times very long. 
+
+https://wiki.ubuntu.com/AutoFsck 
+            </description>
+            <tarfileset file="local/autofsck" prefix="usr/bin" filemode="755"/>
+            <tarfileset dir="local" prefix="usr/share/doc/${package.name}">
+                <include name="README"/>
+                <include name="LICENSE"/>
+                <include name="CHANGELOG"/>
+                <include name="GUI-HELP"/>
+            </tarfileset>
+            <tarfileset file="local/autofsck.png" prefix="usr/share/pixmaps"/>
+            <tarfileset file="local/S85autofsck" filemode="755" fullpath="etc/init.d/autofsck"/>
+            <tarfileset file="build/autofsck.desktop" prefix="usr/share/applications"/>
+            <conffiles dir="local" prefix="etc" filemode="644">
+                <include name="autofsckrc"/>
+            </conffiles>
+        </deb>
+    </target>
+    
+    <target name="clean" description="remove all work folders">
+        <delete dir="build"/>
+        <delete dir="dist"/>
+    </target>
+
+</project>

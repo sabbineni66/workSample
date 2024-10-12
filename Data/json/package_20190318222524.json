@@ -1,0 +1,20 @@
+{
+  "name": "myobie",
+  "version": "0.0.1",
+  "description": "Testing the wrapping of choo effects and reducers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "budo index.js --live --open"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "barracks-promisify-plugin": "0.0.1",
+    "choo": "^4.0.1",
+    "choo-log": "^3.0.0"
+  },
+  "devDependencies": {
+    "budo": "^9.3.0"
+  }
+}

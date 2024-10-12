@@ -1,0 +1,25 @@
+# Site settings
+title: Anil Wadghule
+email: anil@anilwadghule.com
+description: >
+  Consultant - Elixir / Phoenix / Distributed Systems / Akka
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://anilwadghule.com" # the base hostname & protocol for your site
+twitter_username: anildigital
+github_username:  anildigital
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+collections:
+  blog:
+    output: true
+  talks:
+    output: true
+  randomposts:
+    output: true
+  musings:
+    output: true

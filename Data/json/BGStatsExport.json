@@ -1,0 +1,133 @@
+{
+  "challenges" : [
+
+  ],
+  "userInfo" : {
+    "meRefId" : 2
+  },
+  "games" : [
+    {
+      "id" : 1,
+      "uuid" : "CBC5F989-34CC-4AF4-8645-97FB6C3D40FA",
+      "noPoints" : false,
+      "highestWins" : true,
+      "cooperative" : false,
+      "urlThumb" : "https:\/\/cf.geekdo-images.com\/images\/pic394356_md.jpg",
+      "modificationDate" : "2017-12-31 16:41:03",
+      "usesTeams" : false,
+      "bggId" : 36218,
+      "bggName" : "Dominion",
+      "bggYear" : 2008,
+      "name" : "Dominion",
+      "designers" : "Donald X. Vaccarino"
+    }
+  ],
+  "plays" : [
+    {
+      "uuid" : "021F2108-ECA3-4BC2-84B3-0D5C02173DDE",
+      "ignored" : false,
+      "rating" : 0,
+      "scoringSetting" : 0,
+      "playerScores" : [
+        {
+          "winner" : false,
+          "seatOrder" : 0,
+          "score" : "11",
+          "startPlayer" : false,
+          "playerRefId" : 4,
+          "rank" : 0,
+          "newPlayer" : true
+        },
+        {
+          "winner" : false,
+          "seatOrder" : 0,
+          "score" : "25",
+          "startPlayer" : false,
+          "playerRefId" : 3,
+          "rank" : 0,
+          "newPlayer" : true
+        },
+        {
+          "winner" : true,
+          "seatOrder" : 0,
+          "score" : "34",
+          "startPlayer" : false,
+          "playerRefId" : 2,
+          "rank" : 0,
+          "newPlayer" : true
+        },
+        {
+          "winner" : false,
+          "seatOrder" : 0,
+          "score" : "26",
+          "startPlayer" : false,
+          "playerRefId" : 5,
+          "rank" : 0,
+          "newPlayer" : true
+        }
+      ],
+      "modificationDate" : "2017-12-31 16:42:41",
+      "bggLastSync" : "2017-12-31 16:42:11",
+      "playDate" : "2017-12-31 16:41:33",
+      "manualWinner" : false,
+      "locationRefId" : 1,
+      "rounds" : 0,
+      "usesTeams" : false,
+      "bggId" : 0,
+      "entryDate" : "2017-12-31 16:41:33",
+      "playImages" : "[]",
+      "durationMin" : 53,
+      "nemestatsId" : 0,
+      "gameRefId" : 1
+    }
+  ],
+  "locations" : [
+    {
+      "id" : 1,
+      "modificationDate" : "2017-12-31 16:40:41",
+      "name" : "Home",
+      "uuid" : "C73128E8-C78C-4A58-BFBF-A44B1D6FE63C"
+    }
+  ],
+  "players" : [
+    {
+      "id" : 1,
+      "isAnonymous" : true,
+      "modificationDate" : "2017-12-31 16:39:50",
+      "name" : "Anonymous player",
+      "uuid" : "48DA8F5A-7310-45A9-B979-BF61D539746A"
+    },
+    {
+      "id" : 2,
+      "isAnonymous" : false,
+      "modificationDate" : "2017-12-31 16:40:12",
+      "name" : "Player 1 (me)",
+      "bggUsername" : "Player1bgg",
+      "uuid" : "788EEFCB-32CF-4CE4-BD0F-52DEB2E07F1D"
+    },
+    {
+      "id" : 3,
+      "isAnonymous" : false,
+      "modificationDate" : "2017-12-31 16:40:20",
+      "name" : "Player 2",
+      "bggUsername" : "Player2bgg",
+      "uuid" : "8D13A78C-83A7-4587-AE3E-A90F44034809"
+    },
+    {
+      "id" : 4,
+      "isAnonymous" : false,
+      "modificationDate" : "2017-12-31 16:40:26",
+      "name" : "Player 3",
+      "bggUsername" : "",
+      "uuid" : "85DF9C7E-7D74-4A66-A370-696D4A00FDD6"
+    },
+    {
+      "id" : 5,
+      "isAnonymous" : false,
+      "modificationDate" : "2017-12-31 16:40:33",
+      "name" : "Player 4",
+      "bggUsername" : "",
+      "uuid" : "A1CAD090-4449-416F-B62B-520DD00BA87E"
+    }
+  ]
+}

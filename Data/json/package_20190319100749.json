@@ -1,0 +1,34 @@
+{
+  "name": "sauce",
+  "description": "All the Sauce",
+  "tags": [
+    "web",
+    "sauce"
+  ],
+  "version": "0.0.9",
+  "author": "Adam Christian <adam.christian@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/admc/saucejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/admc/saucejs/issues"
+  },
+  "engines": [
+    "node"
+  ],
+  "main": "./lib/main",
+  "directories": {
+    "lib": "./lib"
+  },
+  "bin": {
+    "sauce": "./lib/bin.js"
+  },
+  "dependencies": {
+    "optimist": "~0.3.4",
+    "colors": "~0.6.0-1",
+    "wd": "~0.1.0",
+    "repl": "~0.1.3",
+    "request": "~2.11.4"
+  }
+}

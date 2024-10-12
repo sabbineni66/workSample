@@ -1,0 +1,39 @@
+{
+  "name": "hubot-digweb",
+  "description": "A hubot script that interacts with digweb.",
+  "version": "0.1.3",
+  "author": "Simone Carletti <weppos@weppos.net>",
+  "license": "MIT",
+
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "dnsimple"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/weppos/hubot-digweb.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/weppos/hubot-digweb/issues"
+  },
+
+  "dependencies": {
+    "coffee-script": "~1.6"
+  },
+
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*"
+  },
+
+  "main": "index.coffee",
+
+  "scripts": {
+    "test": "script/test"
+  }
+}

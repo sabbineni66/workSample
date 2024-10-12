@@ -1,0 +1,53 @@
+version: '3.6'
+
+services:
+
+  users:
+    build:
+      context: ./services/users
+      dockerfile: Dockerfile-prod
+    volumes:
+      - './services/users:/usr/src/app'
+    expose:
+      - '5000'
+    environment:
+      - FLASK_ENV=production
+      - APP_SETTINGS=project.config.ProductionConfig
+      - DATABASE_URL=postgres://postgres:postgres@users-db:5432/users_dev
+      - DATABASE_TEST_URL=postgres://postgres:postgres@users-db:5432/users_test
+    depends_on:
+      - users-db
+
+  users-db:
+    build:
+      context: ./services/users/project/db
+      dockerfile: Dockerfile
+    ports:
+      - 5435:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  nginx:
+    build:
+      context: ./services/nginx
+      dockerfile: Dockerfile-prod
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - users
+      - client
+
+  client:
+    container_name: client
+    build:
+      context: ./services/client
+      dockerfile: Dockerfile-prod
+      args:
+        - NODE_ENV=production
+        - REACT_APP_USERS_SERVICE_URL=${REACT_APP_USERS_SERVICE_URL}
+    ports:
+      - '3007:80'
+    depends_on:
+      - users

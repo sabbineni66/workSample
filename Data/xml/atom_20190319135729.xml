@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: meteor | Dave Rapin]]></title>
+  <link href="http://rapind.github.com/blog/categories/meteor/atom.xml" rel="self"/>
+  <link href="http://rapind.github.com/"/>
+  <updated>2015-10-17T13:08:35-04:00</updated>
+  <id>http://rapind.github.com/</id>
+  <author>
+    <name><![CDATA[Dave Rapin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Meteor and React - Part 1]]></title>
+    <link href="http://rapind.github.com/blog/2015/10/15/meteor-with-reactjs/"/>
+    <updated>2015-10-15T00:00:00-04:00</updated>
+    <id>http://rapind.github.com/blog/2015/10/15/meteor-with-reactjs</id>
+    <content type="html"><![CDATA[<p>This is part one of a series of posts that go through creating a new web app with Meteor and React.</p>
+
+<h2>Prerequisites</h2>
+
+<ol>
+<li><a href="https://www.meteor.com/install">Meteor</a></li>
+<li><a href="https://nodejs.org/en/">Nodejs</a></li>
+<li>OSX, Linux, or Cygwin.</li>
+</ol>
+
+
+<h2>Why Metor?</h2>
+
+<p>We're always on the lookout for new methodologies in the web stack, and Meteor is one we've been keeping an eye on for a while.
+Here's what we like about it:</p>
+
+<ul>
+<li>Nodejs on the server performs significantly better than some other dynamic stacks like Ruby on Rails.</li>
+<li>Websockets consume significantly less bandwidth than REST since there is no need to send HTTP headers every time.</li>
+<li>No need to constantly customize APIs (also something GraphQL would solve).</li>
+<li>Responding to data changes is straightforward via pub / sub. With React this is even easier.</li>
+<li>Updating data is straightforward via Meteor methods.</li>
+</ul>
+
+
+<h2>Why React</h2>
+
+<p>We love React for it's simplicity and always use it for our web UIs.
+Declaritive UI programming is where it's at.</p>
+
+<p>Code next to Markup was a bad idea right?
+Not really.
+As it turns out, having your UI code in your views when they are small (components) makes a ton of sense.</p>
+
+<p>Don't take our word for it though.
+<a href="https://facebook.github.io/react/docs/getting-started.html">Give it a whirl for yourself</a>
+There's a decent chance you'll agree.</p>
+
+<h2>The Project Requirements</h2>
+
+<p>We're going to step through building a Hot or Not style of application tailored to sports plays.</p>
+
+<p>The three main components are:</p>
+
+<h4>Submit a Play</h4>
+
+<p>User should be able to submit a new play. The play will have a title, description, and Youtube URL.</p>
+
+<h4>Vote on Plays</h4>
+
+<p>User should be able to see two plays and vote for one of them.</p>
+
+<p>Once user has voted for a play, they will be replaced with two new plays that they can then vote on.</p>
+
+<p>There is no limit to the number of plays the user can vote on, however the user may not vote on the same play more than once.</p>
+
+<h4>Leaderboard</h4>
+
+<p>User should see a list of top ten plays with the most votes, ordered by number of votes descending.
+This list will update in real time as votes are added.</p>
+
+<h2>Getting Started</h2>
+
+<p>Create our project:</p>
+
+<pre><code>meteor create tehgosu
+</code></pre>
+
+<p>This creates a basic Meteor application that we can run right away:</p>
+
+<pre><code>cd tehgosu
+meteor
+</code></pre>
+
+<p>Then visit <a href="http://localhost:3000">http://localhost:3000</a></p>
+
+<h3>React and CoffeeScript</h3>
+
+<p>Before we can start working on any views, we need to install React since that's what we'll be using instead of Blaze.</p>
+
+<p>Adding libraries to Meteor is super simple:</p>
+
+<pre><code>meteor add react
+</code></pre>
+
+<p>We personally prefer CoffeeScript over JavaScript due to the readability of significant whitespace.
+There's a popular opinion at the moment that CoffeeScript is obsolete now that we have ES6 and Babel.
+I disagree because I think browsers will eventually support <a href="https://brendaneich.com/2015/06/from-asm-js-to-webassembly/">WebAssembly</a>.
+Once they do we'll see even more JavaScript alternatives.</p>
+
+<pre><code>meteor add coffeescript
+</code></pre>
+
+<p>Now we'll need to do some standard tweaks in order to have React and CoffeeScript play nice without excessive amounts of syntax.
+First we'll create a lib folder and add a component.coffee library to it.</p>
+
+<pre><code>mkdir lib
+touch lib/component.coffee
+</code></pre>
+
+<p>In component.coffee we're going to add a function that we'll be calling instead of React.createClass</p>
+
+<p>```coffeescript
+@Component =
+  create: (spec) -></p>
+
+<pre><code>React.createFactory React.createClass(spec)
+</code></pre>
+
+<p>```</p>
+
+<p>Notice the <strong>@</strong> symbol used to declare our Component object?
+CoffeeScript places our code in a closure so as not to pollute the global namespace.
+In Meteor we need to attach our object to the global namespace using <strong>this</strong> (@ = this.).
+This is a little counter intuitive compared to CommonJS style requires, and maybe some day we'll have a better alternative.</p>
+
+<p>For now <strong>@Component</strong> makes our object accessible throughout the application.</p>
+
+<p>Now we can create a React component in CoffeeScript like so:</p>
+
+<p>```coffeescript
+TestComponent = Component.create
+  render: -></p>
+
+<pre><code>div className: 'test-component',
+  'Test Component'
+</code></pre>
+
+<p>```</p>
+
+<p>The equivalent in JSX without our library would look like this:</p>
+
+<p>```javascript
+TestComponent = React.createClass({
+  render: function() {</p>
+
+<pre><code>return (
+  &lt;div class="test-component"&gt;
+    Test Component
+  &lt;/div&gt;
+);
+</code></pre>
+
+<p>  }
+});
+```</p>
+
+<h3>Project Structure</h3>
+
+<p>Now is as good a time as any to setup our basic structure for the application.
+Meteor has a convention where any code that's placed within a directory named <strong>client</strong> will only run on the client.
+And naturally code in a directory named <strong>server</strong> will only run on the server.</p>
+
+<p>We want the following directories under the root of the project:</p>
+
+<ul>
+<li>lib: Common library functions. These are loaded before the other directories.</li>
+<li>client: Code that should only be run on the client (browser).</li>
+<li>server: Code that should only be run on the server.</li>
+<li><p>public: Only served to the public. We'll put our robots.txt and images in here.</p>
+
+<p>  mkdir lib client server public</p></li>
+</ul>
+
+
+<p>Let's remove the initial files that meteor created. We don't need them.</p>
+
+<pre><code>rm tehgosu.*
+</code></pre>
+
+<h3>Time to Write Some Code</h3>
+
+<p>Create a new HTML file in the client directory.
+Since we're using React for our views, this will be the only HTML file we need.</p>
+
+<pre><code>vi client/index.html
+</code></pre>
+
+<p>In this HTML file we just need a div element which react will replace once it's loaded.</p>
+
+<p>```html
+<head>
+  <title>Teh Gosu</title>
+</head></p>
+
+<p><body>
+  <div id="app">Loading...</div>
+</body>
+```</p>
+
+<p>Now we need to attach our React views.
+Create a new CoffeeScript file in the client directory.</p>
+
+<pre><code>vi client/index.coffee
+</code></pre>
+
+<p>In this CoffeeScript file we load up our React views and attache them to the DOM.</p>
+
+<p>```coffeescript
+Meteor.startup ->
+  React.render(</p>
+
+<pre><code>App({}),
+document.getElementById 'app'
+</code></pre>
+
+<p>  )
+```</p>
+
+<p>We're referencing an object called <strong>App</strong> within the Render method, so we need to build that.
+Create a new CoffeeScript file in the client directory for it.</p>
+
+<pre><code>vi client/app.coffee
+</code></pre>
+
+<p>Our new app.coffee is going to hold our top level React component code.</p>
+
+<p>```coffeescript
+{ h1 } = React.DOM</p>
+
+<p>@App = Component.create
+  render: -></p>
+
+<pre><code>h1 {},
+  'Teh Gosu!'
+</code></pre>
+
+<p>```</p>
+
+<p>We're keeping it simple. All we're doing is rendering an h1 tag with the text <strong>Teh Gosu!</strong>.
+Notice the <strong>@</strong> symbol prefix to the App declaration.
+Again this is because of CoffeeScript's automatic closure and the fact that Meteor needs the object to be on <strong>this</strong> to be accessible outside the file.</p>
+
+<p>At this point we should have a working React + Meteor application. Run the server with:</p>
+
+<pre><code>meteor
+</code></pre>
+
+<p>Then visit <a href="http://localhost:3000">http://localhost:3000</a></p>
+
+<p>You should see <strong>Teh Gosu!</strong>.</p>
+
+<p>Your directory structure should be:</p>
+
+<pre><code>client
+  app.coffee
+  index.coffee
+  index.html
+lib
+  component.coffee
+server
+public
+</code></pre>
+
+<p>This concludes part one of our Meteor + React series.
+In part two we'll add some data and the match view.</p>
+]]></content>
+  </entry>
+  
+</feed>

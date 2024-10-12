@@ -1,0 +1,25 @@
+timezone: Europe/London
+encoding: UTF-8
+
+redcarpet:
+  extensions: [ 'autolinks', 'smart', 'no_intra_emphasis', 'superscript' ]
+
+permalink: /articles/:title/
+
+url: http://woss.name/nanowrimo
+name: National Novel Writing Month
+description: |
+  I've talked myself into writing 50,000 words over the course of November. I
+  don't know what I was thinking. This is it. Here's hoping that, if I do it in
+  public, it will provide the inspiration needed to keep going!
+exclude:
+  - bin
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+
+# GitHub-enforced defaults
+pygments: true
+safe: true
+lsi: false

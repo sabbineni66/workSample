@@ -1,0 +1,21 @@
+{
+  "name": "reduxdemo",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "author": "Felix Sun <sunfmin@gmail.com>",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/pluralize": "0.0.28",
+    "typescript": "^2.6.1",
+    "jest": "^21.2.1"
+  },
+  "dependencies": {
+    "redux": "^3.7.2"
+  }
+}

@@ -1,0 +1,4 @@
+backend:
+  name: github
+  repo: emanuel/kaldi-hugo-cms-template
+  branch: master # Branch to update

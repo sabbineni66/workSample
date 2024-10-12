@@ -1,0 +1,11 @@
+AllCops:
+  Exclude:
+    - bin/**/*
+    - vendor/**/*
+    - Guardfile
+    - test/**/*
+    - cookbooks/**/*
+LineLength:
+  Max: 120
+MethodLength:
+  Max: 11

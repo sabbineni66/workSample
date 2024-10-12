@@ -1,0 +1,42 @@
+{
+  "name": "wartremover",
+  "version": "3.0.0",
+  "description": "stream transform to turn bunyan json log entries into plaintext",
+  "keywords": [
+    "bunyan"
+  ],
+  "author": "Robey Pointer <robeypointer@gmail.com>",
+  "homepage": "https://github.com/robey/node-wartremover",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/robey/node-wartremover.git"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "clicolor": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/bunyan": "0.0.34",
+    "@types/mocha": "^2.2.33",
+    "@types/node": "^6.0.52",
+    "@types/should": "^8.1.30",
+    "bunyan": "^1.8.1",
+    "mocha": "^3.0.0",
+    "should": "^10.0.0",
+    "source-map-support": "^0.4.6"
+  },
+  "main": "./lib/wartremover.js",
+  "types": "./lib/wartremover.d.ts",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=6.3.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "distclean": "rm -rf node_modules npm_debug.log",
+    "prepublish": "npm run build",
+    "test": "npm run build && mocha -R spec --colors lib/test"
+  }
+}

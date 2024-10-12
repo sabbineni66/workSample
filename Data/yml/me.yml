@@ -1,0 +1,52 @@
+---
+shell: /bin/zsh
+brews:
+  - autojump
+  - awscli
+  - coreutils
+  - ctags
+  - git
+  - go
+  - httpie
+  - hub
+  - imagemagick
+  - jq
+  - mitmproxy
+  - node
+  - the_silver_searcher
+  - tig
+  - vim
+
+casks:
+  - iterm2
+  - licecap
+  - spectacle
+
+login_items:
+
+rubies:
+
+go_get:
+  - github.com/alecthomas/gometalinter
+  - github.com/kardianos/govendor
+
+defaults:
+  - com.apple.dock autohide -bool true
+  - com.apple.dock persistent-apps ()
+  - com.apple.dock orientation -string right
+  # Set bottom-right corner to activate screen saver
+  - com.apple.dock wvous-br-modifier -int 0
+  - com.apple.dock wvous-br-corner -int 5
+  # enable ctl-scroll to zoom
+  - com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+  # enable normal function keys
+  - NSGlobalDomain com.apple.keyboard.fnState -bool true
+  - NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+  # expand save panel by default
+  - NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+  # disable press-and-hold accented character entry
+  - NSGlobalDomain ApplePressAndHoldEnabled -bool false
+  # require password for screensaver after 5 seconds
+  - com.apple.screensaver askForPassword -bool true
+  - com.apple.screensaver askForPasswordDelay -float 5
+  - com.apple.Safari IncludeDevelopMenu -bool true

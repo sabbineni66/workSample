@@ -1,0 +1,28 @@
+{
+  "name": "eslint-plugin-smt",
+  "version": "0.0.0",
+  "description": "A test eslint plugin",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephen Tudor <STudor@anthropologie.com>",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintplugin"
+  ],
+  "peerDependencies": {
+    "eslint": ">=0.8.0"
+  },
+  "devDependencies": {
+    "dateformat": "^1.0.11",
+    "eslint-tester": "^0.7.0",
+    "istanbul": "^0.3.14",
+    "mocha": "^2.2.5",
+    "shelljs": "^0.5.0"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "legislators",
+  "version": "0.0.1",
+  "description": "Exercise for Revolution Messaging",
+  "main": "server.js",
+  "scripts": {
+    "test": "lab"
+  },
+  "author": "Luigi Ray-Montanez",
+  "license": "ISC",
+  "repository": "https://github.com/luigi/revmsg",
+  "devDependencies": {
+    "babel-eslint": "^4.1.8",
+    "code": "^2.1.0",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^5.0.0",
+    "eslint-plugin-react": "^3.16.1",
+    "lab": "^8.2.0"
+  },
+  "dependencies": {
+    "hapi": "^13.0.0",
+    "joi": "^8.0.1"
+  }
+}

@@ -1,0 +1,12 @@
+default: &default
+  url: <%= ENV['DATABASE_URL'] || "postgres://localhost:5432/topicbot_development" %>
+
+development:
+  <<: *default
+
+test:
+  # Keep this FAR FAR away from database_url
+  url: "postgres://localhost:5432/topicbot_test"
+
+production:
+  <<: *default

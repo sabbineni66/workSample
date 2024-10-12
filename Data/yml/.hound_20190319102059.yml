@@ -1,0 +1,23 @@
+AlignParameters:
+  Enabled: false
+
+Encoding:
+  Enabled: false
+
+ClassLength:
+  Enabled: false
+
+MethodLength:
+  Enabled: false
+
+LineLength:
+  Max: 330
+
+Documentation:
+  Enabled: false
+
+CyclomaticComplexity:
+  Max: 10
+
+DotPosition:
+  EnforcedStyle: leading

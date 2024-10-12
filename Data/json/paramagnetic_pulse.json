@@ -1,0 +1,18 @@
+{
+  "Name"      : "Paramagnetic Pulse",
+  "Kind"      : "HP",
+  "Ap"        : 4,
+  "Strength"  : 10,
+  "Damage"    : 4,
+  "Range"     : 4,
+  "Diameter"  : 3,
+  "Ammo"      : 3,
+  "Animation" : "pulse",
+  "Target_enemies": true,
+  "Sounds"   : {
+  "pulse": "Haunts/SFX/Intruders/Hunter/Paramagnetic Pulse"
+  },
+  "Texture"   : {
+    "Path": "actions/icons/pulse.png"
+  }
+}

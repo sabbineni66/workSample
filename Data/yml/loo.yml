@@ -1,0 +1,16 @@
+fr:
+  loo:
+    menu:
+      landscapes: Paysages
+      players: Persos
+  
+    users:
+      page_title:
+        edit_sight: Mettre ? jour votre vue
+      sight: Vue
+      player_name: Perso
+      matricule: Matricule
+      perception: Perception
+      edit_sight: mettre ? jour la vue
+      update_sight: Mettre ? jour
+      copy_and_paste_sight_code: Copier coller ici le code HTML de votre vue

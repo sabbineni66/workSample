@@ -1,0 +1,11 @@
+{
+  "name": "credo",
+  "description": "Credo is a static code analysis tool for the Elixir language with a focus on teaching and code consistency.",
+  "maintainer": {
+    "name": "Micha? Kalbarczyk",
+    "email": "fazibear@gmail.com"
+  },
+  "languages" : ["Elixir"],
+  "version": "0.8.10",
+  "spec_version": "0.0.1"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "eslint-plugin-typescript-issue-no-unused-vars-parameter-properties",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Martin K?hl <martin.kuehl@gmail.com>",
+  "license": "MIT",
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "plugins": [
+      "typescript"
+    ],
+    "parser": "typescript-eslint-parser",
+    "rules": {
+      "no-unused-vars": "warn",
+      "typescript/no-unused-vars": "warn"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-plugin-typescript": "^0.12.0",
+    "typescript": "~2.9.1",
+    "typescript-eslint-parser": "^17.0.1"
+  },
+  "scripts": {
+    "lint": "eslint index.ts"
+  }
+}

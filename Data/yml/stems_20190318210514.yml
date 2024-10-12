@@ -1,0 +1,10 @@
+--- 
+loglibrary: 
+  nick: helpa
+  leaves: 
+  - Helpa
+  rejoin: true
+  channels:
+    - "#rubyonrails"
+    - "#helpa"
+  server: irc.freenode.net

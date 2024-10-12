@@ -1,0 +1,26 @@
+{
+  "index": [
+    "menu",
+    [
+      {
+        "message": "Please enter a food item"
+      },
+      [
+        "pizza",
+        "Pizza"
+      ],
+      [
+        "coconut",
+        "Coconut"
+      ]
+    ]
+  ],
+  "pizza": [
+    "message",
+    "Ordering pizza..."
+  ],
+  "coconut": [
+    "message",
+    "Ordering coconut..."
+  ]
+}

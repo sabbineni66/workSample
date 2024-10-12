@@ -1,0 +1,13 @@
+name: nexmo
+version: 0.1.0
+
+authors:
+  - Tom Morris <tom@tommorris.org>
+
+dependencies:
+  crest:
+    github: mamantoha/crest
+
+crystal: 0.24.2
+
+license: MIT

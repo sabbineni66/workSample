@@ -1,0 +1,34 @@
+jenny:
+  id: 1
+  name: Jenny
+bob:
+  id: 2
+  name: Bob
+  link: http://www.google.com
+  ip: 129.67.12.100
+  agent: Mozilla/5.0 (X11; U; Linux i686; en-GB; rv:1.8.1.6) Gecko/20070919 Ubuntu/7.10 (gutsy) Firefox/2.0.0.6
+  email: bob@bob.com
+nameless:
+  id: 3
+  name: ""
+admin:
+  id: 4
+  name: Admy
+  pass_hash: 59b3e8d637cf97edbe2384cf59cb7453dfe30789
+  salt: salt
+  admin: true
+otheradmin:
+  id: 5
+  name: Admin2
+  admin: true
+linked:
+  id: 6
+  name: bobbert
+  link: www.google.com
+httplinked:
+  id: 7
+  name: Herboing
+  link: http://www.google.com
+longname:
+  id: 8
+  name: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

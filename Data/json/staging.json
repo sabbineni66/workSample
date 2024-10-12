@@ -1,0 +1,46 @@
+{
+  "dropsite_rails": {
+    "revision": "master",
+    "run_deploy": true,
+    "run_migrations": true,
+    "framework_env": "production",
+    "hostname": "staging.dropsite.com",
+    "repo": "git@github.com:trotter/drop-site.git",
+    "deploy_dir": "/srv/dropsite"
+  },
+
+  "dropsite_sites": {
+    "hostname": "staging.dropsite.com"
+  },
+
+  "main_user": "trotter",
+  "main_group": "trotter",
+
+  "passenger": {
+    "version": "2.2.14"
+  },
+
+  "mysql": {
+    "bind-address": "0.0.0.0",
+    "server_root_password": ""
+  },
+
+  "apache": {
+    "contact": "cashion@gmail.com"
+  },
+
+  "ssh": {
+    "port": 22,
+    "private_keys": [ "dropsite_deploy" ]
+  },
+
+  "iptables": {
+    "tcp_ports": [80, 443]
+  },
+
+  "recipes": [ "mysql::server",
+               "private_ssh_keys",
+               "dropsite",
+               "dropsite_sites"
+             ]
+}

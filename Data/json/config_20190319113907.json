@@ -1,0 +1,26 @@
+{
+  "locals": {
+    "url": "http://localhost:8888",
+    "cdn": "//[CDN].cloudfront.net/",
+    "siteTitle": "[SITE TITLE]"
+  },
+  "templates": "./templates",
+  "contents": "./contents",
+  "nunjucks": {
+    "autoescape": false
+  },
+  "output": "./build",
+  "plugins": [
+  	"wintersmith-nunjucks",
+    "./plugins/contentHelpers.js"
+  ],
+  "require": {
+    "moment": "moment"
+  },
+  "ignore": [
+  	"**/config.rb",
+  	"**/sass",
+  	"**/.sass-cache",
+    "**/.DS_Store"
+  ]
+}

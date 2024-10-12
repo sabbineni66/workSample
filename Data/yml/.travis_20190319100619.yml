@@ -1,0 +1,12 @@
+language: go
+
+go:
+ - 1.2
+
+install:
+ - wget -qO- https://raw.github.com/pote/gpm/v1.2.1/bin/gpm -O gpm
+ - chmod a+x gpm
+ - ./gpm install
+
+script:
+ - go test -v ./trading_engine

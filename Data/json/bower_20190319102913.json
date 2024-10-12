@@ -1,0 +1,9 @@
+{
+  "name": "livereload-demo",
+  "description": "Live reload demo",
+  "private": true,
+  "dependencies": {
+    "foo": "./modules/foo",
+    "bar": "./modules/bar"
+  }
+}

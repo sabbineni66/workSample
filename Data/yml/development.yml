@@ -1,0 +1,9 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8181
+  adminConnectors:
+    - type: http
+      port: 8182
+solr:
+  url: http://localhost:8983:/solr/ffl

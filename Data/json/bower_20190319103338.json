@@ -1,0 +1,20 @@
+{
+  "name": "ng-hacks",
+  "version": "0.0.0",
+  "homepage": "https://github.com/fazibear/ng-hacks",
+  "authors": [ "Micha? Kalbarczyk <fazibear@gmail.com>" ],
+  "license": "MIT",
+  "directory": "public/js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "1.3.9",
+    "angular-classy": "",
+    "angular-google-maps": ""
+  }
+}

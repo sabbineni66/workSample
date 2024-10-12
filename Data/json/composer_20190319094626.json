@@ -1,0 +1,26 @@
+{
+    "name": "phpwax/template",
+    "type": "library",
+    "description": "Wax Template Component",
+    "keywords": [],
+    "homepage": "http://php-wax.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ross Riley",
+            "email": "ross@oneblackbear.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": { "Wax\\Template": "src/" }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

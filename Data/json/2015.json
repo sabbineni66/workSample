@@ -1,0 +1,200 @@
+[
+{
+    "title"    : "Ishq me Shaher Hona",
+    "link"     : "http://www.amazon.in/Ishq-Shaher-Hona-Ravish-Kumar/dp/8126727675",
+    "author"   : "Ravish Kumar",
+    "category" : "fiction-indian",
+    "readable" : true,
+    "date"     : "2015-02-01"
+},
+{
+    "title"    : "A Spoke in the Wheel",
+    "link"     : "http://www.amazon.in/Spoke-Wheel-Amita-kanekar/dp/8189059564",
+    "author"   : "Amita Kanekar",
+    "category" : "fiction-indian",
+    "readable" : true,
+    "date"     : "2015-02-01"
+},
+{
+    "title"    : "Songs of the Saints of India",
+    "link"     : "http://www.amazon.com/Songs-Saints-India-Oxford-Paperbacks/dp/0195694201",
+    "author"   : "John Stratton Hawley and Mark Juergensmeyer",
+    "category" : "non-fiction-culture",
+    "readable" : true,
+    "date"     : "2015-02-01"
+},
+{
+    "title"    : "The Indian Ideology",
+    "link"     : "http://www.amazon.com/Indian-Ideology-Perry-Anderson/dp/1781682593",
+    "author"   : "Perry Anderson",
+    "category" : "non-fiction-culture",
+    "readable" : true,
+    "date"     : "2015-02-01"
+},
+{
+    "title"    : "Patna Manual of Style",
+    "link"     : "http://www.amazon.in/Patna-Manual-Style-Stories/dp/9383064773",
+    "author"   : "Siddharth Chowdhury",
+    "category" : "fiction-indian",
+    "date"     : "2015-05-01"
+},
+{
+    "title"    : "Programming in Lua",
+    "link"     : "http://www.amazon.com/Programming-Lua-Roberto-Ierusalimschy/dp/859037985X",
+    "author"   : "Roberto Ierusalimschy",
+    "category" : "tech",
+    "readable" : true,
+    "date"     : "2015-05-01"
+},
+{
+    "title"    : "When Google Met Wikileaks",
+    "link"     : "http://www.amazon.com/When-Google-Wikileaks-Julian-Assange/dp/8189059661/",
+    "author"   : "Julian Assange",
+    "category" : "non-fiction-tech",
+    "readable" : true,
+    "date"     : "2015-05-01"
+},
+{
+    "title"     : "Buddhism in India: Challenging Brahmanism and Caste",
+    "author"    : "Gail Omvedt",
+    "link"      : "http://www.amazon.com/Buddhism-India-Challenging-Brahmanism-Classics/dp/8132110285",
+    "category"  : "non-fiction-culture",
+    "readable"  : true,
+    "date"      : "2015-05-01"
+},
+{
+    "title"     : "A Concise History of South India: Issues and Interpretations",
+    "author"    : "Noboru Karashima (Editor)",
+    "link"      : "http://www.amazon.com/Concise-History-South-India-Interpretations/dp/0198099770",
+    "category"  : "non-fiction-culture",
+    "readable"  : true,
+    "date"      : "2015-05-01"
+},
+{
+    "title"     : "Confronting Colonialism: Resistance and Modernization Under Haidar Ali and Tipu Sultan",
+    "author"    : "Irfan Habib (Editor)",
+    "link"      : "http://www.amazon.in/Confronting-Colonialism-Resistance-Modernization-Haidar/dp/938238104X",
+    "category"  : "non-fiction-history",
+    "readable"  : true,
+    "date"      : "2015-06-01"
+},
+{
+    "title"     : "Directions in Indian Sociolinguistics",
+    "author"    : "R.S. Gupta (Editor)",
+    "link"      : "http://www.amazon.com/Directions-in-Indian-sociolinguistics/dp/8185952795",
+    "category"  : "non-fiction-culture",
+    "readable"  : true,
+    "date"      : "2015-06-01"
+},
+{
+    "title"     : "Profiting Without Producing: How Finance Exploits Us All",
+    "author"    : "Costas Lapavitsas",
+    "link"      : "http://www.amazon.com/Profiting-Without-Producing-Finance-Exploits/dp/1781681414",
+    "category"  : "non-fiction-economics",
+    "readable"  : true,
+    "date"      : "2015-07-01"
+},
+{
+    "title"     : "The Doubt Factory",
+    "author"    : "Paolo Bacigalupi",
+    "link"      : "http://www.amazon.com/Doubt-Factory-Paolo-Bacigalupi/dp/0316220752",
+    "category"  : "fiction-science",
+    "readable"  : true,
+    "date"      : "2015-07-01"
+},
+{
+    "title"     : "Zombie Baseball Beatdown",
+    "author"    : "Paolo Bacigalupi",
+    "link"      : "http://www.amazon.com/Zombie-Baseball-Beatdown-Paolo-Bacigalupi/dp/0316220795",
+    "category"  : "fiction-science",
+    "readable"  : true,
+    "date"      : "2015-07-01"
+},
+{
+    "title"     : "The Water Knife",
+    "author"    : "Paolo Bacigalupi",
+    "link"      : "http://www.amazon.com/Water-Knife-novel-Paolo-Bacigalupi/dp/0385352875",
+    "category"  : "fiction-science",
+    "readable"  : true,
+    "date"      : "2015-07-01"
+},
+{
+    "title"     : "Flood of Fire",
+    "author"    : "Amitav Ghosh",
+    "link"      : "http://www.amazon.in/Flood-Fire-Novel-Ibis-Trilogy/dp/0374174245",
+    "category"  : "fiction-indian",
+    "readable"  : true,
+    "date"      : "2015-08-01"
+},
+{
+    "title"     : "Baluta",
+    "author"    : "Daya Pawar (Author), Jerry Pinto (Translator)",
+    "link"      : "http://www.amazon.com/Baluta-Daya-Pawar/dp/9385288466",
+    "category"  : "fiction-indian",
+    "readable"  : true,
+    "date"      : "2015-08-01"
+},
+{
+    "title"     : "Humare Samay Mein Shram Ki Garima",
+    "author"    : "Kancha Ilaiya (Author), Durgabai Vyam (Illustrator), Bharat Tripati (Translator)",
+    "link"      : "http://www.pitarakart.in/humare-samay-mein-shram-ki-garima",
+    "category"  : "non-fiction-culture",
+    "readable"  : true,
+    "date"      : "2015-08-01"
+},
+{
+    "title"     : "The Three?Body Problem",
+    "author"    : "Cixin Liu",
+    "link"      : "http://www.amazon.com/Three-Body-Problem-Cixin-Liu/dp/0765377063",
+    "category"  : "fiction-science",
+    "readable"  : true,
+    "date"      : "2015-09-01"
+},
+{
+    "title"     : "Americanah",
+    "author"    : "Chimamanda Ngozi Adichie",
+    "link"      : "http://www.amazon.com/Americanah-Chimamanda-Ngozi-Adichie/dp/0307455920",
+    "category"  : "fiction",
+    "readable"  : true,
+    "date"      : "2015-10-01"
+},
+{
+    "title"     : "Postmodernism: A Very Short Introduction",
+    "author"    : "Christopher Butler",
+    "link"      : "http://www.amazon.com/Postmodernism-Short-Introduction-Christopher-Butler/dp/0192802399",
+    "category"  : "non-fiction-culture",
+    "readable"  : true,
+    "date"      : "2015-10-01"
+},
+{
+    "title"     : "Nine Decades of Marxism in the Land of Brahmanism",
+    "author"    : "SK Biswas",
+    "link"      : "http://www.otherbooksonline.com/books/Nine-Decades-of-Marxism-In-The-Land-Of-Brahmanism",
+    "category"  : "non-fiction-politics",
+    "date"      : "2015-10-01"
+},
+{
+    "title"     : "Foucault: A Very Short Introduction",
+    "author"    : "Gary Gutting",
+    "link"      : "http://www.amazon.com/gp/product/0192805576",
+    "category"  : "non-fiction-culture",
+    "readable"  : true,
+    "date"      : "2015-11-01"
+},
+{
+    "title"     : "Considerations on Western Marxism",
+    "author"    : "Perry Anderson",
+    "link"      : "http://www.amazon.com/Considerations-Western-Marxism-Perry-Anderson/dp/0860917207",
+    "category"  : "non-fiction-culture",
+    "readable"  : true,
+    "date"      : "2015-11-01"
+},
+{
+    "title"     : "Fonts and Encodings",
+    "author"    : "Yannis Haralambous (Author), P. Scott Horne (Translator)",
+    "link"      : "http://www.amazon.com/Fonts-Encodings-Yannis-Haralambous/dp/0596102429",
+    "category"  : "non-fiction-tech",
+    "readable"  : true,
+    "date"      : "2015-11-01"
+}
+]

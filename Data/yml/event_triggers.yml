@@ -1,0 +1,19 @@
+# Schema as of Sun Nov 26 22:00:45 PST 2006 (schema version 2)
+#
+#  id                  :integer(11)   not null
+#  code                :string(64)    
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+user_signup:
+  id: 1
+  code: UserSignup
+user_deleted:
+  id: 2
+  code: UserDeleted
+user_suspended:
+  id: 3
+  code: UserSuspended
+group_modification:
+  id: 4
+  code: GroupModification

@@ -1,0 +1,20 @@
+{
+  "name": "responsive_css3",
+  "version": "0.0.0",
+  "authors": [
+    "?yvind Saltvik <oyvind.saltvik@gmail.com>"
+  ],
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "ckeditor": "~4.4.7",
+    "jquery": "~2.1.4"
+  }
+}

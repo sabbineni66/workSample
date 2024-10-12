@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  step_id: 1
+  type: 
+  name: MyString
+  notes: MyText
+
+two:
+  step_id: 1
+  type: 
+  name: MyString
+  notes: MyText

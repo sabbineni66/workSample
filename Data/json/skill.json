@@ -1,0 +1,56 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "A starter template for an Alexa audio streaming skill.",
+          "examplePhrases": [
+            "Alexa, open my christmas fm",
+            "Alexa, play my christmas fm",
+            "Alexa, ask my christmas fm to play"
+          ],
+          "keywords": [
+            "audio streaming",
+            "music",
+            "live music"
+          ],
+          "name": "christmasfm-alexa",
+          "description": "A starter template for an Alexa audio streaming skill.",
+          "smallIconUri": "https://s3.amazonaws.com/cdn.dabblelab.com/img/audiostream-starter-108x108.png",
+          "largeIconUri": "https://s3.amazonaws.com/cdn.dabblelab.com/img/audiostream-starter-512x512.png"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "No special instructions",
+      "category": "STREAMING_SERVICE",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        },
+        "interfaces": [
+          {
+            "type": "AUDIO_PLAYER"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {
+          "termsOfUseUrl": "http://dabblelab.com/terms",
+          "privacyPolicyUrl": "http://dabblelab.com/privacy"
+        }
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{ "name": "Multi-module test", "sections": [
+    {"section":"first_module"},
+    {"section":"second_module"}
+]}

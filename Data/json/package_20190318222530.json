@@ -1,0 +1,24 @@
+{
+  "name": "climate-development-storage-service",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myobie/climate-development-storage-service.git"
+  },
+  "author": "Nathan Herald",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/myobie/climate-development-storage-service/issues"
+  },
+  "homepage": "https://github.com/myobie/climate-development-storage-service#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "express": "^4.14.0"
+  }
+}

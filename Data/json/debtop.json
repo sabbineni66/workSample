@@ -1,0 +1,22 @@
+{
+  "run_list": [
+    "recipe[apt]",
+    "recipe[xorg]",
+    "recipe[nvidia]",
+    "recipe[st]",
+    "recipe[rofi]",
+    "recipe[ruby]",
+    "recipe[gmpc]",
+    "recipe[packages]",
+    "recipe[i3wm]",
+    "recipe[mail]",
+    "recipe[firefox]",
+    "recipe[golang]",
+    "recipe[beets]",
+    "recipe[packer]",
+    "recipe[vagrant]",
+    "recipe[dropbox]",
+    "recipe[virtualbox]",
+    "recipe[printer]"
+  ]
+}

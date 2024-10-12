@@ -1,0 +1,9 @@
+{
+    "watch": [
+        "build.js",
+        "support/"
+    ],
+    "execMap": {
+        "js": "./node_modules/.bin/babel-node"
+    }
+}

@@ -1,0 +1,8 @@
+# Site settings
+title: Whippet City Mile
+email: webmaster@whippetcitymile.com
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://whippetcitymile.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown

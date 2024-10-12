@@ -1,0 +1,6 @@
+id_server:
+  hostname: 'id.example.com'
+  port:     8000
+  host:     6
+  worker:   6
+  debug:    true

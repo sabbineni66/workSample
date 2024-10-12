@@ -1,0 +1,29 @@
+{
+  "name": "uiviews.github.io",
+  "version": "0.0.0",
+  "description": "Mostly just what it sounds.",
+  "main": "index.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/uiviews/uiviews.github.io.git"
+  },
+  "author": "Robb Schiller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uiviews/uiviews.github.io/issues"
+  },
+  "homepage": "https://github.com/uiviews/uiviews.github.io",
+  "dependencies": {
+    "handlebars": "^2.0.0-alpha.4",
+    "metalsmith": "^0.8.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-sass": "^0.1.1",
+    "metalsmith-templates": "^0.5.0",
+    "metalsmith-watch": "^0.1.1",
+    "metalsmith-collections": "^0.4.1",
+    "metalsmith-permalinks": "^0.3.0"
+  }
+}

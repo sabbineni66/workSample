@@ -1,0 +1,7 @@
+the_rails_way:
+  type: Book
+  title: The Rails Way
+
+backgroundrb:
+  type: Article
+  title: BackgrounDRb

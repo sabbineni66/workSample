@@ -1,0 +1,29 @@
+title: Kevin Marsh
+email: kevin.marsh@gmail.com
+description: >
+  Blog of Kevin Marsh, a web developer from Toledo, Ohio with focus on simplicity and usability, an eye for design, and insatiable curiosity. Co-founder of Vintage Aerial, built SongMeanings.
+keywords: >
+  Kevin Marsh, Toledo, web design, willcodeforfoo, dotfiles.org, lifemetric,
+  SongMeanings, web developer, xhtml, Rails, Ruby on Rails, Vintage Aerial,
+  SFC, digital imaging, photography
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://kevinmarsh.com"
+twitter_username: willcodeforfoo
+github_username: kmarsh
+permalink: /:year/:month/:day/:title.html
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
+redcarpet:
+  extensions:
+    - autolink
+    - footnotes
+    - tables
+    - smart
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap

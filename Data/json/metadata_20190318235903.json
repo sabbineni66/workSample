@@ -1,0 +1,20 @@
+{
+  "name": "naxsoft-nginx",
+  "author": "Iouri",
+  "description": "Install and configure nginx",
+  "license": "",
+  "project_page": "https://github.com/igouss/puppet",
+  "source": "",
+  "summary": "",
+  "version": "1.0",
+  "checksums": {
+    "Modulefile": "dd94c31c624a649a768df951fc6d5f8b",
+    "README.markdown": "1300fed94070d47b813c9963e0111869",
+    "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
+    "manifests\\init.pp": "33c16d39cbbef1ae7ed1d3c68544abaf",
+    "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "spec\\spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "tests\\init.pp": "f37bae99230baefce2323911caabca3a"
+  },
+  "dependencies": []
+}

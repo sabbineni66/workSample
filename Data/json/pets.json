@@ -1,0 +1,8 @@
+{
+  "name": "Ari",
+  "year": 2018,
+  "pets": {
+    "cats": [],
+    "dogs": ["Ginger"]
+  }
+}

@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uuid: f4dc9780209ecc4f786fc47b07b4c1ec0a365e7b
+
+two:
+  uuid: b7e563a0ce1c4b70b74cf687f4cce9020879cd4f

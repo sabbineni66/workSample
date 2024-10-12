@@ -1,0 +1,122 @@
+cs:
+  filters:
+    disable: Zru?it filtr
+  tables:
+    no_entry: Nejsou ??dn? data
+
+  alert_inline:
+    html: <strong>%{title}</strong>&nbsp;%{message}
+  alert_block:
+    html: <h4 class='alert-heading'>%{title}<h4>%{message}
+  activerecord:
+    # USE Laboratory.model_name.human => "Laborato?"
+    defaults: &defaults
+      actions: ''
+      updated_at: Aktualizov?no
+      created_at: Vytvo?eno
+    models:
+      product_category: Kategorie
+      product_brand: Zna?ky
+      service_request: Objedn?vky
+      service_order: Objedn?vky
+      service_provider: Poskytovatel? servisu
+      provision_service: Slu?by
+      user: U?ivatel?
+      customer_account: ??et z?kazn?ka
+    # USE Laboratory.human_attribute_name(:street) => "Ulice"
+    attributes:
+      service_request: &service_request
+        <<: *defaults
+        serial_num: S?riov? ??slo
+        product_brand: Zna?ka
+        product_brand_id: Zna?ka
+        product_category: Kategorie
+        product_category_id: Kategorie
+        product_num: N?zev produktu
+        service_type: Z?ru?n? servis
+        pickup_info: Vyzvednut? zbo??
+        defect_description: Popis z?vady
+
+      service_order:
+        <<: *service_request
+        <<: *defaults
+        company_type: Typ firmy
+        state: Stav
+        service_provider_id: Poskytovatel slu?by
+        service_provider: Poskytovatel slu?by
+        customer_account_id: Z?kazn?k
+        service_request_id: Objedn?vka
+
+      provision_service:
+        <<: *defaults
+        percentage: Procenta (%)
+        money: Pen?ze (K?)
+        reward: Odm?na
+        product_category_id: Kategorie
+        product_category: Kategorie
+        product_brand_id: Zna?ka
+        product_brand: Zna?ka
+        service_provider: Poskytovatel slu?by
+        service_requests: Nov? ??dosti
+        service_orders: P?i?azen? objedn?vky
+        primary_provider: Aktivn?
+
+      address: &address
+        street: Ulice
+        zip: PS?
+        city: M?sto
+        country: Zem?
+        full_address: Adresa
+
+      customer_account:
+        <<: *address
+        company_name: N?zev firmy
+        first_name: Jm?no
+        last_name: P??jmen?
+        name: Jm?no
+        phone: Telefon
+        email: Email
+        ico: I?O
+        dic: DI?
+
+      service_provider:
+        <<: *defaults
+        <<: *address
+        service_orders: Objedn?vky
+        company_name: N?zev spole?nosti
+        provision_services: Poskytuje slu?by
+        dic: DI?
+        ico: I?O
+
+      product_category:
+        <<: *defaults
+        name: N?zev kategorie
+        brands: Zna?ky
+        product_brands: Zna?ky
+        defect_help: N?pov?da k popisu z?vady
+        defect_template: ?ablona popisu z?vady
+        serial_num_help: Seriov? ??slo
+        product_num_help: Produktov? ??slo
+
+      product_brand:
+        <<: *defaults
+        name: N?zev zna?ky
+
+      user:
+        password: Heslo
+        password_confirmation: Potvrzen? hesla
+        current_password: P?vodn? heslo
+
+  sessions:
+    sign_out: "Logout"
+  service_orders:
+    orders_summary: "Orders summary"
+
+  views:
+    admin:
+      add_new: P?idat nov?ho
+      product_brand:
+        add: "P?idat"
+  boolean:
+    'true': "Ano"
+    'false': "Ne"

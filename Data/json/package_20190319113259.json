@@ -1,0 +1,17 @@
+{
+  "name": "greatcodeclub-week-1",
+  "author": {
+    "name": "Robert Malko",
+    "email": "robmalko@gmail.com"
+  },
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.5.0",
+    "gulp-browserify": "~0.4.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-uglify": "~0.2.1"
+  },
+  "repository": {}
+}

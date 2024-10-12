@@ -1,0 +1,48 @@
+{
+
+  "manifest_version": 2,
+  "name": "IaR Auto Login",
+  "version": "0.9",
+
+  "description": "Automatically logs you into IamResponding.",
+
+  "icons": {
+    "48": "icons/fire-station.svg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.iamresponding.com/*"],
+      "js": ["iar.js"]
+    }
+  ],
+
+  "background" : {
+    "scripts":["background.js"]
+  },
+
+  "permissions": ["storage",
+                  "webRequest",
+                  "webRequestBlocking",
+                  "*://*.iamresponding.com/*"
+                ],
+
+  "options_ui": {
+    "page": "options/options.html"
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icons/fire-station.svg",
+    "default_title": "IaR Auto Login",
+    "default_popup": "status/status.html"
+
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "addon@example.com"
+    }
+  }
+
+}

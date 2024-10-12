@@ -1,0 +1,17 @@
+{
+  "name": "sobs",
+  "version": "0.0.1",
+  "description": "Sobs: when NA9 goes down you don't want to be there to see it",
+  "author": "me",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cdcarter/sobs"
+  },
+  "dependencies": {
+    "elm": "0.17.0",
+    "serverless-client-s3": "^2.0.0",
+    "serverless-cors-plugin": "^0.4.1"
+  }
+}

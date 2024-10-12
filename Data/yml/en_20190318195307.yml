@@ -1,0 +1,15 @@
+--- 
+en:
+  time: 
+    ago: 
+      days: "%{duration} days ago"
+      hours: "%{duration} hours ago"
+      just_now: "just now"
+      minutes: "%{duration} minutes ago"
+      seconds: "less than a minute ago"
+    future: 
+      days: "in %{duration} days"
+      hours: "in %{duration} hours"
+      minutes: "in %{duration} minutes"
+      seconds: "in less than a minute"
+      soon: "very soon"

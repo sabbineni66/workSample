@@ -1,0 +1,19 @@
+{
+  "name": "vue-browserify-example",
+  "version": "0.0.0",
+  "description": "Build Vue project with Browserify",
+  "main": "src/main.js",
+  "dependencies": {
+    "vue": "~0.9.2"
+  },
+  "devDependencies": {
+    "watchify": "~0.6.1",
+    "partialify": "~3.0.0",
+    "insert-css": "~0.1.1"
+  },
+  "author": "Evan You",
+  "license": "MIT",
+  "scripts": {
+    "dev": "watchify -e src/main.js -t partialify -o dist/bundle.js"
+  }
+}

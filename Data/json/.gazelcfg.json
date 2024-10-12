@@ -1,0 +1,9 @@
+{
+  "GoPrefix": "sr",
+  "AddSourcesRules": true,
+  "SrcDirs": [
+    "./cbk",
+    "./cmd",
+    "./operator"
+  ]
+}

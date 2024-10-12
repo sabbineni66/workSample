@@ -1,0 +1,14 @@
+---
+- name: download
+  hosts: all
+  user: root
+
+  vars:
+    hosts_size: "{{ groups['download'] | length }}"
+    archive_org_page_total: 680
+    archive_org_page_first: "{{ (archive_org_page_total // (groups['download']|length) * (server_idx|int)) + 1}}"
+    archive_org_page_last: "{{ archive_org_page_total // (groups['download']|length) * ((server_idx|int)+1) }}"
+
+  tasks:
+  - name: download
+    command: "ruby download_books.rb {{archive_org_page_first}} {{archive_org_page_last}} chdir=/root/download"

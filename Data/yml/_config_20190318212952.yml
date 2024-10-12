@@ -1,0 +1,18 @@
+---
+url: https://kumikoshirai.com
+safe: true
+lsi: false
+permalink: pretty
+source: .
+destination: ./public
+exclude:
+  - Rakefile
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - .gitignore
+  - ./public
+  - ./stylesheets/*.scss
+  - ./drafts
+port: 9876

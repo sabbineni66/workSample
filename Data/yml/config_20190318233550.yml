@@ -1,0 +1,11 @@
+osdeps_mode: 'all'
+GITORIOUS: http,ssh
+GITHUB: http,ssh
+separate_prefixes: true
+ROCK_SELECTED_FLAVOR: master
+ROCK_FLAVOR: master
+ROCK_BRANCH: master
+USE_OCL: false
+rtt_target: gnulinux
+rtt_corba_implementation: omniorb
+autoproj_test_utility_default: true

@@ -1,0 +1,37 @@
+{
+    "name": "SystemStats/SystemStats",
+    "description": "A package for getting system information like cpu and memory usage",
+    "keywords": [
+        "sysinfo"
+    ],
+    "homepage": "https://github.com/Dearon/SystemStats",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Remco Meeuwissen",
+            "email": "dearon@gmail.com",
+            "homepage": "http://www.dearon.com/",
+            "role": "Developer"
+        },
+        {
+            "name": "Robin Malfait",
+            "email": "malfait.robin@gmail.com",
+            "homepage": "http://robinmalfait.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.5.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpspec run"
+    }
+}

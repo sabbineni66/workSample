@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <BoardCertificationMerchant_ACHResponse xmlns="http://tempuri.org/GETI.eMagnus.WebServices/AppGateway">
+      <BoardCertificationMerchant_ACHResult>
+        &lt;?xml version="1.0" encoding="utf-8"?&gt;
+        &lt;RESPONSE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+          &lt;VALIDATION_MESSAGE&gt;
+            &lt;RESULT&gt;Failed&lt;/RESULT&gt;
+            &lt;SCHEMA_FILE_PATH&gt;http://demo.eftchecks.com/WebServices/schemas/app/NewMerchApp_ACH.xsd&lt;/SCHEMA_FILE_PATH&gt;
+
+            &lt;validation-error type="array"&gt;
+              &lt;validation-error LINE_NUMBER="1" LINE_POSITION="1193"&gt;
+                &lt;message&gt;The 'pocAddress1' attribute is not declared.&lt;/message&gt;
+                &lt;severity&gt;Error&lt;/severity&gt;
+              &lt;/validation-error&gt;
+              &lt;validation-error LINE_NUMBER="1" LINE_POSITION="1020"&gt;
+                &lt;message&gt;The required attribute 'pocAddress' is missing.&lt;/message&gt;
+                &lt;severity&gt;Error&lt;/severity&gt;
+              &lt;/validation-error&gt;
+            &lt;/validation-error&gt;
+
+          &lt;/VALIDATION_MESSAGE&gt;
+        &lt;/RESPONSE&gt;
+      </BoardCertificationMerchant_ACHResult>
+    </BoardCertificationMerchant_ACHResponse>
+  </soap:Body>
+</soap:Envelope>

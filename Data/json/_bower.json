@@ -1,0 +1,19 @@
+{
+  "name": "package",
+  "version": "0.0.0",
+  "dependencies": {
+    "sass-bootstrap": "latest",
+    "jquery": "latest",
+    "requirejs": "latest",
+    "require-jade": "latest",
+    "requirejs-text": "latest",
+    "handlebars": "latest",
+    "marionette": "latest",
+    "moment": "latest",
+    "backbone-relational": "latest",
+    "backbone-pageable": "latest",
+    "backgrid": "latest",
+    "underscore.string": "latest",
+    "modernizr": "latest"
+  }
+}

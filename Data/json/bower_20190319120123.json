@@ -1,0 +1,22 @@
+{
+    "name": "trademang",
+    "main": "server.js",
+    "version": "0.0.1",
+    "homepage": "https://github.com/mcandre/trademang",
+    "authors": [
+        "Andrew Pennebaker <andrew.pennebaker@gmail.com>"
+    ],
+    "description": "facilitates Magic the Gathering trades",
+    "license": "FreeBSD",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "public/bower_components/",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "1.5.1"
+    }
+}

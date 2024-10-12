@@ -1,0 +1,71 @@
+tr-tr:
+  locale_name: "Turkish"
+  active_scaffold:
+    add:                            'Ekle'
+    add_existing:                   'Var olan? ekle'
+    add_existing_model:             "Add Existing {{model}}"
+    are_you_sure:                   'Emin misin?'
+    cancel:                         '?ptal'
+    click_to_edit:                  'D?zenlemek i?in t?kla'
+    close:                          'Kapat'
+    create:                         'Olu?tur'
+    create_model:                   '% olu?tur'
+    create_another:                 'Bir tane daha olu?tur'
+    create_another_model:           "Create Another - {{model}}"
+    created_model:                   '%s olu?turuldu'
+    create_new:                     'Yeni olu?tur'
+    customize:                      'Customize'
+    delete:                         'Sil'
+    deleted_model:                  '%s silindi'
+    delimiter:                      'Delimiter'
+    download:                       'Download'
+    edit:                           'D?zenle'
+    export:                         'Export'
+    filtered:                       '(Filtered)'
+    filtered__click_to_reset:       "Filtered - Click to reset"
+    found:                          'Bulundu'
+    hide:                           "Hide"
+    live_search:                    'Canl? Arama'
+    nested_for_model:               "{{nested_model}} for {{parent_model}}"
+    next:                           'Sonraki'
+    no_entries:                     'Girdi bulunamad?'
+    omit_header:                    'Omit Header'
+    options:                        'Options'
+    pdf:                            'PDF'
+    previous:                       '?nceki'
+    print:                          'Print'
+    refresh:                        "Refresh"
+    remove:                         'Kald?r'
+    remove_file:                    'Remove or Replace file'
+    replace_with_new:               'Yenisi ile de?i?tir'
+    reset:                          'S?f?rla'
+    search:                         'Ara'
+    search_terms:                   'Arama Ko?ullar?'
+    _select_:                       '- se? -'
+    show:                           'G?ster'
+    show_model:                     '%s g?ster'
+    _to_ :                          ' to '
+    update:                         'G?ncelle'
+    update_model:                   '%s g?ncelle'
+    updated_model:                   '%s g?ncellendi'
+    '=':                            '='
+    '>=':                           '>='
+    '<=':                           '<='
+    '>':                            '>'
+    '<':                            '<'
+    '!=':                           '!='
+    is_like:                        'Is like'
+    begins_with:                    'Begins with'
+    ends_with:                      'Ends with'
+    BETWEEN:                        'Is between'
+                                  
+    percentage_example:             "Ex. 10%"
+    phone_example:                  "Ex. 111-333-4444"
+    usa_money_example:              "Ex. 1,333"
+    usa_zip_example:                "Ex. 88888-3333"
+    ssn_example:                    "Ex. 555-22-3333"
+  
+    # error_messages
+    internal_error: "Request Failed (code 500, Internal Error)"
+    version_inconsistency: 'Version inconsistency - this record has been modified since you started editing it.'
+  

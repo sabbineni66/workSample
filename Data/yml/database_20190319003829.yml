@@ -1,0 +1,21 @@
+common: &common
+  adapter: mysql
+  pool: 5
+  reconnect: true
+  encoding: utf8
+  username: root
+
+development:
+  <<: *common
+  database: dropsite_development
+
+test: &test
+  <<: *common
+  database: dropsite_test
+
+production:
+  <<: *common
+  database: dropsite_production
+
+cucumber:
+  <<: *test

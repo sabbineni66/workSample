@@ -1,0 +1,22 @@
+{
+  "blockNumber": 1,
+  "blockchain": "ethereum",
+  "someRandomNumber": 123456,
+  "transactions": [
+    {
+      "id": 1,
+      "transactionId": "123456",
+      "hash": "0xdeadbeef"
+    },
+    {
+      "id": 2,
+      "transactionId": "123457",
+      "hash": "0xdeaderbeef"
+    }
+  ],
+  "accounts": {
+    "ari": {
+      "currentBalance": 100000.0
+    }
+  }
+}

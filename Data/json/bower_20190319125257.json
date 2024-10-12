@@ -1,0 +1,15 @@
+{
+  "name": "camandsarah.co.uk",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.1",
+    "jquery.lazyload": "~1.9.3",
+    "fancybox": "~2.1.5",
+    "masonry": "~3.1.5",
+    "almond": "~0.2.9",
+    "html5shiv": "~3.7.2",
+    "requirejs": "~2.1.14"
+  }
+}

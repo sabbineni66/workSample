@@ -1,0 +1,13 @@
+# ~/.tmuxinator/jt.yml
+
+name: jt
+root: <%= @settings["workspace"] %>
+windows:
+  - editor:
+    - cd <%= @settings.fetch("project", ".") %>
+    - nvim
+  - terminal:
+    - cd <%= @settings.fetch("project", ".") %>
+  - devcloud:
+    - devcloud start
+    - devcloud ssh

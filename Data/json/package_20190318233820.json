@@ -1,0 +1,12 @@
+{
+    "name": "brackets-browser",
+    "title": "Browser",
+    "description": "Adds a browser panel under the editor (loads the project's live preview URL).",
+    "homepage": "http://ambethia.com",
+    "version": "0.0.1",
+    "author": "Jason L Perry <jasper@ambethia.com> (https://github.com/ambethia)",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">= 0.33.0"
+    }
+}

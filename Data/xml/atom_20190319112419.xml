@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Gregor Schmidt</title>
+ <link href="https://www.nach-vorne.eu/feed/atom.xml" rel="self"/>
+ <link href="https://www.nach-vorne.eu"/>
+ <updated>2018-11-05T21:49:34+01:00</updated>
+ <id>https://www.nach-vorne.eu</id>
+ <author>
+   <name>Gregor Schmidt</name>
+   <email>schmidt@nach-vorne.eu</email>
+ </author>
+
+ 
+ <entry>
+   <title>Releasing redmine_zxcvbn 1.0.0</title>
+   <link href="https://www.nach-vorne.eu/2016/03/30/releasing-redmine-zxcvbn/"/>
+   <updated>2016-03-30T00:00:00+02:00</updated>
+   <id>https://www.nach-vorne.eu/2016/03/30/releasing-redmine-zxcvbn/</id>
+   <content type="html">&lt;p&gt;Today I stumbled upon an article named &lt;a href=&quot;https://ryanwinchester.ca/posts/stop-forcing-your-arbitrary-password-rules-on-me&quot;&gt;Stop forcing your arbitrary password
+rules on
+me&lt;/a&gt;
+by Ryan Winchester. The author explains in detail, why it?s a bad idea to
+force arbitrary password requirements like the following:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;&amp;quot;Your password must be at least 8 characters including one
+uppercase letter, one number, 3 Emojis &amp;amp; the first verse of Bohemian
+Rhapsody&amp;quot;.&lt;/p&gt;&amp;mdash; I Am Devloper (@iamdevloper) &lt;a href=&quot;https://twitter.com/iamdevloper/status/532842741873803264&quot;&gt;November 13,
+2014&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Instead he proposes to force a minimum password entropy and suggests to use
+&lt;a href=&quot;https://github.com/dropbox/zxcvbn&quot;&gt;Dropbox?s zxcvbn
+library&lt;/a&gt; to calculate that. In other words:
+A short password using a wide range of characters should be as good as a long
+one using a more limited set.&lt;/p&gt;
+
+&lt;h3 id=&quot;no-rules&quot;&gt;No rules!&lt;/h3&gt;
+
+&lt;p&gt;I say: &lt;strong&gt;A regular service should never force a minimum password requirement.&lt;/strong&gt;
+Maybe your users are creating a dummy account and want to test some features.
+Forcing a minimum password strength will only lower conversions and won?t
+protect anything valuable. Instead we should only encourage them to use a good
+password. Using a strength indicator without any enforcements ? maybe combined
+with a simple minimum length requirement ? will be all you need to protect
+those accounts, that need protection.&lt;/p&gt;
+
+&lt;p&gt;And therefore I present
+&lt;a href=&quot;https://github.com/schmidt/redmine_zxcvbn&quot;&gt;redmine_zxcvbn&lt;/a&gt;. It?s a redmine
+plugin which adds a strength/quality indicator to all password fields throughout
+&lt;a href=&quot;https://www.redmine.org/&quot;&gt;Redmine&lt;/a&gt;. It does not add any server side
+requirements concerning password quality. It only shows a little progress bar
+below the password field which will inform the user about the quality of their
+choice. It remains their responsibility to pick a password which is fit to their
+security requirements.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/schmidt/redmine_zxcvbn/master/assets/doc/zxcvbn.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Head over to &lt;a href=&quot;https://github.com/schmidt/redmine_zxcvbn&quot;&gt;GitHub&lt;/a&gt;. You may find
+all the nitty gritty details in the README. I am missing something? Please
+create &lt;a href=&quot;https://github.com/schmidt/redmine_zxcvbn/issues&quot;&gt;a bug report here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The plugin is also listed in the &lt;a href=&quot;https://www.redmine.org/plugins/redmine_zxcvbn&quot;&gt;Redmine Plugin
+directory&lt;/a&gt;. So if you like it,
+please go there and leave a 5 star review.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Using Quicksilver as simple Pomodoro timer</title>
+   <link href="https://www.nach-vorne.eu/2012/09/17/quicksilver-pomodoro-timer/"/>
+   <updated>2012-09-17T00:00:00+02:00</updated>
+   <id>https://www.nach-vorne.eu/2012/09/17/quicksilver-pomodoro-timer/</id>
+   <content type="html">&lt;p&gt;Inspired by &lt;a href=&quot;https://speakerdeck.com/u/wikimatze/p/time-management-with-the-pomodoro-technique&quot;&gt;a
+talk&lt;/a&gt;
+at the &lt;a href=&quot;http://www.rug-b.de&quot;&gt;local ruby user group&lt;/a&gt;, I started to use
+&lt;a href=&quot;http://www.pomodorotechnique.com/&quot;&gt;the Pomodoro technique&lt;/a&gt; to structure my work
+and breaks.&lt;/p&gt;
+
+&lt;p&gt;In order to get quickly started, I was looking for an easy way to start a timer
+on my Mac. After a quick look on &lt;em&gt;the interwebs&lt;/em&gt; for a little helper I simply
+gave up, due to the vast amount of different options and interfaces. I the
+settled for a low-tech version using &lt;a href=&quot;http://qsapp.com/&quot;&gt;Quicksilver&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-quicksilver-for-simple-timers&quot;&gt;Using Quicksilver for simple timers&lt;/h2&gt;
+
+&lt;p&gt;All I wanted to do, is get a simple pop-up after 25 minutes. Here is what you
+need to do:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Fire up Quicksilver: &lt;kbd title=&quot;Option&quot;&gt;?&lt;/kbd&gt; + &lt;kbd&gt;Space&lt;/kbd&gt;&lt;/li&gt;
+  &lt;li&gt;Switch to text mode: &lt;kbd&gt;.&lt;/kbd&gt;&lt;/li&gt;
+  &lt;li&gt;Type &lt;kbd&gt;Pomodoro&lt;/kbd&gt; or anything else that helps&lt;/li&gt;
+  &lt;li&gt;Confirm with &lt;kbd title=&quot;Tab&quot;&gt;?&lt;/kbd&gt;&lt;/li&gt;
+  &lt;li&gt;Hit &lt;kbd title=&quot;Control&quot;&gt;^&lt;/kbd&gt; + &lt;kbd title=&quot;Return&quot;&gt;?&lt;/kbd&gt;&lt;/li&gt;
+  &lt;li&gt;Type: &lt;kbd&gt;Run after Delay...&lt;/kbd&gt; or a significant portion of it&lt;/li&gt;
+  &lt;li&gt;Confirm with &lt;kbd title=&quot;Tab&quot;&gt;?&lt;/kbd&gt;&lt;/li&gt;
+  &lt;li&gt;Enter &lt;kbd&gt;25m&lt;/kbd&gt; - which is short for 25 minutes&lt;/li&gt;
+  &lt;li&gt;Hit &lt;kbd title=&quot;Return&quot;&gt;?&lt;/kbd&gt;&lt;/li&gt;
+  &lt;li&gt;Enjoy&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After 25 minutes you will see a large ?Pomodoro? on your screen. Be careful
+though, any key will dismiss the message. So it might happen, that it is gone
+before you notice.&lt;/p&gt;
+
+&lt;p&gt;Also there is no way, that I know of, to get a notion how much time already
+passed. I am also using a time tracking tool, which gives me an idea how much I
+am into the current pomodoro, if I need a little motivation.&lt;/p&gt;
+
+&lt;p&gt;For now, this solution gives me what I want without the need to install
+additional software. So it is a perfect fit.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: You can use the Quicksilver timer feature with any other command. You
+could open &lt;a href=&quot;http://nyan.cat/&quot;&gt;a website&lt;/a&gt; at 12 o?clock to get a lunch reminder
+or hit play in iTunes after 20 minutes to wake up from your office nap. It?s all
+at your fingertips.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>New ChiliProject Plugin Released: Custom Home Path</title>
+   <link href="https://www.nach-vorne.eu/2012/07/17/new-chiliproject-plugin-released-custom-home-path/"/>
+   <updated>2012-07-17T00:00:00+02:00</updated>
+   <id>https://www.nach-vorne.eu/2012/07/17/new-chiliproject-plugin-released-custom-home-path/</id>
+   <content type="html">&lt;p&gt;I have just released a new &lt;a href=&quot;https://www.chiliproject.org/&quot;&gt;ChiliProject&lt;/a&gt; plugin.&lt;/p&gt;
+
+&lt;h2 id=&quot;custom-home-path-for-chiliproject&quot;&gt;Custom Home Path for ChiliProject&lt;/h2&gt;
+
+&lt;p&gt;It allows you to redirect users from the ChiliProject home page to any other
+path. This might be useful, if you are using ChiliProject as a kind of CMS and
+would like to customize the first page, your users will see. You may find the
+plugin on its &lt;a href=&quot;https://github.com/schmidt/chiliproject_custom_home_path&quot;&gt;GitHub project
+page&lt;/a&gt;. There is also a
+detailed README with installation instructions, requirements and all the bells
+and whistles.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Static Files And Bitly Proxy On Single Domain</title>
+   <link href="https://www.nach-vorne.eu/2012/07/16/static-files-and-bitly-proxy-on-single-domain/"/>
+   <updated>2012-07-16T00:00:00+02:00</updated>
+   <id>https://www.nach-vorne.eu/2012/07/16/static-files-and-bitly-proxy-on-single-domain/</id>
+   <content type="html">&lt;p&gt;When having a super short domain name, you?re probably using
+&lt;a href=&quot;http://bitly.com&quot;&gt;Bitly&lt;/a&gt;?s service to run you custom-looking URL shortener with
+full client support and nearly no setup costs.&lt;/p&gt;
+
+&lt;p&gt;But then you might ask yourself, why can?t I also have my simple static website
+on the same domain? Well, you can.&lt;/p&gt;
+
+&lt;h2 id=&quot;set-up-apache2-to-serve-files-and-short-urls&quot;&gt;Set up Apache2 to serve files and short URLs&lt;/h2&gt;
+
+&lt;p&gt;Using the following Apache VHost configuration, Apache will answer all
+requests locally, that match files within a certain directory. All other
+requests will be proxied to Bitly.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;VirtualHost *:80&amp;gt;
+
+    # These rules just set up the serving of the static files
+    ServerName short.com
+    DocumentRoot /var/www/short.com
+
+    &amp;lt;Directory /var/www/short.com/&amp;gt;
+        Options FollowSymLinks
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+    &amp;lt;/Directory&amp;gt;
+
+    # Now we're getting to the interesting parts
+    RewriteEngine On
+
+    # Make sure, that / is associated with your index.html document
+    RewriteRule ^/$ /index.html [QSA]
+
+    # Set's up a conditional rewrite
+    # When a local file is not found
+    RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_FILENAME} !-f
+    # the request is proxied to http://bit.ly/
+    RewriteRule ^/(.*)$ http://bit.ly/$1 [P,QSA,L]
+&amp;lt;/VirtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There are some things to note.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To make this work, you also need to ignore Bitly?s setup instructions and
+point your domain?s DNS record to your own server and not Bitly?s.&lt;/li&gt;
+  &lt;li&gt;This works just because Bitly?s slugs are globally uniq and not tied to a
+single domain. So &lt;code class=&quot;highlighter-rouge&quot;&gt;http://short.com/NArkjI&lt;/code&gt; will point to the same URL as
+&lt;code class=&quot;highlighter-rouge&quot;&gt;http://bit.ly/NArkjI&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Every URL, that cannot be matched to your files, will be proxied to bitly.com,
+including &lt;code class=&quot;highlighter-rouge&quot;&gt;favicon.ico&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;robots.txt&lt;/code&gt;. Also, this way Bitly may get a bit
+too much information, you might not want to share with them.&lt;/li&gt;
+  &lt;li&gt;404 error pages are delivered by Bitly, what might confuse your users. This
+might be fixable with some more configuration.&lt;/li&gt;
+  &lt;li&gt;This setup is, of course, slower than the recommended setup where you change
+your DNS record. So do not use it on high traffic sites without further
+investigation.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Monkey-Patching User in ChiliProject</title>
+   <link href="https://www.nach-vorne.eu/2012/07/12/monkey-patching-user-in-chiliproject/"/>
+   <updated>2012-07-12T00:00:00+02:00</updated>
+   <id>https://www.nach-vorne.eu/2012/07/12/monkey-patching-user-in-chiliproject/</id>
+   <content type="html">&lt;p&gt;Here is how to patch the &lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt; model within a ChiliProject plugin.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-the-deal&quot;&gt;What?s the deal?&lt;/h2&gt;
+
+&lt;p&gt;When ever you try to patch the &lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt; model you will see weird errors like
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Expected user.rb to define User&lt;/code&gt; and such. Sometimes it is even more subtile.
+The cause is often, that the tight dependecies between the &lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Principal&lt;/code&gt;
+and &lt;code class=&quot;highlighter-rouge&quot;&gt;Project&lt;/code&gt; models are not loaded properly - most often caused by a plugin
+which uses &lt;code class=&quot;highlighter-rouge&quot;&gt;require_dependency&lt;/code&gt; to load one of them.&lt;/p&gt;
+
+&lt;h2 id=&quot;and-the-fix&quot;&gt;And the fix:&lt;/h2&gt;
+
+&lt;p&gt;I was running into this problem multiple times and I wanted to note - once and
+for all - you will need the following statements to make it work:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;require_dependency 'project'
+require_dependency 'principal'
+require_dependency 'user'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then everything should be good to go.&lt;/p&gt;
+
+&lt;h3 id=&quot;see-it-in-action&quot;&gt;See it in action&lt;/h3&gt;
+
+&lt;p&gt;At the moment, you may see this in action
+in the &lt;a href=&quot;https://github.com/schmidt/chiliproject_safe_password_hashes&quot;&gt;Safe Password Hashes for ChiliProject
+plugin&lt;/a&gt;. Have a
+closer look at the
+&lt;a href=&quot;https://github.com/schmidt/chiliproject_safe_password_hashes/blob/master/lib/safe_password_hashes/patches/user_patch.rb#L1-L3&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;user_patch.rb&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+</feed>

@@ -1,0 +1,18 @@
+in_both_langs: en??ja????
+ja_only: ?????
+proc_test: !!proc '|c| "??#{c}???"'
+lambda_test: !!lambda '|name,age| "#{age}??#{name}???"'
+array_test: [:yay, ??, [1, 2, ???, 3]]
+symbol_test: :sweet
+fixnum_test: 52
+true_test: true
+false_test: false
+general_fmt_date: !!datetime_fmt '%d/%B %a'
+general_fmt_datetime: !!datetime_fmt '%I:%M %p (%Y) %d/%b %A'
+sameas_test1: !!sameas sameas_test2
+sameas_test2: !!sameas ja_only
+sameas_test3: !!sameas proc_test
+hash_test:
+  y: ??
+  n: ???
+  2: [:ah, hehe, ???]

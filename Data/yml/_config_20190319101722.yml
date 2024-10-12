@@ -1,0 +1,39 @@
+# This file contains Jekyll configuration options.
+#
+# For site variables, head over to /_data
+#
+# These groups have been arranged alphabetically by header;
+# feel free to toss them in whatever order suits you.
+
+# Dependencies
+markdown:    kramdown
+highlighter: rouge
+
+# Local server settings
+host: 0.0.0.0
+port: 3000
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from
+# the index work properly.
+permalink:           pretty
+
+# Rakefile settings
+post:
+  template:  templates/_post.txt
+  extension: md
+page:
+  template:  templates/_page.txt
+  extension: md
+editor: vim
+
+# Sass settings
+sass:
+  sass_dir: public/css/_scss
+  style:    :compressed
+
+# Setup
+baseurl:  /
+paginate: 5
+exclude:  [templates]

@@ -1,0 +1,34 @@
+# Schema as of Sun Nov 26 22:00:45 PST 2006 (schema version 2)
+#
+#  id                  :integer(11)   not null
+#  sender_id           :integer(11)   
+#  recipient_id        :integer(11)   
+#  subject             :text          
+#  msg_body            :text          
+#  created_at          :datetime      
+#  read_at             :datetime      
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+administrator_msg_1_unread:
+  id: 1
+  recipient_id: 1
+  subject: User 'mark' created
+  msg_body: User 'mark' created. You should add this user to one or more groups.
+  created_at: <%= 2.days.ago.strftime("%Y-%m-%d %H:%M:%S") %>
+  read_at: null
+
+administrator_msg_2_read:
+  id: 2
+  recipient_id: 1
+  subject: User 'garry' created
+  msg_body: User 'garry' created. You should add this user to one or more groups.
+  created_at: <%= 2.days.ago.strftime("%Y-%m-%d %H:%M:%S") %>
+  read_at: <%= 1.days.ago.strftime("%Y-%m-%d %H:%M:%S") %>
+
+another_msg:
+  id: 3
+  recipient_id: 2
+  subject: some subject
+  msg_body: some body
+  created_at: <%= 2.days.ago.strftime("%Y-%m-%d %H:%M:%S") %>

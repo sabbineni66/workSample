@@ -1,0 +1,74 @@
+ru-ru: 
+  locale_name: "Russian"
+  active_scaffold:
+    add:                            'Add'
+    add_existing:                   'Add Existing'
+    add_existing_model:             "Add Existing {{model}}"
+    are_you_sure:                   '?? ????????' 
+    cancel:                         '??????' 
+    click_to_edit:                  'Click to edit'
+    close:                          'Close'
+    create:                         '???????' 
+    create_another:                 'Create Another'
+    create_another_model:           "Create Another - {{model}}"
+    create_model:                   'Create %s'
+    created_model:                   '%s ??????(?)' 
+    create_new:                     '????? ??????' 
+    customize:                      'Customize'
+    delete:                         '???????' 
+    deleted_model:                  '%s ??????(?)' 
+    delimiter:                      'Delimiter'
+    download:                       'Download'
+    edit:                           '????????' 
+    export:                         'Export'
+    filtered:                       '(Filtered)'
+    filtered__click_to_reset:       "Filtered - Click to reset"
+    found:                          'Found'
+    hide:                           "Hide"
+    live_search:                    'Live Search'
+    loading?:                       'Loading?'
+    nested_for_model:               "{{nested_model}} for {{parent_model}}"
+    next:                           '?????????' 
+    no_entries:                     '??? ???????' 
+    omit_header:                    'Omit Header'
+    options:                        'Options'
+    pdf:                            'PDF'
+    previous:                       '??????????' 
+    print:                          'Print'
+    refresh:                        "Refresh"
+    remove:                         'Remove'
+    remove_file:                    'Remove or Replace file'
+    replace_with_new:               'Replace With New'
+    reset:                          '????????' 
+    revisions_for_model:            "Revisions for {{model}}"
+    saving?:                        'Saving?'
+    search:                         '??????' 
+    search_terms:                   'Search Terms'
+    _select_:                       '- select -'
+    show:                           '????????' 
+    show_model:                     'Show %s'
+    _to_ :                          ' to '
+    update:                         '????????' 
+    update_model:                   'Update %s'
+    updated_model:                   '%s ???????(?)' 
+    '=':                            '='
+    '>=':                           '>='
+    '<=':                           '<='
+    '>':                            '>'
+    '<':                            '<'
+    '!=':                           '!='
+    is_like:                        'Is like'
+    begins_with:                    'Begins with'
+    ends_with:                      'Ends with'
+    BETWEEN:                        'Is between'
+                                  
+    percentage_example:             "Ex. 10%"
+    phone_example:                  "Ex. 111-333-4444"
+    usa_money_example:              "Ex. 1,333"
+    usa_zip_example:                "Ex. 88888-3333"
+    ssn_example:                    "Ex. 555-22-3333"
+  
+    # error_messages
+    internal_error: "Request Failed (code 500, Internal Error)"
+    version_inconsistency: 'Version inconsistency - this record has been modified since you started editing it.'
+

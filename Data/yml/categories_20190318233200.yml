@@ -1,0 +1,79 @@
+job:
+  001:
+    - Account Director
+    - Account Executive
+    - Account Manager
+    - Animation
+    - Arts & Entertainment
+    - Artworker
+    - CAD Design
+    - Copywriter
+    - Creative Director
+    - Desktop Publishing
+    - Editorial
+    - Events Design
+  002:
+    - Fashion Design
+    - Games
+    - Graphic Design
+    - iGaming
+    - Interior Design
+    - Journalism
+    - Media Sales
+    - Music Industry
+    - New Media
+    - Photography
+    - Planner/ Buyer
+    - Print Room
+  003:
+    - Product Design
+    - Project Manager
+    - Publishing
+    - Radio
+    - Researcher
+    - Search - SEO & PPC
+    - Television
+    - Web Design
+    - Other Media & Creative
+specialisms:
+  001:
+    - Accountancy
+    - Accountancy (Qualified)
+    - Admin, Secretarial & PA
+    - Apprenticeships
+    - Banking
+    - Charity & VOluntary
+    - Construction & Property
+    - Customer Service
+    - Education
+    - Energy
+    - Engineering
+    - Estate Agency
+    - Financial Services
+  002:
+    - FMCG
+    - General Insurance
+    - Graduate Training & Internships
+    - Health & Medicine
+    - Hospitality & Catering
+    - Human Resources
+    - IT & Telecoms
+    - Legal
+    - Leisure & Tourism
+    - Manufacturing
+    - Marketing & PR
+    - Media, Digital & Creative
+    - Motoring & Automotive
+  003:
+    - Public Sector
+    - Purchasing
+    - Recruitment Consultancy
+    - Retails
+    - Sales
+    - Scientific
+    - Security & Safety
+    - Social Care
+    - Strategy & Consultancy
+    - Training
+    - Transport & Logistics
+    - Other

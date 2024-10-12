@@ -1,0 +1,5 @@
+name: Our Metro
+markdown: redcarpet
+pygments: true
+baseurl: '/refresh-jekyll/'
+exclude: ["Gemfile","Gemfile.lock","Procfile"]

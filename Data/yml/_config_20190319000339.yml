@@ -1,0 +1,17 @@
+highlighter: rouge
+safe: true
+lsi: false
+permalink: /:categories/:year-:month-:day-:title.html
+markdown: kramdown
+exclude:
+  - README.md
+  - import.rb
+  - archive/*.textile
+  - post.html
+  - s3
+  - lib
+  - Rakefile
+  - config.yaml
+  - Gemfile
+  - Gemfile.lock
+  - kapace

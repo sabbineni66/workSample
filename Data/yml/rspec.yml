@@ -1,0 +1,15 @@
+require:
+  - rubocop-rspec
+
+# Required for VSCode to auto-correct rspec files. It writes the file to /tmp/**/tmp.rb
+# rubocop-rspec ignores that file because it doesn't match the file pattern by default.
+# FIXME: This could be dangerous because we'll run this on all Ruby files, not just rspec.
+AllCops:
+  RSpec:
+    Patterns:
+      - _spec.rb
+      - "(?:^|/)spec/"
+      - tmp.rb
+
+RSpec/NestedGroups:
+  Max: 4

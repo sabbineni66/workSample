@@ -1,0 +1,79 @@
+---
+meta:
+  jobs:
+    rdpgmc:
+      persistent_disk_pool: small
+    rdpg_svc_lb:
+      persistent_disk_pool: small
+    sc-pgbdr-m0-r0:
+      persistent_disk_pool: small_ssd
+    sc-pgbdr-m0-r1:
+      persistent_disk_pool: small_ssd
+    sc-pgbdr-m1-r0:
+      persistent_disk_pool: small_ssd
+
+jobs:
+  - name: rdpgmc_z1
+    instances: 1
+    .: (( inject meta.jobs.rdpgmc ))
+    networks:
+    - name: rdpgmc_z1
+      static_ips: (( static_ips(0, 1, 2) ))
+    resource_pool: rdpgmc_z1
+
+  - name: rdpgmc_z2
+    instances: 1
+    .: (( inject meta.jobs.rdpgmc ))
+    networks:
+    - name: rdpgmc_z2
+      static_ips: (( static_ips(0, 1, 2) ))
+    resource_pool: rdpgmc_z2
+
+  - name: sc-pgbdr-m0-r0
+    .: (( inject meta.jobs.sc-pgbdr-m0-r0 ))
+    networks:
+    - name: rdpgsc_z1
+    resource_pool: rdpgsc_z1
+
+  - name: sc-pgbdr-m0-r1
+    .: (( inject meta.jobs.sc-pgbdr-m0-r1 ))
+    networks:
+    - name: rdpgsc_z2
+    resource_pool: rdpgsc_z2
+
+  - name: sc-pgbdr-m1-r0
+    .: (( inject meta.jobs.sc-pgbdr-m1-r0 ))
+    networks:
+    - name: rdpgsc_z1
+    resource_pool: rdpgsc_z1
+
+  - name: acceptance_tests
+    networks:
+    - name: rdpg
+    resource_pool: errand
+    .: (( inject meta.jobs.acceptance_tests ))
+
+  - name: smoke_tests
+    networks:
+    - name: rdpg
+    resource_pool: errand
+    .: (( inject meta.jobs.smoke_tests ))
+  
+  - name: backup_tests
+    networks:
+    - name: rdpg
+    resource_pool: errand
+    .: (( inject meta.jobs.backup_tests ))
+  
+  - name: broker_registrar
+    networks:
+    - name: rdpg
+    resource_pool: errand
+    .: (( inject meta.jobs.broker_registrar ))
+  
+  - name: broker_deregistrar
+    networks:
+    - name: rdpg
+    resource_pool: errand
+    .: (( inject meta.jobs.broker_deregistrar ))
+  

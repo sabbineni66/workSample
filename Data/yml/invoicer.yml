@@ -1,0 +1,6 @@
+invoice_from:
+  name: 'CodaCompany'
+  address1: '5555 Address'
+  city: 'SOME'
+  state: 'CA'
+  zip: '55555'

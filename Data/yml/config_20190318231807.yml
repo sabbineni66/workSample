@@ -1,0 +1,14 @@
+jid: git@localhost/agent
+password: testing
+debug: true
+jabber_debug: true
+log_path: :error
+pid_path: tmp/git.pid
+herault_jid: herault@localhost/herault
+actor_path: lib
+default_resources:
+  repository: "/repository/github/halorgium/test-2"
+actors:
+  vertebra_git/actors/watcher:
+  - "/ircnet/freenode"
+  - "/channel/halorgium"

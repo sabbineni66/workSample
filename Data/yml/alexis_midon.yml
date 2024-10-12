@@ -1,0 +1,19 @@
+groups:
+    - groupa
+recipes:
+    global:
+        - applications:wget
+        - applications:rsync
+        - applications:packer
+        - dotfiles::bash_it
+    mac_os_x:
+        - osxdefaults::set_computer_name
+        - applications::sublime_text_3
+attributes:
+    osxdefaults:
+        computername: macbnb 
+    homebrewalt:
+        apps:
+            - git-extras
+        cask_apps:
+            - sourcetree

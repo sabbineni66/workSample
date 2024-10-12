@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "alias": ["dropub.com"],
+  "builds": [
+    { "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ],
+  "routes": [
+    { "src": "/cid/(.*)", "dest": "/index.html" }
+  ]
+ }
+

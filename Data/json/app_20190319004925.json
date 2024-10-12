@@ -1,0 +1,23 @@
+{
+  "name": "River Guide",
+  "description": "Scrape a set of Amazon wishlists and email their contents, ordered cheapest to most expensive.",
+  "repository": "https://github.com/bscofield/river-guide",
+  "keywords": [ "ruby", "amazon" ],
+  "env": {
+    "RECIPIENT": {
+      "description": "The email address to send to",
+      "required": true
+    },
+    "IDS": {
+      "description": "A space-separated list of wishlist IDs to scrape",
+      "required": true
+    }
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake create_db"
+  }
+  "addons": [
+    "mailgun:starter",
+    "scheduler:standard"
+  ]
+}

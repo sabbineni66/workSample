@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cycle: 
+  measured_on: 2013-04-14
+  nutrition: 1
+  workout: 1
+  mobilization: 1
+  supplement: 1
+  habit: 1
+
+two:
+  cycle: 
+  measured_on: 2013-04-14
+  nutrition: 1
+  workout: 1
+  mobilization: 1
+  supplement: 1
+  habit: 1

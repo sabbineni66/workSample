@@ -1,0 +1,11 @@
+{
+    "languages": {
+        "en-gb": "strings.en-gb.json",
+        "en-us": "strings.en-us.json"
+    },
+    "settings": {
+        "myapp": {
+            "filters": ["myapp"]
+        }
+    }
+}

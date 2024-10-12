@@ -1,0 +1,8 @@
+title: Your Title
+author: Your Name
+strict: true
+kindle: true
+pdf: true
+kindlegen_mobi: false
+octopress: false
+auto_increment_chapter_names: true

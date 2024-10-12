@@ -1,0 +1,726 @@
+[
+  {
+    "shortcut": ":D",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/bigsmile.png"
+  },
+  {
+    "shortcut": ":-D",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/bigsmile.png"
+  },
+  {
+    "shortcut": ":o",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/gasp.png"
+  },
+  {
+    "shortcut": ":Z",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/sealed.png"
+  },
+  {
+    "shortcut": ":p",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/tongue.png"
+  },
+  {
+    "shortcut": ";p",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/winktongue.gif"
+  },
+  {
+    "shortcut": ">:-(",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/angry.png"
+  },
+  {
+    "shortcut": "8)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/cool.png"
+  },
+  {
+    "shortcut": "8-)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/cool.png"
+  },
+  {
+    "shortcut": ":'(",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/cry.png"
+  },
+  {
+    "shortcut": ":(",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/frown.png"
+  },
+  {
+    "shortcut": ":#",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/footinmouth.png"
+  },
+  {
+    "shortcut": "(embarrassed)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/embarrassed.png"
+  },
+  {
+    "shortcut": ":')",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/happytear.gif"
+  },
+  {
+    "shortcut": "O:)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/innocent.png"
+  },
+  {
+    "shortcut": ":-*",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/kiss.png"
+  },
+  {
+    "shortcut": ":$",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/moneymouth.png"
+  },
+  {
+    "shortcut": "(oops)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/oops.png"
+  },
+  {
+    "shortcut": ":\\",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/slant.png"
+  },
+  {
+    "shortcut": ":)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/smile.png"
+  },
+  {
+    "shortcut": ":-)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/smile.png"
+  },
+  {
+    "shortcut": "=)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/smile.png"
+  },
+  {
+    "shortcut": ":|",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/straightface.png"
+  },
+  {
+    "shortcut": "(thumbsdown)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/thumbs_down.png"
+  },
+  {
+    "shortcut": "(thumbsup)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/thumbs_up.png"
+  },
+  {
+    "shortcut": ";)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/wink.png"
+  },
+  {
+    "shortcut": ";-)",
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/wink.png"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/chris.png",
+    "shortcut": "(chris)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/facepalm.png",
+    "shortcut": "(facepalm)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/garret.png",
+    "shortcut": "(garret)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/krang.gif",
+    "shortcut": "(krang)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/lolwut.png",
+    "shortcut": "(lolwut)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/pete.png",
+    "shortcut": "(pete)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/pirate.gif",
+    "shortcut": "(pirate)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/poo.png",
+    "shortcut": "(poo)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/coffee.png",
+    "shortcut": "(coffee)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/beer.png",
+    "shortcut": "(beer)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/sadpanda.png",
+    "shortcut": "(sadpanda)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/tree.png",
+    "shortcut": "(tree)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/present.png",
+    "shortcut": "(present)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/rudolph.png",
+    "shortcut": "(rudolph)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/santa.png",
+    "shortcut": "(santa)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/kwanzaa.png",
+    "shortcut": "(kwanzaa)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/menorah.png",
+    "shortcut": "(menorah)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/cornelius.png",
+    "shortcut": "(cornelius)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/bumble.png",
+    "shortcut": "(bumble)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/rageguy.png",
+    "shortcut": "(rageguy)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/troll.png",
+    "shortcut": "(troll)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/rageguy.png",
+    "shortcut": "(fu)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/yey.png",
+    "shortcut": "(yey)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/yuno.png",
+    "shortcut": "(yuno)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/6/itsatrap.png",
+    "shortcut": "(itsatrap)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/heart.png",
+    "shortcut": "(heart)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/foreveralone.png",
+    "shortcut": "(foreveralone)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/washington.png",
+    "shortcut": "(washington)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/lincoln.png",
+    "shortcut": "(lincoln)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/jobs.png",
+    "shortcut": "(jobs)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/taft.png",
+    "shortcut": "(taft)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/gates.png",
+    "shortcut": "(gates)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/awyea.png",
+    "shortcut": "(awyeah)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/cerealguy.png",
+    "shortcut": "(cereal)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/challengeaccepted.png",
+    "shortcut": "(challengeaccepted)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/content.png",
+    "shortcut": "(content)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/dumbbitch.png",
+    "shortcut": "(dumb)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/lol.png",
+    "shortcut": "(lol)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/megusta.png",
+    "shortcut": "(megusta)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/okay.png",
+    "shortcut": "(okay)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/omg.png",
+    "shortcut": "(omg)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/sadtroll.png",
+    "shortcut": "(sadtroll)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/reddit.png",
+    "shortcut": "(reddit)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/seomoz.png",
+    "shortcut": "(seomoz)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/shamrock.png",
+    "shortcut": "(shamrock)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/greenbeer.png",
+    "shortcut": "(greenbeer)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/wtf.png",
+    "shortcut": "(wtf)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/ohcrap.png",
+    "shortcut": "(ohcrap)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/8071/mike.png",
+    "shortcut": "(arrington)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/fuckyeah.png",
+    "shortcut": "(fuckyeah)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/basket.png",
+    "shortcut": "(basket)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/bunny.png",
+    "shortcut": "(bunny)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/cadbury.png",
+    "shortcut": "(cadbury)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/chocobunny.png",
+    "shortcut": "(chocobunny)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/zzz.gif",
+    "shortcut": "(zzz)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/ducreux.png",
+    "shortcut": "(ducreux)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/android.png",
+    "shortcut": "(android)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/cake.png",
+    "shortcut": "(cake)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/rebeccablack.png",
+    "shortcut": "(rebeccablack)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/pbr.png",
+    "shortcut": "(pbr)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/dosequis.png",
+    "shortcut": "(dosequis)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/ilied.png",
+    "shortcut": "(ilied)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/jackie.png",
+    "shortcut": "(jackie)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/areyoukiddingme.png",
+    "shortcut": "(areyoukiddingme)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/sweetjesus.png",
+    "shortcut": "(sweetjesus)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/farnsworth.png",
+    "shortcut": "(goodnews)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/10678/kennypowers.png",
+    "shortcut": "(kennypowers)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/disapproval.png",
+    "shortcut": "(disapproval)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/zoidberg.png",
+    "shortcut": "(zoidberg)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/badpokerface.png",
+    "shortcut": "(badpokerface)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/notbad.png",
+    "shortcut": "(notbad)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/pokerface.png",
+    "shortcut": "(pokerface)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/philosoraptor.png",
+    "shortcut": "(philosoraptor)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/samuel.png",
+    "shortcut": "(samuel)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/chewy.png",
+    "shortcut": "(chewie)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/pumpkin.png",
+    "shortcut": "(pumpkin)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/ghost.png",
+    "shortcut": "(ghost)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/candycorn.png",
+    "shortcut": "(candycorn)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/caruso.png",
+    "shortcut": "(caruso)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/haveaseat.png",
+    "shortcut": "(haveaseat)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/scumbag.png",
+    "shortcut": "(scumbag)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/yodawg.png",
+    "shortcut": "(yodawg)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/truestory.png",
+    "shortcut": "(truestory)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/derp.png",
+    "shortcut": "(derp)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/stare.png",
+    "shortcut": "(stare)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/allthethings.png",
+    "shortcut": "(allthethings)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/freddie.png",
+    "shortcut": "(freddie)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/wat.png",
+    "shortcut": "(wat)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/skyrim.png",
+    "shortcut": "(skyrim)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/dealwithit.gif",
+    "shortcut": "(dealwithit)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/nothingtodohere.png",
+    "shortcut": "(nothingtodohere)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/orly.png",
+    "shortcut": "(orly)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/hipster.png",
+    "shortcut": "(hipster)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/ashton.png",
+    "shortcut": "(ashton)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/chompy.gif",
+    "shortcut": "(chompy)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/fry.png",
+    "shortcut": "(fry)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/dance.gif",
+    "shortcut": "(dance)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/atlassian.png",
+    "shortcut": "(atlassian)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/drevil.png",
+    "shortcut": "(drevil)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/boom.gif",
+    "shortcut": "(boom)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/ohgodwhy.jpeg",
+    "shortcut": "(ohgodwhy)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/ceilingcat.png",
+    "shortcut": "(ceilingcat)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/pingpong.png",
+    "shortcut": "(pingpong)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/tea.png",
+    "shortcut": "(tea)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/awthanks.png",
+    "shortcut": "(awthanks)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/indeed.png",
+    "shortcut": "(indeed)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/badass.png",
+    "shortcut": "(badass)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/ninja.png",
+    "shortcut": "(ninja)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/notsureif-1342015652.png",
+    "shortcut": "(notsureif)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/fwp-1342647892.png",
+    "shortcut": "(fwp)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/firstworldproblem-1342647915.png",
+    "shortcut": "(firstworldproblem)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/chucknorris-1342735388.png",
+    "shortcut": "(chucknorris)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/notsureifgusta-1346093311.png",
+    "shortcut": "(notsureifgusta)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/twss-1348262400.png",
+    "shortcut": "(twss)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/success-1348262443.png",
+    "shortcut": "(success)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/iseewhatyoudidthere-1348262983.png",
+    "shortcut": "(iseewhatyoudidthere)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/gangnamstyle-1349387710.gif",
+    "shortcut": "(gangnamstyle)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/shrug-1349463255.png",
+    "shortcut": "(shrug)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/tableflip-1349463264.png",
+    "shortcut": "(tableflip)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/cerealspit-1349463282.png",
+    "shortcut": "(cerealspit)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/bitbucket-1349806629.png",
+    "shortcut": "(bitbucket)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/jira-1350074257.png",
+    "shortcut": "(jira)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/obama-1352231289.png",
+    "shortcut": "(obama)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/romney-1352231355.png",
+    "shortcut": "(romney)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/trump-1352738237.png",
+    "shortcut": "(trump)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/grumpycat-1366734534.png",
+    "shortcut": "(grumpycat)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/confluence-1367948832.png",
+    "shortcut": "(confluence)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/yougotitdude-1368219664.gif",
+    "shortcut": "(yougotitdude)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/clarence-1369414730.png",
+    "shortcut": "(clarence)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/continue-1369948567.png",
+    "shortcut": "(continue)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/failed-1369948578.png",
+    "shortcut": "(failed)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/successful-1369948592.png",
+    "shortcut": "(successful)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/unknown-1369948620.png",
+    "shortcut": "(unknown)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/branch-1372171579.png",
+    "shortcut": "(branch)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/mindblown-1374883007.gif",
+    "shortcut": "(mindblown)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/badjokeeel-1375463017.png",
+    "shortcut": "(badjokeeel)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/gtfo-1381428639.png",
+    "shortcut": "(gtfo)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/huh-1381428657.png",
+    "shortcut": "(huh)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/turkey-1386104992.png",
+    "shortcut": "(turkey)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/fonzie-1386958620.png",
+    "shortcut": "(fonzie)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/stash-1391127729.png",
+    "shortcut": "(stash)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/nextgendev-1394050121.png",
+    "shortcut": "(nextgendev)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/hodor-1396908720.png",
+    "shortcut": "(hodor)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/arya-1396908740.png",
+    "shortcut": "(arya)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/tyrion-1396908780.png",
+    "shortcut": "(tyrion)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/jaime-1396908791.png",
+    "shortcut": "(jaime)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/ned-1396908800.png",
+    "shortcut": "(ned)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/jonsnow-1396908809.png",
+    "shortcut": "(jonsnow)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/daenerys-1396908819.png",
+    "shortcut": "(daenerys)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/joffrey-1396908826.png",
+    "shortcut": "(joffrey)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/tywin-1396908839.png",
+    "shortcut": "(tywin)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/hipchat-1399396865.png",
+    "shortcut": "(hipchat)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/doge-1401134407.png",
+    "shortcut": "(doge)"
+  },
+  {
+    "url": "https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/whynotboth-1402679402.gif",
+    "shortcut": "(whynotboth)"
+  }
+]

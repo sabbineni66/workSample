@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+<syntax name="sourcecode.haskell">
+    <zones>
+        <include collection="toplevel"/>
+        <include collection="base"/>
+    </zones>
+    <library>
+        <collection name="comment">
+            <zone name="metadata.processing.preprocessor">
+                <expression>^\s*(#).*$\n?</expression>
+                <capture number="1" name="delimiter.other"/>
+            </zone>
+            <zone name="metadata.processing.comment">
+                <starts-with>
+                    <expression>\{-#</expression>
+                    <capture number="0" name="delimiter.balanced.brace.open"/>
+                </starts-with>
+                <ends-with>
+                    <expression>#-\}</expression>
+                    <capture number="0" name="delimiter.balanced.brace.close"/>
+                </ends-with>
+                <subzones>
+                    <zone name="keyword.other.processing">
+                        <expression>\b(LANGUAGE|UNPACK|INLINE)\b</expression>
+                    </zone>
+                </subzones>
+            </zone>
+            <zone name="metadata.comment.documentation.block">
+                <starts-with>
+                    <expression>\{-\|</expression>
+                    <capture number="0" name="delimiter.balanced.brace.open"/>
+                </starts-with>
+                <ends-with>
+                    <expression>-\}</expression>
+                    <capture number="0" name="delimiter.balanced.brace.close"/>
+                </ends-with>
+                <subzones>
+                    <include collection="comment-contents"/>
+                </subzones>
+            </zone>
+            <zone name="metadata.comment.block">
+                <starts-with>
+                    <expression>\{-</expression>
+                    <capture number="0" name="delimiter.balanced.brace.open"/>
+                </starts-with>
+                <ends-with>
+                    <expression>-\}</expression>
+                    <capture number="0" name="delimiter.balanced.brace.close"/>
+                </ends-with>
+                <subzones>
+                    <include collection="comment-contents"/>
+                </subzones>
+            </zone>
+            <zone name="metadata.comment.documentation.line.prefix">
+                <starts-with>
+                    <expression>-{2}\|</expression>
+                    <capture number="0" name="delimiter.other"/>
+                </starts-with>
+                <ends-with>
+                    <expression>^(?!\s*-{2})</expression>
+                </ends-with>
+            </zone>
+            <zone name="metadata.comment.documentation.line.postfix">
+                <starts-with>
+                    <expression>-{2}\^</expression>
+                    <capture number="0" name="delimiter.other"/>
+                </starts-with>
+                <ends-with>
+                    <expression>^(?!\s*-{2})</expression>
+                </ends-with>
+            </zone>
+            <zone name="metadata.comment.line">
+                <expression>(-{2,}).*$\n?</expression>
+                <capture number="1" name="delimiter.other"/>
+            </zone>
+        </collection>
+        <collection name="comment-contents">
+            <zone>
+                <starts-with>
+                    <expression>\{-</expression>
+                </starts-with>
+                <ends-with>
+                    <expression>-\}</expression>
+                </ends-with>
+                <subzones>
+                    <include collection="comment-contents"/>
+                </subzones>
+            </zone>
+        </collection>
+        <collection name="toplevel">
+            <include collection="module"/>
+            <include collection="import"/>
+            <include collection="type"/>
+            <include collection="class"/>
+            <include collection="instance"/>
+            <include collection="default"/>
+            <include collection="fixity"/>
+        </collection>
+        <collection name="module">
+            <zone name="container.module">
+                <starts-with>
+                    <expression>^\s*(module)\s+([A-Z][A-Za-z_0-9'\.]*)</expression>
+                    <capture number="1" name="keyword.definition.module"/>
+                    <capture number="2" name="identifier.module.definition"/>
+                </starts-with>
+                <ends-with>
+<!-- Never ends; the rest of the file belongs to this module. -->
+<!-- <expression>^(?&lt;!^)</expression> -->
+<!-- Let's pretend to end when we declare another module. -->
+                    <expression>^(?=module\b)</expression>
+                </ends-with>
+                <subzones>
+                    <include collection="toplevel"/>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+        </collection>
+        <collection name="import">
+            <zone name="container.statement.import">
+                <starts-with>
+                    <expression>^(\s*)(import)\b</expression>
+                    <capture number="2" name="keyword.control.import"/>
+                </starts-with>
+                <ends-with>
+                    <expression>($|;)</expression>
+                    <capture number="1" name="delimiter.terminator"/>
+                </ends-with>
+                <subzones>
+                    <zone name="keyword.modifier.import">
+                        <expression>\b(qualified|as|hiding)\b</expression>
+                    </zone>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+        </collection>
+        <collection name="type">
+            <zone name="container.type.data">
+                <starts-with>
+                    <expression>^(\s*)(type|newtype|data)\b</expression>
+                    <capture number="2" name="keyword.definition.type.data"/>
+                </starts-with>
+                <ends-with>
+                    <expression>^(?:$|(?!\1\s+))</expression>
+                </ends-with>
+                <subzones>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+        </collection>
+        <collection name="class">
+            <zone name="container.type.class">
+                <starts-with>
+                    <expression>^(\s*)(class)\b</expression>
+                    <capture number="2" name="keyword.definition.type.class"/>
+                </starts-with>
+                <ends-with>
+                    <expression>^(?:$|(?!\1\s+))</expression>
+                </ends-with>
+                <subzones>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+        </collection>
+        <collection name="instance">
+            <zone name="container.type.instance">
+                <starts-with>
+                    <expression>^(\s*)(instance)\b</expression>
+                    <capture number="2" name="keyword.definition.type.instance"/>
+                </starts-with>
+                <ends-with>
+                    <expression>^(?:$|(?!\1\s+))</expression>
+                </ends-with>
+                <subzones>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+        </collection>
+        <collection name="default">
+            <zone name="container.statement.default">
+                <expression>^(\s*)(default)\s+(\()(.*)(\))\s*$\n?</expression>
+                <capture number="2" name="keyword.modifier.default"/>
+                <capture number="3" name="delimiter.balanced.paren.open"/>
+                <capture number="4">
+                    <subzones>
+                        <include collection="base"/>
+                    </subzones>
+                </capture>
+                <capture number="5" name="delimiter.balanced.paren.close"/>
+            </zone>
+        </collection>
+        <collection name="fixity">
+            <zone name="container.statement.fixity">
+                <expression>^(\s*)(infix[rl]?)\s+(.*)$\n?</expression>
+                <capture number="2" name="keyword.modifier.fixity"/>
+                <capture number="3">
+                    <subzones>
+                        <include collection="base"/>
+                    </subzones>
+                </capture>
+            </zone>
+        </collection>
+        <collection name="base">
+            <include collection="comment"/>
+            <include collection="literal"/>
+            <include collection="reserved"/>
+            <include collection="support"/>
+            <include collection="function"/>
+            <include collection="fallback"/>
+        </collection>
+        <collection name="literal">
+            <include collection="number"/>
+            <include collection="char"/>
+            <include collection="string"/>
+            <include collection="composite"/>
+        </collection>
+        <collection name="number">
+            <zone name="literal.numeric.integer.hex">
+                <expression>0[xX][0-9A-Fa-f]+</expression>
+            </zone>
+            <zone name="literal.numeric.integer.octal">
+                <expression>0[oO][0-7]+</expression>
+            </zone>
+            <zone name="literal.numeric.float">
+                <expression>[0-9]+\.[0-9]+([eE][\-\+]?[0-9]+)?</expression>
+                <capture number="1" name="literal.numeric.exponent"/>
+            </zone>
+            <zone name="literal.numeric.float">
+                <expression>[0-9]+([eE][\-\+]?[0-9]+)</expression>
+                <capture number="1" name="literal.numeric.exponent"/>
+            </zone>
+            <zone name="literal.numeric.integer.decimal">
+                <expression>[0-9]+</expression>
+            </zone>
+        </collection>
+        <collection name="char">
+            <zone name="literal.character">
+                <expression>(')(?:(\\.)|[^'\\])(')</expression>
+                <capture number="1" name="delimiter.balanced.quote.open"/>
+                <capture number="2" name="literal.escape"/>
+                <capture number="3" name="delimiter.balanced.quote.close"/>
+            </zone>
+        </collection>
+        <collection name="string">
+            <zone name="literal.string.quoted.double">
+                <expression>(")(?:(\\.)|[^"\\])*(")</expression>
+                <capture number="1" name="delimiter.balanced.quote.open"/>
+                <capture number="2" name="literal.escape"/>
+                <capture number="3" name="delimiter.balanced.quote.close"/>
+            </zone>
+        </collection>
+        <collection name="composite">
+            <zone name="literal.collection.unit">
+                <expression>(\()(\))</expression>
+                <capture number="1" name="delimiter.balanced.paren.open"/>
+                <capture number="2" name="delimiter.balanced.paren.close"/>
+            </zone>
+            <zone name="literal.collection.tuple">
+                <starts-with>
+                    <expression>\(</expression>
+                    <capture number="0" name="delimiter.balanced.paren.open"/>
+                </starts-with>
+                <ends-with>
+                    <expression>\)</expression>
+                    <capture number="0" name="delimiter.balanced.paren.close"/>
+                </ends-with>
+                <subzones>
+                    <zone name="delimiter.separator.tuple">
+                        <expression>,</expression>
+                    </zone>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+            <zone name="literal.collection.list.empty">
+                <expression>(\[)(\])</expression>
+                <capture number="1" name="delimiter.balanced.bracket.open"/>
+                <capture number="2" name="delimiter.balanced.bracket.close"/>
+            </zone>
+            <zone name="literal.collection.list">
+                <starts-with>
+                    <expression>\[</expression>
+                    <capture number="0" name="delimiter.balanced.bracket.open"/>
+                </starts-with>
+                <ends-with>
+                    <expression>\]</expression>
+                    <capture number="0" name="delimiter.balanced.bracket.close"/>
+                </ends-with>
+                <subzones>
+                    <zone name="delimiter.separator.list">
+                        <expression>,</expression>
+                    </zone>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+            <zone name="literal.collection.record">
+                <starts-with>
+                    <expression>\{</expression>
+                    <capture number="0" name="delimiter.balanced.brace.open"/>
+                </starts-with>
+                <ends-with>
+                    <expression>\}</expression>
+                    <capture number="0" name="delimiter.balanced.brace.close"/>
+                </ends-with>
+                <subzones>
+                    <zone name="delimiter.separator.record">
+                        <expression>,</expression>
+                    </zone>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+        </collection>
+        <collection name="reserved">
+            <zone name="keyword.control">
+                <expression>\b(let|in|if|then|else|case|of|do|where)\b</expression>
+            </zone>
+            <zone name="keyword.modifier">
+                <expression>\b(infix[lr]?)\b</expression>
+            </zone>
+            <zone name="keyword.definition">
+                <expression>\b(type|data|deriving|newtype|class|instance|default|module|import)\b</expression>
+            </zone>
+            <zone name="operator.reserved">
+                <expression>,|\.\.|:{1,2}|=>?|\\|&lt;-|->|@|~|\|</expression>
+            </zone>
+            <zone name="keyword.control">
+                <expression>\b(otherwise)\b</expression>
+            </zone>
+            <zone name="identifier.variable.universal">
+                <expression>_</expression>
+            </zone>
+        </collection>
+        <collection name="function">
+            <zone name="container.function.type">
+                <starts-with>
+                    <expression>^(\s*)([a-z_][A-Za-z_0-9']*)(?:\s*(,)\s*([a-z_][A-Za-z_0-9']*))*\s+(::)</expression>
+                    <capture number="2" name="identifier.function"/>
+                    <capture number="3" name="delimiter.separator.function.name"/>
+                    <capture number="4" name="identifier.function"/>
+                    <capture number="5" name="delimiter.separator.function.type"/>
+                </starts-with>
+                <ends-with>
+                    <expression>^(?:$|(?!\1\s+))</expression>
+                </ends-with>
+                <subzones>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+            <zone name="container.block.function.body">
+                <starts-with>
+                    <expression>^(\s*)([a-z_][A-Za-z_0-9']*)\s+((?:(?!=|\||$).)*)(?==|\|)</expression>
+                    <capture number="2" name="identifier.function"/>
+                    <capture number="3">
+                        <subzones>
+                            <include collection="base"/>
+                        </subzones>
+                    </capture>
+                </starts-with>
+                <ends-with>
+                    <expression>^(?:$|(?!\1\s+))</expression>
+                </ends-with>
+                <subzones>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+            <zone name="container.function.operator.type">
+                <starts-with>
+<!-- I won't even pretend to be able to parse mixfix declarations. -->
+                    <expression>^(\s*)\(([!#\$%&amp;\*\+\./&lt;=>?\@\\\^\|\-~][!#\$%&amp;\*\+\./&lt;=>?\@\\\^\|\-~:]*)\)(?:\s*(,)\s*\(([!#\$%&amp;\*\+\./&lt;=>?\@\\\^\|\-~][!#\$%&amp;\*\+\./&lt;=>?\@\\\^\|\-~:]*)\))*\s+(::)</expression>
+                    <capture number="2" name="identifier.function.operator"/>
+                    <capture number="3" name="delimiter.separator.function.operator.name"/>
+                    <capture number="4" name="identifier.function.operator"/>
+                    <capture number="5" name="delimiter.separator.operator.type"/>
+                </starts-with>
+                <ends-with>
+                    <expression>^(?:$|(?!\1\s+))</expression>
+                </ends-with>
+                <subzones>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+            <zone name="container.block.function.operator.body">
+                <starts-with>
+                    <expression>^(\s*)\(([!#\$%&amp;\*\+\./&lt;=>?\@\\\^\|\-~][!#\$%&amp;\*\+\./&lt;=>?\@\\\^\|\-~:]*)\)\s+((?:(?!=|\||$).)*)(?==|\|)</expression>
+                    <capture number="2" name="identifier.function.operator"/>
+                    <capture number="3">
+                        <subzones>
+                            <include collection="base"/>
+                        </subzones>
+                    </capture>
+                </starts-with>
+                <ends-with>
+                    <expression>^(?:$|(?!\1\s+))</expression>
+                </ends-with>
+                <subzones>
+                    <include collection="base"/>
+                </subzones>
+            </zone>
+        </collection>
+        <collection name="support">
+            <zone name="identifier.constant.prelude">
+                <expression>\b(Just|Nothing|Left|Right|True|False|LT|EQ|GT)\b</expression>
+            </zone>
+            <zone name="identifier.function.prelude">
+                <expression>\b(abs|acos|acosh|all|and|any|appendFile|applyM|asTypeOf|asin|asinh|atan|atan2|atanh|break|catch|ceiling|compare|concat|concatMap|const|cos|cosh|curry|cycle|decodeFloat|div|divMod|drop|dropWhile|elem|encodeFloat|enumFrom|enumFromThen|enumFromThenTo|enumFromTo|error|even|exp|exponent|fail|filter|flip|floatDigits|floatRadix|floatRange|floor|fmap|foldl|foldl1|foldr|foldr1|fromEnum|fromInteger|fromIntegral|fromRational|fst|gcd|getChar|getContents|getLine|head|id|init|interact|ioError|isDenormalized|isIEEE|isInfinite|isNaN|isNegativeZero|iterate|last|lcm|length|lex|lines|log|logBase|lookup|map|mapM|mapM_|max|maxBound|maximum|maybe|min|minBound|minimum|mod|negate|not|notElem|null|odd|or|otherwise|pi|pred|print|product|properFraction|putChar|putStr|putStrLn|quot|quotRem|read|readFile|readIO|readList|readLn|readParen|reads|readsPrec|realToFrac|recip|rem|repeat|replicate|return|reverse|round|scaleFloat|scanl|scanl1|scanr|scanr1|seq|sequence|sequence_|show|showChar|showList|showParen|showString|shows|showsPrec|significand|signum|sin|sinh|snd|span|splitAt|sqrt|subtract|succ|sum|tail|take|takeWhile|tan|tanh|toEnum|toInteger|toRational|truncate|uncurry|undefined|unlines|until|unwords|unzip|unzip3|userError|words|writeFile|zip|zip3|zipWith|zipWith3)\b</expression>
+            </zone>
+            <zone name="identifier.type.prelude">
+                <expression>\b(Monad|Functor|Eq|Ord|Read|Show|Num|(Frac|Ra)tional|Enum|Bounded|Real(Frac|Float)?|Integral|Floating)\b</expression>
+            </zone>
+            <zone name="identifier.type.prelude">
+                <expression>\b(Int(eger)?|Maybe|Either|Bool|Float|Double|Char|String|Ordering|ShowS|ReadS|FilePath|IO(Error)?)\b</expression>
+            </zone>
+        </collection>
+        <collection name="fallback">
+            <zone name="container.identifier.operator">
+                <expression>(\b[A-Z](?:\.[A-Z]|[A-Za-z_0-9'])*\.)?([!#\$%&amp;\*\+\./&lt;=>?\@\\\^\|\-~][!#\$%&amp;\*\+\./&lt;=>?\@\\\^\|\-~:]*)</expression>
+                <capture number="1" name="identifier.module"/>
+                <capture number="2" name="identifier.operator"/>
+            </zone>
+            <zone name="identifier.operator">
+                <expression>([!#\$%&amp;\*\+\./&lt;=>?\@\\\^\|\-~][!#\$%&amp;\*\+\./&lt;=>?\@\\\^\|\-~:]*)</expression>
+            </zone>
+            <zone nam="identifier.operator.infix">
+                <expression>(`)(\b[A-Z](?:\.[A-Z]|[A-Za-z_0-9'])*\.)?([a-z_][A-Za-z_0-9']*)(`)</expression>
+                <capture number="1" name="delimiter.balanced.backtick.open"/>
+                <capture number="2" name="identifier.module"/>
+                <capture number="3" name="identifier.operator"/>
+                <capture number="4" name="delimiter.balanced.backtick.close"/>
+            </zone>
+            <zone name="container.identifier.function">
+                <expression>\b([A-Z](?:\.[A-Z]|[A-Za-z_0-9'])*\.)?([a-z_][A-Za-z_0-9']*)\b</expression>
+                <capture number="1" name="identifier.module"/>
+                <capture number="2" name="identifier.function"/>
+            </zone>
+            <zone name="identifier.function">
+                <expression>\b([a-z_][A-Za-z_0-9']*)</expression>
+            </zone>
+            <zone name="container.identifier.type">
+                <expression>\b([A-Z](?:\.[A-Z]|[A-Za-z_0-9'])*\.)?([A-Z][A-Za-z_0-9']*)\b</expression>
+                <capture number="1" name="identifier.module"/>
+                <capture number="2" name="identifier.type"/>
+            </zone>
+            <zone name="identifier.type">
+                <expression>\b([A-Z][A-Za-z_0-9'\.]*)</expression>
+            </zone>
+        </collection>
+    </library>
+</syntax>

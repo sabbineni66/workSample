@@ -1,0 +1,31 @@
+{
+  "name": "psc-pane",
+  "author": "Antti Holvikari <anttih@gmail.com>",
+  "license": "LGPL-3.0",
+  "version": "3.0.0",
+  "description": "Auto reloading PureScript compiler",
+  "main": "psc-pane.js",
+  "repository": "https://github.com/anttih/psc-pane",
+  "bin": {
+    "psc-pane": "index.js"
+  },
+  "scripts": {
+    "compile": "purs compile 'src/**/*.purs' 'bower_components/purescript-*/src/**/*.purs'",
+    "bundle": "purs bundle \"output/*/*.js\" --output psc-pane.js --module PscPane.Main --main PscPane.Main",
+    "psc-pane": "npm run build && ./index.js -t",
+    "build": "npm run compile && npm run bundle",
+    "prepublish": "bower install && npm run build"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "blessed": "0.1.81",
+    "minimatch": "3.0.3",
+    "watchpack": "1.1.0",
+    "yargs": "4.7.0"
+  },
+  "devDependencies": {
+    "purescript": "0.11.4"
+  }
+}

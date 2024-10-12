@@ -1,0 +1,23 @@
+{
+  "name": "purescreeps",
+  "license": "ISC",
+  "version": "1.0.0",
+  "main": "index.js",
+  "homepage": "https://github.com/leemhenson/purescreeps",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leemhenson/purescreeps.git"
+  },
+  "postinstall": "bower install",
+  "scripts": {
+    "build": "pulp build",
+    "test": "pulp test"
+  },
+  "devDependencies": {
+    "grunt-screeps": "^1.2.1",
+    "pscid": "^1.12.0",
+    "pulp": "^10.0.0",
+    "purescript": "^0.10.5",
+    "purescript-psa": "^0.4.0"
+  }
+}

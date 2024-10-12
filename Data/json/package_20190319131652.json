@@ -1,0 +1,55 @@
+{
+  "name": "st-popup-menu",
+  "version": "1.2.1",
+  "description": "A web component to display a popup menu on hover (or click)",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "stencil build",
+    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+    "serve": "stencil-dev-server",
+    "start": "npm run dev",
+    "test": "jest",
+    "test.watch": "jest --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@stencil/core": "latest",
+    "@stencil/dev-server": "latest",
+    "@stencil/utils": "0.0.5",
+    "@types/jest": "latest",
+    "jest": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andregoncalves/st-popup-menu.git"
+  },
+  "author": {
+    "name": "Andre Goncalves",
+    "email": "andre@andregoncalves.com",
+    "url": "https://andregoncalves.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andregoncalves/st-popup-menu"
+  },
+  "homepage": "https://github.com/andregoncalves/st-popup-menu",
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  }
+}

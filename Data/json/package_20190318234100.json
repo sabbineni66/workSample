@@ -1,0 +1,94 @@
+{
+  "name": "passwoid",
+  "version": "6.0.4",
+  "description": "A reasonably secure password generator",
+  "keywords": [
+    "random",
+    "password"
+  ],
+  "scripts": {
+    "pretest": "eslint .",
+    "release": "standard-version",
+    "test": "jest"
+  },
+  "author": {
+    "name": "Mark Cornick",
+    "email": "mark@markcornick.com",
+    "url": "https://markcornick.com/"
+  },
+  "license": "Apache-2.0",
+  "files": [
+    "bin.js",
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "bin": {
+    "passwoid": "bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markcornick/passwoid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/markcornick/passwoid/issues"
+  },
+  "homepage": "https://github.com/markcornick/passwoid",
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.10.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-xo": "^0.25.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.3.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "lint-staged": "^8.1.0",
+    "lodash.uniq": "^4.5.0",
+    "mock-utf8-stream": "^0.1.1",
+    "prettier": "^1.15.3",
+    "standard-version": "^4.4.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && lint-staged",
+      "pre-push": "npm test"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "tiptop",
+  "version": "0.0.1",
+  "author": "Nathan Herald <me@nathanherald.com>",
+  "description": "Listen to the web using the web",
+  "main": "index.html",
+  "dependencies": {
+    "whatwg-fetch": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myobie/tiptop.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/myobie/tiptop/issues"
+  },
+  "homepage": "https://github.com/myobie/tiptop#readme"
+}

@@ -1,0 +1,90 @@
+{
+  "private": true,
+  "name": "@uiengine/monorepo",
+  "description": "UIengine Monorepo",
+  "license": "MIT",
+  "author": "Dennis Reimann <mail@dennisreimann.de> (https://dennisreimann.de)",
+  "homepage": "https://github.com/dennisreimann/uiengine",
+  "bugs": "https://github.com/dennisreimann/uiengine/issues",
+  "repository": "dennisreimann/uiengine",
+  "devDependencies": {
+    "c8": "3.4.0",
+    "coveralls": "3.0.3",
+    "cross-env": "5.2.0",
+    "ejs": "2.6.1",
+    "eslint": "5.14.1",
+    "eslint-config-standard": "12.0.0",
+    "eslint-friendly-formatter": "4.0.1",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-node": "8.0.1",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-standard": "4.0.0",
+    "fs-extra": "7.0.1",
+    "handlebars": "4.1.0",
+    "husky": "1.3.1",
+    "lerna": "3.13.0",
+    "lighthouse-ci": "1.4.1",
+    "lint-staged": "8.1.4",
+    "marko": "4.15.2",
+    "mocha": "6.0.1",
+    "mocha-lcov-reporter": "1.3.0",
+    "mocha-sinon": "2.1.0",
+    "pug": "2.0.3",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "rimraf": "2.6.3",
+    "sinon": "7.2.4",
+    "standard": "12.0.1",
+    "vue": "2.6.7"
+  },
+  "scripts": {
+    "clean": "lerna clean --yes && rimraf node_modules test/project/node_modules",
+    "setup": "yarn install && lerna bootstrap",
+    "start": "cd packages/ui && yarn start",
+    "build": "cd packages/ui && yarn build",
+    "lint": "lerna run lint --parallel && eslint test/support && cd test/project && yarn run lint",
+    "test": "mocha -R dot packages/*/test/**/*_test.js",
+    "test-watch": "yarn test --grep @nowatch --invert -w --extensions ejs,hbs,js,jsx,json,marko,md,pug,vhtml,vue,yml",
+    "coverage": "c8 yarn test --forbid-only",
+    "coverage:deploy": "c8 report --reporter=text-lcov | coveralls",
+    "release": "yarn audit && yarn run lint && yarn run coverage && cross-env NODE_ENV=production yarn run build && lerna publish",
+    "demo": "rimraf test/demo && sleep 1 && uiengine init --dir test/demo --demo && cd test/demo && uiengine build -s -w",
+    "docs:build": "cd docs && uiengine build",
+    "docs:lighthouse": "lighthouse-ci --report=. https://uiengine.uix.space/",
+    "docs:deploy": "yarn run docs:deploy_latest && yarn run docs:deploy_version && yarn run docs:lighthouse && yarn run docs:deploy_lighthouse",
+    "docs:deploy_latest": "$npm_package_config_deployment_command --exclude=v/ deploy/ docs/dist/ $npm_package_config_deployment_target_docs",
+    "docs:deploy_version": "VERSION=`echo \"console.log(require('./packages/core/package.json').version);\" | node` && VERSION_PATH=/v/$VERSION && cd docs && uiengine build --override.ui.base=\"$VERSION_PATH/\" && cd .. && mkdir -p deploy/v && sed 's!RewriteBase /!RewriteBase '$VERSION_PATH'/!' deploy/.htaccess > deploy/v/.htaccess && $npm_package_config_deployment_command --rsync-path=\"mkdir -p virtual/uiengine.uix.space/$VERSION_PATH && rsync\" deploy/v/ docs/dist/ $npm_package_config_deployment_target_docs/$VERSION_PATH",
+    "docs:deploy_lighthouse": "$npm_package_config_deployment_command report.html $npm_package_config_deployment_target_docs",
+    "test-acceptance": "cd test/acceptance && cypress run",
+    "test-project": "cd test/project && cross-env NODE_ENV=development yarn run dev",
+    "test-project:build": "cd test/project && yarn install && cross-env NODE_ENV=production yarn run prod",
+    "test-project:deploy": "$npm_package_config_deployment_command deploy/ test/tmp/ $npm_package_config_deployment_target_sample"
+  },
+  "config": {
+    "deployment": {
+      "command": "rsync -ravzulO --chmod=u=rwX,g=rX --delete-after",
+      "target_docs": "uiengine@uiengine.uix.space:virtual/uiengine.uix.space",
+      "target_sample": "uiengine@uiengine-sample-project.uix.space:virtual/uiengine-sample-project.uix.space"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run --parallel precommit"
+    }
+  },
+  "workspaces": [
+    "packages/*",
+    "test/acceptance",
+    "test/project"
+  ],
+  "standard": {
+    "globals": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "describe",
+      "it"
+    ]
+  }
+}

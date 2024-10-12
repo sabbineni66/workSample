@@ -1,0 +1,75 @@
+{
+  "name": "Freifunk Waldheim",
+  "url": "http://www.freifunk-waldheim.de",
+  "location": {
+    "city": "Waldheim",
+    "country": "DE",
+    "lat": 51.07326,
+    "lon": 13.024699
+  },
+  "contact": {
+    "email": "dnoelte@gmail.com",
+    "irc": "irc://freifunkwdh@hackint",
+    "facebook": "https://www.facebook.com/groups/FreifunkMittelsachsen/",
+    "twitter": "@freifunkmtl"
+  },
+  "metacommunity": "Freifunk Mittelsachsen",
+  "state": {
+    "description": "Freifunk Mittelsachsen Waldheim, Doebeln, Mittweida, Hartha usw.",
+    "focus": [
+      "infrastructure/backbone",
+      "Public Free Wifi",
+      "Social Community Building",
+      "Local services and content",
+      "Free internet access"
+    ],
+    "lastchange": "2015-11-22T09:29:19.791Z"
+  },
+  "nodeMaps": [
+    {
+      "url": "http://karte.freifunk-waldheim.de/meshviewer/",
+      "interval": "5",
+      "technicalType": "meshviewer",
+      "mapType": "geographical"
+    },
+    {
+      "url": "http://karte.freifunk-waldheim.de/meshviewer/nodelist.json",
+      "interval": "5",
+      "technicalType": "nodelist",
+      "mapType": "list/status"
+    }
+  ],
+  "techDetails": {
+    "firmware": {
+      "name": "gluon",
+      "url": "http://firmware.freifunk-waldheim.de",
+      "docs": "http://gluon.readthedocs.org/"
+    },
+    "dns": [
+      {
+        "domainname": "ffwdh"
+      }
+    ],
+    "networks": {
+      "ipv4": [
+        {
+          "network": "10.23.0.0/16"
+        }
+      ]
+    },
+    "routing": [
+      "batman-adv"
+    ],
+    "updatemode": [
+      "manual",
+      "autoupdate"
+    ],
+    "legals": [
+      "vpnnational",
+      "vpninternational",
+      "zappscript",
+      "p2pblock"
+    ]
+  },
+  "api": "0.4.9"
+}

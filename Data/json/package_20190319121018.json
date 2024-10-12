@@ -1,0 +1,9 @@
+{
+  "name": "@amory/node",
+  "private": true,
+  "scripts": {
+    "postinstall": "f () { ln -s env/node/.node-version ../.. || exit 0; }; f",
+    "preinstall": "f () { rm ../../.node-version || exit 0; }; f"
+  },
+  "version": "2019.3.15-0"
+}

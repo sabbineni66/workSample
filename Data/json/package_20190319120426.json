@@ -1,0 +1,11 @@
+{
+  "name": "conway.js",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "dependencies": {
+    "jasmine": "^2.3.1",
+    "underscore": "^1.8.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "quiver_styles",
+  "description": "Custom styling for Quiver.app",
+  "license": "MIT",
+  "scripts": {
+    "build": "node-sass --source-comments common.scss -o ."
+  },
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

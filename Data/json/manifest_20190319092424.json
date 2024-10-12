@@ -1,0 +1,13 @@
+{
+  "name":        "Fargo",
+  "description": "Fargo is a simple idea outliner, notepad, todo list, project organizer.",
+  "version":     "0.1", 
+  "app": {
+    "launch": {
+      "web_url": "http://fargo.io/"
+    }
+  },
+  "icons": { "128": "trex.png" },
+  "permissions": [],
+  "manifest_version": 2
+}

@@ -1,0 +1,17 @@
+{
+	"name"          : "blockchain-info",
+	"description"   : "Blockchain.info client",
+	"author"        : "Rich Collins <rich@cofactorsoftware.org>",
+	"repository"    : {
+		"type"		: "git",
+		"url"		: "git://github.com/cofactor/blockchain-info.git"},
+	"main"			: "blockchain-info.js",
+	"version"		: "0.0.1",
+	"devDependencies": {
+		"ideal"		: "0.0.x"
+	},
+	"scripts": {
+		"test"		: "phantomjs test/vendor/runner.js test/index.html?noglobals=true"
+	},
+	"license"		: "MIT"
+}

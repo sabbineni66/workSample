@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Meta | Rob's Cogitations]]></title>
+  <link href="http://rob.cogit8.org/blog/categories/meta/atom.xml" rel="self"/>
+  <link href="http://rob.cogit8.org/"/>
+  <updated>2014-11-27T11:57:06-08:00</updated>
+  <id>http://rob.cogit8.org/</id>
+  <author>
+    <name><![CDATA[Rob Hudson]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Testing My New Jekyll Based Blog]]></title>
+    <link href="http://rob.cogit8.org/blog/2014/10/testing-my-new-jekyll-based-blog/"/>
+    <updated>2014-10-31T10:57:42-07:00</updated>
+    <id>http://rob.cogit8.org/blog/2014/10/testing-my-new-jekyll-based-blog</id>
+    <content type="html"><![CDATA[<p>This is just a test of this blog which uses Octopress and Github pages.</p>
+]]></content>
+  </entry>
+  
+</feed>

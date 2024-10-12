@@ -1,0 +1,30 @@
+{
+  "name": "hubot-the-visual-aid",
+  "version": "0.9.0",
+  "description": "A hubot script to listen to all the things and provide a visual aid when necessary",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pjaspers/hubot-the-visual-aid.git"
+  },
+  "keywords": [
+    "hubot",
+    "visual-aid"
+  ],
+  "author": "Piet Jaspers <https://github.com/pjaspers>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pjaspers/hubot-the-visual-aid/issues"
+  },
+  "dependencies": {
+      "lodash": "3.5.0"
+  },
+  "devDependencies": {
+    "hubot": "^2.7.5",
+    "mocha": "2.3.3"
+  },
+    "scripts": {
+       "test" : "mocha"
+  },
+  "homepage": "https://github.com/pjaspers/hubot-the-visual-aid"
+}

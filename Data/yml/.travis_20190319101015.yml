@@ -1,0 +1,16 @@
+language: ruby
+script: 'rake test'
+
+rvm:
+  - 2.1.5
+  - ruby-head
+  - jruby-head
+  - jruby-19mode
+
+jdk:
+  - oraclejdk8
+
+sudo: false
+branches:
+  only: master
+after_success: coveralls

@@ -1,0 +1,72 @@
+development:
+  shades:
+    - name: "Living Room"
+      id: "living_room"
+      shade_type: "TestShade"
+      raise_up_time: 10 minutes before
+      lower_down_time: 15 minutes after
+    - name: "Office Nook"
+      id: "office_nook"
+      shade_type: "TestShade"
+      raise_up_time: 10 minutes before
+      lower_down_time: 15 minutes after
+    - name: "Upstairs Scrim (light)"
+      id: "upstairs_scrim_light"
+      shade_type: "TestShade"
+      raise_up_time: 10 minutes before
+      lower_down_time: 15 minutes after
+    - name: "Upstairs Dark (blackout)"
+      id: "upstairs_dark_blackout"
+      shade_type: "TestShade"
+      raise_up_time: 10 minutes before
+      lower_down_time: 15 minutes after
+test:
+  shades:
+    - name: "Living Room"
+      id: "living_room"
+      shade_type: "TestShade"
+      raise_up_time: 10 minutes before
+      lower_down_time: 15 minutes after
+    - name: "Office Nook"
+      id: "office_nook"
+      shade_type: "TestShade"
+      raise_up_time: 10 minutes before
+      lower_down_time: 15 minutes after
+    - name: "Upstairs Scrim (light)"
+      id: "upstairs_scrim_light"
+      shade_type: "TestShade"
+      raise_up_time: 10 minutes before
+      lower_down_time: 15 minutes after
+    - name: "Upstairs Dark (blackout)"
+      id: "upstairs_dark_blackout"
+      shade_type: "TestShade"
+      raise_up_time: 10 minutes before
+      lower_down_time: 15 minutes after
+production:
+  shades:
+    - name: "Living Room"
+      id: "living_room"
+      shade_type: "SomfyShade"
+      raise_up_time: 30 minutes before
+      lower_down_time: 30 minutes after
+    - name: "Office Nook"
+      id: "office_nook"
+      shade_type: "QMotionShade"
+      channel: "2"
+      serialport: "/dev/ttyUSB0"
+      raise_up_time: 30 minutes before
+      lower_down_time: 30 minutes after
+    - name: "Upstairs Scrim (light)"
+      id: "upstairs_scrim_light"
+      shade_type: "QMotionShade"
+      channel: "7"
+      serialport: "/dev/ttyUSB0"
+      raise_up_time: 30 minutes before
+      lower_down_time: 30 minutes after
+    - name: "Upstairs Dark (blackout)"
+      id: "upstairs_dark_blackout"
+      shade_type: "QMotionShade"
+      channel: "3"
+      serialport: "/dev/ttyUSB0"
+      raise_up_time: 30 minutes before
+      lower_down_time: 30 minutes after

@@ -1,0 +1,9 @@
+# jekyll configuration
+auto:      true
+server:    true
+pygments:  true
+permalink: /:year/:month/:title
+
+blog:      http://zacheryph.github.com/
+github:    http://github.com/zacheryph
+twitter:   http://twitter.com/zacheryph

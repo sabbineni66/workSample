@@ -1,0 +1,126 @@
+banners:
+  - title: Bootcamp
+    cover_file: banner-vti-bt6-new.png
+    link: https://www.videosdeti.com.br/super-fullstack
+    active?: false  
+    
+  - title: Black Friday 2018
+    cover_file: blackfriday-2018.png
+    link: '#'
+    active?: false  
+    
+  - title: Novo curso Lucas Caton
+    cover_file: banner-lucas-caton-1.jpeg
+    link: https://go.hotmart.com/U9738495E
+    active?: false  
+    
+  - title: Spotcode
+    cover_file: banner-spotcode.png
+    link: https://www.videosdeti.com.br/super-fullstack
+    active?: false  
+    
+  - title: Webin?rio Lucas
+    cover_file: banner-lucas-caton.jpg
+    link: https://webinarios.lucascaton.com.br/10-licoes-para-ser-um-excelente-desenvolvedor
+    active?: false  
+
+  - title: Bootcamp Turma 5
+    cover_file: banner-vti-bt5.png
+    link: http://bit.ly/bootcamp-sfs
+    active?: false  
+    
+  - title: One Bit Flix
+    cover_file: onebitflix.png
+    link: https://go.hotmart.com/W6395937I
+    active?: false
+    
+  - title: Bootcamp Super Full Stack - Turma 4
+    cover_file: bannerbootcamp172.png
+    link: https://go.hotmart.com/W6395937I
+    active?: false
+
+  - title: Promo??o Black Friday 2016
+    cover_file: blackfriday-16.png
+    link: http://bit.ly/blackfriday-16
+    active?: false
+
+banners_html:
+  - title: Escolha sua trilha!
+    cover_file: banner_trilhas_2018_jan.png
+    html_page: trilhas-jan-2018.html
+    description: >
+        Para o ano de 2018 come?ar com tudo, n?s da V?deos de TI separamos 4 trilhas, cada uma com 3 cursos, todas elas com um pre?o super especial! Confira:<br/>
+        <br/>
+        <strong>Trilha Desenvolvedor Iniciante</strong><br/>
+          - Fundamentos de Programa??o - Aprenda a programar do zero!<br/>
+          - Banco de Dados e ANSI SQL para iniciantes<br/>
+          - Orienta??o a Objetos com Java<br/>
+        <br/>  
+        <strong>Trilha Desenvolvedor Ruby</strong><br/>
+          - Iniciando com Ruby e Orienta??o a Objetos<br/>
+          - Ruby on Rails - Curso Completo<br/>
+          - TDD com Ruby on Rails, RSpec e Capybara - Curso Completo<br/>
+        <br/>  
+        <strong>Trilha Desenvolvedor Rails API</strong><br/>
+          - Entendendo e documentando RESTful APIs<br/>
+          - Ruby on Rails - Curso Completo<br/>
+          - Desenvolvendo RESTful APIs com Ruby on Rails<br/>
+        <br/>  
+        <strong>Trilha Desenvolvedor Front-end</strong><br/>
+          - Fundamentos de Programa??o - Aprenda a programar do zero!<br/>
+          - Sass/SCSS: Curso Completo<br/>
+          - Iniciando com Materialize CSS Framework<br/>
+        <br/>
+        Caso nenhuma das trilhas te atenda, voc? ainda pode usar o cupom <strong>MID-JAN-18</strong> para obter automaticamente um desconto super especial em qualquer um dos cursos!<br/>
+        <br/>
+        <strong>ATEN??O!</strong><br/>
+        Todas as promo??es s?o v?lidas at? domingo (21/01/2018), ent?o corre pra n?o perder essa oportunidade! ;-)
+        <br/><br/>
+        PS: Ap?s concluir a compra cliando em um dos links ao lado, voc? receber? um email em at? 24h com os vouchers de acesso aos cursos.
+
+    promotions:
+        - title: Desenvolvedor Iniciante
+          price: R$ 49,90
+          url: https://pag.ae/bbtjVHv
+        - title: Desenvolvedor Ruby
+          price: R$ 49,90
+          url: https://pag.ae/bktjVQb
+        - title: Desenvolvendo Rails API
+          price: R$ 49,90
+          url: https://pag.ae/bjtjVT6
+        - title: Desenvolvedor Front-end
+          price: R$ 49,90
+          url: https://pag.ae/bftjVXH
+    active?: true
+    
+  - title: Super combo de Natal 2017!
+    cover_file: combonatal2017.png
+    html_page: combo-natal-2017.html
+    description: O Natal est? chegando, e para voc? j? entrar no clima, a V?deos de TI resolveu te dar um super presente! Separamos 3 combos imperd?veis que s? v?o durar at? o final do m?s de dezembro. Basta escolher ao lado e clicar! Ap?s o pagamento, voc? receber? um email no qual informar? os cursos que quer. ;-)
+    promotions:
+        - title: 03 Cursos que voc? escolher
+          price: R$ 50,00
+          url: https://pag.ae/bdrK5V6
+        - title: 06 Cursos que voc? escolher
+          price: R$ 90,00
+          url: https://pag.ae/bcrK50k
+        - title: TODOS os 09 cursos!
+          price: R$ 120,00
+          url: https://pag.ae/bbrK54g
+    active?: false
+
+  - title: Prmo??o Black Friday 2016
+    cover_file: blackfriday2016.png
+    html_page: blackfriday-2016.html
+    description: bla, bla bla!
+    promotions:
+        - title: 03 Cursos
+          price: R$ 50,00
+          url: bit.ly/combonatal2017-03
+        - title: 06 Cursos
+          price: R$ 50,00
+          url: bit.ly/combonatal2017-03
+        - title: 09 Cursos
+          price: R$ 50,00
+          url: bit.ly/combonatal2017-03
+    active?: false

@@ -1,0 +1,9 @@
+[
+    {"source": "app/helpers/github.js"},
+    {"source": "app/helpers/user.js"},
+    {"source": "app/assistants/stage-assistant.js"},
+    {
+        "scenes": "login",
+        "source": "app/assistants/login-assistant.js"
+    }
+]

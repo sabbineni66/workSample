@@ -1,0 +1,1515 @@
+pt-BR:
+  helpers:
+    label:
+      user:
+        email: E-mail
+  withdrawal:
+    periods:
+      daily: Di?rio
+  models_and_attributes: &models_and_attributes
+    models:
+      bank_billet:
+        one: Boleto Banc?rio
+        other: Boletos Banc?rios
+      bank:
+        one: Banco
+        other: Bancos
+      city:
+        one: Cidade
+        other: Cidades
+      user:
+        one: Usu?rio
+        other: Usu?rios
+      transaction:
+        one: Transa??o
+        other: Transa??es
+      admin_user:
+        one: Usu?rio Admin
+        other: Usu?rios Admin
+      customer:
+        one: Cliente
+        other: Clientes
+      bank_transfer:
+        one: Transfer?ncia
+        other: Transfer?ncias
+      remittance:
+        one: Remessa
+        other: Remessas
+      comment:
+        one: Coment?rio
+        other: Coment?rios
+      callback_notification:
+        one: Callback
+        other: Callbacks
+      phone:
+        one: Telefone
+        other: Telefones
+      contract:
+        one: Contrato
+        other: Contratos
+      'doorkeeper/application':
+        one: Parceiro
+        other: Parceiros
+      'doorkeeper/access_grant':
+        one: Token de Permiss?o
+        other: Tokens de Permiss?o
+      'doorkeeper/access_token':
+        one: Token de acesso
+        other: Tokens de acesso
+      id_verification:
+        one: Verifica??o ID
+        other: Verifica??es ID
+      document:
+        one: Verifica??o de Documentos
+        other: Verifica??es de Documentos
+      bank_account:
+        one: Conta banc?ria
+        other: Contas banc?rias
+      declination_reason:
+        one: Motivo de decl?nio
+        other: Motivos de decl?nio
+      validation_declination_reason:
+        one: Motivo de decl?nio de valida??o
+        other: Motivos de decl?nio de valida??o
+      invoice:
+        one: Nota fiscal
+        other: Notas fiscais
+      action_log:
+        one: Atividade
+        other: Atividades
+      agency:
+        one: Ag?ncia
+        other: Ag?ncias
+      event:
+        one: Evento
+        other: Eventos
+      bank_billet_account:
+        one: Carteira
+        other: Carteiras de Cobran?a
+      discharge:
+        one: Retorno
+        other: Retornos
+      customer_payment_place:
+        one: Local de pagamento
+        other: Locais de pagamento
+      plan:
+        one: Plano
+        other: Planos
+      plan_subscription:
+        one: Assinatura
+        other: Assinaturas
+      customer_subscription:
+        one: Assinatura
+        other: Assinaturas
+      bank_billet_layout:
+        one: Modelo
+        other: Modelos
+      installment:
+        one: Carn?
+        other: Carn?s
+      email_account:
+        one: Conta de e-mail
+        other: Contas de e-mail
+      email_notification:
+        one: Notifica??o
+        other: Notifica??es
+      email_template:
+        one: Template de e-mail
+        other: Templates de e-mail
+      bank_billet_discharge:
+        one: Registro de Retorno
+        other: Registros de Retorno
+      discharge_esale:
+        one: Retorno Esales
+        other: Retornos Esales
+      bank_billet_remittance:
+        one: Registro de Remessa
+        other: Registros de Remessa
+      notification:
+        one: Alerta
+        other: Alertas
+      bank_billet_registration:
+        one: Registro por API
+        other: Registros por API
+    attributes:
+      agency:
+        id: ID
+        address: Rua
+        state: Estado
+        quarter: Bairro
+        zipcode: CEP
+        address_number: N?mero
+        address_complement: Complemento
+        city_id: Cidade
+        city: Cidade
+        city_name: Cidade
+        bank_id: Banco
+        bank: Banco
+        bank_name: Nome do banco
+        bank_number: N?mero do banco
+        created_at: Criado em
+        updated_at: Atualizado em
+        filename: Arquivo
+        name: Nome
+        number: N?mero da ag?ncia
+        opened_at: Aberta em
+        phone_area_code: DDD
+        phone_number: Telefone
+        segment: Segmento
+        cnpj: CNPJ
+      admin_user:
+        id: ID
+        email: E-mail
+        encrypted_password: Senha
+        password: Senha
+        password_confirmation: Confirma??o da senha
+        confirmation_token: Token de confirma??o
+        reset_password_token: Token de altera??o de senha
+        reset_password_sent_at: Token de troca de senha enviado em
+        remember_created_at: Lembrar de mim criado em
+        sign_in_count: Total de acessos
+        current_sign_in_at: Acesso atual
+        last_sign_in_at: ?ltimo acesso
+        current_sign_in_ip: IP Atual
+        last_sign_in_ip: ?ltimo IP
+      user:
+        id: ID
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirma??o da senha
+        confirmation_token: Token de confirma??o
+        reset_password_token: Token de altera??o de senha
+        sign_in_count: Total de acessos
+        current_sign_in_at: Acesso atual
+        last_sign_in_at: ?ltimo acesso
+        current_sign_in_ip: IP Atual
+        last_sign_in_ip: ?ltimo IP
+        account_type: Tipo
+        full_name: Nome Completo
+        cpf: CPF
+        address: Rua
+        address_street_name: Rua
+        address_state: Estado
+        address_neighborhood: Bairro
+        address_postal_code: CEP
+        address_number: N?mero
+        address_complement: Complemento
+        address_city_id: Cidade
+        address_city_name: Cidade
+        address_city: Cidade
+        phone_number: Telefone
+        banking_bank_id: Banco
+        banking_bank: Banco
+        banking_agency_number: Ag?ncia (Sem d?gito)
+        banking_agency_digit: D?gito
+        banking_agency_number_with_digit: Ag?ncia
+        banking_account_number: Conta
+        banking_account_digit: D?gito
+        banking_account_number_with_digit: Conta
+        flat_rate: Taxa fixa por boleto recebido
+        flat_rate_cents: Taxa fixa por boleto recebido
+        variable_rate: Taxa vari?vel por boleto recebido
+        balance: Saldo
+        withdrawal_rate_cents: Taxa de saque
+        withdrawal_rate: Taxa de saque
+        credit_days: Dias para lancamento no extrato
+        created_at: Criado em
+        updated_at: Atualizado em
+        encrypted_password: Senha
+        reset_password_sent_at: Token de troca de senha enviado em
+        remember_created_at: Lembrar de mim criado em
+        confirmed_at: Confirmado em
+        confirmation_sent_at: Confirma??o enviada em
+        unconfirmed_email: E-mail n?o confirmado
+        failed_attempts: Tentativas de login falhadas
+        unlock_token: Token de desbloqueio
+        locked_at: Bloqueado em
+        balance_cents: Saldo
+        hashed_code: C?digo identificador
+        withdrawal_period: Per?odo de saque
+        account_level: N?vel
+        first_name: Nome
+        middle_name: Nome do Meio
+        last_name: Sobrenome
+        date_of_birth: Data de Nasc.
+        business_category: Categoria
+        business_subcategory: Subcategoria
+        business_website: Site
+        business_name: Nome fantasia
+        business_legal_name: Raz?o Social
+        business_type: Tipo da Empresa
+        business_cnpj: CNPJ da Empresa
+        withdrawal_automatic: Saque Autom?tico
+        banking_bank_name: Banco
+        gender: G?nero
+        mother_name: Nome da M?e
+        father_name: Nome do Pai
+        display_name: Nome do titular
+        display_cnpj_or_cpf: CNPJ/CPF do Titular
+        can_edit_bank_account: Atualiza Conta Banc?ria?
+        account_status: Situa??o da conta
+        api_enabled: API habilitada
+        api_enabled_at: API habilidata em
+        first_bank_billet_created_at: Primeiro Boleto Criado em
+        first_bank_billet_received_at: Primeiro Boleto Recebido em
+        notify_pending_validation_at: Notificar valida??es pendentes em
+        reversal_rate: Taxa de Estorno
+        skip_validations_until: N?o validar at?
+        guarantor: Mostrar Sacador/Avalista
+        declination_reasons: Motivos de decl?nio
+        doorkeeper_application: Parceiro
+        blocked_at: Bloqueado em
+        withdrawal_days: Dias para processamento do saque
+        trusted_at: Confi?vel em
+        automatic_email_enabled: Enviar automaticamente os boletos para os clientes?
+        automatic_email_from: De
+        automatic_email_subject: Assunto
+        automatic_email_message: Mensagem
+        blocked_billet_creation_at: Emiss?o de boletos bloqueado em
+        invited_at: Convidado em
+        activated_at: Ativado em
+        myfinance_id: ID MyFinance
+        powered_by: Marca do Boleto Simples
+        chargeable: Faturar?
+        billet_created_fee: Taxa de Boleto Gerado
+        billet_created_fee_cents: Taxa de Boleto Gerado
+        billet_paid_fee_cents: Taxa de Boleto Recebido
+        billet_paid_fee: Taxa de Boleto Recebido
+        minimum_balance_allowed_cents: Saldo negativo permitido
+        minimum_balance_allowed: Saldo negativo permitido
+        withdrawal: Saque permitido?
+        autopilot_sent_at: Enviado para Autopilot
+        watermark: "Marca d'?gua"
+        trial_ends_at: Trial Finaliza em
+        last_order_id: ID da ?ltima compra no Checkout
+        billing_email: E-mail para Faturamento
+        affiliate: C?digo Afiliado
+        affiliate_url: URL Afiliado
+        affiliate_parent: Afiliado de
+        pay_affiliate_comission: Pagar comiss?o de Afiliado
+        oauth_application_id: ID Parceiro
+        future_balance: Saldo Futuro
+        simple_opting: Optante Simples Nacional
+      bank_billet:
+        id: ID
+        expire_at: Vencimento
+        amount: Quantia
+        paid_at: Data de pagamento
+        paid_amount: Quantia Paga
+        description: Demonstrativo
+        status: Situa??o
+        our_number: Nosso N?mero
+        customer_person_type: Tipo
+        customer_person_name: Nome/Raz?o Social
+        customer_cnpj_cpf: CNPJ/CPF
+        customer_address: Rua
+        customer_state: Estado
+        customer_neighborhood: Bairro
+        customer_zipcode: CEP
+        customer_address_number: N?mero
+        customer_address_complement: Complemento
+        customer_phone_number: Telefone (com DDD)
+        customer_email: E-mail do cliente
+        customer_city: Cidade
+        customer_city_id: Cidade
+        customer_city_name: Cidade
+        customer_id: Cliente
+        customer: Cliente
+        created_at: Criado em
+        updated_at: Atualizado em
+        user_id: Usu?rio
+        user: Usu?rio
+        shorten_url: Link do boleto
+        cobregratis_id: ID Interno
+        customer_id: Cliente
+        customer: Cliente
+        amount_cents: Quantia
+        paid_amount_cents: Quantia Paga
+        transactions: Transa??es
+        bank_rate: Taxa Banc?ria
+        bank_rate_cents: Taxa Banc?ria
+        created_via_api: Criado por API
+        agency: Ag?ncia
+        bank: Banco
+        processed_our_number_raw: Nosso N?mero
+        processed_our_number: Nosso N?mero
+        bank_billet_account_id: Carteira
+        bank_billet_account: Carteira
+        boleto_created_at: Bole.to Criado em
+        boleto_updated_at: Bole.to Atualizado em
+        beneficiary_name: Benefici?rio
+        beneficiary_cnpj_cpf: CNPJ/CPF do Benefici?rio
+        beneficiary_address: Endere?o do Benefici?rio
+        beneficiary_assignor_code: Ag?ncia/C?digo do Benefici?rio
+        instructions: Instru??es para o Caixa
+        payment_place: Local de Pagamento
+        document_number: N?mero do Documento
+        document_date: Data do Documento
+        document_type: Tipo de Documento
+        generated_by: Gerado por
+        agency_number: N?mero da Ag?ncia
+        agency_digit: D?gito da Ag?ncia
+        account_number: N?mero da Conta
+        account_digit: D?gito da Conta
+        bank_contract_slug: Carteira
+        extra1: Campo 1 da Carteira
+        extra1_digit: D?gito do Campo 1 da Carteira
+        extra2: Campo 2 da Carteira
+        extra2_digit: D?gito do Campo 2 da Carteira
+        extra3: Campo 3 da Carteira
+        guarantor_name: Sacador/Avalista
+        guarantor_cnpj_cpf: CNPJ/CPF do Sacador/Avalista
+        acceptance: Aceite
+        line: Linha Digit?vel
+        meta: Meta
+        credit_amount: Cr?dito (R$)
+        credit_at: Cr?dito em
+        billet_fine: Acr?scimos
+        discount: Descontos
+        value_rebate: Abatimento
+        iof: IOF
+        fine_for_delay: Multa por Atraso
+        late_payment_interest: Juros de Mora Mensal
+        remittance_id: Remessa
+        remittance: Remessa
+        homologation: Homologa??o?
+        generation_mode: Op??o de boleto
+        customer_subscription: Assinatura
+        installment: Carn?
+        installment_id: Carn?
+        installment_number: Parcela
+        notes: Observa??es
+        powered_by: Marca do Boleto Simples
+        bank_billet_layout_id: Modelo
+        bank_billet_layout: Modelo
+        remittance_sent: Inclu?do na Remessa
+        background_validation: Valida??o Ass?ncrona?
+        paid_bank: Banco do Pagamento
+        paid_agency: Ag?ncia do Pagamento
+        carne_url: URL do Carn?
+        customer_subscription: Assinatura
+        tags: Etiquetas
+        tag_list: Etiquetas
+        url: 'URL'
+        formats: 'Formatos'
+        customer_subscription_id: 'Assinatura'
+        days_for_sue: Dias corridos para Protesto/Negativa??o
+        discount: 'Desconto'
+        discount_type: 'Tipo de desconto'
+        discount_limit_date: 'Data limite para desconto'
+        discount_value: 'Valor do desconto'
+        discount_percentage: 'Porcentagem do desconto'
+        interest: 'Juros de Mora'
+        interest_type: 'Tipo de Juro'
+        interest_monthly_percentage: 'Porcentagem mensal de juros'
+        interest_daily_percentage: 'Porcentagem di?ria de juros'
+        interest_daily_value: 'Valor di?rio de juros'
+        fine_type: 'Tipo de Multa'
+        fine_percentage: 'Porcentagem da multa'
+        fine_value: 'Valor da multa'
+      customer:
+        id: ID
+        person_type: Tipo
+        person_name: Nome/Raz?o Social
+        nickname: Apelido/Nome Fantasia
+        cnpj_cpf: CNPJ/CPF
+        address: Rua
+        truncated_address: Endere?o para remessa
+        state: Estado
+        neighborhood: Bairro
+        zipcode: CEP
+        address_number: N?mero
+        address_complement: Complemento
+        phone_number: Telefone (com DDD)
+        email: E-mail
+        email_cc: E-mail opcional
+        city_id: Cidade
+        city: Cidade
+        city_name: Cidade
+        created_at: Criado em
+        updated_at: Atualizado em
+        mobile_local_code: Celular (DDD)
+        mobile_number: Celular
+        user: Usu?rio
+        validated_at: Validado em
+        created_via_api: Criado por API
+        deleted_at: Deletado em
+        notes: Observa??es
+      transaction:
+        id: ID
+        description: Hist?rico
+        amount: Quantia (R$)
+        amount_cents: Quantia (R$)
+        kind: Tipo
+        created_at: Criada em
+        updated_at: Realizada em
+        user_id: Usu?rio
+        user: Usu?rio
+        bank_billet_id: Boleto Banc?rio
+        bank_billet: Boleto Banc?rio
+        date: Data
+        document_number: Comprovante
+        credit_at: Data Lan?amento
+        processed_at: Processado em
+        status: Situa??o
+        user_email: Usu?rio
+        bank_billet_our_number: C?digo
+        sent_at: Enviado em
+        bank_transfer: Transfer?ncia
+        bank_transfer_id: Transfer?ncia
+        bank_account: Conta Banc?ria
+        bank_account_id: Conta Banc?ria
+        invoice: Fatura
+        invoice_id: Fatura
+      bank_transfer:
+        id: ID
+        filename: Nome
+        processed_at: Processado em
+        content: Conte?do
+        response: Retorno
+        created_at: Criada em
+        updated_at: Atualizada em
+        status: Situa??o
+        transactions: Transa??es
+        deleted_at: Deletado em
+      city:
+        id: ID
+        name: Nome
+        state: Estado
+        ibge_code: C?digo IBGE
+        created_at: Criado em
+        updated_at: Atualizado em
+      bank:
+        id: ID
+        name: Nome
+        number: N?mero
+        bcb_name: Nome no Banco Central
+        created_at: Criada em
+        updated_at: Atualizada em
+        address: Rua
+        state: Estado
+        quarter: Bairro
+        zipcode: CEP
+        address_complement: Complemento
+        city: Cidade
+        filename: Arquivo
+        phone_area_code: DDD
+        phone_number: Telefone
+        segment: Segmento
+        cnpj: CNPJ
+        email: E-mail
+        site: Site
+        users_count: Clientes usando
+        deleted_at: Deletado em
+      admin_user:
+        id: ID
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirma??o da senha
+      callback_notification:
+        id: ID
+        created_at: Criada em
+        updated_at: Atualizada em
+        user_id: Usu?rio
+        user: Usu?rio
+        url: URL
+        message: Mensagem
+        headers: Cabe?alhos
+        body: Conte?do
+        status: Situa??o
+        bank_billet_id: Boleto Banc?rio
+        bank_billet: Boleto Banc?rio
+      phone:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        local_code: DDD
+        number: N?mero
+        digits: C?digo de Verifica??o
+        state: Situa??o
+        kind: Tipo
+        retries: Retentativas
+        blocked?: Bloqueado?
+      contract:
+        id: ID
+        user: Usu?rio
+        created_at: Criado em
+        updated_at: Atualizado em
+        state: Situa??o
+        rightsignature_guid: ID RightSignature
+        rightsignature_data: Dados RightSignature
+        hashed_code: C?digo identificador
+        rightsignature_signed_pdf_url: Contrato Assinado
+        signed_at: Assinado em
+      id_verification:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        user: Usu?rio
+        state: Situa??o
+        hashed_code: C?digo identificador
+        doc: Documento
+        frontside_image: Parte da frente
+        backside_image: Parte de tr?s
+        face_image: Rosto
+      document:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        user: Usu?rio
+        state: Situa??o
+        hashed_code: C?digo identificador
+        document: Documento
+        document_type: Tipo do documento
+        declination_reasons: Motivos de decl?nio
+      bank_account:
+        id: ID
+        user_id: Usu?rio
+        user: Usu?rio
+        bank_id: Banco
+        bank: Banco
+        bank_name: Nome do banco
+        agency_number: Ag?ncia (Sem d?gito)
+        agency_digit: D?gito
+        agency_number_with_digit: Ag?ncia
+        account_number: Conta (Sem d?gito)
+        account_digit: D?gito
+        account_number_with_digit: Conta
+        state: Situa??o
+        savings_account: Conta Poupan?a
+        created_at: Criado em
+        updated_at: Atualizado em
+        deleted_at: Deletado em
+      declination_reason:
+        id: ID
+        reason: Motivo
+        created_at: Criado em
+        updated_at: Atualizado em
+      validation_declination_reason:
+        id: ID
+        validation: Valida??o
+        declination_reason: Motivo
+        created_at: Criado em
+        updated_at: Atualizado em
+      invoice:
+        id: ID
+        address_city: Cidade
+        address_complement: Complemento
+        address_neighborhood: Bairro
+        address_number: N?mero
+        address_postal_code: CEP
+        address_state: Estado
+        address_street_name: Rua
+        amount: Total
+        amount_cents: Total
+        paid_amount_cents: Quantia Paga
+        paid_amount: Quantia Paga
+        cnpj_cpf: CNPJ/CPF
+        deleted_at: Deletada em
+        email: E-mail
+        from_date: In?cio do per?odo
+        name: Nome
+        nfe_created_at: Nota fiscal criada em
+        nfe_hashed_code: C?digo da nota fiscal
+        phone_number: Telefone
+        to_date: Fim do per?odo
+        user: Usu?rio
+        user_id: Usu?rio
+        created_at: Criada em
+        updated_at: Atualizada em
+        description: Pagamento do servi?o Boleto Simples no per?odo de %{from_date} at? %{to_date}.
+        expire_at: Vencimento
+        status: Situa??o
+        canceled_at: Cancelado em
+      action_log:
+        id: ID
+        action: A??o
+        created_at: Criada em
+        ip: IP
+        occurred_at: Registrada em
+        updated_at: Atualizada em
+        user_agent: UserAgent
+        user: Usu?rio
+        user_id: Usu?rio
+      send_bank_billet_to_email_form:
+        from: De
+        to: Para
+        subject: Assunto
+        message: Mensagem
+        email_template_id: Template de E-mail
+      event:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        user: Usu?rio
+        user_id: Usu?rio
+        occurred_at: Ocorrido em
+        description: Descri??o
+        code: C?digo
+        data: Dados
+        reference: Refer?ncia
+        moreinfo: Mais Informa??es
+        deleted_at: Deletado em
+      webhook:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        user: Usu?rio
+        user_id: Usu?rio
+        url: Endere?o para o Payload (URL)
+        content_type: Tipo da Requisi??o (content_type)
+        events: Eventos
+        secret_key: Chave Secreta
+        ssl_verification_enabled: Verifica??o SSL Habilitada?
+        active: Ativo?
+        created_via_api: Criado por API
+      addon:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        name: Nome
+        slug: Slug
+        icon: ?cone
+        description: Descri??o
+        instructions_url: URL com as Instru??es de Uso
+        developer_name: Nome do desenvolvedor
+        developer_url: URL do desenvolvedor
+        tos_url: URL do Termos de Uso
+        privacy_policy_url: URL da Pol?tica de Privacidade
+        webhook_url: URL para Webhook
+        webhook_events: Eventos para Webhook
+        subscription_price: Pre?o da Assinatura
+        subscription_cycle: Ciclo da Assinatura
+        deleted_at: Deletado em
+        activated_at: Ativado em
+        price_per_bank_billet: Pre?o por Boleto
+      bank_billet_account:
+        id: ID
+        user: Usu?rio
+        user_id: Usu?rio
+        created_at: Criado em
+        updated_at: Atualizado em
+        deleted_at: Deletado em
+        next_our_number: Pr?ximo Nosso N?mero
+        agency_id: Ag?ncia
+        agency: Ag?ncia
+        agency_number: N?mero da Ag?ncia
+        agency_digit: D?gito da Ag?ncia
+        account_number: N?mero da Conta
+        account_digit: D?gito da Conta
+        bank_contract_slug: Carteira
+        bank: Banco
+        created_via_api: Criado por API
+        extra1: Campo da Carteira
+        extra1_digit: D?gito do Campo da Carteira
+        extra2: Campo da Carteira
+        extra2_digit: D?gito do Campo da Carteira
+        system_default: Padr?o do Boleto Simples
+        homologation_amount: Valor do Boleto
+        first_time: Primeira vez emitindo boleto?
+        beneficiary_name: Nome do Benefici?rio
+        beneficiary_cnpj_cpf: CNPJ/CPF do Benefici?rio
+        beneficiary_address: Endere?o do Benefici?rio
+        homologated_at: Data de homologa??o
+        payment_place: Local de pagamento
+        next_remittance_number: Pr?ximo Sequencial da Remessa
+        integration: Conex?o com o Banco
+        default: Padr?o
+        transfer_directory: Pasta de EDI
+        configuration: Configura??o
+        homologation_amount_cents: Valor de Homologa??o
+        homologation_amount: Valor de Homologa??o
+        integrated_at: Data de integra??o
+        bank_direct_integrated_at: 'Data da integra??o direta'
+        registry_environment: Ambiente de registro
+        credentials_client_id: 'ID Cliente'
+        credentials_client_secret: 'Segredo'
+        credentials_key: 'Chave'
+      discharge:
+        id: ID
+        filename: Nome
+        content: Conte?do
+        processed_at: Processado em
+        created_at: Enviado em
+        updated_at: Atualizado em
+        deleted_at: Deletado em
+        user: Usu?rio
+        user_id: Usu?rio
+        bank_billet_account_id: Carteira
+        bank_billet_account: Carteira
+        file: Arquivo
+        created_via_api: Criado por API
+        amount_cents: Valor Total
+        amount: Valor Total
+        quantity: Total de T?tulos
+        created_via_integration: Criado por Conex?o on-line
+        status: Situa??o
+      remittance:
+        id: ID
+        filename: Nome
+        processed_at: Processado em
+        content: Conte?do
+        created_at: Criada em
+        updated_at: Atualizada em
+        deleted_at: Deletado em
+        status: Situa??o
+        bank_billets: Boletos
+        bank_billet_account_id: Carteira
+        bank_billet_account: Carteira
+        created_via_api: Criado por API
+        amount_cents: Valor Total
+        amount: Valor Total
+        quantity: Total de T?tulos
+        remittance_number: Sequencial
+        sent_via_integration: Enviado por Conex?o on-line
+        edi_error: Erro no EDI
+        user_id: Usu?rio
+        user: Usu?rio
+        edi_response: Resposta do EDI
+        updated_at: Recebida em
+      customer_payment_place:
+        id: ID
+        name: Nome
+        created_at: Criado em
+        updated_at: Atualizado em
+        cnpj_cpf: CNPJ/CPF
+        agency_number: N?mero da Ag?ncia
+        bank_number: N?mero do Banco
+        trusted: Confi?vel
+      doorkeeper/application:
+        name: 'Nome'
+        redirect_uri: 'URI de redirecionamento'
+        created_at: Criado em
+        updated_at: Atualizado em
+        invite: 'Convidado'
+        block_billet_creation: 'Gera Boletos Somente via API'
+        flat_rate: Taxa fixa por boleto recebido
+        flat_rate_cents: Taxa fixa por boleto recebido
+        variable_rate: Taxa vari?vel por boleto recebido
+        withdrawal_rate_cents: Taxa de saque
+        credit_days: Dias para lancamento no extrato
+        slug: Slug
+        required_scopes: Escopos padr?es
+        scopes: Escopos
+        withdrawal_period: Per?odo de saque
+        withdrawal_automatic: Saque Autom?tico
+        reversal_rate_cents: Taxa do Parceiro
+        keep_login_url: Manter URL de login ativa?
+      plan:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        name: Nome
+        slug: Slug
+        subscription_price: Pre?o da Assinatura
+        subscription_price_cents: Pre?o da Assinatura
+        subscription_cycle: Ciclo da Assinatura
+        number_of_billets: N?mero de boletos
+        number_of_bank_billet_accounts: N?mero de Contas de Cobran?a
+        exceeded_price_cents: Pre?o por boleto excedido
+        exceeded_price: Pre?o por boleto excedido
+        integration_price: Pre?o por boleto registrado
+        integration_price_cents: Pre?o por boleto registrado
+        factor: Fator do Modo da Conta
+        discount: Desconto
+        deleted_at: Deletado em
+        activated_at: Ativado em
+        visible: Mostrar
+        doorkeeper_application: Parceiro
+        oauth_application_id: ID Parceiro
+      plan_subscription:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        user_id: Usu?rio
+        user: Usu?rio
+        plan_id: Plano
+        plan: Plano
+        bank_billet_account_id: Carteira
+        bank_billet_account: Carteira
+        next_billing: Pr?xima cobran?a
+        amount: Pre?o da Assinatura
+        amount_cents: Pre?o da Assinatura
+        cycle: Ciclo da Assinatura
+        number_of_billets: N?mero de boletos
+        number_of_bank_billet_accounts: Carteiras de Cobran?a
+        exceeded_price_cents: Boleto excedido
+        exceeded_price: Boleto excedido
+        integration_price: Boleto registrado
+        integration_price_cents: Boleto registrado
+        factor: Fator do Modo da Conta
+        discount: Desconto
+        deleted_at: Deletado em
+        canceled_at: Cancelado em
+        bank_billets_in_current_month: Total de boletos criados no per?odo corrente
+        contract: Condi??es Contratuais
+        first_billing_date: Data da Primeira cobran?a
+        first_billing_time: Hora da Primeira cobran?a
+        first_billing_at: Primeira Cobran?a
+        status: Status
+      customer_subscription:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        user_id: Usu?rio
+        user: Usu?rio
+        customer: Cliente
+        customer_id: Cliente
+        bank_billet_account_id: Carteira
+        bank_billet_account: Carteira
+        next_billing: Pr?xima Cobran?a
+        amount: Quantia
+        amount_cents: Quantia
+        cycle: Ciclo da Assinatura
+        deleted_at: Deletado em
+        canceled_at: Cancelado em
+        end_at: Parar em
+        instructions: Instru??es para o Caixa
+        description: Demonstrativo
+        days_in_advance: Anteced?ncia
+        created_via_api: Criado por API
+        fine_for_delay: Multa por Atraso
+        late_payment_interest: Juros de Mora Mensal
+        email: E-mail(Opcional)
+        bank_billet_layout_id: Modelo
+        bank_billet_layout: Modelo
+        bank_billet_ids: IDs dos Boletos
+        notes: Observa??es
+        next_billing_day: Dia da Pr?xima Cobran?a
+        fine_type: 'Tipo de Multa'
+        fine_percentage: 'Porcentagem da multa'
+        fine_value: 'Valor da multa'
+        interest: 'Juros de Mora'
+        interest_type: 'Tipo de Juro'
+        interest_monthly_percentage: 'Porcentagem mensal de juros'
+        interest_daily_percentage: 'Porcentagem di?ria de juros'
+        interest_daily_value: 'Valor di?rio de juros'
+        discount: 'Desconto'
+        discount_type: 'Tipo de desconto'
+        days_for_discount: 'Dias para desconto'
+        discount_value: 'Valor do desconto'
+        discount_percentage: 'Porcentagem do desconto'
+      bank_billet_layout:
+        id: ID
+        watermark: "Marca d'?gua"
+        logo: Logotipo
+        name: Nome
+        deleted_at: Deletado em
+        created_at: Criado em
+        updated_at: Atualizado em
+        user_id: Usu?rio
+        user: Usu?rio
+        bank_billet_account_id: Carteira
+        bank_billet_account: Carteira
+        powered_by: Marca do Boleto Simples
+      installment:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        user_id: Usu?rio
+        user: Usu?rio
+        customer: Cliente
+        customer_id: Cliente
+        bank_billets: Boletos
+        bank_billet_account_id: Carteira
+        bank_billet_account: Carteira
+        start_at: In?cio
+        amount: Quantia
+        amount_cents: Quantia
+        cycle: Per?odo
+        deleted_at: Deletado em
+        end_at: Fim
+        created_via_api: Criado por API
+        total: Parcelas
+        status: Situa??o
+        instructions: Instru??es para o Caixa
+        description: Demonstrativo
+        fine_for_delay: Multa por Atraso
+        late_payment_interest: Juros de Mora Mensal
+        bank_billet_layout_id: Modelo
+        bank_billet_layout: Modelo
+        bank_billet_ids: IDs dos Boletos
+        url: URL do Carn?
+        notes: Observa??es
+        fine_type: 'Tipo de Multa'
+        fine_percentage: 'Porcentagem da multa'
+        fine_value: 'Valor da multa'
+        interest: 'Juros de Mora'
+        interest_type: 'Tipo de Juro'
+        interest_monthly_percentage: 'Porcentagem mensal de juros'
+        interest_daily_percentage: 'Porcentagem di?ria de juros'
+        interest_daily_value: 'Valor di?rio de juros'
+        discount: Descontos
+        discount_type: 'Tipo de desconto'
+        days_for_discount: 'Dias para desconto'
+        discount_value: 'Valor do desconto'
+        discount_percentage: 'Porcentagem do desconto'
+      email_account:
+        id: ID
+        address: SMTP
+        port: Porta
+        domain: Dom?nio
+        user_name: Usu?rio
+        password: Senha
+        authentication: Autentica??o
+        enable_starttls_auto: TTLS
+        openssl_verify_mode: Verifica??o SSL
+        deleted_at: Deletado em
+        created_at: Criado em
+        updated_at: Atualizado em
+        user_id: Usu?rio
+        user: Usu?rio
+        active: Ativo?
+        created_via_api: Criado por API
+        email_to: E-mail
+        name: Nome
+        sender_name: Nome do Remetente
+        from_address: E-mail do Remetente
+      email_notification:
+        id: ID
+        deleted_at: Deletado em
+        created_at: Criado em
+        updated_at: Atualizado em
+        user_id: Usu?rio
+        user: Usu?rio
+        email_account_id: Conta de e-mail
+        email_account: Conta de e-mail
+        active: Ativo?
+        created_via_api: Criado por API
+        from: E-mail do Remetente
+        email_to: E-mail do Destinat?rio
+        subject: Assunto
+        message: Mensagem
+        events: Eventos
+        event: Evento
+        bank_billet_in_png: Imagem do boleto em anexo?
+        bank_billet_in_pdf: PDF do boleto em anexo?
+        email_template_id: Template de E-mail
+        email_template: Template de E-mail
+      email_delivery:
+        id: ID
+        deleted_at: Deletado em
+        created_at: Criado em
+        updated_at: Atualizado em
+        failed_at: Falhou em
+        delivered_at: Enviado em
+        uid: UID
+        from: Remetente
+        to: Destinat?rio
+        subject: Assunto
+        date: Data
+        status: Situa??o
+        email_notification: Notifica??o
+        attachments: Anexos
+        email_account: Conta de e-mail
+        email_account_id: Conta de e-email
+        email_template: Template de e-mail
+        email_template_id: Template de e-mail
+      email_template:
+        deleted_at: Deletado em
+        created_at: Criado em
+        updated_at: Atualizado em
+        user_id: Usu?rio
+        user: Usu?rio
+        name: Nome
+        body: Conte?do
+        default: Padr?o
+      bank_billet_discharge:
+        created_at: Criado em
+        updated_at: Atualizado em
+        user_id: Usu?rio
+        user: Usu?rio
+        processed_at: Processado em
+        bank_billet: Boleto
+        bank_billet_id: Boleto
+        occurrence: Ocorr?ncia
+        occurrence_error: Detalhes da Ocorr?ncia
+        date_of_occurrence: Data da ocorr?ncia
+        line: Linha
+        discharge_id: Retorno
+        discharge: Retorno
+      discharge_esale:
+        created_at: Criado em
+        updated_at: Atualizado em
+        processed_at: Processado em
+        file_id: ID do arquivo
+        file_name: Nome do arquivo
+        file_size: Tamanho do arquivo
+        bank_billet_account_id: Carteira
+        bank_billet_account: Carteira
+        content: Conte?do
+      bank_billet_remittance:
+        created_at: Criado em
+        updated_at: Atualizado em
+        user_id: Usu?rio
+        user: Usu?rio
+        processed_at: Processado em
+        bank_billet: Boleto
+        bank_billet_id: Boleto
+        our_code: C?digo
+        occurrence: Ocorr?ncia
+        date_of_occurrence: Data da ocorr?ncia
+        line: Linha
+        discharge_id: Retorno
+        discharge: Retorno
+        bank_billet_account_id: Carteira
+        bank_billet_account: Carteira
+        remittance: Remessa
+        remittance_id: Remessa
+      bank_billet_registration:
+        created_at: Registro em
+      import:
+        id: ID
+        source: Arquivo
+        source_file_name: Nome do Arquivo
+        source_file_size: Tamanho do Arquivo
+        source_content_type: Tipo do Arquivo
+        source_updated_at: Arquivo atualizado em
+        customers: Clientes
+        customers_count: Clientes Criados
+        customer_subscriptions: Assinaturas
+        customer_subscriptions_count: Assinaturas Criadas
+        status: Situa??o
+        created_at: Criado em
+        updated_at: Atualizado em
+        processed_at: Processado em
+        deleted_at: Exclu?do em
+        total_rows: N?mero de Registros
+        processed_rows: Registros Processados
+        enqueued_at: Importa??o enviada pra fila em
+        started_at: Importa??o iniciada em
+        finished_at: Importa??o finalizada em
+        created_rows: Clientes criados
+        updated_rows: Clientes atualizados
+        failed_to_create_rows: Falhas de Cria??o
+        failed_to_update_rows: Falhas de Atualiza??o
+        import_errors: Erros na Importa??o
+      notification:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        title: T?tulo
+        short_description: Descri??o
+        severity: Severidade
+        dismissed_at: Lido em
+        deleted_at: Exclu?do em
+      bank_billet_registration:
+        id: ID
+        created_at: Criado em
+        updated_at: Atualizado em
+        deleted_at: Exclu?do em
+        bank_billet: Boleto
+        bank_billet_id: Boleto
+        request_data: Chamada
+        response_data: Resposta
+  bank_billets:
+    status:
+      generating: Gerando
+      generation_failed: Falha ao gerar
+      validation_failed: Inv?lido
+      opened: Aberto
+      canceled: Cancelado
+      paid: Pago
+      overdue: Vencido
+      blocked: Bloqueado
+      chargeback: Estornado
+    discount_types:
+      no_discount: 'Sem desconto'
+      by_value: 'Por valor'
+      by_percentage: 'Por porcentagem'
+    interest_types:
+      no_interest: 'N?o se aplica (isento)'
+      daily_percentage_after_one_calendar_day: 'Porcentagem di?ria ap?s um dia corrido'
+      daily_value_after_one_calendar_day: 'Valor di?rio ap?s um dia corrido'
+      daily_percentage_after_one_business_day: 'Porcentagem di?ria ap?s um dia ?til'
+      daily_value_after_one_business_day: 'Valor di?rio ap?s um dia ?til'
+      monthly_percentage_after_one_calendar_day: 'Porcentagem mensal ap?s um dia corrido'
+      monthly_percentage_after_one_business_day: 'Porcentagem mensal ap?s um dia ?til'
+    fine_types:
+      no_fine: 'Sem multa (isento)'
+      by_value: 'Por valor'
+      by_percentage: 'Por porcentagem'
+  bank_billet_accounts:
+    status:
+      pending: Homologa??o Pendente
+      homologating: Em homologa??o
+      validating: Em valida??o
+      active: Ativa
+  transactions:
+    kinds:
+      fee: Taxa
+      credit: Cr?dito
+      withdrawal: Saque
+      chargeback: Estorno
+      withdrawal_fee: Taxa Saque
+      chargeback_fee: Taxa Estorno
+      addon_fee: Addon
+      payment: Pagamento
+      billet_created_fee: Taxa Boleto Gerado
+      billet_paid_fee: Taxa Boleto Pago
+      plan_fee: Assinatura de Plano
+      bonus: B?nus
+      comission: Comiss?o
+      bank_registration_fee: Taxa Boleto Registrado
+    status:
+      unprocessed: Aguardando
+      processed: Processado
+      transferred: Transferido
+  bank_transfers:
+    status:
+      unprocessed: Aguardando
+      processed: Processado
+      transferred: Transferido
+  remittances:
+    status:
+      unprocessed: Aguardando
+      processed: Processado
+      sent: Enviado
+      downloaded: Download realizado
+  discharges:
+    status:
+      unprocessed: Aguardando
+      processed: Processado
+      unrecognized: Formato Inv?lido
+  customers:
+    account_types:
+      individual: F?sica
+      juridical: Jur?dica
+  customer_subscriptions:
+    status:
+      canceled: Cancelada
+      opened: Ativa
+    fine_types:
+      no_fine: 'Sem multa (isento)'
+      by_value: 'Por valor'
+      by_percentage: 'Por porcentagem'
+    interest_types:
+      no_interest: 'N?o se aplica (isento)'
+      daily_percentage_after_one_calendar_day: 'Porcentagem di?ria ap?s um dia corrido'
+      daily_value_after_one_calendar_day: 'Valor di?rio ap?s um dia corrido'
+      daily_percentage_after_one_business_day: 'Porcentagem di?ria ap?s um dia ?til'
+      daily_value_after_one_business_day: 'Valor di?rio ap?s um dia ?til'
+      monthly_percentage_after_one_calendar_day: 'Porcentagem mensal ap?s um dia corrido'
+      monthly_percentage_after_one_business_day: 'Porcentagem mensal ap?s um dia ?til'
+    discount_types:
+      no_discount: 'Sem desconto'
+      by_value: 'Por valor'
+      by_percentage: 'Por porcentagem'
+  phones:
+    states:
+      in-progress: Em progresso
+      valid_digits: Validado
+      invalid_digits: D?gitos Inv?lidos
+      ringing: Chamando
+      new: Novo
+      completed: Finalizado
+      canceled: Cancelado
+      failed: Falhou
+      busy: Ocupado
+      no-answer: N?o atendeu
+    kinds:
+      mobile: Celular
+      landline: Fixo
+  contracts:
+    states:
+      new: Novo
+      creating: Criando
+      created: Criado
+      waiting: Aguardando processamento
+      signed: Assinado
+      filed: Arquivado
+  users:
+    validations:
+      confirmed: Confirmado
+      pending: Pendente
+      under_review: Em An?lise
+      failed: Declinado
+    periods:
+      daily: Di?rio
+    account_statuses:
+      pending: Pendente
+      under_review: Em An?lise
+      approved: Aprovado
+    account_types:
+      individual: F?sica
+      juridical: Jur?dica
+    account_levels:
+      '0': N?vel 0
+      '1': N?vel 1
+    bank_billet_modes:
+      self: Conta Pr?pria
+      system: Boleto Simples
+  id_verifications:
+    states:
+      new: Novo
+      started: Iniciado
+      uploaded: Upload completo
+      processing: Processando cloudinary
+      waiting_callback: Aguardando Netverify
+      processing_callback: Processando Netverify
+      validated: V?lido
+      failed: Inv?lido (fraude?)
+      waiting_approve: Aguardando aprova??o
+  documents:
+    states:
+      new: Novo
+      uploaded: Upload completo
+      processing: Processando cloudinary
+      waiting_approve: Aguardando aprova??o
+      approved: Aprovado
+      declined: Declinado
+    types:
+      proof_of_address: Comprovante de Endere?o
+      cpf: CPF
+      articles_of_incorporation: Contrato Social
+      rg: Carteira de Identidade
+      cnh: Carteira Nacional de Habilita??o
+      marriage_certificate: Certid?o de Casamento
+  bank_accounts:
+    states:
+      pending: Pendente
+      waiting_approve: Aguardando aprova??o
+      approved: Aprovado
+      declined: Declinado
+  events:
+    codes:
+      bank_billet:
+        created: Boleto criado.
+        generated: Boleto gerado.
+        updated: Boleto atualizado.
+        canceled: Boleto cancelado.
+        overdue: Boleto ficou vencido.
+        paid: Boleto foi pago.
+        blocked: Boleto foi bloqueado.
+        due_date: Notifica boleto com 15, 7, 3 e 1 dias antes do vencimento.
+      bank_billet_discharge:
+        created: Registro de retorno criado.
+        updated: Registro de retorno atualizado.
+        deleted: Registro de retorno exclu?do.
+      bank_billet_remittance:
+        created: Registro de remessa criado.
+        updated: Registro de remessa atualizado.
+        deleted: Registro de remessa exclu?do.
+      customer:
+        created: Cliente criado.
+        updated: Cliente atualizado.
+        deleted: Cliente exclu?do.
+      transaction:
+        created: Transa??o criada.
+        updated: Transa??o atualizada.
+        processed: Transa??o processada.
+      addon:
+        activated: Addon ativado.
+        removed: Addon removido.
+      user:
+        updated: Conta atualizada.
+        blocked: Conta bloqueada.
+        bank_billet_creation_blocked: Emiss?o de boletos bloqueada.
+      withdrawal:
+        requested: Saque solicitado.
+        transferred: Saque transferido.
+      remittance:
+        created: Remessa criada.
+        updated: Remessa atualizada.
+        processed: Remessa processada.
+        sent: Remessa enviada.
+        downloaded: Download de Remessa realizado.
+      discharge:
+        created: Retorno criado.
+        updated: Retorno atualizado.
+        processed: Retorno processado.
+      bank_billet_account:
+        created: Conta de Cobran?a criada.
+        updated: Conta de Cobran?a atualizada.
+        homologated: Conta de Cobran?a enviada para homologa??o.
+        validated: Conta de Cobran?a homologada.
+        activated: Conta de Cobran?a ativada.
+        deleted: Conta de Cobran?a exclu?da.
+      plan_subscription:
+        activated: Plano ativado.
+        removed: Plano removido.
+        fee: Cobran?a do plano.
+      customer_subscription:
+        created: Assinatura criada.
+        updated: Assinatura atualizada.
+        deleted: Assinatura exclu?da.
+      installment:
+        created: Carn? criado.
+        finished: Carn? finalizado.
+        processed: Carn? processado.
+        deleted: Carn? exclu?do.
+        generated: Carn? gerado.
+  webhooks:
+    available_event_codes:
+      '*': Todos os eventos (atuais e futuros).
+      bank_billet:
+        '*': Todos os eventos de boleto (atuais e futuros).
+        created: Boleto criado.
+        generated: Boleto gerado.
+        updated: Boleto atualizado.
+        canceled: Boleto cancelado.
+        overdue: Boleto ficou vencido.
+        paid: Boleto foi pago.
+        blocked: Boleto foi bloqueado.
+        due_date: Notifica boleto com 15, 7, 3 e 1 dias antes do vencimento.
+      bank_billet_discharge:
+        '*': Todos os eventos de registro de retorno (atuais e futuros).
+        created: Registro de retorno criado.
+        updated: Registro de retorno atualizado.
+        deleted: Registro de retorno exclu?do.
+      bank_billet_remittance:
+        '*': Todos os eventos de registro de remessa (atuais e futuros).
+        created: Registro de remessa criado.
+        updated: Registro de remessa atualizado.
+        deleted: Registro de remessa exclu?do.
+      customer:
+        '*': Todos os eventos de clientes (atuais e futuros).
+        created: Cliente criado.
+        updated: Cliente atualizado.
+        deleted: Cliente exclu?do.
+      transaction:
+        '*': Todos os eventos de transa??es (atuais e futuros).
+        created: Transa??o criada.
+        updated: Transa??o atualizada.
+        processed: Transa??o processada.
+      withdrawal:
+        '*': Todos os eventos de saques (atuais e futuros).
+        requested: Saque solicitado.
+        transferred: Saque transferido.
+      user:
+        '*': Todos os eventos da conta (atuais e futuros).
+        updated: Conta atualizada.
+        blocked: Conta bloqueada.
+        bank_billet_creation_blocked: Emiss?o de boletos bloqueada.
+      remittance:
+        '*': Todos os eventos da remessa (atuais e futuros).
+        created: Remessa criada.
+        updated: Remessa atualizada.
+        processed: Remessa processada.
+        sent: Remessa enviada.
+        downloaded: Download de Remessa realizado.
+      discharge:
+        '*': Todos os eventos do retorno (atuais e futuros).
+        created: Retorno criado.
+        updated: Retorno atualizado.
+        processed: Retorno processado.
+      bank_billet_account:
+        '*': Todos os eventos da conta de cobran?a (atuais e futuros).
+        created: Conta de Cobran?a criada.
+        updated: Conta de Cobran?a atualizada.
+        homologated: Conta de Cobran?a enviada para homologa??o.
+        validated: Conta de Cobran?a homologada.
+        activated: Conta de Cobran?a ativada.
+        deleted: Conta de Cobran?a exclu?da.
+      addon:
+        '*': Todos os eventos do addon (atuais e futuros).
+        activated: Addon ativado.
+        removed: Addon removido.
+      plan_subscription:
+        '*': Todos os eventos do plano (atuais e futuros).
+        activated: Plano ativado.
+        removed: Plano removido.
+        fee: Cobran?a do plano.
+      customer_subscription:
+        '*': Todos os eventos de assinaturas (atuais e futuros).
+        created: Assinatura criada.
+        updated: Assinatura atualizada.
+        deleted: Assinatura exclu?da.
+      installment:
+        '*': Todos os eventos do carn? (atuais e futuros).
+        created: Carn? criado.
+        finished: Carn? finalizado.
+        processed: Carn? processado.
+        deleted: Carn? exclu?do.
+        generated: Carn? gerado.
+  subscriptions:
+    cycles:
+      biweekly: Quinzenal
+      bimonthly: Bimestral
+      monthly: Mensal
+      quarterly: Trimestral
+      semiannual: Semestral
+      annual: Anual
+    per_cycles:
+      biweekly: quinzena
+      bimonthly: bimestre
+      monthly: m?s
+      quarterly: trimestre
+      semiannual: semestre
+      annual: ano
+  installments:
+    status:
+      created: Gerando
+      processed: Processado
+      finished: Finalizado
+      generated: Boletos Gerados
+    cycles:
+      biweekly: Quinzenal
+      bimonthly: Bimestral
+      monthly: Mensal
+      quarterly: Trimestral
+      semiannual: Semestral
+      annual: Anual
+    per_cycles:
+      biweekly: quinzena
+      bimonthly: bimestre
+      monthly: m?s
+      quarterly: trimestre
+      semiannual: semestre
+      annual: ano
+    fine_types:
+      no_fine: 'Sem multa (isento)'
+      by_value: 'Por valor'
+      by_percentage: 'Por porcentagem'
+    interest_types:
+      no_interest: 'N?o se aplica (isento)'
+      daily_percentage_after_one_calendar_day: 'Porcentagem di?ria ap?s um dia corrido'
+      daily_value_after_one_calendar_day: 'Valor di?rio ap?s um dia corrido'
+      daily_percentage_after_one_business_day: 'Porcentagem di?ria ap?s um dia ?til'
+      daily_value_after_one_business_day: 'Valor di?rio ap?s um dia ?til'
+      monthly_percentage_after_one_calendar_day: 'Porcentagem mensal ap?s um dia corrido'
+      monthly_percentage_after_one_business_day: 'Porcentagem mensal ap?s um dia ?til'
+    discount_types:
+      no_discount: 'Sem desconto'
+      by_value: 'Por valor'
+      by_percentage: 'Por porcentagem'
+  email_accounts:
+    authentications:
+      login: Login
+      cram_md5: MD5
+      plain: Plain
+    verify_modes:
+      none: None
+      peer: Peer
+      client_once: Client Once
+      fail_if_no_peer_cert: Fail If No Peer Cert
+  plan_subscriptions:
+    status:
+      pending: Pendente
+      active: Ativo
+      canceled: Cancelado
+  customer_imports:
+    status:
+      pending: Pendente
+      enqueued: Enviado pra fila
+      started: Iniciado
+      done: Finalizado
+      abort: Abortado
+      fatal_error: Erro Fatal
+  invoices:
+    status:
+      pending: Pendente
+      overdue: Vencido
+      paid: Pago
+      canceled: Cancelado
+  email_templates:
+    errors:
+      syntax: 'possui um erro relacionado ?s vari?veis'
+  activerecord:
+    <<: *models_and_attributes
+  activemodel:
+    <<: *models_and_attributes
+  literals:
+    boolean:
+      'true': 'Sim'
+      'false': 'N?o'

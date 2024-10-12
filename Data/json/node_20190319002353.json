@@ -1,0 +1,13 @@
+{
+  "user": "brainopia",
+  "chruby_install": {
+    "default_ruby": "ruby",
+    "auto_upgrade": true,
+    "use_embedded": true
+  },
+  "rubies": {
+    "list": [ "ruby 2.0.0-p353" ],
+    "install_bundler": true
+  },
+  "run_list": [ "recipe[main]" ]
+}

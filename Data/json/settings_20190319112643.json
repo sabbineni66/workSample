@@ -1,0 +1,43 @@
+{
+    "workbench.colorTheme": "Solarized Light",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.gitExplorer.enabled": false,
+    "workbench.sideBar.location": "right",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "files.exclude": {
+        "vendor/*": true
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "editor.cursorBlinking": "phase",
+    "editor.minimap.renderCharacters": true,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        50, 80
+    ],
+    "editor.smoothScrolling": true,
+    "terminal.integrated.env.osx": {
+        "EDITOR": "code -w"
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "window.zoomLevel": 0,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "breadcrumbs.enabled": true,
+    "editor.largeFileOptimizations": false,
+    "editor.suggest.localityBonus": true,
+    "[yaml]": {
+
+    },
+    "files.associations": {
+        "*.yaml": "yaml"
+    },
+    "gitlens.views.repositories.enabled": false,
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true
+}

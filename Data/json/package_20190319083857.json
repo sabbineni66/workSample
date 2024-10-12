@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "build": "npm run theme && npm run styles && npm run scripts && npm run compress",
+    "compress": "npm run compress-styles & npm run compress-scripts",
+    "compress-scripts": "uglifyjs dist/bundle.js -o dist/bundle.min.js -c -m -v --screw-ie8 --stats",
+    "compress-styles": "cleancss -o dist/bundle.min.css dist/bundle.css --s0",
+    "lint": "stylelint src/styles/*.css && xo src/scripts/*.js --space --env=browser && xo tools/*.js --space --esnext",
+    "scripts": "cp src/scripts/index.js dist/bundle.js && node tools/build-scripts.js",
+    "server": "browser-sync start --files dist/bundle.css --server --no-notify --no-open",
+    "start": "npm run watch & npm run server",
+    "styles": "node tools/build-styles.js && postcss -c postcss.json",
+    "test": "npm run lint",
+    "theme": "node tools/build-styles.js & node tools/build-scripts.js",
+    "watch": "npm run styles -- -w"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "clean-css": "^3.4.10",
+    "postcss-cli": "^2.5.1",
+    "postcss-cssnext": "^2.4.0",
+    "postcss-import": "^8.0.2",
+    "postcss-url": "^5.1.1",
+    "stylelint": "^4.4.0",
+    "uglify-js": "^2.6.2",
+    "xo": "^0.13.0"
+  },
+  "dependencies": {
+    "media-queries": "^1.0.3"
+  }
+}

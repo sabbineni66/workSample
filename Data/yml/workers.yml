@@ -1,0 +1,81 @@
+---
+- hosts: workers
+  become_user: root
+  become: true
+  remote_user: root
+  tasks:
+
+  # - name: make directory for Kubernetes
+  #   file: path={{ item }} state=directory
+  #   with_items:
+  #     - /var/lib/kubernetes
+  #     - /var/lib/kubelet
+  #     - /etc/kubernetes
+
+  - name: upload certificates
+    copy:
+      src: ../output/{{ item }}
+      dest: /var/lib/kubernetes
+      owner: root
+      group: root
+      mode: 0600
+    become: true
+    with_items:
+      - ca.pem
+      - kubernetes.pem
+      - kubernetes-key.pem
+
+  # - name: upload kubelet.service systemd unit
+  #   copy:
+  #     src: ../templates/kubelet.service
+  #     dest: /etc/systemd/system
+  #     owner: root
+  #     group: root
+  #     mode: 0600
+
+  # - name: upload kube-proxy.service systemd unit
+  #   copy:
+  #     src: ../templates/kube-proxy.service
+  #     dest: /etc/systemd/system
+  #     owner: root
+  #     group: root
+  #     mode: 0600
+
+  - name: upload kubelet.sh script
+    copy:
+      src: ../output/kubelet.sh
+      dest: /usr/local/sbin
+      owner: root
+      group: root
+      mode: 0700
+
+  - name: upload kube-proxy.sh script
+    copy:
+      src: ../output/kube-proxy.sh
+      dest: /usr/local/sbin
+      owner: root
+      group: root
+      mode: 0700
+
+  - name: upload kubeconfig
+    copy:
+      src: ../output/kubeconfig
+      dest: /var/lib/kubelet
+      owner: root
+      group: root
+      mode: 0600
+
+  - name: reload systemd
+    command: systemctl daemon-reload
+
+  - name: enable and start kubelet
+    systemd:
+      name: kubelet
+      enabled: yes
+      state: started
+
+  - name: enable and start kube-proxy
+    systemd:
+      name: kube-proxy
+      enabled: yes
+      state: started

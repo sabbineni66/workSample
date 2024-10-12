@@ -1,0 +1,18 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "serve": "firebase serve --only hosting,functions",
+    "deploy": "(cd functions && yarn prepare) && firebase deploy",
+    "login": "firebase login",
+    "preserve": "yarn package:functions",
+    "package:functions": "babel firebaseFunctions --out-dir functions --copy-files --ignore firebaseFunctions/node_modules",
+    "postpackage:functions": "cd functions && yarn"
+  },
+  "xdevDependencies": {
+    "@babel/cli": "^7.0.0-beta.35",
+    "@babel/preset-env": "^7.0.0-beta.35"
+  },
+  "devDependencies": {
+    "firebase-tools": "^3.16.0"
+  }
+}

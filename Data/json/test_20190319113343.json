@@ -1,0 +1,17 @@
+{
+	"host":     "irc.freenode.com",
+	"port":     6667,
+	"nick":     "NodeJS-IRC-Bot",
+	"username": "NodeJS-IRC-Bot",
+	"realname": "NodeJS-IRC-Bot",
+	"channels": ["#anunknownchannel"],
+	"command":  "!",
+	"logLevel":  "verbose",
+	"pluginConfigs": {
+		"freenode": {
+			"nickPass": "nopassword"
+		}
+	},
+
+	"plugins":  []
+}

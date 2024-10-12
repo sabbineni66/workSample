@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tecnologia | Blog do Enderson!]]></title>
+  <link href="http://enderson.blog.br/blog/categories/tecnologia/atom.xml" rel="self"/>
+  <link href="http://enderson.blog.br/"/>
+  <updated>2014-12-18T20:44:10-03:00</updated>
+  <id>http://enderson.blog.br/</id>
+  <author>
+    <name><![CDATA[Enderson Maia]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Pesquisa sobre a ado??o do Ruby (on Rails) na ThoughtWorks]]></title>
+    <link href="http://enderson.blog.br/2009/06/11/pesquisa-sobre-a-adocao-do-ruby-on-rails-na-thoughtworks/"/>
+    <updated>2009-06-11T22:18:13-03:00</updated>
+    <id>http://enderson.blog.br/2009/06/11/pesquisa-sobre-a-adocao-do-ruby-on-rails-na-thoughtworks</id>
+    <content type="html"><![CDATA[<p>Martin Fowler publicou um artigo sobre a experi?ncia, nestes ?ltimos anos, na utiliza??o do Ruby em 41 projetos, alguns deles com mais de 40 pessoas envolvidas e mais de 2 anos de dura??o.</p>
+
+<p>O artigo foi baseado numa pesquisa feito pelo pr?prio Fowler, em todos os projetos que usaram Ruby (on Rails) como tecnologia principal, e faz alguns levantamentos sobre performance, produtividade.</p>
+
+<p>Vale a pena dar uma lida.</p>
+
+<p>Fonte: <a href="http://martinfowler.com/articles/rubyAtThoughtWorks.html">Ruby at ThoughtWorks</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Alagoas Digital 2009]]></title>
+    <link href="http://enderson.blog.br/2009/04/10/alagoas-digital-2009/"/>
+    <updated>2009-04-10T21:15:32-03:00</updated>
+    <id>http://enderson.blog.br/2009/04/10/alagoas-digital-2009</id>
+    <content type="html"><![CDATA[<p>Houve um evento esses dias aqui em Macei?, e gostei do que aconteceu. Evento grande, bastante gente, espero que o evento se repita anualmente.</p>
+
+<p>Acho que nunca aconteceu um evento deste tamanho em Alagoas, para o mercado de TIC, e percebi que muita gente n?o compareceu. Se foi falta de divulga??o, ou falta de interesse dos profissionais, n?o sei dizer, mas as duas coisas me incomodariam.</p>
+
+<p>Os indicadores sociais de Alagoas n?o s?o os melhores (para n?o dizer que s?o os piores), e as vezes fica dif?cil assimilar que podemos avan?ar na ?rea de TI sem antes termos uma melhoria nestes indicadores. Acho que a TI ? um caminho para melhoria destes indicadores, se forem trabalhados da forma correta.</p>
+
+<p>Espero que este evento tenha aberto a mente de muita gente, para o que deve ser feito para mudarmos a cara de Alagoas, para os alagoanos, e para o Brasil. N?o quero parecer um pol?tico, nem um sonhador falando, mas queria muito que todo alagoano pudesse acreditar que faz a diferen?a quando faz a sua parte.</p>
+
+<p>Se voc? ? da ?rea de TI, acompanhe o que est? acontecendo ao se redor, e n?o se deixe levar, pense, fale, fa?a alguma coisa. Pense no coletivo, que as coisas tendem a mudar mais f?cil.</p>
+
+<p>Eu precisaria de mais do que alguns par?grafos, e at? mais paci?ncia para fazer um texto mais objetivo, e com sentido, como ainda n?o consigo, deixa assim mesmo, devaneios mesmo.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Teclado Apple com Ubuntu]]></title>
+    <link href="http://enderson.blog.br/2008/05/29/teclado-apple-com-ubuntu/"/>
+    <updated>2008-05-29T17:50:11-03:00</updated>
+    <id>http://enderson.blog.br/2008/05/29/teclado-apple-com-ubuntu</id>
+    <content type="html"><![CDATA[<p>Quem usa o teclado apple com o Ubuntu, e fez a ultima atuliza??o do kernel, deve ter percebido que em algum momento todas as teclas param de funcionar. Na verdade eu j? usava, e vi que o teclado num?rico n?o funcionava, mas como eu n?o utilizava mesmo, ent?o n?o sentia falta.</p>
+
+<p>Al?m disto, voc? tem que se habituar em algumas coisas que no Mac OS mudam, como a tecla <em>Control</em> pela tecla <em>Command</em> (ma??). Eu ainda n?o configurei tudo isso, mas voc? pode seguir <a href="http://linuxtidbits.wordpress.com/2008/04/19/apple-keyboards-in-linux/">este link</a> que ajuda.</p>
+
+<p>A dica que quero deixar ?, se por acaso o se teclado parar de funcionar, vc segura a tecla F6 uns 3 segundos, e ele volta a funcionar, isso acontece quando voc? aperta a tela <em>clear</em>, que deveria funcionar como o <em>NumLock</em>, ele desabilita tudo, mas depois que voc? segura o F6, volta a funcionar tudo, inclusive o teclado num?rico.</p>
+
+<p>Fonte: <a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/201887/comments/30">https://bugs.launchpad.net/ubuntu/+source/linux/+bug/201887/comments/30</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Deixe os torrents baixando]]></title>
+    <link href="http://enderson.blog.br/2008/04/04/deixe-os-torrents-baixando/"/>
+    <updated>2008-04-04T09:00:37-03:00</updated>
+    <id>http://enderson.blog.br/2008/04/04/deixe-os-torrents-baixando</id>
+    <content type="html"><![CDATA[<p>Se voc? tem um PC velho, e n?o usa pra nada, que t?o tal transform?-lo em um gerenciador de torrents ?</p>
+
+<p>Basta instalar uma distribui??o Linux qualquer (*NIX funcionam), e baixar o <a href="http://www.torrentflux.com/">TorrentFlux</a>, com ele voc? pode criar usu?rios, fazer login remoto, e deixar os torrents baixando em casa, usando sua banda larga enquanto n?o tem ningu?m em casa.</p>
+
+<p>Se quiser economizar no uso de mem?ria, voc? pode usar o Lighttpd + sqlite ao inv?s de Apache + MySQL.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Blogando a partir do Google Docs.]]></title>
+    <link href="http://enderson.blog.br/2008/04/02/blogando-a-partir-do-google-docs/"/>
+    <updated>2008-04-02T10:23:10-03:00</updated>
+    <id>http://enderson.blog.br/2008/04/02/blogando-a-partir-do-google-docs</id>
+    <content type="html"><![CDATA[<p>Blogando a partir do <a href="http://docs.google.com">Google Docs</a>.</p>
+
+<p>Isso mesmo, estou dentro do Google Docs, e configurei o meu blog, l? em Configura??es (<em>Settings</em>, em ingl?s).<br/>
+?timo. Agora posso postar direto do Google Docs.</p>
+
+<p>Ele j? suporta a API do blogger.com (?bvio), MetaWeblog e MovableType, mas se voc? j? tem<br/>
+conta no <a href="http://wordpress.com">WordPress.com</a>, <a href="http://www.livejournal.com/">LiveJournal.com</a> e alguns outros, funciona sem problemas.</p>
+
+<p>Fica ent?o a dica.</p>
+]]></content>
+  </entry>
+  
+</feed>

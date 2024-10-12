@@ -1,0 +1,53 @@
+Style/AlignArray:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+Style/PerlBackrefs:
+  Enabled: false
+
+Style/IndentArray:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/ClassLength:
+  Max: 500
+
+Metrics/ModuleLength:
+  Max: 500
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/WhileUntilModifier:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/ExtraSpacing:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

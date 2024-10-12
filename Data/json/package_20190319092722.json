@@ -1,0 +1,46 @@
+{
+  "name": "nothing-major",
+  "version": "1.1.1",
+  "author": "Andrew O'Brien <obrien.andrew@gmail.com>",
+  "description": "Ensures that you've marked your breaking change commits.",
+  "keywords": [
+    "breaking",
+    "change",
+    "detection",
+    "semver",
+    "package"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndrewO/nothing-major"
+  },
+  "bin": {
+    "nothing-major": "cli.js"
+  },
+  "scripts": {
+    "pretest": "cd fixtures && ./build.sh ../tmp",
+    "test": "bats *.bats",
+    "commitmsg": "node cli.js -b 'npm install' -t 'npm test' test.bats",
+    "release": "standard-version"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "bats": "^0.4.2",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^0.14.3",
+    "standard-version": "^4.3.0"
+  },
+  "dependencies": {
+    "conventional-changelog-angular": "^1.6.6",
+    "conventional-recommended-bump": "^2.0.6",
+    "debug": "^3.1.0",
+    "execa": "^0.9.0",
+    "meow": "^4.0.0",
+    "tempy": "^0.2.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

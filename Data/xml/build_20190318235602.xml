@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project basedir="." default="jar" name="ioke">
+  <description>
+    ioke is a next generation language, based on Io, Self, Smalltalk, Ruby and Lisp
+  </description>
+
+  <property file="build.properties"/>
+  <property file="default.build.properties"/>
+
+  <taskdef resource="tasks.properties">
+    <classpath>
+      <fileset dir="${lib.build.dir}" includes="*.jar"/>
+    </classpath>
+  </taskdef>
+
+  <path id="build.classpath">
+    <fileset dir="${lib.build.dir}" includes="*.jar"/>
+    <fileset dir="${lib.release.dir}" includes="*.jar"/>
+  </path>
+
+  <target name="prepare" description="Creates the directories needed for building">
+    <mkdir dir="${build.dir}"/>
+    <mkdir dir="${coverage.dir}"/>
+    <mkdir dir="${classes.dir}"/>
+  </target>
+
+  <target name="generate_filters" depends="prepare" description="Generates source files">
+    <exec executable="ruby" input="generate_filter_data.rb" failonerror="false" failifexecutionfails="false"/>
+  </target>
+
+  <target name="compile" depends="generate_filters" description="Compile the source files for the project.">
+    <filter filtersfile="version_data.properties"/>
+    <filter token="VERSION" value="P"/>
+    <filter token="VERSION_RUNTIME" value="0.4.0-snapshot"/>
+    <filter token="VERSION_STRING" value="Ioke E ikj 0.4.0-snapshot"/>
+
+    <javac destdir="${classes.dir}" debug="true" source="${javac.version}" target="${javac.version}">
+      <classpath refid="build.classpath"/>
+      <src path="${src.dir}"/>
+      <include name="**/*.java"/>
+    </javac>
+
+    <copy todir="${classes.dir}" filtering="true" overwrite="true">
+      <fileset dir="${src.dir}" includes="**/*.properties"/>
+    </copy>
+
+    <copy todir="${classes.dir}">
+      <fileset dir="${src.raw.dir}" includes="builtin/**/*.ik"/>
+      <fileset dir="${src.raw.dir}/ikj" includes="builtin/**/*.ik"/>
+    </copy>
+  </target>
+
+  <target name="coverage.instrument" depends="compile" description="">
+    <cobertura-instrument todir="${coverage.classes.dir}">
+        <fileset dir="${classes.dir}" excludes="ioke/lang/parser/**/*.class"/>
+    </cobertura-instrument>
+  </target>
+
+  <target name="test" depends="compile" description="Runs all ISpec tests">
+    <java classname="ioke.lang.Main" fork="true" failonerror="true" maxmemory="256m">
+      <sysproperty key="ispec.ansi" value="${ispec.ansi}"/>
+      <classpath refid="build.classpath"/>
+      <classpath path="${classes.dir}"/>
+
+      <arg line="bin/ispec test -fs"/>
+    </java>
+  </target>
+
+  <target name="coverage" depends="coverage.instrument" description="Runs all ISpec tests using Cobertura and produces a report">
+    <java classname="ioke.lang.Main" fork="true" failonerror="true">
+      <classpath refid="build.classpath"/>
+      <classpath path="${coverage.classes.dir}"/>
+      <classpath path="${classes.dir}"/>
+
+      <arg line="bin/ispec test -fs"/>
+    </java>
+
+    <cobertura-report srcdir="${src.dir}" destdir="${coverage.report.dir}"/>
+  </target>
+
+  <target name="jar" depends="test" description="Create the ioke.jar file">
+    <jar destfile="${lib.dir}/ioke.jar">
+      <fileset dir="${classes.dir}">
+        <include name="**/*.class"/>
+        <include name="**/*.ik"/>
+        <include name="**/*.properties"/>
+      </fileset>
+      <zipfileset src="${lib.release.dir}/jline-0.9.93.jar" includes="**/*"/>
+      <zipfileset src="${lib.release.dir}/joda-time-1.6.jar" includes="**/*"/>
+      <zipfileset src="${lib.release.dir}/asm-3.1.jar" includes="**/*"/>
+      <manifest>
+        <attribute name="Built-By" value="${user.name}"/>
+        <attribute name="Main-Class" value="ioke.lang.Main"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="jar-lib" depends="jar" description="Create the ioke-lib.jar file">
+    <jar destfile="${lib.dir}/ioke-lib.jar">
+      <fileset dir="lib/ioke">
+        <include name="**/*"/>
+      </fileset>
+      <manifest>
+        <attribute name="Built-By" value="${user.name}"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="jar-notest" depends="compile" description="Create the ioke.jar file">
+    <jar destfile="${lib.dir}/ioke.jar">
+      <fileset dir="${classes.dir}">
+        <include name="**/*.class"/>
+        <include name="**/*.ik"/>
+        <include name="**/*.properties"/>
+      </fileset>
+      <zipfileset src="${lib.release.dir}/jline-0.9.93.jar" includes="**/*"/>
+      <zipfileset src="${lib.release.dir}/joda-time-1.6.jar" includes="**/*"/>
+      <zipfileset src="${lib.release.dir}/asm-3.1.jar" includes="**/*"/>
+      <manifest>
+        <attribute name="Built-By" value="${user.name}"/>
+        <attribute name="Main-Class" value="ioke.lang.Main"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="jar-lib-notest" depends="jar-notest" description="Create the ioke-lib.jar file">
+    <jar destfile="${lib.dir}/ioke-lib.jar">
+      <fileset dir="lib/ioke">
+        <include name="**/*"/>
+      </fileset>
+      <manifest>
+        <attribute name="Built-By" value="${user.name}"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="dist-bin" depends="jar">
+    <tar destfile="${release.dir}/ioke-P-ikj-0.4.0-snapshot.tar.gz" compression="gzip">
+      <tarfileset mode="755" dir="." prefix="ioke">
+        <include name="bin/*.bat"/>
+        <include name="bin/dokgen"/>
+        <include name="bin/ioke"/>
+        <include name="bin/ispec"/>
+      </tarfileset>
+
+      <tarfileset dir="." prefix="ioke">
+        <include name="lib/ioke*.jar"/>
+        <include name="lib/ioke/**"/>
+        <include name="dok/**"/>
+        <include name="share/**"/>
+        <include name="COPYING"/>
+        <include name="LICENSE"/>
+        <include name="LICENSE.kawa"/>
+        <include name="README"/>
+      </tarfileset>
+    </tar>
+
+    <zip destfile="${release.dir}/ioke-P-ikj-0.4.0-snapshot.zip">
+      <zipfileset filemode="755" dir="." prefix="ioke">
+        <include name="bin/*.bat"/>
+        <include name="bin/dokgen"/>
+        <include name="bin/ioke"/>
+        <include name="bin/ispec"/>
+      </zipfileset>
+
+      <zipfileset dir="." prefix="ioke">
+        <include name="lib/ioke*.jar"/>
+        <include name="lib/ioke/**"/>
+        <include name="dok/**"/>
+        <include name="share/**"/>
+        <include name="COPYING"/>
+        <include name="LICENSE"/>
+        <include name="LICENSE.kawa"/>
+        <include name="README"/>
+      </zipfileset>
+    </zip>
+  </target>
+
+  <target name="dist" depends="dist-bin"/>
+
+  <target name="clean" description="clean almost everything">
+    <delete dir="${build.dir}"/>
+    <delete file="${lib.dir}/ioke.jar" quiet="true"/>
+    <delete file="${lib.dir}/ioke-lib.jar" quiet="true"/>
+  </target>
+</project>

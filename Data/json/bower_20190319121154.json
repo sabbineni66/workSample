@@ -1,0 +1,20 @@
+{
+  "name": "polymer-starter-kit",
+  "private": true,
+  "dependencies": {
+    "cookies-js": "~1.2.2",
+    "firebase": "~2.3.0",
+    "iron-elements": "PolymerElements/iron-elements#1.0.6",
+    "neon-elements": "PolymerElements/neon-elements#1.0.0",
+    "page": "visionmedia/page.js#~1.6.3",
+    "paper-card": "PolymerElements/paper-card#~1.0.4",
+    "paper-toast": "PolymerElements/paper-toast#~1.1.1",
+    "paper-elements": "PolymerElements/paper-elements#1.0.6",
+    "platinum-elements": "PolymerElements/platinum-elements#1.2.0",
+    "time-elements": "~0.4.0"
+  },
+  "devDependencies": {
+    "web-component-tester": "*",
+    "test-fixture": "PolymerElements/test-fixture#^1.0.0"
+  }
+}

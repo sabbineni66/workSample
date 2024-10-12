@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Startseite",
+    "url": "/"
+  },
+  {
+    "title": "Artikel",
+    "url": "/artikel/"
+  },
+  {
+    "title": "Lexikon",
+    "url": "/lexikon/"
+  },
+  {
+    "title": "Zitate",
+    "url": "/zitate/"
+  },
+  {
+    "title": "B?cher",
+    "url": "/kaufempfehlungen/buecher/"
+  },
+  {
+    "title": "Filme",
+    "url": "/kaufempfehlungen/filme/"
+  },
+  {
+    "title": "Information",
+    "url": "/info/"
+  }
+]

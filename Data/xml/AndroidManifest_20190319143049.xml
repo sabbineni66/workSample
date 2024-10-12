@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="org.daly.letters" 
+          android:versionCode="9" 
+          android:versionName="1.0">
+ <application android:icon="@drawable/icon" 
+              android:label="@string/app_name"
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+  <activity android:name="MahLetters" 
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
+   <intent-filter>
+    <action android:name="android.intent.action.MAIN" />
+    <category android:name="android.intent.category.LAUNCHER" />
+   </intent-filter>
+  </activity>
+ </application>
+ <uses-sdk android:minSdkVersion="4" />
+ <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+ <uses-permission android:name="android.permission.WAKE_LOCK" />
+ <supports-screens android:largeScreens="true"
+                   android:normalScreens="true" 
+                   android:smallScreens="true"
+                   android:anyDensity="true" />
+</manifest>

@@ -1,0 +1,22 @@
+---
+- hosts: alarmpi
+  user: root
+  gather_facts: no
+  name: set up ansible access
+  tasks:
+  - name: see if python is already installed
+    raw: test -e /usr/bin/python
+    register: python_installed
+    # looks like this is needed to prevent it from exiting immediately
+    ignore_errors: yes
+  - name: update package list
+    raw: pacman -Sy
+    when_failed: $python_installed
+  - name: install python2
+    raw: pacman -S --noconfirm python2
+    when_failed: $python_installed
+  - name: link it to /usr/bin/python
+    raw: ln -sf /usr/bin/python2 /usr/bin/python
+    when_failed: $python_installed
+  - name: copy over my SSH key
+    authorized_key: user=root key='$FILE(/home/bct/.ssh/id_rsa.pub)'

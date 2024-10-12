@@ -1,0 +1,149 @@
+# WARNING: NEVER EDIT config.yml to run the app
+# (unless you are changing the underlying code)
+# Instead, copy any sections you want to change to local.yml and edit them there.
+#
+
+# Your secret key for verifying cookie session data integrity.
+# If you change this key, all old sessions will become invalid!
+# Make sure the secret is at least 30 characters and all random,
+# no regular words or you'll be exposed to dictionary attacks.
+
+# do not use the defaults in production!
+SESSION_KEY: '_otwarchive_session'
+SESSION_SECRET: '898f6d0363863ec79d782238cd1c5767636d712cc0d138238bcd5bfc9d2672fb852380050e52c03a0401175d909c09dba48512a119d46b126a84c2dd05716eb5'
+
+RETURN_ADDRESS: 'do-not-reply@example.org'
+SUPPORT_ADDRESS: 'support@example.org'
+ABUSE_ADDRESS: 'abuse@example.org'
+QUESTION_ADDRESS: 'questions@example.org'
+WEBMASTER_ADDRESS: 'webmaster@example.org'
+ERROR_ADDRESS: errors@example.org
+FEEDBACK_ADDRESS: feedback@example.org
+ERROR_PREFIX: "[ERROR] "
+# Because the default email addresses are fake,
+# email delivery is turned off by default, even for production.
+# The log file will nonetheless show "Sent mail:"
+PERFORM_DELIVERIES: false
+
+APP_URL: 'http://www.example.org'
+APP_NAME: 'Example Archive'
+LOGO: 'OTWLogo.png'
+ALT_LOGO: 'OTW Logo:closing the circle of the copyright symbol, it symbolizes our creative engagement with media: participating and not just consuming.'
+REVISION: ''
+
+# tag settings
+DELIMITER: ', '  # if you change this, you probably need to change the label regexp as well
+
+SMTP_SERVER: localhost
+SMTP_PORT: 25
+SMTP_DOMAIN: localhost
+# if required for email authentication
+#SMTP_USER:
+#SMTP_PASSWORD:
+#SMTP_AUTHENTICATION: # :plain, :login or :cram_md5
+
+ACCOUNT_CREATION_ENABLED: true
+INVITATION_LIMIT: 1
+
+# validation values -- max/min lengths
+TITLE_MAX: 255
+TITLE_MIN: 1
+SUMMARY_MAX: 1250
+NOTES_MAX: 2500
+COMMENT_MAX: 4300
+TAG_MAX: 42
+CONTENT_MIN: 10
+CONTENT_MAX: 500000
+
+# number of items in various displays
+ITEMS_PER_PAGE: 25
+NUMBER_OF_ITEMS_VISIBLE_IN_DASHBOARD: 5
+COMMENT_THREAD_MAX_DEPTH: 5
+TAGS_PER_LINE: 12
+
+# LEGACY - will be removed after beta has been migrated and the migrations reset
+DEFAULT_CATEGORY_NAME: 'default'
+AMBIGUOUS_CATEGORY_NAME: 'ambiguous'
+
+
+# Tag kinds and default tags
+WARNING_CATEGORY_NAME: 'Warning'
+WARNING_DEFAULT_TAG_NAME: 'Choose Not To Warn'
+WARNING_NONE_TAG_NAME: 'None Of These Warnings Apply'
+WARNING_SOME_TAG_NAME: 'Choose Not To Warn For Some Content'
+WARNING_VIOLENCE_TAG_NAME: 'Graphic Depictions Of Violence'
+WARNING_DEATH_TAG_NAME: 'Major Character Death'
+WARNING_NONCON_TAG_NAME: 'Rape/Non-Con'
+WARNING_CHAN_TAG_NAME: 'Underage'
+
+RATING_CATEGORY_NAME: 'Rating'
+RATING_DEFAULT_TAG_NAME: 'Not Rated'
+RATING_EXPLICIT_TAG_NAME: 'Explicit'
+RATING_MATURE_TAG_NAME: 'Mature'
+RATING_TEEN_TAG_NAME: 'Teen And Up Audiences'
+RATING_GENERAL_TAG_NAME: 'General Audiences'
+
+CATEGORY_CATEGORY_NAME: 'Category'
+CATEGORY_GEN_TAG_NAME: 'Gen'
+CATEGORY_HET_TAG_NAME: 'F/M'
+CATEGORY_SLASH_TAG_NAME: 'M/M'
+CATEGORY_FEMSLASH_TAG_NAME: 'F/F'
+CATEGORY_MULTI_TAG_NAME: 'Multi'
+CATEGORY_OTHER_TAG_NAME: 'Other'
+
+MEDIA_CATEGORY_NAME: 'Media'
+MEDIA_NO_TAG_NAME: 'No Media'
+MEDIA_UNCATEGORIZED_NAME: 'Uncategorized Fandoms'
+FANDOM_CATEGORY_NAME: 'Fandom'
+FANDOM_NO_TAG_NAME: 'No Fandom'
+PAIRING_CATEGORY_NAME: 'Pairing'
+CHARACTER_CATEGORY_NAME: 'Character'
+FREEFORM_CATEGORY_NAME: 'Tag'
+COMMON_CATEGORY_NAME: 'Common'
+BANNED_CATEGORY_NAME: 'Banned'
+AMBIGUOUS_CATEGORY_NAME: 'Ambiguous'
+
+# This is used to determine how many recent items
+# to cache for recent lookups -- eg if we want to
+# provide a "ten most recent" items to browse.
+# used in CacheFinds module -- include CacheFinds in a model
+# and the methods Model.recent and Model.last(#) will be
+# enabled, cached on production/test environments.
+MAX_RECENT: 20
+
+# Only the following fields are allowed to have HTML. In all others,
+# all HTML tags will be stripped.
+FIELDS_ALLOWING_HTML: %w(content summary notes about_me comment note)
+
+# variables for Askimet http://akismet.com/
+AKISMET_KEY: '6833ee7298cf'
+AKISMET_NAME: 'http://transformativeworks.org'
+
+DEFENSIO_KEY: '521476c0edf3ac96eab7e297f6fb92c8'
+DEFENSIO_NAME: 'http://archiveofourown.org'
+
+DEFAULT_LANGUAGE_SHORT: 'en'
+DEFAULT_LANGUAGE_NAME: 'English'
+DEFAULT_LOCALE_ISO: 'en'
+DEFAULT_LOCALE_NAME: 'English (US)'
+
+#Allow OpenID Authentication
+USE_OPENID: true
+
+# Allow orphaninig
+ORPHANING_ALLOWED: true
+
+# Help directory, must be in the public folder.
+# Create subfolders for each supported language
+# (eg, /help/fr/ contains the French versions of the help)
+HELP_DIRECTORY: '/help'
+
+# only use if you are running your app completely in a subfolder of your domain
+#PRODUCTION_URL_ROOT: "/archive"
+
+# turn delta indexes on and off
+USE_DELTA_INDEXING: false
+
+# production caching
+#PRODUCTION_CACHE: "memory"
+PRODUCTION_CACHE: "memcache"

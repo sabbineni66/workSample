@@ -1,0 +1,12 @@
+proxy:
+  build: ./nginx
+  ports:
+    - "8080:80"
+  links:
+    - web
+
+web:
+  build: ./rails
+  command: bundle exec puma -C config/puma.rb
+  volumes:
+    - ./rails:/app

@@ -1,0 +1,261 @@
+"zh-cn":
+  countries:
+    afghanistan:                                    "???"  #  "Afghanistan"]#
+    aland_islands:                                  'aland_islands'
+    albania:                                        "?????"  #   "Albanie"]#
+    algeria:                                        "?????"  #   "Alg?rie"]#
+    american_samoa:                                 "?????"  #   "Samoa Am?ricaine"]#
+    andorra:                                        "???"  #   "Andorre"]#
+    angola:                                         "???"  #   "Angola"]#
+    anguilla:                                       "????"  #   "Anguilla"]#
+    antarctica:                                     "???"  #   "Antarctique"]#
+    antigua_and_barbuda:                            "???????"  #   "Antigua And Barbuda"]#
+    argentina:                                      "???"  #   "Argentina"]#
+    armenia:                                        "????"  #   "Armenia"]#
+    aruba:                                          "???"  #   "Aruba"]#
+    australia:                                      "????"  #   "Australia"]#
+    austria:                                        "???"  #   "Austria"]#
+    azerbaijan:                                     "????"  #   "Azerbaijan"]#
+    bahamas:                                        "???"  #   "Bahamas"]#
+    bahrain:                                        "??"  #   "Bahrain"]#
+    bangladesh:                                     "????"  #   "Bangladesh"]#
+    barbados:                                       "????"  #   "Barbados"]#
+    belarus:                                        "????"  #   "Belarus"]#
+    belgium:                                        "???"  #   "Belgium"]#
+    belize:                                         "???"  #   "Belize"]#
+    benin:                                          "??"  #   "Benin"]#
+    bermuda:                                        "?????"  #   "Bermuda"]#
+    bhutan:                                         "??"  #   "Bhutan"]#
+    bolivia:                                        "????"  #   "Bolivia"]#
+    bosnia_and_herzegowina:                         "??????????"  #   "Bosnia and Herzegowina"]#
+    botswana:                                       "????"  #   "Botswana"]#
+    bouvet_island:                                  "???"  #   "Bouvet Island"]#
+    brazil:                                         "??"  #   "Brazil"]#
+    british_indian_ocean_territory:                 "B???????"  #   "British Indian Ocean Territory"]#
+    brunei_darussalam:                              "??"  #   "Brunei Darussalam"]#
+    bulgaria:                                       "????"  #   "Bulgaria"]#
+    burkina_faso:                                   "?????"  #   "Burkina Faso"]#
+    burma:                                          "??"  #   "Burma"]#
+    burundi:                                        "???"  #   "Burundi"]#
+    cambodia:                                       "???"  #   "Cambodia"]#
+    cameroon:                                       "???"  #   "Cameroon"]#
+    canada:                                         "???"  #   "Canada"]#
+    cape_verde:                                     "???"  #   "Cape Verde"]#
+    cayman_islands:                                 "????"  #   "Cayman Islands"]#
+    central_african_republic:                       "?????"  #   "Central African Republic"]#
+    chad:                                           "??"  #   "Chad"]#
+    chile:                                          "??"  #   "Chile"]#
+    china:                                          "??"  #   "China"]#
+    christmas_island:                               "???"  #   "Christmas Island"]#
+    cocos_keeling_islands:                          "?????"  #   "Cocos (Keeling) Islands"]#
+    colombia:                                       "????"  #   "Colombia"]#
+    comoros:                                        "???"  #   "Comoros"]#
+    congo:                                          "??"  #   "Congo"]#
+    congo_the_democratic_republic_of_the:           "??"  #   "Congo# the Democratic Republic of the"]#
+    cook_islands:                                   "????"  #   "Cook Islands"]#
+    costa_rica:                                     "?????"  #   "Costa Rica"]#
+    cote_divoire:                                   "????"  #   "Cote d'Ivoire"]#
+    croatia:                                        "????"  #   "Croatia"]#
+    cuba:                                           "??"  #   "Cuba"]#
+    cyprus:                                         "????"  #   "Cyprus"]#
+    czech_republic:                                 "??"  #   "Czech Republic"]#
+    denmark:                                        "??"  #   "Denmark"]#
+    djibouti:                                       "???"  #   "Djibouti"]#
+    dominica:                                       "??????"  #   "Dominica"]#
+    dominican_republic:                             "???????"  #   "Dominican Republic"]#
+    east_timor:                                     "???"  #   "East Timor"]#
+    ecuador:                                        "????"  #   "Ecuador"]#
+    egypt:                                          "??"  #   "Egypt"]#
+    el_salvador:                                    "????"  #   "El Salvador"]#
+    england:                                        "???"  #   "England"]#
+    equatorial_guinea:                              "?????(??)"  #   "Equatorial Guinea"]#
+    eritrea:                                        "?????"  #   "Eritrea"]#
+    espana:                                          "???"  #   "Espana"]#
+    estonia:                                        "????"  #   "Estonia"]#
+    ethiopia:                                       "?????"  #   "Ethiopia"]#
+    falkland_islands_malvinas:                      "?????"  #   "Falkland Islands"]#
+    faroe_islands:                                  "????"  #   "Faroe Islands"]#
+    fiji:                                           "??"  #   "Fiji"]#
+    finland:                                        "??"  #   "Finland"]#
+    france:                                         "??"  #   "France"]#
+    french_guiana:                                  "?????"  #   "French Guiana"]#
+    french_polynesia:                               "???????"  #   "French Polynesia"]#
+    french_southern_territories:                    "???????"  #   "French Southern Territories"]#
+    gabon:                                          "??"  #   "Gabon"]#
+    gambia:                                          "???"  #   "Gambia  #   "]#
+    georgia:                                        "????"  #   "Georgia"]#
+    germany:                                        "??"  #   "Germany"]#
+    ghana:                                          "??"  #   "Ghana"]#
+    gibraltar:                                      "????"  #   "Gibraltar"]#
+    great_britain:                                  "??"  #   "Great Britain"]#
+    greece:                                         "??"  #   "Greece"]#
+    greenland:                                      "???"  #   "Greenland"]#
+    grenada:                                        "????"  #   "Grenada"]#
+    guadeloupe:                                     "?????????"  #   "Guadeloupe"]#
+    guam:                                           "??"  #   "Guam"]#
+    guatemala:                                      "????"  #   "Guatemala"]#
+    guernsey:                                       'guernsey'
+    guinea:                                         "???"  #   "Guinea"]#
+    guinea_bissau:                                  "?????"  #   "Guinea-Bissau"]#
+    guyana:                                         "???"  #   "Guyana"]#
+    haiti:                                          "??"  #   "Haiti"]#
+    heard_and_mcdonald_islands:                     "?????????"  #   "Heard and Mc Donald Islands"]#
+    holy_see_vatican_city_state:                    'holy_see_vatican_city_state'
+    honduras:                                       "????"  #   "Honduras"]#
+    hong_kong:                                      "??"  #   "Hong Kong"]#
+    hungary:                                        "???"  #   "Hungary"]#
+    iceland:                                        "??"  #   "Iceland"]#
+    india:                                          "??"  #   "India"]#
+    indonesia:                                      "?????"  #   "Indonesia"]#
+    Ireland:                                        "??????"  #   "Ireland"]#
+    Israel:                                         "???"  #   "Israel"]#
+    Italy:                                          "???"  #   "Italy"]#
+    iran_islamic_republic_of:                       "??"  #   "Iran"]#
+    iraq:                                           "???"  #   "Iraq"]#
+    isle_of_man:                                    "Isle of Man"
+    jamaica:                                        "???"  #   "Jamaica"]#
+    japan:                                          "??"  #   "Japan"]#
+    jersey:                                         "??"  #   "Jordan"]#
+    jordan:                                         'jordan'
+    kazakhstan:                                     "?????"  #   "Kazakhstan"]#
+    kenya:                                          "???"  #   "Kenya"]#
+    kiribati:                                       "????"  #   "Kiribati"]#
+    korea_democratic_peoples_republic_of:           "??"  #   "Korea# Republic of"]#
+    korea_republic_of:                              "???"  #   "Korea (South)"]#
+    kuwait:                                         "???"  #   "Kuwait"]#
+    kyrgyzstan:                                     "?????"  #   "Kyrgyzstan"]#
+    lao_peoples_democratic_republic:                "???????"  #   "Lao Peoples Democratic Republic"]#
+    latvia:                                         "????"  #   "Latvia"]#
+    lebanon:                                        "???"  #   "Lebanon"]#
+    lesotho:                                        "???"  #   "Lesotho"]#
+    liberia:                                        "????"  #   "Liberia"]#
+    libyan_arab_jamahiriya:                         'libyan_arab_jamahiriya'
+    liechtenstein:                                  "?????"  #   "Liechtenstein"]#
+    lithuania:                                      "???"  #   "Lithuania"]#
+    luxembourg:                                     "???"  #   "Luxembourg"]#
+    macao:                                          "??"  #   "Macau"]#
+    macedonia_the_former_yugoslav_republic_of:      "???"  #   "Macedonia"]#
+    madagascar:                                     "?????"  #   "Madagascar"]#
+    malawi:                                         "???"  #   "Malawi"]#
+    malaysia:                                       "????"  #   "Malaysia"]#
+    maldives:                                       "????"  #   "Maldives"]#
+    mali:                                           "??"  #   "Mali"]#
+    malta:                                          "???"  #   "Malta"]#
+    marshall_islands:                               "??????"  #   "Marshall Islands"]#
+    martinique:                                     "????"  #   "Martinique"]#
+    mauritania:                                     "?????"  #   "Mauritania"]#
+    mauritius:                                      "????"  #   "Mauritius"]#
+    mayotte:                                        "????"  #   "Mayotte"]#
+    mexico:                                         "???"  #   "Mexico"]#
+    micronesia_federated_states_of:                 "??????"  #   "Micronesia# Federated States of"]#
+    moldova_republic_of:                            "????"  #   "Moldova# Republic of"]#
+    monaco:                                         "???"  #   "Monaco"]#
+    mongolia:                                       "??"  #   "Mongolia"]#
+    montenegro:                                     'montenegro'
+    montserrat:                                     "?????"  #   "Montserrat"]#
+    morocco:                                        "???"  #   "Morocco"]#
+    mozambique:                                     "????"  #   "Mozambique"]#
+    myanmar:                                        "??"  #   "Myanmar"]#
+    namibia:                                        "????"  #   "Namibia"]#
+    nauru:                                          "??"  #   "Nauru"]#
+    nepal:                                          "???"  #   "Nepal"]#
+    netherlands:                                    "??"  #   "Netherlands"]#
+    netherlands_antilles:                           "??????"  #   "Netherlands Antilles"]#
+    new_caledonia:                                  "??????"  #   "New Caledonia"]#
+    new_zealand:                                    "???"  #   "New Zealand"]#
+    nicaragua:                                      "????"  #   "Nicaragua"]#
+    niger:                                          "???"  #   "Niger"]#
+    nigeria:                                        "????"  #   "Nigeria"]#
+    niue:                                           "??"  #   "Niue"]#
+    norfolk_island:                                 "????"  #   "Norfolk Island"]#
+    northern_mariana_islands:                       "???????"  #   "Northern Ireland"]#
+    northern_mariana_islands:                       "???????"  #   "Northern Mariana Islands"]#
+    norway:                                         "??"  #   "Norway"]#
+    oman:                                           "??"  #   "Oman"]#
+    pakistan:                                       "????"  #   "Pakistan"]#
+    palau:                                          "??"  #   "Palau"]#
+    palestinian_territory_occupied:                 'palestinian_territory_occupied'
+    panama:                                         "???"  #   "Panama"]#
+    papua_new_guinea:                               "???????"  #   "Papua New Guinea"]#
+    paraguay:                                       "???"  #   "Paraguay"]#
+    peru:                                           "??"  #   "Peru"]#
+    philippines:                                    "???"  #   "Philippines"]#
+    pitcairn:                                       "?????"  #   "Pitcairn"]#
+    poland:                                         "??"  #   "Poland"]#
+    portugal:                                       "???"  #   "Portugal"]#
+    puerto_rico:                                    "????"  #   "Puerto Rico"]#
+    qatar:                                          "???"  #   "Qatar"]#
+    reunion:                                        "???"  #   "Reunion"]#
+    romania:                                        "????"  #   "Romania"]#
+    russian_federation:                             "???"  #   "Russia"]#
+    rwanda:                                         "???"  #   "Rwanda"]#
+    saint_barthelemy:                               "?????????"  #   "Saint Kitts and Nevis"]#
+    saint_helena:                                   "????"  #   "Saint Lucia"]#
+    saint_kitts_and_nevis:                          "?????"  #   "Saint Vincent and the Grenadines"]#
+    saint_lucia:                                    "????(?)"  #   "Samoa (Independent)"]#
+    saint_pierre_and_miquelon:                      'saint_pierre_and_miquelon'
+    saint_vincent_and_the_grenadines:               'saint_vincent_and_the_grenadines'
+    samoa:                                          'samoa'
+    san_marino:                                     "????"  #   "San Marino"]#
+    sao_tome_and_principe:                          "????????"  #   "Sao Tome and Principe"]#
+    saudi_arabia:                                   "?????"  #   "Saudi Arabia"]#
+    Scotland:                                       "???"  #   "Scotland"]#
+    senegal:                                        "????"  #   "Senegal"]#
+    serbia:                                         "???????"  #   "Serbia and Montenegro"]#
+    seychelles:                                     "???"  #   "Seychelles"]#
+    sierra_leone:                                   "????"  #   "Sierra Leone"]#
+    singapore:                                      "???"  #   "Singapore"]#
+    slovakia:                                       "????"  #   "Slovakia"]#
+    slovenia:                                       "?????"  #   "Slovenia"]#
+    solomon_islands:                                "?????"  #   "Solomon Islands"]#
+    somalia:                                        "???"  #   "Somalia"]#
+    south_africa:                                   "??"  #   "South Africa"]#
+    south_georgia_and_the_south_sandwich_islands:   "???????????"  #   "South Georgia and the South Sandwich Islands"]#
+    south_korea:                                    "???"  #   "South Korea"]#
+    spain:                                          "???"  #   "Spain"]#
+    sri_lanka:                                      "????"  #   "Sri Lanka"]#
+    st_helana:                                      "???"  #   "St. Helena"]#
+    sudan:                                          'sudan'
+    st_pierre_and_miquelon:                         "???????????"  #   "St. Pierre and Miquelon"]#
+    suriname:                                       "???"  #   "Suriname"]#
+    svalbard_and_jan_mayen:                         "??????????"  #   "Svalbard and Jan Mayen Islands"]#
+    swaziland:                                      "??"  #   "Swaziland"]#
+    sweden:                                         "??"  #   "Sweden"]#
+    switzerland:                                    "????"  #   "Switzerland"]#
+    syrian_arab_republic:                           'syrian_arab_republic'
+    taiwan_province_of_china:                       "???"  #   "Taiwan"]#
+    tajikistan:                                     "?????"  #   "Tajikistan"]#
+    tanzania_united_republic_of:                    "????"  #   "Tanzania"]#
+    thailand:                                       "??"  #   "Thailand"]#
+    timor_leste:                                    'timor_leste'
+    togo:                                           "??"  #   "Togo"]#
+    tokelau:                                        "?????"  #   "Tokelau"]#
+    tonga:                                          "??"  #   "Tonga"]#
+    Trinidad:                                       "????"  #   "Trinidad"]#
+    trinidad_and_tobago:                            "????????"  #   "Trinidad and Tobago"]#
+    tunisia:                                        "???"  #   "Tunisia"]#
+    turkey:                                         "???"  #   "Turkey"]#
+    turkmenistan:                                   "?????"  #   "Turkmenistan"]#
+    turks_and_caicos_islands:                       "???????"  #   "Turks and Caicos Islands"]#
+    tuvalu:                                         "???"  #   "Tuvalu"]#
+    uganda:                                         "???"  #   "Uganda"]#
+    ukraine:                                        "???"  #   "Ukraine"]#
+    united_arab_emirates:                           "????????"  #   "United Arab Emirates"]#
+    united_kingdom:                                 "??"  #   "United Kingdom"]#
+    united_states:                                  "??"  #   "United States"]#
+    united_states_minor_outlying_islands:           "?????"  #   "United States Minor Outlying Islands"]#
+    uruguay:                                        "???"  #   "Uruguay"]#
+    uzbekistan:                                     "??????"  #   "Uzbekistan"]#
+    vanuatu:                                        "????"  #   "Vanuatu"]#
+    vatican_city_state:                             "?????"  #   "Vatican City State (Holy See)"]#
+    venezuela:                                      "????"  #   "Venezuela"]#
+    viet_nam:                                       "??"  #   "Viet Nam"]#
+    virgin_islands_british:                         "???????"  #   "Virgin Islands (British)"]#
+    virgin_islands_us:                              "????"  #   "Virgin Islands (U.S.)"]#
+    wales:                                          "???"  #   "Wales"]#
+    wallis_and_futuna:                              "?????????"  #   "Wallis and Futuna Islands"]#
+    western_sahara:                                 "????"  #   "Western Sahara"]#
+    yemen:                                          "??"  #   "Yemen"]#
+    zambia:                                         "???"  #   "Zambia"]#
+    zimbabwe:                                       "????"  #   "Zimbabwe"]#
+    

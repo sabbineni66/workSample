@@ -1,0 +1,27 @@
+development:
+  hostname: conductor.local
+  site_name: Conductor
+  admin_email: admin@example.com
+  noreply_email: noreply@example.com
+  admin_password: C0nduct0r
+
+test:
+  hostname: conductor.local
+  site_name: Conductor
+  admin_email: admin@example.com
+  noreply_email: noreply@example.com
+  admin_password: C0nduct0r
+
+staging:
+  hostname: conductor.local
+  site_name: Conductor
+  admin_email: admin@example.com
+  noreply_email: noreply@example.com
+  admin_password: C0nduct0r
+
+production:
+  hostname: conductor.local
+  site_name: Conductor
+  admin_email: admin@example.com
+  noreply_email: noreply@example.com
+  admin_password: C0nduct0r

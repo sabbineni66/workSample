@@ -1,0 +1,20 @@
+{
+  "name": "BetterTender",
+  "version": "1.0.1",
+  "background_page": "background.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["injected.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "http://*.tenderapp.com/*",
+    "https://*.tenderapp.com/*",
+    "http://help.livereload.com/*",
+    "https://help.livereload.com/*"
+  ],
+  "icons": { "48": "BetterTender-48.png",
+            "128": "BetterTender-112.png" }
+}

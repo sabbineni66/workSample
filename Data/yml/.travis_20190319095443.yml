@@ -1,0 +1,40 @@
+dist: trusty
+sudo: required
+
+language: node_js
+node_js:
+  - "lts/*"
+
+before_install:
+  - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
+
+env:
+  global:
+    - secure: "R3Mm06+uyw2O7WA6Gn3VKhodJr0vYLKG+yIhLyyuQBRYacx5oJ3LtpBz7jMuV6JCflVG5UtNDmnjhKQ0UpYCJx/EMqEKJDDKPhC+0D7LASsIa1coZPlzvqDVQaDduVk8dntsyquUR4BBL5AJDWppnd2Mb5sQDf+QFNMNHQAfyNNdFrb0LP8tl6CKrXvECQs0WOHdHtmjw+HpX1KPONglFiMTDw7fsj2u77BStyNB4G4sEXCHglFMubkpnHem4yB+AZ0BwIw6jbGfBsrHwvn7mJ3CYhgROuyy/6yXvqfBff8V616t9uF7MhCt1Ght3gY9b/bt8jCebMgiu86alqX85RfPMMfQw7wsn06DYu8W5pBEdz4qtxTsThQbn5NBZqiEVHt2+Cv1XrDiuZDSz37ZvM6SbE7qgpvNZFyBKe94b2iI/V+eJEhpk1IXd8F4WZ6MLjcExhbswuD8xy5Q5hO0tr1YC2tCImmI8hn/z2v/KUA8KPEOjRcNafuEw4oMwGfFetBNF7r++UnmbNTMhAxkxh7/QzrHlVyppBEj2KR3zOlT4gkoqFeHrwd6rTujYiuOVbea18HJtWX2yjP/0Ds/2+v/qkGu5ZI17QigHa7GCXU5tpspDESWRwDqbgbYEy4McxUJbV7kEhTPw94YPEzH6lj5DC0iLQXcb3KAFsTLUtk="
+
+addons:
+  sonarcloud:
+    organization: urma-github
+    token:
+      secure: "hfTEwEFeBxfTJ5VhWacDfjxBgCjUiRFctsWHkMoWu65/ZpjVPKGmzY2c3eX3znmwh1D37kBgukEEhG6uufX44mnXyBsKgeS/W688UQMr+i+sXsm4IFooefOdRDMRpKes2JCYpEIhHe1MfoFgdjqcAwemAxAg9PVURMGL9zAApA9Eg/ZVQi89+Kgpv9c4niuOsg0Y/tj+ucdkKl21vXl6cWStNnguWauKGoObgQf99ZFU2zeLeXDnSH4M9HArSjIotEwK3+bzSyyte2L9YgJs38MWDhwRzB0yXWENlumHtWc5huTf9I5usUkmeDlh/DTQZ9oSAQhqSnr2H7INgV/IGuO1vnBkyIbEL7YD+H/kBoc1hwJnHGmo4dEWixwTu8V4/P5E+jaVd/bU9lFo18RyskiExtKUKaoQ7J1xYQI+AP9QOdVrSA/MeflppUK41ukqPcLv7b0twwtEntN96pck444xaJtNKAeBw/b8Y87mXFDrGdYPNkX8hIu3PcMe9Tms5dVTpgvel2anrto4H5/AcUMiABoyeHS6eVzTKgA2ucEjS1LhjmSnhS76oZtRD9Wbg7/vKKJWhdAF2TgjBfz3g6DVO9dUyQKBqDMdHRTmToQT2FniFUXSd5jnwld1LxWWbf8/LssJp+t5NJ2GUC4UrvGaqF/2VlFQHjflmqmF1Ns="
+  coverity_scan:
+    project:
+      name: "urma/acme-banking-vue"
+      description: "ACME Banking web application for demonstration purposes (SPA version)"
+    notification_email: ulisses.montenegro@gmail.com
+    build_command_prepend: ""
+    build_command: "npm install"
+    branch_pattern: master
+
+jdk:
+- oraclejdk8
+script:
+- sonar-scanner
+cache:
+  directories:
+  - "$HOME/.sonar/cache"
+
+notifications:
+  slack:
+    secure: lqD40bH5Z0SEhOvYjdIRcwF2VvQp/qs57us0ApJqi32qXJcmm0snD7z+tv1pwFeZ0qE6pvK+cO1YZH7tSrBppdpKVX72NwqYIPL6Lrh14QkUaTb+XZdJJlohfqUt7INP6JTAdf857JQijPFjYqsED71GxgvZODsJPnRTE6vYGHotzYx97M9pk8zrkH1tkzbaupZ237fUIldti7WDM7RLZ/YpqxR1hsqEZU03GEa2kMXEkP7iMi+IgS8vIMvhe0L6UroCis5oGkN6ngVms1WeX0my0FwOScotgdIViE2eRsrSxRL4YVbdQc47MeyWvi1t+61FoB6FJIPTIr45oZZiCxhmwcvvUCdtmM1Ph9RoX1Lq6oWqjwwn+fAj84vsWVYM9FR9E6DcTuO8mHDIT+m7Y6a6n4YwNOBrVxIruRBYf9/v07bGSKfLjO+cbeSuIMEyHDHo2Psago/HdEb2lxCkQHoXwPVfnUFIsfkWmVrFNjsHjJc7cvosun9sFmXG58h4+AScyPtqNJJxgMK9ZTOm4UKCvisGwFIDy/OxdQZMPyW2z2SbldwCKiuQobudFT2U/SctVN3qZEblpHHJTKQdTI6kCnU4Aon8GMR//e9OHQQ1Gp9NCtp3ZtwgYuYXD1c1A3t7CsV/osNGVglchlith828QjjN5LxN0KKxPmV3Gfk=
+

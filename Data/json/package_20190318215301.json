@@ -1,0 +1,10 @@
+{
+  "name": "mint",
+  "version": "0.1.0",
+  "dependencies": {
+    "async": "0.1.10",
+    "coffee-script": "latest",
+    "express": "2.4.6",
+    "ranger": "0.2.4"
+  }
+}

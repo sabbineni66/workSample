@@ -1,0 +1,12 @@
+{
+  "name": "Ruby Operators",
+  "repository": "https://github.com/anildigital/ruby-operators",
+  "env": {
+        "ELM_COMPILE": ""
+  },
+  "buildpacks": [
+      {
+          "url": "https://github.com/hone/heroku-buildpack-static"
+      }
+  ]
+}

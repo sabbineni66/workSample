@@ -1,0 +1,22 @@
+{
+  "bootstrap_expect": 3,
+  "client_addr": "0.0.0.0",
+  "data_dir": "/var/lib/consul",
+  "ports": {
+    "dns": 8600,
+    "http": 8500,
+    "rpc": 8400,
+    "serf_lan": 8301,
+    "serf_wan": 8302,
+    "server": 8300
+  },
+  "server": true,
+  "retry_join": [
+    "172.20.21.11",
+    "172.20.21.12",
+    "172.20.21.13"
+  ],
+  "ui": true,
+  "verify_incoming": false,
+  "verify_outgoing": false
+}

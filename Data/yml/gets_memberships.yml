@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/971936/memberships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      X-Trackertoken:
+      - c6d349c998d02b5f794404c7d7607200
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.14
+      X-Tracker-Project-Version:
+      - '7'
+      Etag:
+      - "\"9a5b19a54fe94bb6954a68b11d20369e\""
+      X-Runtime:
+      - '44'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Server:
+      - nginx/1.2.2 + Phusion Passenger 3.0.14 (mod_rails/mod_rack)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA0WPwW7DIBBE7/kKxDmRwDiN7a/owadGFaLOVt3GgAWb+lDl
+        34sxdg972Z19M3M9MPabhjE+mkj6B2GGmzbEO8YrIdVJVifR9rLp1LkT5zd+
+        XNUThOhdUq3f6d8ZC8vXKwABsB4iFXE64i2dpGzqWoqVkJZ3dMuaF9a+R4eE
+        ZoyZ1v9DHhHC5jJlF1pMcqBnyZWN1KWuK1VtUYP/hoH04EcfFmYjhQCzNdlT
+        FJkF+5HKfeG0dy2XzG4vslUvBR38mDv72UHY5LNxFJObteBIO0/4iYMh9E6D
+        NZh7UXhAyv08vP8BwebrCIIBAAA=
+    http_version: 
+  recorded_at: Wed, 29 Jan 2014 13:57:14 GMT
+recorded_with: VCR 2.8.0

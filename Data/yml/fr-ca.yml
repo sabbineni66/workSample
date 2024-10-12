@@ -1,0 +1,70 @@
+fr-ca:
+  locale_name: "Francais"
+  active_scaffold:
+    add:                  "Add"
+    add_existing:         "Ajouter des donn?es existantes"
+    are_you_sure:         "Est-ce vraiment ce que vous voulez?"
+    cancel:               "Annuler"
+    click_to_edit:        "Click to edit"
+    close:                "Fermer"
+    create:               "Cr?er"
+    create_model:         "Cr?er ? {{model}}"
+    create_another:       "Cr?er autre"
+    created_model:        "{{model}} cr??"
+    create_new:           "Cr?er nouveau"
+    customize:            "Customize"
+    delete:               "Supprimer"
+    deleted_model:        "{{model}} supprim?"
+    delimiter:            "Delimiter"
+    download:             "Download"
+    edit:                 "Modifier"
+    export:               "Export"
+    filtered:             "(Filtr?)"
+    found:                "Trouv?"
+    hide:                 "Hide"
+    live_search:          "Recherche en direct"
+    loading?:             "Loading?"
+    nested_for_model:     "{{nested_model}} pour {{parent_model}}"
+    next:                 "Prochain"
+    no_entries:           "Aucune entr?e"
+    omit_header:          "Omit Header"
+    options:              "Options"
+    pdf:                  "PDF"
+    previous:             "Pr?c?dent"
+    print:                "Print"
+    refresh:              "Refresh"
+    remove:               "Enlever"
+    remove_file:          "Enlever"
+    replace_with_new:     "Replace with New"
+    revisions_for_model:  "Remplacer par le nouveau"
+    reset:                "R?tablir"
+    saving?:              "Saving?"
+    search:               "Recherche"
+    search_terms:         "Crit?res de recherche"
+    _select_:             " - s?lectionner -"
+    show:                 "Afficher"
+    show_model:           "Afficher {{model}}"
+    _to_ :                " to "
+    update:               "Mettre ? jour"
+    update_model:         "Mettre ? jour {{model}}"
+    udated_model:         "%s mis ? jour"
+    '=':                  '='
+    '>=':                 '>='
+    '<=':                 '<='
+    '>':                  '>'
+    '<':                  '<'
+    '!=':                 '!='
+    is_like:              'Is like'
+    begins_with:          'Begins with'
+    ends_with:            'Ends with'
+    BETWEEN:              'Is between'
+
+    percentage_example:   "Ex. 10%"
+    phone_example:        "Ex. 111-333-4444"
+    usa_money_example:    "Ex. 1,333"
+    usa_zip_example:      "Ex. 88888-3333"
+    ssn_example:          "Ex. 555-22-3333"
+
+    # error_messages
+    internal_error: "Request Failed (code 500, Internal Error)"
+    version_inconsistency: "Incompatibilit? des versions ? cet enregistrement a ?t? modifi? depuis que vous avez commenc? ? l??diter."

@@ -1,0 +1,27 @@
+{
+    "user": {
+        "first_name": "Steve",
+        "last_name": "Jobs",
+        "email": "steve@example.com",
+        "password": "password",
+        "password_confirmation": "password"
+        "location": {
+            "id": 123
+        },
+        "additional_emails_attributes": [
+            {
+                "email": "steve@mac.com"
+            },
+            {
+                "email": "sj@me.com"
+            }
+        ],
+        "telephones_attributes": [
+            {
+                "number": "+1345890567887",
+                "country_code": "US",
+                "type": "mobile"
+            }
+        ]
+    }
+}

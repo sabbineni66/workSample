@@ -1,0 +1,9 @@
+{
+  "name": "go-format",
+  "main": "./lib/go-format",
+  "version": "1.0.8",
+  "private": true,
+  "description": "Automatically runs `go fmt` on Go source files when saved.",
+  "repository": "https://github.com/lsegal/atom-go-format",
+  "license": "MIT"
+}

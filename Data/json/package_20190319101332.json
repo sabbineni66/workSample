@@ -1,0 +1,21 @@
+{
+  "name": "acrnm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-file": "^2.0.2",
+    "axios": "^0.18.0",
+    "dotenv": "^5.0.1",
+    "form-data": "^2.3.2",
+    "looks-same": "^3.3.0",
+    "mqtt": "^2.18.2",
+    "puppeteer": "^1.5.0",
+    "sqlite3": "^4.0.1"
+  }
+}

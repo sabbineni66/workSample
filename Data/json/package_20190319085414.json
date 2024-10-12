@@ -1,0 +1,22 @@
+{
+  "name": "atom-graphiql",
+  "main": "./lib/graphiql",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "graphiql:toggle"
+  },
+  "repository": "https://github.com/atom/graphiql",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "codemirror-graphql": "^0.5.0",
+    "graphiql": "^0.7.1",
+    "graphql": "^0.5.0",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  }
+}

@@ -1,0 +1,32 @@
+language: c
+env:
+  global:
+    - VERSION=$TRAVIS_TAG
+if: tag IS present
+matrix:
+  include:
+    - os: linux
+    - os: osx
+    # - os: windows
+script:
+  - echo $VERSION
+  - echo $TRAVIS_TAG
+  - wget http://download.redis.io/releases/redis-$VERSION.tar.gz
+  - tar xf redis-$VERSION.tar.gz
+  - mv redis-$VERSION/* .
+  - make
+  - mv src/redis-server .
+  - tar -czvf redis-server-$TRAVIS_OS_NAME-$VERSION.tar.gz redis-server
+  - ls
+
+deploy:
+  provider: releases
+  api_key:
+    secure: wgssaH+X+DS0LxvWyJsEuIwsKPYSwHI7BqS2EG522dDLn//aZYJV0JRDQTqPlj5Dx5XGdCv+qF5jUuvoP9X8jogC6piaoYspihsSZtxCwC+dazg0wkQpPJIz3GK8aWPBwOqdixUyfrYD1Sc0dRbsJZSgfUqFZqdmE8RGpOycUZSX8kLlAuE+Shtfq509nnPTJiPMN51k0VIbNLRDgvxwPi8x/nsHRLsSJj16s20y/ODhLUD9XdCsNy1MurSTh86NmZtx7WXgV1Nq3znk70dn1wdr7fQOyAjnT/4zuTTCR5ZbiuMEzoBmNUv8xg8K26Xa/jIS0cwg8NiGivDOw6jTM7bN0oy2M4BxNhTYgm0q8JFEqRfnTyiGFJo8p8oMq8y1faJoiS9qdzzmc8ATULB1jZSklZL/+++MBwkMFGOdHYwotHUuKSOP4SKSoujM6jslZUct0zYxeJ+a2iDjSPIJL1iJSewENvZxKVYff9O0NlQY4GVfYHfWwF168MQLN1XtG1U+6nHXEp4VkjQOj4wmKQP68x65y6zkjh463WWQFX0psMDq8ANIl7mxNdc552DPUg2LeQ04+IhGsQjfFBsAucAb2ciGKpoTwHQEtc2hWDGVSjqmCW+3W5rqChGk4SyR4tR0CcW+OX0SXbVen+ALxgO8/UEfKhG03HfQxpvaZ9Q=
+  file: redis-server-$TRAVIS_OS_NAME-$VERSION.tar.gz
+  name: $VERSION
+  on:
+    repo: johnny/redis-binaries
+    all_branches: true
+  skip_cleanup: true
+  # draft: true

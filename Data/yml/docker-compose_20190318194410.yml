@@ -1,0 +1,3 @@
+main:
+  build: .
+  command: echo SUCCESS

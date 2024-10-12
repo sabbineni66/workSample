@@ -1,0 +1,7 @@
+{
+  "name": "Open on...",
+  "description": "Open the current page on another device.",
+  "repository": "https://github.com/benjaminoakes/open-on",
+  "image": "heroku/ruby",
+  "keywords": ["ruby"]
+}

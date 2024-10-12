@@ -1,0 +1,13 @@
+{
+  "Name"     : "Chair Smash",
+  "Kind"     : "HP",
+  "Animation": "melee",
+  "Texture"   : {
+    "Path": "actions/icons/pummel.png"
+  },
+  "Target_enemies": true,
+  "Ap"       : 2,
+  "Strength" : 4,
+  "Damage"   : 1,
+  "Range"    : 1
+}

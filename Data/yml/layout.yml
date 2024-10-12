@@ -1,0 +1,10 @@
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Layout/ClassStructure:
+  Enabled: true
+  AutoCorrect: false
+
+Layout/EndAlignment:
+  Enabled: true
+  EnforcedStyleAlignWith: variable

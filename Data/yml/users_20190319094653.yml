@@ -1,0 +1,34 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+admin:
+  email: admin@k1ckr.com
+  state: verified
+  verification_key: 8b9eefb13e926da1c48bc42036be2f73096c5474
+  token: 9dae04e45228f2c4a95130f02ca45d37ed45ae44
+  # 4dm1n%p455w0rd
+  encrypted_password: 036f74ca407a5b1324f0292951ff74ccb70ac85c
+
+signed_up:
+  email: signed_up@k1ckr.com
+  state: signed_up
+
+unverified:
+  email: unverified@k1ckr.com
+  state: unverified
+  verification_key: fb2a01a753b9aa673471823c5eed6f8a93cd3b50
+
+verified:
+  email: verified@k1ckr.com
+  state: verified
+  verification_key: 537210584a455dbd5cc23e7f336976e8a3984946
+  token: 33948bc40833fad459cdc571b2077ade8d567ac1
+  # v3r1f13d%p455w0rd
+  encrypted_password: b60fe70f84de4b450f0da2a7b158494d76d596a3
+
+disabled:
+  email: disabled@k1ckr.com
+  state: disabled
+  verification_key: a60eee093a30cfd044bb90c46a6fa0570d70cd40
+  token: d88b9f22b7cabcfb1df9519c02dd34a4a1216f18
+  # d154bl3d%p455w0rd
+  encrypted_password: 2d2b9e8752c0196ac19d263ed9c50533a92364bb

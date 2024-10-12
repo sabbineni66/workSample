@@ -1,0 +1,26 @@
+title: Motet BWV 118
+subtitle: "\"O Jesu Christ, mein's Lebens Licht'\""
+composer: Johann Sebastian Bach
+parts:
+  violino:
+    no_part: true
+    title: "Violino I, II"
+midi_tempo: 50 2
+score:
+  staff_size: 12
+  order:
+    - oboe1
+    - oboe2
+    - violino1
+    - violino2
+    - violino
+    - viola
+    - soprano
+    - alto
+    - tenore
+    - basso
+    - continuo
+  groups:
+    - brace: [oboe1, oboe2]
+    - brace: [violino1, violino2]
+    - bracket: [soprano, alto, tenore, basso]

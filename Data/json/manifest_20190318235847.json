@@ -1,0 +1,18 @@
+{
+    "app": {
+        "launch": {
+            "web_url": "http://getprismatic.com/news/home"
+        }, 
+        "urls": [
+            "http://getprismatic.com/"
+        ]
+    }, 
+    "description": "Prismatic", 
+    "icons": {
+        "128": "128.png"
+    }, 
+    "name": "Prismatic", 
+    "permissions": [], 
+    "version": "1.1",
+    "manifest_version": 2
+}

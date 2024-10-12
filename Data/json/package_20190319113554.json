@@ -1,0 +1,23 @@
+{
+  "name": "mentometer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "repository": "",
+  "author": "Kim Joar Bekkelund",
+  "license": "MIT",
+  "dependencies": {
+    "sockjs": "~0.3.7",
+    "underscore": "~1.5.2",
+    "express": "~3.4.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.8",
+    "gulp-minify-css": "~0.3.10",
+    "gulp-minify-html": "~0.1.6",
+    "gulp-uglify": "~1.0.1",
+    "gulp-usemin": "~0.3.8",
+    "rimraf": "^2.2.8",
+    "gulp-rev": "~1.1.0"
+  }
+}

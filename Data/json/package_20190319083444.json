@@ -1,0 +1,25 @@
+{
+  "name": "nodal-middleware-ratelimit",
+  "version": "0.3.0",
+  "description": "A simplicitc rate limiting middleware for Nodal",
+  "main": "index.js",
+  "scripts": {},
+  "repository": "https://github.com/intabulas/nodal-middleware-ratelimit",
+  "keywords": [
+    "nodejs",
+    "nodal",
+    "middleware",
+    "ratelimit",
+    "throttle"
+  ],
+  "author": "Mark Lussier <mlussier@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/intabulas/nodal-middleware-ratelimit/issues"
+  },
+  "homepage": "https://github.com/intabulas/nodal-middleware-ratelimit#readme",
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^4.0.0"
+  }
+}

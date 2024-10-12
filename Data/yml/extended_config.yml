@@ -1,0 +1,9 @@
+config_repo: 'file:///<%= File.join(File.expand_path(File.dirname(__FILE__)), '..', '..', '..', 'features', 'data', 'test-config') %>'
+production: 
+  app: awesomeapp
+staging:
+  app: awesomeapp-staging
+  config:
+    EXTRA: 'bar'
+demo:
+  app: awesomeapp-demo

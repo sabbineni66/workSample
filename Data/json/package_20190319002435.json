@@ -1,0 +1,13 @@
+{ "name": "nanolog"
+, "author": "Wayne Larsen <wayne@larsen.st>"
+, "description": "Flexible but Simple Logger"
+, "version": "0.1.1"
+, "license": "MIT"
+, "repository": { "url": "https://github.com/wvl/nanolog.git" }
+, "homepage": "https://github.com/wvl/nanolog"
+, "bugs": { "url": "https://github.com/wvl/nanolog/issues" }
+, "main": "lib/nanolog.js"
+, "engines": { "node": "*" }
+, "dependencies": {}
+, "devDependencies": {}
+}

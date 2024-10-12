@@ -1,0 +1,20 @@
+{
+  "name": "your-app",
+  "version": "0.0.1",
+  "main": "public/app.js",
+  "dependencies": {
+    "jquery": "2.0.x",
+    "lodash": "2.4.x",
+    "backbone": "1.1.x",
+    "react": "https://github.com/linssen/react-with-test.git"
+  },
+  "overrides": {
+    "backbone": {
+      "dependencies": {
+        "lodash": "2.4.x",
+        "jquery": "2.0.x"
+      },
+      "main": "backbone.js"
+    }
+  }
+}

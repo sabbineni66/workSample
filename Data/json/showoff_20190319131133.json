@@ -1,0 +1,9 @@
+{
+  "name": "Reinventing Variables",
+  "sections": [
+    { "section": "Intro" },
+    { "section": "Syntax" },
+    { "section": "Transformers" },
+    { "section": "Appendix" }
+  ]
+}

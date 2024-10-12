@@ -1,0 +1,12 @@
+{
+  "name" : "smartobjects",
+  "main": "index.js",
+  "dependencies": {
+    "micro-events": "^1.0.0",
+    "sprintf-js": "^1.0.2",
+    "lodash": "^3.9.3"
+  },
+  "browserify": {
+    "transform": [["babelify"]]
+  }
+}

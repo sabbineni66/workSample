@@ -1,0 +1,62 @@
+---
+version: 2
+jobs:
+  build:
+    working_directory: ~/playbyplay
+    docker:
+      - image: circleci/ruby:2.5.0-node-browsers
+        environment:
+          PGHOST: localhost
+          PGUSER: playbyplay
+          RAILS_ENV: test
+          CC_TEST_REPORTER_ID: c276c3e689123c8ae6b4c8804e6bf8f746e6fff7121369ad3e02e026ae0c997e
+      - image: postgres:10.1
+        environment:
+          POSTGRES_USER: playbyplay
+          POSTGRES_DB: playbyplay_test
+          POSTGRES_PASSWORD: ""
+    steps:
+      - checkout
+
+      - run: gem install bundler --version 1.15.4
+
+      # Restore Cached Dependencies
+      - type: cache-restore
+        name: Restore bundle cache
+        key: playbyplay-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+
+      # Bundle install dependencies
+      - run: bundle install --path vendor/bundle
+
+      - run: yarn install
+
+      # Cache Dependencies
+      - type: cache-save
+        name: Store bundle cache
+        key: playbyplay-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
+        paths:
+          - vendor/bundle
+          - node_modules
+
+      # Wait for DB
+      - run: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run: sudo apt-get install postgresql-client
+
+      - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+
+      - run: chmod +x ./cc-test-reporter
+
+      # Setup the database
+      - run: bundle exec rake db:setup
+
+      - run: ./cc-test-reporter before-build
+
+      # Run the tests
+      - run: bundle exec rake
+
+      - run: ./cc-test-reporter after-build
+
+      - store_artifacts:
+          path: ~/playbyplay/coverage
+          destination: coverage

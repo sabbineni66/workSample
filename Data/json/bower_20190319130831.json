@@ -1,0 +1,20 @@
+{
+    "name": "fib-notify",
+    "description": "fibonacci number server",
+    "private": true,
+    "authors": [
+        "Luis Armendariz <luis.armendariz@gmail.com>"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "static/bower_components"
+    ],
+    "dependencies": {
+        "underscore": "latest",
+        "backbone": "latest",
+        "jquery": "latest",
+        "humane-js": "latest",
+        "notify.js": "latest"
+    }
+}

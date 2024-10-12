@@ -1,0 +1,44 @@
+# The book's title. Will be used everywhere!
+title: "The Mechanics of Ruby"
+
+# The book's language.
+language: en
+
+# Your book copyright info.
+# Here's some examples:
+#
+#   Copyright 2013 by Adam Keys.
+#   Copyright 2013 by Adam Keys. This work is licensed under MIT License.
+#   This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+#   This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+#   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+#
+copyright: "Copyright (C) 2013 Adam Keys."
+
+# Who's publishing this book.
+publisher: "Adam Keys"
+
+# When this book was published.
+published_at: "2013-08-01"
+
+# Some book description.
+subject: "How Ruby works, for the working programmer."
+
+# Some keywords that identify this book.
+keywords: "ruby, c"
+
+# Some unique identification. Works great with your domain
+# like `http://yourbook.example.com`.
+uid: "http://therealadam.com/ruby_mechanics"
+
+# Your book identification like ISBN or ISSN.
+identifier:
+  id: "http://therealadam.com/ruby_mechanics"
+  type: "URL" # can be ISBN, ISSN or URL
+
+# This book authors.
+authors:
+  - "Adam Keys"
+
+# The base URL from your source code.
+base_url: http://example.com

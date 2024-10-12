@@ -1,0 +1,8 @@
+{
+  "name": "refuge-t4a-get-query",
+  "dependencies": {
+    "@architect/functions": "latest",
+    "@begin-functions/data": "latest",
+    "faunadb": "^2.5.0"
+  }
+}

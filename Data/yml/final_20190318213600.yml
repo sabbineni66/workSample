@@ -1,0 +1,6 @@
+---
+blobstore:
+  provider: s3
+  options:
+    bucket_name: BOSH
+    encryption_key: PERSONAL_RANDOM_KEY

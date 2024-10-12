@@ -1,0 +1,51 @@
+{
+  "variables": {
+    "puppet_version": "3.5.1",
+    "iso_url": "http://mirrors.kernel.org/centos/6.5/isos/x86_64/CentOS-6.5-x86_64-minimal.iso",
+    "iso_checksum": "f21a71e8e31df73297bdd1ccd4a64a36831284bd"
+  },
+  "builders": [{
+    "vm_name": "centos65",
+    "type": "virtualbox-iso",
+    "http_directory": "http",
+    "iso_url": "{{ user `iso_url` }}",
+    "iso_checksum": "{{ user `iso_checksum` }}",
+    "iso_checksum_type": "sha1",
+    "guest_os_type": "RedHat_64",
+    "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+    "virtualbox_version_file": ".vbox_version",
+    "ssh_username": "vagrant",
+    "ssh_password": "vagrant",
+    "ssh_wait_timeout": "10000s",
+    "boot_command": [
+      "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort}}/ks6.cfg<enter>"
+    ],
+    "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
+    "disk_size": 51200,
+    "vboxmanage": [
+      ["modifyvm", "{{.Name}}", "--memory", "512"],
+      ["modifyvm", "{{.Name}}", "--cpus", "1"]
+    ]
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "environment_vars": [
+      "PUPPET_VERSION={{user `puppet_version`}}"
+    ],
+    "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+    "scripts": [
+      "script/fix-slow-dns.sh",
+      "script/sshd.sh",
+      "script/vagrant.sh",
+      "script/vmtools.sh",
+      "script/provisioner.sh",
+      "script/cleanup.sh",
+      "script/zerodisk.sh"
+    ]
+  }],
+  "post-processors": [{
+    "type": "vagrant",
+    "keep_input_artifact": false,
+    "output": "../../boxes/centos65-puppet-amd64.box"
+  }]
+}

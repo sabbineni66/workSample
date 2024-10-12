@@ -1,0 +1,47 @@
+version: '2'
+
+services:
+  zktesting:
+    build: .
+    container_name: zktesting
+    environment:
+      ZK_HOSTS: zookeeper:2181
+      LOG_LEVEL: INFO
+      LOG_DIR: /var/log/zktesting
+      LOG_FILE: zktesting.log
+    volumes:
+      - .:/code
+      - ./logs:/var/log/zktesting
+    depends_on:
+      - zookeeper
+      - logstash
+      - elasticsearch
+      - kibana
+    restart: always
+
+  zookeeper:
+    container_name: zktesting_zookeeper
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+
+  elasticsearch:
+    container_name: zktesting_elasticsearch
+    image: elasticsearch
+
+  logstash:
+    container_name: zktesting_logstash
+    image: logstash:latest
+    command: logstash -f /etc/logstash/conf.d/logstash.conf
+    volumes:
+      - ./logstash/zktesting-logstash.conf:/etc/logstash/conf.d/logstash.conf
+      - ./logstash/logs-template.json:/etc/logstash/templates/logs-template.json
+      - ./logs:/var/log/zktesting
+
+  kibana:
+    container_name: zktesting_kibana
+    image: kibana:latest
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200

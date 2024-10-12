@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://2ND36E1H9HWAMCAR2P8QCJFGPUQVOLF0:868MZR5KHSNQYGVYSYK8N8QN1EV402DG@api.eposnowhq.com/api/V2/Customer?page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, must-revalidate, no-cache, private
+      Content-Type:
+      - application/json; charset=utf-8
+      Location:
+      - https://api.eposnowhq.com/API/V2/Customer
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 03 Mar 2016 23:04:52 GMT
+      Content-Length:
+      - '1822'
+    body:
+      encoding: UTF-8
+      string: '[{"CustomerID":77544,"Title":1,"Forename":"Thomas","Surname":"Cromwell","BusinessName":"Parliament","DateOfBirth":"1485-12-10T00:00:00","ContactNumber":"9238492843290","ContactNumber2":null,"EmailAddress":"thomas@cromwell.com","Type":4187,"MaxCredit":10000.00,"CurrentBalance":0.00,"ExpiryDate":null,"CardNumber":null,"CurrentPoints":0,"SignUpDate":"2015-12-10T17:13:14","Notes":"Thomas
+        Cromwell was born around 1485, in Putney, Surrey, as the son of Walter Cromwell,
+        a blacksmith, fuller and cloth merchant, and owner of both a hostelry ","SignUpLocationID":4230,"MainAddressID":null},{"CustomerID":77546,"Title":3,"Forename":"Ruth","Surname":"Adam","BusinessName":null,"DateOfBirth":"1956-05-03T00:00:00","ContactNumber":null,"ContactNumber2":null,"EmailAddress":null,"Type":null,"MaxCredit":0.00,"CurrentBalance":0.00,"ExpiryDate":null,"CardNumber":null,"CurrentPoints":0,"SignUpDate":"2015-12-10T17:20:00","Notes":null,"SignUpLocationID":4230,"MainAddressID":51506},{"CustomerID":78155,"Title":0,"Forename":"Mr
+        Ex","Surname":"Pired","BusinessName":null,"DateOfBirth":null,"ContactNumber":"09876543987","ContactNumber2":"98765439876","EmailAddress":"made@up.com","Type":4187,"MaxCredit":0.00,"CurrentBalance":0.00,"ExpiryDate":"2013-01-17T00:00:00","CardNumber":"%0003?;1236?","CurrentPoints":0,"SignUpDate":"2013-03-12T11:40:49.323","Notes":null,"SignUpLocationID":null,"MainAddressID":null},{"CustomerID":78156,"Title":0,"Forename":"Mr
+        Ex","Surname":"Pired","BusinessName":null,"DateOfBirth":null,"ContactNumber":"09876543987","ContactNumber2":"98765439876","EmailAddress":"made@up.com","Type":4187,"MaxCredit":0.00,"CurrentBalance":0.00,"ExpiryDate":"2013-01-17T00:00:00","CardNumber":"%0003?;1236?","CurrentPoints":0,"SignUpDate":"2013-03-12T11:40:49.323","Notes":null,"SignUpLocationID":null,"MainAddressID":null}]'
+    http_version: 
+  recorded_at: Thu, 03 Mar 2016 23:04:26 GMT
+recorded_with: VCR 2.9.3

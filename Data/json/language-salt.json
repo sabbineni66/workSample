@@ -1,0 +1,11 @@
+{
+  ".source.salt": {
+    "editor": {
+      "commentStart": "# ",
+      "foldEndPattern": "^\\s*$|^\\s*\\}|^\\s*\\]|^\\s*\\)",
+      "increaseIndentPattern": "^\\s*.*(:|-) ?(&\\w+)?(\\{[^}\"']*|\\([^)\"']*)?$",
+      "decreaseIndentPattern": "^\\s+\\}$",
+      "tabLength": 2
+    }
+  }
+}

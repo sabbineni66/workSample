@@ -1,0 +1,12 @@
+{
+    "slack_token": "xoxb-your-super-sekrit-token",
+    "data_file": "brain.sqlite3",
+    "background": true,
+    "log_file": "keen.log",
+    "debug": true,
+    "plugins": {
+        "weather": {
+            "default_location": "London, UK"
+        }
+    }
+}

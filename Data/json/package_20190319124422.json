@@ -1,0 +1,49 @@
+{
+  "name": "twitch-viewers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node_modules/.bin/parcel watch src/graphics/*.html --out-dir graphics --public-url ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 2 chrome versions",
+  "nodecg": {
+    "compatibleRange": ">=0.9",
+    "graphics": [
+      {
+        "file": "viewers.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "notifications.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "chat.html",
+        "width": 328,
+        "height": 793
+      }
+    ]
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.0",
+    "sass": "^1.17.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "color-hash": "^1.0.3",
+    "gsap": "^2.1.2",
+    "pixi.js": "^5.0.0-rc.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-spring": "^8.0.13",
+    "twitch-emoticons": "^2.1.1",
+    "use-nodecg": "^0.3.1-alpha.1"
+  }
+}

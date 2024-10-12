@@ -1,0 +1,21 @@
+# == Schema Information
+# Schema version: 49
+#
+# Table name: moderatorships
+#
+#  id         :integer(11)     not null, primary key
+#  forum_id   :integer(11)     
+#  user_id    :integer(11)     
+#  created_at :datetime        
+#  updated_at :datetime        
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  belongs_to: 
+  belongs_to: 
+
+two:
+  belongs_to: 
+  belongs_to: 

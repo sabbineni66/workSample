@@ -1,0 +1,33 @@
+<%
+  project_name = 'swidea'
+  path = FileUtils.pwd.split('/')
+  database_name = (path[-2] == "releases") ? path[-3].gsub('.','_') : path[-1]
+%>
+
+development:
+  adapter: mysql
+  database: <%= database_name %>_development
+  username: <%= project_name %>
+  password: <%= project_name %>
+  host: localhost
+
+test:
+  adapter: mysql
+  database: <%= database_name %>_test
+  username: <%= project_name %>
+  password: <%= project_name %>
+  host: localhost
+
+stage:
+  adapter: mysql
+  database: <%= project_name %>_stage
+  username: <%= project_name %>
+  password: <%= project_name %>
+  host: localhost
+
+production:
+  adapter: mysql
+  database: <%= project_name %>_production
+  username: <%= project_name %>
+  password: <%= project_name %>
+  host: localhost

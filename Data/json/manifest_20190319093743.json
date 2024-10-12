@@ -1,0 +1,21 @@
+{
+  "name": "Botty",
+  "description": "Magically read all FT.com content.",
+  "version": "1.0",
+  "permissions": [
+    "webRequest", 
+    "webRequestBlocking", 
+    "http://*/*",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["underscore-min.js", "background.js"]
+  },
+  "options_page": "options.html",
+  "manifest_version": 2,
+  "icons": { 
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png" 
+  }
+}

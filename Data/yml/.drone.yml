@@ -1,0 +1,7 @@
+---
+image: "debian/wheezy"
+env:
+  - "HELLO=world"
+script:
+  - env
+  - echo "done"

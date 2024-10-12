@@ -1,0 +1,60 @@
+{
+    "app_name": "pfennig-solo",
+    "services": [
+        {
+            "service_name": "pfennig-service",
+            "components": [
+                {
+                    "component_name": "database",
+                    "image": "postgres",
+                    "ports": [
+                        "5432"
+                    ],
+                    "env": [
+                      "POSTGRES_PASSWORD=$pgpassword",
+                      "POSTGRES_USER=postgres"
+                    ],
+                    "volumes": [
+                      {
+                        "path": "/var/lib/postgresql/data",
+                        "size": "6 GB"
+                      }
+                    ]
+                },
+                {
+                    "component_name": "pfennig-component",
+                    "image": "registry.giantswarm.io/bumi/pfennig-solo",
+                    "ports": [
+                        "4567"
+                    ],
+                    "env": [
+                        "BITCOIN_NETWORK=$bitcoin_network",
+                        "WALLET_PATH=/var/data/pfennig/main.wallet",
+                        "ROOT_DIR=/var/data/pfennig",
+                        "DATABASE_DDL_RUN=0",
+                        "DATABASE_PORT_5432_USER=postgres",
+                        "PGPASSWORD=$pgpassword",
+                        "DATABASE_PORT_5432_PASSWORD=$pgpassword",
+                        "WATCHING_KEY=$watching_key"
+                    ],
+                    "dependencies": [
+                        {
+                            "name": "database",
+                            "port": 5432
+                        }
+                    ],
+                    "volumes": [
+                        {
+                            "path": "/var/data/pfennig",
+                            "size": "6 GB"
+                        }
+                    ],
+                    "domains": {
+                        "$domain": "4567",
+                        "pfennig.nomadiclabs.net": "4567"
+                    }
+                }
+            ]
+        }
+    ]
+}

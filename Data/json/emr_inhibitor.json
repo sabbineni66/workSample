@@ -1,0 +1,21 @@
+{
+  "Name"      : "EMR Inhibitor",
+  "Kind"      : "Attack",
+  "Ap"        : 3,
+  "Strength"  : 10,
+  "Damage"    : 0,
+  "Range"     : 6,
+  "Diameter"  : 4,
+  "Animation" : "inhibit",
+  "Target_enemies": true,
+  "Sounds"   : {
+  "inhibit": "Haunts/SFX/Intruders/Hunter/EMR Inhibitor"
+  },
+  "Texture"   : {
+    "Path": "actions/icons/inhibit.png"
+  },
+  "Conditions": [
+    "Attack -2",
+    "Corpuse -2"
+  ]
+}

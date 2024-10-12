@@ -1,0 +1,23 @@
+---
+language: ruby
+
+rvm:
+  - 2.3.0
+  - 2.4.0
+  - jruby
+  - jruby-head
+  - ruby-head
+
+sudo: false
+
+matrix:
+  include:
+    - { rvm: 2.4, env: rack=master }
+    - { rvm: 2.4, env: tilt=master }
+  allow_failures:
+    - env: rack=master
+    - env: tilt=master
+    - rvm: ruby-head
+    - rvm: jruby-head
+      # For now, it seems jruby can't gem install rack:
+    - rvm: jruby

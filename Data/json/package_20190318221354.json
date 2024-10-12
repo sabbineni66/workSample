@@ -1,0 +1,20 @@
+{
+  "name": "librato-helium",
+  "version": "0.0.1",
+  "repository"   : {
+    "type":"git",
+    "url":"https://github.com/librato/librato-helium.git"
+    },
+  "description": "A Librato Metrics output node for Helium Fusion dataflows",
+  "author": "Librato",
+  "license": "BSD",
+  "keywords": [ "node-red" ],
+  "dependencies": {
+    "request": "2.36.0"
+  },
+  "node-red": {
+    "nodes": {
+      "librato": "librato.js"
+    }
+  }
+}

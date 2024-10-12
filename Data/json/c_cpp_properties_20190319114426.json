@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "Mac",
+      "includePath": ["~/.platformio/packages/framework-arduinoespressif8266"],
+      "browse": {
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+- id: 001
+  product_code: 001
+  minimum_quantity: 2
+  price: 8.5

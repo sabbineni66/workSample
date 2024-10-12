@@ -1,0 +1,39 @@
+{
+  "name": "liminal",
+  "displayName": "liminal",
+  "description": "An opinionated minimalistic VS Code theme for JavaScript inspired by Sublime Text Spacegray theme based on Subliminal",
+  "license": "SEE LICENSE IN LICENSE",
+  "version": "1.0.0",
+  "publisher": "spicycode",
+  "preview": true,
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "icon": "icon.png",
+  "keywords": [
+    "theme",
+    "minimal",
+    "oceanic",
+    "dark",
+    "sublime"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spicycode/subliminal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spicycode/subliminal/issues"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Liminal",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Liminal-color-theme.json"
+      }
+    ]
+  }
+}

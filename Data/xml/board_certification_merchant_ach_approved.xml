@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <BoardCertificationMerchant_ACHResponse xmlns="http://tempuri.org/GETI.eMagnus.WebServices/AppGateway">
+      <BoardCertificationMerchant_ACHResult>
+        &lt;?xml version="1.0" encoding="utf-8"?&gt;
+        &lt;RESPONSE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+          &lt;STATUS&gt;Approved&lt;/STATUS&gt;
+          &lt;MESSAGE&gt;1 merchant(s) created.0 merchant(s) not created due to errors.-----------------------Merchants Created:Cogsley's Cogs 1414626006 (ISO ID: 9999, CrossRef: 1414626006, Status: AppApprovedandActivated)&lt;/MESSAGE&gt;
+          &lt;APP_DATA&gt;
+            &lt;Merchant ID="20" Name="Cogsley's Cogs 1414626006" Type="Merchant" Active="1" CrossRefID="1414626006"&gt;
+              &lt;POC1 FirstName="Carl" LastName="Cogsley" UserName="CCogsley21" Password="58AHN815" /&gt;
+              &lt;Location ID="54" Name="Cogsley's Cogs 1414626006 " Type="Location" Active="1" CrossRefID="1414626006" ACHName="COGSLEYSCOGS1414"&gt;
+                &lt;Terminal ID="111186" Name="FILE-01 (111186) " Type="Terminal" Active="1" CrossRefID="1414626006" ManualEntry="N" MID="101-111186-606" /&gt;
+              &lt;/Location&gt;
+              &lt;/Merchant&gt;
+          &lt;/APP_DATA&gt;
+          &lt;VALIDATION_MESSAGE&gt;
+            &lt;RESULT&gt;Passed&lt;/RESULT&gt;
+            &lt;SCHEMA_FILE_PATH /&gt;
+          &lt;/VALIDATION_MESSAGE&gt;
+        &lt;/RESPONSE&gt;
+      </BoardCertificationMerchant_ACHResult>
+    </BoardCertificationMerchant_ACHResponse>
+  </soap:Body>
+</soap:Envelope>

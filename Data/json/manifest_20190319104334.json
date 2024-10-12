@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "home.html"
+  },
+  "description": "My newtab page",
+  "name": "Tekkub Newtab",
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "storage",
+    "https://api.parse.com/*"
+  ],
+  "version": "0.19"
+}

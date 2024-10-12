@@ -1,0 +1,10 @@
+{
+  "name": "lazyjs",
+  "description": "Lazy.js packaged for Meteor",
+  "homepage": "https://github.com/hipertracker/meteor-lazyjs",
+  "author": "Jaroslaw Zabiello <hipertracker@gmail.com> (http://zabiello.com)",
+  "version": "0.3.1",
+  "git": "https://github.com/hipertracker/meteor-lazyjs.git",
+  "packages" : {}
+}
+

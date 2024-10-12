@@ -1,0 +1,8 @@
+{
+  "name": "compB",
+  "version": "0.0.1",
+  "description": "compB",
+  "dependencies": {
+    "lodash": "~2.4.1"
+  }
+}

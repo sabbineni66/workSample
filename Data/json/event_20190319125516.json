@@ -1,0 +1,8 @@
+{
+  "s3Prefix": "123456789",
+  "project": "marvin",
+  "stage": "dev",
+  "body": {
+    "game": "The Messengers of Blemma"
+  }
+}

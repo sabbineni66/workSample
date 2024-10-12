@@ -1,0 +1,22 @@
+inherit_from:
+  - http://relaxed.ruby.style/rubocop.yml
+
+Style/MethodDefParentheses:
+  EnforcedStyle: require_parentheses
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.5
+
+Metrics/LineLength:
+  Max: 120
+Metrics/BlockLength:
+  ExcludedMethods:
+    - describe
+    - context
+    - it
+    - specify
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

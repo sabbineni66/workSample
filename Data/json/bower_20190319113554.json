@@ -1,0 +1,12 @@
+{
+  "name": "in-groups-of",
+  "version": "1.0.0",
+  "main": "inGroupsOf.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

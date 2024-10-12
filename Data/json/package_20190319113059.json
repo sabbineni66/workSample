@@ -1,0 +1,17 @@
+{
+  "name": "fleegix-blog",
+  "version": "1.0.0",
+  "description": "Fleegix blog",
+  "main": "index.js",
+  "dependencies": {
+    "highlight": "^0.2.3",
+    "node-markdown": "^0.1.1",
+    "pg": "^0.10.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mde/fleegix-blog.git"
+  },
+  "author": "mde@fleegix.org"
+}

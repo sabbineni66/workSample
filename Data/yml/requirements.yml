@@ -1,0 +1,7 @@
+- src: weareinteractive.pm2
+- src: geerlingguy.nodejs
+- src: jdauphant.nginx
+- src: gdamjan.uwsgi
+- src: geerlingguy.memcached
+- src: https://github.com/elastic/ansible-elasticsearch.git
+- src: SimpliField.rabbitmq

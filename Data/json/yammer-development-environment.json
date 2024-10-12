@@ -1,0 +1,62 @@
+{
+      "Verbose":      true
+  
+    , "ServerName":   "www.yammer.dev"
+    , "BindAddress":  "0.0.0.0"
+    , "BindPort":     4000
+
+    , "CertificateFile" : "/etc/mikkin_overwatch/cert.pem"                                                          
+    , "CertificateKeyFile" : "/etc/mikkin_overwatch/cert.key"
+
+  
+    , "TemplatePath": "/opt/mikkin_overwatch/templates/"
+    , "AssetPath":    "/opt/mikkin_overwatch/assets/"
+  
+    , "LogsToWatch": {
+  
+        "DropWizardServices": [
+            "artie"
+          , "choosie"
+          , "completie"
+          , "dexie"
+          , "feedie"
+          , "feedie-test"
+          , "fileville"
+          , "flatterie"
+          , "graphie"
+          , "hermes"
+          , "hermes-test"
+          , "jester"
+          , "mugshot"
+          , "o365bridge"
+          , "paddie"
+          , "prankie"
+          , "pusher"
+          , "pusher-test"
+          , "querie"
+          , "servent"
+          , "slurpie"
+          , "tokie"
+          , "tyrant"
+          , "translatie"
+          , "whoville"
+        ]
+
+      , "DropWizardDotDPath" : "/etc/mikkin_overwatch/dropwizard.d/"
+  
+      , "StandardLogs" : [
+  	    {   "Description" : "workfeed development log"
+  	      , "Name" : "workfeed-developer-log"
+  	      , "Path" : "/opt/workfeed/log/development.log" }
+  
+          , {   "Description" : "workfeed unicorn stdout log"
+              , "Name" : "workfeed-unicorn-stdout-log"
+              , "Path" : "/opt/workfeed/log/unicorn.stdout.log" }
+  
+          , {   "Description" : "workfeed unicorn stderr log"
+              , "Name" : "workfeed-unicorn-stderr-log"
+              , "Path" : "/opt/workfeed/log/unicorn.stderr.log" }
+
+          ]
+      }
+}

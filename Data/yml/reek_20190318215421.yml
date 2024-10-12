@@ -1,0 +1,187 @@
+---
+Attribute:
+  enabled: true
+  exclude:
+  - Axiom::Algebra::Extension
+  - Axiom::Algebra::Join
+  - Axiom::Algebra::Rename
+  - Axiom::Algebra::Restriction
+  - Axiom::Algebra::Summarization
+  - Axiom::Attribute
+  - Axiom::Attribute::Numeric
+  - Axiom::Attribute::String
+  - Axiom::Evaluator::Context
+  - Axiom::Operation::Binary
+  - Axiom::Operation::Unary
+  - Axiom::Relation
+  - Axiom::Relation::Base
+  - Axiom::Relation::Header
+  - Axiom::Relation::Materialized
+  - Axiom::Relation::Operation::Limit
+  - Axiom::Relation::Operation::Offset
+  - Axiom::Relation::Operation::Sorted
+  - Axiom::Relation::Operation::Sorted::Direction
+  - Axiom::Relation::Proxy
+  - Axiom::Tuple
+BooleanParameter:
+  enabled: true
+  exclude: []
+ClassVariable:
+  enabled: true
+  exclude: []
+ControlParameter:
+  enabled: true
+  exclude:
+  - Axiom::Aggregate::Count#self.call
+  - Axiom::Function::Connective::Conjunction#self.call
+  - Axiom::Function::Connective::Disjunction#self.call
+  - Axiom::Function::Predicate::Enumerable#self.compare_method
+  - Axiom::Relation::Operation::Limit::Methods#assert_no_more_than_one_tuple
+DataClump:
+  enabled: true
+  exclude:
+  - Axiom::Immutable
+  - Axiom::Relation::Operation::Binary::ClassMethods
+  - Axiom::Relation::Operation::Set::ClassMethods
+  max_copies: 1
+  min_clump_size: 2
+DuplicateMethodCall:
+  enabled: true
+  exclude:
+  - Axiom::Aggregate::Sum#default
+  - Axiom::Algebra::Difference#delete
+  - Axiom::Algebra::Difference#insert
+  - Axiom::Algebra::Join#delete_left
+  - Axiom::Algebra::Join#delete_right
+  - Axiom::Algebra::Join#insert_left
+  - Axiom::Algebra::Join#insert_right
+  - Axiom::Algebra::Rename#delete
+  - Axiom::Algebra::Rename#insert
+  - Axiom::Algebra::Restriction#delete
+  - Axiom::Algebra::Restriction#insert
+  - Axiom::Algebra::Restriction::Methods#coerce_to_predicate
+  - Axiom::Function::Binary#rename
+  - Axiom::Function::Unary#rename
+  - Axiom::Relation::Operation::Sorted::Direction#call
+  - Axiom::Relation::Operation::Sorted::Direction#rename
+  - Axiom::Relation::Operation::Sorted::Methods#coerce_to_directions
+  - Axiom::Relation::Proxy#forward
+  - Axiom::Relation::Proxy#method_missing
+  max_calls: 1
+  allow_calls: []
+FeatureEnvy:
+  enabled: true
+  exclude:
+  - Axiom::Algebra::Projection#required_attribute_names
+IrresponsibleModule:
+  enabled: true
+  exclude: []
+LongParameterList:
+  enabled: true
+  exclude:
+  - Axiom::Algebra::Rename::Aliases#self.coerce_alias_pair
+  - Axiom::Algebra::Summarization#self.new
+  - Axiom::Relation::Operation::Combination#self.combine_tuples
+  max_params: 2
+  overrides:
+    initialize:
+      max_params: 3
+LongYieldList:
+  enabled: true
+  exclude: []
+  max_params: 2
+NestedIterators:
+  enabled: true
+  exclude:
+  - Axiom::Algebra::Projection#extend_other
+  - Axiom::Equalizer#define_cmp_method
+  - Axiom::Equalizer#define_hash_method
+  - Axiom::Equalizer#define_inspect_method
+  - Axiom::Relation::Operation::Ungroup#each
+  max_allowed_nesting: 1
+  ignore_iterators: []
+NilCheck:
+  enabled: true
+  exclude:
+  - Axiom::Aggregate::Count#self.call
+  - Axiom::Aggregate::Maximum#self.call
+  - Axiom::Aggregate::Mean#self.call
+  - Axiom::Aggregate::Minimum#self.call
+  - Axiom::Aggregate::Sum#self.call
+  - Axiom::Aggregate::Variance#self.call
+  - Axiom::Attribute#valid_or_optional?
+  - Axiom::Relation#self.materialized?
+  - Axiom::Relation::Materialized#self.empty?
+  - Axiom::Relation::Operation::Limit#self.assert_valid_limit
+  - Axiom::Relation::Operation::Offset#self.assert_valid_offset
+  - Axiom::Relation::Operation::Sorted::Ascending#self.call
+  - Axiom::Relation::Operation::Sorted::Descending#self.call
+RepeatedConditional:
+  enabled: true
+  exclude:
+  - Axiom::Aggregate::Mean
+  max_ifs: 1
+TooManyInstanceVariables:
+  enabled: true
+  exclude: []
+  max_instance_variables: 3
+TooManyMethods:
+  enabled: true
+  exclude:
+  - Axiom::Algebra::Join
+  - Axiom::Relation
+  - Axiom::Relation::Header
+  - Axiom::Relation::Keys
+  - Axiom::Tuple
+  max_methods: 10
+TooManyStatements:
+  enabled: true
+  exclude:
+  - Axiom::Aggregate::Variance#self.call
+  - Axiom::Algebra::Rename::Aliases#union
+  - Axiom::Attribute#self.coerce
+  - Axiom::Attribute::LengthComparable#initialize
+  - Axiom::Attribute::ValueComparable#initialize
+  - Axiom::Equalizer#initialize
+  - Axiom::Evaluator::Context#add
+  - Axiom::Relation::Operation::Sorted#self.new
+  - each
+  max_statements: 5
+UncommunicativeMethodName:
+  enabled: true
+  exclude: []
+  reject:
+  - !ruby/regexp /^[a-z]$/
+  - !ruby/regexp /[0-9]$/
+  - !ruby/regexp /[A-Z]/
+  accept: []
+UncommunicativeModuleName:
+  enabled: true
+  exclude: []
+  reject:
+  - !ruby/regexp /^.$/
+  - !ruby/regexp /[0-9]$/
+  accept: []
+UncommunicativeParameterName:
+  enabled: true
+  exclude: []
+  reject:
+  - !ruby/regexp /^.$/
+  - !ruby/regexp /[0-9]$/
+  - !ruby/regexp /[A-Z]/
+  accept: []
+UncommunicativeVariableName:
+  enabled: true
+  exclude: []
+  reject:
+  - !ruby/regexp /^.$/
+  - !ruby/regexp /[0-9]$/
+  - !ruby/regexp /[A-Z]/
+  accept: []
+UnusedParameters:
+  enabled: true
+  exclude: []
+UtilityFunction:
+  enabled: true
+  exclude: []
+  max_helper_calls: 0

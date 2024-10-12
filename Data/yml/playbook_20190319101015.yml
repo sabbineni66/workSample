@@ -1,0 +1,13 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+  - apt: update_cache=yes upgrade=yes
+  - apt: name=openjdk-7-jre-headless state=present
+  - apt: deb=/tmp/pacages/previous.deb state=installed
+    when: update is defined
+  - apt: deb=/tmp/packages/current.deb state=installed
+  - copy: src=testing.conf dest=/etc/logstash/conf.d/
+  - service: name=logstash state=restarted
+  - apt: name=logstash state=absent
+    when: uninstall is defined

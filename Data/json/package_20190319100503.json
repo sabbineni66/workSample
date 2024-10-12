@@ -1,0 +1,11 @@
+{
+  "name": "server-side-include-syntax",
+  "version": "1.2.1",
+  "description": "Adds SSI syntax highlighting and snippets to .shtml / .shtm files",
+  "repository": "https://github.com/bigethan/atom-server-side-include-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {}
+}

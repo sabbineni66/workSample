@@ -1,0 +1,27 @@
+permalink: /blog/:year/:month/:title
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - TODO.md
+  - README.md
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - bin
+  - zach-moazeni-cv.odt
+
+liquid:
+  error_mode: strict
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      type: "posts"
+    values:
+      type: "post"

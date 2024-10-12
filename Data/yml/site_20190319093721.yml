@@ -1,0 +1,29 @@
+development:
+  name: 'Awesomizer'
+  background: ''
+  cta: 'Coming soon, the most awesome platform ever on the cloud...'
+  thankyou: "Thanks for signing up. You'll be the first to know when we launch!"
+  fail: "Ooops it looks like there was a problem"
+  invalid_email: "It looks like you entered an invalid email address"
+  blog: 'http://jaikoo.com'
+  sign_in: '#'
+  
+test:
+  name: 'Awesomizer'
+  background: ''
+  cta: 'Coming soon, the most awesome platform ever on the cloud..'
+  thankyou: "Thanks for signing up. You'll be the first to know when we launch!"
+  fail: "Ooops it looks like there was a problem"
+  invalid_email: "It looks like you entered an invalid email address"
+  blog: 'http://jaikoo.com'
+  sign_in: '#'
+  
+production: 
+  name: 'Awesomizer'
+  background: ''
+  cta: 'Coming soon, the most awesome platform ever on the cloud...'
+  thankyou: "Thanks for signing up. You'll be the first to know when we launch!"
+  fail: "Ooops it looks like there was a problem"
+  invalid_email: "It looks like you entered an invalid email address"
+  blog: 'http://jaikoo.com'
+  sign_in: '#'

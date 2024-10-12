@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "title": "UIViews",
+    "description": "Xcode & Objective-C for Designers"
+  },
+  "source": "./src",
+  "destination": "./",
+  "plugins": {
+    "metalsmith-collections": {
+      "articles": {
+        "sortBy": "date"
+      }
+    },
+   "metalsmith-markdown": {},
+    "metalsmith-sass": {},
+    "metalsmith-watch": {},
+    "metalsmith-templates": {
+      "engine": "handlebars",
+      "partials": {
+        "header": "partials/header",
+        "footer": "partials/footer"
+      }
+    },
+    "metalsmith-permalinks": {
+      "pattern": ":url",
+      "relative": false
+    }
+  }
+}

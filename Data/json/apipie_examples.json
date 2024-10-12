@@ -1,0 +1,338 @@
+{
+  "accounts#create": [
+    {
+      "verb": "POST",
+      "path": "/api/1/customers/132/accounts",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "account[name]=Checking&account[deposit]=1.23",
+      "response_data": {
+        "id": 132,
+        "customer_id": 132,
+        "name": "Checking",
+        "deposit": "1.23",
+        "closed_on": null,
+        "created_at": "2016-04-01T13:11:01.621Z",
+        "updated_at": "2016-04-01T13:11:01.621Z"
+      },
+      "code": 201,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "accounts#index": [
+    {
+      "verb": "GET",
+      "path": "/api/1/customers/131/accounts",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 131,
+          "customer_id": 131,
+          "name": "Cygcell",
+          "deposit": "8.1",
+          "closed_on": null,
+          "created_at": "2016-04-01T13:11:01.539Z",
+          "updated_at": "2016-04-01T13:11:01.539Z"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "accounts#show": [
+    {
+      "verb": "GET",
+      "path": "/api/1/accounts/133",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "id": 133,
+        "customer_id": 133,
+        "name": "Onesync",
+        "deposit": "12.34",
+        "closed_on": null,
+        "created_at": "2016-04-01T13:11:01.632Z",
+        "updated_at": "2016-04-01T13:11:01.632Z",
+        "balance": "12.34"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "accounts#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/1/accounts/134",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "account[name]=Laundry&account[closed_on]=2016-04-01",
+      "response_data": {
+        "id": 134,
+        "customer_id": 134,
+        "name": "Laundry",
+        "deposit": "8.89",
+        "closed_on": "2016-04-01",
+        "created_at": "2016-04-01T13:11:01.659Z",
+        "updated_at": "2016-04-01T13:11:01.674Z"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "PUT",
+      "path": "/api/1/accounts/n0tf0und",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "account[name]=John+Doe",
+      "response_data": {
+        "message": "Couldn't find Account with 'id'=n0tf0und"
+      },
+      "code": 404,
+      "show_in_doc": 0,
+      "recorded": true
+    },
+    {
+      "verb": "PUT",
+      "path": "/api/1/accounts/135",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "account[name]=",
+      "response_data": {
+        "errors": [
+          "Name can't be blank"
+        ],
+        "message": "Validation failed"
+      },
+      "code": 422,
+      "show_in_doc": 0,
+      "recorded": true
+    }
+  ],
+  "customers#create": [
+    {
+      "verb": "POST",
+      "path": "/api/1/customers",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "customer[name]=John+Doe",
+      "response_data": {
+        "id": 137,
+        "name": "John Doe",
+        "created_at": "2016-04-01T13:11:01.762Z",
+        "updated_at": "2016-04-01T13:11:01.762Z"
+      },
+      "code": 201,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/1/customers",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "customer[name]=",
+      "response_data": {
+        "errors": [
+          "Name can't be blank"
+        ],
+        "message": "Validation failed"
+      },
+      "code": 422,
+      "show_in_doc": 0,
+      "recorded": true
+    }
+  ],
+  "customers#index": [
+    {
+      "verb": "GET",
+      "path": "/api/1/customers",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 136,
+          "name": "Hanna Zemlak",
+          "created_at": "2016-04-01T13:11:01.726Z",
+          "updated_at": "2016-04-01T13:11:01.726Z"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "customers#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/1/customers/138",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "customer[name]=John+Doe",
+      "response_data": {
+        "id": 138,
+        "name": "John Doe",
+        "created_at": "2016-04-01T13:11:01.781Z",
+        "updated_at": "2016-04-01T13:11:01.791Z"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "PUT",
+      "path": "/api/1/customers/n0tf0und",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "customer[name]=John+Doe",
+      "response_data": {
+        "message": "Couldn't find Customer with 'id'=n0tf0und"
+      },
+      "code": 404,
+      "show_in_doc": 0,
+      "recorded": true
+    },
+    {
+      "verb": "PUT",
+      "path": "/api/1/customers/139",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "customer[name]=",
+      "response_data": {
+        "errors": [
+          "Name can't be blank"
+        ],
+        "message": "Validation failed"
+      },
+      "code": 422,
+      "show_in_doc": 0,
+      "recorded": true
+    }
+  ],
+  "transfers#create": [
+    {
+      "verb": "POST",
+      "path": "/api/1/transfers",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "transfer[source_id]=138&transfer[target_id]=139&transfer[amount]=50&transfer[date]=2016-04-01",
+      "response_data": {
+        "id": 156,
+        "source_id": 138,
+        "target_id": 139,
+        "amount": "50.0",
+        "date": "2016-04-01",
+        "retracted_on": null,
+        "created_at": "2016-04-01T13:11:01.901Z",
+        "updated_at": "2016-04-01T13:11:01.901Z"
+      },
+      "code": 201,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "transfers#index": [
+    {
+      "verb": "GET",
+      "path": "/api/1/accounts/136/transfers",
+      "versions": [
+        "1"
+      ],
+      "query": "start_date=2016-04-01&end_date=2016-04-01",
+      "request_data": null,
+      "response_data": {
+        "transfers": [
+          {
+            "id": 155,
+            "source_id": 136,
+            "target_id": 137,
+            "amount": "1.0",
+            "date": "2016-04-01",
+            "retracted_on": null,
+            "created_at": "2016-04-01T13:11:01.841Z",
+            "updated_at": "2016-04-01T13:11:01.841Z"
+          }
+        ],
+        "balance": {
+          "starting": "0.0",
+          "ending": "-1.0"
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "transfers#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/1/transfers/157",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "transfer[amount]=0.99&transfer[retracted_on]=2014-04-01",
+      "response_data": {
+        "id": 157,
+        "source_id": 140,
+        "target_id": 141,
+        "amount": "0.99",
+        "date": "2016-04-01",
+        "retracted_on": "2014-04-01",
+        "created_at": "2016-04-01T13:11:01.928Z",
+        "updated_at": "2016-04-01T13:11:01.941Z"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "PUT",
+      "path": "/api/1/transfers/n0tf0und",
+      "versions": [
+        "1"
+      ],
+      "query": null,
+      "request_data": "transfer[amount]=0.99",
+      "response_data": {
+        "message": "Couldn't find Transfer with 'id'=n0tf0und"
+      },
+      "code": 404,
+      "show_in_doc": 0,
+      "recorded": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "scrum hellper",
+  "version": "0.0.0a",
+  "authors": [
+    "Mark Wise <markmediadude@gmail.com>",
+    "Steven Warren <steven@stevencwarren.com>"
+  ],
+  "main": "css/main.css",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "marionette": "2.2.2",
+    "moment": "latest",
+    "requirejs": "latest",
+    "require-handlebars-plugin": "latest",
+    "jquery": "~2.1.1"
+  }
+}

@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Simply Hacking]]></title>
+  <link href="http://simplyhacking.com/atom.xml" rel="self"/>
+  <link href="http://simplyhacking.com/"/>
+  <updated>2012-03-26T00:43:35+02:00</updated>
+  <id>http://simplyhacking.com/</id>
+  <author>
+    <name><![CDATA[Mikael Hallendal]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Initial release of MHConvore]]></title>
+    <link href="http://simplyhacking.com/mhconvore.html"/>
+    <updated>2011-02-16T00:00:00+01:00</updated>
+    <id>http://simplyhacking.com/mhconvore</id>
+    <content type="html"><![CDATA[<p>Just pushed the first cut of a small framework to connect with the newly launched chatservice <a href="http://convore.com/">Convore</a>. In short Convore is an attempt to create a better way to chat than IRC and also support a web frontend while making it possible to connect with native clients.</p>
+
+<p>The API will likely change a bit and it&#8217;s fresh out of the editor so might be a bit flaky still.</p>
+
+<p>The API makes heavy use of blocks for actions initiated from your code and a client listener for notifications initiated from the server.</p>
+
+<p>A small example of how you use the API, I will add a better example later.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">@interface</span> <span class="nc">AppDelegate</span> : <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSApplicationDelegate</span><span class="p">,</span> <span class="n">MHConvoreClientListener</span><span class="o">&gt;</span> <span class="p">{</span>
+</span><span class='line'><span class="k">@private</span>
+</span><span class='line'>    <span class="n">MHConvoreClient</span> <span class="o">*</span><span class="n">client</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">connectToServer</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">MHConvoreClient</span> <span class="o">*</span><span class="n">client</span> <span class="o">=</span> <span class="p">[</span><span class="n">MHConvoreClient</span> <span class="nl">clientWithUsername:</span><span class="s">@&quot;u&quot;</span> <span class="nl">password:</span><span class="s">@&quot;p&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">client</span><span class="p">.</span><span class="n">listener</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">[</span><span class="n">client</span> <span class="nl">verifyAccount:</span><span class="o">^</span> <span class="p">(</span><span class="n">MHConvoreUser</span> <span class="o">*</span><span class="n">user</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="c1">//   [self doSomething];</span>
+</span><span class='line'>            <span class="p">[</span><span class="n">client</span> <span class="n">listen</span><span class="p">];</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;Error while verifying account: %@&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/* Called when the client receives a new message */</span>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">newMessage:</span><span class="p">(</span><span class="n">MHConvoreMessage</span> <span class="o">*</span><span class="p">)</span><span class="n">message</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;[%@]: %@&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">user</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">message</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To connect to Convore you first need to create an account through their website.</p>
+
+<p>There still is work that needs to be done to it so feel free to fork and hack on it. For example there is currently no way to cancel the listener.</p>
+
+<p><a href="https://github.com/mhallendal/mhconvore">The code at Github</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Code Separation Using Blocks]]></title>
+    <link href="http://simplyhacking.com/code-separation-using-blocks.html"/>
+    <updated>2011-01-24T00:00:00+01:00</updated>
+    <id>http://simplyhacking.com/code-separation-using-blocks</id>
+    <content type="html"><![CDATA[<p>This is a short blog entry to describe how you can use blocks to seperate a generic code from problem specific using blocks. Those that have been looking at <a href="http://projecteuler.net">Project Euler</a> might recognize this problem description.</p>
+
+<p>The program is supposed to calculate the sum of all even-valued <a href="http://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci numbers</a> that doesn&#8217;t exceed a <tt>STOP_VALUE</tt>.</p>
+
+<p>To keep the Fibonacci calculations generic I wanted to separate the problem specific logic from the code calculating the Fibonacci sequence. Blocks can be really helpful for that which is shown below.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">+</span> <span class="nl">sequenceWithBlock:</span><span class="o">^</span> <span class="kt">void</span> <span class="p">(</span><span class="n">NSInteger</span> <span class="n">value</span><span class="p">,</span> <span class="kt">BOOL</span> <span class="o">*</span><span class="n">stop</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This method accepts a block that is called for every Fibonacci number in the sequence until the blocks sets the <tt>stop</tt> flag. The problem specific code is then placed inside the block.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">__block</span> <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="n">Fibonacci</span> <span class="nl">sequenceWithBlock:</span><span class="o">^</span> <span class="kt">void</span> <span class="p">(</span><span class="n">NSInteger</span> <span class="n">value</span><span class="p">,</span> <span class="kt">BOOL</span> <span class="o">*</span><span class="n">stop</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">STOP_VALUE</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="o">*</span><span class="n">stop</span> <span class="o">=</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">total</span> <span class="o">+=</span> <span class="n">value</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Debug Method in Xcode]]></title>
+    <link href="http://simplyhacking.com/debug-method-in-xcode.html"/>
+    <updated>2010-08-18T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/debug-method-in-xcode</id>
+    <content type="html"><![CDATA[<p>I often find myself add a bunch of <tt>#ifdef</tt>s for code that I only want executed during the development but not in the shipped products. In order to make the code a bit easier to read I decided to make a small method that takes a C block (available in iOS 4.0 and Mac OS X 10.6) instead.</p>
+
+<p>You would use it like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm"> * Simple example of usage</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">#include &quot;debug.h&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span>
+</span><span class='line'><span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">debug</span><span class="p">(</span><span class="o">^</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Your debug code here</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can download <tt>debug.[ch]</tt> from <a href="http://gist.github.com/534487">GitHub</a> and simply add them to your project. You also need to edit your project settings for the Debug configuration to set the <tt>DEBUG</tt> macro.</p>
+
+<p><img src="http://simplyhacking.com/images/posts/project-settings-debug.png" alt="Project Settings Dialog" /></p>
+
+<p><a href="http://gist.github.com/534487">http://gist.github.com/534487</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Spacedust Xcode Theme for Xcode 4]]></title>
+    <link href="http://simplyhacking.com/spacedust-xcode-theme-for-xcode-4.html"/>
+    <updated>2010-08-16T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/spacedust-xcode-theme-for-xcode-4</id>
+    <content type="html"><![CDATA[<p>Thanks to <a href="http://gist.github.com/488120">mrevils script</a> to convert Xcode 3 themes to Xcode 4 I updated my <a href="http://simplyhacking.com/spacedust-xcode-theme.html">Spacedust</a> theme to Xcode 4.</p>
+
+<p><img src="http://simplyhacking.com/images/posts/spacedust-xcode-theme.png"/></p>
+
+<p>Download and installation instructions are available at in the link below.</p>
+
+<p><a href="http://gist.github.com/527103">http://gist.github.com/527103</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Spacedust Xcode Theme]]></title>
+    <link href="http://simplyhacking.com/spacedust-xcode-theme.html"/>
+    <updated>2010-01-30T00:00:00+01:00</updated>
+    <id>http://simplyhacking.com/spacedust-xcode-theme</id>
+    <content type="html"><![CDATA[<p>I decided it was time to create a new Xcode theme and created one that works well with dark backgrounds. It&#8217;s called <em>Spacedust</em> and should look good on most dark tints.</p>
+
+<p><img src="http://simplyhacking.com/images/posts/spacedust-xcode-theme.png"/></p>
+
+<p>Feel free to grab it if you like it.</p>
+
+<p><a href="http://simplyhacking.com/files/Spacedust.xccolortheme.zip" onClick="javascript: pageTracker._trackPageview('/files/Spacedust.xccolortheme.zip');">Spacedust.xccolortheme.zip</a></p>
+
+<p>To install it, simply unpack it and place <code>Spacedust.xccolortheme.zip</code> in:
+<code>~/Library/Application Support/Xcode/Color\ Themes</code>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Core Animation Layered Clock]]></title>
+    <link href="http://simplyhacking.com/core-animation-layered-clock.html"/>
+    <updated>2009-10-12T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/core-animation-layered-clock</id>
+    <content type="html"><![CDATA[<p>I wanted to get into Core Animation a bit over the weekend and decided to write a simple digital clock. With the help from <a href="http://rhult.github.com/">Richard</a> I set out to hack it up and figured it might be useful for others just starting out with Core Animation.</p>
+
+<p><img src="http://simplyhacking.com/images/posts/glossy-clock.png" alt="Resulting App" /></p>
+
+<p>After creating a normal Cocoa Application and setting up a custom view in Interface Builder it&#8217;s time to setup the layers that will make up the final interface. Make sure that you set the custom view to your class so that it is actually used:</p>
+
+<p><img src="http://simplyhacking.com/images/posts/glossy-clock-ib.png" alt="Info panel in Interface Builder" /></p>
+
+<p>Layers in Core Animation are built up as a tree where the layer you set to your view with <code>setLayer:</code> is the root layer. All other layers are added as sublayers to the root layer or another layer with <code>addSublayer:</code>. In the code snippets below <code>backgroundLayer</code> is my root layer.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">CALayer</span> <span class="o">*</span><span class="p">)</span><span class="n">setupLayers</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">backgroundLayer</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span> <span class="n">setupBackgroundLayer</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">[</span><span class="n">backgroundLayer</span> <span class="nl">addSublayer:</span><span class="p">[</span><span class="n">self</span> <span class="n">setupClockFaceLayer</span><span class="p">]];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">backgroundLayer</span> <span class="nl">addSublayer:</span><span class="p">[</span><span class="n">self</span> <span class="n">setupBorderLayer</span><span class="p">]];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">backgroundLayer</span> <span class="nl">addSublayer:</span><span class="p">[</span><span class="n">self</span> <span class="n">setupGlossLayer</span><span class="p">]];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">backgroundLayer</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nl">initWithFrame:</span><span class="p">(</span><span class="n">NSRect</span><span class="p">)</span><span class="n">frame</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">self</span> <span class="o">=</span> <span class="p">[</span><span class="n">super</span> <span class="nl">initWithFrame:</span><span class="n">frame</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">clockTimer</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ClockTimer</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="p">[</span><span class="n">self</span> <span class="nl">setLayer:</span><span class="p">[</span><span class="n">self</span> <span class="n">setupLayers</span><span class="p">]];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">awakeFromNib</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span> <span class="nl">setWantsLayer:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>ClockTimer</code> is a simple class that updates the string displaying the time once a second. This string is available through the property <code>outputString</code> on the <code>ClockTimer</code> object.</p>
+
+<p>As you can see the clock is built up from four different layers: The background layer, a clock face layer, a border layer and finally a gloss layer adding the nice shine.</p>
+
+<h2>The Background Layer:</h2>
+
+<p>The background layer is created as a <code>CAGradientLayer</code> to give the clock background the nice blue gradient. This layer type was added in 10.6 so it won&#8217;t work on earlier versions of Mac OS X but should be fairly straight forward to do manually.</p>
+
+<p>In order to help with positioning of layers Core Animation comes with the notion of Layout Managers which can be added to a layer in order to layout its sublayers. The CAConstraintLayoutManager lets us set constraints on the layers sublayers in order to control how they are positioned. In this case the constraints will be set on the clock face to make it centered on the background.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">CALayer</span> <span class="o">*</span><span class="p">)</span><span class="n">setupBackgroundLayer</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">backgroundLayer</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAGradientLayer</span> <span class="n">layer</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">CGColorRef</span> <span class="n">gradientColor1</span> <span class="o">=</span> <span class="n">CGColorCreateGenericRGB</span><span class="p">(</span><span class="mf">13.0f</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="mf">116.0f</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0f</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">CGColorRef</span> <span class="n">gradientColor2</span> <span class="o">=</span> <span class="n">CGColorCreateGenericRGB</span><span class="p">(</span><span class="mf">0.0f</span><span class="p">,</span> <span class="mf">53.0f</span><span class="o">/</span><span class="mf">255.0f</span><span class="p">,</span> <span class="mf">126.0f</span><span class="o">/</span><span class="mf">255.0f</span><span class="p">,</span> <span class="mf">1.0f</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">NSArray</span> <span class="o">*</span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithObjects:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">gradientColor1</span><span class="p">,</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">gradientColor2</span><span class="p">,</span> <span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">CFRelease</span><span class="p">(</span><span class="n">gradientColor1</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">CFRelease</span><span class="p">(</span><span class="n">gradientColor2</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">[(</span><span class="n">CAGradientLayer</span> <span class="o">*</span><span class="p">)</span><span class="n">backgroundLayer</span> <span class="nl">setColors:</span><span class="n">colors</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">backgroundLayer</span> <span class="nl">setCornerRadius:</span><span class="mf">12.0f</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">CAConstraintLayoutManager</span> <span class="o">*</span><span class="n">layout</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAConstraintLayoutManager</span> <span class="n">layoutManager</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">backgroundLayer</span> <span class="nl">setLayoutManager:</span><span class="n">layout</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">backgroundLayer</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>The ClockFace Layer:</h2>
+
+<p>Core Animation comes with several layer types to help us with various tasks. One of these is the <code>CATextLayer</code> which like the name suggests, make it really easy to output text. It also makes it really easy to customize how the text is displayed by setting font and font size. Using the normal shadow properties from <code>CALayer</code> you can add a nice drop shadow on the text.</p>
+
+<p>Using Cocoa bindings I connect the text layers <code>string</code> property with the <code>outputString</code> on my <code>ClockTimer</code>. This way the layer will automatically redraw itself everytime the timer updates the output string.</p>
+
+<p>This is also where we setup the constraints mentioned above to make sure that the text is centered in relation to its super layer (in this case the background).</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">CALayer</span> <span class="o">*</span><span class="p">)</span><span class="n">setupClockFaceLayer</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">CATextLayer</span> <span class="o">*</span><span class="n">clockFaceLayer</span> <span class="o">=</span> <span class="p">[</span><span class="n">CATextLayer</span> <span class="n">layer</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">clockFaceLayer</span> <span class="nl">bind:</span><span class="s">@&quot;string&quot;</span> <span class="nl">toObject:</span><span class="n">clockTimer</span> <span class="nl">withKeyPath:</span><span class="s">@&quot;outputString&quot;</span> <span class="nl">options:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">clockFaceLayer</span> <span class="nl">setFont:</span><span class="s">@&quot;Menlo&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">clockFaceLayer</span> <span class="nl">setFontSize:</span><span class="mf">60.0f</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">clockFaceLayer</span> <span class="nl">setShadowOpacity:</span><span class="mf">.9f</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Constrain the text layer in the middle</span>
+</span><span class='line'>    <span class="n">CAConstraint</span> <span class="o">*</span><span class="n">constraint</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAConstraint</span> <span class="nl">constraintWithAttribute:</span><span class="n">kCAConstraintMidX</span>
+</span><span class='line'>                                                          <span class="nl">relativeTo:</span><span class="s">@&quot;superlayer&quot;</span>
+</span><span class='line'>                                                           <span class="nl">attribute:</span><span class="n">kCAConstraintMidX</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">clockFaceLayer</span> <span class="nl">addConstraint:</span><span class="n">constraint</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">constraint</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAConstraint</span> <span class="nl">constraintWithAttribute:</span><span class="n">kCAConstraintMidY</span>
+</span><span class='line'>                                            <span class="nl">relativeTo:</span><span class="s">@&quot;superlayer&quot;</span>
+</span><span class='line'>                                             <span class="nl">attribute:</span><span class="n">kCAConstraintMidY</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">clockFaceLayer</span> <span class="nl">addConstraint:</span><span class="n">constraint</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">clockFaceLayer</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>The Border Layer:</h2>
+
+<p>There are likely other ways of doing this but by using a separate layer I can use built in functionality to draw a border around a layer. I make the layer slightly smaller than the background layer, set its corner radius to the same value used for the background and simply set it to draw its border with a white color.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">CALayer</span> <span class="o">*</span><span class="p">)</span><span class="n">setupBorderLayer</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">CALayer</span> <span class="o">*</span><span class="n">borderLayer</span> <span class="o">=</span> <span class="p">[</span><span class="n">CALayer</span> <span class="n">layer</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">CGRect</span> <span class="n">borderRect</span> <span class="o">=</span> <span class="n">CGRectInset</span><span class="p">([</span><span class="n">self</span> <span class="n">frame</span><span class="p">],</span> <span class="mf">8.0f</span><span class="p">,</span> <span class="mf">8.0f</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">borderLayer</span> <span class="nl">setCornerRadius:</span><span class="mf">12.0f</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">borderLayer</span> <span class="nl">setBorderColor:</span><span class="n">CGColorGetConstantColor</span><span class="p">(</span><span class="n">kCGColorWhite</span><span class="p">)];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">borderLayer</span> <span class="nl">setBorderWidth:</span><span class="mf">2.0f</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">borderLayer</span> <span class="nl">setFrame:</span><span class="n">borderRect</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">borderLayer</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Notice that I do not have to set any constraints here as I create the layer frame from simply shrinking the frame size on all sides which ensures it will be set in the middle already.</p>
+
+<h2>The Gloss Layer:</h2>
+
+<p>As a final touch I wanted to add the shine to give the clock a glossy look. The simplest way I could figure out to do this was to create a transparent image in Photoshop and setup the layer to draw it. Optimally it should be generated in code or at least use a scalable image to make the clock resizable without loosing any quality in the gloss layer.</p>
+
+<p>Even if we set the same corner radius as the background layer the layer will happily draw the image outside of this unless we call <code>setMasksToBounds</code> to ensure that it doesn&#8217;t draw the image outside of the rounded corners.</p>
+
+<figure class='code'><figcaption><span>setupGlossLayer</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">CALayer</span> <span class="o">*</span><span class="p">)</span><span class="n">setupGlossLayer</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">CALayer</span> <span class="o">*</span><span class="n">glossLayer</span> <span class="o">=</span> <span class="p">[</span><span class="n">CALayer</span> <span class="n">layer</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSString</span> <span class="o">*</span><span class="n">filePath</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">pathForResource:</span><span class="s">@&quot;clock-gloss&quot;</span> <span class="nl">ofType:</span><span class="s">@&quot;png&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSURL</span> <span class="o">*</span><span class="n">fileURL</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="nl">fileURLWithPath:</span><span class="n">filePath</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">CGImageSourceRef</span> <span class="n">glossySource</span> <span class="o">=</span> <span class="n">CGImageSourceCreateWithURL</span><span class="p">((</span><span class="n">CFURLRef</span><span class="p">)</span><span class="n">fileURL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">CGImageRef</span> <span class="n">glossyImage</span> <span class="o">=</span> <span class="n">CGImageSourceCreateImageAtIndex</span><span class="p">(</span><span class="n">glossySource</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">CFRelease</span><span class="p">(</span><span class="n">glossySource</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">glossLayer</span> <span class="nl">setContents:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">glossyImage</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">CFRelease</span><span class="p">(</span><span class="n">glossyImage</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">[</span><span class="n">glossLayer</span> <span class="nl">setOpacity:</span><span class="mf">0.8f</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">glossLayer</span> <span class="nl">setCornerRadius:</span><span class="mf">12.0f</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">glossLayer</span> <span class="nl">setMasksToBounds:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">glossLayer</span> <span class="nl">setFrame:</span><span class="p">[</span><span class="n">self</span> <span class="n">frame</span><span class="p">]];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">glossLayer</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally I subclassed <code>NSWindow</code> in order to turn off the window decoration and shape the window as the background layer.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nl">initWithContentRect:</span><span class="p">(</span><span class="n">NSRect</span><span class="p">)</span><span class="n">contentRect</span>
+</span><span class='line'>                <span class="nl">styleMask:</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">aStyle</span>
+</span><span class='line'>                  <span class="nl">backing:</span><span class="p">(</span><span class="n">NSBackingStoreType</span><span class="p">)</span><span class="n">bufferingType</span>
+</span><span class='line'>                    <span class="nl">defer:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="n">flag</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">self</span> <span class="o">=</span> <span class="p">[</span><span class="n">super</span> <span class="nl">initWithContentRect:</span><span class="n">contentRect</span>
+</span><span class='line'>                            <span class="nl">styleMask:</span><span class="n">NSBorderlessWindowMask</span>
+</span><span class='line'>                              <span class="nl">backing:</span><span class="n">bufferingType</span>
+</span><span class='line'>                                <span class="nl">defer:</span><span class="n">flag</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">self</span> <span class="nl">setOpaque:</span><span class="n">NO</span><span class="p">];</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">self</span> <span class="nl">setBackgroundColor:</span><span class="p">[</span><span class="n">NSColor</span> <span class="n">clearColor</span><span class="p">]];</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">self</span> <span class="nl">setMovableByWindowBackground:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">self</span> <span class="nl">setLevel:</span><span class="n">NSPopUpMenuWindowLevel</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>NSBorderlessWindowMask</code> makes the window draw without the border and <code>setOpaque</code> together with setting the background color to <code>[NSColor clearColor]</code>. Using the <code>NSPopUpMenuWindowLevel</code> ensures that the clock is always on top of other windows.</p>
+
+<p>I hope you find this helpful and please make sure to subscribe to my feed if you did. I&#8217;ll do my best to answer any questions you might have in the comment section below.</p>
+
+<p>The full source as an Xcode project can be browsed at: <a href="http://github.com/mhallendal/glossyclock">Github</a> or <a href="http://github.com/mhallendal/glossyclock/zipball/master">downloaded</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reversing an array in Objective C]]></title>
+    <link href="http://simplyhacking.com/reverse-array-in-objc.html"/>
+    <updated>2009-10-09T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/reverse-array-in-objc</id>
+    <content type="html"><![CDATA[<p>Was looking for the best way to reverse an array in Objective C and stumbled over this solution that might not be obvious to everyone (wasn&#8217;t to me at least).</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">NSArray</span> <span class="o">*</span><span class="n">reversedArray</span> <span class="o">=</span> <span class="p">[[</span><span class="n">array</span> <span class="n">reverseObjectEnumerator</span><span class="p">]</span> <span class="n">allObjects</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Macruby Support in any Cocoa Application]]></title>
+    <link href="http://simplyhacking.com/macruby-support-in-any-cocoa-application.html"/>
+    <updated>2009-05-06T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/macruby-support-in-any-cocoa-application</id>
+    <content type="html"><![CDATA[<p>Yesterday I published a post about <a href="http://simplyhacking.com/cocoa-prototyping-with-webview.html">Cocoa Prototyping with Webview</a> and today I found out about <a href="http://www.macruby.org/">Macruby</a> thanks to <a href="http://twitter.com/sarnesjo">@sarnesjo</a>. Already looking for ways of prototyping in Cocoa it&#8217;s hard to not find Macruby very interesting.</p>
+
+<p>Macruby turns out to be a very powerful tool for prototyping (as well as writing entire applications in) as it fits perfectly fine in a normal Objective-C code base. What I wanted was something like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">SimpleController</span>
+</span><span class='line'>    <span class="kp">attr_accessor</span> <span class="ss">:label</span>
+</span><span class='line'>    <span class="kp">attr_accessor</span> <span class="ss">:button</span>
+</span><span class='line'>    <span class="kp">attr_accessor</span> <span class="ss">:my_view</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">buttonPressed</span><span class="p">(</span><span class="n">sender</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">label</span><span class="o">.</span><span class="n">setStringValue</span><span class="p">(</span><span class="s2">&quot;I am (im)pressed!&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">my_view</span><span class="o">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="no">NSColor</span><span class="o">.</span><span class="n">redColor</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Where the view <code>:my_view</code> is implemented in Objective-C.</p>
+
+<p>Here are the simple steps I used to hook it into a normal Xcode Cocoa project.</p>
+
+<p>First of all, install Macruby which is as easy as downloading the zip-file from the website and run the installer.</p>
+
+<p>In order to link to the Macruby framework you need to use garbage collection in your project, if you aren&#8217;t already you enable it in the project inspector:</p>
+
+<p><img src="http://simplyhacking.com/images/posts/macruby-in-xcode-gc.png" alt="Set the project to use Garbage Collection" /></p>
+
+<p>Next you need to make your project link against the Macruby framework:</p>
+
+<p><img src="http://simplyhacking.com/images/posts/macruby-in-xcode-add-framework.png" alt="Add the Macruby framework" /></p>
+
+<p>That&#8217;s it for the project settings, let&#8217;s hook it up in the code. When you use the built-in project template for a Macruby project a small Ruby file called <em>rb_main.rb</em> is created for you. Since I&#8217;m using a generic Cocoa application template I needed to create this file and simply copied the file into my new project (its code below). It loads all Ruby files in your bundle and starts the Cocoa main loop.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1"># Loading the Cocoa framework. If you need to load more frameworks, you can</span>
+</span><span class='line'><span class="c1"># do that here too.</span>
+</span><span class='line'><span class="n">framework</span> <span class="s1">&#39;Cocoa&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># Loading all the Ruby project files.</span>
+</span><span class='line'><span class="n">dir_path</span> <span class="o">=</span> <span class="no">NSBundle</span><span class="o">.</span><span class="n">mainBundle</span><span class="o">.</span><span class="n">resourcePath</span><span class="o">.</span><span class="n">fileSystemRepresentation</span>
+</span><span class='line'><span class="no">Dir</span><span class="o">.</span><span class="n">entries</span><span class="p">(</span><span class="n">dir_path</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">path</span> <span class="o">!=</span> <span class="no">File</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">)</span> <span class="ow">and</span> <span class="n">path</span><span class="o">[-</span><span class="mi">3</span><span class="o">.</span><span class="n">.</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="s1">&#39;.rb&#39;</span>
+</span><span class='line'>    <span class="nb">require</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># Starting the Cocoa main loop.</span>
+</span><span class='line'><span class="no">NSApplicationMain</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kp">nil</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To start the actual Ruby interpreter the file <em>main.m</em> needs to be modified. Since the Ruby code now starts the Cocoa main loop we no longer need to do that in <code>main</code>. <em>Main.m</em> simply becomes:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#import &lt;MacRuby/MacRuby.h&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">macruby_main</span><span class="p">(</span><span class="s">&quot;rb_main.rb&quot;</span><span class="p">,</span> <span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With these changes you can now start writing code in either Ruby or Objective-C within the same project. Here are the files I ended up with in my very small example.</p>
+
+<p><img src="http://simplyhacking.com/images/posts/macruby-in-xcode-files.png" alt="Example Files" /></p>
+
+<p>The final application simply shows a small window with a button:</p>
+
+<p><img src="http://simplyhacking.com/images/posts/macruby-in-xcode-example.png" alt="Example window" /></p>
+
+<p>Make sure to watch the great <a href="http://pragmaticstudio.com/screencasts/6-macruby">introductionary screencast</a> then download the example project and get started tinkering.</p>
+
+<p><a href="http://simplyhacking.com/downloads/posts/ObjcMacRuby.tar.gz">Example project</a></p>
+
+<p>If you find this as cool and useful as I did, let me hear about it!</p>
+
+<p><strong>Edit:</strong> Be sure to read Laurents comment below for an alternative way of loading your Ruby files into your application.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cocoa Prototyping with Webview]]></title>
+    <link href="http://simplyhacking.com/cocoa-prototyping-with-webview.html"/>
+    <updated>2009-05-05T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/cocoa-prototyping-with-webview</id>
+    <content type="html"><![CDATA[<p>While Interface Builder makes it really easy to quickly put together and test the overall design of your user interface it doesn&#8217;t help much when it comes to its overall flow. In any non-trivial application you are likely to have some custom views or view switching.</p>
+
+<p>For example, say that you want to try out whether it makes sense to use a source list in order to navigate the application and have your content view switch based on what you select in it.</p>
+
+<p>Wouldn&#8217;t it be great if you could try this without having to implement all the code necessary to display and navigate the source list and other views. Using HTML for prototyping can be a powerful, quick and easy solution that is easily available to Cocoa developers.</p>
+
+<p>In order to make it even easier I created a <code>WebView</code> subclass called <code>PrototypeView</code> that displays a piece of HTML and sends a message to its <em>delegate</em> when the user clicks a link.</p>
+
+<p>To give an idea of what it does, take a look at the following screenshot showing a basic prototype UI consisting of two suchs views embedded in a split view.</p>
+
+<p><img src="http://simplyhacking.com/images/posts/html-prototype-ui.png" alt="Prototyped UI, using PrototypeView" /></p>
+
+<p>Using the PrototypeView is easy.</p>
+
+<h2>Step 1: Mock up the UI in Interface Builder</h2>
+
+<p>Using Interface Builder, create the UI you want and put custom views where you want to prototype using the <code>PrototypeView</code>.</p>
+
+<p><img src="http://simplyhacking.com/images/posts/html-prototype-ib.png" alt="Setting class to PrototypeView" /></p>
+
+<p>I used a class called <code>AppController</code> with two outlets to the prototype views by creating an <code>NSObject</code> subclass and set it up in Interface Builder by dragging an <code>NSObject</code> from the library and setting the class to <code>AppController</code> like above.</p>
+
+<h2>Step 2: Hooking the view up in the AppController</h2>
+
+<p>Back in XCode I create a subclass of NSObject called AppController and setup the two prototype views in its <code>awakeFromNib</code> by using the two method calls <code>setPrototypeDelegate</code> and <code>loadBundleFile</code>. In my example I used two prototype views called <code>sidebarView</code> and <code>contentView</code> and will use the AppController as my delegate.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">awakeFromNib</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">sideBarView</span> <span class="nl">setPrototypeDelegate:</span><span class="n">self</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">sideBarView</span> <span class="nl">loadBundleFile:</span><span class="s">@&quot;sidebar&quot;</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">[</span><span class="n">contentView</span> <span class="nl">setPrototypeDelegate:</span><span class="n">self</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">contentView</span> <span class="nl">loadBundleFile:</span><span class="s">@&quot;content1&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 3: Prototype in HTML</h2>
+
+<p>Starting the application at this point will cause it to load the files <em>sidebar.html</em> and <em>content1.html</em> and display them. Now that the files are being loaded you can implement the prototyped UI portions in the HTML files. Here is the content of <em>sidebar.html</em>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;head&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;sidebar.css&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/head&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;body&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;li&gt;&lt;p</span> <span class="na">class=</span><span class="s">&quot;header&quot;</span><span class="nt">&gt;</span>LIBRARY<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;method:showViewOne&quot;</span><span class="nt">&gt;</span>Initial View<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;method:showViewTwo&quot;</span><span class="nt">&gt;</span>Second View<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 4: Adding the methods in AppController</h2>
+
+<p>Notice the special links to <code>method:showViewOne</code>, clicking this will make the <code>PrototypeView</code> look if its delegate responds to <code>showViewOne</code> and send the message to it if it does.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">showViewOne</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">contentView</span> <span class="nl">loadBundleFile:</span><span class="s">@&quot;content1&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">showViewTwo</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">contentView</span> <span class="nl">loadBundleFile:</span><span class="s">@&quot;content2&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s it, happy prototyping!</p>
+
+<p>For a closer look you can see the <a href="http://gist.github.com/106856">PrototypeView source code</a> or download the example project I used as a <a href="http://simplyhacking.com/downloads/posts/HtmlPrototype.tar.gz">tarball</a>.</p>
+
+<p>I&#8217;d love any feedback on how to improve this and possibly even supporting using JavaScript to communicate both ways with the HTML view in order to let the application update the views dynamically.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Blogging at Github and Simply Hacking]]></title>
+    <link href="http://simplyhacking.com/blog-at-github.html"/>
+    <updated>2009-04-20T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/blog-at-github</id>
+    <content type="html"><![CDATA[<p class="meta">20 Apr 2009 &#8211; Stockholm</p>
+<p>Decided to move my blog to a simpler solution by using Github and the nice <a href="http://github.com/mojombo/jekyll">Jekyll</a> site generator by <a href="http://tom.preston-werner.com/">Tom Preston-Werner</a>.</p>
+<p>Still need to tweak the stylesheetes a bit to not be a total rip off from Toms (which he is kind enough to let others use) but I definitely like the clean design.</p>
+<p>Really looking forward to a simpler blog system where I don&#8217;t need to manage an <span class="caps">SQL</span> database and keep the software up to date. Comments are done through <a href="http://disqus.com">Disqus</a>.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Source List with Core Data]]></title>
+    <link href="http://simplyhacking.com/source-list-with-core-data.html"/>
+    <updated>2009-04-06T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/source-list-with-core-data</id>
+    <content type="html"><![CDATA[<p>Last week I decided to look into how to create a source list that is backed by Core Data with section headers created from code. New to Cocoa I set out to Google for a solution but surprisingly enough I didn&#8217;t find a lot about how to achieve this (or I simply googled for the wrong things). After a few days I managed to derive, what I believe, an elegant solution to this and figured it could be useful for others wanting to do this.</p>
+
+<p><img src="http://simplyhacking.com/images/posts/sl-cd-result.png" alt="The planned source list" /></p>
+
+<h2>Approaches</h2>
+
+<p>My first plan was to create some kind of layer in between Core Data and the NSTreeController but that quickly added a lot of complexity and code. The second solution was to create the headers and put them in Core Data the first time you start the application. While this was easily done it felt a bit hackish.</p>
+
+<p>After spending a couple of days with this, trying out various solutions and ideas me and <a href="http://twitter.com/rhult">Richard</a> discussed the topic, wondering if maybe Core Data had some builtin support for this.</p>
+
+<p>Twenty minutes and some fifty lines of code later I looked at the screen, amazed at how awesome Core Data is. This is what I ended up with, mind though that it&#8217;s not a full tutorial but only the crucial steps, you still need to know how to connect it all with the NSTreeController and NSOutlineView.</p>
+
+<h2>The Solution</h2>
+
+<p>The idea is to use two different persistent stores, the regular XML store and an in memory store for the code generated entites.</p>
+
+<p>For the purpose of this example the data model is very simple, two entities called <em>Section</em> (for the code generated section headers) and <em>Item</em> (for the entities that are read from Core Data).</p>
+
+<p><em>Section</em> will have a <code>name</code> attribute and a one-to-many relationship to <em>Item</em> called <code>children</code>. <em>Item</em> will have a <code>name</code> and a reverse to-one relationship back to <em>Section</em> called <code>section</code>. Make sure you <strong>make this relationship transient</strong> to tell Core Data that this relationship only exists runtime and should not be stored.</p>
+
+<p><img src="http://simplyhacking.com/images/posts/sl-cd-datamodel1.png" alt="The data model" /></p>
+
+<p>The <em>NSTreeController</em> has a property called <code>childrenKeyPath</code> that defines the key path to retrieve an array of children from each of the nodes in the tree. All nodes displayed in the tree need to respond to this key path. Since <em>Item</em>s don&#8217;t have children it is not included in the data model (though you could have added it in the model designer but in my opinion isn&#8217;t as nice), I will instead create a subclass of <em>NSManagedObject</em> to represent an <em>Item</em>.</p>
+
+<p>Select the <em>Item</em> entity in the model designer and create a new file (File->New File and choose Managed Object Class from the Cocoa section). Simply name it Item.m (and check the <em>Also create &#8220;Item.h&#8221;</em>) box. Add a method <code>children</code> to your <em>Item</em> class.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="cm">/* In Item.h */</span>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">children</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/* In Item.m */</span>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">children</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">nil</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This method will be called by the NSTreeController when it is populating the tree and since an <em>Item</em> doesn&#8217;t have any children it should return <code>nil</code>.</p>
+
+<p>That&#8217;s it for the model, time to setup the stores.</p>
+
+<p>I extended the method <code>persistentStoreCoordinator</code> in the auto generated application delegate to create a second store with the URL <em>memory://store</em>. This store should be of the type <code>NSInMemoryStoreType</code> which means that any entity tied to it won&#8217;t be saved to disk.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">url</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="nl">URLWithString:</span><span class="s">@&quot;memory://store&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="n">persistentStoreCoordinator</span> <span class="nl">addPersistentStoreWithType:</span><span class="n">NSInMemoryStoreType</span>
+</span><span class='line'>                                              <span class="nl">configuration:</span><span class="nb">nil</span>
+</span><span class='line'>                                                        <span class="nl">URL:</span><span class="n">url</span>
+</span><span class='line'>                                                    <span class="nl">options:</span><span class="nb">nil</span>
+</span><span class='line'>                                                      <span class="nl">error:</span><span class="o">&amp;</span><span class="n">error</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[[</span><span class="n">NSApplication</span> <span class="n">sharedApplication</span><span class="p">]</span> <span class="nl">presentError:</span><span class="n">error</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Both of these stores act in the same context so the layers on top of Core Data won&#8217;t know the difference between entites in one store or another.</p>
+
+<p>With the store in place the <em>Section</em> entities are created when the application is started, I added the code to the application delegate init method. After I create the <em>Section</em> I populate it with the result of fetching all my <em>Item</em> entities from Core Data (lines 30-33 below).</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nl">fetchAllWithEntity:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">entity</span>
+</span><span class='line'>                          <span class="nl">error:</span><span class="p">(</span><span class="n">NSError</span> <span class="o">**</span><span class="p">)</span><span class="n">error</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">NSFetchRequest</span> <span class="o">*</span><span class="n">request</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">NSEntityDescription</span> <span class="o">*</span><span class="n">desc</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">desc</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSEntityDescription</span> <span class="nl">entityForName:</span><span class="n">entity</span>
+</span><span class='line'>                       <span class="nl">inManagedObjectContext:</span><span class="p">[</span><span class="n">self</span> <span class="n">managedObjectContext</span><span class="p">]];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">request</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">NSFetchRequest</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">]</span> <span class="n">autorelease</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">request</span> <span class="nl">setEntity:</span><span class="n">desc</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="p">[[</span><span class="n">self</span> <span class="n">managedObjectContext</span><span class="p">]</span> <span class="nl">executeFetchRequest:</span><span class="n">request</span> <span class="nl">error:</span><span class="n">error</span><span class="p">];</span> 
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">init</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">NSURL</span> <span class="o">*</span><span class="n">url</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="nl">URLWithString:</span><span class="s">@&quot;memory://store&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="kt">id</span> <span class="n">memoryStore</span> <span class="o">=</span> <span class="p">[[</span><span class="n">self</span> <span class="n">persistentStoreCoordinator</span><span class="p">]</span> <span class="nl">persistentStoreForURL:</span><span class="n">url</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">section</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSEntityDescription</span> <span class="nl">insertNewObjectForEntityForName:</span><span class="s">@&quot;Section&quot;</span>
+</span><span class='line'>                                             <span class="nl">inManagedObjectContext:</span><span class="p">[</span><span class="n">self</span> <span class="n">managedObjectContext</span><span class="p">]]</span> <span class="n">retain</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">section</span> <span class="nl">setValue:</span><span class="s">@&quot;My section&quot;</span> <span class="nl">forKey:</span><span class="s">@&quot;name&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[[</span><span class="n">self</span> <span class="n">managedObjectContext</span><span class="p">]</span> <span class="nl">assignObject:</span><span class="n">section</span>
+</span><span class='line'>                            <span class="nl">toPersistentStore:</span><span class="n">memoryStore</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">NSArray</span> <span class="o">*</span><span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span> <span class="nl">fetchAllWithEntity:</span><span class="s">@&quot;Item&quot;</span> <span class="nl">error:</span><span class="o">&amp;</span><span class="n">error</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="kt">id</span> <span class="n">item</span> <span class="k">in</span> <span class="n">items</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">item</span> <span class="nl">setValue:</span><span class="n">section</span> <span class="nl">forKey:</span><span class="s">@&quot;section&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here the message <code>assignObject:toPersistentStore:</code> is sent to the <code>NSManagedObjectContext</code> to put the newly created <em>Section</em> in the in memory store so that it is not saved to disk with the <em>Item</em>s.</p>
+
+<p>I also added an action to my application delegate to create new <em>Item</em>s and make them children to the <em>Section</em>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">addItem:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">sender</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="kt">id</span> <span class="n">newObject</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSEntityDescription</span> <span class="nl">insertNewObjectForEntityForName:</span><span class="s">@&quot;Item&quot;</span>
+</span><span class='line'>                                                 <span class="nl">inManagedObjectContext:</span><span class="p">[</span><span class="n">self</span> <span class="n">managedObjectContext</span><span class="p">]];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">newObject</span> <span class="nl">setValue:</span><span class="n">section</span> <span class="nl">forKey:</span><span class="s">@&quot;section&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s it! Now a regular <code>NSTreeController</code> can be used in entity mode by setting the entity to <em>Section</em> as you would normally do.</p>
+
+<p>I hope you found it useful, if you did, make sure you share it with your friends and subscribe to my <a href="http://simplyhacking.com/atom.xml">RSS feed</a> or <a href="http://twitter.com/mhallendal">follow me on twitter</a> for notifications about future posts.</p>
+
+<p>I&#8217;d love to get feedback on better solutions, improvements or just comments on what you think.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Expanding NSOutlineView nodes at application start]]></title>
+    <link href="http://simplyhacking.com/expanding-nsoutlineview-nodes-at-application-start.html"/>
+    <updated>2009-04-06T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/expanding-nsoutlineview-nodes-at-application-start</id>
+    <content type="html"><![CDATA[<p>A problem when you want to expand some items in an <em>NSOutlineView</em> programatically at application start is that the <em>NSTreeController</em> prepares it&#8217;s content after <code>awakeFromNib</code> is called on your controller.</p>
+
+<p>To ensure that the data is loaded before you try to expand the items you can observe the <code>content</code> key on the tree controller and expand the nodes as you receive the the <code>observeValueForKeyPath:</code> message as shown below:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">observeValueForKeyPath:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">keyPath</span>
+</span><span class='line'>                      <span class="nl">ofObject:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">object</span>
+</span><span class='line'>                        <span class="nl">change:</span><span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="n">change</span>
+</span><span class='line'>                       <span class="nl">context:</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="n">context</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">object</span> <span class="o">==</span> <span class="n">treeController</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Expand the first row (which is our section header)</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">sourceList</span> <span class="nl">expandItem:</span><span class="p">[</span><span class="n">sourceList</span> <span class="nl">itemAtRow:</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>                <span class="nl">expandChildren:</span><span class="n">NO</span><span class="p">];</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">treeController</span> <span class="nl">removeObserver:</span><span class="n">self</span>
+</span><span class='line'>                            <span class="nl">forKeyPath:</span><span class="s">@&quot;content&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">awakeFromNib</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Listen on the treeController to expand the root node </span>
+</span><span class='line'>    <span class="c1">// when it has prepared it&#39;s content.</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">treeController</span> <span class="nl">addObserver:</span><span class="n">self</span>
+</span><span class='line'>                     <span class="nl">forKeyPath:</span><span class="s">@&quot;content&quot;</span>
+</span><span class='line'>                        <span class="nl">options:</span><span class="mi">0</span>
+</span><span class='line'>                        <span class="nl">context:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Retrieving the real object when using NSOutlineView with an NSTreeController]]></title>
+    <link href="http://simplyhacking.com/nstreecontroller-wrapping-object.html"/>
+    <updated>2009-04-04T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/nstreecontroller-wrapping-object</id>
+    <content type="html"><![CDATA[<p>As I just started out with Cocoa and started looking into the NSTreeController and NSOutlineView I realized that the objects seen by the outline view isn&#8217;t the same as the ones you see when working with the tree controller.</p>
+
+<p>The NSTreeController wraps your objects into another object and it took me some digging before I realized that you need to call <code>representedObject</code> to fetch the <em>real</em> object.</p>
+
+<p>Example from implementing an NSOutlineView delegate:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="cm">/* NSOutlineView Delegate Method */</span>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nl">outlineView:</span><span class="p">(</span><span class="n">NSOutlineView</span> <span class="o">*</span><span class="p">)</span><span class="n">view</span>
+</span><span class='line'>        <span class="nl">isGroupItem:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">item</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">([</span><span class="n">item</span> <span class="n">representedObject</span><span class="p">]</span> <span class="o">==</span> <span class="n">section</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">NO</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Removing a remote branch in Git]]></title>
+    <link href="http://simplyhacking.com/removing-a-remote-branch-in-git.html"/>
+    <updated>2008-06-21T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/removing-a-remote-branch-in-git</id>
+    <content type="html"><![CDATA[<p><strong>This is a repost from my old blog</strong></p>
+
+<p>This is something I?ve had to checkup a few times so I figured it would be useful both for myself and for others to keep around in a blog post.</p>
+
+<p>To remove a remote branch you created in Git just push to it like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git push origin :name-of-branch
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Twitter4R on Mac OS X]]></title>
+    <link href="http://simplyhacking.com/using-twitter4r-on-mac-os-x.html"/>
+    <updated>2008-05-31T00:00:00+02:00</updated>
+    <id>http://simplyhacking.com/using-twitter4r-on-mac-os-x</id>
+    <content type="html"><![CDATA[<p><strong>This is a repost from my old blog</strong></p>
+
+<p>Was playing around a bit with the Twitter4R library the other day and realized that in order to make it to work on Mac OS X (Leopard) you need to also require ?time?. Or you will get an error similar to</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>lib/twitter/model.rb:268:in <span class="sb">`</span>init???: undefined method <span class="sb">`</span>parse??? <span class="k">for </span>Time:Class <span class="o">(</span>NoMethodError<span class="o">)</span>.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>A small snippet to display my public tweets:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+</span><span class='line'><span class="n">gem</span><span class="p">(</span><span class="s1">&#39;twitter4r&#39;</span><span class="p">,</span> <span class="s1">&#39;0.3.0&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;twitter&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># Required on Mac OS X Leopard</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;time&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">twitter</span> <span class="o">=</span> <span class="no">Twitter</span><span class="o">::</span><span class="no">Client</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">m5h_timeline</span> <span class="o">=</span> <span class="n">twitter</span><span class="o">.</span><span class="n">timeline_for</span><span class="p">(</span><span class="ss">:user</span><span class="p">,</span> <span class="ss">:id</span> <span class="o">=&gt;</span> <span class="s1">&#39;m5h&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">m5h_timeline</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">status</span><span class="o">|</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">status</span><span class="o">.</span><span class="n">text</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+</feed>

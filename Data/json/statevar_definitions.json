@@ -1,0 +1,145 @@
+[
+	{
+		"type" : "prefix",
+		"name" : "None",
+		"value": "0xDADAFEED",
+		 "size": 4
+	},
+	{
+		"type" : "unsigned_long",
+		"name" : "main_loop_counter",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "unsigned_long",
+		"name" : "status",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "unsigned_byte",
+		"name" : "mission_started",
+		"value": "",
+		"size" : 1
+	},
+	{
+		"type" : "unsigned_short",
+		"name" : "heading_raw",
+		"value": "",
+		"size" : 2
+	},
+	{
+		"type" : "float_value",
+		"name" : "heading_deg",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "float_value",
+		"name" : "heading_rad",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "float_value",
+		"name" : "lat",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "float_value",
+		"name" : "long",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "float_value",
+		"name" : "hdop",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "unsigned_short",
+		"name" : "f_left_ping_us",
+		"value": "",
+		"size" : 2
+	},
+	{
+		"type" : "unsigned_short",
+		"name" : "f_center_ping_us",
+		"value": "",
+		"size" : 2
+	},
+	{
+		"type" : "unsigned_short",
+		"name" : "f_right_ping_us",
+		"value": "",
+		"size" : 2
+	},
+	{
+		"type" : "unsigned_short",
+		"name" : "r_center_ping_us",
+		"value": "",
+		"size" : 2
+	},
+	{
+		"type" : "unsigned_short",
+		"name" : "obstacle_range_cm",
+		"value": "",
+		"size" : 2
+	},
+	{
+		"type" : "signed_byte",
+		"name" : "obstacle_relbrng_deg",
+		"value": "",
+		"size" : 1
+	},
+	{
+		"type" : "unsigned_byte",
+		"name" : "f_left_bump",
+		"value": "",
+		"size" : 1
+	},
+	{
+		"type" : "unsigned_byte",
+		"name" : "f_right_bump",
+		"value": "",
+		"size" : 1
+	},
+	{
+		"type" : "signed_byte",
+		"name" : "pitch_deg",
+		"value": "",
+		"size" : 1
+	},
+	{
+		"type" : "signed_byte",
+		"name" : "roll_deg",
+		"value": "",
+		"size" : 1
+	},
+	{
+		"type" : "unsigned_short",
+		"name" : "steering_servo_us",
+		"value": "",
+		"size" : 2
+	},
+	{
+		"type" : "unsigned_short",
+		"name" : "gasbrake_servo_us",
+		"value": "",
+		"size" : 2
+	},
+	{
+		"type" : "padding",
+		"name" : "None",
+		"value": "",
+		"size" : 454
+	},
+	{
+		"type" : "suffix",
+		"value": "0xCAFEBABE",
+		"size" : 4
+	}
+]

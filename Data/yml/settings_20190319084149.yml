@@ -1,0 +1,25 @@
+slack:
+  slack_enabled:
+    client: true
+    default: false
+  slack_url:
+    client: true
+    default: '<incoming webhook url>'
+  slack_channel:
+    client: true
+    default: '#general'
+  slack_emoji:
+    client: true
+    default: ':discourse:'
+  slack_posts:
+    client: true
+    default: false
+  slack_full_names:
+    client: true
+    default: true
+  allow_category_slack_channel:
+    client: true
+    default: false
+  slack_category_name_in_title:
+    client: true
+    default: false

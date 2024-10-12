@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  username: rsbp
+  password: rsbp
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: rsbp_development
+
+test:
+  <<: *default
+  database: rsbp_test

@@ -1,0 +1,39 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    applicants:
+      title: Applicants
+  admin:
+    applicants:
+      index:
+        title: Applicants
+        create_new: Add New Applicant
+        reorder: Reorder Applicants
+        reorder_done: Done Reordering Applicants
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Applicants yet. Click "Add New Applicant" to add your first applicant.
+      applicant:
+        edit: Edit this applicant
+        delete: Remove this applicant forever
+    questions:
+      index:
+        title: Applicant Questions
+        create_new: Add New Applicant Question
+        reorder: Reorder Questions
+        reorder_done: Done Reordering Questions
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Questions yet. Click "Add New Applicant Question" to add your first question.
+      question:
+        edit: Edit this question
+        delete: Remove this question forever
+  applicants:
+    show:
+      other: Other Applicants
+  activerecord:
+    attributes:
+        name: Your group or company name
+        email: Contact email address
+

@@ -1,0 +1,62 @@
+{
+    "variables": {
+        "aws_access_key": "",
+        "aws_secret_key": "",
+        "security_group_id": "",
+        "source_ami": "",
+        "region": "",
+        "user_account": "",
+        "instance_type": "",
+        "parsel_tar_src": "",
+        "parsel_tar_target": "",
+        "init_parsel_src": "",
+        "init_parsel_target": "",
+        "elasticsearch_version": ""
+        ,"jmxtrans_url": ""
+        ,"jmxtrans_file": ""
+        ,"graphite_host": ""
+        ,"puppet_host": ""
+        ,"parsel_version": ""
+    }, "builders": [
+    {
+        "type": "amazon-ebs",
+        "access_key": "{{user `aws_access_key`}}",
+        "secret_key": "{{user `aws_secret_key`}}",
+        "region": "{{user `region`}}",
+        "source_ami": "{{user `source_ami`}}",
+        "instance_type": "{{user `instance_type`}}",
+        "ssh_username": "{{user `user_account`}}",
+        "ami_name": "packer-elasticsearch-{{user `elasticsearch_version`}}-{{timestamp}}",
+        "ami_description": "Elasticsearch AMI {{user `elasticsearch_version`}} {{timestamp}}",
+        "security_group_id": "{{user `security_group_id`}}",
+        "tags": {
+            "elasticsearch_version": "{{user `elasticsearch_version`}}"
+        }
+    }
+], "provisioners": [
+    {
+        "type": "file",
+        "source": "{{user `parsel_tar_src`}}",
+        "destination": "{{user `parsel_tar_target`}}"
+    }
+    ,
+    {
+        "type": "file",
+        "source": "{{user `init_parsel_src`}}",
+        "destination": "{{user `init_parsel_target`}}"
+    }
+    ,
+    {
+        "type": "shell",
+        "environment_vars":[
+            "JMXTRANS_URL={{user `jmxtrans_url`}}"
+            ,"JMXTRANS_FILE={{user `jmxtrans_file`}}"
+            ,"GRAPHITE_HOST={{user `graphite_host`}}"
+            ,"PUPPET_HOST={{user `puppet_host`}}"
+        ],
+        "scripts": [
+            "setup.sh"
+        ]
+    }
+]
+}

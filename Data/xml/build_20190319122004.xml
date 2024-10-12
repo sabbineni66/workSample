@@ -1,0 +1,8 @@
+<project name="groovy-build" default="package">
+
+    <target name="cruise" description="to be started by the CruiseControl build server">
+        <echo message="hook for your build"/>
+     </target>
+
+
+</project>

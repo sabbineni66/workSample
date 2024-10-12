@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  address: 
+  bedrooms: 
+  bathrooms: 
+  area: 
+  rent: 
+  url: MyString
+
+two:
+  address: 
+  bedrooms: 
+  bathrooms: 
+  area: 
+  rent: 
+  url: MyString

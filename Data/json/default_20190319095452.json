@@ -1,0 +1,9 @@
+{
+  "jwt": {
+    "algorithm": "HS512",
+    "sharedSecret": "my awesome shared secret lives here",
+    "expiration": "1h",
+    "issuer": "com.secret.organization",
+    "audience": "com.public.audience"
+  }
+}

@@ -1,0 +1,18 @@
+global:
+  interval: 20
+
+campfire:
+  subdomain: 'business-time'
+  login: 'you@email.com'
+  password: 'secret'
+  default_room: 1234
+  test_mode: false
+  update_statuses: true
+  update_journal_entries: true
+  ssl: true
+  
+backpack:
+  subdomain: 'business-time'
+  token: '0123456789abcdef'
+  ssl: true
+  

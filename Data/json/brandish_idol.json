@@ -1,0 +1,19 @@
+{
+  "Name"     : "Brandish Idol",
+  "Kind"     : "AP",
+  "Animation": "pulse",
+  "Texture"   : {
+    "Path": "actions/icons/idol.png"
+  },
+  "Ap"       : 5,
+  "Strength" : 10,
+  "Damage"   : 2,
+  "Range"    : 10,
+  "Target_enemies": true,
+  "Sounds"   : {
+    "idol": "Haunts/SFX/Intruders/Collector/Seer Stone"
+  },
+  "Conditions": [
+     "AP -2"
+   ]
+}

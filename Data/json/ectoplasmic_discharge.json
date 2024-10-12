@@ -1,0 +1,16 @@
+{
+  "Name"     : "Ectoplasmic Discharge",
+  "Kind"     : "HP",
+  "Animation": "ranged",
+  "Texture"   : {
+    "Path": "actions/icons/discharge.png"
+  },
+  "Ap"       : 5,
+  "Strength" : 10,
+  "Damage"   : 3,
+  "Range"    : 6,
+  "Target_enemies": true,
+  "Sounds"   : {
+    "discharge": "Haunts/SFX/Denizens/Ghosts/Lost Soul Orb/Ectoplasmic Discharge"
+  }
+}

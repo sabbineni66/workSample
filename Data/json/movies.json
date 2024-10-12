@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Akira Kurosawa - Samurai Edition",
+    "cover": "kaufempfehlungen/fullsize/filme/akira-kurosawa-samurai-edition.jpg",
+    "thumbnail": "kaufempfehlungen/thumbs/filme/akira-kurosawa-samurai-edition.jpg",
+    "asin": "B0031BRLTS",
+    "year": "1954-1962",
+    "duration": "593 Minuten",
+    "director": "Akira Kurosawa",
+    "rating": "16",
+    "recommendation": true,
+    "new": true,
+    "genres": [
+      "Abenteuer",
+      "Action",
+      "Drama",
+      "Thriller"
+    ]
+  },
+  {
+    "title": "Die sieben Samurai",
+    "originalTitle": "Shichinin no samurai",
+    "cover": "kaufempfehlungen/fullsize/filme/sieben-samurai.jpg",
+    "thumbnail": "kaufempfehlungen/thumbs/filme/sieben-samurai.jpg",
+    "asin": "B004N6XW3E",
+    "year": "1954",
+    "duration": "348 Minuten",
+    "director": "Akira Kurosawa",
+    "rating": "16",
+    "recommendation": true,
+    "notes": "Kurosawas bekanntester Film, wurde f?r das Genre des Western als ?Die glorreichen Sieben? neu aufgelegt",
+    "genres": [
+      "Abenteuer",
+      "Drama"
+    ]
+  },
+  {
+    "title": "Das Schlo? im Spinnwebwald",
+    "originalTitle": "Kumonosu-j?",
+    "cover": "kaufempfehlungen/fullsize/filme/throne-of-blood.jpg",
+    "thumbnail": "kaufempfehlungen/thumbs/filme/throne-of-blood.jpg",
+    "asin": "B002S1PABS",
+    "year": "1957",
+    "duration": "105 Minuten",
+    "director": "Akira Kurosawa",
+    "rating": "12",
+    "notes": "Kurosawas Interpretation von Shakespears ?Macbeth?",
+    "genres": [
+      "Action",
+      "Drama"
+    ]
+  }
+]

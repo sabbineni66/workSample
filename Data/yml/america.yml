@@ -1,0 +1,547 @@
+name: North America
+cities:
+  atlanta:
+    name: Atlanta
+    x: 0.80
+    y: 0.65
+  boston:
+    name: Boston
+    x: 0.98
+    y: 0.17
+  calgary:
+    name: Calgary
+    x: 0.21
+    y: 0.09
+  charleston:
+    name: Charleston
+    x: 0.90
+    y: 0.66
+  chicago:
+    name: Chicago
+    x: 0.705
+    y: 0.39
+  dallas:
+    name: Dallas
+    x: 0.56
+    y: 0.80
+  denver:
+    name: Denver
+    x: 0.385
+    y: 0.55
+  duluth:
+    name: Duluth
+    x: 0.57
+    y: 0.30
+  el_paso:
+    name: El Paso
+    x: 0.36
+    y: 0.85
+  helena:
+    name: Helena
+    x: 0.31
+    y: 0.30
+  houston:
+    name: Houston
+    x: 0.60
+    y: 0.865
+  kansas_city:
+    name: Kansas City
+    x: 0.56
+    y: 0.52
+  las_vegas:
+    name: Las Vegas
+    x: 0.18
+    y: 0.68
+  little_rock:
+    name: Little Rock
+    x: 0.63
+    y: 0.67
+  los_angeles:
+    name: Los Angeles
+    x: 0.11
+    y: 0.78
+  miami:
+    name: Miami
+    x: 0.94
+    y: 0.91
+  montreal:
+    name: Montr?al
+    x: 0.91
+    y: 0.08
+  nashville:
+    name: Nashville
+    x: 0.75
+    y: 0.59
+  new_orleans:
+    name: New Orleans
+    x: 0.70
+    y: 0.86
+  new_york:
+    name: New York
+    x: 0.93
+    y: 0.30
+  oklahoma_city:
+    name: Oklahoma City
+    x: 0.53
+    y: 0.66
+  omaha:
+    name: Omaha
+    x: 0.54
+    y: 0.44
+  phoenix:
+    name: Phoenix
+    x: 0.24
+    y: 0.78
+  pittsburg:
+    name: Pittsburg
+    x: 0.843
+    y: 0.37
+  portland:
+    name: Portland
+    x: 0.04
+    y: 0.29
+  raleigh:
+    name: Raleigh
+    x: 0.87
+    y: 0.55
+  saint_louis:
+    name: Saint Louis
+    x: 0.66
+    y: 0.52
+  salt_lake_city:
+    name: Salt Lake City
+    x: 0.25
+    y: 0.50
+  san_francisco:
+    name: San Francisco
+    x: 0.046
+    y: 0.61
+  santa_fe:
+    name: Santa Fe
+    x: 0.37
+    y: 0.70
+  sault_st_marie:
+    name: Sault St Marie
+    x: 0.70
+    y: 0.19
+  seattle:
+    name: Seattle
+    x: 0.06
+    y: 0.207
+  toronto:
+    name: Toronto
+    x: 0.82
+    y: 0.22
+  vancouver:
+    name: Vancouver
+    x: 0.07
+    y: 0.12
+  washington:
+    name: Washington
+    x: 0.94
+    y: 0.445
+  winnipeg:
+    name: Winnipeg
+    x: 0.45
+    y: 0.11
+routes:
+  - from: vancouver
+    to: calgary
+    length: 3
+    color: wild
+  - from: seattle
+    to: vancouver
+    length: 1
+    color: wild
+  - from: seattle
+    to: vancouver
+    length: 1
+    color: wild
+  - from: calgary
+    to: seattle
+    length: 4
+    color: wild
+  - from: calgary
+    to: helena
+    length: 4
+    color: wild
+  - from: calgary
+    to: winnipeg
+    length: 6
+    color: white
+  - from: helena
+    to: winnipeg
+    length: 4
+    color: blue
+  - from: winnipeg
+    to: duluth
+    length: 4
+    color: black
+  - from: winnipeg
+    to: sault_st_marie
+    length: 6
+    color: wild
+  - from: duluth
+    to: sault_st_marie
+    length: 3
+    color: wild
+  - from: sault_st_marie
+    to: toronto
+    length: 2
+    color: wild
+  - from: sault_st_marie
+    to: montreal
+    length: 5
+    color: black
+  - from: toronto
+    to: montreal
+    length: 3
+    color: wild
+  - from: new_york
+    to: montreal
+    length: 3
+    color: blue
+  - from: montreal
+    to: boston
+    length: 2
+    color: wild
+  - from: montreal
+    to: boston
+    length: 2
+    color: wild
+  - from: boston
+    to: new_york
+    length: 2
+    color: red
+  - from: boston
+    to: new_york
+    length: 2
+    color: yellow
+  - from: new_york
+    to: washington
+    length: 2
+    color: black
+  - from: new_york
+    to: washington
+    length: 2
+    color: orange
+  - from: new_york
+    to: pittsburg
+    length: 2
+    color: white
+  - from: new_york
+    to: pittsburg
+    length: 2
+    color: green
+  - from: pittsburg
+    to: toronto
+    length: 2
+    color: wild
+  - from: pittsburg
+    to: chicago
+    length: 3
+    color: orange
+  - from: pittsburg
+    to: chicago
+    length: 3
+    color: black
+  - from: pittsburg
+    to: saint_louis
+    length: 5
+    color: green
+  - from: pittsburg
+    to: nashville
+    length: 4
+    color: yellow
+  - from: pittsburg
+    to: raleigh
+    length: 2
+    color: wild
+  - from: pittsburg
+    to: washington
+    length: 2
+    color: wild
+  - from: washington
+    to: raleigh
+    length: 2
+    color: wild
+  - from: washington
+    to: raleigh
+    length: 2
+    color: wild
+  - from: nashville
+    to: raleigh
+    length: 3
+    color: black
+  - from: raleigh
+    to: atlanta
+    length: 2
+    color: wild
+  - from: raleigh
+    to: atlanta
+    length: 2
+    color: wild
+  - from: raleigh
+    to: charleston
+    length: 2
+    color: wild
+  - from: charleston
+    to: atlanta
+    length: 2
+    color: wild
+  - from: charleston
+    to: miami
+    length: 4
+    color: pink
+  - from: atlanta
+    to: miami
+    length: 5
+    color: blue
+  - from: new_orleans
+    to: miami
+    length: 6
+    color: red
+  - from: atlanta
+    to: nashville
+    length: 1
+    color: wild
+  - from: atlanta
+    to: new_orleans
+    length: 4
+    color: yellow
+  - from: atlanta
+    to: new_orleans
+    length: 4
+    color: orange
+  - from: new_orleans
+    to: houston
+    length: 2
+    color: wild
+  - from: new_orleans
+    to: little_rock
+    length: 3
+    color: green
+  - from: nashville
+    to: little_rock
+    length: 3
+    color: white
+  - from: nashville
+    to: saint_louis
+    length: 2
+    color: wild
+  - from: seattle
+    to: portland
+    length: 1
+    color: wild
+  - from: seattle
+    to: portland
+    length: 1
+    color: wild
+  - from: helena
+    to: seattle
+    length: 6
+    color: yellow
+  - from: toronto
+    to: duluth
+    length: 6
+    color: pink
+  - from: toronto
+    to: chicago
+    length: 4
+    color: white
+  - from: chicago
+    to: duluth
+    length: 3
+    color: red
+  - from: omaha
+    to: chicago
+    length: 4
+    color: blue
+  - from: chicago
+    to: saint_louis
+    length: 2
+    color: green
+  - from: chicago
+    to: saint_louis
+    length: 2
+    color: white
+  - from: saint_louis
+    to: little_rock
+    length: 2
+    color: wild
+  - from: saint_louis
+    to: kansas_city
+    length: 2
+    color: pink
+  - from: saint_louis
+    to: kansas_city
+    length: 2
+    color: blue
+  - from: little_rock
+    to: oklahoma_city
+    length: 2
+    color: wild
+  - from: little_rock
+    to: dallas
+    length: 2
+    color: wild
+  - from: houston
+    to: dallas
+    length: 1
+    color: wild
+  - from: houston
+    to: dallas
+    length: 1
+    color: wild
+  - from: houston
+    to: el_paso
+    length: 6
+    color: green
+  - from: dallas
+    to: el_paso
+    length: 4
+    color: red
+  - from: dallas
+    to: oklahoma_city
+    length: 2
+    color: wild
+  - from: dallas
+    to: oklahoma_city
+    length: 2
+    color: wild
+  - from: oklahoma_city
+    to: kansas_city
+    length: 2
+    color: wild
+  - from: oklahoma_city
+    to: kansas_city
+    length: 2
+    color: wild
+  - from: oklahoma_city
+    to: denver
+    length: 4
+    color: red
+  - from: oklahoma_city
+    to: santa_fe
+    length: 3
+    color: red
+  - from: oklahoma_city
+    to: el_paso
+    length: 5
+    color: yellow
+  - from: kansas_city
+    to: omaha
+    length: 1
+    color: wild
+  - from: kansas_city
+    to: omaha
+    length: 1
+    color: wild
+  - from: kansas_city
+    to: denver
+    length: 4
+    color: orange
+  - from: kansas_city
+    to: denver
+    length: 4
+    color: black
+  - from: omaha
+    to: duluth
+    length: 2
+    color: wild
+  - from: omaha
+    to: duluth
+    length: 2
+    color: wild
+  - from: denver
+    to: omaha
+    length: 4
+    color: pink
+  - from: omaha
+    to: helena
+    length: 5
+    color: red
+  - from: duluth
+    to: helena
+    length: 6
+    color: orange
+  - from: helena
+    to: salt_lake_city
+    length: 3
+    color: pink
+  - from: helena
+    to: denver
+    length: 4
+    color: green
+  - from: portland
+    to: salt_lake_city
+    length: 6
+    color: blue
+  - from: portland
+    to: san_francisco
+    length: 5
+    color: green
+  - from: portland
+    to: san_francisco
+    length: 5
+    color: pink
+  - from: san_francisco
+    to: salt_lake_city
+    length: 5
+    color: orange
+  - from: san_francisco
+    to: salt_lake_city
+    length: 5
+    color: white
+  - from: san_francisco
+    to: los_angeles
+    length: 3
+    color: pink
+  - from: san_francisco
+    to: los_angeles
+    length: 3
+    color: yellow
+  - from: salt_lake_city
+    to: denver
+    length: 3
+    color: red
+  - from: salt_lake_city
+    to: denver
+    length: 3
+    color: yellow
+  - from: salt_lake_city
+    to: las_vegas
+    length: 3
+    color: orange
+  - from: los_angeles
+    to: las_vegas
+    length: 2
+    color: wild
+  - from: los_angeles
+    to: phoenix
+    length: 3
+    color: wild
+  - from: el_paso
+    to: los_angeles
+    length: 6
+    color: black
+  - from: denver
+    to: las_vegas
+    length: 5
+    color: white
+  - from: denver
+    to: santa_fe
+    length: 2
+    color: wild
+  - from: santa_fe
+    to: phoenix
+    length: 3
+    color: wild
+  - from: phoenix
+    to: el_paso
+    length: 3
+    color: wild
+  - from: santa_fe
+    to: el_paso
+    length: 2
+    color: wild

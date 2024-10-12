@@ -1,0 +1,19 @@
+{
+  "Name"     : "Crozier",
+  "Kind"     : "AP",
+  "Animation": "ranged",
+  "Texture"   : {
+  "Path": "actions/icons/cast.png"
+  },
+  "Ap"       : 3,
+  "Strength" : 10,
+  "Damage"   : 3,
+  "Range"    : 6,
+  "Target_enemies": true,
+  "Sounds"   : {
+    "fire": "Haunts/SFX/Denizens/Cultists/Cult Leader/Crozier"
+  },
+  "Conditions": [
+     "AP -2"
+  ]
+}

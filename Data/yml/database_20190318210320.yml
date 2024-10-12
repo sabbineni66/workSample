@@ -1,0 +1,27 @@
+login: &login
+  adapter: postgresql
+  host: localhost
+  username: quilter
+  password: quilt
+  encoding: unicode
+  pool: 5
+
+production:
+  database: quilt_dev
+  <<: *login
+
+stage:
+  database: quilt_dev
+  <<: *login
+
+review:
+  database: quilt_dev
+  <<: *login
+
+development:
+  database: quilt_dev
+  <<: *login
+
+test:
+  database: quilt_test
+  <<: *login

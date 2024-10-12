@@ -1,0 +1,68 @@
+[
+	{
+		"type" : "prefix",
+		"name" : "None",
+		"value": "0xDADAFEED",
+		 "size": 4
+	},
+	{
+		"type" : "unsigned_long",
+		"name" : "None",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "unsigned_short",
+		"name" : "None",
+		"value": "",
+		"size" : 2
+	},
+	{
+		"type" : "unsigned_byte",
+		"name" : "None",
+		"value": "",
+		"size" : 1
+	},
+	{
+		"type" : "sentence",
+		"name" : "None",
+		"value": "",
+		"size" : 84
+	},
+	{
+		"type" : "float_value",
+		"name" : "None",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "double_value",
+		"name" : "None",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "signed_byte",
+		"name" : "None",
+		"value": "",
+		"size" : 1
+	},
+	{
+		"type" : "signed_short",
+		"name" : "None",	
+		"value": "",
+		"size" : 2
+	},
+	{
+		"type" : "signed_long",
+		"name" : "None",
+		"value": "",
+		"size" : 4
+	},
+	{
+		"type" : "suffix",
+		"value": "0xCAFEBABE",
+		"size" : 4
+	}
+	
+]

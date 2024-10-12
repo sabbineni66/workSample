@@ -1,0 +1,17 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "module": "commonjs",
+        "outDir": "js",
+        "target": "es5",
+        "jsx": "react",
+        "noImplicitAny": true,
+        "strictNullChecks": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

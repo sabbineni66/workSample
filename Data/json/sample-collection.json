@@ -1,0 +1,72 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Managed Services",
+		"_postman_id": "f2633f4e-5c09-1b72-9b00-86ebfe774409",
+		"description": "Managed Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "devices",
+			"description": "Folder for devices",
+			"item": [
+				{
+					"name": "Returns a device",
+					"request": {
+						"url": "https://p5jdm4xhmc.execute-api.us-west-2.amazonaws.com/mock/devices",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Returns a device",
+					"request": {
+						"url": {
+							"raw": "https://p5jdm4xhmc.execute-api.us-west-2.amazonaws.com/mock/devices/123",
+							"protocol": "https",
+							"auth": {},
+							"host": [
+								"p5jdm4xhmc",
+								"execute-api",
+								"us-west-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"mock",
+								"devices",
+								":asset_guid"
+							],
+							"variable": [
+								{
+									"value": "{{asset_guid}}",
+									"id": "asset_guid"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "https://p5jdm4xhmc.execute-api.us-west-2.amazonaws.com/mock/devices/:asset_guid",
+					"request": {
+						"url": "https://p5jdm4xhmc.execute-api.us-west-2.amazonaws.com/mock/devices/:asset_guid",
+						"method": "OPTIONS",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

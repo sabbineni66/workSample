@@ -1,0 +1,19 @@
+{
+  "name": "tilelive-carto",
+  "version": "0.8.0",
+  "description": "A Carto style source for tilelive",
+  "main": "index.js",
+  "author": "Seth Fitzsimmons <seth@mojodna.net>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mojodna/tilelive-carto.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "carto": "^1.0.1",
+    "async": "^1.5.2"
+  },
+  "peerDependencies": {
+    "@mapbox/tilelive-mapnik": "^1.0.0"
+  }
+}

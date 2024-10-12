@@ -1,0 +1,33 @@
+{
+  "name": "made_up",
+  "version": "0.1.0",
+  "description": "Not a real package.json file",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "assert": "~0.4.9",
+    "vows": "~0.6.4",
+    "optparse": "~1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./bin/start.js",
+    "predeploy": "node ./bin/pre.js",
+    "postdeploy": "node ./bin/post.js"
+  },
+  "bin": {
+    "made_up": "./bin/start.js"
+  },
+  "engines": {
+    "node": "0.8.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/engineyard/made_up.git"
+  },
+  "private": true,
+  "author": "Ryan Souza & Jim Lindley",
+  "license": "BSD"
+}

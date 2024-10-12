@@ -1,0 +1,69 @@
+{
+  "refinedEstimate": 0.0,
+  "_type": "PortfolioItem/Feature",
+  "successors": {
+    "count": 0.0,
+    "_type": "PortfolioItem/Feature",
+    "_ref": "https://rally1.rallydev.com/slm/webservice/v2.x/PortfolioItem/Feature/36015914380/Successors",
+    "_rallyAPIMinor": "0",
+    "_rallyAPIMajor": "2"
+  },
+  "preliminaryEstimate": {
+    "_type": "PreliminaryEstimate",
+    "_rallyAPIMajor": "2",
+    "_ref": "https://rally1.rallydev.com/slm/webservice/v2.x/preliminaryestimate/4484657775",
+    "_refObjectUUID": "283c06fe-11c6-4446-9bab-94740c95dbe2",
+    "name": "M (40)",
+    "_refObjectName": "M (40)",
+    "value": 40.0,
+    "_objectVersion": "13",
+    "_rallyAPIMinor": "0",
+    "objectID": 4.484657775E9
+  },
+  "_rallyAPIMajor": "2",
+  "dragAndDropRank": "P!'B]O~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+  "_ref": "https://rally1.rallydev.com/slm/webservice/v2.x/portfolioitem/feature/36015914380",
+  "almItemId": "dbc9fc20-659d-4e25-9a73-77d7258f9edb",
+  "project": {
+    "_type": "Project",
+    "_rallyAPIMajor": "2",
+    "_ref": "https://rally1.rallydev.com/slm/webservice/v2.x/project/23716113690",
+    "parent": {
+      "_type": "Project",
+      "name": "Engineering",
+      "objectID": 2.3112780161E10,
+      "_refObjectName": "Engineering",
+      "_objectVersion": "7",
+      "_refObjectUUID": "f95b75d2-f7e6-41a8-9423-ac5e96875f31",
+      "_ref": "https://rally1.rallydev.com/slm/webservice/v2.x/project/23112780161",
+      "_rallyAPIMinor": "0",
+      "_rallyAPIMajor": "2"
+    },
+    "_refObjectUUID": "5423e7d7-1bee-4dd1-be2e-b82405e38f68",
+    "name": "NOTOK",
+    "_refObjectName": "NOTOK",
+    "_objectVersion": "19",
+    "_rallyAPIMinor": "0",
+    "objectID": 2.371611369E10
+  },
+  "rank": "P!'B]O~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+  "_refObjectUUID": "dbc9fc20-659d-4e25-9a73-77d7258f9edb",
+  "displayColor": "#105cab",
+  "directChildrenCount": 0.0,
+  "formattedID": "F9180",
+  "name": "Feature 1",
+  "_refObjectName": "Feature 1",
+  "predecessors": {
+    "count": 0.0,
+    "_type": "PortfolioItem/Feature",
+    "_ref": "https://rally1.rallydev.com/slm/webservice/v2.x/PortfolioItem/Feature/36015914380/Predecessors",
+    "_rallyAPIMinor": "0",
+    "_rallyAPIMajor": "2"
+  },
+  "_objectVersion": "9",
+  "_rallyAPIMinor": "0",
+  "objectID": 3.601591438E10,
+  "leafStoryPlanEstimateTotal": 0.0,
+  "leafStoryCount": 0.0,
+  "itemId": "556f759444f483f9333f36e1"
+}

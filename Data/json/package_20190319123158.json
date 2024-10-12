@@ -1,0 +1,17 @@
+{
+  "name": "helloworld",
+  "version": "0.1.0",
+  "spm": {
+    "output": [
+      "index.html",
+      "index.css",
+      "index.js"
+    ],
+    "dependencies": {
+      "jquery": "2.1.3",
+      "react": "0.13.0",
+      "seajs": "2.3.0"
+    },
+    "6to5": {}
+  }
+}

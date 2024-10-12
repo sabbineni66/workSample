@@ -1,0 +1,126 @@
+[
+{
+    "title"    : "Half of a Yellow Sun",
+    "link"     : "http://www.amazon.com/Half-Yellow-Chimamanda-Ngozi-Adichie/dp/1400095204",
+    "author"   : "Chimamanda Ngozi Adichie",
+    "category" : "fiction",
+    "readable" : true,
+    "date"     : "2016-01-01"
+},
+{
+    "title"    : "Unveiling The Retirement Myth",
+    "link"     : "http://www.amazon.com/Unveiling-The-Retirement-Myth-Otar/dp/0968963420",
+    "author"   : "Jim C. Otar",
+    "category" : "non-fiction-finance",
+    "readable" : true,
+    "date"     : "2016-02-01"
+},
+{
+    "title"    : "The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing",
+    "link"     : "https://www.amazon.com/Life-Changing-Magic-Tidying-effective-clutter-ebook/dp/B00I0C46BO",
+    "author"   : "Marie Kondo",
+    "category" : "non-fiction",
+    "readable" : true,
+    "date"     : "2016-04-01"
+},
+{
+    "title"    : "Spark Joy: An Illustrated Master Class on the Art of Organizing and Tidying Up",
+    "link"     : "https://www.amazon.com/Spark-Joy-Illustrated-Japanese-Tidying-ebook/dp/B0186O2N2O",
+    "author"   : "Marie Kondo",
+    "category" : "non-fiction",
+    "readable" : true,
+    "date"     : "2016-04-01"
+},
+{
+    "title"    : "100 photos de Ren? Burri pour la libert? de la presse",
+    "link"     : "https://www.amazon.fr/photos-Ren%C3%A9-Burri-libert%C3%A9-presse/dp/2362200000",
+    "author"   : "Jean-Fran?ois Julliard",
+    "category" : "non-fiction-culture",
+    "readable" : true,
+    "date"     : "2016-05-01"
+},
+{
+    "title"    : "Who was Shivaji?",
+    "link"     : "http://www.amazon.com/Who-was-Shivaji-Prabhat-Patnaik/dp/9380118139",
+    "author"   : "Govind Pansare",
+    "category" : "non-fiction-culture",
+    "readable" : true,
+    "date"     : "2016-05-01"
+},
+{
+    "title"    : "History of the Motorcycle",
+    "link"     : "http://www.amazon.com/History-Motorcycle-Roland-Brown/dp/1405439521",
+    "author"   : "Roland Brown",
+    "category" : "non-fiction-culture",
+    "readable" : true,
+    "date"     : "2016-05-01"
+},
+{
+    "title"    : "Purple Hibiscus",
+    "link"     : "http://www.amazon.in/Purple-Hibiscus-Chimamanda-Ngozi-Adichie/dp/1616202416",
+    "author"   : "Chimamanda Ngozi Adichie",
+    "category" : "fiction",
+    "readable" : true,
+    "date"     : "2016-06-01"
+},
+{
+    "title"    : "We Should All Be Feminists",
+    "link"     : "https://www.amazon.com/We-Should-All-Be-Feminists-ebook/dp/B00MT9EJZC",
+    "author"   : "Chimamanda Ngozi Adichie",
+    "category" : "non-fiction-culture",
+    "readable" : true,
+    "date"     : "2016-06-01"
+},
+{
+    "title"    : "The Thing Around Your Neck",
+    "link"     : "https://www.amazon.com/Thing-Around-Your-Neck-ebook/dp/B002RI9TFU/",
+    "author"   : "Chimamanda Ngozi Adichie",
+    "category" : "fiction",
+    "readable" : true,
+    "date"     : "2016-06-01"
+},
+{
+    "title"    : "The Book of Five Rings",
+    "link"     : "https://www.amazon.com/Book-Five-Rings-Miyamoto-Musashi-ebook/dp/B007V3FHRU",
+    "author"   : "Miyamoto Musashi (Author), Shiro Tsujimura (Illustrator), William Scott Wilson (Translator)",
+    "category" : "non-fiction-culture",
+    "readable" : true,
+    "date"     : "2016-06-01"
+},
+{
+    "title"    : "Tales and Legends of Africa",
+    "link"     : "http://roobinio.ru/item/341614.html",
+    "author"   : "Unknown",
+    "category" : "fiction",
+    "readable" : true,
+    "date"     : "2016-06-01"
+},
+{
+    "title"    : "Ishq Mein Mati Sona",
+    "link"     : "http://www.amazon.in/Ishq-Mein-Maati-Sona-Girindra/dp/812672837X",
+    "author"   : "Girindra Nath Jha",
+    "category" : "fiction",
+    "date"     : "2016-07-01"
+},
+{
+    "title"    : "Vegetarians Only: Stories of Telugu Muslims",
+    "link"     : "http://www.amazon.in/Vegetarians-Only-Stories-Telugu-Muslims/dp/812506074X",
+    "author"   : "Skybaaba",
+    "category" : "fiction",
+    "date"     : "2016-09-01"
+},
+{
+  "title"    : "The Book ? A Cover?to?Cover Exploration of the Most Powerful Object of Our Time",
+  "link"     : "http://www.amazon.in/Book-Cover---Cover-Exploration-Powerful/dp/0393244792",
+  "author"   : "Keith Houston",
+  "category" : "non-fiction-culture",
+  "date"     : "2016-10-01"
+},
+{
+  "title"    : "Fabricated: The New World of 3D Printing",
+  "link"     : "https://www.amazon.com/Fabricated-New-World-3D-Printing/dp/1118350634",
+  "author"   : "Hod Lipson, Melba Kurman",
+  "category" : "non-fiction-tech",
+  "date"     : "2016-11-01"
+}
+]

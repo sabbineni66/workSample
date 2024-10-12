@@ -1,0 +1,14 @@
+{
+  "_type": "Project",
+  "groupId": "556f75b544f483f9333f36f5",
+  "_rallyAPIMajor": "2",
+  "_ref": "https://rally1.rallydev.com/slm/webservice/v2.x/project/23716113690",
+  "almItemId": "5423e7d7-1bee-4dd1-be2e-b82405e38f68",
+  "name": "Some Group Name",
+  "_refObjectUUID": "5423e7d7-1bee-4dd1-be2e-b82405e38f68",
+  "_refObjectName": "Some Group Name",
+  "estimatedCapacity": 100,
+  "_objectVersion": "19",
+  "_rallyAPIMinor": "0",
+  "objectID": 2.371611369E10
+}

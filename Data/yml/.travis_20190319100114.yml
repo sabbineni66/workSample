@@ -1,0 +1,15 @@
+language: ruby
+bundler_args: --without development
+notifications:
+  recipients:
+    - festfan@festivalfanatic.com
+services:
+  - redis-server
+script:
+  - RAILS_ENV=test TRAVIS=1 bundle exec rake db:migrate
+  - TRAVIS=1 bundle exec rake db:test:prepare
+  - TRAVIS=1 xvfb-run bundle exec rake
+before_script:
+  - cp config/database.travis.yml config/database.yml
+  - psql -c 'create database fest_test' -U postgres
+  - psql -c 'CREATE EXTENSION IF NOT EXISTS hstore WITH SCHEMA public;' -U postgres fest_test

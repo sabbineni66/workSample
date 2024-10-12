@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://apps.db.ripe.net/whois/lookup/ripe/person/MPS31-RIPE.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 15 Apr 2013 12:57:07 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "{\n\t\t\"whois-resources\":{\n\t\t\"service\":\"lookup\",\n\t\t\"xsi:noNamespaceSchemaLocation\":\"http://apps.db.ripe.net/whois/xsd/whois-resources.xsd\",\n\t\t\"link\":{\n\t\t\"xlink:type\":\"locator\",\n\t\t\"xlink:href\":\"http://apps.db.ripe.net/whois/lookup/ripe/person/MPS31-RIPE.json\"}\n\t\t,\n\t\t\"objects\":{\n\t\t\"object\":{\n\t\t\"type\":\"person\",\n\t\t\"link\":{\n\t\t\"xlink:type\":\"locator\",\n\t\t\"xlink:href\":\"http://apps.db.ripe.net/whois/lookup/ripe/person/MPS31-RIPE\"}\n\t\t,\n\t\t\"source\":{\n\t\t\"id\":\"ripe\"}\n\t\t,\n\t\t\"primary-key\":{\n\t\t\"attribute\":{\n\t\t\"name\":\"nic-hdl\",\n\t\t\"value\":\"MPS31-RIPE\"}\n\t\t}\n\t\t,\n\t\t\"attributes\":{\n\t\t\"attribute\":[\n\t\t{\n\t\t\"name\":\"person\",\n\t\t\"value\":\"Mike
+        Simkins\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"address\",\n\t\t\"value\":\"SunGard
+        Availability Services\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"address\",\n\t\t\"value\":\"Lighterman
+        House\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"address\",\n\t\t\"value\":\"3 Clove
+        Crescent\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"address\",\n\t\t\"value\":\"London
+        E14 2BB\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"phone\",\n\t\t\"value\":\"+44 (0)
+        20 8080 8060\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"e-mail\",\n\t\t\"value\":\"mike.simkins@sungard.com\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"notify\",\n\t\t\"value\":\"mike.simkins@sungard.com\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"nic-hdl\",\n\t\t\"value\":\"MPS31-RIPE\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"mnt-by\",\n\t\t\"value\":\"CWS-RIPE-MNT\",\n\t\t\"referenced-type\":\"mntner\",\n\t\t\"link\":{\n\t\t\"xlink:type\":\"locator\",\n\t\t\"xlink:href\":\"http://apps.db.ripe.net/whois/lookup/ripe/mntner/CWS-RIPE-MNT\"}\n\t\t}\n\t\t,\n\t\t{\n\t\t\"name\":\"changed\",\n\t\t\"value\":\"mike.simkins@sungard.com
+        20040817\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"changed\",\n\t\t\"value\":\"mike.simkins@sungard.com
+        20060717\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"changed\",\n\t\t\"value\":\"mike.simkins@sungard.com
+        20061227\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"changed\",\n\t\t\"value\":\"mike.simkins@sungard.com
+        20130111\"}\n\t\t,\n\t\t{\n\t\t\"name\":\"source\",\n\t\t\"value\":\"RIPE\"}\n\t\t]\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t}\n\t\t"
+    http_version: 
+  recorded_at: Mon, 15 Apr 2013 12:57:07 GMT
+recorded_with: VCR 2.4.0

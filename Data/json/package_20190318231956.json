@@ -1,0 +1,14 @@
+{
+  "name":"@instapolo/warsaw",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "city"
+  ],
+  "author": "Anil Wadghule <anildigital@gmail.com>",
+  "license": "ISC"
+}

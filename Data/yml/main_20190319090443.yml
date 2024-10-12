@@ -1,0 +1,72 @@
+---
+
+- name: Install net-tools
+  dnf:
+    name: net-tools
+    state: latest
+
+- name: Install git
+  dnf:
+    name: git
+    state: latest
+
+- name: Install bind-utils
+  dnf:
+    name: bind-utils
+    state: latest
+
+- name: Install iptables-services
+  dnf:
+    name: iptables-services
+    state: latest
+   
+- name: Install bridge-utils
+  dnf:
+    name: bridge-utils
+    state: latest
+   
+- name: Install bash-completion
+  dnf:
+    name: bash-completion
+    state: latest
+   
+- name: Install kexec-tools
+  dnf:
+    name: kexec-tools
+    state: latest
+   
+- name: Install sos
+  dnf:
+    name: sos
+    state: latest
+   
+- name: Install psacct
+  dnf:
+    name: psacct
+    state: latest
+
+- name: Install ansible
+  dnf:
+    name: ansible
+    state: latest
+
+- name: Install pyOpenSSL
+  dnf:
+    name: pyOpenSSL
+    state: latest
+
+- name: Install docker
+  dnf:
+    name: docker
+    state: latest
+
+- name: Install libselinux-python
+  dnf:
+    name: libselinux-python
+    state: latest
+
+- name: Put docker-storage-setup into place
+  template: src=docker-storage-setup.j2 dest=/etc/sysconfig/docker-storage-setup
+
+- name: Ensure docker is running
+  service: name=docker state=started enabled=yes

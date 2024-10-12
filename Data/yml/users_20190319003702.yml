@@ -1,0 +1,86 @@
+jessie:
+  id: 1
+  email: jessie@summers.com
+  firstname: Jessie
+  lastname: Summers
+  salted_password: 69a315d2a825082405dd44b378aaa1720d925e65 # alongtest
+  salt: 50121bde7ba7ab73426e8587814b8ec2520963d5
+  security_token: d7c691e6ad396f5a1a4d5572a326c1568cb5b5e8
+  token_expiry: "2007-06-13 16:00:12"
+  created_at: "2007-06-12 16:00:12"
+  verified: true
+
+john:
+  id: 2
+  email: johndoe@test.com
+  firstname: John
+  lastname: Doe
+  salted_password: 739f4b5d5b86de9515037783b0594cb577a2bbc8 # alongtest
+  salt: e0c8f73a035698b96c18065e3690273a
+  security_token: 4150c72f9a98fbff4d3908126100ebaeeb390df1
+  token_expiry: "2007-04-13 16:00:12"
+  created_at: "2007-04-12 16:00:12"
+  verified: true
+
+verified_user_without_token:
+  id: 3
+  email: verified@user_without_token.com
+  firstname: John
+  lastname: Doe
+  salted_password: 739f4b5d5b86de9515037783b0594cb577a2bbc8 # alongtest
+  salt: e0c8f73a035698b96c18065e3690273a
+  security_token: 
+  token_expiry: 
+  created_at: "2007-04-12 16:00:12"
+  verified: true
+
+not_verified_user_without_token:
+  id: 4
+  email: notverified@user_without_token.com
+  firstname: John
+  lastname: Doe
+  salted_password: 739f4b5d5b86de9515037783b0594cb577a2bbc8 # alongtest
+  salt: e0c8f73a035698b96c18065e3690273a
+  security_token: 
+  token_expiry: 
+  created_at: "2007-04-12 16:00:12"
+  verified: false
+
+verified_user_with_new_email:
+  id: 5
+  email: verified@user_without_token.com
+  new_email: hans@wurst.de
+  firstname: John
+  lastname: Doe
+  salted_password: 739f4b5d5b86de9515037783b0594cb577a2bbc8 # alongtest
+  salt: e0c8f73a035698b96c18065e3690273a
+  security_token: ler98erjgwp40j4oeaifgoae
+  token_expiry: <%= (Time.now+1.day).to_date.to_s(:db) %>
+  created_at: "2007-04-12 16:00:12"
+  verified: true
+  
+not_verified_user_with_token:
+  id: 6
+  email: unverified@user_with_token.com
+  new_email: 
+  firstname: John
+  lastname: Doe
+  salted_password: 739f4b5d5b86de9515037783b0594cb577a2bbc8 # alongtest
+  salt: e0c8f73a035698b96c18065e3690273a
+  security_token: ler98erjsdf2873gwp40j4oea
+  token_expiry: <%= (Time.now+1.day).to_date.to_s(:db) %>
+  created_at: "2007-04-12 16:00:12"
+  verified: false
+
+not_verified_user_with_expired_token:
+  id: 7
+  email: unverified@user_with_expired_token.com
+  new_email: 
+  firstname: John
+  lastname: Doe
+  salted_password: 739f4b5d5b86de9515037783b0594cb577a2bbc8 # alongtest
+  salt: e0c8f73a035698b96c18065e3690273a
+  security_token: gwp45rg45w0j4oeaifgoae
+  token_expiry: <%= (Time.now-2.days).to_date.to_s(:db) %>
+  created_at: "2007-04-12 16:00:12"
+  verified: false

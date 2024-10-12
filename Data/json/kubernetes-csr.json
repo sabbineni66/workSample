@@ -1,0 +1,21 @@
+{
+  "CN": "kubernetes",
+  "hosts": [
+    ${etcd_ips},
+    ${worker_ips},
+    ${controller_ips},
+    "127.0.0.1"
+  ],
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "UK",
+      "L": "London",
+      "O": "OpenCredo",
+      "OU": "Cluster"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "noEmitOnError": true,
+      "noImplicitAny": true
+  },
+  "compileOnSave": false,
+  "files": [
+    "./main.ts"
+  ]
+}

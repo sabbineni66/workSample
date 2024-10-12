@@ -1,0 +1,70 @@
+{
+  "districts": {
+    "11": {
+      "supeName": "John Avalos",
+      "districtName": "District 11",
+      "supePhone": "(415) 554-6975",
+      "supeEmail": "John.Avalos@sfgov.org",
+    },
+    "5": {
+      "supeName": "London Breed",
+      "districtName": "District 5",
+      "supePhone": "(415) 554-7630",
+      "supeEmail": "London.Breed@sfgov.org",
+    },
+    "9": {
+      "supeName": "David Campos",
+      "districtName": "District 9",
+      "supePhone": "(415) 554-5144",
+      "supeEmail": "David.Campos@sfgov.org",
+    },
+    "3": {
+      "supeName": "Aaron Peskin",
+      "districtName": "District 3",
+      "supePhone": "(415) 554-7450",
+      "supeEmail": "Aaron.Peskin@sfgov.org",
+    },
+    "10": {
+      "supeName": "Malia Cohen",
+      "districtName": "District 10",
+      "supePhone": "(415) 554-7670",
+      "supeEmail": "Malia.Cohen@sfgov.org",
+    },
+    "2": {
+      "supeName": "Mark Farrell",
+      "districtName": "District 2",
+      "supePhone": "(415) 554-7752",
+      "supeEmail": "Mark.Farrell@sfgov.org",
+    },
+    "6": {
+      "supeName": "Jane Kim",
+      "districtName": "District 6",
+      "supePhone": "(415) 554-7970",
+      "supeEmail": "Jane.Kim@sfgov.org",
+    },
+    "1": {
+      "supeName": "Eric Mar ",
+      "districtName": "District 1",
+      "supePhone": "(415) 554-7410",
+      "supeEmail": "Eric.L.Mar@sfgov.org",
+    },
+    "4": {
+      "supeName": "Katy Tang",
+      "districtName": "District 4",
+      "supePhone": "(415) 554-7460",
+      "supeEmail": "Katy.Tang@sfgov.org",
+    },
+    "8": {
+      "supeName": "Scott Wiener ",
+      "districtName": "District 8",
+      "supePhone": "(415) 554-6968",
+      "supeEmail": "Scott.Wiener@sfgov.org",
+    },
+    "7": {
+      "supeName": "Norman Yee",
+      "districtName": "District 7",
+      "supePhone": "(415) 554-6516",
+      "supeEmail": "Norman.Yee@sfgov.org",
+    },
+	}
+}

@@ -1,0 +1,9 @@
+machine:
+  ruby:
+    version: 2.2.2
+deployment:
+    production:
+      branch: master
+      commands:
+        - git push git@heroku.com:stark-thicket-6315.git $CIRCLE_SHA1:master
+        - heroku run rake db:migrate --app stark-thicket-6315

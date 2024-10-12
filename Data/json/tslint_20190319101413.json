@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "tslint-config-standard"
+  ],
+  "rules": {
+    "trailing-comma": [
+      true
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double"
+    ]
+  }
+}

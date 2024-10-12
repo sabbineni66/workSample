@@ -1,0 +1,29 @@
+language: ruby
+rvm:
+  - 1.9.3
+  - jruby-19mode
+  - rbx-19mode
+jdk:
+  - openjdk6
+  - openjdk7
+  - oraclejdk7
+matrix:
+  allow_failures:
+    - rvm: rbx-19mode
+  exclude:
+    - rvm: 1.9.3
+      jdk: openjdk7
+    - rvm: 1.9.3
+      jdk: oraclejdk7
+    - rvm: rbx-19mode
+      jdk: openjdk7
+    - rvm: rbx-19mode
+      jdk: oraclejdk7
+before_install:
+  - sudo add-apt-repository ppa:wnoronha/thrift -y
+  - sudo gpg --keyserver hkp://subkeys.pgp.net --recv-keys 16126D3A3E5C1192
+  - sudo gpg --export --armor 16126D3A3E5C1192 | sudo apt-key add -
+  - sudo apt-get update -qq -y
+  - sudo apt-get install ruby-thrift -qq -y
+before_script:
+  - bundle exec bin/id_server &

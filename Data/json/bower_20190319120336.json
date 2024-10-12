@@ -1,0 +1,44 @@
+{
+  "name": "purescript-simple-moment-timezone",
+  "version": "0.1.0",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "keywords": [
+    "purescript",
+    "date",
+    "datetime",
+    "moment"
+  ],
+  "authors": [
+    "Luke Randall <luke.randall@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lukerandall/purescript-simple-moment-timezone.git"
+  },
+  "license": "Apache-2",
+  "dependencies": {
+    "moment-timezone": "~0.4.1",
+    "purescript-control": "~0.3.0",
+    "purescript-datetime": "~0.9.0",
+    "purescript-eff": "~0.1.1",
+    "purescript-functions": "~0.1.0",
+    "purescript-maybe": "~0.3.4",
+    "purescript-prelude": "~0.1.2",
+    "purescript-simple-moment": "~0.2.0"
+  },
+  "devDependencies": {
+    "purescript-console": "~0.1.1",
+    "purescript-debug": "~0.1.1",
+    "purescript-globals": "~0.2.1",
+    "purescript-strings": "~0.7.0",
+    "purescript-test-unit": "passy/purescript-test-unit#ee3450eb9aeaa15752c22a9cc0ff558214e557b6"
+  }
+}

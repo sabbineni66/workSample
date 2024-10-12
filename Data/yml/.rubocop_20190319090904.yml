@@ -1,0 +1,15 @@
+Style/MethodMissing:
+  Enabled: false  
+
+Style/StringLiterals:
+  Enabled: false  
+
+Style/MutableConstant:
+  Enabled: false  
+
+Style/TrailingCommaInLiteral:
+  Enabled: false  
+
+AllCops:
+  Include:
+    - Rakefile

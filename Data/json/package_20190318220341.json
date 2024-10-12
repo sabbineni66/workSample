@@ -1,0 +1,14 @@
+{
+  "name": "gotogether.co",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "serve _site",
+    "deploy": "now --public _site && now alias"
+  },
+  "devDependencies": {
+    "serve": "^9.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  }
+}

@@ -1,0 +1,57 @@
+# Centroid geocodings come from the example at http://www.saltspring.com/brochmann/math/centroid/centroid.html
+centroid_a:
+  id:         1
+  type:       Geocoding
+  address_id: 1
+  name:       centroid_a
+  longitude:  0
+  latitude:   0
+centroid_b:
+  id:         2
+  type:       Geocoding
+  address_id: 1
+  name:       centroid_b
+  longitude:  6
+  latitude:   13
+centroid_c:
+  id:         3
+  type:       Geocoding
+  address_id: 1
+  name:       centroid_c
+  longitude:  15
+  latitude:   11
+centroid_d:
+  id:         4
+  type:       Geocoding
+  address_id: 1
+  name:       centroid_d
+  longitude:  16
+  latitude:   6
+centroid_e:
+  id:         5
+  type:       Geocoding
+  address_id: 1
+  name:       centroid_e
+  longitude:  14
+  latitude:   2
+single_point:
+  id:         6
+  type:       Geocoding
+  address_id: 2
+  name:       single point
+  longitude:  30
+  latitude:   50
+two_points_a:
+  id:         7
+  type:       Geocoding
+  address_id: 3
+  name:       two points
+  longitude:  10
+  latitude:   50
+two_points_b:
+  id:         8
+  type:       Geocoding
+  address_id: 3
+  name:       two points
+  longitude:  20
+  latitude:   60

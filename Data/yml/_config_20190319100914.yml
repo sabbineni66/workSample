@@ -1,0 +1,111 @@
+exclude: ["bin", "docs", "Gemfile", "Gemfile.lock", "Procfile", "README.md", "script", "tmp"]
+
+locales:
+  hr:
+    contact: Kontakt
+    hunting_tourism: Lovni turizam
+    keywords: "nik,orahovica,lovni turizam,seoski turizam"
+    nik_orahovica_doo: "NIK ORAHOVICA d.o.o."
+    rural_tourism: Seoski turizam
+
+    home_menu:
+      hunting:
+        item_1: "lov na jelena, srnjaka, divlje svinje"
+        item_2: "lov na pernatu divlja? (fazan, ?ljuka, prepelica)"
+        item_3: "lov na medvjeda"
+        item_4: "ishodovanje svih isprava za lovni turizam"
+        item_5: "trgovina lova?kom opremom"
+      rural:
+        item_1: "teambuilding"
+        item_2: "terensko jahanje"
+        item_3: "vo?nja fijakerom"
+        item_4: "vo?nja svatova konjskom zapregom"
+        item_5: "vo?nja saonicama s konjskom zapregom"
+
+    main_menu:
+      hunting_link: lovni-turizam
+      hunting_text: Lovni turizam
+      rural_link: seoski-turizam
+      rural_text: Seoski turizam
+
+  de:
+    contact: Kontakt
+    hunting_tourism: Jagdtourismus
+    keywords: "nik,orahovica,lovni turizam,seoski turizam"
+    nik_orahovica_doo: "NIK ORAHOVICA GmbH"
+    rural_tourism: Dorftourismus
+
+    home_menu:
+      hunting:
+        item_1: "Hirsch-, Rehbock- und Wildschweinejagd"
+        item_2: "Jagd auf Federwild (Fasan, Schnepfe, Wachtel)"
+        item_3: "B?renjagd"
+        item_4: "Beschaffung der Urkunden f?r das Jagdtourismus"
+        item_5: "Jagdausr?stungsgesch?ft"
+      rural:
+        item_1: "Teambuilding"
+        item_2: "Gel?ndereiten"
+        item_3: "Fiakerfahrt"
+        item_4: "Pferdegespannfahrt der Hochzeitsg?ste"
+        item_5: "Schlittenpferdegespannfahrt"
+
+    main_menu:
+      hunting_link: jagdtourismus
+      hunting_text: Jagdtourismus
+      rural_link: dorftourismus
+      rural_text: Dorftourismus
+
+  it:
+    contact: Contatto
+    hunting_tourism: Turismo di caccia
+    keywords: "nik,orahovica,lovni turizam,seoski turizam"
+    nik_orahovica_doo: "NIK ORAHOVICA S.r.l."
+    rural_tourism: Turismo rurale
+
+    home_menu:
+      hunting:
+        item_1: "caccia ai cervi, caprioli e maiali selvatici"
+        item_2: "caccia alla selvaggina di penna (fagiano, beccaccia, quaglia)"
+        item_3: "caccia agli orsi"
+        item_4: "procuriamo tutte le licenze necessarie per andare a caccia"
+        item_5: "attrezzi da caccia in vendita"
+      rural:
+        item_1: "teambuilding"
+        item_2: "il cavalcare sul terreno aperto"
+        item_3: "giro in carrozza da nolo"
+        item_4: "trasporto degli invitati al matrimonio in carrozza a cavalli"
+        item_5: "giro in slitta a cavalli"
+
+    main_menu:
+      hunting_link: turismo-di-caccia
+      hunting_text: Turismo di caccia
+      rural_link: turismo-rurale
+      rural_text: Turismo rurale
+
+
+  en:
+    contact: Contact info
+    hunting_tourism: Hunting tourism
+    keywords: "nik,orahovica,lovni turizam,seoski turizam"
+    nik_orahovica_doo: "NIK ORAHOVICA Ltd."
+    rural_tourism: Rural tourism
+
+    home_menu:
+      hunting:
+        item_1: "deer, roe-buck and wild boar hunting"
+        item_2: "feathered gamebird hunting (pheasant, woodcock, quail)"
+        item_3: "bear hunting"
+        item_4: "we procure all tourist hunting credentials"
+        item_5: "hunting gear for sale"
+      rural:
+        item_1: "teambuilding"
+        item_2: "terrain horse riding"
+        item_3: "hackney-carriage ride"
+        item_4: "wedding guest transportation by horse-drawn carriage"
+        item_5: "horse-drawn sledding"
+
+    main_menu:
+      hunting_link: hunting-tourism
+      hunting_text: Hunting tourism
+      rural_link: rural-tourism
+      rural_text: Rural tourism

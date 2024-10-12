@@ -1,0 +1,53 @@
+---
+English:
+  id: 1
+  name: English
+  short: en
+French:
+  id: 2
+  name: Fran?ais
+  short: fr
+Spanish:
+  id: 3
+  name: Espa?ol 
+  short: es
+German:
+  id: 4
+  name: Deutsch
+  short: de
+Italian:
+  id: 5
+  name: Italiano
+  short: it
+Japanese:
+  id: 6
+  name: ???
+  short: ja
+Czech:
+  id: 7
+  name: ?e?tina
+  short: cs
+Russian:
+  id: 8    
+  name: Pycc???  
+  short: ru
+Suomi:
+  id: 9
+  name: Suomi
+  short: fi
+Bahasa Indonesia:
+  id: 10
+  name: Bahasa Indonesia
+  short: id
+Nederlands:
+  id: 11
+  name: Nederlands
+  short: nl
+Portugu?s:
+  id: 12
+  name: Portugu?s
+  short: pt
+>??:
+  id: 13
+  name: >??
+  short: zh 

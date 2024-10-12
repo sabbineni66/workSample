@@ -1,0 +1,8 @@
+{
+    "private": true,
+    "dependencies": {
+        "classnames": "^2.2.5",
+        "@kadira/storybook-ui": "^3.11.0"
+    }
+}
+

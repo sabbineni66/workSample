@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Development, | Jason Morrison]]></title>
+  <link href="http://jayunit.net/blog/categories/development/atom.xml" rel="self"/>
+  <link href="http://jayunit.net/"/>
+  <updated>2014-03-02T22:53:57-08:00</updated>
+  <id>http://jayunit.net/</id>
+  <author>
+    <name><![CDATA[Jason Morrison]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[CLAHub: Easy Contributor Agreements on GitHub]]></title>
+    <link href="http://jayunit.net/2013/01/09/clahub-easy-contributor-agreements-on-github/"/>
+    <updated>2013-01-09T17:22:00-08:00</updated>
+    <id>http://jayunit.net/2013/01/09/clahub-easy-contributor-agreements-on-github</id>
+    <content type="html"><![CDATA[<p><img class="right" src="/assets/clahub/clipboard.png" width="150" height="150"></p>
+
+<p><a href="http://clahub.herokuapp.com">CLAHub</a> is a small side project I cooked up a few
+months ago, and just got around to open-sourcing.  The goal is to remove the
+friction of <a href="http://en.wikipedia.org/wiki/Contributor_License_Agreement">Contributor License Agreements</a>
+for contributors and maintainers alike.  It&rsquo;s not done yet, but I&rsquo;m curious to
+hear what people think.</p>
+
+<h2>What is it?</h2>
+
+<p>The general idea with CLAs is this: contributors grant the maintainer a license
+to distribute the their code, and state that they&rsquo;re legally able to do so.  A
+fair number of projects have a CLA in place, including
+<a href="http://jquery.github.com/cla.html">jQuery</a>,
+<a href="http://nodejs.org/cla.html">Node.js</a>,
+<a href="https://www.djangoproject.com/foundation/cla/">Django</a>, and
+<a href="http://wiki.opscode.com/display/chef/How+to+Contribute">Chef</a>.  In the best
+cases the CLA is signed via electronic signature, like
+<a href="http://nodejs.org/cla.html">Node.js does with a Google Form</a>.  In the worst
+cases you have to print, sign, and fax the agreement.  In all cases,
+maintainers are responsible for cross-referencing contributions and signatures
+to make sure all contributions have a corresponding signature.</p>
+
+<p>With <a href="http://clahub.herokuapp.com">CLAHub</a> and an open source project on GitHub
+you can:</p>
+
+<ul>
+<li>Sign in with GitHub and create a CLA for your project.</li>
+<li>Ask contributors to sign in with GitHub to electronically sign the CLA.</li>
+<li>See on each pull request whether the contributors have all signed your CLA.
+This uses the handy <a href="https://github.com/blog/1227-commit-status-api">Commit Status API</a>,
+similar to what CI tools do.</li>
+</ul>
+
+
+<p><a href="http://clahub.herokuapp.com/">Here&rsquo;s the app</a>.  There&rsquo;s a little slideshow on
+the frontpage to see how it works.  And <a href="https://github.com/jasonm/clahub">here&rsquo;s the source on GitHub</a>.</p>
+
+<h2>Learn more about CLAs</h2>
+
+<p>Here&rsquo;s some more background on CLAs:</p>
+
+<ul>
+<li><a href="http://jacobian.org/writing/contributor-license-agreements/"><em>Contributor License Agreements</em></a> by Jacob Kaplan-Moss.</li>
+<li><a href="http://www.groklaw.net/article.php?story=20110524120303815"><em>A CLA By Any Other Name</em></a> on Groklaw.</li>
+</ul>
+
+
+<p>Want to choose a CLA?  <a href="http://www.harmonyagreements.org/">Project Harmony</a> is a web tool that helps you quickly select a CLA.</p>
+
+<h2>Feedback</h2>
+
+<p>There&rsquo;s more that needs to be done, but the core of the app works.
+The <a href="https://github.com/jasonm/clahub/issues">next steps are in GitHub issues</a>.</p>
+
+<p>Do you use a CLA for your project(s)?  Would this encourage you to add a CLA if
+you don&rsquo;t have one already?  (That&rsquo;s not really my goal &ndash; just to reduce
+friction where CLAs are already valuable.)  If you have a CLA, would you use
+something like this to reduce the barrier to entry and your overhead?  What
+kinds of features would be useful?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Papernaut: Exploring Online Discussion of Academic Papers]]></title>
+    <link href="http://jayunit.net/2013/01/06/papernaut-exploring-online-discussion-of-academic-papers/"/>
+    <updated>2013-01-06T09:00:00-08:00</updated>
+    <id>http://jayunit.net/2013/01/06/papernaut-exploring-online-discussion-of-academic-papers</id>
+    <content type="html"><![CDATA[<p><img class="right" src="/assets/papernaut/astronaut.png" width="150" height="150"></p>
+
+<p>If you regularly read scholarly papers, you likely use a
+<a href="http://en.wikipedia.org/wiki/Reference_management_software">reference manager</a> to
+maintain your personal library.  <a href="http://www.papernautapp.com">Papernaut</a>
+connects to your library to find online coverage and discussion of your papers
+in blogs, forums, and mainstream media.  My hope is that these discussions can
+provide broader perspective on research and, in some cases, be the spark that
+starts a new collaboration.</p>
+
+<p>Here&rsquo;s a very quick video demo. We start with a <a href="http://zotero.org">Zotero</a>
+library that includes a paper from Science on the
+<a href="http://www.sciencemag.org/content/336/6079/348.short">effect of pesticides on honey bees</a>.
+We then connect to Papernaut, and find several discussions and articles,
+including one in <a href="http://www.guardian.co.uk/science/grrlscientist/2012/may/08/1">The Guardian</a>:</p>
+
+<iframe width="560" height="349" src="http://www.youtube.com/embed/ACw3iLLsSXw?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<p>I&rsquo;ve been working on Papernaut in my spare time for a few months, and I&rsquo;m happy
+to say that it&rsquo;s now open source.  The project comes in two parts, and the
+source is on GitHub:</p>
+
+<ul>
+<li><a href="https://github.com/jasonm/papernaut-frontend">Papernaut-frontend</a> is the web frontend.</li>
+<li><a href="https://github.com/jasonm/papernaut-engine">Papernaut-engine</a> is the feed crawler and matching backend.</li>
+</ul>
+
+
+<p>If you are interested in how the application is put together, the rest of this
+article is a technical overview of the moving parts and how they interact.</p>
+
+<h2>Overview: A simple example</h2>
+
+<p>Let&rsquo;s walk through a simplified example.  Say I have only one paper in my
+reference manager &mdash; that paper from earlier, about the effect of pesticides on
+honey bees:</p>
+
+<p>Henry, M., Beguin, M., Requier, F., Rollin, O., Odoux, J., Aupinel, P., Aptel,
+J., Tchamitchian, S., &amp; Decourtye, A. (2012).
+<a href="http://www.sciencemag.org/content/336/6079/348.short">A Common Pesticide Decreases Foraging Success and Survival in Honey Bees.</a>
+<em>Science</em>, 336 (6079), 348-350 DOI:<a href="http://dx.doi.org/10.1126/science.1215039">10.1126/science.1215039</a></p>
+
+<p>Let&rsquo;s also say that the engine is crawling content from only one source feed,
+<a href="http://researchblogging.org">ResearchBlogging.org</a>.
+Among many other content items, that source feed contains a
+<a href="https://researchblogging.org/post-search/list?advanced=true&amp;post_title=&amp;journal=&amp;blog_blogger_name=GrrlScientist&amp;tags=&amp;tag_id=&amp;search_text=&amp;from_date=05%2F08%2F2012&amp;to_date=05%2F08%2F2012&amp;send=Search">relevant entry</a>,
+whose <a href="http://www.guardian.co.uk/science/grrlscientist/2012/may/08/1">content page is on The Guardian</a>.</p>
+
+<p>We&rsquo;ll look at how the engine crawls and indexes this source feed.  Then,
+we&rsquo;ll see how the frontend pulls the paper from my reference manager and
+asks the engine for relevant discussions.</p>
+
+<h2>Papernaut-engine: Loading content and identifying papers</h2>
+
+<p>The goal of the engine is to produce a collection of <code>Discussion</code> records, each
+of which links to several <code>Identifier</code> records, representing journal papers
+that are referenced from the <code>Discussion</code>.  In our example, the <code>Discussion</code> is
+the article in The Guardian, and the relevant <code>Identifier</code> is
+<code>DOI:10.1126/science.1215039</code>.  There are also intermediate objects, <code>Page</code> and
+<code>Link</code> which connect <code>Discussion</code>s to <code>Identifier</code>s.</p>
+
+<p>The engine consists of two main parts: loaders (which are Ruby classes), and the
+query API (a Rails app).  For loading, it also depends on an external running instance
+of the <a href="https://github.com/zotero/translation-server">Zotero translation-server</a>.</p>
+
+<p><img src="/assets/papernaut/diagram-engine.png" alt="" /></p>
+
+<h3>Loading content by crawling feeds</h3>
+
+<p>The loaders load discussion candidates from feeds and archives, extract
+outbound links, and store these in the database.</p>
+
+<p>In the first step, I invoke the <a href="researchblogging.org">ResearchBlogging.org</a>
+loader to crawl and index the most recent 100 pages of their archives:</p>
+
+<pre><code>[engine] rails runner "Loaders::ResearchbloggingWebLoader.new(100).load"
+</code></pre>
+
+<p>This will load a large number of <code>Discussion</code> entries into the database, with
+zero or more <code>Page</code> entries for each <code>Discussion</code>, corresponding to outbound
+links.</p>
+
+<p>At this point, the engine database contains the <code>Discussion</code>:</p>
+
+<pre><code>#&lt;Discussion id: 3424,
+             url: "http://www.guardian.co.uk/science/grrlscientist/2012/may/08/1",
+             title: " Bee deaths linked to common pesticides | video | G...", ...&gt;
+</code></pre>
+
+<p>and the linked <code>Page</code> entries:</p>
+
+<pre><code>[#&lt;Page id: 7531, url: "http://dx.doi.org/10.1126/science.1215039", ... &gt;,
+ #&lt;Page id: 7532, url: "http://pubget.com/doi/10.1126/science.1215039", ... &gt;,
+ #&lt;Page id: 7533, url: "http://dx.doi.org/10.1126/science.1215025", ... &gt;,
+ #&lt;Page id: 7534, url: "http://pubget.com/doi/10.1126/science.1215025", ... &gt;]
+</code></pre>
+
+<h3>Identifying papers via the Zotero translation-server</h3>
+
+<p>The engine determines which outbound links (or <code>Page</code>s) are academic papers by
+issuing calls to the
+<a href="https://github.com/zotero/translation-server">Zotero translation-server</a> HTTP API.
+The translation-server is a third-party project from open-source reference
+manager <a href="http://www.zotero.org/">Zotero</a>. It examines a given URL and, if
+that page contains an academic paper, it returns common publication identifiers such as
+<a href="http://en.wikipedia.org/wiki/Digital_object_identifier">DOI</a> or
+<a href="http://en.wikipedia.org/wiki/PubMed#PubMed_identifier">PMID</a>.</p>
+
+<p>The translation-server wraps the
+<a href="https://github.com/zotero/translators">Zotero translators</a>,
+a set of JavaScript scripts that do the heavy lifting of parsing a webpage and
+attempting to identify it as one or more academic publications.  These
+translators are
+<a href="https://github.com/zotero/translators/issues">maintained by the community</a>,
+keeping them fairly up-to-date with publishers.  The translation-server uses
+<a href="https://developer.mozilla.org/en-US/docs/XULRunner">XULRunner</a> to run these
+scripts in a Gecko environment, and makes them available through a simple HTTP
+API:</p>
+
+<pre><code>[~] ~/dev/zotero/translation-server/build/run_translation-server.sh &amp;
+    zotero(3)(+0000000): HTTP server listening on *:1969
+
+[~] curl -d '{"url":"http://www.sciencemag.org/content/336/6079/348.short","sessionid":"abc123"}' \
+     --header "Content-Type: application/json" \
+     http://localhost:1969/web | jsonpp
+
+    [
+      {
+        "itemType": "journalArticle",
+        "creators": [
+          { "firstName": "M.", "lastName": "Henry", "creatorType": "author" },
+          { "firstName": "M.", "lastName": "Beguin", "creatorType": "author" },
+          { "firstName": "F.", "lastName": "Requier", "creatorType": "author" },
+          { "firstName": "O.", "lastName": "Rollin", "creatorType": "author" },
+          { "firstName": "J.-F.", "lastName": "Odoux", "creatorType": "author" },
+          { "firstName": "P.", "lastName": "Aupinel", "creatorType": "author" },
+          { "firstName": "J.", "lastName": "Aptel", "creatorType": "author" },
+          { "firstName": "S.", "lastName": "Tchamitchian", "creatorType": "author" },
+          { "firstName": "A.", "lastName": "Decourtye", "creatorType": "author" }
+        ],
+        "notes": [],
+        "tags": [],
+        "publicationTitle": "Science",
+        "volume": "336",
+        "issue": "6079",
+        "ISSN": "0036-8075, 1095-9203",
+        "date": "2012-03-29",
+        "pages": "348-350",
+        "DOI": "10.1126/science.1215039",
+        "url": "http://www.sciencemag.org/content/336/6079/348.short",
+        "title": "A Common Pesticide Decreases Foraging Success and Survival in Honey Bees",
+        "libraryCatalog": "CrossRef",
+        "accessDate": "CURRENT_TIMESTAMP"
+      }
+    ]
+</code></pre>
+
+<p>There are several useful standardized identifiers here &ndash; DOI, URL, and ISSN.</p>
+
+<p>So, continuing with our example from above, I&rsquo;ll next start the Zotero
+translation server and identify the pages:</p>
+
+<pre><code>[engine] ~/dev/zotero/translation-server/build/run_translation-server.sh &amp;
+         zotero(3)(+0000000): HTTP server listening on *:1969
+
+[engine] rails runner "ParallelIdentifier.new(Page.unidentified).run"
+</code></pre>
+
+<p>The engine issues calls to the translation-server and records new <code>Identifier</code>s.
+Now, the <code>Page</code> entries we previously crawled:</p>
+
+<pre><code>[#&lt;Page id: 7531, url: "http://dx.doi.org/10.1126/science.1215039", ... &gt;,
+ #&lt;Page id: 7532, url: "http://pubget.com/doi/10.1126/science.1215039", ... &gt;,
+ #&lt;Page id: 7533, url: "http://dx.doi.org/10.1126/science.1215025", ... &gt;,
+ #&lt;Page id: 7534, url: "http://pubget.com/doi/10.1126/science.1215025", ... &gt;]
+</code></pre>
+
+<p>have corresponding <code>Identifier</code> records:</p>
+
+<pre><code>[#&lt;Identifier id: 1819, page_id: 7531, body: "DOI:10.1126/science.1215039" ...&gt;,
+ #&lt;Identifier id: 1820, page_id: 7531, body: "URL:http://www.sciencemag.org/content/336/6079/348" ...&gt;],
+ #&lt;Identifier id: 1821, page_id: 7533, body: "DOI:10.1126/science.1215025" ...&gt;,
+ #&lt;Identifier id: 1822, page_id: 7533, body: "URL:http://www.sciencemag.org/content/336/6079/351" ...&gt;,
+</code></pre>
+
+<p>Two of the four pages were identified (<code>7531</code> and <code>7533</code>), and both of those
+pages received two identifiers apiece.  This means that the Guardian <code>Discussion</code>
+actually referenced two different papers, not just the one we&rsquo;re interested in.</p>
+
+<p>Now that there is a link between the paper in question and this discussion page,
+we are ready to visit the frontend.</p>
+
+<h2>Papernaut-frontend: importing libraries, finding discussions</h2>
+
+<p>The frontend works in two distinct phases: first, it helps you import papers
+from your reference manager.  Second, it shows you discussions for those papers.</p>
+
+<p>You can import your papers via the
+<a href="http://www.zotero.org/support/dev/server_api/read_api">Zotero API</a> or
+<a href="http://dev.mendeley.com/">Mendeley API</a> by giving Papernaut access to your
+libraries via OAuth.  This happens with
+<a href="https://github.com/jasonm/omniauth-zotero"><code>omniauth-zotero</code></a> and
+<a href="https://github.com/fractaloop/omniauth-mendeley"><code>omniauth-mendeley</code></a>
+libraries, followed by the
+<a href="https://github.com/jasonm/papernaut-frontend/blob/2013-01-06/lib/zotero_client.rb"><code>ZoteroClient</code></a> and
+<a href="https://github.com/jasonm/papernaut-frontend/blob/2013-01-06/lib/mendeley_client.rb"><code>MendeleyClient</code></a>
+classes.</p>
+
+<p>Alternatively, you can import papers from most reference management software by
+exporting and uploading a <a href="http://en.wikipedia.org/wiki/BibTeX"><code>.bibtex</code></a>
+file.  Papers and their identifiers are then extracted with the
+<a href="https://github.com/jasonm/papernaut-frontend/blob/2013-01-06/app/models/bibtex_import.rb"><code>BibtexImport</code></a>
+class.</p>
+
+<p>Many papers will have multiple identifiers, and the frontend attempts to clean and validate
+your papers' identifiers as best it can in an attempt to find the best matches.</p>
+
+<p>Once your papers are loaded into the frontend, it
+<a href="https://github.com/jasonm/papernaut-frontend/blob/2013-01-06/lib/discussion.rb">issues requests to the <code>papernaut-engine</code> query API</a>
+to find discussions that match papers in your library.</p>
+
+<p><img src="/assets/papernaut/diagram-frontend.png" alt="" /></p>
+
+<p>The interface between the frontend and the engine are <code>Identifier</code> strings,
+which take a type/value form:</p>
+
+<ul>
+<li><code>DOI:10.1038/nphys2376</code></li>
+<li><code>ISSN:1542-4065</code></li>
+<li><code>PMID:10659856</code></li>
+<li><code>URL:http://nar.oxfordjournals.org/content/40/D1/D742.full</code></li>
+</ul>
+
+
+<p>So, in our example video above, we authenticate via Zotero and authorize
+Papernaut&rsquo;s API access via OAuth.  The frontend extracts our library of papers
+from Zotero and stores their <code>Identifier</code>s locally.  It issues requests to the
+engine&rsquo;s query API for matching discussions, and displays those to the end
+user:</p>
+
+<p><img src="/assets/papernaut/frontend-screenshot.png" alt="" /></p>
+
+<h2>Deployment</h2>
+
+<p>In production, the Papernaut engine and frontend are deployed to
+<a href="https://heroku.com">Heroku</a>.  The translation-server is deployed to EC2.
+I spin it up and run the loaders periodically, to reduce hosting overhead.</p>
+
+<p>There is a <code>DEPLOY.md</code> file for both
+<a href="https://github.com/jasonm/papernaut-frontend/blob/master/DEPLOY.md">the frontend</a>
+and <a href="https://github.com/jasonm/papernaut-engine/blob/master/DEPLOY.md">the engine</a>
+that goes into further detail.</p>
+
+<h2>Next steps</h2>
+
+<p>I&rsquo;m excited to see what kinds of results people get with Papernaut,
+but it&rsquo;s still very early software.  I look forward to making a variety
+of improvements.</p>
+
+<p>I&rsquo;d really like to add a bulk request API endpoint to the engine, so that the
+frontend can discover discussions in a single HTTP request, rather that one
+request per paper. That&rsquo;s a big performance hit, and the user experience right
+now for large libraries is that the frontend just hangs for a while.</p>
+
+<p>On the engine side, I&rsquo;d like to do a better job of culling false positives in
+the matching engine, and of contributing to Zotero&rsquo;s translators to improve the
+match rate.  I think the primary issue there is that the translator-server
+actually only runs a subset of all the Zotero translators, as some declare that
+they only work inside a real browser context
+(<a href="http://www.zotero.org/support/dev/translators">see &ldquo;browserSupport&rdquo;</a>).</p>
+
+<p>I&rsquo;d like to get a larger sample set of BibTeX files to try, as there are
+probably edge cases and assumptions in the importer waiting to be hit.</p>
+
+<p>I&rsquo;d also like to background some of the tasks in the frontend&rsquo;s import process;
+validating DOIs is a big one there.  Ideally, the whole library import would be
+backgrounded, and the user interface would be notified when the import is
+complete.</p>
+
+<p>Currently, some matches are missed because the engine and frontend have
+different identifiers for the same paper &ndash; say a DOI and a PMID.  I also have
+an experimental branch that cross-references papers with the
+<a href="http://help.crossref.org/#author_title_query">crossref.org API</a>,
+which yields more complete information.  Ideally that would happen in the engine.
+I&rsquo;ve also seen some library management and import tools that use Google Scholar
+to improve matching and identification.</p>
+
+<p>After that, I&rsquo;d like loaders to run semi-continuously instead of manually, and
+to have more robust infrastructure around paper identification.</p>
+
+<p>In the long term, it would be interesting to try and bring the discussion
+matching experience directly into reference managers.  This is one reason why
+I provide the engine query API separately from the frontend.</p>
+
+<h2>Conclusion</h2>
+
+<p>I&rsquo;m most interested in hearing feedback from people.  Is this useful to you?
+If you use a reference manager,
+<a href="http://www.papernautapp.com">give Papernaut a spin</a>
+and <a href="mailto:jason.p.morrison@gmail.com">let me know</a> how it goes.</p>
+]]></content>
+  </entry>
+  
+</feed>

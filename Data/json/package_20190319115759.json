@@ -1,0 +1,25 @@
+{
+  "name": "BubblePointToolTip",
+  "title": "BubblePointToolTip",
+  "description": "original by CHRIS COYIER",
+  "version": "v0.1",
+  "keywords": ["tooltip", "css3"],
+  "homepage": "https://github.com/olivM/BubblePointToolTip",
+  "author": {
+    "name": "CHRIS COYIER",
+    "url": "http://css-tricks.com/bubble-point-tooltips-with-css3-jquery/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/olivM/BubblePointToolTip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olivM/BubblePointToolTip/issues"
+  }
+}

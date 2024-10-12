@@ -1,0 +1,9 @@
+{
+  "name": "quilt",
+  "description": "A quilting project",
+  "website": "http://github.com/elbowdonkey/quilt",
+  "success_url": "/",
+  "addons": ["rediscloud"],
+  "env": {},
+  "scripts": {}
+}

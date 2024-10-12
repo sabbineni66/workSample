@@ -1,0 +1,24 @@
+{
+  "name": "jQuery.Tabify",
+  "title": "jQuery Tabify",
+  "description": "original by Jan Jarfalk",
+  "version": "v0.1",
+  "keywords": ["tabs", "jQuery"],
+  "homepage": "https://github.com/olivM/jQuery-Tabify",
+  "author": {
+    "name": "Jan Jarfalk"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/olivM/jQuery-Tabify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olivM/jQuery-Tabify/issues"
+  }
+}

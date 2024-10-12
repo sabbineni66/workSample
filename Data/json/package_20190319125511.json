@@ -1,0 +1,35 @@
+{
+  "name": "thormir",
+  "version": "1.0.0",
+  "description": "A terminal based (react-blessed) D&D DM tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node ./src/index.js",
+    "build": "babel ./src --out-dir ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethtrain/thormir.git"
+  },
+  "author": "Seth Buntin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sethtrain/thormir/issues"
+  },
+  "homepage": "https://github.com/sethtrain/thormir#readme",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^3.5.5",
+    "datascript": "^0.15.2",
+    "droll": "^0.2.0",
+    "react": "^0.14.0",
+    "react-blessed": "^0.1.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0"
+  }
+}

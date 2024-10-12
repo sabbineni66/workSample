@@ -1,0 +1,14 @@
+{
+  "name": "xml-converter",
+  "version": "1.0.0",
+  "description": "An XML to JSON ServiceWorker Converter",
+  "main": "xml-converter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sandro Paganotti",
+  "license": "MIT",
+  "dependencies": {
+    "xmldoc": "git://github.com/nfarina/xmldoc"
+  }
+}

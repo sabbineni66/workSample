@@ -1,0 +1,322 @@
+{
+  "meta": {
+    "format": "FRESH@0.6.0",
+    "version": "0.4.0"
+  },
+
+  "name": "Micha? Kalbarczyk",
+
+  "contact": {
+    "website": "https://fazibear.me",
+    "email": "fazibear@gmail.com"
+  },
+
+  "info": {
+    "image": "/images/cv.jpg",
+    "label": "Software Engineer",
+    "characterClass": "Programmer",
+    "brief": "I'm the multi-skilled software engineer. With 12 years of overall commercial programming experience, I gained
+    and extensive and practical knowledge of designing, programming, maintaining and optimising sophisticated services.
+      I'm interested in many modern technologies like Elixir, Ruby, Ruby On Rails, Sinatra, JavaScript, React, JSON, AMQP, SQL, NoSQL.
+      Also not web related technologies like MRuby, RubyMotion, iOS and more."
+  },
+
+  "projects": [
+    {
+      "title": "Inesita",
+      "category": "FOSS",
+      "role": "creator",
+      "url": "http://inesita-rb.github.io/",
+      "start": "2015-06",
+      "repo": "https://github.com/inesita-rb/inesita",
+      "summary": "Frontend for write web applications in Ruby.",
+      "description": "Frontend web application framework in Ruby using Opal.",
+      "keywords": ["javascript","opal","ruby","virtual-dom"],
+      "media": [
+        {
+          "category": "download",
+          "url": "https://rubygems.org/gems/inesita"
+        }
+      ]
+    },
+    {
+      "title": "Colorize",
+      "category": "FOSS",
+      "role": "creator",
+      "url": "https://rubygems.org/gems/colorize",
+      "repo": "http://github.com/fazibear/colorize",
+      "start": "2007-04",
+      "summary": "Colorized string on console using ruby.",
+      "description": "Ruby string class extension. It add some methods to set color, background color and text effect on console easier.",
+      "keywords": ["ruby","ansi"]
+    },
+    {
+      "title": "AsciifyMe",
+      "category": "FOSS",
+      "role": "creator",
+      "url": "https://asciifyme.fazibear.me/",
+      "repo": "https://github.com/fazibear/asciify-me",
+      "start": "2015-12",
+      "summary": "Watch yourself in ASCII mirror.",
+      "description": "Watch yourself in ASCII mirror.",
+      "keywords": ["ruby","opal","javascript"]
+    },
+    {
+      "title": "Inesid",
+      "category": "FOSS",
+      "role": "creator",
+      "url": "https://inesid.fazibear.me",
+      "repo": "https://github.com/fazibear/inesid",
+      "start": "2016-4",
+      "summary": "Retro Web Commodore 64 SID Player.",
+      "description": "Retro Web Commodore 64 SID Player.",
+      "keywords": ["ruby","opal","javascript"]
+    },
+    {
+      "title": "Ruby Gems",
+      "category": "FOSS",
+      "role": "creator",
+      "url": "https://rubygems.org/profiles/fazibear",
+      "repo": "https://github.com/fazibear",
+      "summary": "My Gems for Ruby and Opal.",
+      "description": "My Gems for Ruby and Opal.",
+      "keywords": ["ruby","gem"]
+    },
+    {
+      "title": "Hex Packages",
+      "category": "FOSS",
+      "role": "creator",
+      "url": "https://hex.pm/",
+      "repo": "https://github.com/fazibear",
+      "summary": "My hex.pm packages: airbtakex, export, ex_ical, defql",
+      "description": "My hex.pm packages: airbtakex, export, ex_ical, defql",
+      "keywords": ["elixir","hex"]
+    }
+  ],
+
+  "social": [
+    {
+      "label": "GitHub",
+      "network": "GitHub",
+      "user": "fazibear",
+      "url": "https://github.com/fazibear",
+      "icon": "github"
+    },
+    {
+      "label": "Twitter",
+      "network": "Twitter",
+      "user": "fazibear",
+      "url": "https://twitter.com/fazibear",
+      "icon": "twitter"
+    },
+    {
+      "label": "Medium",
+      "network": "Medium",
+      "user": "fazibear",
+      "url": "https://medium.com/@fazibear",
+      "icon": "medium"
+    },
+    {
+      "label": "SoundCloud",
+      "network": "SoundCloud",
+      "user": "fazibear",
+      "url": "https://soundcloud.com/fazibear",
+      "icon": "soundcloud"
+    }
+  ],
+
+  "employment": {
+    "summary": "10+ years industry IT and software development experience.",
+    "history": [
+      {
+        "employer": "El Passion",
+        "url": "http://www.elpassion.com/",
+        "position": "Senior  Developer",
+        "summary": "Development of various sites in Ruby, Elixir, JavaScript.",
+        "highlights": [
+          "Developing and maintaining frontend applications",
+          "Developing and maintaining backend applications",
+          "Elixir inventor",
+          "Leader of Development Team",
+          "Scrum master"
+        ],
+        "start": "2014-12",
+        "keywords": ["ruby","rails","sinatra","grape","javascript","solr","elasticsearch","resque","rspec","redis","postgres","memchached","json","git","docker","elixir","phoenix","graphql","websocket","aws","s3","rds","agile","scrum","jira"]
+      },
+      {
+        "employer": "Arena.pl",
+        "url": "https://arena.pl/",
+        "position": "Senior Ruby Developer",
+        "summary": "Development of big e-commerce site for arena.pl.",
+        "highlights": [
+          "Developing and maintaining frontend",
+          "Developing and maintaining backend",
+          "Developing and maintaining full-text search",
+          "Managing and configure server architecture"
+        ],
+        "start": "2014-03",
+        "end": "2014-11",
+        "keywords": ["ruby","rails","javascript","jquery","solr","resque","rspec","redis","mysql","spree","memchached","json","git","varnish","haproxy","docker","jira"]
+      },
+      {
+        "employer": "Cubiware Sp. z o. o.",
+        "url": "http://www.cubiware.com/",
+        "position": "Senior Ruby Developer",
+        "summary": "Backend application development for cable television STB.",
+        "highlights": [
+          "Developing and maintaining soap API for STB",
+          "Developing and maintaining soap json for STB",
+          "Backend optimization",
+          "Designing new backend architecture"
+        ],
+        "start": "2013-03",
+        "end": "2014-03",
+        "keywords": ["ruby","rails","sinatra","resque","rspec","redis","mysql","memcached","json", "xml", "xmlrpc", "git", "varnish", "haproxy","scrum","agile"]
+      },
+      {
+        "employer": "GG Network S.A.",
+        "url": "http://www.gg.pl/",
+        "position": "Ruby / Javascript Developer",
+        "summary": "blip.pl - Polish Twitter-like social network.",
+        "highlights": [
+          "Developing and maintaining frontend",
+          "Developing and maintaining backend queues",
+          "Developing and maintaining background workers",
+          "Developing and maintaining users API",
+          "Contact with blip.pl Users/API consumers"
+        ],
+        "start": "2008-05",
+        "end": "2013-02",
+        "keywords": ["ruby","rails","rspec","amqp","redis","sphinx","mysql","memchached","json","svn","varnish","haproxy","scrum","agile"]
+      },
+      {
+        "employer": "Activeweb Medical Solutions",
+        "url": "http://www.activeweb.pl/",
+        "position": "Ruby / Javascript Developer",
+        "summary": "Development and maintenance of various web pages.",
+        "highlights": [
+          "Developing and maintaining OpenID service",
+          "Developing and maintaining Adobe Flash clips"
+        ],
+        "start": "2007-10",
+        "end": "2008-07",
+        "keywords": ["ruby","rails","rspec","mysql","ajax","rest","soap","openid","wap","svn","flash"]
+      },
+      {
+        "employer": "EO Networks",
+        "url": "http://www.eo.pl",
+        "position": "Lead Web Developer / Java EE Developer",
+        "summary": "Leader of Web Development Team, Java EE Backend programmer.",
+        "highlights": [
+          "Developing and maintaining J2EE application",
+          "Developing and maintaining layouts and templates layer",
+          "Code quality reviews",
+          "Leader of Web Development Team",
+          "Analysis of customer requirements"
+        ],
+        "start": "2004-11",
+        "end": "2007-07",
+        "keywords": ["j2ee","hibernate","spring","velocity","postgres","javascript","html","css","xml","xslt","selenium","svn"]
+      }
+    ]
+  },
+
+  "education": {
+    "history": [
+      {
+        "institution": "Warsaw School Of Computer Science",
+        "title": "Engineer",
+        "url": "http://wwcs.eu/",
+        "start": "2003-09",
+        "end": "2009-05",
+        "summary": "Software Engineering",
+        "curriculum": ["CCNA Course 1-2", "Windows 2003 Server Administration Course"]
+      },
+      {
+        "institution": "Study of Economy and Business",
+        "title": "Technician",
+        "url": "http://cek.home.pl/",
+        "start": "2002-09",
+        "end": "2003-06",
+        "summary": "Programming and Databases"
+      },
+      {
+        "institution": "Electronic Technical High School",
+        "title": "Technician",
+        "url": "http://zseil.edu.pl/",
+        "start": "1997-09",
+        "end": "2002-06",
+        "summary": "Electronics"
+      }
+    ]
+  },
+
+  "skills": {
+    "sets": [
+      {
+        "name": "Programming",
+        "level": 8,
+        "skills": [
+          "elixir", "phoenix", "ecto", "ruby", "rails", "rspec", "capybara", "resque", "sinatra", "spree", "node.js", "xmlrpc", "amqp", "xmpp", "crystal", "rubymotion"
+        ]
+      },
+      {
+        "name": "Web",
+        "level": 7,
+        "skills": [
+          "javascript", "graphql", "react", "redux", "reflux", "ember.js", "angular", "opal", "json",
+          "xml", "xslt", "rest", "ajax", "coffeescript", "jquery", "oauth", "websocket", "volt", "meteor", "html", "css"
+        ]
+      },
+      {
+        "name": "Storage",
+        "level": 7,
+        "skills": [
+          "mysql", "postgres", "redis", "orm", "memcached", "sphinx", "solr", "elasticsearch"
+        ]
+      },
+      {
+        "name": "Cloud",
+        "level": 7,
+        "skills": [
+          "aws", "ec2", "rds", "s3", "heroku", "github", "docker"
+        ]
+      },
+      {
+        "name": "Project",
+        "level": 6,
+        "skills": [
+          "agile", "jira", "scrum"
+        ]
+      }
+    ]
+  },
+  "languages": [
+    {
+      "language": "Polish",
+      "level": "native"
+    },
+    {
+      "language": "English",
+      "level": "communicative"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music",
+      "summary": "Playing, composing and recording all kinds of music.",
+      "keywords": [ "guitar", "keyboard", "composing", "midi", "daw", "vst", "recording", "mastering" ]
+    },
+    {
+      "name": "Internet Of Things",
+      "summary": "Play with microcontrollers, LEDs, sensors ...",
+      "keywords": [ "iot", "adruino", "esp2866", "soldering", "led", "microcontrollers", "sensors" ]
+    },
+    {
+      "name": "Retro Computers",
+      "summary": "Programming and playing with old 8 bit computers.",
+      "keywords": [ "c64", "sid", "asm", "commodore", "8bit" ]
+    }
+  ]
+
+}

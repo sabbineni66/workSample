@@ -1,0 +1,457 @@
+{
+  "Title": {
+    "0": "The Incantation"
+  },
+  "YTS URL": {
+    "0": "https://yts.am/movie/the-incantation-2018"
+  },
+  "YTS Rating": {
+    "0": "3.1"
+  },
+  "Thumbnail Image URL": {
+    "0": "https://yts.am/assets/images/movies/the_incantation_2018/medium-cover.jpg"
+  },
+  "Movie Image URL": {
+    "0": "https://yts.am/assets/images/movies/the_incantation_2018/medium-cover.jpg"
+  },
+  "Categories": {
+    "0": [
+      "Adventure",
+      "Fantasy",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ]
+  },
+  "Description": {
+    "0": "In this picturesque paranormal thriller, a young American girl, Lucy Bellerose (Sam Valentine), has a chance of a lifetime to visit her ancestors ominous castle in the south of France. However, things are not as they seem as she finds that her family is hiding deep, dark secrets about their nefarious past, far away from prying eyes. Unbeknownst to Lucy, the region is also home to centuries of witchcraft and occult folklore. After meeting the strident Vicar of Borley and her socially awkward Chambermaid, Mary, Lucy begins to question her place in the family. Abel Baddon, a devilishly handsome traveling salesman, (Dean Cain \"Lois and Clark: The New Adventures of Superman\"), tries to assuage her fears and soothe her reluctance. However, only after meeting a charming gravedigger named J.P. (Dylan Kellogg) does she begin to feel at ease. He navigates her through the twists and turns of the murky waters of her family's past, eventually uncovering shocking revelations."
+  },
+  "Likes": {
+    "0": "13"
+  },
+  "IMDb Rating": {
+    "0": "3.1"
+  },
+  "Best Rating": {
+    "0": "10"
+  },
+  "Rating Count": {
+    "0": "200"
+  },
+  "IMDb URL": {
+    "0": "https://www.imdb.com/title/tt5361596/"
+  },
+  "Downloads": {
+    "0": "35,350"
+  },
+  "Language": {
+    "0": [
+      [
+        {
+          "LanguageCode": "en",
+          "Score": 0.9919773936
+        }
+      ],
+      1
+    ]
+  },
+  "Entities": {
+    "0": [
+      [
+        {
+          "Score": 0.7755470872,
+          "Type": "OTHER",
+          "Text": "American",
+          "BeginOffset": 49,
+          "EndOffset": 57
+        },
+        {
+          "Score": 0.9996441603,
+          "Type": "PERSON",
+          "Text": "Lucy Bellerose",
+          "BeginOffset": 64,
+          "EndOffset": 78
+        },
+        {
+          "Score": 0.9987047911,
+          "Type": "PERSON",
+          "Text": "Sam Valentine",
+          "BeginOffset": 80,
+          "EndOffset": 93
+        },
+        {
+          "Score": 0.9964174032,
+          "Type": "LOCATION",
+          "Text": "France",
+          "BeginOffset": 177,
+          "EndOffset": 183
+        },
+        {
+          "Score": 0.9862844944,
+          "Type": "PERSON",
+          "Text": "Lucy",
+          "BeginOffset": 350,
+          "EndOffset": 354
+        },
+        {
+          "Score": 0.8860788345,
+          "Type": "PERSON",
+          "Text": "Vicar of Borley",
+          "BeginOffset": 455,
+          "EndOffset": 470
+        },
+        {
+          "Score": 0.7624951005,
+          "Type": "PERSON",
+          "Text": "Chambermaid",
+          "BeginOffset": 496,
+          "EndOffset": 507
+        },
+        {
+          "Score": 0.9984157085,
+          "Type": "PERSON",
+          "Text": "Mary",
+          "BeginOffset": 509,
+          "EndOffset": 513
+        },
+        {
+          "Score": 0.9990891218,
+          "Type": "PERSON",
+          "Text": "Lucy",
+          "BeginOffset": 515,
+          "EndOffset": 519
+        },
+        {
+          "Score": 0.9985075593,
+          "Type": "PERSON",
+          "Text": "Abel Baddon",
+          "BeginOffset": 564,
+          "EndOffset": 575
+        },
+        {
+          "Score": 0.8254853487,
+          "Type": "PERSON",
+          "Text": "Dean Cain",
+          "BeginOffset": 620,
+          "EndOffset": 629
+        },
+        {
+          "Score": 0.7943629026,
+          "Type": "PERSON",
+          "Text": "Lois",
+          "BeginOffset": 631,
+          "EndOffset": 635
+        },
+        {
+          "Score": 0.9692659378,
+          "Type": "PERSON",
+          "Text": "Clark",
+          "BeginOffset": 640,
+          "EndOffset": 645
+        },
+        {
+          "Score": 0.789046824,
+          "Type": "PERSON",
+          "Text": "Superman",
+          "BeginOffset": 669,
+          "EndOffset": 677
+        },
+        {
+          "Score": 0.9734096527,
+          "Type": "PERSON",
+          "Text": "J.P.",
+          "BeginOffset": 792,
+          "EndOffset": 796
+        },
+        {
+          "Score": 0.9959908128,
+          "Type": "PERSON",
+          "Text": "Dylan Kellogg",
+          "BeginOffset": 798,
+          "EndOffset": 811
+        }
+      ],
+      16
+    ]
+  },
+  "Key Phrases": {
+    "0": [
+      [
+        {
+          "Score": 0.9930115938,
+          "Text": "this picturesque paranormal thriller",
+          "BeginOffset": 3,
+          "EndOffset": 39
+        },
+        {
+          "Score": 0.9976116419,
+          "Text": "a young American girl",
+          "BeginOffset": 41,
+          "EndOffset": 62
+        },
+        {
+          "Score": 0.9818879366,
+          "Text": "Lucy Bellerose",
+          "BeginOffset": 64,
+          "EndOffset": 78
+        },
+        {
+          "Score": 0.9982547164,
+          "Text": "Sam Valentine",
+          "BeginOffset": 80,
+          "EndOffset": 93
+        },
+        {
+          "Score": 0.9996914268,
+          "Text": "a chance",
+          "BeginOffset": 100,
+          "EndOffset": 108
+        },
+        {
+          "Score": 0.9989832044,
+          "Text": "a lifetime",
+          "BeginOffset": 112,
+          "EndOffset": 122
+        },
+        {
+          "Score": 0.8555355668,
+          "Text": "her ancestors ominous castle",
+          "BeginOffset": 132,
+          "EndOffset": 160
+        },
+        {
+          "Score": 0.9972381592,
+          "Text": "the south",
+          "BeginOffset": 164,
+          "EndOffset": 173
+        },
+        {
+          "Score": 0.9952222705,
+          "Text": "France",
+          "BeginOffset": 177,
+          "EndOffset": 183
+        },
+        {
+          "Score": 0.9999431372,
+          "Text": "things",
+          "BeginOffset": 194,
+          "EndOffset": 200
+        },
+        {
+          "Score": 0.9997226,
+          "Text": "her family",
+          "BeginOffset": 240,
+          "EndOffset": 250
+        },
+        {
+          "Score": 0.8936744928,
+          "Text": "deep, dark secrets",
+          "BeginOffset": 261,
+          "EndOffset": 279
+        },
+        {
+          "Score": 0.9956299067,
+          "Text": "their nefarious past",
+          "BeginOffset": 286,
+          "EndOffset": 306
+        },
+        {
+          "Score": 0.9919084907,
+          "Text": "eyes",
+          "BeginOffset": 329,
+          "EndOffset": 333
+        },
+        {
+          "Score": 0.9983687997,
+          "Text": "Lucy",
+          "BeginOffset": 350,
+          "EndOffset": 354
+        },
+        {
+          "Score": 0.9999078512,
+          "Text": "the region",
+          "BeginOffset": 356,
+          "EndOffset": 366
+        },
+        {
+          "Score": 0.5734900236,
+          "Text": "home",
+          "BeginOffset": 375,
+          "EndOffset": 379
+        },
+        {
+          "Score": 0.9980913997,
+          "Text": "centuries",
+          "BeginOffset": 383,
+          "EndOffset": 392
+        },
+        {
+          "Score": 0.9508740306,
+          "Text": "witchcraft and occult folklore",
+          "BeginOffset": 396,
+          "EndOffset": 426
+        },
+        {
+          "Score": 0.9961120486,
+          "Text": "the strident Vicar",
+          "BeginOffset": 442,
+          "EndOffset": 460
+        },
+        {
+          "Score": 0.9317352176,
+          "Text": "Borley",
+          "BeginOffset": 464,
+          "EndOffset": 470
+        },
+        {
+          "Score": 0.9474473596,
+          "Text": "her socially awkward Chambermaid",
+          "BeginOffset": 475,
+          "EndOffset": 507
+        },
+        {
+          "Score": 0.8945900798,
+          "Text": "Mary",
+          "BeginOffset": 509,
+          "EndOffset": 513
+        },
+        {
+          "Score": 0.9974622726,
+          "Text": "Lucy",
+          "BeginOffset": 515,
+          "EndOffset": 519
+        },
+        {
+          "Score": 0.9973449707,
+          "Text": "her place",
+          "BeginOffset": 539,
+          "EndOffset": 548
+        },
+        {
+          "Score": 0.9967256188,
+          "Text": "the family",
+          "BeginOffset": 552,
+          "EndOffset": 562
+        },
+        {
+          "Score": 0.9865767956,
+          "Text": "Abel Baddon",
+          "BeginOffset": 564,
+          "EndOffset": 575
+        },
+        {
+          "Score": 0.9734175801,
+          "Text": "a devilishly handsome traveling salesman",
+          "BeginOffset": 577,
+          "EndOffset": 617
+        },
+        {
+          "Score": 0.8416845202,
+          "Text": "Dean Cain \"Lois and Clark",
+          "BeginOffset": 620,
+          "EndOffset": 645
+        },
+        {
+          "Score": 0.9962426424,
+          "Text": "The New Adventures",
+          "BeginOffset": 647,
+          "EndOffset": 665
+        },
+        {
+          "Score": 0.9637162089,
+          "Text": "Superman",
+          "BeginOffset": 669,
+          "EndOffset": 677
+        },
+        {
+          "Score": 0.9888338447,
+          "Text": "her fears",
+          "BeginOffset": 698,
+          "EndOffset": 707
+        },
+        {
+          "Score": 0.9910739064,
+          "Text": "her reluctance",
+          "BeginOffset": 719,
+          "EndOffset": 733
+        },
+        {
+          "Score": 0.9958289266,
+          "Text": "a charming gravedigger",
+          "BeginOffset": 763,
+          "EndOffset": 785
+        },
+        {
+          "Score": 0.9819002748,
+          "Text": "J.P.",
+          "BeginOffset": 792,
+          "EndOffset": 796
+        },
+        {
+          "Score": 0.9931433201,
+          "Text": "Dylan Kellogg",
+          "BeginOffset": 798,
+          "EndOffset": 811
+        },
+        {
+          "Score": 0.9826405644,
+          "Text": "ease",
+          "BeginOffset": 839,
+          "EndOffset": 843
+        },
+        {
+          "Score": 0.9376552701,
+          "Text": "the twists and turns",
+          "BeginOffset": 870,
+          "EndOffset": 890
+        },
+        {
+          "Score": 0.9986245632,
+          "Text": "the murky waters",
+          "BeginOffset": 894,
+          "EndOffset": 910
+        },
+        {
+          "Score": 0.9984517097,
+          "Text": "her family",
+          "BeginOffset": 914,
+          "EndOffset": 924
+        },
+        {
+          "Score": 0.9903956652,
+          "Text": "past",
+          "BeginOffset": 927,
+          "EndOffset": 931
+        },
+        {
+          "Score": 0.9979675412,
+          "Text": "shocking revelations",
+          "BeginOffset": 955,
+          "EndOffset": 975
+        }
+      ],
+      42
+    ]
+  },
+  "Language Code": {
+    "0": "en"
+  },
+  "Language Score": {
+    "0": 0.9919773936
+  },
+  "Sentiment": {
+    "0": "NEUTRAL"
+  },
+  "Sentiment Mixed Score": {
+    "0": 0.0159350876
+  },
+  "Sentiment Negative Score": {
+    "0": 0.0034077591
+  },
+  "Sentiment Neutral Score": {
+    "0": 0.9354583025
+  },
+  "Sentiment Positive Score": {
+    "0": 0.045198895
+  }
+}

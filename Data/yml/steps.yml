@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  recipe_id: 
+  name: MyText
+  amount: 1.5
+  time: 2012-10-30 23:01:25
+  notes: MyText
+  temperature: 1.5
+
+two:
+  recipe_id: 
+  name: MyText
+  amount: 1.5
+  time: 2012-10-30 23:01:25
+  notes: MyText
+  temperature: 1.5

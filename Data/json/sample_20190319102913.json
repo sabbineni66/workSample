@@ -1,0 +1,117 @@
+{
+  "status": {
+    "last_fetch": "2010-11-08T16:30:41+01:00",
+    "title": "A wonderful feed",
+    "next_fetch": "2010-11-08T18:30:41+01:00",
+    "last_parse": "2010-11-08T15:30:41+01:00",
+    "period": "600",
+    "http": "Awesome we got the feed right",
+    "last_maintenance_at": "2010-11-08T11:30:41+01:00",
+    "entries_count_since_last_maintenance": 24,
+    "code": 200,
+    "feed": "http://domain.tld/feed.xml",
+    "digest": false
+  },
+  "subtitle": "This is certainly a wonderful feed that you need to read!",
+  "title": "A wonderful feed",
+  "items": [
+    {
+      "longitude": -122.15925,
+      "title": "Amazon Launches Kindle DX eBook Reader with 9.7\" Screen",
+      "summary": "<br />\n      <br />\n      Engadget has just wrapped up live coverage of Amazon's press event introducing the Kindle DX, the next generation of Amazon's eBook reader.  The Kindle DX, now available for pre-order at a price of $489 for shipment this summer, conta...",
+      "verb": "post",
+      "actor": {
+        "permalinkUrl": "http://twitter.com/superfeedr",
+        "image": {
+          "url": "http://domain.tld/john.png"
+        },
+        "objectType": "person",
+        "displayName": "John Doe"
+      },
+      "postedTime": "2009-05-06T15:23:54Z",
+      "categories": [
+        "tag",
+        "category",
+        "topic"
+      ],
+      "attachments": [
+        {
+          "url": "http://podcast.com/something.mp3",
+          "mimetype": "audio/mp3"
+        }
+      ],
+      "links": [
+        {
+          "type": "text/html",
+          "title": "Amazon Launches Kindle DX eBook Reader with 9.7",
+          "href": "http://www.macrumors.com/2009/05/06/amazon-launches-kindle-dx-ebook-reader-with-9-7-screen/",
+          "rel": "alternate"
+        },
+        {
+          "type": "text/html",
+          "title": "Amazon Launches Kindle DX eBook Reader with 9.7",
+          "href": "http://www.macrumors.com/2009/05/06/amazon-launches-kindle-dx-ebook-reader-with-9-7-screen/comments",
+          "rel": "replies"
+        }
+      ],
+      "id": "http://www.macrumors.com/2009/05/06/amazon-launches-kindle-dx-ebook-reader-with-9-7-screen/",
+      "object": {
+        "title": "Title of the Object",
+        "content": "hello world",
+        "actor": {
+          "permalinkUrl": "http://domain.tld/second",
+          "displayName": "Second"
+        },
+        "postedTime": "2010-04-20T15:00:40+02:00",
+        "objectType": "place",
+        "links": [
+          {
+            "type": "text/html",
+            "title": "Title for first link",
+            "href": "http://domain.tld/object/2",
+            "rel": "alternate"
+          },
+          {
+            "type": "image/png",
+            "title": "Picture",
+            "href": "http://domain.tld/object/2",
+            "rel": "image"
+          }
+        ],
+        "id": "object-id",
+        "updated": "2010-04-21T14:00:40+02:00"
+      },
+      "latitude": 47.597553
+    },
+    {
+      "title": "AdWhirl: Free Ad-Supported iPhone Apps Can Be Very Lucrative",
+      "content": "Mobile advertising company AdWhirl issued a report (PDF) that details the success of some of the top ad-supported iPhone apps.  AdWhirl serves 250 million ad impressions monthly to over 10% of the top 50 Apps in the App Store.<br />\n      <br />\n      <br />\n      ...",
+      "postedTime": "2009-05-06T13:34:47Z",
+      "links": [
+        {
+          "type": "text/html",
+          "title": null,
+          "href": "http://www.macrumors.com/2009/05/06/adwhirl-free-ad-supported-iphone-apps-can-very-lucrative/",
+          "rel": "alternate"
+        }
+      ],
+      "id": "http://www.macrumors.com/2009/05/06/adwhirl-free-ad-supported-iphone-apps-can-very-lucrative/"
+    }
+  ],
+  "links": [
+    {
+      "type": "application/atom+xml",
+      "title": null,
+      "href": "http://domain.tld/feed.xml",
+      "rel": "self"
+    },
+    {
+      "type": "application/atom+xml",
+      "title": null,
+      "href": "http://feed.domain.tld/main.xml",
+      "rel": "canonical"
+    }
+  ],
+  "id": "http://domain.tld/feed.xml",
+  "updated": "2010-11-08T17:30:41+01:00"
+}

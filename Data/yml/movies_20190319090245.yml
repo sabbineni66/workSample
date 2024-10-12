@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  image_url: MyString
+  rating: 9.99
+  director: MyString
+  release_date: 2014-02-03
+  runtime: 1
+
+two:
+  title: MyString
+  image_url: MyString
+  rating: 9.99
+  director: MyString
+  release_date: 2014-02-03
+  runtime: 1

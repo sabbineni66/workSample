@@ -1,0 +1,19 @@
+--- 
+javascripts: 
+- base: 
+  - prototype
+  - effects
+  - dragdrop
+  - controls
+  - application
+stylesheets: 
+- base:
+  - blueprint/reset
+  - blueprint/typography
+  - blueprint/forms
+  - blueprint/grid 
+  - base
+- print:
+  - blueprint/print
+- ie:
+  - blueprint/ie

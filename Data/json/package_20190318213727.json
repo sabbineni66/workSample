@@ -1,0 +1,19 @@
+{
+  "name": "plex-web-client",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.6.*",
+    "npm": "1.1.*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": { 
+    "less": "1.3.*",
+    "requirejs": "1.0.*",
+    "express": "2.5.*",
+    "http-proxy": "0.8.*",
+    "almond": "0.0.*",
+    "watch": "0.5.*"
+  }
+}

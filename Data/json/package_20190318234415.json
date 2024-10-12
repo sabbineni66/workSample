@@ -1,0 +1,10 @@
+
+{
+  "name": "zeromq2beaconpush",
+  "version": "0.1.0",
+  "description": "",
+  "dependencies": {
+    "zeromq": "",
+    "socket.io": ""
+  }
+}

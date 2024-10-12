@@ -1,0 +1,42 @@
+- name: K ST NE + 3RD ST NE
+  id: 1001223
+  routes:
+    - name: D4
+      directions:
+        - name: East to Ivy City
+          times:
+            - 27
+            - 54
+            - 84
+        - name: West to Franklin Square
+          times:
+            - 3
+            - 23
+            - 53
+            - 83
+    - name: X2
+      directions:
+        - name: East to Minnesota Ave Station
+          times:
+            - 27
+            - 54
+            - 84
+        - name: West to Lafayette Square
+          times:
+            - 3
+            - 23
+            - 53
+            - 83
+    # - name: X3
+    #   directions:
+    #     - name: East to Minnesota Ave Station
+    #       times:
+    #         - 27
+    #         - 54
+    #         - 84
+    #     - name: West to Lafayette Square
+    #       times:
+    #         - 3
+    #         - 23
+    #         - 53
+    #         - 83

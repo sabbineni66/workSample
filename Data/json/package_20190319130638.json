@@ -1,0 +1,20 @@
+{
+  "name": "fableous",
+  "version": "1.0.0",
+  "description": "Experiments with Fable, the F# to Javascript compiler.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/btbytes/fableous/"
+  },
+  "keywords": [
+    "fsharp",
+    "javascript",
+    "altjs"
+  ],
+  "author": "Pradeep Gowda",
+  "license": "Apache-2.0"
+}

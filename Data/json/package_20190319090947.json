@@ -1,0 +1,16 @@
+{
+  "name": "fp-ts-oom-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lee Henson <lee.m.henson@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fp-ts": "https://github.com/leemhenson/fp-ts.git#circular-refs-1-14-1-compiled"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.3"
+  },
+  "resolutions": {
+    "fp-ts": "https://github.com/leemhenson/fp-ts.git#circular-refs-1-14-1-compiled"
+  }
+}

@@ -1,0 +1,1522 @@
+{
+  "pageCount": 55301653,
+  "didYouMeanSuggestions": [
+  {
+    "originalQuery": "louis rmstrong",
+    "newSearchCommand": "s.cmd=setTextQuery%28louis+armstrong%29",
+    "suggestedQuery": "louis armstrong"
+  }],
+  "queryTime": 360,
+  "documents": [
+    {
+      "Copyright_xml": [
+        {
+          "notice": "Copyright 2002 - Arizona Republic - All Rights Reverved"
+        }
+      ],
+      "PageNote": [
+        "B.5"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "PublicationTitle": [
+        "Arizona Republic"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "inHoldings": false,
+      "hasFullText": false,
+      "Title": [
+        "OBITUARIES"
+      ],
+      "PublicationDate": [
+        "20020316"
+      ],
+      "Author": [
+        "Hunter, Lisa"
+      ],
+      "Genre": [
+        "Obituary",
+        "Obituary"
+      ],
+      "PCID": [
+        "47992751"
+      ],
+      "ID": [
+        "proquest_dll_1839009301"
+      ],
+      "ISICitedReferencesCount": [
+        5
+      ],
+      "NewspaperSection": [
+        "Valley & State"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationEdition": [
+        "Final Chaser"
+      ],
+      "SSID": [
+        "ssj0015727"
+      ],
+      "ISSN": [
+        "0892-8711"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "03",
+          "text": "20020316",
+          "day": "16",
+          "year": "2002"
+        }
+      ],
+      "PublicationPlace": [
+        "Phoenix, Ariz"
+      ],
+      "openUrl": "ctx_ver=Z39.88-2004&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kevLmtx:journal&rft.genre=article&rft.atitle=OBITUARIES&rft.jtitle=Arizona+Republic&rft.date=2002-03-16&rft.issn=0892-8711&rft.spage=B.5&rft.externalDBID=AREP&rft.externalDocID=1839009301",
+      "PQID": [
+        "1839009301"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Phoenix, Ariz"
+        }
+      ],
+      "DLL_JC": [
+        "AREP"
+      ],
+      "Snippet": [
+        ""
+      ],
+      "Copyright": [
+        "Copyright 2002 - Arizona Republic - All Rights Reverved"
+      ],
+      "StartPage": [
+        "B.5"
+      ],
+      "ContentType": [
+        "Newspaper Article"
+      ]
+    },
+    {
+      "SubjectTerms": [
+        "Relocation"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Copyright 2002 - Arizona Republic - All Rights Reverved"
+        }
+      ],
+      "PageNote": [
+        "D.1"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "PublicationTitle": [
+        "Arizona Republic"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "inHoldings": false,
+      "Abstract": [
+        "With its combination of brand-name prices and discount prices, Kohl's has become one of the hottest names in retailing."
+      ],
+      "hasFullText": false,
+      "Title": [
+        "KOHL'S PLANS 8 TO 10 DEPARTMENT STORES IN VALLEY"
+      ],
+      "PublicationDate": [
+        "20020316"
+      ],
+      "Author": [
+        "Glen Creno"
+      ],
+      "Genre": [
+        "News",
+        "News"
+      ],
+      "PCID": [
+        "47992751"
+      ],
+      "ID": [
+        "proquest_dll_1839009611"
+      ],
+      "NewspaperSection": [
+        "Business"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationEdition": [
+        "Final Chaser"
+      ],
+      "SSID": [
+        "ssj0015727"
+      ],
+      "ISSN": [
+        "0892-8711"
+      ],
+      "Author_xml": [
+        {
+          "fullname": "Glen Creno"
+        }
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "03",
+          "text": "20020316",
+          "day": "16",
+          "year": "2002"
+        }
+      ],
+      "PublicationPlace": [
+        "Phoenix, Ariz"
+      ],
+      "openUrl": "ctx_ver=Z39.88-2004&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kevLmtx:journal&rft.genre=article&rft.atitle=KOHL%27S+PLANS+8+TO+10+DEPARTMENT+STORES+IN+VALLEY&rft.jtitle=Arizona+Republic&rft.au=Glen+Creno&rft.date=2002-03-16&rft.issn=0892-8711&rft.spage=D.1&rft.externalDBID=AREP&rft.externalDocID=1839009611",
+      "PQID": [
+        "1839009611"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Phoenix, Ariz"
+        }
+      ],
+      "DLL_JC": [
+        "AREP"
+      ],
+      "Snippet": [
+        "With its combination of brand-name prices and discount prices, Kohl's has become one of the hottest names in retailing."
+      ],
+      "Copyright": [
+        "Copyright 2002 - Arizona Republic - All Rights Reverved"
+      ],
+      "StartPage": [
+        "D.1"
+      ],
+      "ContentType": [
+        "Newspaper Article"
+      ]
+    },
+    {
+      "SubjectTerms": [
+        "Junk bonds",
+        "Bear markets",
+        "High yield investments",
+        "Mutual funds",
+        "Investment policy"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Copyright 2002 - Arizona Republic - All Rights Reverved"
+        }
+      ],
+      "PageNote": [
+        "D.1"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "PublicationTitle": [
+        "Arizona Republic"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "inHoldings": false,
+      "Abstract": [
+        "[...] both stocks and junk bonds should flourish if the economy picks up steam."
+      ],
+      "hasFullText": false,
+      "Title": [
+        "ECONOMIC REBOUND POINTS TO BETTER TIMES FOR BATTERED HIGH-YIELD FUNDS"
+      ],
+      "PublicationDate": [
+        "20020316"
+      ],
+      "Author": [
+        "RUSS WILES"
+      ],
+      "Genre": [
+        "News",
+        "News"
+      ],
+      "PCID": [
+        "47992751"
+      ],
+      "ID": [
+        "proquest_dll_1839009421"
+      ],
+      "NewspaperSection": [
+        "Business"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationEdition": [
+        "Final Chaser"
+      ],
+      "SSID": [
+        "ssj0015727"
+      ],
+      "ISSN": [
+        "0892-8711"
+      ],
+      "Author_xml": [
+        {
+          "fullname": "RUSS WILES"
+        }
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "03",
+          "text": "20020316",
+          "day": "16",
+          "year": "2002"
+        }
+      ],
+      "PublicationPlace": [
+        "Phoenix, Ariz"
+      ],
+      "openUrl": "ctx_ver=Z39.88-2004&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kevLmtx:journal&rft.genre=article&rft.atitle=ECONOMIC+REBOUND+POINTS+TO+BETTER+TIMES+FOR+BATTERED+HIGH-YIELD+FUNDS&rft.jtitle=Arizona+Republic&rft.au=RUSS+WILES&rft.date=2002-03-16&rft.issn=0892-8711&rft.spage=D.1&rft.externalDBID=AREP&rft.externalDocID=1839009421",
+      "PQID": [
+        "1839009421"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Phoenix, Ariz"
+        }
+      ],
+      "DLL_JC": [
+        "AREP"
+      ],
+      "Snippet": [
+        "[...] both stocks and junk bonds should flourish if the economy picks up steam."
+      ],
+      "Copyright": [
+        "Copyright 2002 - Arizona Republic - All Rights Reverved"
+      ],
+      "StartPage": [
+        "D.1"
+      ],
+      "ContentType": [
+        "Newspaper Article"
+      ]
+    },
+    {
+      "SubjectTerms": [
+        "Restaurants"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Copyright 2002 - Arizona Republic - All Rights Reverved"
+        }
+      ],
+      "PageNote": [
+        "E.10"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "PublicationTitle": [
+        "Arizona Republic"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "inHoldings": false,
+      "Abstract": [
+        "Choose from P.F. Chang's, Kona Grill and California Pizza Kitchen."
+      ],
+      "hasFullText": false,
+      "Title": [
+        "MALL UNDER THE MOON WHEN THE SUN SETS, THE LIGHTS GO ON AT CHANDLER'S INDOOR MECCA"
+      ],
+      "PublicationDate": [
+        "20020316"
+      ],
+      "Author": [
+        "Jaimee Rose"
+      ],
+      "Genre": [
+        "News",
+        "News"
+      ],
+      "PCID": [
+        "47992751"
+      ],
+      "ID": [
+        "proquest_dll_1839009851"
+      ],
+      "NewspaperSection": [
+        "Arizona Living"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationEdition": [
+        "Final Chaser"
+      ],
+      "SSID": [
+        "ssj0015727"
+      ],
+      "ISSN": [
+        "0892-8711"
+      ],
+      "Author_xml": [
+        {
+          "fullname": "Jaimee Rose"
+        }
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "03",
+          "text": "20020316",
+          "day": "16",
+          "year": "2002"
+        }
+      ],
+      "PublicationPlace": [
+        "Phoenix, Ariz"
+      ],
+      "openUrl": "ctx_ver=Z39.88-2004&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kevLmtx:journal&rft.genre=article&rft.atitle=MALL+UNDER+THE+MOON+WHEN+THE+SUN+SETS%2C+THE+LIGHTS+GO+ON+AT+CHANDLER%27S+INDOOR+MECCA&rft.jtitle=Arizona+Republic&rft.au=Jaimee+Rose&rft.date=2002-03-16&rft.issn=0892-8711&rft.spage=E.10&rft.externalDBID=AREP&rft.externalDocID=1839009851",
+      "PQID": [
+        "1839009851"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Phoenix, Ariz"
+        }
+      ],
+      "DLL_JC": [
+        "AREP"
+      ],
+      "Snippet": [
+        "Choose from P.F. Chang's, Kona Grill and California Pizza Kitchen."
+      ],
+      "Copyright": [
+        "Copyright 2002 - Arizona Republic - All Rights Reverved"
+      ],
+      "StartPage": [
+        "E.10"
+      ],
+      "ContentType": [
+        "Newspaper Article"
+      ]
+    },
+    {
+      "SubjectTerms": [
+        "Automobile racing"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Copyright 2002 - Arizona Republic - All Rights Reverved"
+        }
+      ],
+      "PageNote": [
+        "C.4"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "PublicationTitle": [
+        "Arizona Republic"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "inHoldings": false,
+      "Abstract": [
+        "The authors, who are veteran race reporters, even included a chapter that answers questions such as, Why don't (NASCAR drivers) race in the rain like other sanctioning bodies?"
+      ],
+      "hasFullText": false,
+      "Title": [
+        "HUGE NASCAR TOME HAS IT ALL"
+      ],
+      "PublicationDate": [
+        "20020316"
+      ],
+      "Author": [
+        "Mark Armijo"
+      ],
+      "Genre": [
+        "News",
+        "News"
+      ],
+      "PCID": [
+        "47992751"
+      ],
+      "ID": [
+        "proquest_dll_1839009651"
+      ],
+      "NewspaperSection": [
+        "Sports"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationEdition": [
+        "Final Chaser"
+      ],
+      "SSID": [
+        "ssj0015727"
+      ],
+      "ISSN": [
+        "0892-8711"
+      ],
+      "Author_xml": [
+        {
+          "fullname": "Mark Armijo"
+        }
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "03",
+          "text": "20020316",
+          "day": "16",
+          "year": "2002"
+        }
+      ],
+      "PublicationPlace": [
+        "Phoenix, Ariz"
+      ],
+      "openUrl": "ctx_ver=Z39.88-2004&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kevLmtx:journal&rft.genre=article&rft.atitle=HUGE+NASCAR+TOME+HAS+IT+ALL&rft.jtitle=Arizona+Republic&rft.au=Mark+Armijo&rft.date=2002-03-16&rft.issn=0892-8711&rft.spage=C.4&rft.externalDBID=AREP&rft.externalDocID=1839009651",
+      "PQID": [
+        "1839009651"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Phoenix, Ariz"
+        }
+      ],
+      "DLL_JC": [
+        "AREP"
+      ],
+      "Snippet": [
+        "The authors, who are veteran race reporters, even included a chapter that answers questions such as, Why don't (NASCAR drivers) race in the rain like other sanc..."
+      ],
+      "Copyright": [
+        "Copyright 2002 - Arizona Republic - All Rights Reverved"
+      ],
+      "StartPage": [
+        "C.4"
+      ],
+      "ContentType": [
+        "Newspaper Article"
+      ]
+    },
+    {
+      "SubjectTerms": [
+        "Athletes",
+        "Cyclones",
+        "Professional hockey"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Copyright 2002 - Arizona Republic - All Rights Reverved"
+        }
+      ],
+      "PageNote": [
+        "C.8"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "PublicationTitle": [
+        "Arizona Republic"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "inHoldings": false,
+      "Abstract": [
+        "Savage, 31, was acquired Jan. 25 from Montreal along with a third-round draft pick and future considerations for Sergei Berezin."
+      ],
+      "hasFullText": false,
+      "Title": [
+        "COYOTES SIGN SAVAGE FOR 4 MORE YEARS"
+      ],
+      "PublicationDate": [
+        "20020316"
+      ],
+      "Author": [
+        "Bob McManaman"
+      ],
+      "Genre": [
+        "News",
+        "News"
+      ],
+      "PCID": [
+        "47992751"
+      ],
+      "ID": [
+        "proquest_dll_1839009961"
+      ],
+      "NewspaperSection": [
+        "Sports"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationEdition": [
+        "Final Chaser"
+      ],
+      "SSID": [
+        "ssj0015727"
+      ],
+      "ISSN": [
+        "0892-8711"
+      ],
+      "Author_xml": [
+        {
+          "fullname": "Bob McManaman"
+        }
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "03",
+          "text": "20020316",
+          "day": "16",
+          "year": "2002"
+        }
+      ],
+      "PublicationPlace": [
+        "Phoenix, Ariz"
+      ],
+      "openUrl": "ctx_ver=Z39.88-2004&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kevLmtx:journal&rft.genre=article&rft.atitle=COYOTES+SIGN+SAVAGE+FOR+4+MORE+YEARS&rft.jtitle=Arizona+Republic&rft.au=Bob+McManaman&rft.date=2002-03-16&rft.issn=0892-8711&rft.spage=C.8&rft.externalDBID=AREP&rft.externalDocID=1839009961",
+      "PQID": [
+        "1839009961"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Phoenix, Ariz"
+        }
+      ],
+      "DLL_JC": [
+        "AREP"
+      ],
+      "Snippet": [
+        "Savage, 31, was acquired Jan. 25 from Montreal along with a third-round draft pick and future considerations for Sergei Berezin."
+      ],
+      "Copyright": [
+        "Copyright 2002 - Arizona Republic - All Rights Reverved"
+      ],
+      "StartPage": [
+        "C.8"
+      ],
+      "ContentType": [
+        "Newspaper Article"
+      ]
+    },
+    {
+      "Copyright_xml": [
+        {
+          "notice": "Copyright 2002 - Arizona Republic - All Rights Reverved"
+        }
+      ],
+      "PageNote": [
+        "B.4"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "PublicationTitle": [
+        "Arizona Republic"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "inHoldings": false,
+      "hasFullText": false,
+      "Title": [
+        "OBITUARIES"
+      ],
+      "PublicationDate": [
+        "20020316"
+      ],
+      "Genre": [
+        "Obituary",
+        "Obituary"
+      ],
+      "PCID": [
+        "47992751"
+      ],
+      "ID": [
+        "proquest_dll_1839009101"
+      ],
+      "NewspaperSection": [
+        "Valley & State"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationEdition": [
+        "Final Chaser"
+      ],
+      "SSID": [
+        "ssj0015727"
+      ],
+      "ISSN": [
+        "0892-8711"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "03",
+          "text": "20020316",
+          "day": "16",
+          "year": "2002"
+        }
+      ],
+      "PublicationPlace": [
+        "Phoenix, Ariz"
+      ],
+      "openUrl": "ctx_ver=Z39.88-2004&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kevLmtx:journal&rft.genre=article&rft.atitle=OBITUARIES&rft.jtitle=Arizona+Republic&rft.date=2002-03-16&rft.issn=0892-8711&rft.spage=B.4&rft.externalDBID=AREP&rft.externalDocID=1839009101",
+      "PQID": [
+        "1839009101"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Phoenix, Ariz"
+        }
+      ],
+      "DLL_JC": [
+        "AREP"
+      ],
+      "Snippet": [
+        ""
+      ],
+      "Copyright": [
+        "Copyright 2002 - Arizona Republic - All Rights Reverved"
+      ],
+      "StartPage": [
+        "B.4"
+      ],
+      "ContentType": [
+        "Newspaper Article"
+      ]
+    },
+    {
+      "SubjectTerms": [
+        "Athletes",
+        "Cyclones",
+        "Professional hockey"
+      ],
+      "Copyright_xml": [
+        {
+          "notice": "Copyright 2002 - Arizona Republic - All Rights Reverved"
+        }
+      ],
+      "PageNote": [
+        "C.1"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "PublicationTitle": [
+        "Arizona Republic"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "inHoldings": false,
+      "Abstract": [
+        "The sputtering but spunky Predators gave the Coyotes a fight, but they simply were no match for the hottest team in hockey, as Phoenix rolled to its sixth straight win with a 3-2 victory to start a five-game trip."
+      ],
+      "hasFullText": false,
+      "Title": [
+        "BURKE'S 40 SAVES KEY COYOTES' 6TH STRAIGHT VICTORY"
+      ],
+      "PublicationDate": [
+        "20020316"
+      ],
+      "Author": [
+        "Bob McManaman"
+      ],
+      "Genre": [
+        "News",
+        "News"
+      ],
+      "PCID": [
+        "47992751"
+      ],
+      "ID": [
+        "proquest_dll_1839009531"
+      ],
+      "NewspaperSection": [
+        "Sports"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationEdition": [
+        "Final Chaser"
+      ],
+      "SSID": [
+        "ssj0015727"
+      ],
+      "ISSN": [
+        "0892-8711"
+      ],
+      "Author_xml": [
+        {
+          "fullname": "Bob McManaman"
+        }
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "03",
+          "text": "20020316",
+          "day": "16",
+          "year": "2002"
+        }
+      ],
+      "PublicationPlace": [
+        "Phoenix, Ariz"
+      ],
+      "openUrl": "ctx_ver=Z39.88-2004&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kevLmtx:journal&rft.genre=article&rft.atitle=BURKE%27S+40+SAVES+KEY+COYOTES%27+6TH+STRAIGHT+VICTORY&rft.jtitle=Arizona+Republic&rft.au=Bob+McManaman&rft.date=2002-03-16&rft.issn=0892-8711&rft.spage=C.1&rft.externalDBID=AREP&rft.externalDocID=1839009531",
+      "PQID": [
+        "1839009531"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Phoenix, Ariz"
+        }
+      ],
+      "DLL_JC": [
+        "AREP"
+      ],
+      "Snippet": [
+        "The sputtering but spunky Predators gave the Coyotes a fight, but they simply were no match for the hottest team in hockey, as Phoenix rolled to its sixth strai..."
+      ],
+      "Copyright": [
+        "Copyright 2002 - Arizona Republic - All Rights Reverved"
+      ],
+      "StartPage": [
+        "C.1"
+      ],
+      "ContentType": [
+        "Newspaper Article"
+      ]
+    },
+    {
+      "Copyright_xml": [
+        {
+          "notice": "Copyright 2002 - Arizona Republic - All Rights Reverved"
+        }
+      ],
+      "PageNote": [
+        "B.4"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "PublicationTitle": [
+        "Arizona Republic"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "inHoldings": false,
+      "hasFullText": false,
+      "Title": [
+        "OBITUARIES"
+      ],
+      "PublicationDate": [
+        "20020316"
+      ],
+      "Genre": [
+        "Obituary",
+        "Obituary"
+      ],
+      "PCID": [
+        "47992751"
+      ],
+      "ID": [
+        "proquest_dll_1839009191"
+      ],
+      "NewspaperSection": [
+        "Valley & State"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationEdition": [
+        "Final Chaser"
+      ],
+      "SSID": [
+        "ssj0015727"
+      ],
+      "ISSN": [
+        "0892-8711"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "03",
+          "text": "20020316",
+          "day": "16",
+          "year": "2002"
+        }
+      ],
+      "PublicationPlace": [
+        "Phoenix, Ariz"
+      ],
+      "openUrl": "ctx_ver=Z39.88-2004&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kevLmtx:journal&rft.genre=article&rft.atitle=OBITUARIES&rft.jtitle=Arizona+Republic&rft.date=2002-03-16&rft.issn=0892-8711&rft.spage=B.4&rft.externalDBID=AREP&rft.externalDocID=1839009191",
+      "PQID": [
+        "1839009191"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Phoenix, Ariz"
+        }
+      ],
+      "DLL_JC": [
+        "AREP"
+      ],
+      "Snippet": [
+        ""
+      ],
+      "Copyright": [
+        "Copyright 2002 - Arizona Republic - All Rights Reverved"
+      ],
+      "StartPage": [
+        "B.4"
+      ],
+      "ContentType": [
+        "Newspaper Article"
+      ]
+    },
+    {
+      "Copyright_xml": [
+        {
+          "notice": "Copyright 2002 - Arizona Republic - All Rights Reverved"
+        }
+      ],
+      "PageNote": [
+        "B.4"
+      ],
+      "PublicationDecade": [
+        "2000"
+      ],
+      "PublicationTitle": [
+        "Arizona Republic"
+      ],
+      "PublicationCentury": [
+        "2000"
+      ],
+      "inHoldings": false,
+      "hasFullText": false,
+      "Title": [
+        "OBITUARIES"
+      ],
+      "PublicationDate": [
+        "20020316"
+      ],
+      "Genre": [
+        "Obituary",
+        "Obituary"
+      ],
+      "PCID": [
+        "47992751"
+      ],
+      "ID": [
+        "proquest_dll_1839009071"
+      ],
+      "NewspaperSection": [
+        "Valley & State"
+      ],
+      "Language": [
+        "English"
+      ],
+      "PublicationEdition": [
+        "Final Chaser"
+      ],
+      "SSID": [
+        "ssj0015727"
+      ],
+      "ISSN": [
+        "0892-8711"
+      ],
+      "PublicationDate_xml": [
+        {
+          "month": "03",
+          "text": "20020316",
+          "day": "16",
+          "year": "2002"
+        }
+      ],
+      "PublicationPlace": [
+        "Phoenix, Ariz"
+      ],
+      "openUrl": "ctx_ver=Z39.88-2004&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kevLmtx:journal&rft.genre=article&rft.atitle=OBITUARIES&rft.jtitle=Arizona+Republic&rft.date=2002-03-16&rft.issn=0892-8711&rft.spage=B.4&rft.externalDBID=AREP&rft.externalDocID=1839009071",
+      "PQID": [
+        "1839009071"
+      ],
+      "PublicationPlace_xml": [
+        {
+          "name": "Phoenix, Ariz"
+        }
+      ],
+      "DLL_JC": [
+        "AREP"
+      ],
+      "Snippet": [
+        ""
+      ],
+      "Copyright": [
+        "Copyright 2002 - Arizona Republic - All Rights Reverved"
+      ],
+      "StartPage": [
+        "B.4"
+      ],
+      "ContentType": [
+        "Newspaper Article"
+      ]
+    }
+  ],
+  "totalRequestTime": 380,
+  "elapsedQueryTime": 369,
+  "version": "1.1.0",
+  "facetFields": [
+    {
+      "pageSize": 6,
+      "displayName": "ContentType",
+      "listValuesCommand": "listFacetValues(ContentType,or)",
+      "pageNumber": 1,
+      "combineMode": "or",
+      "hasAppliedValue": false,
+      "removeCommand": "removeFacetField(ContentType)",
+      "hasLimitingValue": true,
+      "fieldName": "ContentType_sfacet",
+      "removeValueFiltersCommand": "removeFacetValueFilter(ContentType)",
+      "counts": [
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 397831756,
+          "value": "Newspaper Article",
+          "applyNegatedCommand": "addFacetValueFilters(ContentType,Newspaper Article:t)",
+          "applyCommand": "addFacetValueFilters(ContentType,Newspaper Article)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 118733119,
+          "value": "Journal Article",
+          "applyNegatedCommand": "addFacetValueFilters(ContentType,Journal Article:t)",
+          "applyCommand": "addFacetValueFilters(ContentType,Journal Article)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 16238898,
+          "value": "Book",
+          "applyNegatedCommand": "addFacetValueFilters(ContentType,Book:t)",
+          "applyCommand": "addFacetValueFilters(ContentType,Book)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 7333265,
+          "value": "Dissertation",
+          "applyNegatedCommand": "addFacetValueFilters(ContentType,Dissertation:t)",
+          "applyCommand": "addFacetValueFilters(ContentType,Dissertation)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 3489367,
+          "value": "eBook",
+          "applyNegatedCommand": "addFacetValueFilters(ContentType,eBook:t)",
+          "applyCommand": "addFacetValueFilters(ContentType,eBook)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 1983494,
+          "value": "Government Document",
+          "applyNegatedCommand": "addFacetValueFilters(ContentType,Government Document:t)",
+          "applyCommand": "addFacetValueFilters(ContentType,Government Document)",
+          "isApplied": false
+        }
+      ]
+    },
+    {
+      "pageSize": 2,
+      "displayName": "IsScholarly",
+      "listValuesCommand": "listFacetValues(IsScholarly,or)",
+      "pageNumber": 1,
+      "combineMode": "or",
+      "hasAppliedValue": false,
+      "removeCommand": "removeFacetField(IsScholarly)",
+      "hasLimitingValue": true,
+      "fieldName": "IsScholarly_b",
+      "removeValueFiltersCommand": "removeFacetValueFilter(IsScholarly)",
+      "counts": [
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 113082156,
+          "value": "false",
+          "applyNegatedCommand": "addFacetValueFilters(IsScholarly,false:t)",
+          "applyCommand": "addFacetValueFilters(IsScholarly,false)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 13822003,
+          "value": "true",
+          "applyNegatedCommand": "addFacetValueFilters(IsScholarly,true:t)",
+          "applyCommand": "addFacetValueFilters(IsScholarly,true)",
+          "isApplied": false
+        }
+      ]
+    },
+    {
+      "pageSize": 6,
+      "displayName": "Language",
+      "listValuesCommand": "listFacetValues(Language,or)",
+      "pageNumber": 1,
+      "combineMode": "or",
+      "hasAppliedValue": false,
+      "removeCommand": "removeFacetField(Language)",
+      "hasLimitingValue": true,
+      "fieldName": "Language_mfacet",
+      "removeValueFiltersCommand": "removeFacetValueFilter(Language)",
+      "counts": [
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 517427235,
+          "value": "English",
+          "applyNegatedCommand": "addFacetValueFilters(Language,English:t)",
+          "applyCommand": "addFacetValueFilters(Language,English)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 5478697,
+          "value": "Spanish",
+          "applyNegatedCommand": "addFacetValueFilters(Language,Spanish:t)",
+          "applyCommand": "addFacetValueFilters(Language,Spanish)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 2190194,
+          "value": "Portuguese",
+          "applyNegatedCommand": "addFacetValueFilters(Language,Portuguese:t)",
+          "applyCommand": "addFacetValueFilters(Language,Portuguese)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 1859828,
+          "value": "German",
+          "applyNegatedCommand": "addFacetValueFilters(Language,German:t)",
+          "applyCommand": "addFacetValueFilters(Language,German)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 1583220,
+          "value": "French",
+          "applyNegatedCommand": "addFacetValueFilters(Language,French:t)",
+          "applyCommand": "addFacetValueFilters(Language,French)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 310798,
+          "value": "Chinese",
+          "applyNegatedCommand": "addFacetValueFilters(Language,Chinese:t)",
+          "applyCommand": "addFacetValueFilters(Language,Chinese)",
+          "isApplied": false
+        }
+      ]
+    },
+    {
+      "pageSize": 6,
+      "displayName": "Library",
+      "listValuesCommand": "listFacetValues(Library,or)",
+      "pageNumber": 1,
+      "combineMode": "or",
+      "hasAppliedValue": false,
+      "removeCommand": "removeFacetField(Library)",
+      "hasLimitingValue": true,
+      "fieldName": "Library_mfacet",
+      "removeValueFiltersCommand": "removeFacetValueFilter(Library)",
+      "counts": [
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 1068666,
+          "value": "Main Library",
+          "applyNegatedCommand": "addFacetValueFilters(Library,Main Library:t)",
+          "applyCommand": "addFacetValueFilters(Library,Main Library)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 1064988,
+          "value": "Baker Berry Library",
+          "applyNegatedCommand": "addFacetValueFilters(Library,Baker Berry Library:t)",
+          "applyCommand": "addFacetValueFilters(Library,Baker Berry Library)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 960121,
+          "value": "HAYDEN STACKS",
+          "applyNegatedCommand": "addFacetValueFilters(Library,HAYDEN STACKS:t)",
+          "applyCommand": "addFacetValueFilters(Library,HAYDEN STACKS)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 741136,
+          "value": "Fisher Research",
+          "applyNegatedCommand": "addFacetValueFilters(Library,Fisher Research:t)",
+          "applyCommand": "addFacetValueFilters(Library,Fisher Research)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 512123,
+          "value": "UMKC Nichols Library",
+          "applyNegatedCommand": "addFacetValueFilters(Library,UMKC Nichols Library:t)",
+          "applyCommand": "addFacetValueFilters(Library,UMKC Nichols Library)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 508825,
+          "value": "E-Book Collection",
+          "applyNegatedCommand": "addFacetValueFilters(Library,E-Book Collection:t)",
+          "applyCommand": "addFacetValueFilters(Library,E-Book Collection)",
+          "isApplied": false
+        }
+      ]
+    },
+    {
+      "pageSize": 6,
+      "displayName": "SubjectTerms",
+      "listValuesCommand": "listFacetValues(SubjectTerms,and)",
+      "pageNumber": 1,
+      "combineMode": "and",
+      "hasAppliedValue": false,
+      "removeCommand": "removeFacetField(SubjectTerms)",
+      "hasLimitingValue": true,
+      "fieldName": "SubjectTerms_mfacet",
+      "removeValueFiltersCommand": "removeFacetValueFilter(SubjectTerms)",
+      "counts": [
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 6835055,
+          "value": "canada",
+          "applyNegatedCommand": "addFacetValueFilters(SubjectTerms,canada:t)",
+          "applyCommand": "addFacetValueFilters(SubjectTerms,canada)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 4325317,
+          "value": "united states",
+          "applyNegatedCommand": "addFacetValueFilters(SubjectTerms,united states:t)",
+          "applyCommand": "addFacetValueFilters(SubjectTerms,united states)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 3053506,
+          "value": "history",
+          "applyNegatedCommand": "addFacetValueFilters(SubjectTerms,history:t)",
+          "applyCommand": "addFacetValueFilters(SubjectTerms,history)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 2708084,
+          "value": "humans",
+          "applyNegatedCommand": "addFacetValueFilters(SubjectTerms,humans:t)",
+          "applyCommand": "addFacetValueFilters(SubjectTerms,humans)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 2307790,
+          "value": "athletes",
+          "applyNegatedCommand": "addFacetValueFilters(SubjectTerms,athletes:t)",
+          "applyCommand": "addFacetValueFilters(SubjectTerms,athletes)",
+          "isApplied": false
+        },
+        {
+          "isFurtherLimiting": true,
+          "isNegated": false,
+          "count": 2297895,
+          "value": "nonfiction",
+          "applyNegatedCommand": "addFacetValueFilters(SubjectTerms,nonfiction:t)",
+          "applyCommand": "addFacetValueFilters(SubjectTerms,nonfiction)",
+          "isApplied": false
+        }
+      ]
+    },
+    {
+      "pageSize": 1,
+      "displayName": "IsFullText",
+      "pageNumber": 0,
+      "combineMode": "or",
+      "hasAppliedValue": false,
+      "removeCommand": "removeFacetField(IsFullText)",
+      "hasLimitingValue": false,
+      "fieldName": "IsFullText",
+      "removeValueFiltersCommand": "removeFacetValueFilter(IsFullText)",
+      "counts": [
+
+      ]
+    }
+  ],
+  "rangeFacetFields": [
+    {
+      "displayName": "PublicationDate",
+      "removeCommand": "removeFacetField(PublicationDate)",
+      "fieldName": "PublicationDate_dt",
+      "counts": [
+        {
+          "count": 339655011,
+          "applyCommand": "addRangeFilter(PublicationDate,*:2000)",
+          "range": {
+            "minValue": "*",
+            "maxValue": "2000"
+          },
+          "isApplied": false
+        },
+        {
+          "count": 18856986,
+          "applyCommand": "addRangeFilter(PublicationDate,2001:2001)",
+          "range": {
+            "minValue": "2001",
+            "maxValue": "2001"
+          },
+          "isApplied": false
+        },
+        {
+          "count": 19002048,
+          "applyCommand": "addRangeFilter(PublicationDate,2002:2002)",
+          "range": {
+            "minValue": "2002",
+            "maxValue": "2002"
+          },
+          "isApplied": false
+        },
+        {
+          "count": 21173262,
+          "applyCommand": "addRangeFilter(PublicationDate,2003:2003)",
+          "range": {
+            "minValue": "2003",
+            "maxValue": "2003"
+          },
+          "isApplied": false
+        },
+        {
+          "count": 22103626,
+          "applyCommand": "addRangeFilter(PublicationDate,2004:2004)",
+          "range": {
+            "minValue": "2004",
+            "maxValue": "2004"
+          },
+          "isApplied": false
+        },
+        {
+          "count": 24616569,
+          "applyCommand": "addRangeFilter(PublicationDate,2005:2005)",
+          "range": {
+            "minValue": "2005",
+            "maxValue": "2005"
+          },
+          "isApplied": false
+        },
+        {
+          "count": 24828835,
+          "applyCommand": "addRangeFilter(PublicationDate,2006:2006)",
+          "range": {
+            "minValue": "2006",
+            "maxValue": "2006"
+          },
+          "isApplied": false
+        },
+        {
+          "count": 36248702,
+          "applyCommand": "addRangeFilter(PublicationDate,2007:2007)",
+          "range": {
+            "minValue": "2007",
+            "maxValue": "2007"
+          },
+          "isApplied": false
+        },
+        {
+          "count": 24181815,
+          "applyCommand": "addRangeFilter(PublicationDate,2008:2008)",
+          "range": {
+            "minValue": "2008",
+            "maxValue": "2008"
+          },
+          "isApplied": false
+        },
+        {
+          "count": 21039863,
+          "applyCommand": "addRangeFilter(PublicationDate,2009:2009)",
+          "range": {
+            "minValue": "2009",
+            "maxValue": "2009"
+          },
+          "isApplied": false
+        }
+      ]
+    }
+  ],
+  "recordCount": 553016530,
+  "sessionId": "SUMMON-SESSION-legolas.local-98635-1",
+  "query": {
+    "searchTerms": [
+
+    ],
+    "pageSize": 10,
+    "rangeFilters": [
+
+    ],
+    "facetValueGroupFilters": [
+
+    ],
+    "facetValueFilters": [
+
+    ],
+    "queryString": "s.ho=t&s.rff=PublicationDate%2C*%3A2000%2C2001%3A2001%2C2002%3A2002%2C2003%3A2003%2C2004%3A2004%2C2005%3A2005%2C2006%3A2006%2C2007%3A2007%2C2008%3A2008%2C2009%3A2009&s.ps=10&s.ff=IsScholarly%2Cor%2C1%2C2&s.ff=Language%2Cor%2C1%2C6&s.ff=ContentType%2Cor%2C1%2C6&s.ff=IsFullText%2Cor%2C1%2C2&s.ff=Library%2Cor%2C1%2C6&s.ff=SubjectTerms%2Cand%2C1%2C6",
+    "facetFields": [
+      {
+        "pageSize": 2,
+        "pageNumber": 1,
+        "combineMode": "or",
+        "removeCommand": "removeFacetField(IsScholarly)",
+        "fieldName": "IsScholarly"
+      },
+      {
+        "pageSize": 6,
+        "pageNumber": 1,
+        "combineMode": "or",
+        "removeCommand": "removeFacetField(Language)",
+        "fieldName": "Language"
+      },
+      {
+        "pageSize": 6,
+        "pageNumber": 1,
+        "combineMode": "or",
+        "removeCommand": "removeFacetField(ContentType)",
+        "fieldName": "ContentType"
+      },
+      {
+        "pageSize": 2,
+        "pageNumber": 1,
+        "combineMode": "or",
+        "removeCommand": "removeFacetField(IsFullText)",
+        "fieldName": "IsFullText"
+      },
+      {
+        "pageSize": 6,
+        "pageNumber": 1,
+        "combineMode": "or",
+        "removeCommand": "removeFacetField(Library)",
+        "fieldName": "Library"
+      },
+      {
+        "pageSize": 6,
+        "pageNumber": 1,
+        "combineMode": "and",
+        "removeCommand": "removeFacetField(SubjectTerms)",
+        "fieldName": "SubjectTerms"
+      }
+    ],
+    "textFilters": [
+
+    ],
+    "textQueries": [
+
+    ],
+    "sort": [
+
+    ],
+    "rangeFacetFields": [
+      {
+        "ranges": [
+          {
+            "minValue": "*",
+            "maxValue": "2000"
+          },
+          {
+            "minValue": "2001",
+            "maxValue": "2001"
+          },
+          {
+            "minValue": "2002",
+            "maxValue": "2002"
+          },
+          {
+            "minValue": "2003",
+            "maxValue": "2003"
+          },
+          {
+            "minValue": "2004",
+            "maxValue": "2004"
+          },
+          {
+            "minValue": "2005",
+            "maxValue": "2005"
+          },
+          {
+            "minValue": "2006",
+            "maxValue": "2006"
+          },
+          {
+            "minValue": "2007",
+            "maxValue": "2007"
+          },
+          {
+            "minValue": "2008",
+            "maxValue": "2008"
+          },
+          {
+            "minValue": "2009",
+            "maxValue": "2009"
+          }
+        ],
+        "removeCommand": "removeFacetField(PublicationDate)",
+        "fieldName": "PublicationDate"
+      }
+    ],
+    "isHoldingsOnlyEnabled": true
+  }
+}

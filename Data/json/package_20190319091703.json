@@ -1,0 +1,36 @@
+{
+  "name": "playbyplay",
+  "private": true,
+  "scripts": {
+    "sass-lint": "sass-lint --verbose app/assets/stylesheets/**/*.scss",
+    "eslint": "eslint app/javascript/**/*.js",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
+  },
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "autosize": "^4.0.2",
+    "es6-shim": "^0.35.3",
+    "intersection-observer": "^0.5.0",
+    "lodash": "^4.17.10",
+    "mdn-polyfills": "^5.6.0",
+    "popmotion": "^8.1.22",
+    "promise-polyfill": "^7.1.2",
+    "rails-ujs": "^5.2.0",
+    "requestidlecallback": "^0.3.0",
+    "stimulus": "^1.0.1",
+    "stylefire": "^1.2.15",
+    "tether-drop": "^1.4.2",
+    "turbolinks": "^5.1.1",
+    "weakmap-polyfill": "^2.0.0",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.11.0",
+    "sass-lint": "^1.12.1",
+    "webpack-dev-server": "2.11.2"
+  }
+}

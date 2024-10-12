@@ -1,0 +1,16 @@
+{
+  "name": "base",
+  "description": "Configures a Chef client.",
+
+  "recipes": [
+    "extensions",
+    "local_rubygems",
+    "openssh",
+    "rsnapshot"
+  ],
+
+  "default_attributes": {},
+  "override_attributes": {},
+  "json_class": "Chef::Role",
+  "chef_type": "role"
+}

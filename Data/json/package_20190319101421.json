@@ -1,0 +1,36 @@
+{
+  "name": "cerebral-fluent-example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@cerebral/fluent": "^1.0.0-1520517968119",
+    "@cerebral/http": "^5.0.0-1520517968119",
+    "@cerebral/router": "^4.0.0-1520517968119",
+    "@cerebral/storage": "^5.0.0-1520517968119",
+    "bloomer": "^0.6.3",
+    "cerebral": "^5.0.0-1520517968119",
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts-ts": "2.14.0",
+    "styled-components": "^3.2.1",
+    "typestyle": "^1.7.2"
+  },
+  "scripts": {
+    "check": "react-scripts-ts",
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.0",
+    "@types/lodash": "^4.14.104",
+    "@types/node": "^9.4.7",
+    "@types/prop-types": "^15.5.2",
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "typescript": "^2.7.2"
+  }
+}

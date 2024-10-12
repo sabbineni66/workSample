@@ -1,0 +1,21 @@
+---
+- name: Add dev user
+  user: name=tfwright password="{{password_from_prompt}}" shell=/bin/bash groups="sudo"
+
+- name: upload public key
+  authorized_key: user=tfwright key="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+
+- name: Disallow password authentication
+  lineinfile: dest=/etc/ssh/sshd_config regexp="^PasswordAuthentication" line="PasswordAuthentication no" state=present
+  notify: Restart ssh
+
+- name: Disallow root SSH access
+  lineinfile: dest=/etc/ssh/sshd_config regexp="^PermitRootLogin" line="PermitRootLogin no" state=present
+  notify: Restart ssh
+
+- name: "Upload private key"
+  copy:
+    content: "{{ ssh_private_key }}"
+    dest: "/home/tfwright/.ssh/id_rsa"
+    mode: 0600
+    owner: tfwright

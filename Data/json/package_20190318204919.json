@@ -1,0 +1,26 @@
+{
+  "author": "Seth Fitzsimmons <seth@mojodna.net> (http://mojodna.net/)",
+  "name": "jersey",
+  "description": "Bridges UDP packets on to the information superhighway.",
+  "version": "0.1.2-SNAPSHOT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mojodna/node-jersey.git"
+  },
+  "main": "./index",
+  "bin": { "jersey-onramp": "./bin/onramp", "jersey-offramp": "./bin/offramp" },
+  "license": "MIT",
+  "scripts": {
+    "test": "node_modules/.bin/mocha -R spec"
+  },
+  "engines": {
+    "node": "~0.6.0"
+  },
+  "dependencies": {
+    "commander": "~0.5.2"
+  },
+  "devDependencies": {
+    "mocha": "~0.12.0",
+    "chai": "~0.3.1"
+  }
+}

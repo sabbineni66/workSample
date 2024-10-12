@@ -1,0 +1,33 @@
+{
+  "name": "Topicbot",
+  "description": "A topic suggestion app in Rails, for podcasters.",
+  "website": "http://topics.5by5.tv",
+  "repository": "https://github.com/dan/topicbot",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:setup"
+  },
+  "env": {
+    "TWITTER_API_KEY": {
+      "description": "Get this by creating an app at https://apps.twitter.com",
+      "value": "abcdef"
+    },
+    "TWITTER_API_SECRET": {
+      "description": "Get this by creating an app at https://apps.twitter.com",
+      "value": "abcdef123456"
+    },
+    "SECRET_TOKEN": {
+      "generator": "secret"
+    },
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    },
+    "RAILS_ENV": "production",
+    "RACK_ENV": "production"
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev",
+  "librato",
+  "papertrail"
+    ]
+}
+

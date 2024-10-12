@@ -1,0 +1,18 @@
+language: go
+go:
+  - 1.7.x
+  - 1.8.x
+  - 1.9.x
+  - 1.10.x
+
+branches:
+  only:
+    - master
+    - /^test_/
+    - /^test-/
+
+install:
+  - go test -i . # Mostly to avoid Travis's default `go get`
+
+script:
+  - go test -v .

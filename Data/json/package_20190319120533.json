@@ -1,0 +1,45 @@
+{
+  "name": "@uiengine/adapter-handlebars",
+  "description": "UIengine template adapter for Handlebars.",
+  "license": "MIT",
+  "version": "2.0.2",
+  "author": "Dennis Reimann <mail@dennisreimann.de> (https://dennisreimann.de)",
+  "homepage": "https://github.com/dennisreimann/uiengine",
+  "bugs": "https://github.com/dennisreimann/uiengine/issues",
+  "repository": "dennisreimann/uiengine",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10.13"
+  },
+  "main": "./src/index.js",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "uiengine-adapter",
+    "uiengine",
+    "handlebars"
+  ],
+  "dependencies": {
+    "globby": "9.0.0"
+  },
+  "devDependencies": {
+    "handlebars": "4.1.0",
+    "lint-staged": "8.1.4"
+  },
+  "peerDependencies": {
+    "handlebars": "^4.1.0"
+  },
+  "scripts": {
+    "lint": "eslint src test",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run lint --fix",
+      "git add"
+    ]
+  }
+}

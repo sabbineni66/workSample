@@ -1,0 +1,25 @@
+{
+  "name": "musemonitor_osc2udp",
+  "version": "1.0.0",
+  "description": "Convert Muse Monitor OSC packets to UDP datagram",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "precommit": "pretty-quick --staged"
+  },
+  "repository":
+    "https://github.com/alx/semaine_du_cerveau_2018/tree/gh-pages/code/osc2udp/node",
+  "author": "Alexandre Girard",
+  "license": "MIT",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.8.5",
+    "osc": "^2.2.0",
+    "osc-min": "^1.1.1"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "prettier": "1.10.2",
+    "pretty-quick": "^1.3.0"
+  }
+}

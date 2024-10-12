@@ -1,0 +1,33 @@
+{
+  "name": "r2",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Butterfat",
+  "description": "Beep Beep Boop Boop",
+  "dependencies": {
+    "hubot": "^2.19.0",
+    "hubot-auth": "^1.2.0",
+    "hubot-diagnostics": "0.0.1",
+    "hubot-frinkiac-me": "^0.2.0",
+    "hubot-google-images": "^0.2.6",
+    "hubot-google-translate": "^0.1.0",
+    "hubot-help": "^0.1.1",
+    "hubot-maps": "0.0.2",
+    "hubot-outofcontext": "^1.0.1",
+    "hubot-plusplus": "^1.1.5",
+    "hubot-pugme": "^0.1.0",
+    "hubot-redis-brain": "0.0.3",
+    "hubot-rules": "^0.1.0",
+    "hubot-scripts": "^2.5.16",
+    "hubot-seen": "^0.2.1",
+    "hubot-shipit": "^0.1.1",
+    "hubot-slack": "^4.0.5",
+    "hubot-soon": "^1.0.0",
+    "hubot-startup": "git://github.com/bouzuya/hubot-startup.git",
+    "hubot-tell": "^1.2.3",
+    "hubot-youtube": "^0.1.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}

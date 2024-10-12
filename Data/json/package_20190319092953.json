@@ -1,0 +1,72 @@
+{
+	"title": "Juan G. Hurtado gym track",
+	"name": "gym",
+	"version": "0.0.1",
+	"author": "Juan G. Hurtado <juan.g.hurtado@gmail.com>",
+	"description": "Tracks Juan G. Hurtado gym progression",
+	"devDependencies": {
+		"grunt" : "~0.4.0",
+		"grunt-ftp-deploy" : "*"
+	}
+}tbook-plugin-cookie-consent",
+		"repository": {
+				"type": "git",
+				"url": "https://github.com/juanghurtado/gitbook-plugin-cookie-consent.git"
+		},
+		"license": "Apache-2.0",
+		"bugs": {
+				"url": "https://github.com/juanghurtado/gitbook-plugin-cookie-consent/issues"
+		},
+    "properties": {
+        "message": {
+            "type": "string",
+            "title": "The message shown by the plugin",
+            "required": false
+        },
+        "dismiss": {
+            "type": "string",
+            "title": "The text used on the dismiss button",
+            "required": false
+        },
+        "learnMore": {
+            "type": "string",
+            "title": "The text shown on the link to the cookie policy",
+            "required": false
+        },
+        "link": {
+            "type": "string",
+            "title": "The URL to your cookie policy. If it's set to null, the link is hidden",
+            "required": false
+        },
+        "container": {
+            "type": "string",
+            "title": "The element you want the Cookie Consent notification to be appended to. If null, plugin is appended to the body",
+            "required": false
+        },
+        "theme": {
+            "type": "string",
+            "title": "The theme you wish to use. Can be any of the themes from the style directory.",
+            "required": false
+        },
+        "path": {
+            "type": "string",
+            "title": "The path for the consent cookie that the plugin uses, to remember that users have consented to cookies. Use to limit consent to a specific path within your website",
+            "required": false
+        },
+        "domain": {
+            "type": "string",
+            "title": "The domain for the consent cookie that Cookie Consent uses, to remember that users have consented to cookies. Useful if your website uses multiple subdomains, e.g. if your script is hosted at www.example.com you might override this to example.com, thereby allowing the same consent cookie to be read by subdomains like foo.example.com.",
+            "required": false
+        },
+        "expiryDays": {
+            "type": "integer",
+            "title": "The number of days Cookie Consent should store the user?s consent information for.",
+            "required": false
+        },
+        "target": {
+            "type": "string",
+            "title": "The target of the link to your cookie policy. Use to open a link in a new window, or specific frame, if you wish.",
+            "required": false
+        }
+    }
+}

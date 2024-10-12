@@ -1,0 +1,48 @@
+development: &defaults
+  # Used by mailers and models as hostname to generate URLs to Alonetone.
+  hostname: localhost:3000
+  # Default FROM address when sending email.
+  email: support@example.com
+  # Secret key base used by Rails (normally configured in config/secrets.yml)
+  secret: ~
+  # Type of storage provider to use, see config/storage.yml for options.
+  storage_service: filesystem
+  # When set to true the application will play dummy audio (instead of
+  # uploaded MP3s).
+  play_dummy_audio: false
+  # When set to true the application will show dummy images (instead of
+  # uploaded images).
+  show_dummy_image: false
+  # Amazon S3 configuration. Leave blank when using disk based storage.
+  amazon_access_key_id: ~
+  amazon_secret_access_key: ~
+  amazon_s3_region: ~
+  amazon_s3_bucket_name: ~
+  # Amazon CloudFront configuration. Leave blank to serve files directly out
+  # of the S3 bucket.
+  amazon_cloud_front_domain_name: ~
+  amazon_cloud_front_key_pair_id: ~
+  # API token to use when accessing Askimet for spam filtering. You can
+  # register at https://akismet.com.
+  rakismet_key: ~
+  # Google Analytics will track usage when configured with a analytics
+  # tracking ID.
+  google_analytics_tracking_id: ~
+  # Configure Typekit token to start using Typekit for fonts.
+  typekit_embed_token: ~
+  # Deprecated: used by Greenfield views as hostname for URLs linking to
+  # Greenfield.
+  greenfield_hostname: localhost:3000
+
+test:
+  <<: *defaults
+  hostname: alonetone.example.com
+  # Temporary storage writes to temp files on disk.
+  storage_service: temporary
+  # Don't use dummies in the spec suite because we sometimes rely on
+  # interaction with services in examples.
+  play_dummy_audio: false
+  show_dummy_image: false
+  # Use a fake rakismet key to allow requests to happen in the test
+  # environment.
+  rakismet_key: unusable

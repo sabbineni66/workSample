@@ -1,0 +1,22 @@
+{
+  "name": "marvin",
+  "custom": {
+    "client": {
+      "bucketName": "${s3Prefix}-${stage}-${project}"
+    },
+    "cors": {
+      "allowOrigin": "*",
+      "allowHeaders": [
+        "Content-Type",
+        "X-Amz-Date",
+        "Authorization",
+        "X-Api-Key"
+      ]
+    }
+  },
+  "plugins": [
+    "serverless-offline",
+    "serverless-client-s3",
+    "serverless-cors-plugin"
+  ]
+}

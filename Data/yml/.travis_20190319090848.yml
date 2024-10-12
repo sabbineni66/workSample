@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+- 1.9.3-p551
+- 2.3.0
+# deploy:
+#   provider: rubygems
+#   api_key:
+#     secure: a0KqUg2kBe4aVmisadDybBXbAuolX5tKtbX6YGacbjwAeOb+aoemejgRHJKg8zGOlL8FvHwSY5kER+uapQpRXKW/pZnWTYL+GjCP66iF6qfq4Pueo09J3rIT/pnWz36nfZkd2AXSdKX/UtQQxZTzRdCiglVk0jeEiIFzhxXFS2FCBUt5h2ltciU4WKS5esHvtm+EixjLLFFbatdbeVs+mhbjp2ejmOjwTAZWbjM6bScFxksRrdeQhztK7eUbM+i2DzOC26iV9ejNBjqmFtNE6GPZJ0c24KtGnmy6VwxfGS89yibNnmkGHotPYFzn2mceH75h8U00Rn1d7EdGnGlE10UqVH9lTOLqAbhhxNmBscD+19Q2SnkWZ0u0khYX0fo6BBA0Q/TPAZfg/hBjGm42DVXz1ZS5PFmEa8eEmVZ/vXG2sQGchPEwj3IQlfY/pSSlgmFReHP2VzQO8hUCC4+NquZTQ6hgltIxZiWGbBcJgnU/GeSRd78drIWpAVl8BE1dnzWkcMyT5rgekDhWX8fyiJVYYKXO446vaE0rNyjXOOP4xCRfQ/5LRtoyEQcAPpH3rcXN+iUNKEvzl/YnBLiInEDlE5R7kTxqvE82YH0i2RhGfo568fQ4YKbRjVepahb47mxR1anL56e/9aV8jz44nWcCwvg2UH0NqdXanRzd4vk=
+#   gem: bastion-cli
+#   on:
+#     tags: true
+#     repo: ptdorf/bastion-cli
+notifications:
+  email:
+  - ptdorf@gmail.com
+  slack:
+    rooms:
+    - secure: Jo5dE0CbXONghzx6RZQ3WeqSanHyIOw89A0gXoLTrvPh9/acBxsGm9XvGCQ6dkZlCm6t1U0FnPmXlrAF1Fx+jQ54dZv8f6fpL0V40iKFBGf4WcGHUgtV8pK505Eg1Ez4v30R14eodBF3yOHFeITbP/XtKdPss9YixQ8Bi02PUGwJ4Ako2GnWk8bsw2LLhVBbYt41ORSNEyMTJOdZgiyZcjJf8jDjHTo6R6+p/hO2CD5PkGE5iIVNiuASXIl2JAh+7j97hrfXVFSjbA5QnL7k0eGT9hSumak8atSZEtzuqVIH53SNk94tKEoFlJ83fPUyr2WSIrI1pkzCOTq30EgtHciG8iTuq6TkkOBmvdg3hZ/hVpX3DbLIEX/bgaE4lbrFfJCDZKEdUGxzbhHDU4kzkufHTMgJuPj84ZKyeouLaCRQJUFqW1sPWam6KWIctM0aDmrh543O8n2egfPTnDC9uxoX036kB0i56q1rj5sDnjVCZePwUXMdxp35SSYEfVHHjScyIV4uvVpSSWoXmVq7n/KBKmfyShZ+mj731eHcmzvxLJZh0GcTS1vWiXlCGRmPIJY7qrGD1gXAtUKDNJJlPDrLgTkFAbRjRKQ87BH2Tvr4LISrnYTi/yablFmTTBXL3wpRHf6hJvswOnXlQNXuqD60pT2aLgFvTnRTbJDIq5o=

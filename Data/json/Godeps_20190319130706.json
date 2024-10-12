@@ -1,0 +1,75 @@
+{
+	"ImportPath": "github.com/zerobotlabs/relax",
+	"GoVersion": "go1.6",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Comment": "v0.8.7-22-gb673bf3",
+			"Rev": "b673bf363d3658506891150a6dca42059572d1b0"
+		},
+		{
+			"ImportPath": "github.com/botmetrics/go-botmetrics",
+			"Rev": "557162f23c828eeff7622681f5ac3abcb24e5ac5"
+		},
+		{
+			"ImportPath": "github.com/cenkalti/backoff",
+			"Comment": "v1.0.0",
+			"Rev": "32cd0c5b3aef12c76ed64aaf678f6c79736be7dc"
+		},
+		{
+			"ImportPath": "github.com/facebookgo/clock",
+			"Rev": "600d898af40aa09a7a93ecb9265d87b0504b6f03"
+		},
+		{
+			"ImportPath": "github.com/facebookgo/grace/gracehttp",
+			"Rev": "053ab5d25436faedf3fe76fbf3da797c8c27c659"
+		},
+		{
+			"ImportPath": "github.com/facebookgo/grace/gracenet",
+			"Rev": "053ab5d25436faedf3fe76fbf3da797c8c27c659"
+		},
+		{
+			"ImportPath": "github.com/facebookgo/httpdown",
+			"Rev": "9229879964ff32fc4e42c7ba6b4745efce39023c"
+		},
+		{
+			"ImportPath": "github.com/facebookgo/stats",
+			"Rev": "31fb71caf5a4f04c9f8bb3fa8e7c2597ba6eb50a"
+		},
+		{
+			"ImportPath": "github.com/gorilla/websocket",
+			"Rev": "b6ab76f1fe9803ee1d59e7e5b2a797c1fe897ce5"
+		},
+		{
+			"ImportPath": "github.com/onsi/ginkgo",
+			"Comment": "v1.2.0-11-gd94e2f4",
+			"Rev": "d94e2f4000332f62b356ecb2840c98f4218f5358"
+		},
+		{
+			"ImportPath": "github.com/onsi/gomega",
+			"Comment": "v1.0-52-ga2ab864",
+			"Rev": "a2ab8644e0b6a33df2cbe44673bd0f6ebba9abc3"
+		},
+		{
+			"ImportPath": "github.com/streamrail/concurrent-map",
+			"Rev": "65a174a3a4188c0b7099acbc6cfa0c53628d3287"
+		},
+		{
+			"ImportPath": "gopkg.in/bsm/ratelimit.v1",
+			"Rev": "bda20d5067a03094fc6762f7ead53027afac5f28"
+		},
+		{
+			"ImportPath": "gopkg.in/bufio.v1",
+			"Comment": "v1",
+			"Rev": "567b2bfa514e796916c4747494d6ff5132a1dfce"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v3",
+			"Comment": "v3.0.3",
+			"Rev": "b1946ee532efdd01f4651214002abbf7e740bd99"
+		}
+	]
+}

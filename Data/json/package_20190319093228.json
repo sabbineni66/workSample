@@ -1,0 +1,42 @@
+{
+  "name": "livetv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "handlebars-loader": "^1.7.0",
+    "handlebars": "^4.0.11",
+    "style-loader": "^0.20.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.1.0",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.3.0",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2",
+    "webpack-s3-deployer": "^0.1.6",
+    "webpack-s3-plugin": "^1.0.0-rc.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devw": "webpack --mode development",
+    "dev": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "staging": "webpack --mode production --env.deploy=staging",
+    "production": "webpack --mode production --env.deploy=production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

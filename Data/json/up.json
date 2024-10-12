@@ -1,0 +1,13 @@
+{
+  "name": "itsfine",
+  "profile": "up",
+  "regions": ["us-west-1"],
+  "stages": {
+    "development": {
+      "domain": "dev-itsfine.atmos.me"
+    },
+    "production": {
+      "domain": "itsfine.atmos.me"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+version: "3"
+services:
+  dream-app:
+    image: my/dream-app
+    ports:
+      - "6060:4200"
+    volumes:
+      - ./src:/srv/src

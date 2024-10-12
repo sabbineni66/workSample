@@ -1,0 +1,73 @@
+{
+  "title": "Stefan Imhoff",
+  "homepage_title": "Stefan Imhoff - Developer/Designer from Hamburg, Germany",
+  "email": "stefan@imhoff.name",
+  "author": "Stefan Imhoff",
+  "seo": {
+    "keywords": "Stefan Imhoff, Hamburg, Frontend, Engineer",
+    "description": "Web Developer / Designer / Minimalist / Geek / Introvert / Japanophile",
+    "description_de": "Web Developer / Designer / Minimalist / Geek / Introvert / Japanophile"
+  },
+  "social": {
+    "feedburner_url": "http://feeds.feedburner.com/stefanimhoff",
+    "feed_title_en": "Stefan Imhoff (English Entries)",
+    "feedburner_url_en": "http://feeds.feedburner.com/stefanimhoff/en",
+    "feed_title_de": "Stefan Imhoff (Deutsche Beitr?ge)",
+    "feedburner_url_de": "http://feeds.feedburner.com/stefanimhoff/de",
+    "twitter": "@kogakure",
+    "googleplus": "104687479698350625994"
+  },
+  "geo": {
+    "latitude": "53.596835",
+    "longitude": "10.102015"
+  },
+  "openid": {
+    "server": "http://www.myopenid.com/server",
+    "delegate": "http://kogakure.myopenid.com/",
+    "xrds": "http://kogakure.myopenid.com/xrds"
+  },
+  "about": {
+    "headline": "About me",
+    "text": "*Stefan Imhoff*, Web Developer, Designer, Minimalist, Geek, Introvert, Japanophile. Works as Front-End Engineer at [XING](https://www.xing.com/profile/Stefan_Imhoff). Lives in [Hamburg](https://www.pinterest.com/kogakure/hamburg/). Loves [Ninja&nbsp;&amp;&nbsp;Ninjutsu](https://www.pinterest.com/kogakure/ninja-ninjutsu/), [Calisthenics](https://www.pinterest.com/kogakure/fitness-calisthenics/), [Movies](http://www.imdb.com/user/ur15936207/ratings), [Books](https://www.goodreads.com/user/show/28460819-stefan), [Architecture](https://www.pinterest.com/kogakure/architecture/), [Interior Design](https://www.pinterest.com/kogakure/interior-design/), [Art&nbsp;&amp;&nbsp;Design](https://www.pinterest.com/kogakure/art-design/), [Sketchnotes](https://www.pinterest.com/kogakure/sketchnotes/), [Lettering](https://www.pinterest.com/kogakure/lettering/), [Typography](https://www.pinterest.com/kogakure/typography/), Philosophy, Japan, [Japanese Tattoos](https://www.pinterest.com/kogakure/irezumi-tebori/), [Thunderstorm&nbsp;&amp;&nbsp;Rain](https://www.pinterest.com/kogakure/thunderstorm-lightning-rain/), [Sun](https://www.pinterest.com/kogakure/sun/), [the Sea](https://www.pinterest.com/kogakure/ocean-sea/), [Beaches](https://www.pinterest.com/kogakure/beach-coast/), [Trees](https://www.pinterest.com/kogakure/trees-roots/), [Bamboo](https://www.pinterest.com/kogakure/bamboo/), [Time Lapse&nbsp;&amp;&nbsp;Slow Motion](https://flipboard.com/@kogakure/time-lapse-slow-motion-e3hoo13ay), [Kanji](https://www.pinterest.com/kogakure/kanji/), [Wabi&nbsp;Sabi](https://www.pinterest.com/kogakure/wabi-sabi/), [Nieders?chsiche Hochzeitssuppe](https://de.wikipedia.org/wiki/Hochzeitssuppe), [Haiku](/haiku/) and [Vim](https://github.com/kogakure/dotfiles/blob/master/vim/vimrc.symlink)."
+  },
+  "socialnetworks": {
+    "headline": "Elsewhere"
+  },
+  "homepage": {
+    "blog": {
+      "articles": {
+        "headline": "Articles"
+      },
+      "recently": {
+        "headline": "Still fresh"
+      }
+    },
+    "books": {
+      "headline": "Bookworm",
+      "text": "I love [books](https://www.goodreads.com/review/list/28460819-stefan), to be precise I love *paper* books. I can not imagine a living room without shelves of books.\n\nMost likly I inherited this passion from my grandfather, who owned over **4000** books. My books count roughly a  **1000**. I buy books ahead and my desks are always stuffed with unread books. I like classics, books about philosophy, martial arts, art &amp; desgin, architecture, typography and novels.\n\nWork-related books I read mostly digital, because they get old too fast and don?t look nice in most cases."
+    },
+    "introvert": {
+      "headline": "Introvert" ,
+      "text": "I am an Introvert (Meyer-Briggs personality type: [INTJ ? The Architect](https://www.16personalities.com/intj-personality)). Introverts think differently, our brain processes information in a different way than Extraverts, who get energy by social interaction with other people. Introverts loose their energy and need time to refill.",
+      "quote": {
+        "japanese": "<ruby>?<rp>?</rp><rt>??</rt><rp>?</rp></ruby>??<ruby>?<rp>?</rp><rt>??</rt><rp>?</rp></ruby>?<ruby>?<rp>?</rp><rt>??</rt><rp>?</rp></ruby>?<ruby>?<rp>?</rp><rt>??</rt><rp>?</rp></ruby>??",
+        "translation": "The wise hawk hides its talons."
+      }
+    },
+    "martialarts": {
+      "headline": "Martial Artist",
+      "text": "I love martial arts, especially the Japanese. I practised Shotokan Karate for seven years and then began training **Bujinkan Budo Taijutsu**.\n\nIn [Bujinkan](https://www.wikipedia.org/wiki/Bujinkan) we train **nine different schools**: six **Samurai** and three **Ninja** schools, the oldest of these school is **{% since_year 618 %} years** old and the traditions where given from master to scholar for generations.\n\nThese martial arts aren?t sports, but highly efficient fighting systems, proven on the battlefields of ancient Japan.\n\nI run [a website](http://kogakure.de/) on this topic for more than {% since_year 1999 %} years. I collected knowledge about the history, arts, tools, weapons, philosophy and life of the Ninja."
+    },
+    "movies": {
+      "headline": "Movie Fan",
+      "text": "I love movies and TV shows. Most of my space on shelves is occupied by my books, that?s why I don?t own a lot of movies. But I regularly use LoveFilm, Netflix, Watchever and Amazon Prime. I love all genre, especially Action, Comedy, Sci-Fi and Fantasy, but no horror movies. This is my [IMDb profile](http://www.imdb.com/user/ur15936207/) and my [ratings](http://www.imdb.com/user/ur15936207/ratings)."
+    },
+    "recommendations": {
+      "headline": "Link Recommendations"
+    },
+    "work": {
+      "headline": "Designer &amp; Developer",
+      "text": "I work as **Front-End Engineer** at **XING** and contributed to a variety of products like **Jobs**, **Mobile**, **Groups**, **Profile** and **SEO**.\n\nI am co-creator of the idea for **XING Projects**, a job platform for freelancer. I worked on this Innovation Project from the beginning and helped bringing it to the XING Beta program.\n\nI won the XING awards **Best Smart Tools & Services** at the *Prototyping Days 2013* and **Matterhorn Award ? Growth** at *Prototyping Days 2015*. Furthermore the **SEMY Award** ? *Deutscher Suchmarketingpreis 2015*."
+    }
+  }
+}

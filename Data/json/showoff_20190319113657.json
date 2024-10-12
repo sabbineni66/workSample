@@ -1,0 +1,16 @@
+{"name":"Git",
+  "sections":[
+    {"section":"title"},
+    {"section":"history"},
+    {"section":"workflow"},
+    {"section":"internals"},
+    {"section":"basics"},
+    {"section":"branching"},
+    {"section":"time_machine"},
+    {"section":"remotes"},
+    {"section":"bisect"},
+    {"section":"tools"},
+    {"section":"roundup"},
+    {"section":"thanks"}
+  ]
+}

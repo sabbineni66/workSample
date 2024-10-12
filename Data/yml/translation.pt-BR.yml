@@ -1,0 +1,3289 @@
+---
+pt-BR:
+  verses:
+    search:
+      error: Verso n?o encontrado. Voc? escreveu a refer?ncia corretamente?
+    heading: Vers?culos
+    new:
+      heading: Encontrar um Verso ou Passagem
+    about_tags: Etiquetas podem agrupar vers?culos por t?pico, autor, data e mais.
+    about_this_verse: sobre este vers?culo. Compartilhe o que ele significa para voc?
+      ou como ele j? te ajudou.
+    add_this_verse_to_my_list: Adicionar vers?culo para a minha lista.
+    add_verse: Adicionar Vers?culo
+    search_verse: Procurar Vers?culo
+    add_your_favorite_verse: 'Adicionar o seu vers?culo favorito:'
+    comment_count:
+      one: "<a href='%{url}'>1 coment?rio</a> por %{by}"
+      few: 
+      many: 
+      other: "<a href='%{url}'>1 coment?rio</a> por %{by}"
+    disclaimer: Cita??es das escrituras marcadas como 'WEB' s?o retiradas da World
+      English Bible, uma atualiza??o moderna da vers?o American Standard da B?blia
+      Sagrada. WEB ? de dom?nio p?blico. Copie e publique livremente.
+    example_verse: vers?culo ou passagem, por exemplo, Jo?o 3:16
+    intro: Compartilhe os seus vers?culos favoritos da B?blia com %{community}.
+    no_verses_yet: Nenhum vers?culo ainda!
+    not_found: Este vers?culo n?o foi encontrado. Voc? digitou a refer?ncia corretamente?
+    people_who_like_this_verse: Pessoas que gostam deste vers?culo
+    remove_this_verse: Remover este vers?culo da minha lista.
+    saved_by_count:
+      one: salvo por 1 pessoa
+      other: salvo por %{count} pessoas
+  date:
+    day_names:
+    - Domingo
+    - Segunda-feira
+    - Ter?a-feira
+    - Quarta-feira
+    - Quinta-feira
+    - Sexta-feira
+    - S?bado
+    abbr_day_names:
+    - Dom
+    - Seg
+    - Ter
+    - Qua
+    - Qui
+    - Sex
+    - S?b
+    month_names:
+    - 
+    - Janeiro
+    - Fevereiro
+    - Mar?o
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+    abbr_month_names:
+    - 
+    - Jan
+    - Fev
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Out
+    - Nov
+    - Dez
+  time:
+    am: 
+    pm: 
+  number:
+    human:
+      storage_units:
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          kb: KB
+          mb: MB
+          gb: GB
+          tb: TB
+      decimal_units:
+        units:
+          thousand: mil
+          million: 
+          billion: 
+          trillion: 
+          quadrillion: 
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      inclusion: n?o est? inclu?do na lista
+      exclusion: n?o est? dispon?vel
+      invalid: n?o ? v?lido
+      confirmation: n?o ? igual a %{attribute}
+      accepted: deve ser aceito
+      empty: n?o pode ficar vazio
+      blank: n?o pode ficar em branco
+      present: deve ficar em branco
+      too_long:
+        one: 
+        other: 
+      too_short:
+        one: 
+        other: 
+      wrong_length:
+        one: 
+        other: 
+      not_a_number: n?o ? um n?mero
+      not_an_integer: n?o ? um n?mero inteiro
+      greater_than: deve ser maior que %{count}
+      greater_than_or_equal_to: deve ser maior ou igual a %{count}
+      equal_to: deve ser igual a %{count}
+      less_than: deve ser menor que %{count}
+      less_than_or_equal_to: deve ser menor ou igual a %{count}
+      other_than: deve ser diferente de %{count}
+      odd: deve ser ?mpar
+      even: deve ser par
+      taken: j? est? em uso
+      password:
+        password_strength: 
+      in_between: 
+      spoofed_media_type: 
+      not_a_date: 
+      after: 
+      after_or_equal_to: 
+      before: 
+      before_or_equal_to: 
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 
+        restrict_dependent_destroy:
+          one: 
+          many: 
+      models:
+        admin:
+          attributes:
+            template_name:
+              taken: J? existe um outro modelo com este nome. Por favor escolha outro
+                nome.
+        album:
+          attributes:
+            name:
+              blank: O ?lbum precisa ter um nome.
+              taken: J? existe um outro ?lbum com este nome. Por favor escolha outro
+                nome.
+            owner:
+              blank: O ?lbum deve ter um dono.
+        attendance_record:
+          attributes:
+            attended_at:
+              blank: O registro de presen?a precisa conter uma data e hora.
+            group_id:
+              blank: O registro de presen?a precisa estar associado a um grupo.
+        checkin_label:
+          attributes:
+            name:
+              blank: Voc? precisa inserir um nome.
+            xml:
+              blank: Voc? precisa colar a etiqueta do XML.
+        checkin_time:
+          attributes:
+            campus:
+              blank: Voc? precisa selecionar um campus.
+              exclusion: Voc? precisa selecionar um campus.
+        custom_field:
+          attributes:
+            name:
+              blank: 
+            format:
+              inclusion: 
+        document:
+          attributes:
+            file:
+              blank: Voc? precisa carregar um arquivo.
+            name:
+              blank: Voc? precisa inserir um nome.
+              too_long: Por favor insira um nome mais curto.
+            description:
+              too_long: Por favor insira uma descri??o mais curta.
+        document_folder:
+          attributes:
+            name:
+              blank: Voc? precisa inserir um nome.
+              too_long: Por favor insira um nome mais curto.
+            description:
+              too_long: Por favor insira uma descri??o mais curta.
+            folder_id:
+              invalid: Voc? n?o pode especificar esta pasta como a pasta principal.
+            parent_folder_ids:
+              too_long: Esta pasta est? numa estrutura muito complexa. Por favor coloque
+                em outro lugar.
+        custom_report:
+          attributes:
+            title:
+              blank: O t?tulo n?o pode ficar em branco.
+              too_long: O tamanho m?ximo da descri??o ? 50 caracteres.
+            body:
+              blank: O corpo do relat?rio n?o pode ficar em branco.
+            filters:
+              invalid: Os campos precisam ter dois pontos, no formato campo:valor.
+            category:
+              inclusion: Selecione um valor de categoria v?lido.
+        family:
+          attributes:
+            name:
+              blank: A fam?lia precisa ter um nome.
+            last_name:
+              blank: A fam?lia precisa ter um sobrenome.
+            alternate_barcode_id:
+              invalid: Este cart?o de fam?lia (c?digo de barras alternativo) cont?m
+                letras ou s?mbolos (somente n?meros s?o permitios).
+              taken: Este cart?o de fam?lia (c?digo de barras alternativo)  j? est?
+                em uso por outra fam?lia.
+              too_long: Este cart?o de fam?lia (c?digo de barras alternativo) ? grande
+                demais (n?o pode possuir mais do que 50 d?gitos).
+              too_short: Este cart?o de fam?lia (c?digo de barras alternativo) ? muito
+                curto (deve possuir pelo menos 10 d?gitos).
+            barcode_id:
+              invalid: Este cart?o de fam?lia (c?digo de barras) cont?m letras ou
+                s?mbolos (somente n?meros s?o permitios).
+              taken: Este cart?o de fam?lia (c?digo de barras) j? est? em uso por
+                outra fam?lia.
+              too_long: Este cart?o de fam?lia (c?digo de barras) ? grande demais
+                (n?o pode possuir mais do que 50 d?gitos).
+              too_short: Este cart?o de fam?lia (c?digo de barras) ? muito curto (deve
+                possuir pelo menos 10 d?gitos).
+            photo:
+              too_large: A foto precisa ter menos de %{size} megabytes.
+              wrong_type: O arquivo de foto deve ser JPG, GIF ou PNG.
+            country:
+              wrong_length: 
+        friendship:
+          attributes:
+            friend_id:
+              blank: Esta amizade necessita estar associada com uma pessoa.
+              taken: Esta amizade j? existe.
+            person_id:
+              blank: Esta amizade necessita estar associada com uma pessoa.
+        friendship_request:
+          attributes:
+            from_id:
+              blank: Esta amizade necessita estar associada com uma pessoa.
+            person:
+              invalid_address: A pessoa precisa de um endere?o de email v?lido.
+              refused: A pessoa n?o aceita pedidos de amizade.
+            person_id:
+              blank: O pedido de amizade deve ser associado a uma pessoa.
+              taken: Este pedido de amizade j? existe.
+        group:
+          attributes:
+            address:
+              invalid: O endere?o do grupo n?o ? um email v?lido.
+              taken: J? existe um outro grupo com este mesmo endere?o de email. Por
+                favor escolha outro.
+              too_long: O endere?o de email do grupo ? muito grande.
+              too_short: O endere?o de email do grupo ? pequeno demais.
+            attendance:
+              invalid: A frequ?ncia precisa ser habilitada para qualquer grupo em
+                uso que utilize Check-in.
+            category:
+              blank: O grupo necessita ter uma categoria.
+            name:
+              blank: O grupo necessita ter um nome.
+              taken: J? existe um outro grupo com este nome. Por favor escolha outro.
+            parents_of:
+              points_to_self: Este grupo n?o pode fazer um link para ele mesmo.
+            photo:
+              too_large: A foto necessita ter menos do que %{size} megabytes.
+              wrong_type: O tipo do arquivo da foto deve ser JPG, GIF ou PNG.
+        membership:
+          attributes:
+            group_id:
+              taken: Esta pessoa j? ? membro deste grupo.
+        membership_request:
+          attributes:
+            group_id:
+              taken: Esta pessoa j? solicitou o participa??o neste grupo.
+        message:
+          attributes:
+            base:
+              taken: Esta mensagem j? foi enviada. Tente mudar o assunto ou conte?do
+                se voc? deseja enviar outro email.
+            body:
+              blank: A mensagem precisa ter um corpo.
+              too_short: O corpo da mensagem ? muito curto.
+            person_id:
+              blank: Esta mensagem precisa ser associada a uma pessoa.
+            subject:
+              blank: A mensagem precisa ter um assunto.
+              too_short: O assunto da mensagem ? pequeno demais.
+            to_person_id:
+              invalid: O destinat?rio desta mensagem n?o possui um endere?o de email.
+                A mensagem n?o p?de ser enviada.
+        news_item:
+          attributes:
+            title:
+              blank: Voc? precisa inserir um t?tulo para esta not?cia.
+            body:
+              blank: Voc? precisa inserir um texto para esta not?cia.
+        note:
+          attributes:
+            body:
+              blank: A nota est? vazia.
+        page:
+          attributes:
+            body:
+              blank: A p?gina necessita ter um corpo.
+            path:
+              taken: Existe outra p?gina neste caminho.
+            slug:
+              blank: A p?gina deve conter um caminho amig?vel.
+              exclusion: O caminho amig?vel n?o pode ser "admin", "edit" ou "new"
+              invalid: O caminho amig?vel pode somente conter caracteres min?sculos
+                e "underscore".
+            title:
+              blank: A p?gina precisa ter um t?tulo.
+        person:
+          attributes:
+            alternate_email:
+              invalid: O endere?o de email alternativo n?o est? no formato correto
+                (algumacoisa@exemplo.com.br).
+              taken: Existe outra pessoa com o mesmo email alternativo.
+            anniversary:
+              not_a_date: Por favor insira uma data de anivers?rio v?lida.
+            birthday:
+              not_a_date: Por favor insira uma data v?lida para o nascimento.
+            business_email:
+              invalid: O email comercial n?o est? formatado corretamente (algumacoisa@exemplo.com).
+            business_website:
+              invalid: O endere?o da empresa n?o est? formatado corretamente (voc?
+                est? incluindo o prefixo 'http://' no in?cio?)
+            business_category:
+              exclusion: Voc? precisa inserir uma categoria para o seu neg?cio.
+            child:
+              inclusion: Voc? precisa inserir uma data de nascimento ou especificar
+                se esta pessoa ? uma crian?a.
+            description:
+              too_long: Descri??o precisa ser menor do que 25 caracteres. Uma palavra
+                ou duas. :)
+            email:
+              invalid: O email n?o est? formatado corretamente (algumacoisa@exemplo.com).
+              taken: Existe outra pessoa com o mesmo endere?o de email.
+            facebook_url:
+              invalid: URL do Facebook ? inv?lida.
+            feed_code:
+              taken: O mesmo c?digo de feed existe para outra pessoa.
+            first_name:
+              blank: A pessoa precisa ter um primeiro nome.
+            gender:
+              inclusion: G?nero precisa ser 'Masculino' ou 'Feminino'.
+            last_name:
+              blank: A pessoa precisa ter um sobrenome.
+            password:
+              confirmation: As senhas n?o s?o iguais.
+              too_short: A senha ? muito curta.
+            photo:
+              too_large: A foto precisa ser menor do que %{size} megabytes.
+              wrong_type: O arquivo de foto deve ser JPG, GIF ou PNG.
+            twitter:
+              invalid: Usu?rio do Twitter ? inv?lido.
+              too_long: Usu?rio do Twitter ? muito grande.
+            website:
+              invalid: O endere?o n?o est? formatado corretamente (voc? est? incluindo
+                o prefixo 'http://' no in?cio?)
+        picture:
+          attributes:
+            album_id:
+              blank: Esta foto precisa ser associada com um ?lbum.
+            photo:
+              too_large: A foto precisa ter menos de %{size} megabytes.
+              wrong_type: O arquivo de foto deve ser JPG, GIF ou PNG.
+        picture_uploader:
+          attributes:
+            album:
+              blank: Voc? precisa selecionar um ?lbum.
+        prayer_request:
+          attributes:
+            group_id:
+              blank: O pedido de ora??o precisa ser associado a um grupo.
+            person_id:
+              blank: O pedido de ora??o deve ser associado a uma pessoa.
+            request:
+              blank: O pedido de ora??o n?o pode estar em branco.
+        recipe:
+          attributes:
+            directions:
+              blank: A receita deve ter instru??es.
+            ingredients:
+              blank: A receita deve conter ingredientes.
+            title:
+              blank: A receita deve conter um t?tulo.
+        relationship:
+          attributes:
+            name:
+              blank: Voc? deve especificar um tipo de relacionamento.
+              inclusion: Este relacionamento n?o ? v?lido.
+              taken: Este relacionamento j? existe.
+            other_name:
+              blank: Voc? deve especificar um tipo de relacionamento.
+              taken: Este relacionamento j? existe.
+            person:
+              blank: O relacionamento precisa ser associado com uma pessoa.
+            related:
+              blank: O relacionamento precisa ser associado com uma segunda pessoa.
+        report:
+          attributes:
+            definition:
+              invalid: A defini??o de relat?rio ? inv?lida.
+            name:
+              blank: O relat?rio deve possuir um nome.
+              taken: J? existe outro relat?rio com este nome. Por favor escolha outro.
+        site:
+          attributes:
+            host:
+              blank: O servidor deve ser fornecido.
+              taken: J? existe um outro site neste mesmo servidor.
+              invalid: N?o inclua "http://" ou "www." no nome de dom?nio.
+            name:
+              blank: Este site precisa ter um nome.
+              taken: J? existe outro site com o mesmo nome.
+        tag:
+          attributes:
+            name:
+              blank: A etiqueta precisa ter um nome.
+              exclusion: O nome da etiqueta ? inv?lido.
+              taken: J? existe outra etiqueta com o mesmo nome.
+        verification:
+          attributes:
+            email:
+              invalid: Este endere?o de email n?o foi encontrado no nosso sistema.
+                Se voc? possui outro endere?o, tente novamente.
+            carrier:
+              inclusion: Voc? precisa seleciona uma operadora de celular.
+            mobile_phone:
+              invalid: Este n?mero de celular n?o foi encontrado no nosso sistema.
+                Voc? pode tesntar novamente.
+            base:
+              unauthorized: Existe um problema com o seu registro, prevenindo voc?
+                de acessar.
+        verse:
+          attributes:
+            reference:
+              blank: O vers?culo deve conter uma refer?ncia.
+            text:
+              blank: A passagem n?o foi encontrada. Voc? digitou a refer?ncia corretamente?
+              too_long: A passagem ? grande demais. Tente especificar uma passagem
+                mais curta.
+    attributes:
+      album:
+        name: Nome
+        description: Descri??o
+      checkin_label:
+        name: Nome
+        description: Descri??o
+        xml: Etiqueta do XML
+        xml_file: Arquivo da Etiqueta do XML
+      custom_field:
+        name: 
+        format: 
+      document:
+        name: Nome
+        description: Descri??o
+        file: Arquivo
+        files: Files
+        folder_id: Pasta
+      document_folder:
+        name: Nome
+        description: Descri??o
+        folder_id: Pasta de Origem
+        hidden: Ocultar/Arquivar esta pasta
+        groups: Somente compartilhe com estes grupos
+      family:
+        address1: Endere?o - Linha 1
+        address2: Endere?o - Linha 2 (opcional)
+        city: Cidade
+        country: Pa?s
+        home_phone: Telefone Residencial
+        last_name: ?ltimo Nome
+        name: Nome
+        state: Estado
+        zip: CEP
+      person:
+        anniversary: Anivers?rio de Casamento
+        alias: 
+        birthday: Data de Nascimento
+        custom_type: Atribui??o Customizada
+        email: Email
+        facebook_url: URL do Facebook
+        fax: Fax
+        first_name: Primeiro Nome
+        gender: Sexo
+        last_name: ?ltimo Nome
+        mobile_phone: Telefone Celular
+        primary_emailer: Dono da conta de email principal
+        status: Estado
+        suffix: Sufixo
+        twitter: Usu?rio do Twitter
+        work_phone: Telefone Comercial
+      group:
+        name: Nome
+        category: Categoria
+        description: Descri??o
+        other_notes: Outras Notas
+        creator: Criador
+        meets: Se encontra quando
+        location: Local e Endere?o
+        direction: Dire??o
+        email: Email
+        prayer: Pedidos de Ora??o
+        pictures: Compartilhamento de Fotos
+        attendance: Registro de Presen?a
+        gcal_private_link: Link Privado do Calend?rio do Google
+        approval_required_to_join: Uma aprova??o ? necess?ria para as pessoas entrarem
+          no grupo
+        private: Grupo Privado
+        members_send: Membros do Grupo Podem Postar Mensagens
+        membership_mode: Selecione como os membros do grupo devem ser adicionados
+        link_code: C?digo de Link Externo
+        parents_of: Grupo Infantil
+        hidden: Grupo Oculto (Arquivado)
+        has_tasks: Tarefas
+        leader_id: L?der
+      note:
+        title: T?tulo
+        body: Corpo
+      prayer_request:
+        answer: Resposta
+        answered_at: Data Respondida
+        person_id: Pessoa precisando de ora??o
+        request: Pedido
+      task:
+        name: Tarefa
+        description: Descri??o
+        person: Atribu?do a
+        person_id: Atribu?do a
+        duedate: Data limite
+        completed: Conclu?da
+  datetime:
+    distance_in_words:
+      half_a_minute: meio minuto
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+      less_than_x_minutes:
+        one: menos de um minuto
+        other: menos de %{count} minutos
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      about_x_hours:
+        one: aproximadamente 1 hora
+        other: aproximadamente %{count} horas
+      x_days:
+        one: 1 dia
+        other: "%{count} dias"
+      about_x_months:
+        one: aproximadamente 1 m?s
+        other: aproximadamente %{count} meses
+      x_months:
+        one: 1 m?s
+        other: "%{count} meses"
+      about_x_years:
+        one: aproximadamente 1 ano
+        other: aproximadamente %{count} anos
+      over_x_years:
+        one: mais de 1 ano
+        other: mais de %{count} anos
+      almost_x_years:
+        one: quase 1 ano
+        other: quase %{count} anos
+    prompts:
+      year: Ano
+      month: M?s
+      day: Dia
+      hour: Hora
+      minute: Minuto
+      second: Segundo
+  helpers:
+    select:
+      prompt: Por favor selecione
+    submit:
+      create: Criar %{model}
+      update: Atualizar %{model}
+      submit: Salvar %{model}
+  flash:
+    actions:
+      create:
+        notice: 
+      update:
+        notice: 
+      destroy:
+        notice: 
+        alert: 
+  will_paginate:
+    previous_label: "&#8592; Anteriores"
+    next_label: Pr?ximos &#8594;
+    page_gap: "&hellip;"
+    page_entries_info:
+      single_page:
+        zero: Nenhum %{model} encontrado
+        one: Exibindo 1 %{model}
+        other: Exibindo todos os %{count} %{model}
+      single_page_html:
+        zero: Nenhum %{model} encontrado
+        one: Exibindo <b>1</b> %{model}
+        other: Exibindo <b>todos os&nbsp;%{count}</b> %{model}
+      multi_page: Exibindo %{model} %{from} - %{to} de %{count} no total
+      multi_page_html: Exibindo %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b>%{count}</b>
+        no total
+  accounts:
+    create:
+      heading: Criar Conta
+      button: Criar Conta
+      existing_account:
+        by_email: N?s encontramos uma conta existente com este endere?o de email.
+        by_mobile: N?s encontramos uma conta existente com este n?mero de celular.
+    forgot:
+      heading: Recuperar Conta
+    verification:
+      not_pending: O link de verifica??o n?o ? mais v?lido. Por favor <a href='%{url}'>tente
+        novamente</a>.
+      email:
+        via_admin: Um email de verifica??o foi enviado para este usu?rio.
+    birthday: Data de Anivers?rio
+    call_office: Ligar %{phone}
+    call_office_message: Ligue para o escrit?rio durante o hor?rio comercial.
+    check_code: Verificar C?digo
+    description: Descri??o
+    enter_code: Insira o c?digo
+    enter_your_email: Insira o seu endere?o de email e clique no bot?o abaixo. Se
+      voc? j? possui um endere?o nos arquivos, um email ser? enviado para voc? realizar
+      a verifica??o e permitir acesso a este site.
+    fill_required_fields: Por favor preencha todos os campos requeridos.
+    gender: Sexo
+    I_am_this_person: Eu sou esta pessoa.
+    email_address: Endere?o de Email
+    first_name: Nome
+    last_name: Sobrenome
+    leave_blank: Deixe estes campos em branco se voc? n?o deseja alterar a sua senha.
+    must_set_email_pass: Voc? precisa configurar o seu email pessoal e senha para
+      continuar.
+    password: Senha
+    password_confirm: Senha (mais uma vez para confirmar)
+    pending_approval: A sua conta est? pendente de aprova??o. Voc? receber? um email
+      assim que ela for aprovada.
+    please_select_your_name: Por favor selecione o seu nome na lista abaixo
+    select_your_carrier: Selecione a sua operadora de celular
+    set_your_email: Voc? precisa configurar o seu email e senha para continuar.
+    set_your_email_may_be_different: Por favor insira o seu email pessoal e a NOVA
+      senha para completar o registro.
+    this_site_doesnt_allow_signup: Este site n?o permite que pessoas se registrem.
+      Ao inv?s, voc? precisa verificar uma conta j? existente ou entrar em contato
+      com o telefone %{office_phone}.
+    type_your_email: Digite o seu endere?o de email aqui
+    type_your_mobile: Digite o seu n?mero de telefone aqui
+    verification_email_sent: Um email de verifica??o foi enviado para voc?. Por favor,
+      verifique o seu email e siga as instru??es da mensagem recebida. (Voc? pode
+      ter que esperar um ou dois minutos para o email ser entregue).
+    verification_max_attempts_reached: Voc? excedeu o limite di?rio de tentativas
+      de verifica??o.
+    verification_message_sent: A mensagen de verifica??o foi enviada. Por favor verifique
+      o seu telefone e insira o c?digo que voc? recebeu.
+    verify: Verificar Conta
+    verify_email: Verificar Email
+    verify_code_intro: Por favor insira o c?digo que voc? recebeu no seu telefone
+      celular.
+    verify_by_email: Verificar pelo email.
+    verify_by_email_message: N?s enviamos um email, voc? acessa o link contido nele
+      e voc? est? pronto. Use isto para redefinir a sua senha.
+    verify_by_phone: Verificar pelo telefone celular.
+    verify_by_phone_description_html: Insira o seu n?mero de telefone celular, selecione
+      a sua operadora e clique no bot?o abaixo. Se n?s tivermos o n?mero nos arquivos,
+      uma mensagem de texto ser? enviada para voc? permitindo obter acesso a este
+      site. <strong>Taxas podem ser cobradas relacionadas a mensagem de texto.</strong>
+    verify_by_phone_message: N?s enviamos uma mensagem de texto, voc? digita o c?digo
+      contido nela e voc? est? pronto.
+    verify_mobile: Verificar Telefone Celular
+    verify_who_you_are: Por favor escolha uma das seguintes op??es para acessar com
+      a sua conta existente.
+    wrong_code_html: Voc? inseriu o c?digo errado. <a href='/account/new?phone=true'>Tente
+      novamente.</a>
+  admin:
+    actionables:
+      heading: A??es
+    administration:
+      heading: Administra??o e configura??es
+    attendance:
+      heading: Frequ?ncia (30 dias)
+      button: Frequ?ncia
+      add_group:
+        button: 
+        search:
+          heading: 
+      groups_list:
+        update:
+          button: 
+    box:
+      updates:
+        text:
+          one: Atualiza??o de Perfil
+          other: Atualiza??es de Perfil
+      changed_emails:
+        text:
+          one: Email Alterado
+          other: Emails Alterados
+      import_errors:
+        text:
+          one: Erro de Importa??o
+          other: Erros de Importa??o
+      groups_pending_approval:
+        text:
+          one: Grupo Pendente de Aprova??o
+          other: Grupos Pendentes de Aprova??o
+      membership_requests:
+        text:
+          one: Pedido de Participa??o no Grupo
+          other: Pedidos de Participa??o no Grupo
+      deleted_people:
+        text:
+          one: Excluir Pessoa
+          other: Excluir Pessoas
+    charts:
+      no_data: nenhum dado ainda
+    checkin:
+      heading: Check-in (48 horas)
+      cards_assigned: Cart?es de Check-in Atribu?dos
+      dashboard_button: Administra??o de Check-in
+      button: Quiosque de Check-in
+    custom_fields:
+      button: 
+      heading: 
+      intro: 
+      new:
+        heading: 
+      edit:
+        heading: 
+      formats:
+        string: 
+        number: 
+        boolean: 
+        date: 
+    dashboard:
+      heading: Painel do Administrador
+      sub_title: OneBody %{version}
+      version_alert:
+        heading: 
+        intro_html: 'Uma nova vers?o do OneBody est? dispon?vel: <a href=''%{url}''>%{version}</a>'
+        download_button: Como Atualizar
+      email_config_alert:
+        heading: 
+        intro: 
+        button: 
+      tls_config_alert:
+        heading: 
+        intro: 
+        email_setup_note: 
+        proxy_missing_protocol_header_note_html: 
+        button: 
+    deleted_people:
+      tabs:
+        people: Pessoas Exclu?das
+        families: Fam?lias Vazias
+      family_deleted: exclu?do
+      heading: Pessoas Exclu?das
+      empty_families:
+        intro: As seguintes fam?lias est?o ativas e n?o possuem pessoas nelas. Provavelmente
+          elas devem ser exclu?das.
+        delete:
+          button: Excluir as Fam?lias Selecionadas
+        none: nada
+      none: nada
+      purge:
+        button: Limpar
+      purge_family_when_empty: e exclua a fam?lia, quando vazia
+      search_results:
+        intro: Os resultados da sua busca s?o exibidos abaixo.
+      undelete:
+        button: Cancelar Exclus?o das Pessoas Selecionadas
+    facebook:
+      heading: Facebook
+      intro_html: Permite pessoas entrarem usando o Facebook. Voc? precisar? primeiro
+        configurar um app do Facebook, ent?o inserir o id do app e o segredo abaixo.
+    gatherings:
+      heading: Recolhimentos
+    membership_requests:
+      count:
+        one: "%{count} pedido"
+        other: "%{count} pedidos"
+    pusher:
+      heading: Pusher
+      intro_html: O Pusher ? um servi?o que facilita a comunica??o em tempo real.
+        Nesse momento, o OneBody usa o Pusher apenas para impress?o remota de Check-in,
+        o que voc? pode n?o precisar. Voc? pode registrar uma conta gratuitda do Pusher
+        em <a href='https://pusher.com'>pusher.com</a> ou usar o software de c?digo
+        livre <a href='https://github.com/stevegraham/slanger'>Slanger</a> no seu
+        pr?prio servidor.
+    report:
+      back: Voltar para o Painel de Relat?rios
+      button: Painel de Relat?rios
+      heading: Relat?rios
+      intro: Acesse o Painel de Relat?rios para acessar relat?rios pr?-definidos e
+        ferramentas de relat?rios ad-hoc.
+      launch: Iniciar
+      list: Relat?rios
+      title: Painel de Relat?rios
+    active: ativo
+    admin_added: "%{name} adicionado."
+    admin_count:
+      one: "%{count} Administrador"
+      other: "%{count} Administradores"
+    admin_removed: Admin removido.
+    admin_template_description: Modelos permitem voc? possuir conjuntos de permiss?es
+      pr?-definidas para uso de mais de um administrador.
+    admins:
+      heading: Administra??o
+      intro: Voc? pode conceder privil?gios de administrador para qualquer usu?rio
+        e o acesso que eles necessitam para executar as suas fun??es na comunidade.
+      button: Gerenciar Administradores
+    add_individual: Adicionar um indiv?duo.
+    add_person: Adicionar Pessoa
+    add_selected: Adicionar Selecionado
+    add_template: Adicionar Modelo
+    already_admin: "%{name} j? ? um administrador."
+    api: API
+    api_login_details: Seus detalhes de acesso da API
+    customization:
+      heading: Customiza??o
+      intro: Customize o site da sua comunidade ajustando configura??es e personalizando
+        o conte?do.
+    display: exibir
+    enable: Habilitar
+    enable_api_confirmation: Voc? tem certeza que deseja habilitar a sua chave de
+      API?
+    emails:
+      intro_html: "<p>Quando um usu?rio altera o seu endere?o de email online, uma
+        marca??o ? definida, e as importa??es CSV subsequentes s?o impedidas de sobrescrever
+        o endere?o de email daquele contato.</p> \n<p>Se voc? importa regularmente
+        os dados das pessoas de um sistema externo, voc? apenas precisa <strong>atualizar
+        o endere?o de email do usu?rio no banco de dados do registro</strong>, para
+        combinar com o endere?o de email daqui. Ent?o, da pr?xima vez que voc? importar
+        o seu banco de dados, o OneBody limpar? a marca??o \"email alterado\" para
+        voc? e os dados ser?o removidos dessa lista.</p> \n<p>Voc? pode usar essa
+        p?gina como uma Lista de Tarefas &ndash; uma lista de altera??es de endere?o
+        de email que voc? precisa fazer no banco de dados do registro</p> \n<p>Abaixo
+        est?o os usu?rios com marca??es definidas. Voc? pode limpar as marca??es aqui
+        manualmente se necess?rio.</p> \n"
+      changed_addresses: Endere?o de Email Alterado
+      clear_flags: Limpar Marca??es
+      no_records: Atualmente, n?o existem registro com a marca??o de endere?o de email
+        alterado.
+      table:
+        id: ID
+        legacy_id: ID Legado
+        first_name: Primeiro Nome
+        last_name: Sobrenome
+        email: Email
+    generate: Gerar
+    group_administrators: Administradores do Grupo
+    group_administrators_description: Cada grupo pode designar pessoas que podem administr?-lo,
+      independentemente do seu status nesta p?gina.
+    group_administrators_help: Para adicionar/remover uma pessoa como administrador
+      de um grupo, clique "editar", pr?ximo ao grupo e promova um membro do grupo
+      existente.
+    group_membership_requests: Pedidos de Participa??o no Grupo
+    import_export: Importar/Exportar
+    invalidate_confirmation: Voc? tem certeza que deseja invalidar esta chave e criar
+      uma nova?
+    key: Chave
+    manage_group_administrators: Gerenciar Administradores de Grupo
+    must_be_superadmin: Voc? precisa ser um super administrador para alterar as configura??es.
+    new_admin_template: Crie um novo modelo admin.
+    new_api_or: uma nova chave API ou
+    no_api_key: Voc? ainda n?o possui uma chave de API.
+    no_more_admins: N?o s?o permitidos mais administradores.
+    pages: P?ginas
+    privileges:
+      view_hidden_profiles:
+        title: Visualizar Perfis Ocultos
+        about: Visualizar pessoas ocultas no banco de dados, por exemplo, crian?as
+          e outros marcados como invis?veis.
+        order: 1
+      view_hidden_properties:
+        title: Visualizar Propriedades Ocultas
+        about: Visualizar telefones, emails e outras informa??es privadas que est?o
+          ocultas.
+        order: 2
+      edit_profiles:
+        title: Editar Perfis
+        about: Edite nome, n?meros de telefone, email, senha e qualquer outra informa??o
+          associada ao perfil de um usu?rio.
+        order: 3
+      manage_access:
+        title: Gerenciar Acesso
+        about: Gerencie os administradores do site. ('Gerencia Grupos' deve ser selecionado
+          para gerenciar administradores de grupo.)
+        order: 4
+      manage_attendance:
+        title: Gerenciar Presen?as
+        about: Visualizar, editar e exportar presen?as.
+        order: 5
+      manage_comments:
+        title: Gerenciar Coment?rios
+        about: Habilidade de excluir qualquer coment?rio no site.
+        order: 6
+      manage_groups:
+        title: Gerenciar Grupos
+        about: Visualizar, editar e excluir qualquer grupo (mesmo se oculto ou privado).
+        order: 8
+      manage_news:
+        title: Gerenciar Not?cias
+        about: Visualizar, editar ou excluir todas as not?cias.
+        order: 9
+      manage_pictures:
+        title: Gerenciar Fotos
+        about: Visualizar, editar e excluir qualisquer fotos e ?lbuns.
+        order: 11
+      manage_updates:
+        title: Gerenciar Atualiza??es
+        about: Visualizar, editar e excluir atualiza??es de perfil pendentes feitas
+          pelos usu?rios.
+        order: 14
+      manage_sync:
+        title: Gerenciar Sincroniza??o
+        about: Visualizar e rastrear sincroniza??es feitas com o UpdateAgent.
+        order: 15
+      import_data:
+        title: Importar Dados
+        about: Importar dados de um arquivo CSV ou utilizando o UpdateAgent.
+        order: 16
+      export_data:
+        title: Exportar Dados
+        about: Exportar todos os dados do site para um arquivo XML ou CSV.
+        order: 17
+      assign_checkin_cards:
+        title: Atribuir Cart?es de Check-in
+        about: Atribuir n?meros de cart?o para fam?lias.
+        order: checkin1
+      manage_checkin:
+        title: Gerenciar Checkin
+        about: Gerencie todos os aspectos de checkin, incluindo a configura??o.
+        order: checkin2
+      manage_documents:
+        title: Gerenciar Documentos
+        about: Adicionar, editar e excluir documentos.
+      run_reports:
+        title: Executar Relat?rios
+        about: Acessar o Painel de Relat?rios.
+        order: 18
+      manage_reports:
+        title: Gerenciar Relat?rios
+        about: Crie, Edite e Remova Relat?rios Customizados.
+        order: 19
+    rest_api_information: Para utilizar uma API REST com Ruby, voc? precisa fazer
+      isto
+    settings:
+      heading: Configura??es do Site
+      Contact:
+        Tech Support Email:
+          name: Email de Suporte T?cnico
+          description: Usu?rios ser?o direcionados a enviar um email aqui se eles
+            precisarem de ajuda t?cnica com este site.
+        Community Address:
+          name: Endere?o da Comunidade
+          description: Vis?vel nos Termos de Uso
+        Community Office Phone:
+          name: Telefone do Escrit?rio da Comunidade
+          description: Telefone do Escrit?rio da Comunidade
+        Community Email:
+          name: Email da Comunidade
+          description: Usu?rios ser?o direcionados a enviar um email aqui se eles
+            quiserem informa??es gerais ou de pol?ticas da sua comunidade.
+        Bug Notification Email:
+          name: Email de Notifica??o de Falhas
+          description: Software de gerenciamento automatizado de erros enviam emails
+            para este endere?o.
+        Send Email Changes To:
+          name: Enviar Altera??es de Email para
+          description: Email enviado quando algu?m alterar o seu endere?o de email
+            (pode ficar em branco para n?o enviar emails)
+        Send Updates To:
+          name: Enviar Atualiza??es para
+          description: Email enviado quando algu?m atualiza o seu perfil (pode ficar
+            em branco para n?o enviar emails)
+        Send Attendance Submissions To:
+          name: Enviar Registros de Presen?a para
+          description: Email enviado quando algu?m envia a presen?a de um grupo
+      Pusher:
+        App ID:
+          name: ID da aplica??o
+          description: ID da aplica??o fornecido pelo Pusher.
+        App Key:
+          name: App Key
+          description: A key da aplica??o fornecida pelo Pusher.
+        Secret:
+          name: Secret
+          description: O secret fornecido pelo Pusher.
+        API Scheme:
+          name: APi Scheme
+        API Host:
+          name: API Host
+        API Port:
+          name: API Port
+        WS Host:
+          name: WS Host
+        WS Port:
+          name: WS Port
+        WSS Port:
+          name: WSS Port
+      Services:
+        Yahoo:
+          name: Yahoo
+          description: A sua chave API do Yahoo - https://developer.yahoo.com/wsregapp/index.php
+        Analytics:
+          name: Analytics
+          description: Se voc? utiliza o Google Analytics ou outro servi?o de estat?sticas
+            baseado em JavaScript, insira o c?digo aqui. Ele ser? inserido no final
+            de cada p?gina.
+      Name:
+        Community:
+          name: Nome da Comunidade
+          description: O nome da sua igreja ou comunidade. Ex. "Primeira Igreja...".
+        Site:
+          name: Nome do Site
+          description: O nome deste site, exibido no topo da p?gna, exemplo, "Igreja
+            da Fam?lia" ou "Igreja Central".
+      URL:
+        News Feed:
+          name: Feed de Not?cias
+          description: URL para o seu feed externo de not?cias da comunidade no formato
+            RSS ou Atom (as not?cias s?o importadas periodicamente)
+        Visitor:
+          name: Visitante
+          description: URL do site principal (visitantes ser?o direcionados aqui se
+            eles tentarem acessar o site dos membros).
+      System:
+        Suffixes:
+          name: Sufixos
+          description: Sufixos de Nomes, um por linha.
+        Adult Age:
+          name: Idade Adulta
+          description: Idade na qual a pessoa ? considerada velha o bastante para
+            utilizar o site e ser vista por outros no diret?rio.
+        Language:
+          name: Idioma
+          description: Idioma dos elementos da interface. <a href='%{url}' target='_blank'>Voc?
+            poed ajudar!</a>
+        Bible Translation:
+          name: 
+          description: 
+        Time Zone:
+          name: Fuso Hor?rio
+          description: Ajuste para exibir datas e hor?rios corretamente no site.
+        Default Country:
+          name: Pa?s Padr?o
+          description: Selecione o pa?s padr?o para novos registros de fam?lia.
+        Map Zoom Level:
+          name: N?vel de Zoom do Mapa
+          description: Selecione o n?vel de zoom que ser? usado nos mapas exibidos
+            no site.
+      Appearance:
+        Public Theme:
+          name: Tema P?blico
+          description: Nome do tema selecionado para o site p?blico.
+        Theme:
+          name: Tema
+          description: Nome do tema selecionado para o site.
+          options:
+            skin-blue: 
+            skin-blue-light: 
+            skin-yellow: 
+            skin-yellow-light: 
+            skin-green: 
+            skin-green-light: 
+            skin-purple: 
+            skin-purple-light: 
+            skin-red: 
+            skin-red-light: 
+            skin-black: 
+            skin-black-light: 
+        Show Subheading:
+          name: Mostrar Subt?tulo
+          description: Abaixo do t?tulo do site / logo, exiba o endere?o do site e
+            o slogan.
+        Info Tab First:
+          name: Primeiro a Aba de Informa??es
+          description: Se habilitado, move a aba de Informa??es de perfis para a esquerda
+            e a carregue aberta por padr?o.
+      Formats:
+        Full Date and Time:
+          name: Data e Hor?rio Completos
+          description: Formato de exibi??o da data e hor?rio.
+        Time:
+          name: Hor?rio
+          description: Formato para exibi??o de hor?rios.
+        Date:
+          name: Data
+          description: Formato para exibi??o de datas.
+        Phone:
+          name: Telefone (Fixo)
+          description: Formato para exibi??o de n?meros de telefone fixo.
+        Date Without Year:
+          name: Data sem o ano
+          description: Formato para exibi??o de datas sem o ano, por exemplo, anivers?rios.
+        Mobile Phone:
+          name: Telefone Celular
+          description: Formato para exibi??o de n?meros de telefone celular.
+      Features:
+        Custom Person Type:
+          name: Tipos de Pessoas Customizados
+          description: Se habilitado, administradores podem definir um tipo customizado
+            em conjunto com Elder, Di?cono, etc.
+        Community Google Calendar:
+          name: Calend?rio do Google da Comunidade
+          description: A URL do Calend?rio do Google da comunidade. Pode ser o endere?o
+            p?blico ou privado, mas o calend?rio precisa ser compartilhado publicamente
+            para ser inclu?do na caracter?stica "meu calend?rio".
+        Updates Must Be Approved:
+          name: Atualiza??es Precisam ser Aprovadas
+          description: Se habilitado, todas as mudan?as de informa??es "b?sicas" de
+            usu?rios (telefone, endere?o, etc) aguardar?o uma aprova??o de um administrador
+            antes de serem aplicadas.
+        Notify on Photo Change:
+          name: Notificar ao Mudar a Foto
+          description: Se habilitado, administradores ser?o notificados quando um
+            usu?rio mudar a sua foto pessoal ou de fam?lia.
+        Sign Up:
+          name: Registrar
+          description: Se habilitado, membros em potencial podem criar as suas pr?prias
+            contas no site. ? altamente recomend?vel que voc? tamb?m insira um endere?o
+            de email de aprova??o no pr?ximo campo para que voc? possa revisar os
+            cadastros antes que eles possam acessar o site.
+        SSL:
+          name: SSL
+          description: Se voc? possui uma configura??o de SSL, voc? pode habilit?-la
+            aqui, o que tornar? a p?gina de login criptografada. Se n?o, algumas fun??es
+            avan?adas de hashing em Javascript est?o habilitadas para ter certeza
+            que as senhas dos usu?rios n?o est?o sendo enviadas em texto aberto.
+        Notes:
+          name: Notas
+          description: Habilitar Compartilhamento de Notas.
+        Pictures:
+          name: Fotos
+          description: Habilitar Compartilhamento de Fotos.
+        Banner Message:
+          name: Mensagem de Banner
+          description: Mensagem para exibir no topo de todas as p?ginas do site (HTML),
+            como um alerta.
+        Multisite:
+          name: M?ltiplos Sites
+          description: Quando habilitado, esta inst?ncia pode gerenciar m?ltiplos
+            sites, baseados no nome de dom?nio.
+        Groups:
+          name: Grupos
+          description: Habilitar Grupos.
+        News by Users:
+          name: Not?cias enviadas pelos Usu?rios
+          description: Permitir conte?do de not?cias enviado pelos usu?rios. (Requer
+            a op??o 'P?gina de Not?cias' acima habilitado).
+        Custom Person Fields:
+          name: Campos Pessoais Customizados
+          description: Adicione nomes de campos customizados, um por linha. Ao incluir
+            a palavra "date" (ou "Date") o campo ser? do tipo data. Incluindo um aster?sco
+            (*), o campo ser? vis?vel e edit?vel pelos usu?rios.
+        Edit Legacy Ids:
+          name: Editar ID Legado
+          description: Permite que administradores vejam e modifiquem o campo legacy_id.
+        Sign Up Approval Email:
+          name: Email de Aprova??o de Registro
+          description: Aonde enviar pedidos de acesso pendentes (necessita ser um
+            administrador; deixe em branco para aprovar automaticamente).
+        Stream:
+          name: 
+          description: 
+        Friends:
+          name: Amigos
+          description: Habilite a amizade m?tua (confirmada por email)
+        Sidebar Group Heading:
+          name: Cabe?alho do Grupo da Barra Lateral
+          description: Cabe?alho para exibir acima de pessoas com grupos em comum
+            (veja as configura??es acima)
+        Reporting:
+          name: Relat?rios
+          description: Requer o MongoDB para ser configurado e colocado em execu??o.
+        Sidebar Group Category:
+          name: Categoria do Grupo da Barra Lateral
+          description: Pessoa que participam de grupos comuns nesta categoria ser?o
+            exibidas na barra lateral do perfil do usu?rio.
+        Content Management System:
+          name: Sistema Gerenciador de Conte?do
+          description: Habilitar "P?ginas" - Use o OneBody para hospedar o seu website.
+        News Page:
+          name: P?gina de Not?cias
+          description: Habilite a p?gina de not?cias da comunidade. Not?cias podem
+            ser submetidas pelos administradores e/ou obtidas de um feed RSS (veja
+            a configura??o Servi?os Externos, Feed de Not?cias).
+        Verses:
+          name: Vers?culos
+          description: Habilitar compartilhamento de Vers?culos.
+        Recipes:
+          name: Receitas
+          description: Habilitar compartilhamento de Receitas.
+        Service:
+          name: Culto
+          description: Se habilitado, os usu?rios administrativos podem acompanhar
+            cultos individuais em ?reas da comunidade.
+        Checkin:
+          name: Check-in
+          description: Se habilitado, usu?rios podem fazer o check-in em cursos determinados.
+        Documents:
+          name: Documentos
+          description: Se habilitado, administradores podem carregar arquivos em uma
+            ?rea geral na qual os usu?rios podem procur?-los e baix?-los.
+        Business Directory:
+          name: Diret?rio de Empresas
+          description: Se habilitado, usu?rios podem adicionar informa??es profissionais
+            para ser listado no diret?rio de neg?cios da igreja.
+        Small Group Size:
+          name: Tamanho m?ximo de um "grupo pequeno"
+          description: Pessoas em grupos com esta quantidade de membros ou menos s?o
+            consideradas parte de um "grupo pequeno" e podem facilmente compartilhar
+            conte?do entre eles utilizando a p?gina inicial.
+      Privacy:
+        Hide Contact Details in Messages:
+          name: Ocultas Detalhes de Contato nas Mensagens
+          description: Se habilitado, tentativas s?o feitas de esconder n?meros de
+            telefone e endere?os de email dentro das mensagens que s?o visualizadas
+            online.
+        Share Anniversary by Default:
+          name: Compartilhar Anivers?rio de Casamento
+          description: Se habilitado, novos usu?rios ter?o o anivers?rio de casamento
+            compartilhado com outros membros do site.
+        Share Email by Default:
+          name: Compartilhar Email
+          description: Se habilitado, novos usu?rios ter?o o endere?o de email compartilhado
+            com outros membros do site.
+        Allow Unencrypted Logins:
+          name: Permitir Logins n?o criptografados
+          description: Login s?o garantidos com uma chave RSA p?blica/privada utilizando
+            JavaScript. Marque esta op??o para permitir o "fallback" para telefones
+            celulares e outros navegadores que tiverem problemas ao acessar o site.
+        Share Home Phone by Default:
+          name: Compartilhar Telefone Residencial
+          description: Se habilitado, novos usu?rios ter?o o n?mero de telefone residencial
+            compartilhado com outros membros do site.
+        Allow Picture Comments:
+          name: Permitir Coment?rios em Fotos
+          description: Se habilitado, os usu?rios poder?o postar coment?rios nas fotos.
+        Share Work Phone by Default:
+          name: Compartilhar Telefone Comercial
+          description: Se habilitado, novos usu?rios ter?o o n?meros de telefone comercial
+            compartilhados com outros membros do site.
+        Share Fax by Default:
+          name: Compartilhar Fax
+          description: Se habilitado, novos usu?rios ter?o o n?meros de fax compartilhado
+            com outros membros do site.
+        Max Sign in Attempts:
+          name: N?mero M?ximo de Tentativas de Acesso
+          description: N?mero de falhas no acesso em um per?odo de 14 minutos, antes
+            da conta ser bloqueada. (A conta ? automaticamente desbloqueada depois
+            de 15 minutos).
+        Share Mobile Phone by Default:
+          name: Compartilhar Telefone Celular
+          description: Se habilitado, novos usu?rios ter?o o telefones celulare compartilhado
+            com outros membros do site.
+        Share Address by Default:
+          name: Compartilhar Endere?o
+          description: Se habilitado, novos usu?rios ter?o o endere?o residencial
+            compartilhado com outros membros do site.
+        Share Birthday by Default:
+          name: Compartilhar Data de Nascimento
+          description: Se habilitado, os novos usu?rios ter?o o anivers?rio compartilhado
+            com outros membros do site.
+      host:
+        name: Servidor / Nome de Dom?nio
+        description: O nome de dom?nio no qual este site est? acess?vel na internet,
+          por exemplo, igreja.com ou membros.igreja.com (n?o inclua o prefixo http://
+          no in?cio)
+      Email:
+        Host:
+          name: Enviar Nome do Servidor por email
+          description: Um subdom?nio, ex. comunidade.exemplo.com.br, para utilizar
+            se o seu dom?nio j? est? servindo o email. O padr?o ? o nome de dom?nio.
+      contact_automated_email_about: Estes endere?os de email s?o enviados quando
+        certas coisas acontecem no site. Voc? pode definir todos para o mesmo endere?o
+        ou endere?os independentes, dependendo com a separa??o de atividades da sua
+        comunidade.
+      contact_community_info_about: Insira as informa??es de contato do escrit?rio
+        da sua igreja ou comunidade, na qual as pessoas possam entrar em contato com
+        a equipe administrativa.
+      contact_heading: Contato
+      disabled: Desabilitado
+      enabled: Habilitado
+      features_heading: Caracter?sticas
+      formats_heading: Formatos
+      formats_date_about_html: Insira os seus pr?prios formatos de data e hora que
+        s?o utilizados no seu pa?s. Veja <a href="https://www.manystrands.com/wp-content/uploads/2013/01/strftime-cheat-sheet.pdf"
+        target="_new">aqui</a> para op??es de formata??o.
+      formats_phone_about: Informe o formato do telefone com o caracter 'd', por exemplo,
+        dddd-dddd ou (dd) dddd-dddd, dependendo da sua localiza??o.
+      locale_heading: Localiza??o
+      mailgun: Criar uma Rota "Pega Tudo" no Mailgun
+      mailgun_message: Use isto para criar uma rota "pega tudo" no seu servidor/dom?nio
+        com o mailgin para receber emails.
+      membership_management_heading: Membros
+      name_heading: Nome
+      one_per_line: "(um por linha)"
+      privacy_defaults: Configura??es de Privacidade Padr?o
+      privacy_defaults_about: Quando uma conta de um membro ? criada, as seguintes
+        configura??es de privacidade s?o aplicadas ?s suas informa??es. (Os membros
+        ainda podem escolher exibir ou ocultar as suas informa??es a qualquer momento,
+        independente das configura??es abaixo).
+      privacy_heading: Privacidade
+      reload: Recarregar Configura??es
+      reload_message: Se voc? fez modifica??es no sistema pela linha de comando, voc?
+        precisa recarregar todas as configura??es para ver as mudan?as em a??o.
+      save: Salvar Configura??es
+      services_heading: Servi?os Externos
+      theme_heading: 
+      settings: Configura??es
+      sharing_about: OneBody fica melhor quando os membros participam adicionando
+        o seu pr?prio conte?do. Habilite o compartilhamento de conte?do com estas
+        configura??es.
+      sharing_communications_about: Compartilhe informa??es com os seus membros facilmente.
+      sharing_heading: Compartilhando
+      small_group_sharing:
+        disable: desabilitar compartilhamentos entre pequenos grupos
+        all: compartilhar com todos os grupos, independentemente do tamanho
+    super_admin: Super Admin
+    super_admin_about: Super Admins possuem controle total sobre o site, com todos
+      os privil?gios dispon?veis. Tenha cuidado com quem voc? concede esta permiss?o
+      - pode ser perigoso!
+    template: Modelo
+    templates: Modelos
+    updates:
+      apply: Aplicar
+      child: ? uma crian?a?
+      child_alert: Voc? precisa especificar se esta pessoa ? uma crian?a (abaixo de
+        %{years} anos) ou n?o para completar esta atualiza??o.
+      diff:
+        person: Pessoa
+        property: Propriedade
+        before: Antes
+        after: Depois
+        created_at: Enviado
+      mark_complete: Marcar Completo
+      mark_incomplete: Marcar Incompleto
+      person_deleted: pessoa exclu?da
+      profile_updates: Atualiza??es de Perfil
+      toggle:
+        pending: Pendente
+        complete: Completo
+      updated: atualizado
+      child_select_options:
+        You must select one: ''
+        'true': true
+        'false': false
+    username: Usu?rio
+    your_key: sua chave
+  albums:
+    index:
+      heading: ?lbum de Fotos
+    table:
+      name: Nome
+      picture_count: Fotos
+      created_at: Criado
+    new:
+      heading: Novo ?lbum
+      button: Novo ?lbum
+    edit:
+      heading: Editar ?lbum
+      button: Editar ?lbum
+    delete:
+      button: Excluir ?lbum
+    sharing:
+      heading: Quem deve ver este ?lbum?
+    none: Ainda n?o existe nenhum ?lbum
+    is_public:
+      enabled: Comunidade ? mostre este ?lbum para todos
+      disabled_group: Compartilhe este ?lbum somente com este grupo.
+      disabled_profile: Perfil ? mostrar este ?lbum para <a href='%{url}'>estas pessoas</a>
+    cannot_add_pictures_to_group: N?o ? poss?vel adicionar fotos a este grupo.
+    click_to_view: clique para visualizar
+    description: Descri??o
+    edit_picture: Editar ?lbum de Fotos
+    save: Salvar ?lbum
+    saved: ?lbum salvo.
+  attachments:
+    heading: Arquivos do Grupo
+    new:
+      button: Novo Arquivo
+    deleted: Anexo exclu?do.
+    file: Arquivo
+    file_deleted: Este arquivo foi exclu?do.
+    file_not_found: Este arquivo n?o pode ser encontrado.
+    not_found: Anexo n?o encontrado.
+    saved: Anexo salvo.
+    unknown_type: Tipo de anexo n?o conhecido.
+    upload_attachment: Carregar Anexo
+    upload_file: Carregar Arquivo
+  attendance:
+    heading_html: Presen?a do grupo %{group} em %{when}
+    heading_without_group: Presen?a para %{when}
+    heading_without_date: Presen?a no grupo %{group}
+    medical_notes: 'Notas M?dicas:'
+    can_pickup_people: Pode Buscar
+    cannot_pickup_people: N?o Pode Buscar
+    share:
+      heading: Compartilhar Formul?rio
+      intro_html: "<p>Compartilha um link para este formul?rio que permitir? que algu?m
+        submeta o registro de presen?a para este grupo sem fazer login no sistema.</p>\n<p>Esta
+        caracter?stica pode ser usada para o check-in de aulas.</p> \n"
+      button: Compartilhar este Formul?rio
+    add:
+      heading: Adicionar Algu?m
+      intro: "Adicionar algu?m ao hist?rico de presen?as. \n"
+      footer_html: "Se esta pessoa ? algu?m que frequenta o grupo regularmente, ?
+        melhor adicion?-lo como um membro do grupo <a href=\"%{url}\">aqui</a>. \n"
+    add_visitor: Adicionar um visitante.
+    adult: Adulto
+    attendance: Presen?a
+    class_time: Hor?rio da Aula
+    clear_search: limpar
+    date: Data
+    export: Exportar para um Arquivo
+    email:
+      subject: Envio de Presen?a para %{group}
+      intro_with_submitter: "%{person} enviou um registro de presen?a para o grupo
+        %{group}."
+      intro_anonymous: A Presen?a foi enviada (anonimamente) para o grupo %{group}.
+      notes: 'Abaixo est?o as notas inclu?das com o envio:'
+    group: Grupo
+    group_missing: grupo n?o encontrado
+    id: ID
+    name: Nome
+    name_unknown: nome desconhecido
+    next_date: pr?xima data
+    no_records: nenhum registro para exibir
+    not_enabled: Registro de presen?a n?o est? habilitado para este grupo.
+    notes:
+      label: Notas
+      help: Use este campo para enviar notas para o administrador.
+    order_by_last: 
+    prev_date: data anterior
+    recorded_time: Hor?rio Registrado
+    records:
+      one: 1 registro
+      other: "%{count} registros"
+    save: Enviar Presen?a
+    saved: Presen?a enviada.
+    submit_notes: Enviar Notas
+    Search: Buscar
+    search_person: Buscar pelo Nome da Pessoa
+    wrong_date_format: N?o foi poss?vel reconhecer a data. Por favor tente novamente.
+  checkin:
+    heading: Check-in
+    search:
+      label: 'Digite o nome parcial ou completo:'
+      button: Buscar
+      clear: limpar
+      none_found: nenhuma fam?lia encontrada
+    add_family:
+      button: Adicionar Fam?lia
+    attendance:
+      button: Presen?a
+    setup:
+      heading: Configura??o
+    assigned_cards:
+      button: Cart?es Atribu?dos
+    scan:
+      unknown_card: cart?o n?o encontrado
+    cards:
+      heading: Cart?es de Check-in Atribu?dos
+      table:
+        id: ID
+        legacy_id: ID Legado
+        family: Fam?lia
+        barcode: C?digo de Barras
+        assigned_at: Atribu?do
+      export:
+        button: Exportar para um Arquivo
+      none: nenhum registro para exibir
+    groups:
+      movement_help_html: |
+        <p>
+        Para mover um grupo de check-in para dentro ou fora de uma pasta, primeiro expanda a pasta depois clique em
+        <i class="up"></i> ou  <i class="down"></i>.
+        </p>
+        <p>
+        Para mover um grupo para o topo ou para o fim,
+        segure <span class="highlight">shift</span> enquanto clica com o bot?o esquerdo do mouse
+        <i class="up"></i> ou <i class="down"></i>.
+        </p>
+      heading: Check-in em Grupos
+      index:
+        heading: "%{time} no %{campus}"
+        add_folder:
+          button: Adicionar Pasta
+          heading: Adicionar uma pasta
+          name: Nome a pasta
+        add_group:
+          heading: Adicionar um destino (grupo)
+          search: Buscar pelo nome
+          select_folder:
+            label: Selecionar pasta
+            none: "(nenhum)"
+          button: Adicionar Grupo
+        table:
+          name: Nome
+          label_id: R?tulo (etiqueta)
+          print_extra_nametag: Etiqueta de Nome Adicional
+          section: Se??o
+      section:
+        new: "[nova se??o]"
+      table:
+        group: Grupo
+    labels:
+      button: Configura??es de r?tulo
+      edit:
+        heading: Editar R?tulo de Check-in
+      delete:
+        notice: R?tulo deletado
+      heading: Etiquetas de Check-in
+      new:
+        button: Novo R?tulo
+        heading: Editar Etiquetas de Check-in
+      table:
+        name: Nome
+        description: Descri??o
+        updated_at: Atualizado
+    times:
+      button: Configura??o de Hor?rios
+      heading: Hor?rios de Check-in
+      intro: Adicione, edite e exclua hor?rios dispon?veis de check-in aqui.
+      table:
+        time: Hora
+        campus: Campus
+        groups:
+          heading: Destinos
+          count:
+            one: 1 destino
+            other: "%{count} destinos"
+      edit:
+        button: editar
+        campus:
+          new: "[novo campus]"
+        delete:
+          button: deletar
+        heading: Editar Hor?rio de Check-in
+        save:
+          button: Salvar Altera??es
+      groups:
+        button: grupos
+      recurring:
+        heading: Hor?rios Recorrentes
+        new:
+          button: Novo Hor?rio Recorrente
+        weekday: Dia da Semana
+        time: Hor?rio
+        campus: Campus
+        add:
+          button: Adicionar
+      single:
+        heading: Hor?rios e Datas Individuais
+        new:
+          button: Novo Hor?rio Individual
+        datetime: Data & Hora
+        campus: Campus
+        add:
+          button: Adicionar
+    family:
+      new:
+        heading: Nova Fam?lia
+        first_name: Nome
+        last_name: Sobrenome
+        birthday: Data de Nascimento
+        medical_notes: Anota??es M?dicas (opcional)
+        parents: Pais
+        children: Crian?as/Outros
+        barcode: Ler Cart?o
+        ignore_spelling_errors: Ignoras erros suspeitos de ortografia.
+        save: Salvar Fam?lia
+        cancel: cancelar
+        success:
+          heading: Fam?lia Salva
+          return: Voltar
+          view: Visualizar/Editar Fam?lia
+          barcode: 'N?mero atribu?do:'
+          not_checked_in: "Esta fam?lia ainda n?o fez o check-in ? instrua o respons?vel\neles
+            precisam agora realizar o check-in em uma das esta??es. \n"
+      saved: Fam?lia salva.
+      errors: Houveram erros ao salvar esta fam?lia.
+      error:
+        no_birthdays: Voc? precisa inserir a data de nascimento para cada crian?a.
+        no_people: Voc? precisa inserir pelo menos uma pessoa.
+        no_parents: Voc? precisa inserir pelo menos um pai ou m?e.
+        no_barcode: Por favor, passe o campo no final do cart?o no leitor.
+    interface:
+      add_guest:
+        heading: Adicionar um convidado
+        intro: Informe o nome completo do seu convidado no cambo abaixo
+        button: Adicionar um convidado
+        save: Salvar
+      barcode:
+        placeholder: Passe o Seu Cart?o
+      cancel:
+        button: cancelar
+      heading: Check in
+      not_attending: n?o comparecendo
+      print:
+        heading: Depois de fazer suas sele??es...
+        button: Imprimir Etiquetas
+      run_setup:
+        intro: Voc? precisa primeiramente configurar os hor?rios e destinos de check-in
+        button: Configura??o
+      same_as_last_week:
+        button: Escolher o mesmo da semana passada
+  comments:
+    add_a_comment: Adicionar um coment?rio
+    deleted: Coment?rio exclu?do.
+    none_yet: nada ainda
+    not_authorized: Voc? n?o possui autoriza??o para excluir este coment?rio.
+    object_not_found: Aquele %{name} n?o foi encontrado.
+    save: Salvar Coment?rio
+    saved: Coment?rio salvo.
+  administration:
+    deleted_people:
+      index:
+        table:
+          id: ID
+          legacy_id: ID Legado
+          last_name: Sobrenome
+          first_name: Primeiro Nome
+          family_id: ID da Fam?lia
+          legacy_family_id: ID da Fam?lia Legado
+          family_name: Nome da Fam?lia
+          family_deleted: Fam?lia Exclu?da
+          family_not_found: n?o encontrado
+          updated_at: ?ltima Atualiza??o
+    email_setups:
+      show:
+        heading: 
+        intro_html: 
+        reconfigure:
+          button: 
+      new:
+        heading: 
+        config_options:
+          mailgun: 
+          manual: 
+        mailgun:
+          heading: 
+          intro_html: 
+          secret_api_key: 
+          submit: 
+        manual:
+          heading: 
+          intro_html: 
+      edit:
+        heading: 
+        domain:
+          intro: 
+          label: 
+        domain_missing:
+          heading: 
+          message_html: 
+        submit: 
+        success: 
+        failure: 
+    imports:
+      new:
+        browse:
+          button: Selecionar Arquivo CSV
+        form:
+          submit: Enviar Arquivo
+        heading: Importar Dados
+        people:
+          heading: Importar Pessoas
+      created: criado
+      edit:
+        form:
+          create_as_active: Crie novas pessoas ativas (com permiss?es de acesso)
+          dont_preview: Pular Visualiza??o
+          match_strategy: Como n?s devemos tentar combinar pessoas existentes?
+          overwrite_changed_emails_html: Sobrescrever o endere?o de email alterado
+            n?o importando qual. Clique <a href='%{url}' target='_blank'>aqui</a>
+            para maiores informa??es.
+        table:
+          attribute: Atributo no banco de dados
+          column: Coluna do arquivo
+          example: Exemplo de dados
+        delete:
+          button: Remover Importa??o
+        save:
+          button: Salvar e continuar
+      errored:
+        message: 'N?s n?o podemos processar o seu arquivo CSV. Segue o erro:'
+        new:
+          button: Tente novamente
+      index:
+        table:
+          filename: Nome do arquivo
+          created_at: Criado
+          errored: Erros
+          person: Criado Por
+          rows: Linhas
+          status: Estado
+      match_strategies:
+        by_id_only: pelo ID somente
+        by_name: pelo nome (use o ID se presente)
+        by_contact_info: pela informa??o de contato, como endere?o ou telefone (use
+          ID se presente)
+        by_name_or_contact_info: pelo nome ou informa??o de contato (use ID se presente)
+      matched_by:
+        default: n?o encontrado
+        matched_person_by_id: pelo ID
+        matched_person_by_legacy_id: por legacy ID
+        matched_person_by_name: pelo nome
+        matched_person_by_contact_info: pela informa??o de contato
+        matched_family_by_id: pelo ID
+        matched_family_by_legacy_id: por legacy ID
+        matched_family_by_name: por nome
+        matched_family_by_contact_info: pela informa??o de contato
+      parsing:
+        message: Por favor espere enquanto n?s analisamos o seu arquivo.
+      show:
+        create_as_active:
+          'true': sim
+          'false': n?o
+        match_strategies:
+          by_id_only: id
+          by_name: nome
+          by_contact_info: informa??o de contato
+          by_name_or_contact_info: nome ou informa??o de contato
+        stats:
+          heading: Atualizar Estado
+        table:
+          completed_at: Completado
+          create_as_active: Criar como ativo
+          created_at: Enviado
+          creates: Criar
+          errored: Ocorreu um erro
+          families: Fam?lias
+          family_id: ID da Fam?lia
+          family_matched: Fam?lia Combinada
+          family_name: Nome da Fam?lia
+          family_status: Estado da Fam?lia
+          filename: Nome do arquivo
+          match_strategy: Corresponder por
+          new: novo
+          no_change: Sem Mudan?as
+          people: Pessoas
+          person: Por
+          person_first_name: Primeiro Nome
+          person_id: ID
+          person_last_name: ?ltimo Nome
+          person_matched: Pessoa Combinada
+          person_status: Status da Pessoa
+          rows: Linhas
+          updates: Atualiza??es
+        edit:
+          button: Editar Importa??o
+        execute:
+          button: Importar Dados Agora!
+        delete:
+          button: Remover Importa??o
+        errors_table:
+          name: Attribute
+          value: Value
+          error: Error
+          blank_value: "(blank)"
+      status:
+        pending: Pendente
+        parsing: Analisando Arquivo de Dados
+        parsed: Analisado
+        previewing: Construindo Visualiza??o
+        previewed: Visualizar Mudan?as
+        active: Ativo
+        complete: Completo
+        errored: Com erros
+      status_heading: 'Status de Importa??o: %{status}'
+      unchanged: n?o alterado
+      updated: atualizado
+  documents:
+    index:
+      heading: Documentos
+      intro: Este ? um lugar para formul?rios, publica??es, e outros arquivos dispon?veis
+        para os usu?rios deste site.
+      table:
+        name: Nome
+        description: Descri??o
+        updated_at: Atualizado
+        size: Tamanho
+        item_count: "%{count} itens"
+      edit_folder:
+        button: Editar esta pasta
+      delete_folder:
+        button: Remover essa pasta
+      new_folder:
+        button: Nova pasta
+      new_document:
+        button: Novo documento
+      hidden_folders:
+        label:
+          one: Uma pasta oculta
+          other: "%{count} pastas ocultas"
+      restricted_folders:
+        label:
+          one: Uma pasta (de grupo) restrita
+          other: "%{count} pastas (de grupo) restritas"
+      no_file: No file chosen
+    show:
+      table:
+        filename: Nome de arquivo
+        content_type: Tipo de Conte?do
+        size: Tamanho
+        updated_at: Atualizado
+      download:
+        button: Baixar Arquivo
+      edit:
+        button: Editar
+      delete:
+        button: Excluir
+    new:
+      heading: Novo Documento
+      select:
+        button: Select File(s)
+    new_folder:
+      heading: Nova Pasta
+    create:
+      notice:
+        one: Your document has been created.
+        other: Your documents have been created.
+      failure:
+        one: 'Your document could not be saved: %{filenames}'
+        other: 'Your documents could not be saved: %{filenames}'
+    create_folder:
+      notice: A sua pasta foi criada.
+    edit:
+      heading: Editar %{document}
+    edit_folder:
+      heading: Editar %{folder}
+    update:
+      notice: O Documento foi salvo.
+    update_folder:
+      notice: A Pasta foi salva.
+    delete:
+      notice: O documento foi exclu?do.
+    delete_folder:
+      confirmation: Voc? tem certeza que deseja exluir esta pasta E TUDO DENTRO DELA?
+        N?o h? como desfazer isto.
+      notice: A pasta e todo o seu conte?do foram exclu?dos.
+    hidden_folder:
+      alert: Esta pasta ? oculta para usu?rios regulares.
+      tooltip: oculto
+    hidden_folder_due_to_parent:
+      alert: Esta pasta ? oculta para usu?rios regulares porque est? dentro de uma
+        pasta oculta.
+    hidden_document:
+      alert: Este documento est? oculto dos usu?rios comuns.
+      tooltip: oculto
+    hidden_document_due_to_parent:
+      alert: Este documento est? oculto dos usu?rios comuns porque est? dentro de
+        um diret?rio oculto.
+    groups:
+      add:
+        heading: Compartilhar com os grupos (opcional)
+        search_button: Buscar pelo nome
+        add_button: Adicionar Grupo
+      link: link
+    restricted_folder:
+      alert_html: 'Esta pasta somente ? vis?vel para os seguintes grupos: %{groups}'
+      tooltip: restrito
+    restricted_document:
+      alert_html: 'Este documento somente ? vis?vel para os seguintes grupos: %{groups}'
+      tooltip: restrito
+  emails:
+    mailgun:
+      api_key: Sua Chave da API Mailgun
+      heading: Crie  uma rota catchall do Mailgun
+      intro_html: Por favor visite <a href='%{url}' target='_blank'>a wiki</a> para
+        informa??es sobre como configurar o email.
+      route_found: Essa rota j? existe.
+      route_created: A rota foi criada com sucesso.
+      apikey_notfound: Por favor, insira uma chave v?lida da API Mailgun.
+      route_error: Houve um erro ao tentar criar uma rota.
+      submit:
+        button: Criar Rota.
+  families:
+    add:
+      new: Nova Pessoa
+      existing: Mover Pessoa
+    new:
+      heading: Nova Fam?lia
+      created:
+        notice: A fam?lia foi criada. Agora, adicione pessoas utilizando o bot?o 'Nova
+          Pessoa' abaixo...
+    edit:
+      heading: Editar Fam?lia
+      name_example_html: "<em>Jos? dos Santos</em> ou <em>Jos? &amp; Maria dos Santos</em>"
+      name_suggestion_html: 'Sugerido: <strong>%{name}</strong>'
+      name_suggestion_button: Alterar
+      city_st_zip: Cidade, Estado e CEP
+      photo: Foto
+      save: Salvar Fam?lia
+      saved: Altera??es na Fam?lia foram salvas.
+    delete:
+      button: Excluir Fam?lia
+      cannot_delete_your_own: Voc? n?o pode excluir a sua pr?pria fam?lia.
+    show:
+      heading: Fam?lia %{family}
+      edit_link: Editar Fam?lia
+      suggested_name_html:
+        one: "%{first} ? o(a) ?nico(a) adulto(a) nesta fam?lia. Considere <a href='%{url}'>mudar
+          o nome da fam?lia</a> para ?<strong>%{name}</strong>.?"
+        other: "%{first} e %{second} s?o os primeiros dois adultos desta fam?lia.
+          Considere <a href='%{url}'>mudar o nome da fam?lia</a> para ?<strong>%{name}</strong>.?"
+      table:
+        home_phone: Telefone Residencial
+        address: Endere?o Residencial
+        map: 
+        anniversary: Anivers?rio de Casamento
+    name:
+      same_last_name: "%{adult1_fname} & %{adult2_fname} %{adult1_lname}"
+      different_last_names: "%{adult1_name} & %{adult2_name}"
+    not_found: Fam?lia n?o encontrada
+    updates:
+      pending_callout: Atualiza??es para esta fam?lia est?o pendentes.
+  friends:
+    index:
+      nobody_yet: Ningu?m ainda
+    accept: Aceitar Amigo
+    add_friend_are_you_sure: Voc? tem certeza? Um email ser? enviado para esta pessoa
+      solicitando a amizade.
+    add_to_friends: Adicionar aos Amigos
+    add_to_friends_pending: Adicionar aos Amigos (pendente)
+    decline: Declinar Amigo
+    friends: Amigos
+    pending_requests: Pedidos de Amizade Pendentes
+    people_requested: As seguintes pessoas solicitaram ser seus amigos.
+    personal_friends: Amigos de %{name}
+    remove_from_friends: Remover de Amigos
+    request_sent: Um pedido de amizade foi enviado para %{name}.
+    search_in_the_directory: Procurar por amigos no diret?rio
+    you_have_pending_requests: Voc? possui pedidos de amizade pendentes.
+    friends_list_button: Visualizar Amigos
+  Changes_saved: Altera??es salvar.
+  Delete: Excluir
+  From: De
+  Help: Ajuda
+  No_action_to_show: Nenhuma a??o respondeu para ser exibida
+  No_more_records: N?o existem mais registros.
+  Page_no_longer_valid: Esta p?gina n?o ? mais v?lida.
+  There_was_an_error: Ocorreu um erro.
+  There_were_errors: Ocorerram alguns erros.
+  To: Para
+  are_you_sure: Voc? tem certeza?
+  by: Por
+  changes_saved: Altera??es salvas.
+  click_here: Clique aqui
+  Comments: Coment?rios
+  delete: excluir
+  edit: editar
+  feature_unavailable: Esta caracter?stica n?o est? dispon?vel.
+  for: para
+  multiple_files: O seu navegador pode suportar o carregamento de m?ltiplos arquivos
+    ? tente selecionar m?ltiplos arquivos utilizando a tecla Ctrl (Windows) ou Command
+    (Mac) no seu teclado.
+  name: Nome
+  new: novo
+  none: nenhum
+  not_authorized: Voc? n?o est? autorizado.
+  only_admins: Voc? deve ser um administrador para usar esta se??o.
+  person: Pessoa
+  phone: Telefone
+  req_notes: Notas
+  save: Salvar
+  saving: Salvando
+  save_changes: Salvar Altera??es
+  show_all: Mostrar Todos
+  submit_changes: Submeter Mudan?as
+  you_made_a_change_page: Parece que voc? mudou alguma coisa nesta p?gina. Clique
+    OK para descartar as suas altera??es e deix?-la.
+  date_format:
+    DD: DD
+    MM: MM
+    YYYY: AAAA
+  activemodel:
+    errors:
+      models:
+        signup:
+          attributes:
+            base:
+              disabled: Registro est? desativado.
+              spam: Registro foi completado de forma automatizada.
+            first_name:
+              blank: Primeiro Nome n?o pode ser vazio.
+            last_name:
+              blank: ?ltimo nome n?o pode ser vazio.
+            email:
+              blank: Email n?o pode ser vazio.
+            gender:
+              blank: Sexo n?o pode ser vazio.
+            birthday:
+              blank: Data de Nascimento n?o pode ser vazio.
+              too_young: Voc? ? muito novo para se inscrever neste servi?o.
+            mobile_phone:
+              blank: Telefone celular n?o pode ficar vazio.
+  application:
+    api_access: Voc? deve ser um super administrador para usar a API.
+    no_default_site: Nenhum site padr?o encontrado.
+    no_site_configured: N?o existe um site configurado no endere?o %{host}
+    settings_reloaded: Configura??es recarregadas.
+    settings_saved: Configura??es salvas.
+    template_created: Modelo criado.
+  people_count:
+    one: 1 pessoa
+    other: "%{count} pessoas"
+  footer:
+    help: Ajuda para utilizar este site
+    privacy_policy: Pol?tica de Privacidade
+    powered_by: Fornecido por Onebody
+    onebody_name: 
+  generated_files:
+    building: Criando o seu arquivo...
+    complete_heading: Feito!
+    complete_message: O seu arquivo est? completo e pronto para o download.
+    failure_heading: Desculpem-nos...
+    failure_message: Parece que houve um erro ao gerar o seu arquivo.
+  groups:
+    heading: Grupos
+    new_list:
+      heading: Novo Grupo
+    created: Grupo criado.
+    created_pending_approval: O seu grupo foi criado e est? com a aprova??o pendente.
+    saved: Altera??es no grupo salvas com sucesso.
+    deleted: Grupo exclu?do.
+    delete:
+      heading: Excluir este Grupo
+      intro: 'Se voc? realmente deseja excluir o grupo e todo o seu conte?do (mensagens,
+        pedidos de ora??o, fotos, etc) permanentemente, ent?o voc? pode faz?-lo abaixo:'
+      button: Excluir este grupo permanentemente
+    hide:
+      heading: Ocultar (Arquivar) este Grupo
+      intro: 'Se voc? deseja que um grupo desapare?a de todas as p?ginas deste site,
+        oculte-o clicando no bot?o abaixo:'
+      button: Ocultar este grupo
+      unhide_button: Re-exibir este grupo
+    your_groups: Seus Grupos
+    groups_of:
+      s: Grupos de %{name}
+      no_s: Grupos de %{name}
+    hidden:
+      callout: Este grupo est? oculto (arquivado).
+      label: Oculto
+    hidden_groups:
+      heading: Grupos Ocultos
+      description: Somente administradores (como voc?) podem ver esta lista.
+    linked_group: Este grupo ? mantido pelo pessoal do escrit?rio.
+    private:
+      callout: Este grupo ? privado. Mensagens postadas aqui somente ser?o vistas
+        pelos membros do grupo ou administradores do site.
+      label: Privado
+    email_off: email desligado
+    email_on: email ligado
+    browse:
+      heading: Procurar Grupos
+      select_category: Exibir por Categoria
+      all: Exibir Todos
+    create:
+      heading: Criar um Grupo
+      description: Se voc? n?o encontrar um grupo, ? f?cil criar um!
+      button: Criar um Grupo
+    show:
+      details:
+        admin: 
+        created_at: criado
+        created_by: criado por
+        leader: l?der
+        admins: adminstradores
+        meets: se enontra
+        location: local
+        directions: dire??es
+        member_count_label: membros
+        member_count:
+          one: 1 pessoa
+          other: "%{count} pessoas"
+        birthdays_this_month_html:
+          one: "(<a href='%{url}'>1</a> pessoa faz anivers?rio neste m?s)"
+          other: "(<a href='%{url}'>%{count}</a> pessoas fazem anivers?rio neste m?s)"
+        attachments: arquivos
+        attachment_count:
+          one: 1 arquivo
+          other: "%{count} arquivos"
+        attendance:
+          button: Registro de Presen?a
+      controls:
+        join: Entrar no Grupo
+        join_pending: Entrar no Grupo (pendente)
+        leave: Deixar o Grupo
+        message: Enviar Mensagem
+        prayer_request: Pedir Ora?ao
+      linked:
+        tooltip: Este grupo possui um link via c?digo %{code}
+      parents_of:
+        tooltip: Este grupo cont?m um link para os pais do %{group}
+    stream:
+      none:
+        heading: Nenhuma Atividade
+        message: Aqui ? aonde a atividade do grupo ir? aparecer.
+    new:
+      heading: Novo Grupo
+    edit:
+      heading: Editar Grupo
+      required_field: requerido
+      tabs:
+        details: Detalhes
+        meets: Se Encontra
+        features: Caracter?sticas
+        security: Seguran?a
+        advanced: Avan?ado
+      advanced:
+        description: As configura??es abaixo s?o para usu?rios avan?ados.
+        membership_mode:
+          options:
+            manual: Adicionar membros manualmente (padr?o)
+            link_code: Adicionar membros automaticamente utilizando um c?digo de link
+              externo.
+            parents_of: Criar um link com um grupo de crian?as para obter os pais
+              das crian?as.
+            adults: Incluir todos os adultos desta comunidade.
+      files:
+        description: Arquivos adicionados aqui ser?o vis?veis para todos os membros
+          deste grupo.
+        delete_button: Excluir
+      meets:
+        help: Algo como "Quarta-Feira ?s 19h" ou "Como anunciado"
+      location:
+        help: Se voc? inserir o seu endere?o, um mapa interativo ser? exibido na p?gina
+          do seu grupo.
+      directions:
+        help: Voc? pode desejar incluir instru??es para chegar ao local.
+      address:
+        help: Forne?a para o seu grupo um endere?o de email ?nico, para que as mensagens
+          possam ser facilmente enviadas.
+      calendar:
+        help: No Configura??es do seu Calend?rio do Google, copie o seu Link XML "Privado"
+          e cole nesta caixa para exibir o calend?rio na p?gina do seu grupo.
+      category:
+        new: "[nova categoria]"
+        help: Torne o seu grupo f?cil de ser encontrado escolhendo a categoria apropriada.
+      description:
+        help: Insira uma ou duas frases para dar uma ideia para as pessoas do porque
+          voc?s se encontram e quais s?o os objetivos do grupo.
+      approval_required_to_join:
+        help: Se marcado, um pedido de aprova??o ser? enviado ao administrador do
+          grupo antes de algu?m poder participar.
+      private_group:
+        help: Se marcado, a descri??o do grupo, lista de membros e outras informa??es
+          ser?o ocultadas para quem n?o for membro (somente o t?tulo ser? exibido).
+          N?s recomendamos que voc? tamb?m verifique a op??o 'Aprova??o requerida'
+          abaixo.
+      members_send:
+        help: Se marcado, qualquer membro deste grupo poder? enviar um email para
+          qualquer pessoa do grupo.
+      attendance_disabled:
+        help: Servi?o deve estar habilitado para qualquer grupo usado pelo Check-in.
+      class_link_code:
+        help_html: "<p>Esta fun??o ? ?til para sincronizar com sistemas externos.
+          Separe m?ltiplos c?digos com um espa?o. <a href='%{url}' target='_blank'>Veja
+          aqui</a> maiores informa??es.</p>\n<p>Clique <strong>Salvar</strong> para
+          atualizar os membros do grupo imediatamente. Os membros do grupo tamb?m
+          ser?o atualizados automaticamente toda noite.</p> \n"
+      parents_of:
+        help_html: "<p>Associa??o ser? gerada automaticamente de acordo com os pais
+          dos membros selecionados do grupo.</p>\n<p>Clique <strong>Salvar</strong>
+          para atualizar os membros do grupo imediatamente. Os membros do grupo ser?o
+          tamb?m atualizados automaticamente toda noite.</p> \n"
+      enable_calendar: Habilitar Calend?rio
+    table:
+      group_name: Grupo
+      leader: L?der
+      member_count: Membros
+      email_enabled: Email habilitado
+    search:
+      heading: Buscar por um Grupo
+      results_heading: Resultados da Busca por Grupo
+      name_placeholder: Buscar pelo nome
+      submit: Buscar
+    batch:
+      heading: Editar Grupos em Lote
+      category: Categoria
+      name: Nome
+      address: Prefixo de Email
+      members_send: Membros Podem Enviar
+      private: Privado
+      hidden: Oculto
+      class_link_code: Fazer Link de C?digo(s)
+      approval_required_to_join: Aprova??o Requerida
+      errors: Existem um ou mais erros ao salvar as mudan?as. Os registros com erro
+        est?o destacados abaixo.
+    files:
+      heading:
+        name: Nome
+        size: Tamanho
+        created_at: Carregado
+    pending_approval:
+      this_group: Este grupo est? pendente de aprova??o.
+      description:
+        one: 'O grupo abaixo est? pendente de aprova??o:'
+        other: 'Os grupos abaixo est?o pendentes de aprova??o:'
+      count:
+        one: "%{count} grupo para aprovar"
+        other: "%{count} grupos para aprovar"
+    approve:
+      button: Aprovar Grupo
+    membership_requests:
+      count:
+        one: "%{count} pedido de amizade"
+        other: "%{count} pedidos de amizade"
+    not_found: Grupo n?o encontrado
+    no_groups_found: Nenhum grupo encontrado
+    join:
+      confirm: Voc? tem certeza? Uma requisi??o ser? enviada para o administrador(es)
+        do grupo.
+      request_sent: Um pedido para entrar neste grupo foi enviado para o administrador.
+    last_admin_remove: "%{name} ? o ?ltimo administrador e n?o pode ser exclu?do."
+    user_settings_saved: Configura??es do usu?rio salvas.
+    email_settings_changed: As suas configura??es de email para o grupo foram alteradas.
+    limited:
+      intro: Voc? n?o pode visualizar este grupo porque ele ? privado e voc? n?o ?
+        um membro. Clique abaixo para solicitar o acesso a este grupo.
+    box:
+      messages:
+        text:
+          one: Mensagem
+          other: Mensagens
+        new_link: Nova Mensagem
+      prayer_requests:
+        text:
+          one: Pedido de Ora??o
+          other: Pedidos de Ora??o
+        new_link: Novo Pedido
+      pictures:
+        text:
+          one: Foto
+          other: Fotos
+        new_link: Nova Foto
+      tasks:
+        text:
+          one: Tarefa
+          other: Tarefas
+        new_link: Nova Tarefa
+    show_hidden:
+      button: Exibir Grupos Ocultos (%{count})
+  import:
+    changes:
+      count:
+        one: 1 mudan?a
+        other: "%{count} mudan?as"
+      show_button: exibir
+    results:
+      name: Nome
+      first_name: Primeiro Nome
+      last_name: Sobrenome
+      status: Status
+    apply_settings_to_imports: 'Aplicar as seguintes configura??es para todos os registros
+      importados:'
+    attempt_match_existing_people: Tentar combinar pessoas existentes pelo nome se
+      os IDs n?o estiverem inclu?dos.
+    completed_records: Registros Completados
+    error: Erro
+    error_updating: Erro ao atualizar registro.
+    error_updating_message_html: 'Houve pelo menos um erro ao tentar atualizar os
+      registros no banco de dados. Por favor corrija os erros e retorne para a interface
+      de <a href="%{url}">Atualiza??es Pendentes</a> para completar o processo. '
+    errored_records: Registros com Erro
+    for_list_of_available_attributes: para uma lista de atributos dispon?veis (nem
+      todos os atributos s?o requeridos).
+    hint_excel_docs: 'Dica: Documentos do Excel podem ser exportados como um CSV,
+      no menu Arquivo ? Salvar como.'
+    import_data: Importar Dados...
+    import_people: Importar Pessoas
+    import_results: Importar Resultados
+    import_selected_people: Importar Pessoas Selecionadas
+    no_records_were_found: N?o foram encontrados registros para importa??o.
+    only_first_records_will_be_imported_html: Somente os primeiros %{count} registros
+      ser?o importados. Para arquivos grandes, voc? precisa dividir os registros em
+      m?ltiplos arquivos ou utilizar o <a href="http://wiki.github.com/seven1m/onebody/updateagent">UpdateAgent</a>
+      para importar grandes quantidades de registros de uma vez.
+    people: Importar Pessoas
+    record: registro
+    record_updated: Registro atualizado.
+    records: Registros
+    select_csv_file: Selecione um arquivo separado por v?rgulas (CSV) para importar
+      com os nomes dos atributos na linha de cabe?alho.
+    the_changes_will_be_made: As seguintes altera??es ser?o feitas. Somente os registros
+      selecionados ser?o criados/atualizados.
+    the_import_is_complete: A importa??o est? completa
+    visibility_access: Visibilidade/Acesso
+    with_errors: com erros
+  maps:
+    notice: "&copy; <a href='https://www.openstreetmap.org'>OpenStreetMap</a> contributors"
+  memberships:
+    index:
+      heading: Pessoas no grupo %{group}
+      details:
+        admin: 
+        name: Nome
+        birthday: Anivers?rio
+        created_at: Adicionado
+        leader: 
+        manual:
+          tooltip: Esta pessoa foi adicionada manualmente.
+      remove:
+        button: Remover Selecionado
+    add:
+      heading: Adicionar Algu?m
+      description: Adicionar algu?m neste grupo.
+      name_placeholder: Digite o nome de algu?m (completo ou parte do nome)
+      parents_of_warning_html: "Este ? um grupo que cont?m um link autom?tico com
+        os pais de pessoas no grupo %{group}.\nSe voc? adicionar algu?m manualmente,
+        a pessoa n?o ser? gerenciada automaticamente. \n"
+      linked_group_warning_html: "Este grupo cont?m um link com o c?digo de classe
+        <strong>%{code}</strong>.\nSe voc? adicionar algu?m manualmente, a pessoa
+        n?o ser? gerenciada automaticamente. \n"
+    promote: Promover membro para administrador
+    demote: Alterar de admin para um membro regular
+    leader_add: 
+    leader_remove: 
+    group_pending_approval: Este grupo est? com a aprova??o pendente. Voc? ainda n?o
+      poder? adicionar pessoas nele.
+    requests:
+      heading: Solicita para entrar neste grupo
+      select_some: Selecione um ou mais abaixo e escolha uma a??o.
+      name: Nome
+      created_at: Solicitado
+      accept:
+        button: Aceitar
+      ignore:
+        button: Ignorar
+  messages:
+    new:
+      button: Nova Mensagen
+    private:
+      heading: Mensagem Privada
+      description_html: Isto ir? enviar um email <em>privado</em> para %{person}.
+    group:
+      heading: Mensagem do Grupo
+      description_html: Isto ir? enviar um email para todos os membros do grupo %{group}.
+    subset:
+      description_html: 
+    sent_at_html: enviado em %{when} por %{who}
+    sent_to_html: para %{who}
+    read_more: Leia Mais
+    delete:
+      button: Excluir
+    in_reply_to_html: em resposta para %{message}
+    replies:
+      heading: Respostas
+    reply_all:
+      button: Responder esta mensagem (enviar para todo o grupo)
+      subset: 
+    email:
+      reply_to_sender: Pressione "Responder" para enviar uma mensagem para %{person}.
+      reply_to_group: Pressione "Responder a Todos" para enviar uma mensagem para
+        o grupo %{group}, ou enviar para %{address}.
+      group_link: 'P?gina do grupo: %{url}'
+      reply_link: 'Para responder, acesse: %{url}'
+      disable_group_email: |-
+        Se n?o quiser receber emails deste grupo:
+        %{url}
+      disable_all_email: |-
+        Se n?o quiser receber este emails,acesse sua p?gina de privacidade:
+        %{url}
+    do_not_reply: N?O RESPONDA
+    ago: atr?s
+    attachment_optional: Anexo (opcional)
+    attachments: Anexos
+    file_missing: arquivo n?o encontrado
+    flag_cleared: Marca??o(?es) removidas.
+    from: De
+    in: em
+    messages_in_html: Mensagens em <a href="%{url}">%{name}</a>
+    missing_param: Par?metro da mensagem faltando.
+    no_email_for_person: Desculpe. N?s n?o temos um endere?o de email para %{name}
+      em nossos arquivos.
+    not_authorized_delete: Voc? n?o est? autorizado a excluir esta mensagem.
+    not_found: Mensagem n?o encontrada
+    posted_by: postado por
+    send_message: Enviar Mensagem
+    sent: A sua mensagem foi enviada.
+    show_quoted_content: exibir conte?do citado
+    some_quoted_text_is_hidden: Algum conte?do citado est? oculto nesta mensagem;
+    subject: Assunto
+    to_show_the_entire_message: para exibir a mensagem completa.
+    unknown_type: Tipo de mensagem desconhecido.
+    send_to_subset: 
+    filter: 
+    more: 
+    subset_warning: 
+  nav:
+    hello: Ol?, %{person}
+    admin: Admin
+    admin_sub:
+      admins: Administradores
+    albums: ?lbuns
+    business_profile: Neg?cios
+    checkin: Check-in
+    checkin_sub:
+      times: Hor?rios
+      labels: R?tulos
+    directory: Diret?rio
+    directory_sub:
+      business: Diret?rio de Neg?cios
+      printed: Diret?rio para Impress?o
+      advanced: Busa Avan?ada
+      new_person: Nova Pessoa
+    documents: Documentos
+    groups: Grupos
+    groups_sub:
+      edit: Editar Grupo
+      new: Novo Grupo
+      new_count:
+        one: 1 novo
+        other: "%{count} novos"
+    home: In?cio
+    home_sub:
+      new_count:
+        one: 1 novo
+        other: "%{count} novos"
+    imports: Importa??es
+    messages: Mensagens
+    news: Not?cias
+    notes: Notas
+    pages: P?ginas
+    prayer_requests: Pedidos de Ora??o
+    profile: Perfil
+    profile_sub:
+      edit: Editar Perfil
+      email: Email
+      password: Senha
+      privacy: Privacidade
+      family: 
+      relationships: Relacionamentos
+      show: Visualizar Perfil
+    report: Relat?rios
+    verses: Vers?culos
+    tasks: Tarefas
+    tasks_sub:
+      assigned_count:
+        one: 1 pessoa atribu?da
+        other: "%{count} pessoas atribu?das"
+  news:
+    heading: Not?cias
+    edit:
+      heading: Editar Post de Not?cia
+    edit_button: Editar
+    delete_button: Excluir
+    body_description: 'Compartilhe o seu comunicado, informa??o ou novidade aqui:'
+    deleted: Not?cia exclu?da.
+    if_you_have_something_to_share_html: Se voc? possui uma not?cia para compartilhar,
+      <a href='%{url}'> envie aqui</a>.
+    news_feed: Feed de Not?cias
+    no_news_is_available: Nenhuma not?cia dispon?vel neste momento.
+    save_news: Salvar Not?cia.
+    saved: Not?cia gravada.
+    submit_news: Enviar Not?cia
+    subscribe:
+      button: Subscrever
+      description: Obtenha atualiza??es de not?cias no seu leitor de feeds.
+    title_description: 'Forne?a um t?tulo resumido a sua publica??o:'
+    welcome_to_the_place: Bem vindo ao local das not?cias da comunidade.
+  notes:
+    index:
+      heading: Notas
+    new:
+      heading: Nova Nota
+      button: Nova
+    edit:
+      heading: Editar Nota
+      button: Editar
+    delete:
+      button: Excluir
+    posted: postado %{when}
+    save: Gravar Nota
+    saved: Nota gravada
+  notifier:
+    email_update:
+      subject: "%{person} Alterou o Email"
+      intro: "%{person} alterou o seu endere?o de email."
+      email_label: Email
+    email_verification:
+      subject: Verificar Email
+      intro: "O objetivo deste email ? verificar o seu endere?o para o \n%{site} para
+        que voc? possa acess?-lo. \n"
+      instruction: "Para verificar o seu endere?o de email, por favor clique no link
+        abaixo: \n"
+      footer: "Se voc? n?o conseguir clicar no link acima, voc? pode copiar e colar
+        \nna barra de endere?o do seu navegador.\n\nSe voc? n?o sabe porque est? recebendo
+        esse e-mail, voc? pode contactar \n%{name} no telefone %{phone}. \n"
+    friend_request:
+      subject: Pedido de amizade de %{person}
+      intro: "%{person} gostaria de ser seu amigo(a) na %{site}. \n"
+      instruction: "Para aceitar ou rejeitar, por favor entre no site com a seguinte
+        URL: \n"
+    membership_request:
+      subject: Solicita??o para entrar no Grupo de %{person}
+      intro: "%{person} solicitou acesso ao grupo %{group}. \n"
+      instruction: "Para aceitar ou rejeitar, por favor entre no site com a seguinte
+        URL: \n"
+    mobile_verification:
+      subject: Verificar Telefone Celular
+      label: 'C?digo de verifica??o:'
+    pending_sign_up:
+      subject: Acesso Pendente
+      intro: "%{person} se cadastrou para uma conta no site %{site}. \n"
+      instruction_first: "Se voc? aprova a cria??o desta conta, ative-a \nneste endere?o:
+        \n"
+      instruction_last: "Marque as caixas apropriadas na aba \"Visibilidade\" e salve.\n\nTenha
+        certeza de tamb?m clicar na op??o \"enviar email de verifica??o\" para o usu?rio.
+        \n"
+    photo_update:
+      family_subject: Foto da Fam?lia Alterada
+      person_subject: Foto Alterada
+      intro: "%{person} alterou a sua foto. \n"
+    prayer_request:
+      subject: Pedido de Ora??o no grupo %{group}
+      intro: "%{person} postou um novo pedido de ora??o no grupo %{group}. \n"
+    printed_directory:
+      subject: Diret?rio do %{site}
+      intro: "Ol?, %{person}. Em anexo voc? pode verificar o seu diret?rio customizado
+        para impress?o da %{site}. \n"
+    profile_update:
+      subject: Atualiza??o de Perfil da pessoa %{person}
+      intro: "%{person} (Fam?lia %{family}) submeteu uma atualiza??o de perfil. \n"
+      label:
+        new: Novo
+        old: de idade
+    rejection:
+      cannot_read:
+        subject: 'Mensagem n?o foi Enviada: %{subject}'
+        body: "A sua mensagem com o assunto \"%{subject}\" n?o foi entregue.\n\nN?s
+          pedimos desculpas pelo inconveniente. O sistema n?o conseguiu ler a sua
+          mensagem \nporque ela n?o est? formatada como texto sem formata??o ou HTML.\n\nPor
+          favor configure o seu cliente de email para texto sem formata??o (desligue
+          a op??o Rich Text) e tente \nnovamente. Voc? tamb?m pode enviar a sua mensagem
+          pelo website depois de acess?-lo \n na URL abaixo:  \n\n%{url} \n"
+      multiple_people:
+        subject: 'Mensagem n?o foi Enviada: %{subject}'
+        body: "A sua mensagem com o assunto \"%{subject}\" n?o foi entregue.\n\nN?s
+          pedimos desculpas pelo inconveniente. O sistema n?o conseguiu determinar
+          quem ? voc?\nporque mais de uma pessoa na sua fam?lia compartilha o mesmo
+          endere?o de email.\nPor favor entre no site usando a URL abaixo e envie
+          a sua mensagem pelo site.\n\n%{url}\n\nComo uma alternativa, voc? pode acessar
+          o site na URL acima, ir para as suas configura??es de email\ne marcar a
+          op??o chamada \"Dono da conta de email principal\". \n"
+      unknown_person:
+        subject: 'Mensagem n?o foi Enviada: %{subject}'
+        body: "A sua mensagem com o assunto \"%{subject}\" n?o foi entregue.\n\nN?s
+          pedimos desculpas pelo inconveniente. O sistema n?o conseguiu reconhecer
+          o seu\nendere?o de email como um usu?rio deste website.\n\nPor favor envie
+          o email utilizando o mesmo endere?o que voc? utiliza para acessar ma seguinte\nURL,
+          ou acesse e envie a sua mensagem pelo website.\n\n%{url} \n"
+      invalid:
+        subject: 'Erro na Mensagem: %{subject}'
+        body: "A sua mensagem com o assunto \"%{subject}\" n?o foi entregue.\n\nN?s
+          pedimos desculpas pelo inconveniente. O sistema n?o conseguiu salvar a sua
+          mensagem\npelo(s) seguinte(s) motivo(s):\n\n%{errors}\n\nPor favor, encaminhe
+          esta mensagem para o suporte no endere?o: %{support} \n"
+      no_recipients:
+        subject: 'A mensagem n?o foi enviada: %{subject}'
+        body: "A sua mensagem com o assunto \"%{subject}\" n?o foi entregue para nenhum
+          grupo.\n\nN?s pedimos desculpas pelo inconveniente. O sistema n?o conseguiu
+          encontrar nenhum endere?o de grupo v?lido\nnos campos PARA ou CC.\n\nVerifique
+          se voc? digitou o endere?o de email do grupo corretamente e que voc? possui\npermiss?o
+          para enviar emails para este grupo.\n\nVoc? pode tamb?m acessar a seguinte
+          URL para enviar a sua mensagem:\n\n%{url} \n"
+    message_id: ID da Mensagem
+    not_allowed_to_post: voc? n?o possui permiss?o para postar nesta lista
+  pages:
+    index:
+      heading: P?ginas
+      intro: Abaixo est?o as p?ginas e bits de conte?do utilizados no site que voc?
+        pode customizar para a sua pr?pria comunidade.
+      name: Nome
+      description: Descri??o
+      edit_button: Editar
+    descriptions:
+      help: P?gina exibida para usu?rios que procuram por ajuda para acessar o site.
+      bad_status: Exibido quando um usu?rio est? no banco de dados por?m n?o possui
+        permiss?o para entrar.
+      privacy_policy: Detalhes de como este site coleta e compartilha informa??es.
+      safeguarding_children: Detalhes de como este site protege crian?as e as suas
+        informa??es.
+      unauthorized: P?gina exibida para usu?rios explicando como obter acesso ao site.
+      checkin: Um pouco de conte?do de ajuda que aparece no topo da tela de aministra??o
+        de checkin.
+    body: Corpo
+    edit_page: Editar P?gina
+    not_found: P?gina n?o encontrada.
+    saved: P?gina gravada.
+    title: T?tulo
+    view_page: Visualizar P?gina
+  people:
+    account_frozen:
+      callout: Esta conta est? congelada. Mudan?as n?o podem ser feitas at? que ela
+        seja normalizada.
+    new:
+      heading: Nova Pessoa na fam?lia %{family}
+      heading_without_family: Nova Pessoa
+      no_family_warning_html: "Voc? ir? criar uma nova pessoa e um <strong>novo registro
+        de fam?lia</strong>\nSe voc? deseja adicionar uma pessoa a uma fam?lia existente,
+        primeiro acesse a p?gina da fam?lia e adicione a pessoa nela. \n"
+    title_html: "%{name}<span class='discreet'>, %{description}</span>"
+    show:
+      details:
+        family: Fam?lia %{family}
+        website: Website
+        email: Email
+        mobile_phone: Telefone Celular
+        home_phone: Telefone Residencial
+        work_phone: Telefone de Trabalho
+        address: Endere?o Residencial
+        map: 
+        birthday: Data de Nascimento
+        anniversary: Anivers?rio de Casamento
+        social: Social
+        about: 
+        created: 
+        edited: 
+        last_seen: 
+      showing_hidden_attribute:
+        tooltip: Isso ? vis?vel para voc? porque voc? ? um administrador com privil?gios
+          de 'Visualiza??o de Propriedades Ocultas' habilitado.
+    edit:
+      about: Sobre
+      basics: B?sico
+      business: Neg?cios
+      business_category:
+        new: "[criar uma nova categoria]"
+        create_prompt: 'Digite a categoria do seu neg?cio:'
+      child:
+        enabled: Crian?a
+        disabled: Adulto
+      child_hint: Se nenhuma data de nascimento for especificada, voc? necessita indicar
+        se este ? uma crian?a ou um adulto.
+      custom_type:
+        new: "[criar fun??o]"
+        create_prompt: 'Digite o nome da fun??o:'
+      description_hint: Algumas palavras sobre voc? ? algumas pessoas colocam a profiss?o
+        aqui.
+      email_hint: " (este ? o seu endere?o de email principal utilizado para o login
+        e receber emails)"
+      facebook_url:
+        placeholder: https://www.facebook.com/nomedousuario
+      family_photo: Foto da Fam?lia
+      fields: 
+      header: Editar Perfil
+      no_family_error: Essa pessoa n?o pode ser editada, pois ela n?o pertence a fam?lia.
+      person_type: Fun??es
+      person_type_hint: Estes n?o controlam acesso - somente designa??o.
+      photo: Foto do Perfil
+      primary_emailer:
+        intro_html: "Voc? est? compartilhando um endere?o de email com %{person}.\nSe
+          os emails do seu grupo est?o sendo rejeitados, considere marcar a op??o
+          abaixo para ter certeza que\nos seus email est?o <strong>sempre</strong>
+          conectados com a sua conta\n&ndash; <strong>not %{person}</strong>. (Nota:
+          Se voc? e %{person} enviam emails para o grupo,\nent?o ser? melhor utilizar
+          endere?os de email diferentes.) \n"
+      required_field: requerido
+      twitter:
+        placeholder: "@nomedousuario"
+      status: Estado
+      status_help:
+        inactive: Pessoas inativas n?o podem acessar e est?o vis?veis apenas para
+          administradores.
+        pending: Pessoas com pend?ncias podem acessar e visualizar informa??es limitadas
+          dos membros.
+        active: Pessoas ativas podem acessar e fazer uso total do site.
+        not_an_adult: Crian?as n?o podem acessar, ent?o configurar o estado aqui afeta
+          apenas a visibilidade delas para os outros.
+      statuses:
+        inactive: Inativo
+        pending: Pendente
+        active: Ativo
+    move:
+      heading: Adicionar na fam?lia %{family}
+      description_html: Encontre pessoas para adicionar na fam?lia <a href='%{url}'>%{family}</a>,
+        e clique no bot?o Adicionar...
+      button: Mover para a Fam?lia
+      success_message: "%{person} foi adicionado(a) na fam?lia %{family}."
+    roles:
+      elder: Anci?o
+      deacon: Di?cono
+      staff: Funcion?rio
+      member: Membro
+    email:
+      heading: Configura??es de Email
+      primary:
+        heading: Email Principal
+        description_html: |
+          <p>Esse ? o seu e-mail principal utilizado para efetuar a autentica??o e receber e-mails. Aten??o:</p>
+          <ul>
+            <li>Esse ? o e-mail que voc? vai utilizar para se autenticar.</li>
+            <li>Todos os e-mails privados e de grupo ser?o enviados para esse e-mail.</li>
+          </ul>
+      alternate:
+        heading: Email Alternativo
+        description_html: |
+          <p>Se voc? tem outro endere?o que deseja utilizar para enviar e-mail para os grupos, voc? pode preencher aqui. Aten??o:</p>
+          <ul>
+            <li>Esse e-mail poder? ser visto apenas pelos administradores.</li>
+            <li>Voc? n?o poder? utilizar esse e-mail como autentica??o.</li>
+          </ul>
+      groups:
+        heading: Email do Grupo
+    groups:
+      heading: Grupos
+      members: membros
+      messages: mensagens
+      join:
+        button: Encontre e participe de um grupo
+      see_all: ver todos...
+    business:
+      services_provided_by: Servi?os fornecidos por %{person}
+      address: Endere?o
+      email: Email
+      phone: Telefone
+      website: Website
+    checkin:
+      heading: Notas de Check-in
+      intro: Essas s?o notas mostradas nas telas de check-in e (opcionalmente) nos
+        r?tulos de check-in impressos com objetivo de alertar os trabalhadores.
+    testimony:
+      box_heading: Testemunho
+      heading: Testemunho de %{person}
+      view_profile: Visualizar Perfil
+      view_full: ler mais
+      find_more: Ler outros testemunhos
+    updates:
+      pending_callout: Este perfil possui atualiza??es pendentes.
+    verification_email:
+      heading: Completar Configura??o do Usu?rio
+      intro: Antes deste usu?rio poder acessar, ele precisa completar a configura??o
+        clicando no link fornecido no email. Clique abaixo para enviar o email para
+        ele.
+      button: Enviar uma senha de configura??o para este usu?rio.
+    advanced: Avan?ado
+    can_sign_in: Cadastre-se
+    cant_delete_yourself: Voc? n?o pode se excluir.
+    cant_delete: Voc? n?o pode excluir esta pessoa.
+    changes_must_be_reviewed_html: Altera??es devem ser <strong>revisadas pela equipe</strong>
+      . Para solicitar altera??es informe abaixo e click em 'Enviar Altera??es'.
+    changes_submitted: Altera??es submetidas.
+    child: Crian?a/Adulto
+    deleted_html: Esta pessoa foi exclu?da. Voc? pode restaurar um registro <a href='%{url}'>aqui</a>.
+    family: Fam?lia
+    family_legacy_external_id: Legado da Fam?lia / ID Externo
+    find_a_group_html: Encontre um grupo <a href='%{url}'>aqui</a>.
+    friend_not_found: Amigo n?o encontrado
+    friendship_accepted: Amizade aceita
+    friendship_manage: Voc? somente pode gerenciar as suas amizades.
+    friendship_must_specify: Precisa especificar accept=true ou reject=true
+    friendship_rejected: Amizade declinada.
+    full_access: Acesso total
+    if_you_wish_to_be_listed_business_dir_html: Se voc? quiser ser listado no <a href='%{url}'>Diret?rio
+      de Neg?cios</a>, insira o nome do seu neg?cio, descri??o e outros detalhes abaixo.
+    if_you_wish_to_remove_something_html: Se voc? deseja remover algo, a fim de evitar
+      que outras pessoas vejam, entre na p?gina de <a href='%{url}'>Privacidade</a>
+      e oculte-a.
+    legacy_external_id: Legado/ID Externo
+    limited_access: Sua conta est? com um acesso limitado; Estamos exibindo para voc?
+      uma resumo do perfil da p?gina.
+    limited_access_denied: A sua conta atualmente possui acessos limitados.
+    no_family_for_this_person: Essa pessoa n?o pertence a nenhuma fam?lia. N?o ser?
+      poss?vel entrar e n?o ficar? vis?vel para os outros usu?rios.
+    not_deleted: Pessoa n?o foi exclu?da.
+    not_found: Pessoa n?o encontrada.
+    pending_approval: aprova??o pendente
+    people: Pessoas
+    person:
+      one: 1 Pessoa
+      other: "%{count} Pessoas"
+    person_isnt_any_groups: "%{person} n?o est? em nenhum grupo neste momento."
+    share_your_personal_testimony: Compartilhe o seu testemunho pessoal ? como voc?
+      conheceu a Jesus Cristo e como ele mudou a sua vida.
+    show_hidden_groups: Exibir Grupos Ocultos
+    tell_us_about_yourself: Fala um pouco sobre voc?. Como ? a sua personalidade?
+      Como o seu melhor amigo descreveria voc??
+    this_event_doesnt_have_pictures: Este evento ainda n?o possui nenhuma foto.
+    this_profile_is_hidden: Este perfil est? oculto
+    update_to_profile_is: Uma atualiza??o para este perfil ?
+    visible_on_printed_directory: Vis?vel no Diret?rio Impresso
+    visible_to_everyone: Vis?vel para todos
+    you_arent_in_any_groups: Voc? ainda n?o faz parte de nenhum grupo.
+  photos:
+    object_not_found: Objeto n?o encontrado.
+    browse: Selecionar Foto
+    remove: Remover Foto
+    unavailable: Foto indispon?vel.
+    upload:
+      button: Carregar
+      error: A sua foto n?o pode ser gravada.
+      wrong_type: O tipo da foto deve ser JPG, GIF ou PNG.
+    ready_filename: Pronto para carregar %{filename}
+    uploading_filename: Carregando %{filename}
+  pictures:
+    none: Nenhuma foto ainda
+    new:
+      heading: Nova Foto
+      existing_album:
+        intro: Adicione uma ou mais fotos em um ?lbum existente...
+      new_album:
+        intro: Ou crie um novo ?lbum...
+        button: Novo ?lbum
+    show_original: Exibir Original
+    create_an_album:
+      notice: Primeiro, crie um ?lbum...
+    click_to_enlarge: clique para aumentar
+    comment_on_this_picture: Comente esta foto
+    failed: "%{fail} n?o foi gravada por conta de erros"
+    picture_uploaded_by: Foto carregada em %{when} por
+    rotate_left: Girar para a esquerda
+    rotate_right: Girar para Direita
+    saved: "%{success} foto(s) gravadas"
+    set_as_cover: Configurar como Capa
+    upload: Carregar!
+  prayer_requests:
+    by: pelo(a) %{person}
+    name: Pedidos de Ora??o em %{group}
+    index:
+      heading: Pedidos de Ora??o
+    show:
+      heading: Pedido de Ora??o
+    new:
+      heading: Novo Pedido de Ora??o
+      button: Novo Pedido de Ora??o
+    edit:
+      heading: Editar Pedido de Ora??o
+      button: Editar Pedido
+    delete:
+      button: Excluir Pedido
+    request:
+      heading: Pedido
+    answer:
+      heading: Resposta
+      description: Lembre-se de voltar e preencher esta se??o, assim o seu grupo pode
+        ter um registro dos pedidos de ora??o respondidos.
+      on_date: Respondido em %{date}
+    save: Gravar Pedido de Ora??o
+    not_found: Pedido de Ora??o n?o encontrado
+    error:
+      no_edit: Voc? n?o pode editar este pedido de ora??o.
+      no_delete: Voc? n?o pode excluir este pedido de ora??o.
+      no_post: Voc? n?o pode postar um pedido de ora??o neste grupo pois voc? n?o
+        ? um membro.
+    send_email: Enviar como um email para os membros do grupo.
+  printable_directories:
+    already_sent: Parece que um diret?rio j? foi enviado para voc? a pouco tempo.
+      Por favor verifique o seu email (tamb?m o seu diret?rio de spam).
+    filename: 
+    finished: 
+    generate_custom_directory: 
+    generating: 
+    heading: Diret?rio Impresso
+    include_family_pictures: incluir fotos das fam?lias
+    intro: 
+    not_allowed: Voc? n?o possui permiss?o para imprimir a lista. Desculpe.
+    were_are_building_custom_pdf: N?s estamos construindo o seu PDF customizado agora.
+      Ir? demorar um pouco, mas provavelmente n?o mais do que alguns minutos. Assim
+      que estiver pronto, n?s enviaremos um email para voc?. Fique ? vontade para
+      continuar a visita neste site (voc? pode sair desta p?gina se quiser).
+    will_take_longer: "(ir? demorar um pouco mais)"
+    pdf:
+      heading: 
+      cover_page_sub_heading: 
+      created_for: 
+    click_to_have_custom_pdf_via_email: Clique no bot?o abaixo para ter um diret?rio
+      customizado em PDF enviado para o seu email.
+    created_for: Criado especialmente para %{name} em %{date}
+    email_custom_directory: Envie o meu Diret?rio Customizado por Email
+  privacies:
+    tabs:
+      sharing: Compartilhando
+      children: Crian?as
+    sharing:
+      intro_html: Voc? pode alterar as configura??es de privacidade da sua fam?lia
+        aqui. Items marcados s?o vis?veis por outros membros que conectarem neste
+        website. Clique no <i class='fa fa-plus-circle'></i> para configurar a privacidade
+        dos seus grupos (opcional). Para entender como n?s usamos as informa??es pessoais
+        suas e de sua fam?lia, por favor leia a nossa <a href='%{url}'>Pol?tica de
+        Privacidade</a>.
+    children:
+      intro: Controle o que as crian?as abaixo podem acessar neste web site.
+    scroll_notice: Voc? pode precisar mover para a esquerda e direita para visualizar
+      todas as op??es aqui.
+    activity: Atividade
+    address: Endere?o
+    agreement_saved: Acordo salvo.
+    anniversary: Anivers?rio de Casamento
+    as_a_parent_agree_html: Eu, como pai ou tutor legal de %{name}, por meio deste
+      que li concordo com a <a href="%{url}">Pol?tica de Privacidade</a>, e que as
+      informa??es pessoais de %{name} podem ser exibidas para outros usu?rios deste
+      website (como determinado nas defini??es de privacidade desta p?gina) e que
+      %{name}, pode, se capaz, de utilizar este website como um usu?rio normal (incluindo
+      personaliza??o de perfil e comunica??o atrav?s de mensagens privadas, grupos,
+      etc.).
+    birthday: Data de Anivers?rio
+    child_profile_has_parental_consent: Este perfil de crian?a tem o consentimento
+      paterno de %{name}.
+    child_under_age_you_have_not_consent: Esta crian?a tem menos de %{years} de idade,
+      e voc? n?o deu seu consentimento para 1) permitir que suas informa??es sejam
+      exibidas, e 2) permitir que entrem e utilizem este website.
+    click_the_agree: Clique no bot?o 'Eu Concordo'.
+    email: Email
+    family_hidden: Esta fam?lia est? escondida de todas as p?ginas deste site!
+    family_privacy: Fam?lia
+    fax: Fax
+    group_privacy: Privacidade do Grupo
+    hide_your_activity: 'Esconder suas atividades, se voc? n?o quer que amigos e/ou
+      membros do grupo de colegas vejam as suas mensagens p?blicas, anota??es, vers?culos,
+      etc em sua p?gina inicial. Nota: As mensagens privadas nunca ser?o exibidas,
+      independentemente desta defini??o.'
+    home_phone: Telefone Residencial
+    i_agree: Eu Concordo
+    mobile_phone: Telefone Celular
+    please_read_our_privacy_policy_html: Por favor leia a nossa <a href="%{url}">Pol?tica
+      de Privacidade</a> para obter detalhes de uso de suas informa??es pessoais.
+    people_can_still_send_html: Voc? ainda pode receber e-mails atrav?s do site, sem
+      revelar o seu endere?o de e-mail na web.
+    privacy: Privacidade
+    read_privacy_policy_html: Leia a nossa <a href="%{url}">Pol?tica de Privacidade</a>.
+    read_safeguarding_children_html: Leia nossa p?gina sobre <a href="%{url}">Prote??o
+      Infantil</a>.
+    read_statement_below: Leia a declara??o abaixo e concordando com ele, marque a
+      caixa de sele??o correspondente.
+    saved: Configura??es gravadas.
+    sharing_with_html: Compartilhando com <a href="%{url}">%{name}</a>
+    to_show_on_this_site: 'Para mostrar %{name} neste site, por favor:'
+    visible: Vis?vel
+    visible_note: A defini??o de um perfil para ser invis?vel far? com que voc? n?o
+      apare?a em nenhuma pesquisas de diret?rio. Embora voc? ainda possa participar
+      de grupos, receber e-mail de grupo e e-mails de administradores do site.
+    work_phone: Telefone Comercial
+    you_may_share_items: 'Voc? pode compartilhar itens com membros dos seguintes grupos:'
+    you_must_check_agreement_statement: Voc? deve marcar a caixa indicando que voc?
+      concorda com a declara??o abaixo.
+  relationships:
+    heading: Relacionamento para %{person}
+    reciprocate:
+      button: Retribuir
+      failure: Um relacionamento rec?proco com %{name} n?o pode ser criado automaticamente.
+    add_relationship:
+      intro: 'Adicionar um relacionamento:'
+      button: 'Adicionar um relacionamento:'
+    family:
+      create:
+        intro: Alguns relacionamentos s?o sugeridos abaixo. Fa?a qualquer ajuste necess?rio
+          e ent?o clique no bot?o "Criar".
+        button: Criar Relacionamentos de Fam?lia
+      heading: Relacionamentos de Fam?lia de %{family}
+      button: Relacionamentos de Fam?lia
+    inward:
+      heading: Relacionamento ?ntimo/familiar
+    names:
+      aunt: Tia
+      brother: Irm?o(?)
+      brother_in_law: Cunhado
+      cousin: Primo(a)
+      daughter: Filha
+      daughter_in_law: Nora
+      father: Pai
+      father_in_law: Sogro
+      granddaughter: Neta
+      grandfather: Av?
+      grandmother: Av?
+      grandson: Neto
+      husband: Marido
+      mother: M?e
+      mother_in_law: Sogra
+      nephew: Sobrinho
+      niece: Sobrinha
+      other_name: Outros
+      sister: Irm?
+      sister_in_law: Cunhada
+      son: Filho
+      son_in_law: Genro
+      stepbrother: Meio irm?o
+      stepdaughter: Enteada
+      stepfather: Padrastro
+      stepmother: Madrasta
+      stepsister: Irm? por parte de pai ou m?e
+      stepson: Enteado
+      uncle: Tio
+      wife: Esposa
+    other_name:
+      placeholder: Tipo de Relacionamento
+    no_person_selected: Nenhuma pessoa selecionada.
+    relationship: Relacionamento
+    relationship_type: 'Tipo:'
+    toggle_individual: Visualizar Relacionamentos Individuais
+  reports:
+    from_date: Data de In?cio
+    group: Grupo
+    group_select: Selecione um Grupo...
+    name: Nome
+    records:
+      one: 1 registro
+      other: "%{count} registros"
+    reports:
+      attendance_totals:
+        title: Totais de Presen?a
+        columns:
+          group: Grupo
+          attended_at: Presen?a em
+          count: Total de Presentes
+      group_contact_details:
+        title: Detalhes de Contatos de Grupo
+        title_for_group: Detalhes de Contato para %{group}
+        columns:
+          first_name: Primeiro Nome
+          last_name: Sobrenome
+          email_address: Endere?o de Email
+          mobile_phone: Telefone Celular
+          home_phone: Telefone Residencial
+          address: Endere?o
+        address: endere?o
+      weekly_attendance:
+        title: Presen?a Semanal
+        title_for_group: Presen?a Semanal para %{group}
+        columns:
+          person_id: ID
+          first_name: Primeiro Nome
+          last_name: Sobrenome
+          group: Grupo
+          attended: Presente
+        attended:
+          'yes': Sim
+          'no': N?o
+    submit: Enviar
+    thru_date: Data Final
+    type: Tipo
+    custom_reports:
+      button:
+        add: Adicionar Novo
+        edit: Editar
+        delete: Remover
+        show: Visualizar
+      index:
+        title: Relat?rios Customizados
+        box_title: Relat?rios Customizados
+      new:
+        title: Novo Relat?rio
+      edit:
+        title: Editar Relat?rio
+      show:
+        title: Relat?rio Customizado
+      fields:
+        title: T?tulo
+        header: Cabe?alho do Relat?rio
+        body: Corpo do Relat?rio
+        footer: Rodap? do Relat?rio
+        filters: Filtros
+        category:
+          people: Pessoas
+          groups: Grupos e Pessoas
+          family: Fam?lia e Pessoas
+      validation:
+        filters: Para m?ltiplos filtros tenha certeza de utilizar os separadores corretamente.
+      create:
+        notice: Relat?rio Customizado foi criado com sucesso.
+      destroy:
+        notice: Relat?rio personalizado foi destru?do com sucesso.
+      update:
+        notice: Relat?rio Customizado foi atualizado com sucesso
+  search:
+    column:
+      name: Nome
+      family: Fam?lia
+      business: Neg?cio
+      category: Categoria
+      birthday: Data de Nascimento
+      testimony: Testemunho
+    no_family: "(nenhuma fam?lia)"
+    form:
+      name: Buscar pelo nome
+      advanced: Busca Avan?ada
+      birthday: Data de Anivers?rio
+      anniversary: Anivers?rio de Casamento
+      gender: Sexo
+      genders:
+        Male: Masculino
+        Female: Feminino
+      city: Cidade
+      state: Estado
+      zip: CEP
+      phone: N?mero de Telefone
+      email: Endere?o de Email
+      type: Tipo de Associa??o
+      group_membership: Participa??o do Grupo
+      in_group: inclui
+      not_in_group: n?o inclui
+      group_membership_text: Grupo com categoria
+      types:
+        member: Membro
+        staff: Funcion?rio
+        deacon: Di?cono
+        elder: Anci?o
+    results:
+      testimony_read_more: exibir
+    add_selected: Adicionar Selecionado
+    business_category: 'Categoria de Neg?cio:'
+    deacon: Di?cono
+    elder: Anci?o
+    female: Feminino
+    heading: Diret?rio do %{name}
+    male: Masculino
+    member: Membro
+    results_not_shown: Alguns resultados n?o foram exibidos ? seja mais espec?fico.
+    not_showing_hidden_people: "(n?o s?o exibidas pessoas ocultas)"
+    people_found:
+      one: 1 pessoa encontrada
+      other: "%{count} pessoas encontradas"
+    search: Busca no Diret?rio
+    search_by_name: Buscar pelo nome
+    show_hidden: Exibir Ocultados
+    staff: Funcion?rios
+    directory_map: Mapa de Diret?rio
+  session:
+    form:
+      header: Acessar
+      placeholder:
+        email: Endere?o de Email
+        password: Senha
+      remember_me: Lembrar de mim
+    account_not_activated_html: Sua conta ainda n?o foi ativada. <a href='/pages/help'>Clique
+      aqui</a> para iniciar.
+    email_found: O endere?o de email foi encontrado, por?m voc? precisa verific?-lo
+      antes de poder acessar o site.
+    email_not_found: O endere?o de email n?o foi encontrado no nosso sistema. Por
+      favor tente outro email.
+    forgot_password_button: Eu esqueci
+    password_doesnt_match: A senha que voc? inseriu n?o confere com os nossos registros.
+      Por favor, tente novamente.
+    max_sign_in_attempts: Desculpe, mas voc? excedeu o limite m?ximo de tentativas
+      de acesso em um per?odo de 15 minutos. Voc? poder? tentar novamente em 15 minutos.
+    sign_in_button: Acessar.
+    sign_up_button: Criar uma conta.
+    sign_out: Sair
+  setup:
+    admin_account: Conta de Administrador
+    complete_html: ?timo! Voc? configourou o b?sico. Siga para <a href='%{url}'>?rea
+      Administrativa</a> quando voc? estiver pronto para customizar o site da sua
+      comunidade.
+    congratulations: Parab?ns! OneBody est? em execu??o. Agora ? a hora de adicionar
+      um usu?rio administrador e realizar outras configura??es...
+    do_right_away: Voc? deve fazer isto agora mesmo, especialmente se o seu servidor
+      est? dispon?vel na internet.
+    domain_name_note: 'Insira um dom?nio para este site, sem o prefixo "www", como
+      por exemplo: "exemplo.com" ou "membros.exemplo.com"'
+    heading: Configura??o de Primeiro Uso
+    more_accounts_later: "(Voc? conseguir? criar mais contas administrativas mais
+      tarde.)"
+    domain_name: Nome de Dom?nio
+    first_name: Primeiro Nome
+    last_name: Sobrenome
+    email: Endere?o de Email
+    password: Senha
+    password_confirmation: Confirmar Senha
+    submit_button_html: Salvar Altera??es
+  stream:
+    title: In?cio
+    sub_title: "(itens compartilhados comigo)"
+    none: Ainda n?o h? nada para exibir aqui.
+    header:
+      noone: sistema
+      message: "%{who} enviou uma mensagem para %{group}"
+      news: "%{who} postou %{title}"
+      note: "%{who} postou uma nota"
+      person: "%{who} foi adicionado ? comunidade"
+      picture:
+        one: "%{who} compartilhou uma foto em %{album}"
+        other: "%{who} compartilhou algumas fotos em %{album}"
+      picture_in_group:
+        one: "%{who} compartilhou uma foto no grupo %{group}"
+        other: "%{who} compartilhou algumas fotos no grupo %{group}"
+      prayer_request: "%{who} fez um pedido de ora??o no grupo %{group}"
+      site: "%{site}"
+      verse: "%{who} compartilhou %{title}"
+    body:
+      picture:
+        alt: clique para expandir
+      person:
+        button: Diga "ol?" para %{person}!
+      site:
+        description: O site da comunidade %{site} foi criado!
+      stream_item_group:
+        person:
+          description:
+            one: 1 pessoa foi adicionada...
+            other: "%{count} pessoas foram adicionadas..."
+    footer:
+      button_label:
+        default: Leia mais
+        album: Mostrar tudo
+        note: Ler mais
+        verse: Ler mais
+        stream_item_group: Mostrar tudo
+        person: ''
+        site: ''
+    load_more: carregar mais...
+    share:
+      heading:
+        friends: Compartilhar com meus Amigos
+        everyone: Compartilhar com Todos
+      intro:
+        friends_and_group_members: Itens que voc? compartilha aqui ser?o visualizados
+          por seus amigos e membros dos grupos quando eles acessarem o sistema.
+        friends_only: Os itens que voc? compartilhar aqui ser?o vistos pelos seus
+          amigos quando eles conectarem.
+        group_members_only: Os itens que voc? compartilhar aqui ser?o vistos pelos
+          membros do grupo quando eles conectarem.
+        everyone: Compartilhe algo interessante com toda a comunidade...
+      button:
+        note: nota
+        picture: foto
+        verse: vers?culo da B?blia
+        message: mensagen do grupo
+        news: compartilhar uma not?cia
+      sharing_with_html:
+        one: compartilhando com <a href='%{url}'>1 pessoa</a>
+        other: compartilhando com <a href='%{url}'>%{count} pessoas</a>
+    people:
+      heading: Compartilhando com os Amigos
+      intro: Estas s?o as pessoas que visualizam o que voc? compartilha no site.
+      intro_none: Nada para exibir.
+      column:
+        name: Nome
+        family_name: Nome da Fam?lia
+        reason: Motivo
+      reason:
+        family_html: sua <a href='%{url}'>fam?lia</a>
+        friend_html: seu <a href='%{url}'>amigo</a>
+        groups_html:
+          one: 'neste grupo com voc?: %{groups}'
+          other: 'nestes grupos com voc?: %{groups}'
+    feed: Feed
+  tags:
+    add_tags: Adicionar Etiquetas (separadas por espa?os)
+    confirm_delete: Voc? tem certeza que deseja excluir esta etiqueta?
+    no_tags_yet: nenhuma etiqueta
+    tag: Etiqueta
+    tags: Etiquetas
+  tasks:
+    index:
+      heading: Tarefas
+      group_heading: Tarefas para %{group}
+      comment_count:
+        one: 1 coment?rio
+        other: "%{count} coment?rios"
+    new:
+      heading: Nova tarefa
+      button: Nova tarefa
+    edit:
+      heading: Editar tarefa
+    show:
+      heading: 'Tarefa: %{task}'
+      edit: Editar Tarefa
+    heading: Tarefa
+    save: Salvar Tarefa
+    go_to_group: Ir para o grupo
+    deleted: Tarefa exclu?da
+    members: 
+  'true': true

@@ -1,0 +1,10 @@
+{
+  "name": "my-project-name",
+  "repository": {
+    "type": "git",
+    "url": "https://example.com/me/my-project-name.git"
+  },
+  "version": "0.0.0",
+  "devDependencies": {
+  }
+}

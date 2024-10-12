@@ -1,0 +1,15 @@
+{
+  "author": "Braithwaite Patrick Sean",
+  "name": "Ziegler",
+  "description": "PID controller EventEmitter for node.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/brapse/ziegler",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brapse/ziegler.git"
+  },
+  "engines": {
+    "node": "~0.6.10"
+  },
+  "dependencies": {}
+}

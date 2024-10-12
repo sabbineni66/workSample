@@ -1,0 +1,25 @@
+{
+  "name": "yaz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "module-deps": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/jballanc/yaz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/jballanc/yaz/issues"
+  },
+  "homepage": "https://gitlab.com/jballanc/yaz#README"
+}

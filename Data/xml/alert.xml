@@ -1,0 +1,13 @@
+<document>
+  <formTemplate>
+    <banner>
+      <title>Enter BPM</title>
+    </banner>
+    <textField keyboardType="numberPad">120</textField>
+    <footer>
+      <button>
+        <text>Continue</text>
+      </button>
+    </footer>
+  </formTemplate>
+</document>

@@ -1,0 +1,11 @@
+{
+  "name":         "nodeunit-run-file-multiple-times",
+  "description":  "Demonstrates a bug in Nodeunit",
+
+  "private":      true,
+  "version":      "0.0.1",
+
+  "dependencies": {
+    "nodeunit": "*"
+  }
+}

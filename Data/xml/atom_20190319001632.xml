@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: coisa de nerd | Blog do Enderson!]]></title>
+  <link href="http://enderson.blog.br/blog/categories/coisa-de-nerd/atom.xml" rel="self"/>
+  <link href="http://enderson.blog.br/"/>
+  <updated>2014-12-18T20:44:10-03:00</updated>
+  <id>http://enderson.blog.br/</id>
+  <author>
+    <name><![CDATA[Enderson Maia]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Coding Dojo Alagoas]]></title>
+    <link href="http://enderson.blog.br/2010/12/02/coding-dojo-alagoas/"/>
+    <updated>2010-12-02T11:25:44-03:00</updated>
+    <id>http://enderson.blog.br/2010/12/02/coding-dojo-alagoas</id>
+    <content type="html"><![CDATA[<p>J? aconteceu o <a href="https://dojoalagoas.wordpress.com/2010/12/01/dojo-alagoas-fal/">segundo</a> Coding Dojo da galera do <a href="http://dojoalagoas.wordpress.com">Dojo Alagoas</a> que aconteceu na FAL, o neg?cio foi bem animado espero que acontecam mais, pois acho que a galera de inform?tica de Alagoas anda bem escondida.</p>
+
+<p>O melhor destes eventos pra mim ? a socializa??o, conhecer a galera da ?rea e tomar uma coca-cola, jogar conversa fora.</p>
+
+<p>Se voc? quer saber do que se trata um Coding Dojo, veja o site do <a href="http://dojorio.wordpress.com">DojoRio</a> que j? tem bastante informa??o por l?.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pesquisa sobre a ado??o do Ruby (on Rails) na ThoughtWorks]]></title>
+    <link href="http://enderson.blog.br/2009/06/11/pesquisa-sobre-a-adocao-do-ruby-on-rails-na-thoughtworks/"/>
+    <updated>2009-06-11T22:18:13-03:00</updated>
+    <id>http://enderson.blog.br/2009/06/11/pesquisa-sobre-a-adocao-do-ruby-on-rails-na-thoughtworks</id>
+    <content type="html"><![CDATA[<p>Martin Fowler publicou um artigo sobre a experi?ncia, nestes ?ltimos anos, na utiliza??o do Ruby em 41 projetos, alguns deles com mais de 40 pessoas envolvidas e mais de 2 anos de dura??o.</p>
+
+<p>O artigo foi baseado numa pesquisa feito pelo pr?prio Fowler, em todos os projetos que usaram Ruby (on Rails) como tecnologia principal, e faz alguns levantamentos sobre performance, produtividade.</p>
+
+<p>Vale a pena dar uma lida.</p>
+
+<p>Fonte: <a href="http://martinfowler.com/articles/rubyAtThoughtWorks.html">Ruby at ThoughtWorks</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cometi Orkutic?dio!]]></title>
+    <link href="http://enderson.blog.br/2008/08/31/cometi-orkuticidio/"/>
+    <updated>2008-08-31T21:33:54-03:00</updated>
+    <id>http://enderson.blog.br/2008/08/31/cometi-orkuticidio</id>
+    <content type="html"><![CDATA[<p>Pois ?, cansei! perda de tempo. As pessoas pararam de me mandar e-mail para mandar <em>scrap</em>, mais um local para receber <em>spam</em>, n?o guentava mais.</p>
+
+<p>Quer me encontrar ? Ainda tenho conta do flickr, tenho o blog, tenho e-mail.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Teclado Apple com Ubuntu]]></title>
+    <link href="http://enderson.blog.br/2008/05/29/teclado-apple-com-ubuntu/"/>
+    <updated>2008-05-29T17:50:11-03:00</updated>
+    <id>http://enderson.blog.br/2008/05/29/teclado-apple-com-ubuntu</id>
+    <content type="html"><![CDATA[<p>Quem usa o teclado apple com o Ubuntu, e fez a ultima atuliza??o do kernel, deve ter percebido que em algum momento todas as teclas param de funcionar. Na verdade eu j? usava, e vi que o teclado num?rico n?o funcionava, mas como eu n?o utilizava mesmo, ent?o n?o sentia falta.</p>
+
+<p>Al?m disto, voc? tem que se habituar em algumas coisas que no Mac OS mudam, como a tecla <em>Control</em> pela tecla <em>Command</em> (ma??). Eu ainda n?o configurei tudo isso, mas voc? pode seguir <a href="http://linuxtidbits.wordpress.com/2008/04/19/apple-keyboards-in-linux/">este link</a> que ajuda.</p>
+
+<p>A dica que quero deixar ?, se por acaso o se teclado parar de funcionar, vc segura a tecla F6 uns 3 segundos, e ele volta a funcionar, isso acontece quando voc? aperta a tela <em>clear</em>, que deveria funcionar como o <em>NumLock</em>, ele desabilita tudo, mas depois que voc? segura o F6, volta a funcionar tudo, inclusive o teclado num?rico.</p>
+
+<p>Fonte: <a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/201887/comments/30">https://bugs.launchpad.net/ubuntu/+source/linux/+bug/201887/comments/30</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fa?a backup, mas n?o fa?a o que eu fa?o!]]></title>
+    <link href="http://enderson.blog.br/2008/05/03/faca-backup-mas-nao-faca-o-que-eu-faco/"/>
+    <updated>2008-05-03T20:40:05-03:00</updated>
+    <id>http://enderson.blog.br/2008/05/03/faca-backup-mas-nao-faca-o-que-eu-faco</id>
+    <content type="html"><![CDATA[<p>Ainda n?o coloquei o post sobre o terceiro dia do FISL por v?rios motivos, um deles ? n?o ter feito backup. N?o entendeu ? Deixa eu explicar melhor.</p>
+
+<p>Quando estava no FISL, eu tive um problema com meu MacBook, ele simplesmente n?o ligou, e mostrava uma mensagem que procurava o disco de inicializa??o. Foi quando achei um cara com um MacBook, e perguntei se ele n?o tinha o CD de instala??o (que eu n?o estava com o meu), e por sorte o rapaz andava com o dele. Iniciei pelo CD, escolhi para iniciar pelo disco no pr?ximo boot, e funcionou.</p>
+
+<p>A partir deste momento eu j? deveria pensar que problemas estavam vindo, e deveria ter atualizado meu backup, que era muito antigo. Mas n?o me veio a mente nada disso, simplesmente deixei voltar pra casa, eis que quando chego em casa e preparei um espa?o no desktop do meu irm?o para acomodar o backup. Depois de tudo pronto, compartilhamento, cabo de rede, e tal, no proximo boot n?o inicia mais, e o HD apresenta um beep.</p>
+
+<p>Pronto! Problema f?sico no HD! Tentei de tudo, colocar o HD em outro PC, em <em>case </em>para HD, mas n?o adiantou. T? na garantia, mas n?o adianta. Eu preciso ? dos meus dados. E quanto custa para recuperar ? CARO! MUITO CARO!</p>
+
+<p>T? ai a dica, fa?a backup, n?o espere perder os dados para dar valor ao backup. Ele ? ?til, e vale cada minuto gasto no seu preparo.</p>
+
+<p>Eu sei que parece o mais ?bvio, mas muitos que sabem da import?ncia, n?o fazem backup, na empresa onde trabalho, tudo tem backup, pode n?o ser o melhor do mundo, mas tem. E j? precisei de mais de uma vez deles, e estava tudo OK. Agora o por que de eu n?o dar a mesma aten??o para meus dados pessoais, eu n?o sei.</p>
+
+<p>J? fiquei uma semana sem o notebook, e devo mandar para a garantia na pr?xima segunda, e arranjar um PC ou notebook emprestado, enquanto ele volta.</p>
+
+<p>E o post do FISL (entre outros) ? Eu uso um editor local para preparar os post, al?m de ter feito v?rias anota??es sobre as palestras em arquivos soltos, que preciso consulta para terminar o post.? N?o vou gastar mais tempo pesquisando na net e tal, vamos ver se consigo recuperar os dados &hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

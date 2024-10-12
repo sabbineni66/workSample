@@ -1,0 +1,59 @@
+{
+  "name": "fui",
+  "version": "0.0.1",
+  "description": "Functional UI - based on CSS modules and React.js components",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitry/functional-ui.git"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "modules",
+    "react.js",
+    "component",
+    "css",
+    "framework",
+    "react",
+    "framework",
+    "modular",
+    "framework",
+    "ui",
+    "functional"
+  ],
+  "author": "Dmitry Polushkin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmitry/functional-ui/issues"
+  },
+  "homepage": "https://github.com/dmitry/functional-ui#readme",
+  "dependencies": {
+    "react-css-modules": "^3.7.4"
+  },
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.2",
+    "karma": "^0.13.21",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.3",
+    "karma-mocha": "^0.2.2",
+    "karma-mocha-reporter": "^1.2.0",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sinon-chai": "^1.2.0",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.4.5",
+    "phantomjs-prebuilt": "^2.1.4",
+    "webpack": "^1.12.13"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "screencloud-hub",
+  "version": "0.0.0-unreleasable",
+  "dependencies": {
+    "MD5": "*",
+    "castv2": "*",
+    "castv2-client": "*",
+    "coffee-script": "*",
+    "faye-websocket": "*",
+    "firebase": "^1.1.2",
+    "lodash": "*",
+    "mdns": "*",
+    "nodecast": "screencloud/nodecast",
+    "nodecastor": "*",
+    "nodemon": "*",
+    "restify": "*",
+    "sockjs-client": "sockjs/sockjs-client-node",
+    "winston": "*"
+  },
+  "scripts": {
+    "start": "nodemon app.coffee"
+  }
+}

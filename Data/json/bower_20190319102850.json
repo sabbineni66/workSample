@@ -1,0 +1,10 @@
+{
+  "name": "bar",
+  "version": "1.0.0",
+  "description": "The Bar module",
+  "private": true,
+  "ignore": [
+    "sass",
+    "gulpfile.js"
+  ]
+}

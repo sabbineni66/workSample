@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Process | Dave Rapin]]></title>
+  <link href="http://rapind.github.com/blog/categories/process/atom.xml" rel="self"/>
+  <link href="http://rapind.github.com/"/>
+  <updated>2015-10-17T13:08:35-04:00</updated>
+  <id>http://rapind.github.com/</id>
+  <author>
+    <name><![CDATA[Dave Rapin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[TDD, BDD, and False Assumptions]]></title>
+    <link href="http://rapind.github.com/blog/2011/01/18/tdd-bdd-and-false-assumptions/"/>
+    <updated>2011-01-18T14:31:00-05:00</updated>
+    <id>http://rapind.github.com/blog/2011/01/18/tdd-bdd-and-false-assumptions</id>
+    <content type="html"><![CDATA[<p>After watching another <em>Test First</em> presentation related to the Ruby world I figured out what it is that bothers me the most about the <em>TDD Religion</em>.</p>
+
+<p>It seems that everytime a TDD evangelist speaks about non-test driven / traditional development they paint a completely exaggerated and unrealistic picture of what it means to not use TDD. It usually goes something like this: "You spend a year creating a specification, and then another year coding until you've built this monolithic application then you manually go through all of the functionality you built for another year fixing bugs etc.". Seriously? I know we've all got horror tales, but come on... who in their right mind has ever worked like this even before all of the Test-first buzz back in 2000? This is a fallacy, and even coding in Fortran sounds better than being involved in this fantasy process.</p>
+
+<p>I don't actually have a problem with TDD the practice, or BDD as a practice, or even EDD (experiment) the practice. What I do have an issue with are the religious zealots that think it solves all of their problems and will criticize anyone who doesn't share the same beliefs. Really, it doesn't.</p>
+
+<p>Here's how Joe the Programmer who's never bothered with TDD <em>actually</em> performs his work on a daily basis. He thinks about the big picture. Breaks it up into small accessible problems (basic problem solving). Dives right in and starts building out a solution to tackle one of these small problems. Then he <em>manually tests</em> his small solution to make sure it works and <em>provokes more thought</em> on how it fits into the big picture. Once he's happy with it, he tackles the next small problem. All the time he's constantly reevaluating the big picture, identifying new problems, speaking with the client, etc.</p>
+
+<p>Sounds a lot more reasonable than "code for a year" doesn't it? It almost sounds like it would work really well in most scenarios. It doesn't help sell the latest tickets to your speech on TDD though, because honestly, how much would TDD actually improve his process?</p>
+
+<p>Please, before you tell everyone how amazing the latest test / behaviour / experiment driven development methodology or tool is, watch this presentation from Rich Hickey on <em>Hammock-Driven Development</em> first and let it sink in. <a href="http://clojure.blip.tv/file/4457042/">http://clojure.blip.tv/file/4457042/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Quality Versus Speed]]></title>
+    <link href="http://rapind.github.com/blog/2010/04/29/quality-versus-speed/"/>
+    <updated>2010-04-29T22:02:00-04:00</updated>
+    <id>http://rapind.github.com/blog/2010/04/29/quality-versus-speed</id>
+    <content type="html"><![CDATA[<p>The quality versus speed question is one that constantly comes up whether you're a freelancer or a salaryman, and the answer is usually situational. However, by situational I don't mean given a specific project. Instead I think it's more about your personality and commitment as a developer.</p>
+
+<p>As a freelancer you have a lot more control over the quality of your work and it's essential to enjoying your profession. We inevitably have to deal with some unreasonable clients now and then, who want everything done yesterday and aren't willing to compensate you appropriately for your time. So how do we deal with it?</p>
+
+<p>For me, with fixed quote work, once I agree to take a project on I simply put compensation out of my mind. If I was unable to correctly scope and quote building a quality application, it's not going to stop me from doing my best anyways. One of the luxuries of freelancing is the authority to decide that you will do what it takes to deliver something you're proud of. In my mind it's just not acceptable to deliver less than my best effort, and it would stress me out not to do so. Using an agile process can also help to limit losses you may incur by misquoting projects.</p>
+
+<p>This means all of my client's will get a great deal, even those I may have misquoted. I'll sometimes take a loss, but for me it's not worth the stress of building something you aren't proud of. At the core, it's really that simple. I get to feel good about my work and I'm still able to put food on the table even when I take a loss. I'll learn new technologies and techniques which may eventually balance out the occasional losses.</p>
+
+<p>So to take this a little further, whenever I'm building software, there's usually quite a few moving parts behind the scenes that the client is blissfully unaware of. That doesn't mean they're unimportant. In fact when I take on the work I'm essentially saying, yes I have the expertise to do this, and yes I will take care of all of the details including the more complex hidden challenges.</p>
+
+<p>For example, let's say I'm building a storefront web application. I'm extremely focused on conversion and put together a great payment flow to reduce the friction associated with purchasing online. I've implemented SSL properly wherever customer information is being submitted. I'm storing their details using opt-out rather than opt-in. The customer is always being sent to the most relevant next step, and in general I'm presenting them with as little data entry fields as possible. The customer feels safe and they are able to make their payment quickly. Returning customers are delighted that it's even faster the next time they make a purchase.</p>
+
+<p>So far this sounds like a pretty great job. The client is in total agreement. Their sales are up, CSR calls are down, and I feel like my work is appreciated.</p>
+
+<p>What the client is unaware of is how I'm storing credit card information and passwords. I could be storing them in clear text or using weak encryption (salt-less). Let's say that I also enforced very few if any restrictions when customers choose a password, since that would increase payment friction. So we have weak or unencrypted passwords, they're easy to crack via dictionary attacks; like "joe", "password", "12345", plus they're all associated with unencrypted credit card information.</p>
+
+<p>Now the client may never care so long as nothing <em>bad</em> happens. They're certainly not going to pay me to implement a far more secure solution if I didn't make room for it in my initial quote. Good enough? Well sort of... most of the time this probably goes unnoticed. Meaning the customer is happy and they didn't have to pay me for the extra time to nail down the security (however, for this example at least, PCI enforcement is going to change that). So what's the problem? The problem is I'm not happy. I know that some very critical mistakes have been made. Therefore I would never deliver this application until I corrected these mistakes. This isn't actually a real world scenario, but it serves as a decent enough example of hidden complexity.</p>
+
+<p>There are many programmers like myself, who's personality and commitment to a quality solution will simply not let them stop at good enough. Even if the client is happy and completely unaware of the insecurity of their system and the liability associated with it. These programmers will be compelled to finish the job, even if they are over budget.</p>
+
+<p>There are times though where a passionate and committed programmer can blow out a project's budget without the customer's best interest at heart. I've heard a lot of criticism in programming circles about this type of programmer. However, I've noticed that almost always these criticisms come from either programmers with very limited experience, or MBA types who've never written a line of code in their life. There is absolutely no job satisfaction in delivering inferior products. Period. The passionate and committed programmer may seem to make some things a little more complicated than they need to be, but they will learn from it, and in the end you will end up with a better and more efficient product.</p>
+
+<p>As a self-professed programming perfectionist of many years, my opinion is that there are many applications out there that I'm simply not suited to work on. I accept that this attention to details can be a strength in some scenarios and a weakness in others. There's probably thousands of programmers that can do the same work cheaper, with less questions, and produce an equally satisfactory product in some scenarios. In fact most of them probably don't even need to be programmers, in that they have no real interest in programming. Many projects are simply glueing together existing libraries and frameworks and require very little creative problem solving.</p>
+
+<p>I would argue that there's nothing wrong with either of these programmer personalities. I think the market has room for both of us. There are many prototyping and proof of concept projects out there with extremely frugal owners / managers that simply aren't willing to invest either the time or money into a great solution and are happy enough with a mess of libraries glued together behind a pretty user interface. In fact, unless the stakeholder is willing to invest their own time and effort in the project, then they're unlikely to be happy with any solution they get, and would just frustrate the more passionate and committed developers anyways.</p>
+
+<p>In the end, I'm happy to be writing quality software that will live for a while and need to be supported and improved. I enjoy refactoring my code. There's something extremely satisfying about it.</p>
+
+<p>As a client, if the project is your baby, and you're very committed to it, then you will want an equal level of commitment from whoever works on it.</p>
+]]></content>
+  </entry>
+  
+</feed>

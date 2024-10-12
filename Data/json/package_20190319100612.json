@@ -1,0 +1,47 @@
+{
+  "name": "batman",
+  "description": "A full-stack JavaScript framework that helps you build rich, single-page applications with power and speed.",
+  "author": "Nick Small <nick@shopify.com> (http://github.com/nciagra)",
+  "contributors": [
+    "Harry Brundage <harry.brundage@shopify.com> (http://github.com/hornairs)",
+    "James MacAulay <james@shopify.com> (http://github.com/jamesmacaulay)",
+    "Kamil Tusznio <kamil.tusznio@shopify.com> (http://github.com/ktusznio)"
+  ],
+
+  "version": "0.8.0",
+  "homepage": "http://batmanjs.org",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Shopify/batman.git"
+  },
+  "main": "./lib/batman.node.js",
+  "bin" : {
+    "batman" : "./tools/batman"
+  },
+  "scripts": {
+    "test": "cake test",
+    "build": "cake build"
+  },
+  "dependencies": {
+    "connect": "~1.6.1",
+    "coffee-script": "1.1.2"
+  },
+  "engines": {
+    "node": "0.4.x"
+  },
+  "devDependencies": {
+    "daemon": "~0.3.0",
+    "docco": "~0.3.0",
+    "now": "~0.5",
+    "glob": "~2.0",
+    "jsdom": "0.2.5",
+    "qunit": "0.1.5",
+    "q": "~>0.6.0",
+    "muffin": "0.2.4",
+    "uglify-js": "1.1.0",
+    "temp": "~>0.2.0"
+  },
+  "batman": {
+    "build": false
+  }
+}

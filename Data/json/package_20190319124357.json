@@ -1,0 +1,23 @@
+{
+  "name": "harvest",
+  "version": "0.0.0",
+  "description": "Harvest",
+  "dependencies": {
+    "chai": "~1.7.2",
+    "jsdom": "~0.6.5",
+    "mocha": "~1.12.0",
+    "coffee-script": "~1.6.3",
+    "sinon": "~1.7.3",
+    "sinon-chai": "~2.4.0",
+    "mocha-as-promised": "~1.4.0",
+    "chai-as-promised": "~3.3.1",
+    "rsvp": "~2.0.1",
+    "uglify-js": "~2.3.6",
+    "mapcat": "~0.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "PatchSpace Ltd",
+  "license": "Commercial"
+}

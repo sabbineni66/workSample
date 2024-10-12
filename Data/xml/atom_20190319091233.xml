@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Shinzui]]></title>
+  <link href="http://shinzui.github.com/atom.xml" rel="self"/>
+  <link href="http://shinzui.github.com/"/>
+  <updated>2011-12-11T13:05:44-08:00</updated>
+  <id>http://shinzui.github.com/</id>
+  <author>
+    <name><![CDATA[Nadim]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+</feed>

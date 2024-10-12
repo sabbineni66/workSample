@@ -1,0 +1,16 @@
+{
+  "name": "highland-cloud",
+  "version": "0.0.1",
+  "description": "Home Automation for Highland Ave.",
+  "main": "server.coffee",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:osteele/highland-cloud.git"
+  },
+  "author": "Oliver Steele <steele@osteele.com>",
+  "license": "MIT",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "mqtt": "1.6.3"
+  }
+}

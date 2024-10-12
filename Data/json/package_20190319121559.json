@@ -1,0 +1,14 @@
+{
+  "name": "testxyz",
+  "version": "1.0.2",
+  "description": "Test xyz",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xyz": "2.1.x"
+  }
+}

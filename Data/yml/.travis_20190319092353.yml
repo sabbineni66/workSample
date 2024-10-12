@@ -1,0 +1,27 @@
+---
+language: ruby
+
+script: bundle exec rake
+
+sudo: false
+
+install:
+  - bundle install --retry=3
+
+rvm:
+  - 2.2.5
+  - 2.3.3
+  - 2.4.0
+
+notifications:
+  email:
+    recipients:
+      - tero.tasanen@gmail.com
+    on_success: change
+    on_failure: change
+
+cache: bundler
+
+os:
+  - linux
+  - osx

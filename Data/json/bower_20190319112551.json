@@ -1,0 +1,36 @@
+{
+  "name": "{%= name %}",
+  "version": "{%= version %}",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    {% if (fancybox) { %}
+    "fancybox": "*",
+    {% } %}
+    {% if (mmenu) { %}
+    "jQuery.mmenu": "*",
+    {% } %}
+    {% if (cycle) { %}
+    "jquery-cycle": "*",
+    {% } %}
+    {% if (mmenu) { %}
+    "jQuery.mmenu": "*",
+    {% } %}
+    {% if (easing) { %}
+    "jquery.easing": "*",
+    {% } %}
+    "bootstrap": "*",
+    "lesshat": "*",
+    "jquery": "1.10.2"
+  },
+  "resolutions": {
+    "jquery": "1.10.2"
+  }
+}

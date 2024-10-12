@@ -1,0 +1,4 @@
+# Example config file for the suitcase packaging system
+package_format:     debian
+version_control:    subversion
+build_directory:    build/temp/DEBIAN

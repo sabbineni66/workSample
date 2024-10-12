@@ -1,0 +1,18 @@
+{
+   "dailylog": {
+      "properties": {
+         "date": {
+            "type": "date",
+            "format": "basic_date"
+         },
+         "log": {
+            "properties": {
+              "nick": { "type": "string" },
+              "time": { "type": "date", "format": "hour_minute" },
+              "message": { "type": "string" }
+            }
+         },
+         "message_count": { "type": "integer" }
+      }
+   }
+}

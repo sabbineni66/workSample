@@ -1,0 +1,60 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  admin: Admin
+  allow_comments: Allow comments
+  author: Author
+
+  back: Back
+  body_footer_content: Footer insert
+  body_header_content: Header insert
+  by: By
+
+  cancel: Cancel
+  category: Category
+  change_author: Edit author
+  comments: Comments
+
+  dashboard: Dashboard
+  delete: Delete
+  description: Description
+  draft: Draft
+  drafted_posts: Drafted posts
+
+  edit: Edit
+  edit_post: Edit post
+  edit_user: Edit user
+  email: Email
+  
+  head_content: HTML Head insert
+
+  mark_as_draft: Mark as draft
+  
+  name: Name
+  new_post: New post
+  new_user: New user
+
+  password: Password
+  password_confirmation: Confirm password
+  pending_posts: Pending posts
+  posts: Posts
+  preview: Preview
+  publish: Publish
+  published_at: Publish on
+  published_posts: Published posts
+
+  save: Save
+  save_and_preview: Save and preview
+  save_draft: Save as draft
+  settings: Settings
+  sign_in: Sign in
+  sign_out: Sign out
+  signed_in_as: Signed in as
+
+  title: Title
+  
+  user: User
+  users: Users
+  
+  view_home: "View the site &rarr;"

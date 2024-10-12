@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"skinname-foreground": "?n plan",
+	"foreground-desc": "??eri?inizi ?n plana koymaya odaklanan bir tema sa?lar.",
+	"foreground-browsermsg": "Internet Explorer'?n bu s?r?m?nde beklendi?i gibi g?r?nmeyebilir. Internet Explorer'?n daha yeni bir s?r?m?ne ge?menizi veya Firefox veya Chrome gibi bir taray?c?ya ge?menizi ?neririz.",
+	"foreground-menutitle": "Men?"
+}

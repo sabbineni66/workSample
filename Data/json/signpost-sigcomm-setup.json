@@ -1,0 +1,63 @@
+{
+  "name": "cloud",
+  "type": "machine",
+  "children": [
+  {
+    "name": "internet",
+    "type": "network",
+    "children": [
+    {
+      "name": "nat1",
+      "type": "network",
+      "children": [
+      {
+        "name": "home",
+        "type": "machine"
+      }
+      ]
+    },
+    {
+
+      "name": "nat2",
+      "type": "network",
+      "children":[
+      {
+        "name": "slave",
+        "type": "machine"
+      },
+      {
+        "name":"client1",
+        "type": "client"
+      },
+      {
+        "name":"client2",
+        "type": "client"
+      },
+      {
+        "name":"client3",
+        "type": "client"
+      },
+      {
+        "name":"client4",
+        "type": "client"
+      },
+      {
+        "name":"client5",
+        "type": "client"
+      },
+      {
+        "name":"client6",
+        "type": "client"
+      }
+
+
+
+
+      ]
+    }
+
+    ]
+
+  }
+  ]
+}

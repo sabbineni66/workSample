@@ -1,0 +1,9 @@
+name:
+  name: name
+  value: Untitled Mouth Blog  
+url:
+  name: url
+  value: http://local.test
+theme:
+  name: theme
+  value: test

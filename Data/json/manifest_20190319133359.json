@@ -1,0 +1,13 @@
+{
+  "name": "Pivotal Tracker Timer",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "A time tracker that integrates with Pivotal Tracker",
+  "content_scripts": [
+    {
+      "matches": ["https://www.pivotaltracker.com/projects/*"],
+      "css": ["pivotal_tracker_timer.css"],
+      "js": ["vendor/jquery-1.8.2.min.js", "vendor/mutation_summary.js", "pivotal_tracker_timer.js"]
+    }
+  ]
+}

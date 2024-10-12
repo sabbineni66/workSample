@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[rubyist]]></title>
+  <link href="http://rubyist.github.io/atom.xml" rel="self"/>
+  <link href="http://rubyist.github.io/"/>
+  <updated>2014-02-02T09:40:32-05:00</updated>
+  <id>http://rubyist.github.io/</id>
+  <author>
+    <name><![CDATA[rubyist]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Making A Thing]]></title>
+    <link href="http://rubyist.github.io/blog/2014/02/01/making-a-thing/"/>
+    <updated>2014-02-01T12:32:45-05:00</updated>
+    <id>http://rubyist.github.io/blog/2014/02/01/making-a-thing</id>
+    <content type="html"><![CDATA[<p>I recently acquired a 3D printer. I am building a project where I want some custom enclosures and a custom display and I figured what the hell, may as well get a 3D printer and print them. Turns out, 3D printing is pretty awesome. This post isn&rsquo;t about that project, though, that&rsquo;ll come later. This post is about a thing I made that I needed. I&rsquo;ve never really designed and made a real thing before so I thought I might document the process and share it. If you have experience doing this, this will be boring, elementary, and probably wrong.</p>
+
+<h2>The Thing</h2>
+
+<p>I collect and enjoy listening to records. I&rsquo;m not an avid hipster or anything, all of my gear is 25+ years old, but it&rsquo;s fun. A while ago I bought a used VPI record cleaner on ebay. It is a fantastic record cleaner. It&rsquo;s expensive, but sometimes you can find a good deal on ebay and get it for considerably less money.</p>
+
+<p>The cleaner I bought, however, did not come with the adapter that allows it to hold 7&#8221; 45 RPM records, so to date I have been unable to clean my 45s with it. VPI <a href="http://www.musicdirect.com/p-3562-vpi-165-45rpm-spindle-adapter.aspx">makes an adapter</a> but it&rsquo;s $30 and I&rsquo;ve never felt like spending that kind of money for a simple piece of plastic. I once tried to make one from stuff at home depot, but I messed it up and never tried again. Tonight I figured I&rsquo;d print one up.</p>
+
+<h2>Version 1</h2>
+
+<p>I broke out the calipers and made some simple measurements and threw a design together in OpenSCAD.</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version1.gif"></p>
+
+<p>I sent it off to the printer and immediately realized I&rsquo;d made a mistake.</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version1.jpg"></p>
+
+<p>Rookie mistake. You can&rsquo;t print across that much space without supports. Supports are extra structure that break away after you&rsquo;re done. They help the printer make overhangs and span open space like that. So I cancelled the print, went back into the slicer, and had it add supports. This time the print finished, although it was a little rough on the underside, even though it used supports. I think Makerware is a little kooky with how it designed the supports.</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version1-printed.jpg"></p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version1-printed-bottom.jpg"></p>
+
+<p>I was pretty excited about this because it printed and except for some minor junk on the underside it looked pretty good. Then I tried to use it.</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version1-in-use.jpg"></p>
+
+<p>The problem here is that it&rsquo;s too high. The post is threaded and there&rsquo;s a little knurled screw piece that screws onto it to clamp everything down. The threaded post was not coming through the piece. I failed to measure and pay attention to the height of this screw. The hole was also not quite wide enough. The piece fit over the threaded portion of the screw, but not the unthreaded base, so the piece didn&rsquo;t quite sit all the way down.</p>
+
+<h2>Version 2</h2>
+
+<p>Back into OpenSCAD. I lopped off the top to bring the height down. I also flipped it so that the wider radius of the cylinder was at the top. This would make it easier to grab and pull off the cleaner. I also had this brilliant idea to add a little disk at the bottom the size of the hole in a 45 to help center it. Amazing!</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version2.gif"></p>
+
+<p>Off to the printer it went. I was concerned it needed supports because of the large opening, so I selected the option in Makerware. It, however, did not feel the need to print any. The print turned out pretty fine, though a little rough on the underside because of the long stretches.</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version2-printed.jpg"></p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version2-printed-back.jpg"></p>
+
+<p>This time I had the height right, there was plenty of screw for the nut to grab onto. However, I neglected to make the center hole big enough, so it still didn&rsquo;t quite sit all the way down.</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version2-record.jpg"></p>
+
+<p>I also realized that the clever retainer disk I had made wasn&rsquo;t actually doing anything. In order to lock the record into place it would have to be below the surface of the main body. To get that to happen, I&rsquo;d have to print the piece upside down, and if that were the case I don&rsquo;t think that disk would have printed very well at all.</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version2-disk.jpg"></p>
+
+<p>I thought about making the disk solid all the way up but decided to just simplify, simplify, simplify.</p>
+
+<h2>Version 3</h2>
+
+<p>I went back into OpenSCAD and decided to just make the thing a solid piece, keeping the indent in the top for the screw to rest in.</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version3.gif"></p>
+
+<p>That printed very well with no mess ups, because it&rsquo;s a very simple piece.</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version3-printed.jpg"></p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version3-printed-back.jpg"></p>
+
+<p>I also remembered to make the screw hole bigger, so now everything fit. The screw clamped it down nice and tight. I did make a mistake though, do you see it?</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/making-a-thing/version3-in-use.jpg"></p>
+
+<p>After lopping the top off and switching the radii I neglected to enlarge them so the bottom of the cylinder fully covered the record label. I fixed it up in the scad and STL files but decided to not print a new one. This is good enough for now and I&rsquo;ve got other things to do.</p>
+
+<h2>Lessons Learned</h2>
+
+<p>I learned a good deal about designing things in this process. I learned technical things about printing like using supports, the effects of infill percentage, and how  you orient pieces on the platform so they print well.</p>
+
+<p>Most importantly, I think, I learned to keep the design of the thing simple. I am not a mechanical engineer or a product designer. I only barely know what I&rsquo;m doing. I tried making it look pretty and fancy, but after trial and error arrived at what was essentially a cylinder of plastic with a hole in the middle. The two adornments it has (the bevelled edge and the indentation in the top) are completely functional. I will remember this while I&rsquo;m designing more things.</p>
+
+<p>If you happen to need this thing, you can grab it yourself from <a href="http://www.thingiverse.com/thing:239180">Thingiverse</a> or from <a href="https://github.com/rubyist/3d">rubyist/3d</a> on GitHub.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[LED Strips As 7 Segment Display]]></title>
+    <link href="http://rubyist.github.io/blog/2014/01/20/led-strips-as-7-segment-display/"/>
+    <updated>2014-01-20T00:00:00-05:00</updated>
+    <id>http://rubyist.github.io/blog/2014/01/20/led-strips-as-7-segment-display</id>
+    <content type="html"><![CDATA[<p>In this post, I&rsquo;ll detail the steps I took to use <a href="https://www.sparkfun.com/products/12021">LED RGB Strips</a> to back a large, wall-mounted seven segment display for <a href="https://github.com/rubyist/pingduino">rubyist/pingduino</a>. Pingduino is an arduino based score keeper for ping pong games. A full build write-up will be posted here soon (after I finish building it). In the write-up I&rsquo;ll detail the iterations on the display that lead to this point, but this post will focus only on my final implementation.</p>
+
+<p>With these LED strips, each LED is individually addressable. You can turn a single LED on or off, or modify its color without affecting any other LEDs in the strip. They are also conveniently sliceable so you can cut the strip then solder wires between the pads to put some space between the LEDs. These strips require only one IO pin on the arduino and no other components. Contrast this to using a shift register based approach where you need one chip per digit, a resistor for each LED, and 3 pins on the arduino. Also, a lot of patience when routing the final PCB.</p>
+
+<p>The display will be modelled after a typical 7-Segment LED display. I&rsquo;ll use 3 LEDs for each segment, cutting and wiring the strips like so:</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/led-strips/digit.png"></p>
+
+<p>I didn&rsquo;t want to cut up my strips until I&rsquo;d tested the code, so I laid it out like this:</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/led-strips/strip.jpg"></p>
+
+<p>Ultimately I&rsquo;ll need 4 digits to display the scores, but I started testing with one digit. First up, I drew out a table to figure out the state of each LED given the digit (0 &ndash; 9) I wanted to display. I broke the table up by 4 bits because I figured I&rsquo;d be writing these out in hex in the code, this just makes figuring out the hex a bit easier. Given we have 7 segments with 3 LEDs per segment, we need 21 bits to store the states for any given digit, so the first 3 bits will always be 0. You&rsquo;ll see in the code that these bits are ignored anyway.</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/led-strips/table.png"></p>
+
+<p>For my first piece of test code I just iterated through the numbers and checked that the appropriate LEDs were lit.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;Adafruit_NeoPixel.h&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">#define PIN 8</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">Adafruit_NeoPixel</span> <span class="n">strip</span> <span class="o">=</span> <span class="n">Adafruit_NeoPixel</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="n">PIN</span><span class="p">,</span> <span class="n">NEO_GRB</span> <span class="o">+</span> <span class="n">NEO_KHZ800</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">DigitBytes</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'> <span class="mh">0x0003FFFF</span><span class="p">,</span> <span class="c1">// 0</span>
+</span><span class='line'> <span class="mh">0x000001F8</span><span class="p">,</span> <span class="c1">// 1</span>
+</span><span class='line'> <span class="mh">0x001C7E3F</span><span class="p">,</span> <span class="c1">// 2</span>
+</span><span class='line'> <span class="mh">0x001C0FFF</span><span class="p">,</span> <span class="c1">// 3</span>
+</span><span class='line'> <span class="mh">0x001F81F8</span><span class="p">,</span> <span class="c1">// 4</span>
+</span><span class='line'> <span class="mh">0x001F8FC7</span><span class="p">,</span> <span class="c1">// 5</span>
+</span><span class='line'> <span class="mh">0x001FFFC7</span><span class="p">,</span> <span class="c1">// 6</span>
+</span><span class='line'> <span class="mh">0x000001FF</span><span class="p">,</span> <span class="c1">// 7</span>
+</span><span class='line'> <span class="mh">0x001FFFFF</span><span class="p">,</span> <span class="c1">// 8</span>
+</span><span class='line'> <span class="mh">0x001F81FF</span>  <span class="c1">// 9</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">strip</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">showDigit</span><span class="p">(</span><span class="kt">int</span> <span class="n">d</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">digit</span> <span class="o">=</span> <span class="n">DigitBytes</span><span class="p">[</span><span class="n">d</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">21</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">digit</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mh">0xFF0000</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mh">0x000000</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="n">digit</span> <span class="o">=</span> <span class="n">digit</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">showDigit</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In this code, we set up an array with the hex values determined from the table above. <code>unsigned long</code> are 32 bits, so there&rsquo;s an extra 8 bits in the hex values that you don&rsquo;t see laid out in the table. To display a number we pull out the hex value then loop through each bit, which corresponds to an LED, and see if it needs to be turned on or off. We stop short of all 32 bits available so we don&rsquo;t write over any LEDs farther down the line. This will be important when we add more digits to the display.</p>
+
+<p>So, this test worked. Ping pong scores, however, use more than one digit. To display two digits we should be able to just add an offset to <code>showDigit()</code>, like so:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">void</span> <span class="nf">showDigit</span><span class="p">(</span><span class="kt">int</span> <span class="n">d</span><span class="p">,</span> <span class="kt">int</span> <span class="n">offset</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">digit</span> <span class="o">=</span> <span class="n">DigitBytes</span><span class="p">[</span><span class="n">d</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">offset</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">offset</span> <span class="o">+</span> <span class="mi">21</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">digit</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mh">0xFF0000</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mh">0x000000</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="n">digit</span> <span class="o">=</span> <span class="n">digit</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">showDigit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">showDigit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">21</span><span class="p">);</span>
+</span><span class='line'>    <span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This should light up the appropriate segments, and in fact it does. Ping pong has two players, each needing two digits. You can push all four digits down the line by continuing to scale the offset like this.</p>
+
+<p>The score is kept as an integer in the code, so it&rsquo;d be nice to just pass <code>10</code> to show the score of 10. This is easy enough:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="kt">void</span> <span class="nf">showScore</span><span class="p">(</span><span class="kt">int</span> <span class="n">score</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kt">int</span> <span class="n">ones</span> <span class="o">=</span> <span class="n">score</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+</span><span class='line'>  <span class="kt">int</span> <span class="n">tens</span> <span class="o">=</span> <span class="n">score</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">showDigit</span><span class="p">(</span><span class="n">ones</span><span class="p">,</span> <span class="mi">21</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">showDigit</span><span class="p">(</span><span class="n">tens</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This, in fact, works. Here&rsquo;s the test strip lighting up the segments for the number <code>42</code>. The digit <code>4</code> is segments <code>b c f g</code>, and the digit <code>2</code> is segments <code>a b d e g</code>.</p>
+
+<p><img class="center" src="http://rubyist.github.io/images/led-strips/strip-42.jpg"></p>
+
+<p>Using this strategy you can then add more offets to be able to push out all the digits. For two players we need four digits total, so player 2&rsquo;s tens offset would be <code>42</code> and the ones offset would be <code>63</code>.</p>
+
+<p><em><strong>Note:</strong></em> Be careful hooking this many LEDs to your arduino. On USB power it&rsquo;ll drive the 60 LEDs that are in the 1 meter strip without much problem, but it starts to flake out when adding more, depending on how many you&rsquo;ve got lit up and the brightness. In the final build the strips will have their own power supply that can handle the current draw needed.</p>
+
+<p>If you&rsquo;d like to use this technique and use something other than 3 LEDs per segment it should be pretty easy to do. You can avoid hardcoding the offsets by doing something like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#define LEDSPERSEGMENT 3</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">showScore</span><span class="p">(</span><span class="kt">int</span> <span class="n">score</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kt">int</span> <span class="n">ones</span> <span class="o">=</span> <span class="n">score</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+</span><span class='line'>  <span class="kt">int</span> <span class="n">tens</span> <span class="o">=</span> <span class="n">score</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">showDigit</span><span class="p">(</span><span class="n">ones</span><span class="p">,</span> <span class="p">(</span><span class="n">LEDSPERSEGMENT</span> <span class="o">*</span> <span class="mi">7</span><span class="p">));</span>
+</span><span class='line'>  <span class="n">showDigit</span><span class="p">(</span><span class="n">tens</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Don&rsquo;t forget to modify the for loop in showDigit in a similar way. You will, of course, have to generate an appropriate array of bitmaps to use. I&rsquo;ll leave that up to you! In the next post I&rsquo;ll design and build a case for this and show how the LED strips are sliced up and wired back together to make the digits.</p>
+]]></content>
+  </entry>
+  
+</feed>

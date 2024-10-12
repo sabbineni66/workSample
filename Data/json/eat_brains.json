@@ -1,0 +1,10 @@
+{
+  "Name"     : "Eat Brains",
+  "Kind"     : "HP",
+  "Animation": "melee",
+  "Ap"       : 4,
+  "Strength" : 10,
+  "Damage"   : 3,
+  "Range"    : 1,
+  "Target_enemies": true
+}

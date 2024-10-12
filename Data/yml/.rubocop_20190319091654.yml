@@ -1,0 +1,43 @@
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'script/*'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/*.rake'
+    - 'config/environments/*'
+    - 'spec/**/*'
+
+Metrics/LineLength:
+  Max: 80
+  IgnoredPatterns: ['\A\s*#']
+  Exclude:
+    - '**/*.rake'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/**/*'
+
+Style/BlockComments:
+  Exclude:
+    - 'spec/spec_helper.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/EachWithObject:
+  Enabled: false
+
+Style/StructInheritance:
+  Exclude:
+    - 'spec/**/*'

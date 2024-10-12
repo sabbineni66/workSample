@@ -1,0 +1,14 @@
+{
+  "name": "ng-playground",
+  "repository": "https://github.com/fazibear/ng-playground",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "bower": "",
+    "grunt": "",
+    "grunt-contrib-watch": "",
+    "grunt-contrib-coffee": "",
+    "grunt-bower-concat": "",
+    "grunt-slm": ""
+  }
+}

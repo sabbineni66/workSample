@@ -1,0 +1,23 @@
+{
+  "name": "eastend",
+  "description": "A module / script loader for modern browsers.",
+  "main": "src/eastend.js",
+  "authors": [
+    "Ian McKellar <ian@mckellar.org>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "amd",
+    "promises"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "https://github.com/ianloic/eastend",
+  "ignore": [
+    "**/.*",
+    "test/",
+    "gulpfile.js",
+    "node_modules/"
+  ]
+}

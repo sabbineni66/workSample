@@ -1,0 +1,25 @@
+name: elder-box
+version: 0.0.2
+inherits: wercker/ubuntu12.04-webessentials@0.0.3
+type: main
+platform: ubuntu@12.04
+description: precached Chromium environment for builds.
+keywords:
+    - chromium
+    - elderbrowser
+    - browser
+packages:
+    - chromium@38.0
+script: |
+    sudo apt-get update
+    sudo apt-get install -y libnss3 libnss3-dev libpulse-dev libgtk2.0-dev libcups2-dev libxtst-dev libgnome-keyring-dev libexif-dev libxss-dev libxdg-basedir-dev libxinerama-dev libxft-dev libcairo2-dev libdbusmenu-glib-dev gconf2 libgconf2-dev libpci-dev libudev-dev
+    mkdir chromium
+    pushd ./chromium
+    git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+    export PATH="$PATH":`pwd`/depot_tools
+    fetch chromium --nosvn=True
+    cd src
+    git checkout master
+    gclient sync --nohooks
+    popd
+    sudo mv chromium /

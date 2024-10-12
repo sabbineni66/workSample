@@ -1,0 +1,24 @@
+{
+  "name": "dpd-elastic-email",
+  "version": "0.1.0",
+  "description": "Module for Deployd for sending emails using the Elastic email service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/justinkadima/dpd-elastic-email.git"
+  },
+  "keywords": [
+    "deployd",
+    "elastic",
+    "mail"
+  ],
+  "author": "justin kadima",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justinkadima/dpd-elastic-email/issues"
+  },
+  "homepage": "https://github.com/justinkadima/dpd-elastic-email#readme"
+}

@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle Kilrogg",
+        "command": "kilrogg:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Kilrogg",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "kilrogg:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

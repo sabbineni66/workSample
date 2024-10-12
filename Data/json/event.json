@@ -1,0 +1,41 @@
+{
+  "custom" : true,
+  "customSetting" : false,
+  "fields" : [ {
+    "label" : "Record ID",
+    "name" : "Id",
+    "type" : "id"
+  }, {
+    "label" : "Owner ID",
+    "name" : "OwnerId",
+    "type" : "reference"
+  }, {
+    "label" : "Deleted",
+    "name" : "IsDeleted",
+    "type" : "boolean"
+  }, {
+    "label" : "Unit Name",
+    "name" : "Name",
+    "type" : "string"
+  }, {
+    "label" : "Created Date",
+    "name" : "CreatedDate",
+    "type" : "datetime"
+  }, {
+    "label" : "Created By ID",
+    "name" : "CreatedById",
+    "type" : "reference"
+  }, {
+    "label" : "Last Modified Date",
+    "name" : "LastModifiedDate",
+    "type" : "datetime"
+  }, {
+    "label" : "Last Modified By ID",
+    "name" : "LastModifiedById",
+    "type" : "reference"
+  }],
+  "label" : "Unit",
+  "labelPlural" : "Units",
+  "name": "Unit__c",
+  "type": "SObject"
+}

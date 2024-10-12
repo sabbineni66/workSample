@@ -1,0 +1,69 @@
+[
+  {
+    "title": "Chi Ryaku no Maki: Strategien der Erde",
+    "cover": "kaufempfehlungen/fullsize/buecher/chi-ryaku-no-maki.jpg",
+    "thumbnail": "kaufempfehlungen/thumbs/buecher/chi-ryaku-no-maki.jpg",
+    "asin": "3924862397",
+    "language": "Deutsch",
+    "pages": "112",
+    "recommendation": true,
+    "new": true,
+    "categories": [
+      "Ninja"
+    ],
+    "contributors": [
+      {
+        "name": "Carsten K?hn",
+        "role": "Autor"
+      },
+      {
+        "name": "Manuel Dernek",
+        "role": "Illustrator"
+      }
+    ]
+  },
+  {
+    "title": "Ten Ryaku no Maki: Strategien des Himmels",
+    "cover": "kaufempfehlungen/fullsize/buecher/ten-ryaku-no-maki.jpg",
+    "thumbnail": "kaufempfehlungen/thumbs/buecher/ten-ryaku-no-maki.jpg",
+    "asin": "3924862354",
+    "language": "Deutsch",
+    "pages": "176",
+    "categories": [
+      "Ninja"
+    ],
+    "contributors": [
+      {
+        "name": "Carsten K?hn",
+        "role": "Autor"
+      },
+      {
+        "name": "Manuel Dernek",
+        "role": "Illustrator"
+      }
+    ]
+  },
+  {
+    "title": "The Book of Ninja: The Bansenshukai - Japan's Premier Ninja Manual",
+    "cover": "kaufempfehlungen/fullsize/buecher/book-of-ninja-the-bansenshukai.jpg",
+    "thumbnail": "kaufempfehlungen/thumbs/buecher/book-of-ninja-the-bansenshukai.jpg",
+    "asin": "1780284934",
+    "language": "Englisch",
+    "pages": "544",
+    "new": true,
+    "recommendation": true,
+    "categories": [
+      "Ninja"
+    ],
+    "contributors": [
+      {
+        "name": "Antony Cummins",
+        "role": "Autor"
+      },
+      {
+        "name": "Yoshie Minami",
+        "role": "Autor"
+      }
+    ]
+  }
+]

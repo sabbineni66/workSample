@@ -1,0 +1,13 @@
+# Site settings
+title: The Ruby Mug
+email: rogelio@therubymug.com
+description: I'm a humanoid programmer.
+baseurl: ""
+url: "http://blog.therubymug.com"
+twitter_username: therubymug
+github_username:  therubymug
+timezone: America/Los_Angeles
+permalink: /:year/:month/:day/:title.html
+
+# Build settings
+markdown: kramdown

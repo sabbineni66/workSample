@@ -1,0 +1,6 @@
+{
+  "name": "sharesome",
+  "dependencies": {
+    "vex": "~1.3.5"
+  }
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: iOS TaxiFair | Tink Tank]]></title>
+  <link href="http://kjf.github.com/blog/categories/ios-taxifair/atom.xml" rel="self"/>
+  <link href="http://kjf.github.com/"/>
+  <updated>2012-07-23T23:26:09+01:00</updated>
+  <id>http://kjf.github.com/</id>
+  <author>
+    <name><![CDATA[Kevin Fagan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[TaxiFair hits version 1.1]]></title>
+    <link href="http://kjf.github.com/blog/2012/07/04/taxifair-hits-version-1-dot-1/"/>
+    <updated>2012-07-04T10:00:00+01:00</updated>
+    <id>http://kjf.github.com/blog/2012/07/04/taxifair-hits-version-1-dot-1</id>
+    <content type="html"><![CDATA[<p>New in this version:</p>
+
+<ul>
+<li>Added London to the list of supported cities. Perfect for those travelling for the Olympics!</li>
+<li>Improved location detection.</li>
+</ul>
+
+
+<p><a href="http://itunes.apple.com/ie/app/taxi-fair/id523508831?ls=1&amp;mt=8" title="App Store"><img src="/images/taxifair/app-store-badge.png" title="Download from the App Store" alt="Image" /> </a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing Taxi Fair]]></title>
+    <link href="http://kjf.github.com/blog/2012/05/20/introducing-taxi-fair/"/>
+    <updated>2012-05-20T14:31:00+01:00</updated>
+    <id>http://kjf.github.com/blog/2012/05/20/introducing-taxi-fair</id>
+    <content type="html"><![CDATA[<p>Ever worry you're being ripped off when you take a taxi?
+Travelling in an area you don't know?
+Visiting London or Ireland as a tourist or on business and need to take a cab or taxi?</p>
+
+<ul>
+<li>Taxifair gives you the price you should be charged.</li>
+<li><p>AND shows the route you've taken</p></li>
+<li><p>No more dodgy meters</p></li>
+<li>No more paying over the odds</li>
+<li>No more going the long way round</li>
+<li>No more being taken for a ride!</li>
+</ul>
+
+
+<p>TaxiFair is your own personal taxi meter and couldn't be easier to use. Press the start button when your taxi journey begins and the stop button when your journey comes to an end. TaxiFair updates in real time to show you the price you should be charged and shows you the route you've taken.</p>
+
+<p>Unlike other taxi fare estimators, TaxiFair gives you a REAL estimate based on the ACTUAL distance you have travelled and the ACTUAL time you have spent in traffic. It knows the intricate details of each tariff ensuring your estimation is made at the correct rate.</p>
+
+<p><img src="/images/taxifair/taxifair1.jpg" alt="Taxi Fair image 1" />
+<img src="/images/taxifair/taxifair2.jpg" alt="Taxi Fair image 2" /></p>
+
+<p><a href="http://itunes.apple.com/ie/app/taxi-fair/id523508831?ls=1&amp;mt=8" title="App Store"><img src="/images/taxifair/app-store-badge.png" title="Download from the App Store" alt="Image" /> </a></p>
+]]></content>
+  </entry>
+  
+</feed>

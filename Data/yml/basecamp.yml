@@ -1,0 +1,15 @@
+# Put into <yourapp>/config/basecamp.yml
+basecamp:
+  domain: somedomain.projectpath.com
+  user: capistrano
+  password: password
+  use_ssl: true
+  ask_msg: true
+  project_id: 123456
+  category_id: 789012
+  stages:
+    staging: 345678
+    production: 901234
+  prefix: Deploy
+  title_format: "%p %a - r%r (%s)"
+  git_log_format: "%s [%an, %h]"

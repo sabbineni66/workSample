@@ -1,0 +1,26 @@
+{
+  "name": "homebridge-opensprinkler",
+  "version": "0.2.1",
+  "description": "Control OpenSprinkler with HomeBridge",
+  "license": "ISC",
+  "author": "Tim Harper <timcharper@gmail.com>",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/timcharper/homebridge-opensprinkler.git"
+  },
+  "bugs": {
+    "url": "http://github.com/timcharper/homebridge-opensprinkler/issues"
+  },
+  "engines": {
+    "node": ">=8.1.4",
+    "homebridge": ">=0.4.0"
+  },
+  "dependencies": {
+    "promise.prototype.finally": "^3.1.0",
+    "request": "^2.87.0",
+    "request-promise-native": "^1.0.5"
+  }
+}

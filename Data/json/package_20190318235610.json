@@ -1,0 +1,62 @@
+{
+  "name": "expel",
+  "version": "0.0.1",
+  "description": "Elixir runtime in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint src/",
+    "mocha": "mocha --compilers js:babel-register --require babel-polyfill --recursive test",
+    "test": "npm run eslint && npm run mocha",
+    "test-browser": "testem",
+    "pretest-browser": "browserify test/cycle.js -t babelify -o test/browser/tests-bundle.js",
+    "posttest-browser": "rm test/browser/tests-bundle.js",
+    "browserify": "browserify src/cycle.js -t babelify -t browserify-shim --standalone Cycle --exclude rx --outfile dist/cycle.js",
+    "uglify": "uglifyjs dist/cycle.js -o dist/cycle.min.js",
+    "dist": "npm run browserify && npm run uglify",
+    "docs": "node ./scripts/make-api-docs.js",
+    "precompile-lib": "rm -rf lib/ && mkdir -p lib",
+    "compile-lib": "babel -d lib/ src/",
+    "prepublish": "npm run compile-lib",
+    "release": "npm run release-patch",
+    "release-patch": "git checkout master && npm run dist; git commit -a -m 'Build dist/'; npm version patch && git push origin master --tags && npm publish --access=public",
+    "release-minor": "git checkout master && npm run dist; git commit -a -m 'Build dist/'; npm version minor && git push origin master --tags && npm publish --access=public",
+    "release-major": "git checkout master && npm run dist; git commit -a -m 'Build dist/'; npm version major && git push origin master --tags && npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/vic/expel.js"
+  },
+  "keywords": [
+    "elixir",
+    "runtime",
+    "javascript",
+    "interpreter",
+    "compiler"
+  ],
+  "author": "Victor Hugo Borja <vborja@apache.org>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/vic/expel.js/issues"
+  },
+  "homepage": "https://github.com/vic/expel.js#readme",
+  "dependencies": {
+    "bluebird": "^3.2.2",
+    "junify": "^1.0.2",
+    "lodash": "^4.3.0"
+  },
+  "devDependencies": {
+    "babel": "^6.5.1",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-register": "^6.5.1",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "chai": "^3.5.0",
+    "eslint": "^1.10.3",
+    "eslint-config-cycle": "^3.2.0",
+    "eslint-plugin-cycle": "^1.0.2",
+    "eslint-plugin-no-class": "^0.1.0",
+    "mocha": "^2.4.5",
+    "uglify": "^0.1.5"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "shared",
+  "description": "",
+  "author": "",
+  "private": true,
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "fp-ts": "1.14.2",
+    "io-ts": "1.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^11.11.3",
+    "typescript": "^3.4.0-dev.20190315"
+  },
+  "resolutions": {
+    "fp-ts": "1.14.2"
+  }
+}

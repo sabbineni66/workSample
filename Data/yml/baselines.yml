@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cycle: 
+  measured_on: 2013-04-14
+  orkout_name: MyString
+  workout_time: 1
+  workout_score: 1
+  waist: 1.5
+  hips: 1.5
+
+two:
+  cycle: 
+  measured_on: 2013-04-14
+  orkout_name: MyString
+  workout_time: 1
+  workout_score: 1
+  waist: 1.5
+  hips: 1.5

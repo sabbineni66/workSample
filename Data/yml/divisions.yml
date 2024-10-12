@@ -1,0 +1,28 @@
+DEFAULTS: &DEFAULTS
+  updated_at: <%= Time.now.to_s(:db) %>
+  created_at: <%= Time.now.to_s(:db) %>
+
+FBS: 
+  name: Division I FBS
+  abbrev: FBS
+  <<: *DEFAULTS
+
+FCS: 
+  name: Division I FCS
+  abbrev: FCS
+  <<: *DEFAULTS
+
+d2: 
+  name: Division II
+  abbrev: DII
+  <<: *DEFAULTS
+
+d3: 
+  name: Division III
+  abbrev: DIII
+  <<: *DEFAULTS
+
+naia: 
+  name: NAIA
+  abbrev: NAIA
+  <<: *DEFAULTS

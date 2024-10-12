@@ -1,0 +1,6 @@
+sudo: false
+script: true
+
+branches:
+  except:
+    - fuse/test.tmp

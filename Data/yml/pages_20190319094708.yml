@@ -1,0 +1,10 @@
+--- 
+- :name: home
+  :template: home
+  :position: 1
+- :name: products
+  :template: products
+  :position: 2
+- :name: contact us
+  :template: contact-us
+  :position: 3

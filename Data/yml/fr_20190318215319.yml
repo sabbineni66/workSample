@@ -1,0 +1,151 @@
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails/locale for starting points.
+fr:
+  locale: fr
+  locale_label: Fran?ais
+  locale_title: Kill Bills en fran?ais
+
+  app_name: Kill Bills
+  tagline: N'oubliez aucune dette.
+
+  time_ago: "il y a %{time}"
+  time_ago_long: "il y a %{time} (%{date})"
+
+  you: Vous
+  error: erreur
+  edit: ?diter
+  delete: Supprimer
+  updating: Mise ? jour?
+  cancel: Annuler
+  cancelling: Annulation?
+  close: Fermer
+
+  sign_in: Connexion
+  sign_in_with_persona: Se connecter avec Persona
+  sign_out: D?connexion
+  sign_out_help: Se d?connecter de Kill Bills
+
+  anonymous_warning: "Vous ?tes actuellement anonyme. Vous devriez %{link} si vous voulez que ce site se souvienne de vos notes pour la prochaine fois."
+  anonymous_warning_link: vous connecter
+
+  payment: Payment
+  share: Share
+  debit: Debt
+  credit: Credit
+  total: Total
+
+  bill_form:
+    new_participant: Nouveau?
+    new_participation_prompt: "Nom de votre ami :"
+
+  debt:
+    name:
+      from: "%{genre} de %{friends}"
+      to: "%{genre} ? %{friends}"
+      with: "%{genre} avec %{friends}"
+      other: "%{genre}"
+    summary:
+      you_owe: "Vous devez %{amount} ? %{to}"
+      owes_you: "%{from} vous doit %{amount}"
+      owes: "%{from} doit %{amount} ? %{to}"
+    friend:
+      you_owe: "Vous devez %{amount}"
+      owes_you: "Vous doit %{amount}"
+
+  # Bill
+  bill:
+    title_placeholder: Description optionnelle
+    created: Note cr??e !
+    updated: Note mise ? jour
+  bills:
+    index:
+      title: Notes
+      empty: Aucune note d'enregistr?e pour l'instant.
+    show:
+      title: Note
+      confirm_delete: ?tes-vous certain de vouloir supprimer cette note?
+    new:
+      title: Nouvelle note
+    create:
+      title: Nouvelle note
+    edit:
+      title: ?diter note
+    update:
+      title: ?diter note
+    form:
+      errors: "Oups, %{errors} :"
+
+
+  # Friends
+  friend:
+    created: Ami ajout? !
+    updated: Ami mis ? jour
+  friends:
+    index:
+      title: Amis
+      empty: Add a bill to see your friends here.
+    new:
+      title: Nouveau ami
+    edit:
+      title: Renommer ami
+    update:
+      title: Renommer ami
+    show:
+      title: Ami
+      edit: Renommer
+      delete: Supprimer
+      delete_confirm: ?tes-vous s?r de vouloir supprimer cet(te) ami(e) ansi que ses notes ?
+
+  options:
+    edit:
+      title: Options
+      updated: Options enregistr?es !
+      submit: Enregistrer l'option
+      submitting: Enregistrement?
+      destroy: Supprimer mon compte
+      destroy_submit: "Supprimer mon compte, vider ma liste d'amis, effacer toutes mes notes"
+      destroy_confirm: "?tes-vous vraiment s?r de ce que vous faites ? Pass? cette ?tape on ne peut rien annuler !"
+      destroy_submitting: "Destruction de compte en cours?"
+    update:
+      title: Options
+
+  sessions:
+    new:
+      title: Qui ?tes-vous ?
+
+  activerecord:
+    models:
+      bill: Note
+      friend: Ami
+      user: Utilisateur
+      person: Personne
+    attributes:
+      bill:
+        title: Titre
+        date: Date
+      friend:
+        name: Nom
+      participation:
+        payment: Paiement
+        owed_type: D?
+        owed_amount: Montant d?
+        person_id: Participant
+        person: Participant
+      user:
+        currency: Unit? mon?taire
+
+  enumerize:
+    bill:
+      genre:
+        debt: Dette
+        payment: Paiement
+        shared: Partage
+    participation:
+      owed_type:
+        even: Part ?gale
+        zero: Ne doit rien
+        all: Doit tout
+        fixed: Montant fixe
+    person:
+      currency:
+        EUR: ?
+        USD: $

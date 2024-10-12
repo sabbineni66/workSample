@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+first:
+  sampling: simple
+  status: <%= Capture::Completed %>
+second:
+  sampling: simple
+  status: <%= Capture::Completed %>
+  

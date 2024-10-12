@@ -1,0 +1,39 @@
+{
+  "name": "office-ui-fabric-react",
+  "version": "6.142.1",
+  "description": "Reusable React components for building experiences for Office 365.",
+  "main": "lib-commonjs/index.js",
+  "module": "lib/index.js",
+  "sideEffects": [
+    "*.global.*",
+    "*Examples.*",
+    "*Example.*",
+    "lib/version.js"
+  ],
+  "typings": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OfficeDev/office-ui-fabric-react"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/es6-promise": "0.0.32",
+    "@types/prop-types": "15.5.9",
+    "@types/react": "16.8.3",
+    "@types/react-dom": "16.8.1",
+    "office-ui-fabric-core": ">=9.0.0 <10.0.0",
+    "react": ">=16.8.0 <17.0.0",
+    "react-dom": ">=16.8.0 <17.0.0",
+    "typescript": "^3.4.0-dev.20190222"
+  },
+  "dependencies": {
+    "@microsoft/load-themed-styles": "^1.7.13",
+    "@uifabric/foundation": ">=0.7.1 <1.0.0",
+    "@uifabric/icons": ">=6.4.0 <7.0.0",
+    "@uifabric/merge-styles": ">=6.15.2 <7.0.0",
+    "@uifabric/set-version": ">=1.1.3 <2.0.0",
+    "@uifabric/styling": ">=6.41.0 <7.0.0",
+    "prop-types": "^15.5.10",
+    "tslib": "^1.7.1"
+  }
+}

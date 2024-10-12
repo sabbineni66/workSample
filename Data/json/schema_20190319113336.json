@@ -1,0 +1,75 @@
+{
+	"properties": {
+		"host": {
+			"description": "The IRC server to connect to.",
+			"type": "string",
+			"required": true,
+			"default": "irc.freenode.com"
+		},
+		"port": {
+			"description": "The port of the IRC server.",
+			"type": "integer",
+			"required": true,
+			"minimum": 1,
+			"maximum": 65535,
+			"default": 6667
+		},
+		"nick": {
+			"description": "The nick of the bot used on the IRC server.",
+			"type": "string",
+			"required": true,
+			"default": "NodeBot"
+		},
+		"username": {
+			"description": "The username of the bot used on the IRC server.",
+			"type": "string",
+			"required": true,
+			"default": "NodeBot"
+		},
+		"realname": {
+			"description": "The realname of the bot used on the IRC server.",
+			"type": "string",
+			"required": true,
+			"default": "Powered by NodeJS"
+		},
+		"pass": {
+			"description": "The password of the server.",
+			"type": "string",
+			"required": false
+		},
+		"channels": {
+			"description": "The IRC channel(s) the bot connects to.",
+			"type": "array",
+			"required": true,
+			"default": ["NodeBot"]
+		},
+		"plugins": {
+			"description": "Plugins this bot loads on startup.",
+			"type": "array",
+			"required": false
+		},
+		"command": {
+			"description": "the prefix for commands of this bot.",
+			"type": "string",
+			"required": true,
+			"default": "!"
+		},
+		"pluginConfigs": {
+			"description": "Plugin configurations, defined by the pluginname and the wanted property.",
+			"type": "object",
+			"required": false,
+			"default": {},
+			"properties": {
+				"properties": {
+					"type": "object"
+				}
+			}
+		},
+		"showRaw": {
+			"description": "Whether to show the raw data from, two the server.",
+			"type": "boolean",
+			"require": false
+		}
+
+	}
+}

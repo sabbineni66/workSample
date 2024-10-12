@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>michael jones | dev blog</title><link href="http://michaeljones.github.io/blog/" rel="alternate"></link><link href="http://michaeljones.github.io/blog/feeds/blog.atom.xml" rel="self"></link><id>http://michaeljones.github.io/blog/</id><updated>2015-02-02T00:00:00+13:00</updated><entry><title>Django, Selenium &amp; Timeouts</title><link href="http://michaeljones.github.io/blog/posts/2015/02/02/django-selenium-timeouts/" rel="alternate"></link><updated>2015-02-02T00:00:00+13:00</updated><author><name>Michael Jones</name></author><id>tag:michaeljones.github.io,2015-02-02:blog/posts/2015/02/02/django-selenium-timeouts/</id><summary type="html">&lt;p&gt;My Selenium tests in my Django testsuite have been failing from intermittent
+timeouts. Nothing repeatable which makes debugging it an nightmare. I am not
+wise in the ways of Selenium so Google &amp;amp; Stackoverflow were my tools but they
+failed me this time.&lt;/p&gt;
+&lt;p&gt;The timeouts occur at the start of a test when running the first &lt;tt class="docutils literal"&gt;get&lt;/tt&gt; on the
+starting URL. The correct page would load but no further commands would have any
+effect and it would just hang there before the tests timed out.&lt;/p&gt;
+&lt;p&gt;After much head scratching and attempts at adding waits &amp;amp; delays, I've finally
+settled on this. I use the &lt;tt class="docutils literal"&gt;open&lt;/tt&gt; method below for these calls now and in the
+case of a timeout it kills the process and starts again. To my great relief it
+seems to be working:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;socket&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.test&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LiveServerTestCase&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;.webdriver&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;CustomWebDriver&lt;/span&gt;
+
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;SeleniumTestCase&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LiveServerTestCase&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;setUp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CustomWebDriver&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;tearDown&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;quit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Open helper with brutal management of socket.timeout exceptions&lt;/span&gt;
+&lt;span class="sd"&gt;        that can arise from the selenium driver. We catch them, kill the&lt;/span&gt;
+&lt;span class="sd"&gt;        browser, restart everything and try again.&lt;/span&gt;
+
+&lt;span class="sd"&gt;        Should be ok as there is no relevant state in the browser itself at&lt;/span&gt;
+&lt;span class="sd"&gt;        the point of page load.&lt;/span&gt;
+&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+        &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;%s%s&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;live_server_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;
+            &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="n"&gt;socket&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;socket.timeout - caught &amp;amp; suppressed. Restarting.&amp;quot;&lt;/span&gt;
+                &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;binary&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;kill&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+                &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CustomWebDriver&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+                &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                    &lt;span class="k"&gt;raise&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</summary><category term="django"></category><category term="selenium"></category></entry><entry><title>Vim, Git &amp; Line Endings</title><link href="http://michaeljones.github.io/blog/posts/2015/01/08/vim-git-line-endings/" rel="alternate"></link><updated>2015-01-08T00:00:00+13:00</updated><author><name>Michael Jones</name></author><id>tag:michaeljones.github.io,2015-01-08:blog/posts/2015/01/08/vim-git-line-endings/</id><summary type="html">&lt;p&gt;I currently work on a team using both Unix &amp;amp; Windows platforms for developing a
+Python &amp;amp; Django codebase. I work in Ubuntu and today made changes to a file
+which was created by the Windows developer on our team. With a tighter process
+this wouldn't be a problem, but the set up is pretty loose in this respect and I
+ended up in the zone of line ending despair. 'Line ending hell' seems to strong
+a term.&lt;/p&gt;
+&lt;div class="section" id="the-problem"&gt;
+&lt;h2&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;The issue ended up being that some files in the codebase have CRLF (Windows)
+style line endings and some don't. Not great.&lt;/p&gt;
+&lt;p&gt;And it seems that &lt;tt class="docutils literal"&gt;git&lt;/tt&gt; converts all line endings to LF (Unix) when staging
+and committing files.&lt;/p&gt;
+&lt;p&gt;When vim is set to &lt;tt class="docutils literal"&gt;fileformats=unix,dos&lt;/tt&gt;, it is open to both styles of line
+endings and silently preserves whatever is in the file without showing you. As
+do most modern editors I imagine.&lt;/p&gt;
+&lt;p&gt;So vim handles the CRLF file transparently, but when you &lt;tt class="docutils literal"&gt;git add &lt;span class="pre"&gt;-p&lt;/span&gt;&lt;/tt&gt; the
+changes into the index git converts all CRLFs to LFs and then shows you that
+your working copy, which still has the CRLFs, has changes against your index,
+which only has LFs. This appears a little confusing if you didn't realise your
+file had Windows line endings to begin with.&lt;/p&gt;
+&lt;p&gt;My trouble is that the team generally uses Mercurial (I use git-remote-hg) and
+Mercurial never attempts to convert line endings so in our codebase all CRLF
+files &amp;amp; LF files just get passed around happily and everyone's editors silently
+deal with whatever they are given.&lt;/p&gt;
+&lt;p&gt;I respect Mercurial's choice as if you perform CRLF to LF conversion on a binary
+file then you'll corrupt it and these tools cannot figure out text from binary
+files with 100% accurary. I respect git's because in cross-platform teams like
+this one you kind of want to settle on a particular line ending as a convention
+instead of having different files with different conventions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-solution"&gt;
+&lt;h2&gt;The Solution&lt;/h2&gt;
+&lt;p&gt;The answer should be to establish a convention within the team. My answer, as
+I'm pretty new and don't want to rock the boat, is to tell git to mimic
+Mercurial and just ignore all line endings. This can be achieved with a
+&lt;tt class="docutils literal"&gt;.gitattributes&lt;/tt&gt; file and the following lines:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+*.py -text
+*.html -text
+*.css -text
+&lt;/pre&gt;
+&lt;p&gt;Repeated for as many text file types as you have. The &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-text&lt;/span&gt;&lt;/tt&gt; value tells git
+not to apply any kind of text processing to it when adding, committing or
+checking out. The difference between &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-text&lt;/span&gt;&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;binary&lt;/tt&gt; in this context,
+which is another option, is that &lt;tt class="docutils literal"&gt;binary&lt;/tt&gt; also prevents git from attempting to
+show you a diff of the file at any point with the usual commands that normally
+would.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="and-then-whitespace"&gt;
+&lt;h2&gt;And then Whitespace&lt;/h2&gt;
+&lt;p&gt;If you use &lt;tt class="docutils literal"&gt;apply.whitespace=fix&lt;/tt&gt; to make sure your &lt;tt class="docutils literal"&gt;git add &lt;span class="pre"&gt;-p&lt;/span&gt;&lt;/tt&gt; code
+changes are sanitized for whitespace then you still have a problem. We haven't
+told git to respect the line endings in the file, we've just told it to ignore
+them. So it is still thinking in terms of LFs and when it see some line ending
+with:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+... my_variable;&amp;lt;CR&amp;gt;&amp;lt;LF&amp;gt;
+&lt;/pre&gt;
+&lt;p&gt;It sees the &lt;tt class="docutils literal"&gt;CR&lt;/tt&gt; as trailing whitespace before the line ending. So we have to
+use the:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+core.whitespace=cr-at-eol
+&lt;/pre&gt;
+&lt;p&gt;config option which is a special setting to instruct git not to view &lt;tt class="docutils literal"&gt;CR&lt;/tt&gt;
+characters as trailing whitespace. &lt;tt class="docutils literal"&gt;core.whitespace&lt;/tt&gt; can take a comma
+separated list of different values so make sure you check yours before adding
+that additional value.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="git"></category><category term="vim"></category></entry><entry><title>Nix &amp; Yesod</title><link href="http://michaeljones.github.io/blog/posts/2014/10/26/nix-yesod/" rel="alternate"></link><updated>2014-10-26T00:00:00+13:00</updated><author><name>Michael Jones</name></author><id>tag:michaeljones.github.io,2014-10-26:blog/posts/2014/10/26/nix-yesod/</id><summary type="html">&lt;p&gt;I've spent the day messing around with the Nix package manager and trying to get
+a basic Yesod project up a running.&lt;/p&gt;
+&lt;p&gt;I very much like what I've managed to understand but it is early days and not
+everything is clear. So for those attempting similar things I thought I would
+share the &lt;tt class="docutils literal"&gt;default.nix&lt;/tt&gt; file contents that I ended up with. Set up a folder
+with this and run &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;nix-shell&lt;/span&gt;&lt;/tt&gt; and you should be able to run &lt;tt class="docutils literal"&gt;yesod init&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;yesod devel&lt;/tt&gt; in the resulting environment.&lt;/p&gt;
+&lt;p&gt;No promises though as I've no idea what I'm doing:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+{ haskellPackages ? (import &amp;lt;nixpkgs&amp;gt; {}).haskellPackages }:
+
+let inherit (haskellPackages);
+
+in with haskellPackages; cabal.mkDerivation (self: {
+  pname = &amp;quot;project-name&amp;quot;;
+  version = &amp;quot;0.0.1&amp;quot;;
+  src = ./.;
+  buildDepends = with haskellPackages; [
+    yesod yesodStatic yesodTest
+    yesodBin
+    hjsmin persistentSqlite hspec
+    ];
+})
+&lt;/pre&gt;
+&lt;p&gt;Update: Tweaked to support &lt;tt class="docutils literal"&gt;yesod test&lt;/tt&gt; as well.&lt;/p&gt;
+</summary><category term="nix"></category><category term="haskell"></category><category term="yesod"></category></entry><entry><title>Watch Out for Python's HasAttr &amp; AttributeError</title><link href="http://michaeljones.github.io/blog/posts/2014/09/21/watch-out-for-pythons-hasattr-attributeerror/" rel="alternate"></link><updated>2014-09-21T00:00:00+12:00</updated><author><name>Michael Jones</name></author><id>tag:michaeljones.github.io,2014-09-21:blog/posts/2014/09/21/watch-out-for-pythons-hasattr-attributeerror/</id><summary type="html">&lt;p&gt;I was recently trying to contribute to the &lt;a class="reference external" href="https://github.com/asaglimbeni/django-datetime-widget"&gt;django-datetime-widget&lt;/a&gt; repository
+and encountered an issue with my changes not working but no error being reported
+from Django or Python.&lt;/p&gt;
+&lt;p&gt;I was working on the widget's &lt;tt class="docutils literal"&gt;_media&lt;/tt&gt; method which is converted to a
+read-only &lt;tt class="docutils literal"&gt;media&lt;/tt&gt; property. Django is meant to use the value of the &lt;tt class="docutils literal"&gt;media&lt;/tt&gt;
+attribute on a widget class to help include any additional CSS, images &amp;amp;
+Javascript files into the final web page template that uses the widget.&lt;/p&gt;
+&lt;p&gt;In order to test for the presence of the &lt;tt class="docutils literal"&gt;media&lt;/tt&gt; attribute, Django uses the
+following code:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+try:
+    base = sup_cls.media
+except AttributeError:
+    base = Media()
+&lt;/pre&gt;
+&lt;p&gt;It tries to access the attribute and if it receives an &lt;tt class="docutils literal"&gt;AttributeError&lt;/tt&gt; then
+it uses the replacement value &lt;tt class="docutils literal"&gt;Media()&lt;/tt&gt; instead. This is reasonable for basic
+attributes on classes, but when combined with Python properties which can allow
+attribute access to result in complex method calls then there is room for
+trouble.&lt;/p&gt;
+&lt;p&gt;My issue was that in my &lt;tt class="docutils literal"&gt;_media&lt;/tt&gt; implementation I had made a mistake that was
+resulting in an &lt;tt class="docutils literal"&gt;AttributeError&lt;/tt&gt; being raised. And the trouble was that this
+was being silently caught by Django which was intepretting it as there not being
+a &lt;tt class="docutils literal"&gt;media&lt;/tt&gt; attribute at all and so I was neither seeing the error or my
+expected includes in the final rendered HTML.&lt;/p&gt;
+&lt;div class="section" id="my-proposed-solution"&gt;
+&lt;h2&gt;My Proposed Solution&lt;/h2&gt;
+&lt;p&gt;Hoping to make the world a better place, I headed over to the Django-users
+mailing and posted that maybe we could approach this differently. I thought that
+maybe the following implementation would avoid this issue:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+if hasattr(sup_cls, 'media'):
+    base = sup_cls.media
+else:
+    base = Media()
+&lt;/pre&gt;
+&lt;p&gt;I thought that using the &lt;tt class="docutils literal"&gt;hasattr&lt;/tt&gt; check instead of waiting for an exception
+to be raised would avoid this issue. I assumed that all that &lt;tt class="docutils literal"&gt;hasattr&lt;/tt&gt; did was
+to check if the object in question had a particular attribute. Crazy right?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-problem-with-my-solution"&gt;
+&lt;h2&gt;The Problem with my Solution&lt;/h2&gt;
+&lt;p&gt;It turns out this does not work. The kind people on the list educated me in
+the ways of &lt;tt class="docutils literal"&gt;hasattr&lt;/tt&gt; and why this approach doesn't help. I had been foolish
+enough not to test my proposed solution and it turns out that the documentation
+covers why it won't actually work:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+hasattr(object, name) -&amp;gt; bool
+
+Return whether the object has an attribute with the given name.
+(This is done by calling getattr(object, name) and catching exceptions.)
+&lt;/pre&gt;
+&lt;p&gt;There it is: &lt;tt class="docutils literal"&gt;hasattr&lt;/tt&gt; is implemented in terms of calling &lt;tt class="docutils literal"&gt;getattr&lt;/tt&gt; and
+catching all exceptions. So it would fail on my buggy implementation of
+&lt;tt class="docutils literal"&gt;_media&lt;/tt&gt; in just the same way that the current test does.&lt;/p&gt;
+&lt;p&gt;Damn shame really, as it is incredibly confusing to have no results and no
+feedback.&lt;/p&gt;
+&lt;p&gt;Fortunately, Python 3 fixes this issue apparently and Python 2 is stuck with the
+current functionality for backwards compatibility.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="python"></category></entry><entry><title>Django CSRF React Component</title><link href="http://michaeljones.github.io/blog/posts/2014/06/08/django-csrf-react-component/" rel="alternate"></link><updated>2014-06-08T00:00:00+12:00</updated><author><name>Michael Jones</name></author><id>tag:michaeljones.github.io,2014-06-08:blog/posts/2014/06/08/django-csrf-react-component/</id><summary type="html">&lt;p&gt;I've been doing some web development recently and getting in to &lt;a class="reference external" href="http://djangoproject.com"&gt;Django&lt;/a&gt; and
+&lt;a class="reference external" href="http://facebook.github.io/react/"&gt;Facebook's React&lt;/a&gt; framework.&lt;/p&gt;
+&lt;p&gt;When creating forms in React for submission to a Django app you need to include
+the &lt;a class="reference external" href="https://docs.djangoproject.com/en/dev/ref/contrib/csrf/"&gt;Django CSRF token&lt;/a&gt; for Django's form processing. A simple way to do this
+is to wrap it up as a reusable React component. Like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;React&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;react&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;DjangoCSRFToken&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;React&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createClass&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+
+  &lt;span class="nx"&gt;render&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;csrfToken&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;Django&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;csrf_token&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;React&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;DOM&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+      &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;csrfmiddlewaretoken&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;value&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;csrfToken&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+      &lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+
+&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;DjangoCSRFToken&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;DjangoCSRFToken&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Retrieving the actual CRSF token is done here with help of the &lt;a class="reference external" href="https://github.com/noirbizarre/django.js"&gt;Django.js&lt;/a&gt;
+helper.  However from the &lt;a class="reference external" href="https://docs.djangoproject.com/en/dev/ref/contrib/csrf/#ajax"&gt;Django docs&lt;/a&gt; you can do it with &lt;a class="reference external" href="http://jquery.com"&gt;jQuery&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// using jQuery&lt;/span&gt;
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;getCookie&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;cookieValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;cookie&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;cookie&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;cookies&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;cookie&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="nx"&gt;cookies&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;cookie&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;jQuery&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;trim&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;cookies&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+            &lt;span class="c1"&gt;// Does this cookie string begin with the name we want?&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;cookie&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;substring&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;=&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="nx"&gt;cookieValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;decodeURIComponent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                  &lt;span class="nx"&gt;cookie&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;substring&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                  &lt;span class="p"&gt;);&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;cookieValue&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;csrftoken&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;getCookie&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;csrftoken&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Or with the &lt;a class="reference external" href="http://plugins.jquery.com/cookie/"&gt;jQuery cookie plugin&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;csrftoken&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;cookie&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;csrftoken&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then save the final component code into a new node module and use it in your
+browser javascript with &lt;a class="reference external" href="http://browserify.org/"&gt;Browserify&lt;/a&gt; like:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+return (
+       &amp;lt;form method='post' action={this.props.acceptUrl}&amp;gt;
+         &amp;lt;DjangoCSRFToken /&amp;gt;
+         &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;edit_id&amp;quot; value={edit.id} /&amp;gt;
+         &amp;lt;input type=&amp;quot;submit&amp;quot; name=&amp;quot;accept&amp;quot; value=&amp;quot;Accept&amp;quot; /&amp;gt;
+       &amp;lt;/form
+       );
+&lt;/pre&gt;
+</summary><category term="django"></category><category term="react"></category></entry></feed>

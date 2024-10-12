@@ -1,0 +1,9 @@
+{
+  "firebase": "kyash-trackr",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

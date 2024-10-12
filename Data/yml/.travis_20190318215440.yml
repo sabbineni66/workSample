@@ -1,0 +1,27 @@
+language: ruby
+
+sudo: false
+cache: bundler
+
+branches:
+  only:
+    - master
+
+#
+# Ignore JRuby until https://github.com/cucumber/cucumber/pull/486 is merged
+#
+matrix:
+  allow_failures:
+  - rvm: jruby
+  - rvm: 2.6.0
+
+rvm:
+  - 2.3.6
+  - 2.4.3
+  - 2.5.3
+  - 2.6.0
+  - jruby
+
+gemfile:
+  - gemfiles/Gemfile-rspec-3.7.x
+  - gemfiles/Gemfile-rspec-3.8.x

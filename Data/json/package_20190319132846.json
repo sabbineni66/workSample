@@ -1,0 +1,36 @@
+{
+  "name": "ember-i18n-yaml-brunch",
+  "version": "0.0.1",
+  "description": "Adds pre-compiling for ember-i18n using yaml for brunch",
+  "author": {
+    "name": "Julien Guimont"
+  },
+
+  "homepage": "https://github.com/juggy/ember-i18n-yaml-brunch",
+ 
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juggy/ember-i18n-yaml-brunch.git"
+  },
+ 
+  "main": "./lib/index",
+ 
+  "scripts": {
+    "postinstall": "node setup.js postinstall"
+  },
+ 
+  "engines": {
+    "node": ">=0.8.0"
+  },
+ 
+  "dependencies": {
+    "coffee-script": "1.6.2",
+    "js-yaml": "2.1.3",
+    "node.extend": "1.0.1"
+  },
+ 
+  "devDependencies": {
+    "mocha": "1.9.0",
+    "expect.js": "0.2.0"
+  }
+}

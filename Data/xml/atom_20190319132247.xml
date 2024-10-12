@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Shiny happy people coding]]></title>
+  <link href="http://blog-en.shingara.fr//atom.xml" rel="self"/>
+  <link href="http://blog-en.shingara.fr//"/>
+  <updated>2013-09-12T09:08:10+02:00</updated>
+  <id>http://blog-en.shingara.fr//</id>
+  <author>
+    <name><![CDATA[Cyril Mougel]]></name>
+    <email><![CDATA[cyril.mougel@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[errbit 0.2.0 released]]></title>
+    <link href="http://blog-en.shingara.fr//errbit-0-dot-2-0.html"/>
+    <updated>2013-09-11T18:51:00+02:00</updated>
+    <id>http://blog-en.shingara.fr//errbit-0-dot-2-0</id>
+    <content type="html"><![CDATA[<p>After 3 month of developpement a lot of fix bug and improvement with do
+by 16 contributors. I am proud to release this second version of <a href="http://errbit.github.io/errbit/">Errbit</a>
+where I am involved totally.</p>
+
+<p>This version 0.2.0 is the last supporting ruby 1.8.7. This ruby version become
+old and a lot of dependencies used by Errbit stop the maintain of this
+version too. So it&rsquo;s time to move forward and stop maintain this old
+version. The next version support only ruby 1.9.3 and higher.</p>
+
+<p>You can download this version directly on github :</p>
+
+<p><a href="https://github.com/errbit/errbit/releases/tag/v0.2.0">https://github.com/errbit/errbit/releases/tag/v0.2.0</a></p>
+
+<p>A new branch ( 0-2-stable ) is now create to push some important bug fix on this
+version.</p>
+
+<p>The complete changelog is :</p>
+
+<h2>Improvements</h2>
+
+<ul>
+<li>Update some gems (<a href="https://github.com/shingara">@shingara</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/492">#492</a> Improve some Pjax call (<a href="https://github.com/nfedyashev">@nfedyashev</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/428">#428</a> Add the support of Unfuddle Issue Tracker (<a href="https://github.com/parallel588">@parallel588</a>)</li>
+<li>Avoid to delete his own user (<a href="https://github.com/shingara">@shingara</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/456">#456</a> Avoid to delete admin access of current user logged
+(<a href="https://github.com/shingara">@shingara</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/253">#253</a> Refactor the Fingerprint generation (<a href="https://github.com/boblail">@boblail</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/508">#508</a> Merge comments to when you merge problems (<a href="https://github.com/shingara">@shingara</a>)</li>
+<li>Update the Devise Gem to the last one (<a href="https://github.com/shingara">@shingara</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/524">#524</a> Add current user information on the notifer.js (<a href="https://github.com/roryf">@roryf</a>)</li>
+<li>[#523][] Update javascript-stacktrace (<a href="http://github.com/aliscott">@aliscott</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/516">#516</a> Add Jira Issue tracker (<a href="https://github.com/xenji">@xenji</a>)</li>
+<li>[#512][] Add capabilities to configure the use of sendmail to send
+email from Errbit (<a href="https://github.com/shingara">@shingara</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/532">#532</a> Use https link in Gravatar if you use errbit on https
+(<a href="https://github.com/jeroenj">@jeroenj</a>)</li>
+<li>[#536][] Order app by name by default (<a href="https://github.com/2called-chaos">@2called-chaos</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/542">#542</a> Allow the MONGODB_URL env configuration about Mongodb
+(<a href="https://github.com/bacongobbler">@bacongobbler</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/530">#530</a> Improve the flowdock notification (<a href="https://github.com/nfedyashev">@nfedyashev</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/531">#531</a> Improve the HipChat notification message (<a href="https://github.com/brendonrapp">@brendonrapp</a>)</li>
+</ul>
+
+
+<h3>Bug Fixes</h3>
+
+<ul>
+<li><a href="https://github.com/errbit/errbit/issues/343">#343</a> Fix the ical generation. (<a href="https://github.com/shingara">@shingara</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/503">#503</a> Fix issue on where the service_url choose never use.
+(<a href="https://github.com/nfedyashev">@nfedyashev</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/506">#506</a> Fix issue on bitbucket issue tracker creation failed.
+(<a href="https://github.com/Gonzih">@Gonzih</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/514">#514</a> Add CDATA in xml return by Javascript. (<a href="https://github.com/mildavw">@mildavw</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/517">#517</a> Javascript escape path from javascript Notifier. (<a href="https://github.com/roryf">@roryf</a>)</li>
+<li>[#518][] Fix issue when you try launch task
+errbit:db:update_update_problem_attrs. (<a href="https://github.com/shingara">@shingara</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/526">#526</a> Fix issue of pagination after search. (<a href="https://github.com/shingara">@shingara</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/528">#528</a> Fix issue of action after search. (<a href="https://github.com/shingara">@shingara</a>)</li>
+</ul>
+
+
+<h2>Next Step</h2>
+
+<p>The next step on this project is the usage of Mongoid 3.0. A complete
+list of issue planned to this next version is define on his
+<a href="https://github.com/errbit/errbit/issues?milestone=7&amp;page=1&amp;state=open">milestone</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Errbit 0.1.0]]></title>
+    <link href="http://blog-en.shingara.fr//errbit-0-dot-1-0.html"/>
+    <updated>2013-05-29T18:04:00+02:00</updated>
+    <id>http://blog-en.shingara.fr//errbit-0-dot-1-0</id>
+    <content type="html"><![CDATA[<p>Errbit was <a href="http://thinkrelevance.com/blog/2010/08/24/introducing-errbit">release for the first time</a> in August 24 2010 by Jared Pace.</p>
+
+<p>Errbit is not dead. It&rsquo;s actually maintained and used for the past 3
+years and now, I&rsquo;m proud to announce the release of
+errbit. There was not real release from the start, but I think it&rsquo;s
+needed. I do this first one with 0.1.0. Errbit do a lot of thing but can
+do better. I hope try to do this challenge with the Errbit Team and try
+to release more often this application.</p>
+
+<p>A Changelog is now available to see what change in your favorite error
+catcher application. I have not list all thing errbit can do, but I list
+some new improvement in last couple of month. You can find it on <a href="https://github.com/errbit/errbit/blob/master/CHANGELOG.md">github</a></p>
+
+<p>If you want download this version you can do by github : <a href="https://github.com/errbit/errbit/archive/v0.1.0.zip">https://github.com/errbit/errbit/archive/v0.1.0.zip</a></p>
+
+<h2>0.1.0 &ndash; 2013-05-29</h2>
+
+<h3>Improvements</h3>
+
+<ul>
+<li><a href="https://github.com/errbit/errbit/issues/474">#474</a> Improve message when access denied. (<a href="https://github.com/chadcf">@chadcf</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/468">#468</a> Launch a repairDatabase in MongoDB database after launching
+the clear_resolved task. (<a href="https://github.com/shingara">@shingara</a>)</li>
+<li>Update gem of Mongoid to 2.7.1</li>
+<li>Update gem of Mongo to 1.8.5</li>
+<li><a href="https://github.com/errbit/errbit/issues/457">#457</a> Add task information about db:seed in Readme. (<a href="https://github.com/mildavw">@mildavw</a>)</li>
+<li>Add support of Ruby 2.0.0</li>
+<li><a href="https://github.com/errbit/errbit/issues/475">#475</a> Return a HTTP 422 status code when you try push notice with
+bad api key. (<a href="https://github.com/shingara">@shingara</a>)</li>
+<li>Return a 400 http status when you try put a notice without args.
+(<a href="https://github.com/shingara">@shingara</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/486">#486</a> Add confirms box when you do massive action. (<a href="https://github.com/manuelmeurer">@manuelmeurer</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/487">#487</a> Add specific template to redmine notification with less useless data. (<a href="https://github.com/tvdeyen">@tvdeyen</a>)</li>
+</ul>
+
+
+<h3>Bug fixes</h3>
+
+<ul>
+<li><a href="https://github.com/errbit/errbit/issues/469">#469</a> Fix issue about the documentation of new heroku addons usage.
+(<a href="https://github.com/adamjt">@adamjt</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/455">#455</a> Avoid raising exception if you comment an exception and no
+other user are define to received this comment. (<a href="https://github.com/alvarobp">@alvarobp</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/453">#453</a> Fix ruby 2.0.0 incompatibilities with gem (<a href="https://github.com/SamSaffron">@SamSaffron</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/476">#476</a> Fix javascript notifier issue with IE8 (<a href="https://github.com/sdepold">@sdepold</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/466">#466</a> Fix not see problem if octokit gem not define (<a href="https://github.com/tamaloa">@tamaloa</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/460">#460</a> Fix issue when you try see user with gravatar activate but no
+email define to this user (<a href="https://github.com/ivanyv">@ivanyv</a>)</li>
+<li><a href="https://github.com/errbit/errbit/issues/478">#478</a> Fix issue about calculation of statisque of problem after
+merge (<a href="https://github.com/shingara">@shingara</a>)</li>
+</ul>
+
+
+<!--- The following link definition list is generated by PimpMyChangelog --->
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Test your Rabl's view]]></title>
+    <link href="http://blog-en.shingara.fr//test-your-rabl-view.html"/>
+    <updated>2012-07-03T09:40:00+02:00</updated>
+    <id>http://blog-en.shingara.fr//test-your-rabl-view</id>
+    <content type="html"><![CDATA[<p>Since several month, I use only <a href="https://github.com/nesquena/rabl">Rabl</a>
+to do all my API. To me this gems is really awesome. Before using it, I
+try doing all of my API with the <code>#to_json</code> method. But it was a
+nightmare. If you already try to do that, you understand what I mean.
+The most bad case is when you want represent your object in different
+way depending of where is represent.</p>
+
+<h1>Rabl simply clean</h1>
+
+<p>To manage your JSON and XML view, the most common gem is <code>JBuilder</code> and
+<code>XmlBuilder</code>, both are created by DHH. To me it&rsquo;s not a good DSL and can
+be a little too verbose. Rabl has a clean a simplest DSL and you just
+need one view to generate XML and JSON. You can even generate some other
+output with Rabl.</p>
+
+<p>A little example of Rabl&rsquo;s view :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">object</span> <span class="vi">@post</span>
+</span><span class='line'><span class="n">attribute</span> <span class="ss">:content</span>
+</span><span class='line'><span class="n">child</span><span class="p">(</span><span class="ss">:author</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">attribute</span> <span class="ss">:firstname</span><span class="p">,</span> <span class="ss">:lastname</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Test your Rabl&rsquo;s view</h1>
+
+<p>To test the output of this view, you have multiple choice. You can
+generate this view in an integration test and test this output. You can
+do it in your controller test. Or the best, test only your output on
+your view test. With this last choice, you can define what you really
+put on your view and test only your rabl representation. In this case
+you can have a flexible and fast test.</p>
+
+<p>Since Rabl 0.6.0, a new method help to generate your view directly. It&rsquo;s
+with this method you can simply test our view.</p>
+
+<p>An example of how we can test our view (
+<code>spec/views/posts/show_rabl_spec.rb</code>) :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;spec_helper&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">describe</span> <span class="s2">&quot;blogs/show.rabl&quot;</span> <span class="k">do</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">let</span><span class="p">(</span><span class="ss">:auhor</span><span class="p">)</span> <span class="p">{</span> <span class="no">Author</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:firstname</span> <span class="o">=&gt;</span> <span class="s1">&#39;Cyril&#39;</span><span class="p">,</span> <span class="ss">:lastname</span> <span class="o">=&gt;</span> <span class="s1">&#39;Mougel&#39;</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>    <span class="n">let</span><span class="p">(</span><span class="ss">:blog</span><span class="p">)</span> <span class="p">{</span> <span class="no">Blog</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:content</span> <span class="o">=&gt;</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="ss">:author</span> <span class="o">=&gt;</span> <span class="n">author</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>    <span class="n">let</span><span class="p">(</span><span class="ss">:valid_json</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="p">{</span>
+</span><span class='line'>        <span class="ss">:content</span> <span class="o">=&gt;</span> <span class="n">blog</span><span class="o">.</span><span class="n">content</span><span class="p">,</span>
+</span><span class='line'>        <span class="ss">:author</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span><span class='line'>          <span class="ss">:firstname</span> <span class="o">=&gt;</span> <span class="n">author</span><span class="o">.</span><span class="n">firstname</span><span class="p">,</span>
+</span><span class='line'>          <span class="ss">:lastname</span> <span class="o">=&gt;</span> <span class="n">author</span><span class="o">.</span><span class="n">lastname</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span><span class="o">.</span><span class="n">to_json</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">let</span><span class="p">(</span><span class="ss">:render</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="no">Rabl</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+</span><span class='line'>        <span class="n">blog</span><span class="p">,</span>
+</span><span class='line'>        <span class="s1">&#39;blog/show&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="ss">:view_path</span> <span class="o">=&gt;</span> <span class="s1">&#39;app/views&#39;</span>
+</span><span class='line'>      <span class="p">)</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">it</span> <span class="s1">&#39;should render valid_json&#39;</span> <span class="k">do</span>
+</span><span class='line'>      <span class="n">render</span><span class="o">.</span><span class="n">should</span> <span class="n">eql</span><span class="p">(</span><span class="n">valid_json</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We have a really simple test unit with a complet JSON validation. This
+test is fast because no need doing some database request and no
+controller stuff needed.</p>
+
+<p>But, I found a little limitation in this method. You can&rsquo;t pass some
+locals variables. So you can only test this render with value pass on
+the first params. If you have some other object you want use, you can&rsquo;t.
+I start a <a href="https://github.com/nesquena/rabl/pull/269">Pull Request</a> to
+pass this variables in a <code>:locals</code> options. You can
+<a href="https://github.com/nesquena/rabl/pull/269">follow it on github</a></p>
+
+<p><a href="http://blog.shingara.fr/tester-ses-vues-rabl.html">Traduction Fran?aise</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[vundle the bundler of vim]]></title>
+    <link href="http://blog-en.shingara.fr//vundle-the-bundler-of-vim.html"/>
+    <updated>2012-05-31T09:48:00+02:00</updated>
+    <id>http://blog-en.shingara.fr//vundle-the-bundler-of-vim</id>
+    <content type="html"><![CDATA[<p>I use vim like text editor since my school. I allways appreciate vim and
+I really don&rsquo;t want change to another one.</p>
+
+<h1>How I manage my plugin around the time</h1>
+
+<p>Vim is really powerfull with this plugins. You need really quick use it.
+It&rsquo;s really important to manage it. All around the time, I change how I
+manage it with new technique inside vim or develop by other developper.</p>
+
+<h2>Handmade management</h2>
+
+<p>In start of my vim usage, I manage my plugin by copying file in
+different directory. I put in versionning my <code>.vimrc</code> and <code>.vim</code>. But
+this technique can be hard to maintain in time. The installation is not
+really simple and know if you need update or not is hard too. So the
+evolution of plugins become rare.</p>
+
+<h2>Vimball management</h2>
+
+<p>In vim evolution, the vimball management system was implemented. With
+this vimball, you can more easily install plugin and know which version
+you use. So you can improve your plugins management. But to know if a
+new version is available, you need go to vimscript.org and check each of
+your plugins. The update become rare too.</p>
+
+<h2>git-submodule management</h2>
+
+<p>With github, all plugins become a git repository. We can check all new
+commit on our favorite plugin. I start to link all plugin in a new
+submodule and link file in good directory. The update was really simple
+and my plugins can be up to date. But the installation become really
+hard.</p>
+
+<h2>Janus management</h2>
+
+<p>Yehuda Katz and Carl Lerche start a new project call <a href="https://github.com/carlhuda/janus">janus</a>.
+This project&rsquo;s goal is an easy plugin management by rake task. In this
+Rakefile, you can see the list of your plugin and with some rake task
+you can install it and update it. This project was really great. It
+start with a bunch of plugins pre-configure and good if you start using
+vim and you are not aware with what plugin can be good to you. But in
+time, the management can be a little tricky with version of janus. So
+it&rsquo;s a really good project to start vim.</p>
+
+<h2>Pathogen management, the first vim plugin to manage you plugins</h2>
+
+<p>To closed of janus&rsquo;s released, <a href="https://github.com/tpope">Tim Pope</a> ( a
+very important vim plugin developper ) release <a href="https://github.com/tpope/vim-pathogen">Pathogen</a>.
+This plugin help to manage your vim plugin directly in your <code>vimrc</code> file.
+I don&rsquo;t really use it. But a lot of people say it&rsquo;s a really good
+plugin. There are a lot of fork of janus trying to use pathogen
+directly.</p>
+
+<h2>Vundle management</h2>
+
+<p>Now, someone told me about a very good plugin to manage his vim&rsquo;s
+plugin, <a href="https://github.com/gmarik/vundle">Vundle</a>. As Pathogen, the
+plugin management is do directly in your <code>vimrc</code>. His usage is really
+simple and well designed. If you are a ruby guy and use already <a href="http://gembundler.org">Bundler</a>,
+you can easily understand how works Vundle and how use it. Vundle is
+directly inspired of this project.</p>
+
+<h1>Using Vundle</h1>
+
+<h2>Install Vundle</h2>
+
+<p>To install vundle, you just need clone the project&rsquo;s repository in your
+<code>.vim</code> directory and add 2 lignes in your <code>vimrc</code> file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add in your <code>vimrc</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'><span class="k">set</span> <span class="nb">rtp</span><span class="p">+=~</span><span class="sr">/.vim/</span>bundle<span class="sr">/vundle/</span>
+</span><span class='line'><span class="k">call</span> vundle#rc<span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Configure your plugins</h2>
+
+<p>To use vundle after his installation, it&rsquo;s really simple. You just need
+add in your <code>vimrc</code> a <code>Bundle</code> command with path to your plugin. By
+example, if you want install the <code>vim-rails</code> plugin, you juste need add
+this line in your <code>vimrc</code> :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='vim'><span class='line'>Bundle <span class="s1">&#39;tpope/vim-rails.git&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Install your plugins</h2>
+
+<p>Now, when your vim is open, you can install or update your plugins by
+two vim&rsquo;s command.</p>
+
+<ul>
+<li><code>BundleInstall</code> install your plugins</li>
+<li><code>BundleInstall!</code> update your plugins</li>
+</ul>
+
+
+<p>Now, you can try this wonderfull plugin and install all plugins you want
+try.</p>
+
+<h1>My vimrc</h1>
+
+<p>If you want see my own <code>vimrc</code> your can see it on one of my <a href="https://github.com/shingara/vim-conf">github
+repository</a>. With the Vundle help,
+it&rsquo;s really simple to understand what plugin I really use. All is in
+only one file.</p>
+
+<p><a href="http://blog.shingara.fr/vundle-ou-le-bundler-de-vim.html">Traduction Fran?aise</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Dante lets you put some daemon in your code]]></title>
+    <link href="http://blog-en.shingara.fr//dante-lets-you-put-some-daemon-in-your-code.html"/>
+    <updated>2012-05-11T09:54:00+02:00</updated>
+    <id>http://blog-en.shingara.fr//dante-lets-you-put-some-daemon-in-your-code</id>
+    <content type="html"><![CDATA[<p>Few days ago, I needed to convert a ruby script into daemon.</p>
+
+<p>In my deployment toolkit, I use monitrc to monitor my scripts. Monit
+checks a pidfile to know if the process is running or not.</p>
+
+<p>So, I looked the best ruby solution to easily to transform this script in deamon
+generating its own pidfile.</p>
+
+<p>The most popular project in ruby to convert a ruby script into daemon is
+<a href="http://daemons.rubyforge.org/">daemons</a>. I&rsquo;ve tried several times in the past
+and never became fan. It&rsquo;s too complicated and doesn&rsquo;t generate pidfile.
+You have to manage everything yourself.</p>
+
+<p>The second big project about managing daemon in the ruby community is
+<a href="https://github.com/kennethkalmer/daemon-kit">daemon-kit</a>. I&rsquo;ve tried it
+several times without success. To me, it&rsquo;s way too big and not
+flexible enough to use on a simple daemon script.</p>
+
+<p>Therefore, I decided to see if the ruby community had a new
+gem for this purpose. I discovered <a href="https://github.com/bazaarlabs/dante">dante</a>.
+This project was exactly what I really needed. It really gets the job done.</p>
+
+<p>By default, Dante manages few options in commandline. These options
+are all what you really need. No more useless stuff.</p>
+
+<p>Default options available :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>-p, --port PORT           Specify port
+</span><span class='line'>                          (default: )
+</span><span class='line'>-P, --pid FILE            save PID in FILE when using -d option.
+</span><span class='line'>                          (default: /var/run/scheduler.pid)
+</span><span class='line'>-d, --daemon              Daemonize mode
+</span><span class='line'>-l, --log FILE            Logfile for output
+</span><span class='line'>-k, --kill [PORT]         Kill specified running daemons - leave
+</span><span class='line'>blank to kill all.
+</span><span class='line'>-u, --user USER           User to run as
+</span><span class='line'>-G, --group GROUP         Group to run as
+</span><span class='line'>-?, --help                Display this usage information.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can define the PID, the log file, the user and group launching this
+daemon (if launched in root). The only argument which is not essential to me is
+the PORT. But this gem was created to launch rack applications. So
+it&rsquo;s really needed in this case.</p>
+
+<p>An other great feature is the option extension. You can add some new
+options. Dante manage to you all options pass on your script.</p>
+
+<p>To use it, it&rsquo;s really simple. You just put <code>Dante.run</code> and put your
+code in a block. :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Dante</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;myapp&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">opts</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">myapp</span><span class="o">.</span><span class="n">run</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I am really impressed by this gem by the <a href="http://gomiso.com">gomiso</a>
+company. Thanks for creating such a good gem.</p>
+
+<p><a href="http://blog.shingara.fr/dante-pour-mettre-du-daemon-dans-son-code.html">Traduction Fran?aise</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Moped the new mongoDB ruby driver]]></title>
+    <link href="http://blog-en.shingara.fr//moped-the-new-mongodb-ruby-driver.html"/>
+    <updated>2012-05-07T09:38:00+02:00</updated>
+    <id>http://blog-en.shingara.fr//moped-the-new-mongodb-ruby-driver</id>
+    <content type="html"><![CDATA[<p>In December 2011, <a href="https://github.com/bernerdschaefer">Bernerd Schaefer</a> created a new MongoDB ruby driver.
+This new driver is not supported by 10Gen (MongoDB creator) directly.
+The official MongoDB ruby driver is the gem <a href="https://github.com/mongodb/mongo-ruby-driver">mongo-ruby-driver</a>.</p>
+
+<h1>Goal of this gem</h1>
+
+<p>This gem will be created after some frustration from the Mongoid Core
+developer
+The team proposed to change the internal software design on MongoDB Ruby driver but all changes were refused.</p>
+
+<h2>Thread-safe</h2>
+
+<p>One of this gem&rsquo;s goals was to have a more thread-safe gem than the official MongoDB ruby driver.
+This official gem is sometimes considered like not 100% thread-safe like reported <a href="https://github.com/mperham/sidekiq/wiki/Problems-and-Troubleshooting">Mike Perham</a>.
+Since the ruby community discovered again the thread, it hasn&rsquo;t stopped of being a real problem.
+With Moped we can use <a href="http://mperham.github.com/sidekiq/">sidekiq</a>.</p>
+
+<h2>No more extension</h2>
+
+<p>If you want to use the MongoDB official driver, you will need to install another
+gem <a href="http://rubygems.org/gems/bson_ext">bson_ext</a>.
+Without it, you will have some performance penalties.
+As this gem is a C extension, this gem has 2 versions in order to be compatible with JRuby.
+One in C and the other in Java. It&rsquo;s therefore harder to maintain.</p>
+
+<p>With Moped, no more extension needed.
+Everything is done in pure ruby.
+A benchmark shows that this moped&rsquo;s bson version is even faster than the C extension.</p>
+
+<p>The only case where moped is slower than bson_ext is the ObjectId generation, like reported on <a href="https://groups.google.com/d/topic/mongoid/87IdIKO8-VM/discussion">Mongoid mailing-list</a>.
+But, after all, Moped is new.
+It can be improved in the future.</p>
+
+<h2>Cleanest API</h2>
+
+<p>The Moped API is really clean and simple.
+It depends on the developers using it.
+But, to me, it&rsquo;s a good API because it&rsquo;s really more &ldquo;ruby way&rdquo;.</p>
+
+<h2>Better Replicat Set management</h2>
+
+<p>One of big feature of MongoDB is the ReplicatSet.
+With Moped, the ReplicatSet management is even better.
+There are no exception raise when a node is down.
+The switch off of node is immediately done by Moped.</p>
+
+<p>No need to list all of your node.
+Moped does it automaticly with the MongoDB mechanism.
+You can even add new nodes in your Replicat without restarting your application.</p>
+
+<h1>Limitation</h1>
+
+<p>Moped has some limitation in front of Mongo-ruby-driver.</p>
+
+<h2>Ruby 1.9 only</h2>
+
+<p>Moped works only with Ruby > 1.9. in order to avoid troubles with the 1.8 compatibilities.
+For instance, the Socket on Ruby 1.8 series is not the best.</p>
+
+<h2>No GridFS support</h2>
+
+<p>GridFS is not supported on Moped.
+This choice has been made to limit the size of the Moped code core.
+In the future, this feature may be added in a Moped extension.</p>
+
+<h1>Mongoid 3 integration</h1>
+
+<p>Mongoid 3 now uses only MongoDB ruby driver.
+Moped is a new dependency of Mongoid and mongo-ruby-driver is not anymore a dependencie.
+If you want to try this new driver you can test it on Mongoid 3.</p>
+
+<p>Warning: Mongoid 3 is still not released.
+If you want to test it, you will need to use the Master branch on Mongoid.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;mongoid&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">&#39;git://github.com/mongoid/mongoid&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://blog.shingara.fr/moped-le-nouveau-driver-mongodb-pour-ruby.html">French Translation</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Quiet assets help you to have little log]]></title>
+    <link href="http://blog-en.shingara.fr//quiet-assets-help-you-to-have-little-log.html"/>
+    <updated>2012-04-26T09:39:00+02:00</updated>
+    <id>http://blog-en.shingara.fr//quiet-assets-help-you-to-have-little-log</id>
+    <content type="html"><![CDATA[<p>One week ago, I discover a new gem really helpfull, <a href="https://github.com/evrone/quiet_assets">quiet_assets</a>.</p>
+
+<p>This gem is not a big deal, but it help a lot when you develop a Rails
+application ( > 3.1 ) with &lsquo;assets_pipeline&rsquo;. If you have a lot of
+assets you have already see in your log a lot of information about
+requests doing on this assets. You can see log like :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-02-13 13:24:04 +0400
+</span><span class='line'>Served asset /application.js - 304 Not Modified (8ms)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After, when you want see the log really interresting about the request
+you do, you need up on your log. It&rsquo;s really annoying. Our log file is
+really bloat by this logs.</p>
+
+<p>But <a href="https://github.com/evrone/quiet_assets">quiet_assets</a> is here to
+help you in this mess. After adding this gem in your Gemfile.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'quiet_assets', :group =&gt; :development</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can discover your log clean and light like before assets_pipeline. No more logs about your assets
+request. Just your log you really need.</p>
+
+<p>Some gem can really be usefull even if it&rsquo;s little.</p>
+
+<p>Since rails 3.2.0, there are an option to define the logger of
+Sprockets. All informations is on this <a href="https://github.com/rails/rails/issues/2639">issue 2639</a>.
+But quiet_assets is allways usefull. When you define your sprocket&rsquo;s log to
+false you have allways logs from actionpack. You have less log, but
+allways too much.</p>
+
+<p><a href="http://blog.shingara.fr/quiet-assets-le-limiteur-de-log.html">French Translation</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[One day dedicated to MongoDB]]></title>
+    <link href="http://blog-en.shingara.fr//one-day-dedicated-to-mongodb.html"/>
+    <updated>2010-05-19T00:00:00+02:00</updated>
+    <id>http://blog-en.shingara.fr//one-day-dedicated-to-mongodb</id>
+    <content type="html"><![CDATA[<p><img src="http://blog.shingara.fr/files/badge-mongofr-large.png" alt="mongoFR badges"/></p>
+
+<p>On June 21st 2010 I highly recommend you to attend <a href="http://www.10gen.com/conferences/event_mongofr_21june10">&ldquo;the MongoFR&rdquo;</a>, an event devoted to <a href="http://mongodb.com">MongoDB</a>.</p>
+
+<p>I am lucky to participate in this event. I will speak about my experiences on
+migration from SQL to MongoDB based on what I&rsquo;ve learned working on the <a href="http://oupsnow.rubyforge.org">Oupsnow</a> project.</p>
+
+<p>In my opinion, this new technology is both really interesting and promising.</p>
+
+<p>If you want to discover MongoDB, come by on <a href="http://www.10gen.com/conferences/event_mongofr_21june10">June 21st</a>.</p>
+
+<p><a href="http://blog.shingara.fr/une-journee-dediee-i-mongodb.html">Traduction fran?aise</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[EventMachine's PeriodicTimer the simply cron]]></title>
+    <link href="http://blog-en.shingara.fr//eventmachines-periodictimer-the-simply-cron.html"/>
+    <updated>2010-04-02T00:00:00+02:00</updated>
+    <id>http://blog-en.shingara.fr//eventmachines-periodictimer-the-simply-cron</id>
+    <content type="html"><![CDATA[<p><a href="http://rubyeventmachine.com/">EventMachine</a> is one of the best Ruby libraries. But it&rsquo;s also the most unknown and unused.</p>
+
+<p>I started to look at Event Machine and where I could use it. The first application I found was the <a href="http://eventmachine.rubyforge.org/EventMachine/PeriodicTimer.html">PeriodicTimer</a>.</p>
+
+<p>This feature aims to replace the cronjob.</p>
+
+<p>Let me explain : a cronjob is really a great tool. We can precisely define the time where task is executed. Usually, this task executes precisely at a given time? But when a task is executed too soon, using a cronjob can become awful.</p>
+
+<p>Cron doesn&rsquo;t have any queue system, therefore there can be an increase of the number of tasks running at same time. Your server might become overloaded and in that case you&rsquo;d have to restart it. This situation would happen only if your task is created to be executed more times than your frequency of execution.</p>
+
+<p>The solution can be to have a little application like <a href="http://forge.bearstech.com/trac/wiki/JobQueue">jobq</a> to manage your queue system. But in many cases you don&rsquo;t really need a queue system, so it would be a little bit like overkill.</p>
+
+<p>The PeriodicTime&rsquo;s advantage is to execute after a time define precisely. There is no management of time: only the elapse time needs to be managed. The task is sent after X seconds after the end of the previous task and when there are no tasks running anymore. There might be some little variations in the time the task will execute, but it&rsquo;s not really a problem. The most important is that the task is executed regularly (e.g. when fetching statistics).</p>
+
+<p>Below is [a sample of code]<a href="http://gist.github.com/345000">http://gist.github.com/345000</a>)  using PeriodicTimer.</p>
+
+<p>&lt;typo:code lang=&ldquo;ruby&rdquo;>
+require &lsquo;eventmachine&rsquo;
+require &lsquo;timeout&rsquo;
+EventMachine.run {
+ EventMachine::PeriodicTimer.new(10) do
+   puts &ldquo;#{Time.now} : I am 10&rdquo;
+   sleep 10
+ end</p>
+
+<p> EventMachine::PeriodicTimer.new(1) do
+   puts Time.now
+ end
+}
+&lt;/typo:code></p>
+
+<p>And the output is after 50 second of execution.</p>
+
+<p>&lt;typo:code lang=&ldquo;plain&rdquo;>
+$ ruby em_periodic.rb
+Fri Mar 26 16:07:39 +0100 2010
+Fri Mar 26 16:07:40 +0100 2010
+Fri Mar 26 16:07:41 +0100 2010
+Fri Mar 26 16:07:42 +0100 2010
+Fri Mar 26 16:07:43 +0100 2010
+Fri Mar 26 16:07:44 +0100 2010
+Fri Mar 26 16:07:45 +0100 2010
+Fri Mar 26 16:07:46 +0100 2010
+Fri Mar 26 16:07:47 +0100 2010
+Fri Mar 26 16:07:48 +0100 2010 : I am 10
+Fri Mar 26 16:07:58 +0100 2010
+Fri Mar 26 16:07:59 +0100 2010
+Fri Mar 26 16:08:00 +0100 2010
+Fri Mar 26 16:08:01 +0100 2010
+Fri Mar 26 16:08:02 +0100 2010
+Fri Mar 26 16:08:03 +0100 2010
+Fri Mar 26 16:08:04 +0100 2010
+Fri Mar 26 16:08:05 +0100 2010
+Fri Mar 26 16:08:06 +0100 2010
+Fri Mar 26 16:08:08 +0100 2010
+Fri Mar 26 16:08:08 +0100 2010 : I am 10
+Fri Mar 26 16:08:18 +0100 2010
+Fri Mar 26 16:08:19 +0100 2010
+Fri Mar 26 16:08:20 +0100 2010
+Fri Mar 26 16:08:21 +0100 2010
+Fri Mar 26 16:08:22 +0100 2010
+Fri Mar 26 16:08:23 +0100 2010
+Fri Mar 26 16:08:25 +0100 2010
+Fri Mar 26 16:08:26 +0100 2010
+Fri Mar 26 16:08:27 +0100 2010
+Fri Mar 26 16:08:28 +0100 2010
+Fri Mar 26 16:08:28 +0100 2010 : I am 10
+&lt;/typo:code></p>
+
+<p>We can see that the task is executed each second. But the other task executing after 10 seconds, runs and locks the thread. So the first task (executing each second) is executed only after the end of second one. After that, each second the task restarts. and locks again after 10 seconds.</p>
+
+<p>This is really the great strength of PeriodicTimer. We can easily make a suite of tasks who will never execute at the same time. Lately I&rsquo;m using this for all my scripts fetching data.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[about]]></title>
+    <link href="http://blog-en.shingara.fr//.html"/>
+    <updated>2010-03-29T00:00:00+02:00</updated>
+    <id>http://blog-en.shingara.fr//</id>
+    <content type="html"><![CDATA[<h1>Who Am I?</h1>
+
+<p>This is the Cyril Mougel&#8217;s blog. I spoke about my developments experiences. That can be some bugs, or new stuff.</p>
+
+<h1>What about I speak ?</h1>
+
+<p>The blog&#8217;s main line is mainly the framework <a href="http://rubyonrails.org">Ruby on Rails</a>, but also all around the <a href="http://ruby-lang.org">Ruby lang</a>.</p>
+
+<p>Voici le blog de Cyril Mougel. Ici, j&#8217;y parle de mes exp?riences de d?veloppement. Que ca soit des bugs, rencontr?s des nouveaut?s ou des am?liorations apport?s.</p>
+
+<h1>My experience</h1>
+
+<p>After 1 year in CapGemini where I code on J2EE, I am now a Ruby on Rails developer since 2008 in several companies.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Oupsnow 0.5.0 released]]></title>
+    <link href="http://blog-en.shingara.fr//oupsnow-0-5-0-released.html"/>
+    <updated>2010-03-13T00:00:00+01:00</updated>
+    <id>http://blog-en.shingara.fr//oupsnow-0-5-0-released</id>
+    <content type="html"><![CDATA[  <p>That&#8217;s it. After only one month to released <a href="http://oupsnow.rubyforge.org/">Oupsnow</a> 0.4.1, I released the 0.5.0 version. This version
+  mark adding features and stability on code base.</p>
+
+  <p>New features ?</p>
+
+  <ul>
+  <li> Add filter by closed or not with closed keywords</li>
+  <li>You can edit a milestone now</li>
+  <li>You can define one milestone like current. By define the first one created</li>
+  <li>Add the recover password configuration by your email</li>                                                                                                
+  <li>Add remember solution when you logged</li>
+  <li>Add information about number of ticket in search</li>
+  <li>A logged user can watch a ticket. If user watch ticket he received email
+  when ticket is update</li>
+  <li>A user can change his own email.</li>
+  </ul>
+
+  <p>Like I made each time, my capistrano file to deploy Oupsnow</p>
+  <typo:code lang="ruby">
+  set :application, &#8220;oupsnow&#8221;
+  set :repository,  &#8220;git://github.com/shingara/oupsnow.git&#8221;
+  set :domain, &#8220;dev.shingara.fr&#8221;
+
+  # If you aren&#8217;t deploying to /u/apps/#{application} on the target
+  # servers (which is the default), you can specify the actual location
+  # via the :deploy_to variable:
+  set :deploy_to, &#8220;XXXXXXXXX&#8221;
+
+  # If you aren&#8217;t using Subversion to manage your source code, specify
+  # your SCM below:
+  # set :scm, :subversion
+  set :scm, :git
+  set :git_enable_submodules, 1
+
+  set :runner, &#8220;xxxx&#8221;
+  set :user, &#8220;xxxx&#8221;
+  set :use_sudo, false
+
+  set :thin_conf, &#8220;/etc/thin/#{domain}.yml&#8221;
+
+  set :rails_env, &#8220;production&#8221;
+
+  role :app, domain
+  role :web, domain
+  role :db,  domain, :primary => true
+
+  task :update_config, :roles => [:app] do
+    run &#8220;ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml&#8221;
+    run &#8220;ln -s #{shared_path}/config/email.yml #{release_path}/config/email.yml&#8221;
+    run &#8220;ln -s #{shared_path}/config/initializers/errornot.rb #{release_path}/config/initializers/errornot.rb&#8221;
+    run &#8220;cd #{release_path} && echo &#8216;GOOGLE_ANALYTICS=&#34;XXXXXXXX&#34;&#8217; >> config/environment.rb&#8221;
+  end
+
+  namespace :deploy do
+    task :start, :roles => [:app] do
+      run &#8220;thin -C #{thin_conf} start&#8221;
+    end
+
+    task :stop, :roles => [:app] do
+      run &#8220;thin -C #{thin_conf} stop&#8221;
+    end
+
+    task :restart, :roles => [:app] do
+      run &#8220;thin -C #{thin_conf} restart&#8221;
+    end
+  end
+
+  task :update_db do
+    run &#8220;cd #{current_path} && RAILS_ENV=#{rails_env} rake db:update&#8221;
+  end
+
+  after &#8220;deploy:update_code&#8221;, :update_config
+  after &#8220;deploy:symlink&#8221;, :update_db
+  </typo:code>
+
+  <p><a href="http://blog.shingara.fr/oupsnow-0-5-0-est-sortie.html">Traduction fran?aise</a></p> 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Typo 5.4.0 released]]></title>
+    <link href="http://blog-en.shingara.fr//typo-5-4-0-released.html"/>
+    <updated>2009-12-29T00:00:00+01:00</updated>
+    <id>http://blog-en.shingara.fr//typo-5-4-0-released</id>
+    <content type="html"><![CDATA[<p>That&#8217;s it. A new version of <a href="http://typosphere.org">Typo</a> is released. I don&#8217;t really participate to this
+  version, by lack of time and motivation, but I am allways proud to see a new version.</p>
+  <p>Each release see a new admin, but each time is allways better than previous. So it&#8217;s a good thing.
+  <p>My french blog is update and use this new version with new default design.</p>
+  <p>My little gift with this released is my capistrano config file to deploy it. It can be useful</p>
+
+  <typo:code>
+  set :application, &#8220;typo&#8221;
+  set :repository,  &#8220;git://github.com/fdv/typo.git&#8221;
+  set :domain, &#8220;blog.shingara.fr&#8221;
+
+  # If you aren&#8217;t deploying to /u/apps/#{application} on the target
+  # # servers (which is the default), you can specify the actual location
+  # # via the :deploy_to variable:
+  set :deploy_to, &#8220;/var/rails/blog-typo&#8221;
+  #
+  # # If you aren&#8217;t using Subversion to manage your source code, specify
+  # # your SCM below:
+  set :scm, :git
+
+  set :runner, &#8220;rails&#8221;
+  set :user, &#8220;rails&#8221;
+  set :use_sudo, false
+
+  set :thin_conf, &#8220;/etc/thin/#{domain}.yml&#8221;
+
+  role :app, domain
+  role :web, domain
+  role :db,  domain, :primary => true
+
+  task :update_config, :roles => [:app] do
+    run &#8220;cp -Rf #{shared_path}/config/* #{release_path}/config/&#8221;
+    run &#8220;ln -s #{shared_path}/files #{release_path}/public/files&#8221;
+  end
+
+  task :update_gems, :roles => [:app] do
+    run &#8220;cd #{release_path} && RAILS_ENV=production rake gems:install&#8221;
+  end
+
+
+  after &#8220;deploy:update_code&#8221;, :update_config
+  after &#8220;deploy:update_code&#8221;, :update_gems
+
+
+  namespace :deploy do
+    task :start, :roles => [:app] do
+      run &#8220;thin -C #{thin_conf} start&#8221;
+    end
+
+    task :stop, :roles => [:app] do
+      run &#8220;thin -C #{thin_conf} stop&#8221;
+    end
+
+    task :restart, :roles => [:app] do
+      run &#8220;thin -C #{thin_conf} restart&#8221;
+    end
+  end
+
+  task :clear_cache, :roles => [:app] do                                                                                                                       
+    run &#8220;cd #{current_path} && RAILS_ENV=production rake sweep_cache&#8221;
+    run &#8220;cd #{current_path} && RAILS_ENV=production rake tmp:cache:clear&#8221;
+  end
+
+  after &#8220;deploy:restart&#8221;, :clear_cache
+  after &#8220;deploy:start&#8221;, :clear_cache
+  </typo:code>
+
+  <p><a href="http://blog.shingara.fr/sortie-de-typo-5-4-0.html">Traduction fran?aise</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ Oupsnow 0.4.0 released]]></title>
+    <link href="http://blog-en.shingara.fr//oupsnow-0-4-0-released.html"/>
+    <updated>2009-12-01T00:00:00+01:00</updated>
+    <id>http://blog-en.shingara.fr//oupsnow-0-4-0-released</id>
+    <content type="html"><![CDATA[  <p>That&#8217;s it. I finally released Oupsnow 0.4.0. This version is a complete refactoring. After a oupsnow version 0.3.0 in Merb/DataMapper, this new 
+  version is with Rails and MongoDB. The server and the backend have changed.</p>
+
+  <p>But with the complete changed, there are some new features.</p>
+
+  <ul>
+  <li>Add filter by state in search ticket</li>
+  <li>Add possibility to change function of all member by project</li>
+  <li>Add preview in ticket and ticket updates</li>
+  <li>Add ticket&#8217;s milestone information in ticket show</li>
+  <li>Add ordering to all column in ticket search</li>
+  </ul>
+
+  <p>You can download it on <a href="http://rubyforge.org/frs/?group_id=7685">rubyforge</a></p>
+  <p>If you want try the <a href="http://oupsnow.shingara.fr">oupsnow demo version</a>, it&#8217;s online. The administrator login/password is : admin@admin.org/oupsnow Have fun.</p>
+
+  <p>The code source is hosted on github <a href="http://github.com/shingara/oupsnow">http://github.com/shingara/oupsnow</a></p>
+  <p>You can report any bug about it on my  <a href="http://dev.shingara.fr/projects/5/overview">own oupsnow instance</a></p>
+
+
+  <p><a href="http://blog.shingara.fr/sortie-de-oupsnow-0-4-0.html">Traduction fran?aise</a></p>   
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Oupsnow from Merb to Rails]]></title>
+    <link href="http://blog-en.shingara.fr//oupsnow-from-merb-to-rails.html"/>
+    <updated>2009-11-19T00:00:00+01:00</updated>
+    <id>http://blog-en.shingara.fr//oupsnow-from-merb-to-rails</id>
+    <content type="html"><![CDATA[  <p>Lately, I decided to migrate <a href="http://oupsnow.rubyforge.org">Oupsnow</a>, from Merb to Rails.</p>
+
+  <p>Just after ending my migration from SQL to MongoDB, I starting a new one but this one much more deep.</p>
+
+  <p>Why this migration ?</p>
+
+  <p>Rails 3. Since December 2008, almost one year later, Merb is allways freeze. Someone say that community is reviving and it&#8217;s true.
+  I am glad to see that, but Merb is really late now with one year of late. Even Rails don&#8217;t really improve in his stable version,
+  his edge move a lot.</p>
+
+  <p>Trying test all new technologies in Ruby, I will play with Rails 3. But no migrating too exists to migrate from Merb to Rails 3.
+  After a quick test, I see that difference between Rails 2.3.x and Rails 3 is little. So the migration from Rails 2.3.x to Rails 3 can be
+  more easily.</p>
+
+  <p>Like I want release soon as possible a stable version of Oupsnow. I decided to migrate Oupsnow to Rails 2.3.x before upgrade to
+  Rails 3. And this time, I maybe can release a stable version of Oupsnow compatible with Rails 3.</p>
+  
+  <p>Oupsnow become a project Rails/MongoMapper and no more a Merb/DataMapper project like before. Any help are welcome.</p>
+
+  <p><a href="http://blog.shingara.fr/oupsnow-de-merb-i-rails.html">Traduction fran?aise</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RabbitMQ doesn't works with MacOSX ?]]></title>
+    <link href="http://blog-en.shingara.fr//rabbitmq-doesnt-works-with-macosx.html"/>
+    <updated>2009-11-18T00:00:00+01:00</updated>
+    <id>http://blog-en.shingara.fr//rabbitmq-doesnt-works-with-macosx</id>
+    <content type="html"><![CDATA[  <p>A couple of week, I want go on using <a href="http://www.rabbitmq.com/">RabbitMQ</a>, I have a big issue.
+  With RabbitMQ, you need configure vhost and user. but I can&#8217;t connect to rabbitMQ by command <code>rabbitmqctl</code>.
+  Plan to upgrade my Mac to SnowLeopard I don&#8217;t found how fix this problem. RabbitMQ can be wait.</p>
+
+  <p>But after my upgrade, I install again RabbitMQ. to use again. But I was allways same issue. After a long search, I
+  found the cause. The hostname.</p>
+
+  <p>What made if your control node rabbitMQ can&#8217;t contact the master node ?</p>
+
+  <p>The solution is really simple. <code>hostname -s</code>. Add this one in your file <code>/etc/hosts</code> to ip 127.0.0.1. 
+  And now it&#8217;s works. Sometimes the solution is so easy.</p>
+
+  <p><a href="http://blog.shingara.fr/rabbitmq-ne-marche-pas-avec-mac-os.html">Traduction fran?aise</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[since cucumber=0.3.4, he has difficult with merb  ]]></title>
+    <link href="http://blog-en.shingara.fr//since-cucumber-0-3-4-he-has-difficult-with-merb.html"/>
+    <updated>2009-05-24T00:00:00+02:00</updated>
+    <id>http://blog-en.shingara.fr//since-cucumber-0-3-4-he-has-difficult-with-merb</id>
+    <content type="html"><![CDATA[  <p>Since  <a href="http://cukes.info/">Cucumber</a> 0.3.4, there are a big change. With this change, you need modify your using of Cucumber with Merb. In <a href="http://github.com/aslakhellesoy/cucumber/blob/master/History.txt">History.txt</a> of Cucumber, you can read :</p>
+
+  <typo:code>
+  ** IMPORTANT UPGRADE NOTES FOR RAILS USERS **
+   
+  Running Cucumber features in the same Ruby interpreter as Rake doesn&#8217;t seem to work,
+  so you have to explicitly tell the task to fork (like it was doing by default in prior
+  versions). In lib/tasks/cucumber.rake:
+   
+    Cucumber::Rake::Task.new(:features) do |t| 
+      t.fork = true # Explicitly fork
+      t.cucumber_opts = %w{&#8211;format pretty}
+    end 
+   
+  (If you run script/generate cucumber this will be done for you).
+  Alternatively you can omit forking and run features like this:
+   
+    RAILS_ENV=test rake features
+   
+  However, setting the RAILS_ENV is easy to forget, so I don&#8217;t recommend relying on this.
+  </typo:code>
+  <p>This note is true to Merb user too. By default, all Merb user use the <a href="http://github.com/roman/merb_cucumber/tree/master">Roman&#8217;s merb_cucumber</a>. But the generator is not good now. The rake task <code>rake features</code> doesn&#8217;t use the good cucumber options.</p>
+  <p>After a long and big fight with cucumber, I success to find all good options. Now with this options, I have same behaviour than before. If you want see an example in a Merb application, you can see <a href="http://github.com/shingara/oupsnow/commit/13ab272f31bbf49537e9addc8166661ced91c694">my commit on Oupsnow</a>. I fork too the Roman merb_cucumber and add <a href="http://github.com/shingara/merb_cucumber/commit/317d64d45204c01a6ccbadfe1bd95e5ad06f7012">a patch to can use cucumber 0.3.4 and more</a>.</p>
+  
+  <p>EDIT : My modif of merb_cucumber is integrate to Roman branch.</p>
+
+  <p><a href="http://blog.shingara.fr/cucumber-0-3-4-et-merb-la-dure-cohabitation.html">Traduction fran?aise</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Oupsnow 0.2.0 released]]></title>
+    <link href="http://blog-en.shingara.fr//oupsnow-0-2-0-released.html"/>
+    <updated>2009-02-10T00:00:00+01:00</updated>
+    <id>http://blog-en.shingara.fr//oupsnow-0-2-0-released</id>
+    <content type="html"><![CDATA[ <p>After less of one month, There are a new version of <a href="http://oupsnow.rubyforge.org/">Oupsnow</a>. This new version 0.2.0 is the first, I use in production. Now, my <a href="http://dev.shingara.fr/">development platforme</a> is not manage by Redmine, it&#8217;s Oupsnow.</p>
+
+  <p>The news in this version are :</p>
+
+  <ul>
+  <li>A converter Redmine -> Oupsnow integrate. It&#8217;s with it, I can change my development platforme. without lost.</li>
+  </ul>
+
+  <p>to be added :</p>
+  <ul>
+  <li>A milestones management</li>
+  <li>A ticket&#8217;s state management</li>
+  <li>A ticket&#8217;s severity management</li>
+  <li>A formating with RedCloth</li>
+  </ul>
+  <p>After this release, I focus me on Typo and made <a href="http://typo.lighthouseapp.com/projects/11171/tickets/14-drop-acts_as_ressource-and-add-a-more-flexible-url-system">the big feature</a> in <a href="http://typo.lighthouseapp.com/projects/11171/milestones/29390-typo-53">5.2.1 version</a>.</p>
+
+  <p><a href="http://blog.shingara.fr/sortie-de-oupsnow-0-2-0-avec-mise-en-production.html">Traduction fran?aise</a></p>      
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Typo 5.2.0 released]]></title>
+    <link href="http://blog-en.shingara.fr//typo-5-2-0-released.html"/>
+    <updated>2009-01-25T00:00:00+01:00</updated>
+    <id>http://blog-en.shingara.fr//typo-5-2-0-released</id>
+    <content type="html"><![CDATA[  <p>It&#8217;s my turn to announced the release of <a href="http://blog.typosphere.org/2009/01/25/typo-5-2-helmut-newton-for-rails-2-2-released">Typo 5.2</a>. This release is the first where I participe. Since august, I am a contributeur of <a href="http://typosphere.org/">Typo</a>. I start the migration of Typo with Rails 2.2 (before the official release). After we start with <a href="http://t37.net/">Fr?d?ric</a> to improve the performance and the user experience of Typo.</p>
+
+  <p>Today with this released of Typo, the work is really good. We made maximum to be great. But we have not done. We have a lot of idea to integrate in Typo. We try too release more often.</p>
+
+  <p>A little gift, My capistrano file I use to deploy Typo.</p>
+
+  <typo:code lang="ruby">
+  set :application, &#8220;typo&#8221;
+  set :repository,  &#8220;git://github.com/fdv/typo&#8221;
+  set :domain, &#8220;shingara.fr&#8221;
+
+  # If you aren&#8217;t deploying to /u/apps/#{application} on the target
+  # servers (which is the default), you can specify the actual location
+  # via the :deploy_to variable:
+  set :deploy_to, &#8220;/var/rails/blog-typo&#8221;
+
+  # If you aren&#8217;t using Subversion to manage your source code, specify
+  # your SCM below:
+  set :scm, :git
+  set :git_enable_submodules, 1
+
+  set :runner, &#8220;rails&#8221;
+  set :user, &#8220;rails&#8221;
+  set :use_sudo, false
+  set :thin_conf, &#8220;/etc/thin/typo.yml&#8221;
+
+  role :app, domain
+  role :web, domain
+  role :db,  domain, :primary => true
+
+  task :update_config, :roles => [:app] do
+    run &#8220;ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml&#8221;
+    run &#8220;ln -s #{shared_path}/files #{release_path}/public/files&#8221;
+    run &#8220;ln -s #{shared_path}/cache #{release_path}/tmp/cache&#8221;
+    run &#8220;ln -s #{shared_path}/newrelic_rpm #{release_path}/vendor/plugins/newrelic_rpm&#8221;
+    run &#8220;ln -s #{shared_path}/config/newrelic.yml #{release_path}/config/newrelic.yml&#8221;
+    run &#8220;ln -s #{shared_path}/config/agent #{release_path}/config/agent&#8221;
+    run &#8220;ln -s #{shared_path}/config/mail.yml #{release_path}/config/mail.yml&#8221;
+  end
+
+  task :dump_before, :roles => [:app] do
+    run &#8220;pg_dump -U typoblog typo > #{shared_path}/typo#{Time::today.strftime(&#8216;%Y-%m-%d&#8217;)}.sql&#8221;
+  end
+
+  namespace :deploy do
+    task :start, :roles => [:app] do
+      run &#8220;thin -C #{thin_conf} start&#8221;
+    end
+
+    task :stop, :roles => [:app] do
+      run &#8220;thin -C #{thin_conf} stop&#8221;
+    end
+
+    task :restart, :roles => [:app] do
+      run &#8220;thin -C #{thin_conf} restart&#8221;
+    end
+  end
+
+  after &#8220;deploy:update_code&#8221;, :update_config
+  before &#8220;deploy:migrations&#8221;, :dump_before
+  </typo:code>
+
+  <p><a href="http://blog.shingara.fr/sortie-de-typo-5-2.html">Traduction Fran?aise</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pretty URL in Merb ]]></title>
+    <link href="http://blog-en.shingara.fr//pretty-url-in-merb.html"/>
+    <updated>2009-01-21T00:00:00+01:00</updated>
+    <id>http://blog-en.shingara.fr//pretty-url-in-merb</id>
+    <content type="html"><![CDATA[  <p>If like me, you are fan to pretty URL. You know how use it in RubyOnRails. You need define the return of method <code>to_params</code>. Using Merb, I want using same system in Merb. In first, I test modify the return of <code>to_params</code> method. But it&#8217;s not the way in Merb. The way is simpliest. You need using option <code>:identify</code> in you resource in your route. With this system I can define the methode <code>ticket_permalink</code> in Oupsnow as defin the pretty URL of ticket. After I just need define what I want in this URL. This return string to be allways use in my URL generated to define a ticket. Finally, I need define a method <code>def self.get_by_permalink(ticket_permalink)</code> that I use in place of <code>Ticket.get(id)</code>. I can update easily the URL to define my ticket.</p>
+
+  <p>But you need to know that all parameter define your ticket are allways the value of <code>:identity</code> option. Even in nested resource. No <code>id</code> and <code>ticket_id</code>. Only <code>ticket_permalink</code>.</p>
+  <p><a href="http://blog.shingara.fr/les-merb-pretty-url">Traduction Fran?aise</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Oupsnow 0.1.0 released]]></title>
+    <link href="http://blog-en.shingara.fr//oupsnow-0-1-0-released.html"/>
+    <updated>2009-01-21T00:00:00+01:00</updated>
+    <id>http://blog-en.shingara.fr//oupsnow-0-1-0-released</id>
+    <content type="html"><![CDATA[  <p>I am really happy to released <a href="http://oupsnow.rubyforge.org/">Oupsnow</a>. After to participate to Redmine and using it, I decided to create my own bug tracker. I think redmine has some default. I finish by create my own bug tracker. It&#8217;s strongly inspired by Lighthouse which really simple to use it.</p>
+
+  <p>It&#8217;s the first version release after 2 month of development. It&#8217;s not a complete product. But it&#8217;s start to have a few feature to use it. In second, Oupsnow is a product using Merb. With this project I can be discover and improve my knowledge.</p>
+
+  <p>In next release, I will improve the administraion. I will create a converter from redmine to Oupsnow. After this creation, I will migrate to Oupsnow in place of Redmine to my <a href="http://dev.shingara.fr">development platforme</a></p>
+  
+<p>I install a <a href="http://oupsnow.shingara.fr">demo</a>. With it you can see what is Oupsnow.</p>
+
+  <p>In bonus, my <code>deploy.rb</code> file used to deploy my demo of Oupsnow by capistrano.</p>
+
+  <typo:code lang="ruby">
+  set :application, &#8220;oupsnow&#8221;
+  set :repository,  &#8220;git://github.com/shingara/oupsnow.git&#8221;
+  set :domain, &#8220;shingara.fr&#8221;
+
+  # If you aren&#8217;t deploying to /u/apps/#{application} on the target
+  # servers (which is the default), you can specify the actual location
+  # via the :deploy_to variable:
+  set :deploy_to, &#8220;/var/rails/oupsnow-demo&#8221;
+  set :deploy_via,            :remote_cache
+  set :repository_cache,      &#8220;#{application}-src&#8221;
+
+  # If you aren&#8217;t using Subversion to manage your source code, specify
+  # your SCM below:
+  # set :scm, :subversion
+  set :scm, :git
+  set :git_enable_submodules, 1
+
+  set :runner, &#8220;rails&#8221;
+  set :user, &#8220;rails&#8221;
+  set :use_sudo, false
+  set :rack_up, &#8220;/etc/thin/oupsnow-demo.ru&#8221;
+  set :merb_port, 46000
+
+  role :app, domain
+  role :web, domain
+  role :db,  domain, :primary => true
+
+  task :update_config, :roles => [:app] do
+    run &#8220;ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml&#8221;
+  end 
+
+  namespace :deploy do
+    task :start, :roles => [:app] do
+      run &#8220;merb -u #{user} -G #{user} -d -c 1 -p #{merb_port} -n #{application} -a thin -e production -m &#8216;#{deploy_to}/current/&#8217;&#8221;
+    end
+
+    task :stop, :roles => [:app] do
+      run &#8220;merb -u #{user} -G #{user} -d -c 1 -K all -p #{merb_port} -n #{application} -a thin -e production -m &#8216;#{deploy_to}/current/&#8217;&#8221;
+    end
+
+    task :restart, :roles => [:app] do
+      deploy.stop
+      deploy.start
+    end
+  end
+
+  after &#8220;deploy:update_code&#8221;, :update_config
+  </typo:code>
+
+  <p><a href="http://blog.shingara.fr/sortie-de-la-premiere-version-de-oupsnow-0-1-0.html">Traduction fran?aise</a></p>
+]]></content>
+  </entry>
+  
+</feed>

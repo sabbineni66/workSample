@@ -1,0 +1,14 @@
+{
+  "name": "Define This",
+  "version": "0.1",
+  "description": "Look up a word in thefreedictionary",
+  "permissions": [
+      "contextMenus",
+      "tabs"
+  ],
+  "icons": {
+    "16" : "icon16.png",
+    "48" : "icon48.png"
+  },
+  "background_page": "background.html"
+}

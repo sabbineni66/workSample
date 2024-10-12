@@ -1,0 +1,10 @@
+{
+  "files": [
+    "src/defsoftware-utils.ts",
+    "src/main.tsx"
+  ],
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "preserve"
+  }
+}

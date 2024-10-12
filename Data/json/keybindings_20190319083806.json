@@ -1,0 +1,11 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "cmd+;",
+        "command": "cSpell.toggleEnableSpellChecker"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-extension.runQueryBuild"
+    }
+]

@@ -1,0 +1,15 @@
+'pt-BR':
+  activerecord:
+    models:
+      flyer:
+        one: Convite
+        other: Convites
+    attributes:
+      flyer:
+        id: C?digo
+        created_at: Criado em
+        updated_at: Atualizado em
+        event_date: Data
+        event_time: Hor?rio
+        address1: Endere?o
+        address2: Complemento

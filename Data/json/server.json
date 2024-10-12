@@ -1,0 +1,44 @@
+{
+      "Verbose":      true
+  
+    , "ServerName":   "www.yammer.dev"
+    , "BindAddress":  "0.0.0.0"
+    , "BindPort":     4000
+
+    , "CertificateFile"    : "config/cert.pem"
+    , "CertificateKeyFile" : "config/cert.key"
+  
+    , "TemplatePath": "./templates/"
+    , "AssetPath":    "./assets/"
+  
+    , "LogsToWatch": {
+  
+        "DropWizardServices": [
+            "artie"
+          , "feedie"
+          , "fileville"
+          , "flatterie"
+          , "mugshot"
+        ]
+
+      , "DropWizardDotDPath" : "config/dropwizard.d/"
+  
+      , "StandardLogs" : [
+  	    {   "Description" : "workfeed development log"
+  	      , "Name" : "workfeed-developer-log"
+  	      , "Path" : "/opt/workfeed/log/development.log" }
+  
+          , {   "Description" : "workfeed unicorn stdout log"
+              , "Name" : "workfeed-unicorn-stdout-log"
+              , "Path" : "/opt/workfeed/log/unicorn.stdout.log" }
+  
+          , {   "Description" : "workfeed unicorn stderr log"
+              , "Name" : "workfeed-unicorn-stderr-log"
+              , "Path" : "/opt/workfeed/log/unicorn.stderr.log" }
+
+          , {   "Description" : "mknopp test log"
+              , "Name" : "mknopp-test-log"
+              , "Path" : "/tmp/knopp.log" } 
+          ]
+      }
+}

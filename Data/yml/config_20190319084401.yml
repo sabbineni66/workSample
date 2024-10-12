@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: emanuel/insignya
+  branch: master # Branch to update
+
+media_folder: "uploads"
+
+collections:
+  - name: "equipa" # Used in routes, e.g., /admin/collections/blog
+    label: "Equipa" # Used in the UI
+    folder: "_posts/equipa" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "classe", name: "title", widget: "string"}
+      - {label: "Imagem de background", name: "background_image_path", widget: "image"}
+      - {label: "Categoria", name: "category", widget: "string"}
+      - {label: "Cargo", name: "cargo", widget: "string"}
+      - {label: "Email", name: "email", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Body", name: "body", widget: "markdown"}
+        
+
+

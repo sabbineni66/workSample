@@ -1,0 +1,32 @@
+{
+  "isPublished": false,
+  "_id": "556f756c44f404696c96be18",
+  "assignments": [],
+  "formattedId": "PN108",
+  "itemPlanningLevel": "402c5194-9e3f-44ac-95b8-8d8da2826f85",
+  "backlogItems": [],
+  "createdBy": {
+    "timeStamp": 1433367916969,
+    "userEmail": "someone@rallydev.com",
+    "userId": "fb6dd27e41404258a08347672e7d5a5c"
+  },
+  "planName": "Selecting Items Plan",
+  "lastUpdate": {
+    "timeStamp": 1434126295432,
+    "userEmail": "someone-else@rallydev.com",
+    "userId": "bfed68589fbf471c85c685cbc05e91e3"
+  },
+  "publishedBy": {
+    "timeStamp": 1434060771821,
+    "userEmail": "someone-else@rallydev.com",
+    "userId": "bfed68589fbf471c85c685cbc05e91e3"
+  },
+  "planByDeliveryGroup": null,
+  "endRelease": "bf20eb7e-b1dc-4f96-9d31-be8704d00b68",
+  "cutlinePosition": null,
+  "projectScopeId": "5423e7d7-1bee-4dd1-be2e-b82405e38f68",
+  "workspaceRef": "/workspace/41529001",
+  "workItems": [],
+  "groups": [],
+  "startRelease": "67c64388-a393-40cf-8baa-a3abcebfc362"
+}

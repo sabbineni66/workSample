@@ -1,0 +1,401 @@
+[
+    {
+        "position": {
+            "lat": -27.794444, 
+            "lng": -48.496667
+        }, 
+        "nome": "SC-33 Andorinhas"
+    }, 
+    {
+        "position": {
+            "lat": -27.7925, 
+            "lng": -48.504722
+        }, 
+        "nome": "SC-35 Arco"
+    }, 
+    {
+        "position": {
+            "lat": -27.768333, 
+            "lng": -48.476944
+        }, 
+        "nome": "SC-31 Baleia"
+    }, 
+    {
+        "position": {
+            "lat": -27.4475, 
+            "lng": -48.361389
+        }, 
+        "nome": "SC-67 Cabras"
+    }, 
+    {
+        "position": {
+            "lat": -27.798056, 
+            "lng": -48.557778
+        }, 
+        "nome": "SC-29 Caieira da Barra do Sul"
+    }, 
+    {
+        "position": {
+            "lat": -27.748889, 
+            "lng": -48.530278
+        }, 
+        "nome": "SC-77 Caminho da Gurita"
+    }, 
+    {
+        "position": {
+            "lat": -27.544167, 
+            "lng": -48.494167
+        }, 
+        "nome": "SC-69 Central Park"
+    }, 
+    {
+        "position": {
+            "lat": -27.446944, 
+            "lng": -48.361111
+        }, 
+        "nome": "SC-51 Encantada"
+    }, 
+    {
+        "position": {
+            "lat": -27.417222, 
+            "lng": -48.406389
+        }, 
+        "nome": "SC-27 Feiticeiras"
+    }, 
+    {
+        "position": {
+            "lat": -27.785556, 
+            "lng": -48.485278
+        }, 
+        "nome": "SC-59 Felicidade"
+    }, 
+    {
+        "position": {
+            "lat": -27.790556, 
+            "lng": -48.490278
+        }, 
+        "nome": "SC-37 Fenda"
+    }, 
+    {
+        "position": {
+            "lat": -27.7925, 
+            "lng": -48.504722
+        }, 
+        "nome": "SC-38 Flores"
+    }, 
+    {
+        "position": {
+            "lat": -27.754444, 
+            "lng": -48.499444
+        }, 
+        "nome": "SC-22 Furna do Lui"
+    }, 
+    {
+        "position": {
+            "lat": -27.7625, 
+            "lng": -48.48
+        }, 
+        "nome": "SC-75 Gravat\u00e1"
+    }, 
+    {
+        "position": {
+            "lat": -27.541111, 
+            "lng": -48.4925
+        }, 
+        "nome": "SC-45 Grota do Riacho I"
+    }, 
+    {
+        "position": {
+            "lat": -27.541389, 
+            "lng": -48.493056
+        }, 
+        "nome": "SC-46 Grota do Riacho II"
+    }, 
+    {
+        "position": {
+            "lat": -27.802222, 
+            "lng": -48.5375
+        }, 
+        "nome": "SC-24 Gruta da Trilha do Saquinho I"
+    }, 
+    {
+        "position": {
+            "lat": -27.801944, 
+            "lng": -48.5375
+        }, 
+        "nome": "SC-25 Gruta da Trilha do Saquinho II"
+    }, 
+    {
+        "position": {
+            "lat": -27.538611, 
+            "lng": -48.498889
+        }, 
+        "nome": "SC-26 Gruta das Pedras Grandes"
+    }, 
+    {
+        "position": {
+            "lat": -27.746389, 
+            "lng": -48.5225
+        }, 
+        "nome": "SC-23 Gruta do Muro de Pedras"
+    }, 
+    {
+        "position": {
+            "lat": -27.75, 
+            "lng": -48.539444
+        }, 
+        "nome": "SC-21 Gruta do Peri"
+    }, 
+    {
+        "position": {
+            "lat": -27.536667, 
+            "lng": -48.496944
+        }, 
+        "nome": "SC-19 Gruta do Saco Grande"
+    }, 
+    {
+        "position": {
+            "lat": -27.536944, 
+            "lng": -48.496111
+        }, 
+        "nome": "SC-20 Gruta dos Buracos"
+    }, 
+    {
+        "position": {
+            "lat": -27.808056, 
+            "lng": -48.536111
+        }, 
+        "nome": "SC-81 Inferno"
+    }, 
+    {
+        "position": {
+            "lat": -27.436389, 
+            "lng": -48.362778
+        }, 
+        "nome": "SC-65 Ingleses"
+    }, 
+    {
+        "position": {
+            "lat": -27.535278, 
+            "lng": -48.496944
+        }, 
+        "nome": "SC-76 Jararaca"
+    }, 
+    {
+        "position": {
+            "lat": -27.769722, 
+            "lng": -48.479167
+        }, 
+        "nome": "SC-50 Lagoinha do Leste"
+    }, 
+    {
+        "position": {
+            "lat": -27.538889, 
+            "lng": -48.498889
+        }, 
+        "nome": "SC-78 Laj\u00e3o"
+    }, 
+    {
+        "position": {
+            "lat": -27.536944, 
+            "lng": -48.498056
+        }, 
+        "nome": "SC-18 Laje"
+    }, 
+    {
+        "position": {
+            "lat": -27.539167, 
+            "lng": -48.494722
+        }, 
+        "nome": "SC-55 Larvas"
+    }, 
+    {
+        "position": {
+            "lat": -27.753333, 
+            "lng": -48.500556
+        }, 
+        "nome": "SC-63 Matadeiro"
+    }, 
+    {
+        "position": {
+            "lat": -27.794722, 
+            "lng": -48.497222
+        }, 
+        "nome": "SC-53 Medo"
+    }, 
+    {
+        "position": {
+            "lat": -27.561944, 
+            "lng": -48.485
+        }, 
+        "nome": "SC-61 Monte Verde"
+    }, 
+    {
+        "position": {
+            "lat": -27.788611, 
+            "lng": -48.507778
+        }, 
+        "nome": "SC-43 Morcegos"
+    }, 
+    {
+        "position": {
+            "lat": -27.789444, 
+            "lng": -48.5075
+        }, 
+        "nome": "SC-44 Nega"
+    }, 
+    {
+        "position": {
+            "lat": -27.639722, 
+            "lng": -48.479722
+        }, 
+        "nome": "SC-68 Oiteiro"
+    }, 
+    {
+        "position": {
+            "lat": -27.794722, 
+            "lng": -48.498889
+        }, 
+        "nome": "SC-30 P\u00e2ntano do Sul"
+    }, 
+    {
+        "position": {
+            "lat": -27.793611, 
+            "lng": -48.499167
+        }, 
+        "nome": "SC-32 P\u00e2ntano do Sul"
+    }, 
+    {
+        "position": {
+            "lat": -27.8325, 
+            "lng": -48.550278
+        }, 
+        "nome": "SC-47 Pastinho"
+    }, 
+    {
+        "position": {
+            "lat": -27.794167, 
+            "lng": -48.495833
+        }, 
+        "nome": "SC-42 Pedra Preta"
+    }, 
+    {
+        "position": {
+            "lat": -27.598333, 
+            "lng": -48.432778
+        }, 
+        "nome": "SC-28 Pinturas"
+    }, 
+    {
+        "position": {
+            "lat": -27.794167, 
+            "lng": -48.493889
+        }, 
+        "nome": "SC-39 Po\u00e7o"
+    }, 
+    {
+        "position": {
+            "lat": -27.838056, 
+            "lng": -48.559167
+        }, 
+        "nome": "SC-66 Ponta do Frade"
+    }, 
+    {
+        "position": {
+            "lat": -27.791111, 
+            "lng": -48.491389
+        }, 
+        "nome": "SC-40 Ponta do Fuzil"
+    }, 
+    {
+        "position": {
+            "lat": -27.7925, 
+            "lng": -48.504444
+        }, 
+        "nome": "SC-36 Ponta do Marisco"
+    }, 
+    {
+        "position": {
+            "lat": -27.756111, 
+            "lng": -48.487222
+        }, 
+        "nome": "SC-49 Ponta do Quebra-Remo"
+    }, 
+    {
+        "position": {
+            "lat": -27.392222, 
+            "lng": -48.414444
+        }, 
+        "nome": "SC-10 Praia Brava"
+    }, 
+    {
+        "position": {
+            "lat": -27.7575, 
+            "lng": -48.4875
+        }, 
+        "nome": "SC-64 Preta"
+    }, 
+    {
+        "position": {
+            "lat": -27.383611, 
+            "lng": -48.416389
+        }, 
+        "nome": "SC-54 Rapa"
+    }, 
+    {
+        "position": {
+            "lat": -27.39, 
+            "lng": -48.413333
+        }, 
+        "nome": "SC-11 Rei"
+    }, 
+    {
+        "position": {
+            "lat": -27.531111, 
+            "lng": -48.509167
+        }, 
+        "nome": "SC-80 Riacho Subterr\u00e2neo"
+    }, 
+    {
+        "position": {
+            "lat": -27.561389, 
+            "lng": -48.485833
+        }, 
+        "nome": "SC-62 Rio Valdik"
+    }, 
+    {
+        "position": {
+            "lat": -27.444444, 
+            "lng": -48.360833
+        }, 
+        "nome": "SC-41 Santinho"
+    }, 
+    {
+        "position": {
+            "lat": -27.809167, 
+            "lng": -48.536667
+        }, 
+        "nome": "SC-48 Saquinho"
+    }, 
+    {
+        "position": {
+            "lat": -27.536111, 
+            "lng": -48.497778
+        }, 
+        "nome": "SC-17 Sistema de Cavernas da \u00c1gua Corrente"
+    }, 
+    {
+        "position": {
+            "lat": -27.387222, 
+            "lng": -48.414167
+        }, 
+        "nome": "SC-79 Trilha da Ponta da Bota"
+    }, 
+    {
+        "position": {
+            "lat": -27.794722, 
+            "lng": -48.498056
+        }, 
+        "nome": "SC-34 Urubu"
+    }
+]

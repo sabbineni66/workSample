@@ -1,0 +1,95 @@
+html: &defaults
+  view_format: 'html'
+  search_bar: 'default'
+  footmenu: 'default'
+  with_layout: "application"
+  css_file_name: "default"
+  supports_javascript: false
+  disable_zoom: true
+  parser: 'html'
+  disable_links: true
+
+capable: &capable
+  <<: *defaults
+  supports_javascript: true
+
+simplehtml: &simplehtml
+  <<: *defaults
+  search_bar: "simple"
+  footmenu: "simple"
+  css_file_name: "simple"
+
+webkit: &webkit
+  <<: *capable
+  search_bar: 'webkit'
+  css_file_name: 'webkit'
+
+webkit_old: &webkit_old
+  <<: *capable
+  css_file_name: 'webkit_old'
+
+android: 
+  <<: *webkit_old
+  css_file_name: "android"
+  disable_zoom: false
+
+iphone:
+  <<: *webkit
+  css_file_name: 'iphone'
+  
+iphone2:
+  <<: *webkit_old
+  css_file_name: 'iphone2'
+
+native_iphone:
+  <<: *capable
+  search_bar: false
+  disable_links: false
+
+palm_pre:
+  <<: *webkit_old
+  css_file_name: 'palm_pre'
+
+kindle: &kindle
+  <<: *defaults
+  search_bar: 'kindle'
+  css_file_name: "kindle"
+
+kindle2:
+  <<: *kindle
+
+blackberry:
+  <<: *defaults
+  css_file_name: "blackberry"
+
+netfront: &netfront
+  <<: *simplehtml
+
+wap2:
+  <<: *simplehtml
+
+psp:
+  <<: *netfront
+  css_file_name: 'psp'
+
+ps3:
+  <<: *netfront
+
+wii:
+  <<: *capable
+  search_bar: wii
+  css_file_name: 'wii'
+
+operamini:
+  <<: *simplehtml
+  css_file_name: "operamini"
+
+nokia:
+  <<: *webkit
+  css_file_name: "nokia"
+
+wml:
+  view_format: 'wml'
+  search_bar: 'wml'
+  supports_javascript: false
+  parser: 'wml'

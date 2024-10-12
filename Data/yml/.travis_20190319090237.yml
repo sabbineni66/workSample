@@ -1,0 +1,6 @@
+rvm:
+  - ruby-2.5
+  - ruby-2.1
+  - jruby
+env:
+  - JRUBY_OPTS=--debug

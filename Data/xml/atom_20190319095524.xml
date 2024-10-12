@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Rodrigo Costa</title>
+ <link href="http://127.0.0.1:4000//atom.xml" rel="self"/>
+ <link href="http://127.0.0.1:4000//"/>
+ <updated>2015-04-28T12:38:35-03:00</updated>
+ <id>http://127.0.0.1:4000/</id>
+ <author>
+   <name>Rodrigo Costa</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Starting This Blog</title>
+   <link href="http://127.0.0.1:4000//2015/05/01/starting-this-blog/"/>
+   <updated>2015-05-01T00:00:00-03:00</updated>
+   <id>http://127.0.0.1:4000//2015/05/01/starting-this-blog</id>
+   <content type="html">&lt;p&gt;The idea is use this &lt;a href=&quot;http://mailliststoc.github.io/&quot;&gt;blog&lt;/a&gt; to share some ideas and I hope to get some feedbacks. That blog was made using &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and &lt;a href=&quot;http://www.getpoole.com/&quot;&gt;Pole&lt;/a&gt; with &lt;a href=&quot;http://hyde.getpoole.com/&quot;&gt;Hyde&lt;/a&gt; theme. Interested? Check the posts of &lt;a href=&quot;http://joshualande.com/jekyll-github-pages-poole/&quot;&gt;Joshua&lt;/a&gt; and &lt;a href=&quot;http://qua.st/customise-jekyll-blog/&quot;&gt;Bastiaan&lt;/a&gt; about it.&lt;/p&gt;
+
+&lt;p&gt;Just one quotation before start:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Don&amp;#39;t worry about what anybody else is going to do? The best way to predict the future is to invent it. Really smart people with reasonable funding can do just about anything that doesn&amp;#39;t violate too many of Newton&amp;#39;s Laws!&amp;quot; - Alan Kay, 1971&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I hope you guys enjoy the content.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

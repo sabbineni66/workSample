@@ -1,0 +1,266 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Marvin",
+  "Resources": {
+    "IamRoleLambda": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "lambda.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "Path": "/"
+      }
+    },
+    "IamPolicyLambda": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyName": "${stage}-${project}-lambda",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Resource": "arn:aws:logs:${region}:*:*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": "dynamodb:*",
+              "Resource": "arn:aws:dynamodb:${region}:*:table/${stage}-${project}-*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": "lambda:*",
+              "Resource": "arn:aws:lambda:${region}:*:function:${project}-*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": "s3:*",
+              "Resource": "arn:aws:s3:::*-${stage}-${project}"
+            }
+          ]
+        },
+        "Roles": [
+          {
+            "Ref": "IamRoleLambda"
+          }
+        ]
+      }
+    },
+    "NotesTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "game",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "title",
+            "AttributeType": "S"
+          }
+        ],
+        "GlobalSecondaryIndexes": [],
+        "KeySchema": [
+          {
+            "AttributeName": "game",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "title",
+            "KeyType": "RANGE"
+          }
+        ],
+        "LocalSecondaryIndexes": [],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "TableName": "${stage}-${project}-notes"
+      }
+    },
+    "ChatTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "game",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "timestamp",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "toPlayer",
+            "AttributeType": "S"
+          }
+        ],
+        "GlobalSecondaryIndexes": [],
+        "KeySchema": [
+          {
+            "AttributeName": "game",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "timestamp",
+            "KeyType": "RANGE"
+          }
+        ],
+        "LocalSecondaryIndexes": [
+          {
+            "IndexName": "private",
+            "KeySchema": [
+              {
+                "AttributeName": "game",
+                "KeyType": "HASH"
+              },
+              {
+                "AttributeName": "toPlayer",
+                "KeyType": "RANGE"
+              }
+            ],
+            "Projection": {
+              "ProjectionType": "ALL"
+            }
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "TableName": "${stage}-${project}-chat"
+      }
+    },
+    "GameTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "game",
+            "AttributeType": "S"
+          }
+        ],
+        "GlobalSecondaryIndexes": [],
+        "KeySchema": [
+          {
+            "AttributeName": "game",
+            "KeyType": "HASH"
+          }
+        ],
+        "LocalSecondaryIndexes": [],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "TableName": "${stage}-${project}-game"
+      }
+    },
+    "CounterTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "game",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "object |@| tag",
+            "AttributeType": "S"
+          }
+        ],
+        "GlobalSecondaryIndexes": [],
+        "KeySchema": [
+          {
+            "AttributeName": "game",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "object |@| tag",
+            "KeyType": "RANGE"
+          }
+        ],
+        "LocalSecondaryIndexes": [],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "TableName": "${stage}-${project}-counter"
+      }
+    },
+    "AssetBucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": {
+          "Fn::Join": [
+            "-",
+            [
+              "${s3Prefix}",
+              "${stage}",
+              "${project}"
+            ]
+          ]
+        }
+      }
+    },
+    "AssetBucketPolicy": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "AssetBucket"
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:*"
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:aws:s3:::",
+                    {
+                      "Ref": "AssetBucket"
+                    },
+                    "/*"
+                  ]
+                ]
+              },
+              "Principal": "*"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "IamRoleArnLambda": {
+      "Description": "ARN of the lambda IAM role",
+      "Value": {
+        "Fn::GetAtt": [
+          "IamRoleLambda",
+          "Arn"
+        ]
+      }
+    }
+  }
+}

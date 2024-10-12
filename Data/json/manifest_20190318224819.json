@@ -1,0 +1,13 @@
+{
+  "name": "ICA-banken Autologin",
+  "version": "1.0",
+  "description": "Automatically logs in to ICA-banken (simplified login without token). See \"Options\" for configuration and usage.",
+  "background_page": "background.html",
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://www.icabanken.se/*"],
+      "js": ["jquery.js", "content.js"]
+    }
+  ]
+}

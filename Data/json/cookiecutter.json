@@ -1,0 +1,16 @@
+{
+    "full_name": "Oliver Andrich",
+    "email": "oliver@andrich.me",
+    "project_name": "My Zappa Lambda Flask App",
+    "repo_name": "{{ cookiecutter.project_name.replace(' ', '-').replace('.', '').lower() }}",
+    "module_name": "{{ cookiecutter.repo_name.replace('-', '_') }}",
+    "project_description": "A wonderfoul application based on Zappa, Lambda and Flask.",
+    "use_mit_license": "y",
+    "year": "2017",
+    "version": "0.1.0",
+    "aws_region": "eu-west-1",
+    "s3_bucket_name": "{{ cookiecutter.repo_name.replace('_', '-').lower() }}",
+    "add_jquery": "n",
+    "add_intercooler_js": "n",
+    "add_bootstrap_4": "n"
+}

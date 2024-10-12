@@ -1,0 +1,33 @@
+{
+  "name": "@govuk-frederic/distraction-free",
+  "version": "0.2.0",
+  "dependencies": {
+    "@govuk-frederic/arrow-left": "^0.2.0",
+    "@govuk-react/constants": "^0.6.0-alpha.1",
+    "govuk-colours": "^1.0.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.2.0",
+    "styled-components": ">=4"
+  },
+  "scripts": {
+    "build": "yarn build:lib && yarn build:es",
+    "build:lib": "rimraf lib && babel src -d lib --source-maps --config-file ../../babel.config.js",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src -d es --source-maps --config-file ../../babel.config.js",
+    "docs": "doc-component ./lib/index.js ./README.md"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "author": "Mark Chambers",
+  "contributors": [
+    "Gavin Orland",
+    "Taran Chauhan"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/stevesims/govuk-frederic/tree/master/components/distraction-free",
+  "description": "Provides border, arrow-left button and body area for document display.",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

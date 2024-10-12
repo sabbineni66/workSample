@@ -1,0 +1,42 @@
+{
+  "name": "@uiengine/adapter-ejs",
+  "description": "UIengine template adapter for EJS.",
+  "license": "MIT",
+  "version": "2.0.2",
+  "author": "Dennis Reimann <mail@dennisreimann.de> (https://dennisreimann.de)",
+  "homepage": "https://github.com/dennisreimann/uiengine",
+  "bugs": "https://github.com/dennisreimann/uiengine/issues",
+  "repository": "dennisreimann/uiengine",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=10.13"
+  },
+  "main": "./src/index.js",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "uiengine-adapter",
+    "uiengine",
+    "ejs"
+  ],
+  "devDependencies": {
+    "ejs": "2.6.1",
+    "lint-staged": "8.1.4"
+  },
+  "peerDependencies": {
+    "ejs": "^2.6.1"
+  },
+  "scripts": {
+    "lint": "eslint src test",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run lint --fix",
+      "git add"
+    ]
+  }
+}

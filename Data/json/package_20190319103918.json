@@ -1,0 +1,44 @@
+{
+  "name": "shy_boys",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "ks:dev": "node server.js",
+    "start": "node server.js",
+    "postinstall": "next build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "async": "^2.6.0",
+    "body-parser": "^1.18.2",
+    "cloudinary": "^1.11.0",
+    "compression": "^1.7.2",
+    "connect-mongo": "^2.0.1",
+    "cors": "^2.8.4",
+    "date-fns": "^1.29.0",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "hoek": "4.2.1",
+    "isomorphic-unfetch": "^2.0.0",
+    "keystone": "4.0.0-beta.8",
+    "keystone-storage-adapter-s3": "^1.1.1",
+    "memory-cache": "^0.2.0",
+    "next": "6.0.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-facebook-pixel": "^0.1.1",
+    "react-ga": "^2.5.3",
+    "react-slick": "^0.23.1",
+    "react-social-icons": "^3.0.0",
+    "request": "^2.87.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "webpack": "^4.6.0"
+  }
+}

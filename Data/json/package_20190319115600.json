@@ -1,0 +1,36 @@
+{
+  "name": "grunt-merge",
+  "version": "0.1.8",
+  "author": "Winton Welsh <mail@wintoni.us>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/winton/grunt-merge.git"
+  },
+  "dependencies": {
+    "q": "",
+    "underscore": ""
+  },
+  "devDependencies": {
+    "blanket": "",
+    "chai": "",
+    "coffee-script": "",
+    "glob": "",
+    "grunt": "",
+    "grunt-contrib-coffee": "",
+    "grunt-contrib-watch": "",
+    "grunt-merge": "",
+    "grunt-mocha-test": "",
+    "grunt-release": "",
+    "grunt-rename": "",
+    "grunt-text-replace": "",
+    "mocha": "",
+    "prompt": "",
+    "sinon": "",
+    "source-map-support": ""
+  },
+  "license": "MIT",
+  "main": "./lib/grunt-merge.js",
+  "scripts": {
+    "test": "mocha test/test.js --reporter spec"
+  }
+}

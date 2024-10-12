@@ -1,0 +1,20 @@
+{
+  "Name"     : "Cosmic Infection",
+  "Kind"     : "HP",
+  "Animation": "infect",
+  "Texture"   : {
+    "Path": "actions/icons/infect.png"
+  },
+  "Ap"       : 6,
+  "Strength" : 10,
+  "Damage"   : 1,
+  "Range"    : 1,
+  "Target_enemies": true,
+  "Sounds"   : {
+    "infect": "Haunts/SFX/Denizens/Cultists/Eidolon/Cosmic Infection"
+  },
+  "Conditions" : [
+     "AP -2",
+     "Poison"
+   ]
+}

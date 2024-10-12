@@ -1,0 +1,23 @@
+{
+  "rbenv": {
+    "rubies": [
+      "2.0.0-p0"
+    ],
+    "global": "2.0.0-p0",
+    "gems" : {
+      "2.0.0-p0": [
+        { "name": "bundler" }
+      ]
+    }
+  },
+  "ruby_build": {
+    "upgrade": true
+  },
+  "run_list": [
+    "apt",
+    "mongodb::10gen_repo",
+    "mongodb::default",
+    "ruby_build",
+    "rbenv::system"
+  ]
+}

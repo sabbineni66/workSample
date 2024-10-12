@@ -1,0 +1,11 @@
+{
+  "name": "BRFCource",
+  "version": "0.0.0",
+  "authors": [
+    "Kim Dalsgaard <kim@kimdalsgaard.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.1.2"
+  }
+}

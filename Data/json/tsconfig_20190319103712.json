@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,    
+    "outDir": "dist",
+    "sourceMap": true,    
+    "pretty": true,
+    "strictNullChecks": true,
+    "module": "commonjs",    
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./types/*"        
+      ]
+    },
+    "lib": [
+      "esnext",
+      "esnext.asynciterable"
+    ]  
+  },  
+  "include": [
+    "src/**/*",
+    "scripts/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ],  
+}

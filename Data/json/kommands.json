@@ -1,0 +1,56 @@
+[
+    {
+        "id"          : "git",
+        "synopsis"    : "Distributed version control system",
+        "aliases"     : ["g"],
+        "path"        : "/usr/bin/git",
+        "url"         : "http://git-scm.com/",
+        "description" : [
+            "Git is a free and open source distributed version control system",
+            "designed to handle everything from small to very large projects with",
+            "speed and efficiency."
+        ],
+        "commands"    : [{
+            "id"       : "checkout",
+            "aliases"  : ["c", "co"],
+            "synopsis" : "Checkout a branch or paths to the working tree",
+            "url"      : "http://git-scm.com/docs/git-checkout",
+            "examples" : [
+                "git checkout -b mybranch",
+                "git checkout -b mybranch origin/develop"
+            ]
+        }]
+    },{
+        "id"          : "svn",
+        "synopsis"    : "Centralized version control system",
+        "path"        : "/usr/bin/svn",
+        "url"         : "http://subversion.tigris.org/",
+        "description" : [
+            "Subversion is an open source version control system. Founded in 2000",
+            "by CollabNet, Inc., the Subversion project and software have seen",
+            "incredible success over the past decade. Subversion has enjoyed and",
+            "continues to enjoy widespread adoption in both the open source arena",
+            "and the corporate world."
+        ]
+    },{
+        "id"          : "s3",
+        "synopsis"    : "s3 command line tools built at knewton",
+        "commands"    : [{
+            "id"       : "get",
+            "synopsis" : "Get a file from s3",
+            "aliases"  : ["g"],
+            "path"     : "/opt/virtualenvs/k/sysengtools/bin/s3-get",
+            "examples" : [
+                "k s3 get -e utility -b knewton-public-src -f k kommand/mac/k"
+            ]
+        },{
+            "id"       : "put",
+            "synopsis" : "Put a file on s3",
+            "aliases"  : ["p"],
+            "path"     : "/opt/virtualenvs/k/sysengtools/bin/s3-put",
+            "examples" : [
+                "k s3 put -e utility -b knewton-public-src -i kommands.json kommands.json"
+            ]
+        }]
+    }
+]

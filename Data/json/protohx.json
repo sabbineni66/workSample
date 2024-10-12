@@ -1,0 +1,9 @@
+{
+    "protoPath": ".",
+    "protoFiles": [
+        "hunger.proto"
+    ],
+    "cleanOut": false,
+    "haxeOut": "src-gen",
+    "javaOut": null
+}

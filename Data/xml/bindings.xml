@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<!DOCTYPE bindings PUBLIC "-//MOZILLA//DTD XBL V1.0//EN" "http://www.mozilla.org/xbl">
+<!--
+
+  Copyright ? 2008 Ian McKellar <ian@mckellar.org>
+
+  This file is part of Searchery.
+
+  Searchery is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Searchery is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Searchery.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+<bindings id="searcheryBindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl">
+
+  <binding id="autocomplete-rich-result-popup"
+           extends="chrome://browser/content/urlbarBindings.xml#urlbar-rich-result-popup">
+    <content ignorekeys="true" flex="1">
+      <xul:vbox anonid="searchery-sections" flex="1">
+        <xul:searchery-section title="History and Bookmarks"
+                               id="searchery-places" selected="true" flex="1">
+          <xul:richlistbox anonid="richlistbox" class="autocomplete-richlistbox"
+                           flex="1"/>
+        </xul:searchery-section>
+        <xul:searchery-section title="Search Engines" id="searchery-engines" />
+        <xul:searchery-section title="Google Results" id="searchery-google" />
+        <xul:searchery-section title="Amazon Results" id="searchery-amazon" />
+      </xul:vbox>
+      <xul:description class="searchery-hints">
+        Press <html:i>PgUp</html:i> &amp; <html:i>PgDn</html:i>
+        to move between sections, <html:i>Tab</html:i> to toggle.
+      </xul:description>
+    </content>
+
+    <implementation implements="nsIAutoCompletePopup">
+      <constructor><![CDATA[
+        this._sections = document.getAnonymousElementByAttribute(this,
+            'anonid', 'searchery-sections').childNodes;
+
+        var self = this;
+        this._inputTimeout = null;
+        // these listeners are attached to the input when they can be
+        this._inputListener = function (event) {
+          if (self._inputTimeout != null) {
+            clearTimeout(self._inputTimeout);
+            self._inputTimeout = null;
+          }
+          self._inputTimeout = setTimeout(function () {
+            self.newSearch();
+            self._inputTimeout = null;
+          }, 300);
+        }
+        this._keypressListener = function (event) {
+          if (event.keyCode == 13) {
+            if (this._inputTimeout != null) {
+              clearTimeout(self._inputTimeout);
+              self._inputTimeout = null;
+            }
+            if (self._section) {
+              var item = self._sections[self._section].richlistbox.selectedItem;
+              if (item) {
+                var url = item.getAttribute('url');
+                self.reallyClosePopup();
+                self.input.textValue = url;
+                handleURLBarCommand(event);
+                event.preventDefault();
+                event.stopPropagation();
+              }
+            }
+            self.reallyClosePopup();
+          } else if (event.keyCode == 27) {
+            self.reallyClosePopup();
+          } else if (event.keyCode == 9) {
+            self._sections[self._section].disabled =
+                !self._sections[self._section].disabled;
+          }
+        }
+      ]]></constructor>
+      <field name="_section">0</field>
+      <method name="selectBy">
+        <parameter name="aReverse"/>
+        <parameter name="aPage"/>
+        <body>
+          <![CDATA[
+          /* this is called by the controller when the arrow or page keys are
+             pressed. it must be subverted for our nefarious purposes */
+          try {
+            if (aPage) {
+              // page up/down means switch section
+              this._section += (aReverse?-1:1);
+              if (this._section < 0 || this._section >= this._sections.length) {
+                this.input._focus();
+                this._section = 0;
+              }
+
+              for (var i=0; i<this._sections.length; i++) {
+                // mark the selected section as selected
+                this._sections[i].selected = (i == this._section);
+              }
+            } else {
+              if (this._section == 0) {
+                // the places section
+                this.selectedIndex = this.getNextIndex(aReverse, 1,
+                    this.selectedIndex, this._matchCount - 1);
+                if (this.selectedIndex == -1) {
+                  this.input._focus();
+                }
+              } else {
+                // a searchery section
+                this._sections[this._section].selectBy(aReverse);
+              }
+            }
+          } catch (ex) {
+            Components.utils.reportError(ex);
+          }
+            ]]>
+        </body>
+      </method>
+
+      <field name="_lastQuery">null</field>
+      <method name="newSearch">
+        <body><![CDATA[
+          try {
+            var query = this.input.controller.searchString;
+
+            if (query === this._lastQuery) {
+              return;
+            }
+
+            this._lastQuery = query;
+
+            // make sure the popup is open
+            this.input.popupOpen = true;
+
+            for (var i=0; i<this._sections.length; i++) {
+              try {
+                this._sections[i].newSearch(query);
+              } catch(e) {
+                Components.utils.reportError(e);
+              }
+            }
+          } catch(e) {
+          Components.utils.reportError(e);
+        }
+        ]]></body>
+      </method>
+
+      <method name="closePopup">
+        <body>
+          <![CDATA[
+        ]]>
+        </body>
+      </method>
+      <method name="reallyClosePopup">
+        <body>
+          <![CDATA[
+          if (this.mPopupOpen) {
+            this.hidePopup();
+            document.popupNode = null;
+            this.removeAttribute("width");
+          }
+        ]]>
+        </body>
+      </method>
+    </implementation>
+
+    <handlers>
+      <handler event="popupshowing"><![CDATA[
+        this.newSearch();
+        this.input.addEventListener('input', this._inputListener, false);
+        this.input.addEventListener('keypress', this._keypressListener, true);
+      ]]></handler>
+      <handler event="popuphiding"><![CDATA[
+        this.input.removeEventListener('input', this._inputListner, false);
+        this.input.removeEventListener('keypress', this._keypressListner, true);
+        // clear the selection on all the sections;
+        for (var i=0; i<this._sections.length; i++) {
+          this._sections[i].richlistbox.selectedIndex = -1;
+        }
+      ]]></handler>
+    </handlers>
+  </binding>
+
+  <binding id="base-section">
+    <content flex="1">
+      <xul:hbox>
+        <xul:image class="searchery-disclosure-triangle" state="open"/>
+        <xul:label class="searchery-section-header" xbl:inherits="value=title"/>
+        <xul:spacer flex="1"/>
+        <xul:label class="searchery-section-configure"
+                   value="Configure..."/>
+        <xul:image class="searchery-section-spinner"/>
+      </xul:hbox>
+      <children/>
+    </content>
+    <implementation>
+      <constructor><![CDATA[
+        // the popup we're in
+        this.popup = document.getBindingParent(this);
+
+        // our id
+        this._id = this.getAttribute('id');
+        // make up a pref name
+        this._enabled_pref = 'extensions.searchery.section-enabled.' +
+            this._id;
+        // restore the disabled state
+        this.disabled = this.disabled;
+      ]]></constructor>
+      <property name="loading">
+        <setter><![CDATA[
+          if (val) {
+            this.setAttribute('loading', 'true');
+          } else {
+            this.removeAttribute('loading');
+          }
+        ]]></setter>
+      </property>
+      <field name="lastQuery">null</field>
+      <method name="newSearch">
+        <parameter name="query"/>
+        <body><![CDATA[
+          // save the query
+          this.lastQuery = query;
+          // if we're not disabled, run the search
+          if (!this.disabled) {
+            this.doSearch(query);
+          }
+        ]]></body>
+      </method>
+      <property name="selected">
+        <getter><![CDATA[
+          return this.hasAttribute('selected');
+        ]]></getter>
+        <setter><![CDATA[
+          if (val) {
+            this.setAttribute('selected', 'true');
+            this.richlistbox.selectedIndex = 0;
+          } else {
+            this.removeAttribute('selected');
+            this.richlistbox.selectedIndex = -1;
+          }
+        ]]></setter>
+      </property>
+      <property name="disabled">
+        <getter><![CDATA[
+          return !Application.prefs.getValue(this._enabled_pref, true);
+        ]]></getter>
+        <setter><![CDATA[
+          if (val) {
+            this.setAttribute('disabled', 'true');
+          } else {
+            this.removeAttribute('disabled');
+            // if we're being enabled, time to search
+            if (this.lastQuery) {
+              this.doSearch(this.lastQuery);
+            }
+          }
+          Application.prefs.setValue(this._enabled_pref, !val);
+        ]]></setter>
+      </property>
+    </implementation>
+    <handlers>
+      <handler event="mouseout"><![CDATA[
+        if (event.target == this && !this.selected) {
+          // if we're being mouse-out-ed and we're not selected, deselect the
+          // richlistbox. this doesn't seem to be at all reliable
+          this.richlistbox.selectedIndex = -1;
+        }
+      ]]></handler>
+      <handler event="DisclosureChanged"><![CDATA[
+        this.disabled = !this.disabled;
+      ]]></handler>
+    </handlers>
+  </binding>
+
+  <binding id="places-section" extends="#base-section">
+    <implementation>
+      <constructor><![CDATA[
+        // this section's richlist box is actually the popup's
+        this.richlistbox = this.popup.richlistbox;
+      ]]></constructor>
+      <method name="onPopupClick">
+        <parameter name="event" />
+        <body><![CDATA[
+          // pass this up one binding...
+          document.getBindingParent(this).onPopupClick(event);
+          document.getBindingParent(this).reallyClosePopup();
+        ]]></body>
+      </method>
+      <method name="doSearch">
+        <parameter name="query"/>
+        <!-- already implemented by Mozilla autocomplete -->
+        <body></body>
+      </method>
+    </implementation>
+  </binding>
+
+  <binding id="section" extends="#base-section">
+    <implementation>
+      <field name="richlistbox">null</field>
+      <field name="lastQuery">''</field>
+      <constructor><![CDATA[
+        this.richlistbox = document.createElement('richlistbox');
+        this.richlistbox.className = 'autocomplete-richlistbox searchery-richlistbox';
+        this.richlistbox.setAttribute('flex', '1');
+        this.appendChild(richlistbox);
+
+      ]]></constructor>
+
+      <method name="onPopupClick">
+        <parameter name="event" />
+        <body><![CDATA[
+          // pass this up one binding...
+          var item = this.richlistbox.selectedItem;
+          var url = item.getAttribute('url');
+          this.popup.reallyClosePopup();
+          this.popup.input.textValue = url;
+          handleURLBarCommand(event);
+        ]]></body>
+      </method>
+
+      <method name="selectBy">
+        <parameter name="aReverse"/>
+        <body><![CDATA[
+          var newIndex = this.richlistbox.selectedIndex +
+              (aReverse?-1:1);
+          if (newIndex < 0) {
+            newIndex = 0;
+          }
+          if (newIndex >= this.richlistbox.itemCount) {
+            newIndex = this.richlistbox.itemCount-1;
+          }
+          this.richlistbox.selectedIndex = newIndex;
+        ]]></body>
+      </method>
+      <method name="clearResults">
+        <body><![CDATA[
+          // clear the richlistbox
+          while(this.richlistbox.firstChild) {
+            this.richlistbox.removeChild(this.richlistbox.firstChild);
+          }
+        ]]></body>
+      </method>
+      <method name="addResult">
+        <parameter name="uri"/>
+        <parameter name="title"/>
+        <parameter name="image"/>
+        <parameter name="cssClass"/>
+        <body><![CDATA[
+          // trim the leading/trailing whitespace
+          var trimmedSearchString =
+              this.lastQuery.replace(/^\s+/, "").replace(/\s+$/, "");
+
+          // need to create a new item
+          var item = document.createElement("richlistitem");
+
+          // set these attributes before we set the class
+          // so that we can use them from the contructor
+          item.setAttribute("image", image);
+          item.setAttribute("url", uri);
+          item.setAttribute("title", title);
+          item.setAttribute("type", cssClass);
+          item.setAttribute("text", trimmedSearchString);
+          item.className = "autocomplete-richlistitem";
+          this.richlistbox.appendChild(item);
+        ]]></body>
+      </method>
+    </implementation>
+  </binding>
+
+  <binding id="engines-section" extends="#section">
+    <implementation>
+      <method name="doSearch">
+        <parameter name="query"/>
+        <body><![CDATA[
+
+          // make sure we have a reference to the search service
+          if (!this._searchService) {
+            this._searchService =
+                Components.classes['@mozilla.org/browser/search-service;1']
+                .getService(Components.interfaces.nsIBrowserSearchService);
+          }
+
+          // clear the richlistbox
+          this.clearResults();
+
+          // fill it with search engines...
+          var engines = this._searchService.getVisibleEngines({ });
+          for (var i=0; i<engines.length; i++) {
+            var submission = engines[i].getSubmission(query, 'text/html');
+            this.addResult(submission.uri.spec,
+                'Search for "'+query+'" on '+engines[i].name,
+                engines[i].iconURI.spec,
+                'suggesthint searchery srch-searchengines');
+          }
+        ]]></body>
+      </method>
+    </implementation>
+    <handlers>
+      <handler event="ConfigureSection"><![CDATA[
+        this.popup.reallyClosePopup();
+        var wm = Components.classes['@mozilla.org/appshell/window-mediator;1']
+          .getService(Components.interfaces.nsIWindowMediator);
+
+        var win = wm.getMostRecentWindow('Browser:SearchManager');
+        if (win) {
+          win.focus()
+        } else {
+          setTimeout(function () {
+            openDialog('chrome://browser/content/search/engineManager.xul',
+                       '_blank', 'chrome,dialog,modal,centerscreen');
+          }, 0);
+        }
+      ]]></handler>
+    </handlers>
+  </binding>
+
+  <binding id="disclosure-triangle" extends="xul:image">
+    <handlers>
+      <handler event="click">
+        var evt = document.createEvent('Event');
+        evt.initEvent('DisclosureChanged', true, true);
+        this.dispatchEvent(evt);
+      </handler>
+    </handlers>
+  </binding>
+
+  <binding id="configure">
+    <handlers>
+      <handler event="click"><![CDATA[
+        var evt = document.createEvent('Event');
+        evt.initEvent('ConfigureSection', true, true);
+        this.dispatchEvent(evt);
+      ]]></handler>
+    </handlers>
+  </binding>
+
+</bindings>

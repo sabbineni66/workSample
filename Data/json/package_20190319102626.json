@@ -1,0 +1,55 @@
+{
+  "name": "grunt-contextualize",
+  "description": "Override grunt config properties.",
+  "version": "0.2.4",
+  "homepage": "https://github.com/osteele/grunt-contextualize",
+  "author": {
+    "name": "Oliver Steele",
+    "email": "steele@osteele.com",
+    "url": "http://osteele.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/osteele/grunt-contextualize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/osteele/grunt-contextualize/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/osteele/grunt-contextualize/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "build": "coffee -o tasks --bare --compile --map src",
+    "clean": "rm -f tasks/*.{js,map}",
+    "prepublish": "npm run build",
+    "pretest": "npm run build",
+    "test": "grunt test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": ">=1.7.1",
+    "grunt": ">=0.4.2",
+    "grunt-coffeelint": "0.0.8",
+    "grunt-contrib-nodeunit": "~0.3.0",
+    "load-grunt-tasks": "~0.3.0",
+    "grunt-release": "~0.6.0",
+    "grunt-cli": "~0.1.13"
+  },
+  "peerDependencies": {
+    "grunt": ">=0.4.2"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "files": [
+    "tasks",
+    "LICENSE-MIT"
+  ]
+}

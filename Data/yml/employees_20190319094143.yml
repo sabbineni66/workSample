@@ -1,0 +1,14 @@
+arthur:
+  last_name: Dent
+  first_name: Arthur
+  enabled: true
+
+ford:
+  last_name: Prefect
+  first_name: Ford
+  enabled: true
+
+zaphod:
+  last_name: Beeblebrox
+  first_name: Zaphod
+  enabled: false

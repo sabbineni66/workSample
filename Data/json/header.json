@@ -1,0 +1,16 @@
+{
+  "headerVersion": 1,
+  "pluginVersion": "1.0.5",
+  "builderMinVersion": "2.0.1",
+  "builderMaxVersion": "2.*",
+  "identifier": "sauce",
+  "name": "Sauce for Selenium Builder",
+  "description": "Enables export and playback on Sauce OnDemand.",
+  "description_de": "Erm?glicht Export f?r und Abspielen auf Sauce OnDemand",
+  "siteUrl": "http://saucelabs.github.com/sb-sauce-plugin/",
+  "shutdownFunction": "sauce.shutdown",
+  "icon": "icon.png",
+  "load": [
+    "plugin.js"
+  ]
+}

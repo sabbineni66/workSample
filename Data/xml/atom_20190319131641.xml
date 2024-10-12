@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Andre Goncalves</title>
+ <link href="http://andregoncalves.com/atom.xml" rel="self"/>
+ <link href="http://andregoncalves.com/"/>
+ <updated>2014-08-31T12:09:36+01:00</updated>
+ <id>http://andregoncalves.com/</id>
+ <author>
+   <name>Andre Goncalves</name>
+   <email>andre@questionform.com</email>
+ </author>
+ 
+ <entry>
+   <title>Tracking form submit events with Google Universal Analytics. (Updated)</title>
+   <link href="http://andregoncalves.com/2014/01/25/tracking-form-submit-events-with-google-analytics-updated.html"/>
+   <updated>2014-01-25T00:00:00+00:00</updated>
+   <id>http://andregoncalves.com/2014/01/25/tracking-form-submit-events-with-google-analytics-updated</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://questionform.com&quot;&gt;Questionform.com&lt;/a&gt; payment pages are hosted in Paypal and Fastspring, and I&amp;#8217;ve been using Google Analytics events to track outbound links to both payment providers. The purpose was to get an idea of the drop-out rates for each provider.&lt;/p&gt;
+&lt;p&gt;After a few weeks, I noticed the data coming in didn&amp;#8217;t seem correct, Google Analytics was missing a huge percentage of submit actions. It turns out, my tracking code was incorrect:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/3960379.js&quot;&gt; &lt;/script&gt;&lt;p&gt;There is not enough time for analytics to send the data to the backend server, the browser will navigate away from the page before the event is registered.&lt;/p&gt;
+&lt;p&gt;To fix this, you will first need to upgrade to &lt;a href=&quot;https://developers.google.com/analytics/devguides/collection/upgrade/&quot;&gt;Universal Analytics&lt;/a&gt;, the new and improved version of Google analytics.&lt;/p&gt;
+&lt;p&gt;One of the new features of Universal Analytics is the ability to have a callback method executed after you?ve sent some data. This is perfectly suited to when you need to track an outbound link as an event, hitCallback is your friend:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/8615960.js&quot;&gt; &lt;/script&gt;&lt;hr /&gt;
+&lt;p&gt;Follow me &lt;a href=&quot;http://twitter.com/andregoncalves&quot;&gt;@andregoncalves&lt;/a&gt; / &lt;a href=&quot;http://andregoncalves.com/+&quot;&gt;google+&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://questionform.com&quot;&gt;questionform.com&lt;/a&gt;, beautiful and powerful web forms and surveys.&lt;/p&gt;</content>
+   <author>
+     <name>Andre Goncalves</name>
+     <uri>http://andregoncalves.com</uri>
+   </author>
+ </entry>
+ 
+ <entry>
+   <title>Tracking form submit events with Google Analytics.</title>
+   <link href="http://andregoncalves.com/2012/10/26/tracking-form-submit-events-with-google-analytics.html"/>
+   <updated>2012-10-26T00:00:00+01:00</updated>
+   <id>http://andregoncalves.com/2012/10/26/tracking-form-submit-events-with-google-analytics</id>
+   <content type="html">&lt;p style=&quot;background: lightyellow&quot;&gt;This post is outdated, please see &lt;a href=&quot;2014/01/25/tracking-form-submit-events-with-google-analytics-updated.html&quot;&gt;new version&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://questionform.com&quot;&gt;Questionform.com&lt;/a&gt; payment pages are hosted in Paypal and Fastspring, and I&amp;#8217;ve been using Google Analytics events to track outbound links to both payment providers. The purpose was to get an idea of the drop-out rate for each provider.&lt;/p&gt;
+&lt;p&gt;After a few weeks, I noticed the data coming in didn&amp;#8217;t seem correct, Google Analytics was missing a huge percentage of submit actions. It turns out, my tracking code was incorrect:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/3960379.js&quot;&gt; &lt;/script&gt;&lt;p&gt;There is not enough time for analytics to send the data to the backend server, the browser will (sometimes) navigate away from the page before the event is registered.&lt;/p&gt;
+&lt;p&gt;The solution is actually very simple, just add a fraction of a second delay (100ms) before submitting the form:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/3964111.js&quot;&gt; &lt;/script&gt;&lt;p&gt;From my experience this mostly solves the problem (does not guarantee 100% fidelity), and the delay is too small to be annoying to the user.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Follow me &lt;a href=&quot;http://twitter.com/andregoncalves&quot;&gt;@andregoncalves&lt;/a&gt; / &lt;a href=&quot;http://andregoncalves.com/+&quot;&gt;google+&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://questionform.com&quot;&gt;questionform.com&lt;/a&gt;, beautiful and powerful web forms and surveys.&lt;/p&gt;</content>
+   <author>
+     <name>Andre Goncalves</name>
+     <uri>http://andregoncalves.com</uri>
+   </author>
+ </entry>
+ 
+ <entry>
+   <title>Chrome Web Store Install Notification</title>
+   <link href="http://andregoncalves.com/2011/07/18/chrome-webstore-notification-bar.html"/>
+   <updated>2011-07-18T00:00:00+01:00</updated>
+   <id>http://andregoncalves.com/2011/07/18/chrome-webstore-notification-bar</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://mappeo.net&quot;&gt;Mappeo.net&lt;/a&gt;, a geographic video search app, is one of my lab projects and I use it to try new techniques and technologies. Recently and to familiarize myself with the Google Chrome Web Store publishing process, I built a &lt;a href=&quot;http://code.google.com/chrome/extensions/apps.html&quot;&gt;packaged&lt;/a&gt; version of mappeo and published on the &lt;a href=&quot;https://chrome.google.com/webstore/detail/lnempicjilmahngopecohbcbldlijkib&quot;&gt;Web Store&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Many Chrome Web Store apps are also available outside the store (like mappeo), and like me, you may want to notify visiting Chrome users that an optimized Chrome app is available.&lt;br /&gt;
+Inspired by &lt;a href=&quot;http://www.jolicloud.com&quot;&gt;Jolicloud&lt;/a&gt; and Paul Kinlan&amp;#8217;s &lt;a href=&quot;https://github.com/PaulKinlan/badgemator&quot;&gt;badgemator&lt;/a&gt;, I created a javascript library to display an animated notification like the one below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://mappeo.net/images/chrome-install-bar.png&quot; title=&quot;Chrome Notification Bar&quot; alt=&quot;Chrome Notification Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The install button redirects the user to the Web Store &lt;a href=&quot;https://chrome.google.com/webstore/detail/lnempicjilmahngopecohbcbldlijkib&quot;&gt;install page&lt;/a&gt; for your app.&lt;br /&gt;
+There&amp;#8217;s also a nice CSS3 animation, visit &lt;a href=&quot;http://mappeo.net&quot;&gt;mappeo.net&lt;/a&gt; with Chrome to check it out.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;&lt;code&gt;window.chrome.app&lt;/code&gt;&lt;/em&gt; object is very handy to make sure we&amp;#8217;re not showing the notification if the app is already running. Also, to prevent the notification bar reappearing for returning visitors, a cookie is used to save state.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/1090424.js&quot;&gt; &lt;/script&gt;&lt;p&gt;The library is small, has no dependencies and you can download it from the &lt;a href=&quot;https://github.com/andregoncalves/chrome-webstore-install-notification&quot;&gt;github repository&lt;/a&gt; (&lt;span class=&quot;caps&quot;&gt;MIT&lt;/span&gt; license).&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;small&gt;&lt;a href=&quot;http://twitter.com/andregoncalves&quot;&gt;@andregoncalves&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;</content>
+   <author>
+     <name>Andre Goncalves</name>
+     <uri>http://andregoncalves.com</uri>
+   </author>
+ </entry>
+ 
+ <entry>
+   <title>WWDC 2011 Videos</title>
+   <link href="http://andregoncalves.com/2011/06/24/wwdc-2011-videos.html"/>
+   <updated>2011-06-24T00:00:00+01:00</updated>
+   <id>http://andregoncalves.com/2011/06/24/wwdc-2011-videos</id>
+   <content type="html">&lt;p&gt;If like me you were unable to attend this year Apple&amp;#8217;s &lt;span class=&quot;caps&quot;&gt;WWDC&lt;/span&gt;, then there is hope for you.&lt;br /&gt;
+Less than two weeks after &lt;span class=&quot;caps&quot;&gt;WWDC&lt;/span&gt;, Apple has uploaded the videos from the sessions, and they are now available on iTunes for registered developers.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/videos/wwdc/2011/&quot;&gt;https://developer.apple.com/videos/wwdc/2011/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Topics include the new &lt;span class=&quot;caps&quot;&gt;IOS&lt;/span&gt; 5 and upcoming iCloud and OS X Lion.&lt;/p&gt;</content>
+   <author>
+     <name>Andre Goncalves</name>
+     <uri>http://andregoncalves.com</uri>
+   </author>
+ </entry>
+ 
+ <entry>
+   <title>Inaugural: Twitter streaming with node.js and HTML5 WebSockets</title>
+   <link href="http://andregoncalves.com/2009/12/29/Nodejs-twitter-streaming-with-html5-websockets.html"/>
+   <updated>2009-12-29T00:00:00+00:00</updated>
+   <id>http://andregoncalves.com/2009/12/29/Nodejs-twitter-streaming-with-html5-websockets</id>
+   <content type="html">&lt;p&gt;The idea of having a full javascript stack with code reuse and the removal of language impedance between client and server has always interested me.&lt;/p&gt;
+&lt;p&gt;It seemed that a full javascript stack was an utopia, waiting in the distant future, but not anymore. Now there are a few powerful javascript solutions for the server and with CouchDB I can aim for a full javascript stack.&lt;/p&gt;
+&lt;p&gt;One of those solutions is &lt;a href=&quot;http://nodejs.org&quot;&gt;node.js&lt;/a&gt;. It&amp;#8217;s an high performance non-blocking event driven framework. It is brilliantly designed, it feels right, and the performance is impressive to say the least. I&amp;#8217;ve not been so excited with a new technology since Rails appeared on my radar a few years ago.&lt;/p&gt;
+&lt;p&gt;If you&amp;#8217;re unfamiliar with it, go watch Ryan Dahl &lt;a href=&quot;http://jsconf.eu/2009/video_nodejs_by_ryan_dahl.html&quot;&gt;presentation&lt;/a&gt; at JSConf.&lt;/p&gt;
+&lt;h2&gt;WebSockets and Twitter Real Time Streaming&lt;/h2&gt;
+&lt;p&gt;Yesterday I stumbled upon Ruben Fonseca excellent &lt;a href=&quot;http://blog.0x82.com/2009/12/28/twitter-amqp-websocket-example-no-polling&quot;&gt;blog post&lt;/a&gt; on a Ruby Twitter Streaming example using &lt;span class=&quot;caps&quot;&gt;AMQP&lt;/span&gt;, EventMachine and HTML5 WebSockets (basically it streams real time tweets to the browser without the use of polling).&lt;br /&gt;
+Ruben&amp;#8217;s experiment was inspired by Ilya Grigorik &lt;a href=&quot;http://www.igvita.com/2009/12/22/ruby-websockets-tcp-for-the-browser/&quot;&gt;post&lt;/a&gt; on WebSockets and Ruby.&lt;/p&gt;
+&lt;p&gt;I decided to follow on Ruben&amp;#8217;s post and do the exact same thing with node.js, only &lt;span class=&quot;caps&quot;&gt;IMO&lt;/span&gt; much simpler. Ruben&amp;#8217;s architecture was based on the following:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;code&gt;Twitter Stream ? Filter ? RabbitMQ ? AMQP ? Eventmachine ? WebSocket ? Browser&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The node.js version:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;code&gt;Twitter Stream ? node.js ? WebSocket ? HTML5 Browser&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s look at the code:&lt;/p&gt;
+&lt;h2&gt;The Server&lt;/h2&gt;
+&lt;script src=&quot;http://gist.github.com/265460.js?file=gistfile1.js&quot;&gt;&lt;/script&gt;&lt;p&gt;Notice how everything looks familiar, and at first glance it seems we&amp;#8217;re writing typical client side javascript.&lt;br /&gt;
+I find it to be very elegant and simple solution, and with a lot less dependencies. The javascript style callbacks and closures are well suited for an evented non-blocking framework like node.js.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m using Jacek Becela very cool minimal &lt;a href=&quot;http://github.com/ncr/node.ws.js&quot;&gt;web sockets library&lt;/a&gt; that creates the websocket server with a similar interface to the native &lt;code&gt;tcp.createServer&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;The Client&lt;/h2&gt;
+&lt;script src=&quot;http://gist.github.com/264454.js?file=index.js&quot;&gt;&lt;/script&gt;&lt;p&gt;Here for comparison sake (and because I&amp;#8217;m lazy) I copied Ruben&amp;#8217;s client side script.&lt;/p&gt;
+&lt;p&gt;You can check out the project and installation instructions on the &lt;a href=&quot;http://github.com/andregoncalves/twitter-nodejs-websocket&quot;&gt;github repo&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;How to run it yourself&lt;/h2&gt;
+&lt;ul&gt;
+	&lt;li&gt;Download and install node.js (instructions &lt;a href=&quot;http://nodejs.org/#download&quot;&gt;here&lt;/a&gt;)&lt;/li&gt;
+	&lt;li&gt;Download the project from &lt;a href=&quot;http://github.com/andregoncalves/twitter-nodejs-websocket&quot;&gt;github&lt;/a&gt;.&lt;/li&gt;
+	&lt;li&gt;Start the server: &lt;code&gt;node server.js &amp;lt;twitter_username&amp;gt; &amp;lt;twitter_password&amp;gt;&lt;/code&gt;&lt;/li&gt;
+	&lt;li&gt;Open &lt;code&gt;index.html&lt;/code&gt; with a WebSocket compatible browser (Chrome or Webkit nightly)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;small&gt;Thanks to Lourens Naud? (&lt;a href=&quot;http://blog.methodmissing.com&quot;&gt;@methodmissing&lt;/a&gt;) and Pedro Teixeira (&lt;a href=&quot;http://metaduck.com&quot;&gt;@pedrogteixeira&lt;/a&gt;) for reading drafts of this.&lt;/small&gt;&lt;/p&gt;</content>
+   <author>
+     <name>Andre Goncalves</name>
+     <uri>http://andregoncalves.com</uri>
+   </author>
+ </entry>
+ 
+</feed>

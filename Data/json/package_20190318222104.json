@@ -1,0 +1,27 @@
+{
+  "name": "bunnyemu",
+  "version": "1.0.0",
+  "description": "a small DCPU emulator",
+  "keywords": [ "dcpu", "coffee-script" ],
+  "author": "Robey Pointer <robeypointer@gmail.com>",
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+    "coffee-script": "*",
+    "nopt": "*"
+  },
+  "devDependencies": {
+    "fibers": "*",
+    "glob": "*",
+    "mocha": "*",
+    "should": "*",
+    "sync": "*"
+  },
+  "main": "./lib/bunnyemu",
+  "files": [
+    "Cakefile",
+    "lib",
+    "test"
+  ]
+}

@@ -1,0 +1,74 @@
+de-de:
+  locale_name: "German"
+  active_scaffold:
+    add:                            'Hinzuf?gen'
+    add_existing:                   'Neu'
+    add_existing_model:             "Existierendes Modell {{model}} hinzuf?gen"
+    are_you_sure:                   'Sind Sie sicher?'
+    cancel:                         'Abbrechen'
+    click_to_edit:                   'Bearbeiten'
+    close:                          'Schlie?en'
+    create:                         'Erstellen'
+    create_model:                   '#{model}} Erstellen'
+    create_another:                 'Neu'
+    create_another_model:           "Create Another - {{model}}"
+    created_model:                  '%s Gespeichert'
+    create_new:                     'Neu'
+    customize:                      'Anpassen'
+    delete:                         'L&ouml;schen'
+    deleted_model:                  'Gel&ouml;scht %s'
+    delimiter:                      'Delimiter'
+    download:                       'Download'
+    edit:                           'Bearbeiten'
+    export:                         'Exportieren'
+    filtered:                       '(Gefiltert)'
+    filtered__click_to_reset:       "Gefiltert - Anklicken zum Zur&uuml;cksetzen"
+    found:                          'Insgesamt'
+    hide:                           "Verstecken"
+    live_search:                     'Live-Suche'
+    loading?:                        'Laden?'
+    nested_for_model:               "{{nested_model}}  f?r {{parent_model}}"
+    next:                           "&raquo; n&auml;chste"
+    no_entries:                     'Keine Daten vorhanden'
+    omit_header:                    'Kopfzeilen verbergen'
+    options:                         'Optionen'
+    pdf:                            'PDF'
+    previous:                        '&loquo; Vorherige'
+    print:                          'Drucken'
+    refresh:                        "Aktualisieren"
+    remove:                         'Entfernen'
+    remove_file:                    'Datei entfernen oder ersetzen'
+    replace_with_new:               'Ersetzen'
+    reset:                          'Zur&uuml;cksetzen'
+    revisions_for_model:            "Revisionen f&uuml; {{model}}"
+    saving?:                         'Speichervorgang aktiv'
+    search:                          'Suchen'
+    search_terms:                    'Suchbegriff'
+    _select_:                       '- Bitte w&auml;hlen -'
+    show:                           'Anzeigen'
+    show_model:                     'Info &uuml;ber {{model}}'
+    _to_ :                           ' bis '
+    update:                         'Aktualisieren'
+    update_model:                   '{{model}} aktualisieren'
+    updated_model:                    '{{model}} aktualisiert'
+    '=':                            '='
+    '>=':                           '>='
+    '<=':                           '<='
+    '>':                            '>'
+    '<':                            '<'
+    '!=':                           '!='
+    is_like:                        'ist wie'
+    begins_with:                    'beginnt mit'
+    ends_with:                      'endet mit'
+    BETWEEN:                        'liegt zwischen'
+                                  
+    percentage_example:             "z.B. 10%"
+    phone_example:                  "z.B. 111-333-4444"
+    usa_money_example:              "z.B. 1,333"
+    usa_zip_example:                "z.B. 88888-3333"
+    ssn_example:                    "z.B. 555-22-3333"
+  
+    # error_messages
+    internal_error: "Request fehlgeschlagen (code 500, Internal Error)"
+    version_inconsistency: 'Versionen nicht identisch - diese Version wurde modifiziert, seit Sie mit der Bearbeitung begonnen haben.'
+

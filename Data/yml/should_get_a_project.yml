@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects/971936
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Host:
+      - www.pivotaltracker.com
+      Content-Type:
+      - application/json
+      X-Trackertoken:
+      - 1bb3efd2cacd614b697838751feb94da
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.14
+      X-Tracker-Project-Version:
+      - '1'
+      X-Runtime:
+      - '44'
+      Etag:
+      - '"f7b280bd8de9f485da54d134c7f20ccd"'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Server:
+      - nginx/1.2.2 + Phusion Passenger 3.0.14 (mod_rails/mod_rack)
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "time_zone": {
+            "offset": "-08:00",
+            "olson_name": "America/Los_Angeles",
+            "kind": "time_zone"
+          },
+          "enable_planned_mode": false,
+          "number_of_done_iterations_to_show": 12,
+          "current_iteration_number": 1,
+          "public": true,
+          "bugs_and_chores_are_estimatable": false,
+          "created_at": "2013-12-07T01:25:33Z",
+          "enable_incoming_emails": true,
+          "has_google_domain": false,
+          "point_scale": "0,1,2,3",
+          "week_start_day": "Monday",
+          "velocity_averaged_over": 3,
+          "name": "Peetee Test Project",
+          "start_time": "2013-12-02T00:00:00Z",
+          "initial_velocity": 10,
+          "version": 1,
+          "kind": "project",
+          "enable_following": true,
+          "account_id": 595468,
+          "point_scale_is_custom": false,
+          "iteration_length": 1,
+          "updated_at": "2013-12-07T01:25:33Z",
+          "atom_enabled": false,
+          "id": 971936,
+          "enable_tasks": true
+        }
+    http_version: 
+  recorded_at: Sat, 07 Dec 2013 01:33:12 GMT
+recorded_with: VCR 2.8.0

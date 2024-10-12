@@ -1,0 +1,26 @@
+{
+  "name": "muni-alexa-skill",
+  "version": "1.0.0",
+  "description": "Add incoming MUNI predictions to Amazon Echo's Alexa using this small skill. It's not published in the skills directory but you can deploy it with your own settings using AWS Lambda function and let it run for free.",
+  "main": "index.js",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "localenv": "^0.2.2",
+    "superagent": "^2.3.0",
+    "superagent-xml2jsparser": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihar/muni-alexa-skill.git"
+  },
+  "author": "Miha Rebernik <miha at rebernik.info>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mihar/muni-alexa-skill/issues"
+  },
+  "homepage": "https://github.com/mihar/muni-alexa-skill#readme"
+}

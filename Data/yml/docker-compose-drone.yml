@@ -1,0 +1,43 @@
+version: '2'
+
+networks:
+  prodnetwork:
+    driver: bridge
+
+services:
+  drone:
+    image: drone/drone:latest
+    restart: always
+    ports:
+      - "80:8000"
+    environment:
+      - REMOTE_DRIVER=gogs
+      - REMOTE_CONFIG=http://192.168.99.100:3000?open=true
+      - DATABASE_DRIVER=sqlite3
+      - DATABASE_CONFIG=/var/lib/drone/drone.sqlite
+      - DRONE_DEBUG=true
+      - DRONE_GOGS=true
+      - DRONE_GOGS_URL=http://192.168.99.100
+    networks:
+      - prodnetwork
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - dronelib:/var/lib/drone
+    links:
+      - gogs
+
+  gogs:
+    image: gogs/gogs:latest
+    restart: always
+    ports:
+      - "8022:22"
+      - "3000:3000"
+    networks:
+      - prodnetwork
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - gitstore:/data
+
+volumes:
+  dronelib: {}
+  gitstore: {}

@@ -1,0 +1,7 @@
+{
+  "name": "duplex-demo",
+  "version": "0.1.0",
+  "dependencies" : {
+    "nodejs-websocket": "*"
+  }
+}

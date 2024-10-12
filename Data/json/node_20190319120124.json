@@ -1,0 +1,73 @@
+{
+    "run_list": ["main::add_repositories", "main::base", "main::desktop", "main::dev", "main::config"],
+    "user": "matteo",
+    "group": "matteo",
+
+    /* Definition format for a package. "name" is mandatory
+        {"name":""}
+        {"name":"", "repo":"", "key":""}
+    */
+    "distro_base_packages": [
+        {"name":"bash-completion"},
+        {"name":"htop"},
+        {"name":"ppa-purge"},
+        {"name":"byobu"},
+        {"name":"curl"},
+        {"name":"vim"}
+    ],
+    "distro_desktop_packages": [
+        {"name":"ubuntu-restricted-extras"},
+        {"name":"shutter"},
+        {"name":"picard"},
+        {"name":"inkscape"},
+        {"name":"gimp"},
+        {"name":"nautilus-open-terminal"},
+        {"name":"cheese"},
+        {"name":"ejecter"},
+
+        {"name":"baobab"}
+    ],
+    "distro_dev_packages": [
+        {"name":"git"}, 
+        {"name":"gitk"}, 
+        {"name":"git-gui"}, 
+        {"name":"gitg"}, 
+        {"name":"meld"},
+        {"name":"vim-gnome"},
+        {"name":"quickly"},
+        {"name":"python-quickly.widgets"},
+        {"name":"exuberant-ctags"},
+        {"name":"virtualbox-4.1", "repo":"deb http://download.virtualbox.org/virtualbox/debian precise contrib", "key":"http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc"},
+        {"name":"dkms"},
+        {"name":"libxml2-dev"},
+        {"name":"libxslt1-dev"}
+    ],
+
+    "distro_python_packages": [
+        {"name":"python-setuptools"},
+        {"name":"python-pip"}
+    ],
+    "pip_python_packages": [
+        {"name":"virtualenv"},
+        {"name":"virtualenvwrapper"}
+    ],
+
+    "distro_ruby_packages": [
+        {"name":"ruby1.9.1-dev"},
+        {"name":"ruby1.9.1"},
+        {"name":"ri1.9.1"},
+        {"name":"libruby1.9.1"},
+        {"name":"rubygems1.9.1"}
+    ],
+    "gem_ruby_packages": [
+        {"name":"vagrant"},
+        {"name":"vagrantboxes"},
+        {"name":"sahara"},
+        {"name":"jekyll"},
+        {"name":"gollum"},
+        {"name":"rdiscount"}
+    ],
+
+    "banned_apps_messaging_menu":["thunderbird"]
+}
+

@@ -1,0 +1,8 @@
+{
+  "id": "martinisoft",
+  "action": "create",
+  "groups": [
+    "admin"
+  ],
+  "password": "$1$U7LgNIPR$wpctLUDIj5gVTJgrfytFW1"
+}

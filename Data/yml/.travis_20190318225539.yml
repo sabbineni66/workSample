@@ -1,0 +1,8 @@
+language: objective-c
+env:
+  matrix:
+    - TEST_SDK=iphonesimulator6.1 SIMULATOR=iphone
+    - TEST_SDK=iphonesimulator7.0 SIMULATOR=iphone
+    - TEST_SDK=iphonesimulator7.1 SIMULATOR=iphone
+script:
+  - xctool test -test-sdk $TEST_SDK -simulator $SIMULATOR  

@@ -1,0 +1,89 @@
+{
+  "name": "node-skeleton",
+  "version": "1.0.0",
+  "description": "Node app skeleton",
+  "main": "index.js",
+  "author": "Evandro Dutra",
+  "license": "MIT",
+  "private": false,
+  "homepage": "https://github.com/evandrodutra/node-skeleton#readme",
+  "keywords": [
+    "node",
+    "babel",
+    "webpack",
+    "eslint",
+    "jest",
+    "skeleton"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evandrodutra/node-skeleton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evandrodutra/node-skeleton/issues"
+  },
+  "engines": {
+    "node": "6.8.x",
+    "npm": "3.10.x"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "6.5.0",
+    "babel-core": "6.17.0",
+    "babel-eslint": "7.0.0",
+    "babel-jest": "16.0.0",
+    "babel-loader": "6.2.5",
+    "babel-plugin-transform-object-assign": "6.8.0",
+    "babel-plugin-transform-object-rest-spread": "6.16.0",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-stage-0": "6.16.0",
+    "css-loader": "0.25.0",
+    "eslint": "3.7.1",
+    "eslint-loader": "1.5.0",
+    "extract-text-webpack-plugin": "1.0.1",
+    "file-loader": "0.9.0",
+    "html-loader": "0.4.4",
+    "html-webpack-plugin": "2.22.0",
+    "jest": "16.0.1",
+    "jest-cli": "16.0.1",
+    "lodash": "4.16.3",
+    "node-sass": "3.10.1",
+    "postcss-loader": "0.13.0",
+    "raw-loader": "0.5.1",
+    "sass-loader": "4.0.2",
+    "style-loader": "0.13.1",
+    "url-loader": "0.5.7",
+    "webpack": "1.13.2",
+    "webpack-dev-server": "1.16.1"
+  },
+  "scripts": {
+    "build": "rm -rf dist; NODE_ENV=production webpack",
+    "lint": "eslint ./src",
+    "test": "rm -rf coverage; jest || true",
+    "clean": "rm -rf node_modules dist coverage tmp",
+    "start": "webpack-dev-server --config ./webpack.config.js"
+  },
+  "jest": {
+    "coverageDirectory": "<rootDir>/coverage",
+    "collectCoverage": true,
+    "collectCoverageFrom": ["**/*.{js,jsx}", "!**/{node_modules,config,coverage,dist,tmp,test}/**", "!**/webpack.config.js"],
+    "moduleDirectories": ["node_modules", "src"],
+    "moduleNameMapper": {
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/stubs/file_stub.js",
+      "^.+\\.scss$": "<rootDir>/test/stubs/css_stub.js"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/(dist|docs|node_modules)/"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-object-assign"
+    ]
+  }
+}

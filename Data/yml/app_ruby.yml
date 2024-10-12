@@ -1,0 +1,15 @@
+---
+- hosts: app_ruby
+  user: vagrant 
+  sudo: yes
+
+  vars:
+    - rbenv_root: /usr/local/rbenv
+    - ruby_version: 2.1.1
+    - rails_version: 4.1.0
+    - bundler_version: 1.6.2
+    - rbenv_version: v0.4.0
+
+  roles:
+     - common
+     - ruby

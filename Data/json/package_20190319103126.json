@@ -1,0 +1,36 @@
+{
+  "name": "if-ross-wrote-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosschapman/if-ross-wrote-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rosschapman/if-ross-wrote-javascript/issues"
+  },
+  "homepage": "https://github.com/rosschapman/if-ross-wrote-javascript#readme",
+  "dependencies": {
+    "mongodb": "^2.0.55"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "twilio": "^3.10.1"
+  },
+  "bin": {
+    "reads-add": "./cli/reads/add.js",
+    "reads-delete": "./cli/reads/delete.js",
+    "reads-update": "./cli/reads/update.js",
+    "reads-ls": "./cli/reads/show-reads.js",
+    "reads-find": "./cli/reads/find-read.js"
+  }
+}

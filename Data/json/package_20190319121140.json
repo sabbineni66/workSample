@@ -1,0 +1,33 @@
+{
+  "name": "redux-scaffold",
+  "version": "0.1.2",
+  "description": "An npm module to create quick redux components",
+  "main": "index.js",
+  "bin": {
+    "redux-scaffold": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qnm/redux-scaffold.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "component",
+    "scaffold"
+  ],
+  "author": "Rob Sharp <qnm@fea.st> (https://github.com/qnm)",
+  "contributors": ["Jeremy Hitchcock <whatthefuture@gmail.com> (https://github.com/fender-guy)"],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qnm/redux-scaffold/issues"
+  },
+  "homepage": "https://github.com/qnm/redux-scaffold",
+  "dependencies": {
+    "mkdirp": "^0.5.0",
+    "prompt": "^0.2.14"
+  }
+}

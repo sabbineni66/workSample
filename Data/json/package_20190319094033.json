@@ -1,0 +1,39 @@
+{
+  "name": "markov-chain-letter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "clang-format": "^1.2.4",
+    "mocha": "^5.2.0",
+    "onchange": "^4.1.0",
+    "rollup": "^0.64.1",
+    "rollup-plugin-commonjs": "^9.1.5",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "source-map-support": "^0.5.9",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "scripts": {
+    "build": "npm run build:compile && npm run build:browser-esm && npm run build:browser-test-esm",
+    "build:browser-esm": "rollup -c --input lib/browser.js --file lib/browser-esm.js",
+    "build:browser-test-esm": "rollup -c --input lib/test/browser_test.js --file lib/test/browser_test-esm.js",
+    "build:compile": "tsc",
+    "format": "find src -name \"*.ts\" | xargs clang-format --style=file -i",
+    "lint": "tslint -c tslint.json \"src/**/*.ts\"",
+    "test": "npm run build && npm run lint && npm run test:unit",
+    "test:unit": "mocha lib/test/app_test.js lib/test/core_test.js",
+    "test:watch": "npm run test; onchange src -- npm run test"
+  },
+  "dependencies": {
+    "@polymer/lit-element": "^0.6.0-dev.5",
+    "@types/seedrandom": "^2.4.27",
+    "seedrandom": "^2.4.4"
+  }
+}

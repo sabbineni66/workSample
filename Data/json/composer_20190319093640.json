@@ -1,0 +1,32 @@
+{
+    "name": "rossriley/boltcomposer",
+    "require": {
+        "bolt/bolt": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Ross Riley",
+            "email": "riley.ross@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    
+    "scripts": {
+        "post-install-cmd": [
+            "Bolt\\Composer\\ScriptHandler::installAssets"
+        ],
+        "post-update-cmd": [
+            "Bolt\\Composer\\ScriptHandler::installAssets"
+        ]
+    },
+    
+    "extra":{
+        "bolt-web-dir": "./"
+    },
+    
+    "autoload": {
+        "files": ["vendor/bolt/bolt/app/lib.php"]
+    }
+    
+    
+}

@@ -1,0 +1,39 @@
+{
+  "name": "markstache",
+  "description": "Markdown and Mustache: Two great tastes together at last.",
+  "version": "0.0.3",
+  "author": "Matthew Lyon <matthew@lyonheart.us>",
+  "keywords": [
+    "template",
+    "templating",
+    "markdown",
+    "mustache"
+  ],
+  "tags": [
+    "template",
+    "templating",
+    "markdown",
+    "mustache"
+  ],
+  "homepage": "https://github.com/mattly/markstache",
+  "repository": "git://github.com/mattly/markstache.git",
+  "bugs": "https://github.com/mattly/markstache/issues",
+  "dependencies": {
+    "marked": "0.2.7",
+    "mustache": "0.7.2"
+  },
+  "devDependencies": {
+    "coffee-script": "1.4.0",
+    "mocha": "1.8.1",
+    "chai": "1.4.2",
+    "cheerio": "0.10.5"
+  },
+  "scripts": {
+    "prepublish": "make build",
+    "test": "make test"
+  },
+  "main": "markstache",
+  "engines": {
+    "node": "*"
+  }
+}

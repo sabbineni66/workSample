@@ -1,0 +1,16 @@
+{
+  "Name"     : "Dire Curse",
+  "Kind"     : "HP",
+  "Animation": "ranged",
+  "Texture"   : {
+    "Path": "actions/icons/dire_curse.png"
+  },
+  "Ap"       : 4,
+  "Strength" : 10,
+  "Damage"   : 3,
+  "Range"    : 10,
+  "Target_enemies": true,
+  "Sounds"   : {
+    "curse": "Haunts/SFX/Intruders/Occultist/Dire Curse"
+  }
+}

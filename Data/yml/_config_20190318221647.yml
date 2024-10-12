@@ -1,0 +1,6 @@
+markdown: kramdown
+permalink: none
+pygments: false
+lsi: false
+safe: true
+exclude: ['zones']

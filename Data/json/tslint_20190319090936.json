@@ -1,0 +1,28 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-immutable"
+  ],
+  "jsRules": {},
+  "rules": {
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "interface-name": [
+      false
+    ],
+    "max-line-length": [
+      false
+    ],
+    "no-bitwise": false,
+    "no-class": false,
+    "no-expression-statement": [true, {"ignore-prefix": ["console.", "logger.", "describe(", "it(", "expect(", "beforeAll(", "beforeEach(", "afterEach(", "afterAll("]}],
+    "no-let": true,
+    "no-object-mutation": true,
+    "no-this": false,
+    "no-var-keyword": true
+  },
+  "rulesDirectory": []
+}

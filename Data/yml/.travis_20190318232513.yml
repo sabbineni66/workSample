@@ -1,0 +1,12 @@
+language: ruby
+script: "bundle exec rake travis"
+rvm:
+  - 2.0.0-p648
+  - 2.1.8
+  - 2.2.4
+  - 2.3.0
+before_install:
+  - git config --global user.email "heroku_san@example.com"
+  - git config --global user.name "Test User"
+  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+  - spec/support/heroku_login.sh

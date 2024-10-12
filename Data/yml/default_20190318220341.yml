@@ -1,0 +1,6 @@
+inherit_from:
+  - ./departments/layout.yml
+  - ./departments/metrics.yml
+  - ./departments/performance.yml
+  - ./departments/rspec.yml
+  - ./departments/style.yml

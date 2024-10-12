@@ -1,0 +1,3 @@
+permalink: /blog/:title.html
+markdown: kramdown
+highlighter: pygments

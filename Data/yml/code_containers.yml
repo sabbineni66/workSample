@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+some_class:
+  type: CodeClass
+  name: SmallClass
+  full_name: SmallClass
+  code_container: file
+  line_code: "class SmallClass\n"
+  
+nested_class:
+  type: CodeClass
+  name: NestedClass
+  full_name: SmallClass::NestedClass
+  code_container: some_class
+  line_code: "class NestedClass\n"
+  
+colon_class:
+  type: CodeClass
+  name: ColonClass
+  full_name: NestedClass::ColonClass
+  code_container: nested_class
+  line_code: "class NestedClass::ColonClass\n"
+  
+file:
+  type: CodeFile
+  name: path/to/somefile.rb
+  full_name: path/to/somefile.rb

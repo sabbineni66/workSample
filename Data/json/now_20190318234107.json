@@ -1,0 +1,5 @@
+{
+  "alias": ["markcornick.com", "www.markcornick.com", "blog.markcornick.com"],
+  "builds": [{"src": "package.json", "use": "@now/static-build"}],
+  "version": 2
+}

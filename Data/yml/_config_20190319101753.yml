@@ -1,0 +1,25 @@
+# Dependencies
+# markdown:       rdiscount
+highlighter:    rouge
+
+# Permalinks
+permalink:      :title
+
+# Setup
+title:          'Brian Bailey'
+name:           'Brian Bailey'
+tagline:        'Preface to the Revised Edition'
+description:    'Ceaseless Becoming'
+url:            'http://brianbailey.me'
+baseurl:        '/'
+paginate:       5
+
+author:
+  name:         'Brian Bailey'
+  email:        'hi@brianbailey.me'
+  url:          'http://brianbailey.me'
+
+# Custom vars
+
+github:
+  repo:         https://github.com/brian/brian.github.com

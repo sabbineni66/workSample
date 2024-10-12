@@ -1,0 +1,21 @@
+{
+  "name": "cluster-loggly",
+  "description": "Cluster plugin to send logs to loggly.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/nshah/nodejs-cluster-loggly",
+  "author": "Naitik Shah <n@daaku.org>",
+  "main": "lib/cluster-loggly",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nshah/nodejs-cluster-loggly"
+  },
+  "scripts": { "test": "./node_modules/.bin/expresso -c" },
+  "dependencies": {
+    "loggly": ">= 0.3.8",
+    "format": ">= 0.1.2"
+  },
+  "devDependencies": {
+    "expresso": ">= 0.8.1"
+  },
+  "engines": { "node": ">= 0.4.1" }
+}

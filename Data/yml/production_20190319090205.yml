@@ -1,0 +1,6 @@
+web:
+  environment:
+    RAILS_ENV: production
+    RACK_ENV: production
+    SECRET_KEY_BASE: 2cbd698bea37ccd408b7c2bb26d3d5768ce36582df965431f797899c74307f95efdff42cc9c6c68c37f19fa81d4a5b0f1b4c604bbc9943e6a2e8bd7e71dd97b7
+    CACHE_PORT_6379_TCP_ADDR: '' # Our redis instance ip address in production

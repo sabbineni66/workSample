@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: nerd | Blog do Enderson!]]></title>
+  <link href="http://enderson.blog.br/blog/categories/nerd/atom.xml" rel="self"/>
+  <link href="http://enderson.blog.br/"/>
+  <updated>2014-12-18T20:44:10-03:00</updated>
+  <id>http://enderson.blog.br/</id>
+  <author>
+    <name><![CDATA[Enderson Maia]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Macei? Dev Meetup]]></title>
+    <link href="http://enderson.blog.br/2014/12/18/maceio-dev-meetup/"/>
+    <updated>2014-12-18T20:29:59-03:00</updated>
+    <id>http://enderson.blog.br/2014/12/18/maceio-dev-meetup</id>
+    <content type="html"><![CDATA[<p>Este fim de ano comecei a organizar, junto com amigo Tony Messias, um encontro peri?dico com pessoas interessadas em desenvolvimento de software e assuntos relacionados. E ontem fizemos o segundo encontro j?.</p>
+
+<p>Visite a p?gina <a href="http://www.meetup.com/maceio-dev-meetup/">http://www.meetup.com/maceio-dev-meetup/</a></p>
+
+<p>Eu apresentei conte?do nas duas edi??es.</p>
+
+<p>Na primeira fiz uma pequena introdu??o do Docker.</p>
+
+<script async class="speakerdeck-embed" data-id="ff92e78058810132cf8f5aa2c991cfe1" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+<p>E ontem falei um pouco sobre RESTful APIs.</p>
+
+<script async class="speakerdeck-embed" data-id="62c77e506928013287343630b7e0c8fc" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[httpd e pow sem complica??o no Mac]]></title>
+    <link href="http://enderson.blog.br/2012/07/10/httpd_e_pow_sem_complicacao_no_mac/"/>
+    <updated>2012-07-10T20:08:00-03:00</updated>
+    <id>http://enderson.blog.br/2012/07/10/httpd_e_pow_sem_complicacao_no_mac</id>
+    <content type="html"><![CDATA[<p>Fazia tempo que eu n?o tinha pego nada em PHP, mas um dia destes precisei fazer a migra??o de hospedagem de um site com Wordpress e decidi arrumar a casa antes, e fazer os testes localmente.</p>
+
+<p>Acontece que eu j? estava com o ambiente funcionando com o Pow, para desenvolvimento web com Ruby (na verdade, qualquer coisa que funcione com o middleware Rack).</p>
+
+<h2>Configurando o Pow em uma outra porta</h2>
+
+<p>A l?gica ? simples, fazer o Pow escutar numa porta diferente, e usar a configura??o ProxyPass do httpd dentro de um VirtualHost exclusivo para o Pow.</p>
+
+<p>Caso voc? j? tenha o Pow instalado, reinstale seguindo os passos a seguir.</p>
+
+<pre><code>$ curl get.pow.cx/uninstall.sh | sh # if you have pow installed
+$ echo 'export POW_DST_PORT=88' &gt;&gt; ~/.powconfig
+$ sudo curl https://raw.github.com/gist/2973292/zzz_pow.conf -o /private/etc/apache2/other/zzz_pow.conf
+$ sudo apachectl restart
+$ curl get.pow.cx | sh
+</code></pre>
+
+<p>Depois disto, o Pow j? deve estar funcionando normalmente nos dom?nios .dev e .xip.io.</p>
+
+<p>Segue o arquivo que estar? sendo carregado pelo httpd.</p>
+
+<p><div><script src='https://gist.github.com/2973292.js?file=zzz_pow.conf'></script>
+<noscript><pre><code>&lt;VirtualHost *:80&gt;
+  ServerName pow
+  ServerAlias *.dev
+  ServerAlias *.xip.io
+
+  ProxyPass / http://localhost:20559/
+  ProxyPassReverse / http://localhost:20559/
+  ProxyPreserveHost On
+&lt;/VirtualHost&gt;</code></pre></noscript></div>
+</p>
+
+<p>Fonte: <a href="https://github.com/37signals/pow/wiki/Running-Pow-with-Apache">https://github.com/37signals/pow/wiki/Running-Pow-with-Apache</a></p>
+
+<h2>Configurando o Dynamic VHosts no httpd</h2>
+
+<p>Para termos um ambiente de desenvolvimento em PHP de forma f?cil, como o Pow, usaremos o m?dulo mod_vhost_alias do httpd e a configura??o VirtualDocumentRoot.</p>
+
+<p>Segue o comando para adicionar o arquivo na configura??o do httpd e reinici?-lo.</p>
+
+<pre><code>$ sudo curl https://raw.github.com/gist/2973292/httpd-vhosts.conf -o /private/etc/apache2/other/dynamic-vhosts.conf
+$ sudo apachectl restart
+</code></pre>
+
+<p>Segue o arquivo com a configura??o.</p>
+
+<p><div><script src='https://gist.github.com/2973292.js?file=dynamic-vhosts.conf'></script>
+<noscript><pre><code>#
+# Use this file to make all directories in /Users/enderson/Sites/ available via localtest.me
+#
+# Example:
+#
+# www.example.com.localtest.me --&gt; /Users/enderson/Sites/www.example.com
+# a.www.example.com.localtest.me --&gt; /Users/enderson/Sites/a.www.example.com
+# example.com.localtest.me --&gt; /Users/enderson/Sites/example.com
+#
+# Change enderson to fit your username.
+
+#
+# Use name-based virtual hosting.
+#
+NameVirtualHost *:80
+
+UseCanonicalName Off
+LogFormat &quot;%V %h %l %u %t \&quot;%r\&quot; %s %b \&quot;%{Referer}i\&quot; \&quot;%{User-Agent}i\&quot;&quot; dynamic_vhosts
+CustomLog /var/log/apache2/access_log dynamic_vhosts
+
+&lt;VirtualHost *:80&gt;
+	&lt;Directory &quot;/Users/enderson/Sites/&quot;&gt;
+		Options -Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		Allow from all
+	&lt;/Directory&gt;
+
+	&lt;IfModule mod_vhost_alias.c&gt;
+		VirtualDocumentRoot /Users/enderson/Sites/%-3+
+		VirtualScriptAlias /Users/enderson/Sites/%-3+/cgi
+
+		&lt;DirectoryMatch &quot;^/srv/www/vhosts/[^/]+/cgi&quot;&gt;
+			AllowOverride None
+			Options ExecCGI
+			&lt;IfModule mod_access.c&gt;
+				Order allow,deny
+				Allow from all
+			&lt;/IfModule&gt;
+		&lt;/DirectoryMatch&gt;
+
+	&lt;/IfModule&gt;
+
+&lt;/VirtualHost&gt;</code></pre></noscript></div>
+</p>
+
+<h2>Testando os dois ambientes</h2>
+
+<p>Agora, todos os diret?rios dentro de ~/Sites funcionar?o como dom?nios, exatamente como funciona o Pow, mas sem precisar fazer os links.</p>
+
+<p>Para acessar o site que est? no diret?rio ~/Sites/meublog.com/ basta acessar <a href="http://meublog.com.localtest.me.">http://meublog.com.localtest.me.</a></p>
+
+<p>J? para sites usando o Pow, basta fazer o link  para a pasta ~/.pow e acessar usando os dom?nios xip.io e .dev da seguinte forma.</p>
+
+<pre><code>$ mkdir ~/Sites/powsite
+$ cd ~/Sites/powsite
+$ cd ~/.pow
+$ ln -s ~/Sites/powsite
+$ cd -
+</code></pre>
+
+<p>Basta acessar <a href="http://poswite.dev">http://poswite.dev</a> ou <a href="http://powsite.127.0.0.1.xip.io.">http://powsite.127.0.0.1.xip.io.</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress #ftw]]></title>
+    <link href="http://enderson.blog.br/2012/06/19/octopress-ftw/"/>
+    <updated>2012-06-19T14:32:00-03:00</updated>
+    <id>http://enderson.blog.br/2012/06/19/octopress-ftw</id>
+    <content type="html"><![CDATA[<p>Finalmente tirei meu blog do Wordpress, e mudei pro Octopress, j? que sempre
+que precisava mudar de hospedagem, tinha um trabalho danado para configurar.</p>
+
+<p>Este post aqui ? s? pra testar se eu t? manjando mesmo.</p>
+]]></content>
+  </entry>
+  
+</feed>

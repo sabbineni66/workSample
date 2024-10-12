@@ -1,0 +1,3239 @@
+{
+  "af": {
+    "and": [
+      "* ",
+      "En "
+    ],
+    "background": [
+      "Agtergrond"
+    ],
+    "but": [
+      "* ",
+      "Maar "
+    ],
+    "examples": [
+      "Voorbeelde"
+    ],
+    "feature": [
+      "Funksie",
+      "Besigheid Behoefte",
+      "Vermo?"
+    ],
+    "given": [
+      "* ",
+      "Gegewe "
+    ],
+    "name": "Afrikaans",
+    "native": "Afrikaans",
+    "scenario": [
+      "Situasie"
+    ],
+    "scenarioOutline": [
+      "Situasie Uiteensetting"
+    ],
+    "then": [
+      "* ",
+      "Dan "
+    ],
+    "when": [
+      "* ",
+      "Wanneer "
+    ]
+  },
+  "am": {
+    "and": [
+      "* ",
+      "?? "
+    ],
+    "background": [
+      "????????"
+    ],
+    "but": [
+      "* ",
+      "???? "
+    ],
+    "examples": [
+      "?????????"
+    ],
+    "feature": [
+      "??????????????????",
+      "???????????"
+    ],
+    "given": [
+      "* ",
+      "?????? "
+    ],
+    "name": "Armenian",
+    "native": "???????",
+    "scenario": [
+      "??????"
+    ],
+    "scenarioOutline": [
+      "??????? ???????????"
+    ],
+    "then": [
+      "* ",
+      "??? "
+    ],
+    "when": [
+      "* ",
+      "??? ",
+      "??? "
+    ]
+  },
+  "an": {
+    "and": [
+      "* ",
+      "Y ",
+      "E "
+    ],
+    "background": [
+      "Antecedents"
+    ],
+    "but": [
+      "* ",
+      "Pero "
+    ],
+    "examples": [
+      "Eixemplos"
+    ],
+    "feature": [
+      "Caracteristica"
+    ],
+    "given": [
+      "* ",
+      "Dau ",
+      "Dada ",
+      "Daus ",
+      "Dadas "
+    ],
+    "name": "Aragonese",
+    "native": "Aragon?s",
+    "scenario": [
+      "Caso"
+    ],
+    "scenarioOutline": [
+      "Esquema del caso"
+    ],
+    "then": [
+      "* ",
+      "Alavez ",
+      "Allora ",
+      "Antonces "
+    ],
+    "when": [
+      "* ",
+      "Cuan "
+    ]
+  },
+  "ar": {
+    "and": [
+      "* ",
+      "? "
+    ],
+    "background": [
+      "???????"
+    ],
+    "but": [
+      "* ",
+      "??? "
+    ],
+    "examples": [
+      "?????"
+    ],
+    "feature": [
+      "?????"
+    ],
+    "given": [
+      "* ",
+      "???? "
+    ],
+    "name": "Arabic",
+    "native": "???????",
+    "scenario": [
+      "???????"
+    ],
+    "scenarioOutline": [
+      "??????? ????"
+    ],
+    "then": [
+      "* ",
+      "???? ",
+      "?? "
+    ],
+    "when": [
+      "* ",
+      "??? ",
+      "????? "
+    ]
+  },
+  "ast": {
+    "and": [
+      "* ",
+      "Y ",
+      "Ya "
+    ],
+    "background": [
+      "Antecedentes"
+    ],
+    "but": [
+      "* ",
+      "Peru "
+    ],
+    "examples": [
+      "Exemplos"
+    ],
+    "feature": [
+      "Carauter?stica"
+    ],
+    "given": [
+      "* ",
+      "D?u ",
+      "Dada ",
+      "Daos ",
+      "Daes "
+    ],
+    "name": "Asturian",
+    "native": "asturianu",
+    "scenario": [
+      "Casu"
+    ],
+    "scenarioOutline": [
+      "Esbozu del casu"
+    ],
+    "then": [
+      "* ",
+      "Ent?s "
+    ],
+    "when": [
+      "* ",
+      "Cuando "
+    ]
+  },
+  "az": {
+    "and": [
+      "* ",
+      "V? ",
+      "H?m "
+    ],
+    "background": [
+      "Ke?mi?",
+      "Kontekst"
+    ],
+    "but": [
+      "* ",
+      "Amma ",
+      "Ancaq "
+    ],
+    "examples": [
+      "N?mun?l?r"
+    ],
+    "feature": [
+      "?z?llik"
+    ],
+    "given": [
+      "* ",
+      "Tutaq ki ",
+      "Verilir "
+    ],
+    "name": "Azerbaijani",
+    "native": "Az?rbaycanca",
+    "scenario": [
+      "Ssenari"
+    ],
+    "scenarioOutline": [
+      "Ssenarinin strukturu"
+    ],
+    "then": [
+      "* ",
+      "O halda "
+    ],
+    "when": [
+      "* ",
+      "?g?r ",
+      "N? vaxt ki "
+    ]
+  },
+  "bg": {
+    "and": [
+      "* ",
+      "? "
+    ],
+    "background": [
+      "???????????"
+    ],
+    "but": [
+      "* ",
+      "?? "
+    ],
+    "examples": [
+      "???????"
+    ],
+    "feature": [
+      "??????????????"
+    ],
+    "given": [
+      "* ",
+      "?????? "
+    ],
+    "name": "Bulgarian",
+    "native": "?????????",
+    "scenario": [
+      "????????"
+    ],
+    "scenarioOutline": [
+      "????? ?? ????????"
+    ],
+    "then": [
+      "* ",
+      "?? "
+    ],
+    "when": [
+      "* ",
+      "?????? "
+    ]
+  },
+  "bm": {
+    "and": [
+      "* ",
+      "Dan "
+    ],
+    "background": [
+      "Latar Belakang"
+    ],
+    "but": [
+      "* ",
+      "Tetapi ",
+      "Tapi "
+    ],
+    "examples": [
+      "Contoh"
+    ],
+    "feature": [
+      "Fungsi"
+    ],
+    "given": [
+      "* ",
+      "Diberi ",
+      "Bagi "
+    ],
+    "name": "Malay",
+    "native": "Bahasa Melayu",
+    "scenario": [
+      "Senario",
+      "Situasi",
+      "Keadaan"
+    ],
+    "scenarioOutline": [
+      "Kerangka Senario",
+      "Kerangka Situasi",
+      "Kerangka Keadaan",
+      "Garis Panduan Senario"
+    ],
+    "then": [
+      "* ",
+      "Maka ",
+      "Kemudian "
+    ],
+    "when": [
+      "* ",
+      "Apabila "
+    ]
+  },
+  "bs": {
+    "and": [
+      "* ",
+      "I ",
+      "A "
+    ],
+    "background": [
+      "Pozadina"
+    ],
+    "but": [
+      "* ",
+      "Ali "
+    ],
+    "examples": [
+      "Primjeri"
+    ],
+    "feature": [
+      "Karakteristika"
+    ],
+    "given": [
+      "* ",
+      "Dato "
+    ],
+    "name": "Bosnian",
+    "native": "Bosanski",
+    "scenario": [
+      "Scenariju",
+      "Scenario"
+    ],
+    "scenarioOutline": [
+      "Scenariju-obris",
+      "Scenario-outline"
+    ],
+    "then": [
+      "* ",
+      "Zatim "
+    ],
+    "when": [
+      "* ",
+      "Kada "
+    ]
+  },
+  "ca": {
+    "and": [
+      "* ",
+      "I "
+    ],
+    "background": [
+      "Rerefons",
+      "Antecedents"
+    ],
+    "but": [
+      "* ",
+      "Per? "
+    ],
+    "examples": [
+      "Exemples"
+    ],
+    "feature": [
+      "Caracter?stica",
+      "Funcionalitat"
+    ],
+    "given": [
+      "* ",
+      "Donat ",
+      "Donada ",
+      "At?s ",
+      "Atesa "
+    ],
+    "name": "Catalan",
+    "native": "catal?",
+    "scenario": [
+      "Escenari"
+    ],
+    "scenarioOutline": [
+      "Esquema de l'escenari"
+    ],
+    "then": [
+      "* ",
+      "Aleshores ",
+      "Cal "
+    ],
+    "when": [
+      "* ",
+      "Quan "
+    ]
+  },
+  "cs": {
+    "and": [
+      "* ",
+      "A tak? ",
+      "A "
+    ],
+    "background": [
+      "Pozad?",
+      "Kontext"
+    ],
+    "but": [
+      "* ",
+      "Ale "
+    ],
+    "examples": [
+      "P??klady"
+    ],
+    "feature": [
+      "Po?adavek"
+    ],
+    "given": [
+      "* ",
+      "Pokud ",
+      "Za p?edpokladu "
+    ],
+    "name": "Czech",
+    "native": "?esky",
+    "scenario": [
+      "Sc?n??"
+    ],
+    "scenarioOutline": [
+      "N??rt Sc?n??e",
+      "Osnova sc?n??e"
+    ],
+    "then": [
+      "* ",
+      "Pak "
+    ],
+    "when": [
+      "* ",
+      "Kdy? "
+    ]
+  },
+  "cy-GB": {
+    "and": [
+      "* ",
+      "A "
+    ],
+    "background": [
+      "Cefndir"
+    ],
+    "but": [
+      "* ",
+      "Ond "
+    ],
+    "examples": [
+      "Enghreifftiau"
+    ],
+    "feature": [
+      "Arwedd"
+    ],
+    "given": [
+      "* ",
+      "Anrhegedig a "
+    ],
+    "name": "Welsh",
+    "native": "Cymraeg",
+    "scenario": [
+      "Scenario"
+    ],
+    "scenarioOutline": [
+      "Scenario Amlinellol"
+    ],
+    "then": [
+      "* ",
+      "Yna "
+    ],
+    "when": [
+      "* ",
+      "Pryd "
+    ]
+  },
+  "da": {
+    "and": [
+      "* ",
+      "Og "
+    ],
+    "background": [
+      "Baggrund"
+    ],
+    "but": [
+      "* ",
+      "Men "
+    ],
+    "examples": [
+      "Eksempler"
+    ],
+    "feature": [
+      "Egenskab"
+    ],
+    "given": [
+      "* ",
+      "Givet "
+    ],
+    "name": "Danish",
+    "native": "dansk",
+    "scenario": [
+      "Scenarie"
+    ],
+    "scenarioOutline": [
+      "Abstrakt Scenario"
+    ],
+    "then": [
+      "* ",
+      "S? "
+    ],
+    "when": [
+      "* ",
+      "N?r "
+    ]
+  },
+  "de": {
+    "and": [
+      "* ",
+      "Und "
+    ],
+    "background": [
+      "Grundlage"
+    ],
+    "but": [
+      "* ",
+      "Aber "
+    ],
+    "examples": [
+      "Beispiele"
+    ],
+    "feature": [
+      "Funktionalit?t"
+    ],
+    "given": [
+      "* ",
+      "Angenommen ",
+      "Gegeben sei ",
+      "Gegeben seien "
+    ],
+    "name": "German",
+    "native": "Deutsch",
+    "scenario": [
+      "Szenario"
+    ],
+    "scenarioOutline": [
+      "Szenariogrundriss"
+    ],
+    "then": [
+      "* ",
+      "Dann "
+    ],
+    "when": [
+      "* ",
+      "Wenn "
+    ]
+  },
+  "el": {
+    "and": [
+      "* ",
+      "??? "
+    ],
+    "background": [
+      "????????"
+    ],
+    "but": [
+      "* ",
+      "???? "
+    ],
+    "examples": [
+      "????????????",
+      "???????"
+    ],
+    "feature": [
+      "??????????",
+      "??????????"
+    ],
+    "given": [
+      "* ",
+      "????????? "
+    ],
+    "name": "Greek",
+    "native": "????????",
+    "scenario": [
+      "???????"
+    ],
+    "scenarioOutline": [
+      "????????? ????????",
+      "?????????? ????????"
+    ],
+    "then": [
+      "* ",
+      "???? "
+    ],
+    "when": [
+      "* ",
+      "???? "
+    ]
+  },
+  "em": {
+    "and": [
+      "* ",
+      "??"
+    ],
+    "background": [
+      "??"
+    ],
+    "but": [
+      "* ",
+      "??"
+    ],
+    "examples": [
+      "??"
+    ],
+    "feature": [
+      "??"
+    ],
+    "given": [
+      "* ",
+      "??"
+    ],
+    "name": "Emoji",
+    "native": "??",
+    "scenario": [
+      "??"
+    ],
+    "scenarioOutline": [
+      "??"
+    ],
+    "then": [
+      "* ",
+      "??"
+    ],
+    "when": [
+      "* ",
+      "??"
+    ]
+  },
+  "en": {
+    "and": [
+      "* ",
+      "And "
+    ],
+    "background": [
+      "Background"
+    ],
+    "but": [
+      "* ",
+      "But "
+    ],
+    "examples": [
+      "Examples",
+      "Scenarios"
+    ],
+    "feature": [
+      "Feature",
+      "Business Need",
+      "Ability"
+    ],
+    "given": [
+      "* ",
+      "Given "
+    ],
+    "name": "English",
+    "native": "English",
+    "scenario": [
+      "Scenario"
+    ],
+    "scenarioOutline": [
+      "Scenario Outline",
+      "Scenario Template"
+    ],
+    "then": [
+      "* ",
+      "Then "
+    ],
+    "when": [
+      "* ",
+      "When "
+    ]
+  },
+  "en-Scouse": {
+    "and": [
+      "* ",
+      "An "
+    ],
+    "background": [
+      "Dis is what went down"
+    ],
+    "but": [
+      "* ",
+      "Buh "
+    ],
+    "examples": [
+      "Examples"
+    ],
+    "feature": [
+      "Feature"
+    ],
+    "given": [
+      "* ",
+      "Givun ",
+      "Youse know when youse got "
+    ],
+    "name": "Scouse",
+    "native": "Scouse",
+    "scenario": [
+      "The thing of it is"
+    ],
+    "scenarioOutline": [
+      "Wharrimean is"
+    ],
+    "then": [
+      "* ",
+      "Dun ",
+      "Den youse gotta "
+    ],
+    "when": [
+      "* ",
+      "Wun ",
+      "Youse know like when "
+    ]
+  },
+  "en-au": {
+    "and": [
+      "* ",
+      "Too right "
+    ],
+    "background": [
+      "First off"
+    ],
+    "but": [
+      "* ",
+      "Yeah nah "
+    ],
+    "examples": [
+      "You'll wanna"
+    ],
+    "feature": [
+      "Pretty much"
+    ],
+    "given": [
+      "* ",
+      "Y'know "
+    ],
+    "name": "Australian",
+    "native": "Australian",
+    "scenario": [
+      "Awww, look mate"
+    ],
+    "scenarioOutline": [
+      "Reckon it's like"
+    ],
+    "then": [
+      "* ",
+      "But at the end of the day I reckon "
+    ],
+    "when": [
+      "* ",
+      "It's just unbelievable "
+    ]
+  },
+  "en-lol": {
+    "and": [
+      "* ",
+      "AN "
+    ],
+    "background": [
+      "B4"
+    ],
+    "but": [
+      "* ",
+      "BUT "
+    ],
+    "examples": [
+      "EXAMPLZ"
+    ],
+    "feature": [
+      "OH HAI"
+    ],
+    "given": [
+      "* ",
+      "I CAN HAZ "
+    ],
+    "name": "LOLCAT",
+    "native": "LOLCAT",
+    "scenario": [
+      "MISHUN"
+    ],
+    "scenarioOutline": [
+      "MISHUN SRSLY"
+    ],
+    "then": [
+      "* ",
+      "DEN "
+    ],
+    "when": [
+      "* ",
+      "WEN "
+    ]
+  },
+  "en-old": {
+    "and": [
+      "* ",
+      "Ond ",
+      "7 "
+    ],
+    "background": [
+      "Aer",
+      "?r"
+    ],
+    "but": [
+      "* ",
+      "Ac "
+    ],
+    "examples": [
+      "Se the",
+      "Se ?e",
+      "Se ?e"
+    ],
+    "feature": [
+      "Hwaet",
+      "Hw?t"
+    ],
+    "given": [
+      "* ",
+      "Thurh ",
+      "?urh ",
+      "?urh "
+    ],
+    "name": "Old English",
+    "native": "Englisc",
+    "scenario": [
+      "Swa"
+    ],
+    "scenarioOutline": [
+      "Swa hwaer swa",
+      "Swa hw?r swa"
+    ],
+    "then": [
+      "* ",
+      "Tha ",
+      "?a ",
+      "?a ",
+      "Tha the ",
+      "?a ?e ",
+      "?a ?e "
+    ],
+    "when": [
+      "* ",
+      "Tha ",
+      "?a ",
+      "?a "
+    ]
+  },
+  "en-pirate": {
+    "and": [
+      "* ",
+      "Aye "
+    ],
+    "background": [
+      "Yo-ho-ho"
+    ],
+    "but": [
+      "* ",
+      "Avast! "
+    ],
+    "examples": [
+      "Dead men tell no tales"
+    ],
+    "feature": [
+      "Ahoy matey!"
+    ],
+    "given": [
+      "* ",
+      "Gangway! "
+    ],
+    "name": "Pirate",
+    "native": "Pirate",
+    "scenario": [
+      "Heave to"
+    ],
+    "scenarioOutline": [
+      "Shiver me timbers"
+    ],
+    "then": [
+      "* ",
+      "Let go and haul "
+    ],
+    "when": [
+      "* ",
+      "Blimey! "
+    ]
+  },
+  "eo": {
+    "and": [
+      "* ",
+      "Kaj "
+    ],
+    "background": [
+      "Fono"
+    ],
+    "but": [
+      "* ",
+      "Sed "
+    ],
+    "examples": [
+      "Ekzemploj"
+    ],
+    "feature": [
+      "Trajto"
+    ],
+    "given": [
+      "* ",
+      "Donita?o ",
+      "Komence "
+    ],
+    "name": "Esperanto",
+    "native": "Esperanto",
+    "scenario": [
+      "Scenaro",
+      "Kazo"
+    ],
+    "scenarioOutline": [
+      "Konturo de la scenaro",
+      "Skizo",
+      "Kazo-skizo"
+    ],
+    "then": [
+      "* ",
+      "Do "
+    ],
+    "when": [
+      "* ",
+      "Se "
+    ]
+  },
+  "es": {
+    "and": [
+      "* ",
+      "Y ",
+      "E "
+    ],
+    "background": [
+      "Antecedentes"
+    ],
+    "but": [
+      "* ",
+      "Pero "
+    ],
+    "examples": [
+      "Ejemplos"
+    ],
+    "feature": [
+      "Caracter?stica"
+    ],
+    "given": [
+      "* ",
+      "Dado ",
+      "Dada ",
+      "Dados ",
+      "Dadas "
+    ],
+    "name": "Spanish",
+    "native": "espa?ol",
+    "scenario": [
+      "Escenario"
+    ],
+    "scenarioOutline": [
+      "Esquema del escenario"
+    ],
+    "then": [
+      "* ",
+      "Entonces "
+    ],
+    "when": [
+      "* ",
+      "Cuando "
+    ]
+  },
+  "et": {
+    "and": [
+      "* ",
+      "Ja "
+    ],
+    "background": [
+      "Taust"
+    ],
+    "but": [
+      "* ",
+      "Kuid "
+    ],
+    "examples": [
+      "Juhtumid"
+    ],
+    "feature": [
+      "Omadus"
+    ],
+    "given": [
+      "* ",
+      "Eeldades "
+    ],
+    "name": "Estonian",
+    "native": "eesti keel",
+    "scenario": [
+      "Stsenaarium"
+    ],
+    "scenarioOutline": [
+      "Raamstsenaarium"
+    ],
+    "then": [
+      "* ",
+      "Siis "
+    ],
+    "when": [
+      "* ",
+      "Kui "
+    ]
+  },
+  "fa": {
+    "and": [
+      "* ",
+      "? "
+    ],
+    "background": [
+      "?????"
+    ],
+    "but": [
+      "* ",
+      "??? "
+    ],
+    "examples": [
+      "????? ??"
+    ],
+    "feature": [
+      "??????"
+    ],
+    "given": [
+      "* ",
+      "?? ??? "
+    ],
+    "name": "Persian",
+    "native": "?????",
+    "scenario": [
+      "??????"
+    ],
+    "scenarioOutline": [
+      "????? ??????"
+    ],
+    "then": [
+      "* ",
+      "????? "
+    ],
+    "when": [
+      "* ",
+      "?????? "
+    ]
+  },
+  "fi": {
+    "and": [
+      "* ",
+      "Ja "
+    ],
+    "background": [
+      "Tausta"
+    ],
+    "but": [
+      "* ",
+      "Mutta "
+    ],
+    "examples": [
+      "Tapaukset"
+    ],
+    "feature": [
+      "Ominaisuus"
+    ],
+    "given": [
+      "* ",
+      "Oletetaan "
+    ],
+    "name": "Finnish",
+    "native": "suomi",
+    "scenario": [
+      "Tapaus"
+    ],
+    "scenarioOutline": [
+      "Tapausaihio"
+    ],
+    "then": [
+      "* ",
+      "Niin "
+    ],
+    "when": [
+      "* ",
+      "Kun "
+    ]
+  },
+  "fr": {
+    "and": [
+      "* ",
+      "Et que ",
+      "Et qu'",
+      "Et "
+    ],
+    "background": [
+      "Contexte"
+    ],
+    "but": [
+      "* ",
+      "Mais que ",
+      "Mais qu'",
+      "Mais "
+    ],
+    "examples": [
+      "Exemples"
+    ],
+    "feature": [
+      "Fonctionnalit?"
+    ],
+    "given": [
+      "* ",
+      "Soit ",
+      "Etant donn? que ",
+      "Etant donn? qu'",
+      "Etant donn? ",
+      "Etant donn?e ",
+      "Etant donn?s ",
+      "Etant donn?es ",
+      "?tant donn? que ",
+      "?tant donn? qu'",
+      "?tant donn? ",
+      "?tant donn?e ",
+      "?tant donn?s ",
+      "?tant donn?es "
+    ],
+    "name": "French",
+    "native": "fran?ais",
+    "scenario": [
+      "Sc?nario"
+    ],
+    "scenarioOutline": [
+      "Plan du sc?nario",
+      "Plan du Sc?nario"
+    ],
+    "then": [
+      "* ",
+      "Alors "
+    ],
+    "when": [
+      "* ",
+      "Quand ",
+      "Lorsque ",
+      "Lorsqu'"
+    ]
+  },
+  "ga": {
+    "and": [
+      "* ",
+      "Agus"
+    ],
+    "background": [
+      "C?lra"
+    ],
+    "but": [
+      "* ",
+      "Ach"
+    ],
+    "examples": [
+      "Sampla?"
+    ],
+    "feature": [
+      "Gn?"
+    ],
+    "given": [
+      "* ",
+      "Cuir i gc?s go",
+      "Cuir i gc?s nach",
+      "Cuir i gc?s gur",
+      "Cuir i gc?s n?r"
+    ],
+    "name": "Irish",
+    "native": "Gaeilge",
+    "scenario": [
+      "C?s"
+    ],
+    "scenarioOutline": [
+      "C?s Achomair"
+    ],
+    "then": [
+      "* ",
+      "Ansin"
+    ],
+    "when": [
+      "* ",
+      "Nuair a",
+      "Nuair nach",
+      "Nuair ba",
+      "Nuair n?r"
+    ]
+  },
+  "gj": {
+    "and": [
+      "* ",
+      "??? "
+    ],
+    "background": [
+      "???????????"
+    ],
+    "but": [
+      "* ",
+      "?? "
+    ],
+    "examples": [
+      "???????"
+    ],
+    "feature": [
+      "?????",
+      "??????? ????",
+      "??????"
+    ],
+    "given": [
+      "* ",
+      "???? ?? "
+    ],
+    "name": "Gujarati",
+    "native": "???????",
+    "scenario": [
+      "??????"
+    ],
+    "scenarioOutline": [
+      "????????? ???????",
+      "????????? ?????"
+    ],
+    "then": [
+      "* ",
+      "??? "
+    ],
+    "when": [
+      "* ",
+      "?????? "
+    ]
+  },
+  "gl": {
+    "and": [
+      "* ",
+      "E "
+    ],
+    "background": [
+      "Contexto"
+    ],
+    "but": [
+      "* ",
+      "Mais ",
+      "Pero "
+    ],
+    "examples": [
+      "Exemplos"
+    ],
+    "feature": [
+      "Caracter?stica"
+    ],
+    "given": [
+      "* ",
+      "Dado ",
+      "Dada ",
+      "Dados ",
+      "Dadas "
+    ],
+    "name": "Galician",
+    "native": "galego",
+    "scenario": [
+      "Escenario"
+    ],
+    "scenarioOutline": [
+      "Esbozo do escenario"
+    ],
+    "then": [
+      "* ",
+      "Ent?n ",
+      "Logo "
+    ],
+    "when": [
+      "* ",
+      "Cando "
+    ]
+  },
+  "he": {
+    "and": [
+      "* ",
+      "??? "
+    ],
+    "background": [
+      "???"
+    ],
+    "but": [
+      "* ",
+      "??? "
+    ],
+    "examples": [
+      "???????"
+    ],
+    "feature": [
+      "?????"
+    ],
+    "given": [
+      "* ",
+      "?????? "
+    ],
+    "name": "Hebrew",
+    "native": "?????",
+    "scenario": [
+      "?????"
+    ],
+    "scenarioOutline": [
+      "????? ?????"
+    ],
+    "then": [
+      "* ",
+      "?? ",
+      "??? "
+    ],
+    "when": [
+      "* ",
+      "???? "
+    ]
+  },
+  "hi": {
+    "and": [
+      "* ",
+      "?? ",
+      "??? "
+    ],
+    "background": [
+      "?????????"
+    ],
+    "but": [
+      "* ",
+      "?? ",
+      "?????? ",
+      "?????? "
+    ],
+    "examples": [
+      "??????"
+    ],
+    "feature": [
+      "??? ???"
+    ],
+    "given": [
+      "* ",
+      "??? ",
+      "??? ",
+      "????? "
+    ],
+    "name": "Hindi",
+    "native": "?????",
+    "scenario": [
+      "????????"
+    ],
+    "scenarioOutline": [
+      "???????? ???????"
+    ],
+    "then": [
+      "* ",
+      "?? ",
+      "??? "
+    ],
+    "when": [
+      "* ",
+      "?? ",
+      "??? "
+    ]
+  },
+  "hr": {
+    "and": [
+      "* ",
+      "I "
+    ],
+    "background": [
+      "Pozadina"
+    ],
+    "but": [
+      "* ",
+      "Ali "
+    ],
+    "examples": [
+      "Primjeri",
+      "Scenariji"
+    ],
+    "feature": [
+      "Osobina",
+      "Mogu?nost",
+      "Mogucnost"
+    ],
+    "given": [
+      "* ",
+      "Zadan ",
+      "Zadani ",
+      "Zadano "
+    ],
+    "name": "Croatian",
+    "native": "hrvatski",
+    "scenario": [
+      "Scenarij"
+    ],
+    "scenarioOutline": [
+      "Skica",
+      "Koncept"
+    ],
+    "then": [
+      "* ",
+      "Onda "
+    ],
+    "when": [
+      "* ",
+      "Kada ",
+      "Kad "
+    ]
+  },
+  "ht": {
+    "and": [
+      "* ",
+      "Ak ",
+      "Epi ",
+      "E "
+    ],
+    "background": [
+      "Kont?ks",
+      "Istorik"
+    ],
+    "but": [
+      "* ",
+      "Men "
+    ],
+    "examples": [
+      "Egzanp"
+    ],
+    "feature": [
+      "Karakteristik",
+      "Mak",
+      "Fonksyonalite"
+    ],
+    "given": [
+      "* ",
+      "Sipoze ",
+      "Sipoze ke ",
+      "Sipoze Ke "
+    ],
+    "name": "Creole",
+    "native": "krey?l",
+    "scenario": [
+      "Senaryo"
+    ],
+    "scenarioOutline": [
+      "Plan senaryo",
+      "Plan Senaryo",
+      "Senaryo deskripsyon",
+      "Senaryo Deskripsyon",
+      "Dyagram senaryo",
+      "Dyagram Senaryo"
+    ],
+    "then": [
+      "* ",
+      "L? sa a ",
+      "Le sa a "
+    ],
+    "when": [
+      "* ",
+      "L? ",
+      "Le "
+    ]
+  },
+  "hu": {
+    "and": [
+      "* ",
+      "?s "
+    ],
+    "background": [
+      "H?tt?r"
+    ],
+    "but": [
+      "* ",
+      "De "
+    ],
+    "examples": [
+      "P?ld?k"
+    ],
+    "feature": [
+      "Jellemz?"
+    ],
+    "given": [
+      "* ",
+      "Amennyiben ",
+      "Adott "
+    ],
+    "name": "Hungarian",
+    "native": "magyar",
+    "scenario": [
+      "Forgat?k?nyv"
+    ],
+    "scenarioOutline": [
+      "Forgat?k?nyv v?zlat"
+    ],
+    "then": [
+      "* ",
+      "Akkor "
+    ],
+    "when": [
+      "* ",
+      "Majd ",
+      "Ha ",
+      "Amikor "
+    ]
+  },
+  "id": {
+    "and": [
+      "* ",
+      "Dan "
+    ],
+    "background": [
+      "Dasar"
+    ],
+    "but": [
+      "* ",
+      "Tapi "
+    ],
+    "examples": [
+      "Contoh"
+    ],
+    "feature": [
+      "Fitur"
+    ],
+    "given": [
+      "* ",
+      "Dengan "
+    ],
+    "name": "Indonesian",
+    "native": "Bahasa Indonesia",
+    "scenario": [
+      "Skenario"
+    ],
+    "scenarioOutline": [
+      "Skenario konsep"
+    ],
+    "then": [
+      "* ",
+      "Maka "
+    ],
+    "when": [
+      "* ",
+      "Ketika "
+    ]
+  },
+  "is": {
+    "and": [
+      "* ",
+      "Og "
+    ],
+    "background": [
+      "Bakgrunnur"
+    ],
+    "but": [
+      "* ",
+      "En "
+    ],
+    "examples": [
+      "D?mi",
+      "Atbur?ar?sir"
+    ],
+    "feature": [
+      "Eiginleiki"
+    ],
+    "given": [
+      "* ",
+      "Ef "
+    ],
+    "name": "Icelandic",
+    "native": "?slenska",
+    "scenario": [
+      "Atbur?ar?s"
+    ],
+    "scenarioOutline": [
+      "L?sing Atbur?ar?sar",
+      "L?sing D?ma"
+    ],
+    "then": [
+      "* ",
+      "?? "
+    ],
+    "when": [
+      "* ",
+      "?egar "
+    ]
+  },
+  "it": {
+    "and": [
+      "* ",
+      "E "
+    ],
+    "background": [
+      "Contesto"
+    ],
+    "but": [
+      "* ",
+      "Ma "
+    ],
+    "examples": [
+      "Esempi"
+    ],
+    "feature": [
+      "Funzionalit?"
+    ],
+    "given": [
+      "* ",
+      "Dato ",
+      "Data ",
+      "Dati ",
+      "Date "
+    ],
+    "name": "Italian",
+    "native": "italiano",
+    "scenario": [
+      "Scenario"
+    ],
+    "scenarioOutline": [
+      "Schema dello scenario"
+    ],
+    "then": [
+      "* ",
+      "Allora "
+    ],
+    "when": [
+      "* ",
+      "Quando "
+    ]
+  },
+  "ja": {
+    "and": [
+      "* ",
+      "??"
+    ],
+    "background": [
+      "??"
+    ],
+    "but": [
+      "* ",
+      "???",
+      "??",
+      "???"
+    ],
+    "examples": [
+      "?",
+      "????"
+    ],
+    "feature": [
+      "?????",
+      "??"
+    ],
+    "given": [
+      "* ",
+      "??"
+    ],
+    "name": "Japanese",
+    "native": "???",
+    "scenario": [
+      "????"
+    ],
+    "scenarioOutline": [
+      "??????????",
+      "??????????",
+      "????",
+      "????????"
+    ],
+    "then": [
+      "* ",
+      "???"
+    ],
+    "when": [
+      "* ",
+      "??"
+    ]
+  },
+  "jv": {
+    "and": [
+      "* ",
+      "Lan "
+    ],
+    "background": [
+      "Dasar"
+    ],
+    "but": [
+      "* ",
+      "Tapi ",
+      "Nanging ",
+      "Ananging "
+    ],
+    "examples": [
+      "Conto",
+      "Contone"
+    ],
+    "feature": [
+      "Fitur"
+    ],
+    "given": [
+      "* ",
+      "Nalika ",
+      "Nalikaning "
+    ],
+    "name": "Javanese",
+    "native": "Basa Jawa",
+    "scenario": [
+      "Skenario"
+    ],
+    "scenarioOutline": [
+      "Konsep skenario"
+    ],
+    "then": [
+      "* ",
+      "Njuk ",
+      "Banjur "
+    ],
+    "when": [
+      "* ",
+      "Manawa ",
+      "Menawa "
+    ]
+  },
+  "ka": {
+    "and": [
+      "* ",
+      "??"
+    ],
+    "background": [
+      "?????????"
+    ],
+    "but": [
+      "* ",
+      "???????"
+    ],
+    "examples": [
+      "??????????"
+    ],
+    "feature": [
+      "???????"
+    ],
+    "given": [
+      "* ",
+      "????????"
+    ],
+    "name": "Georgian",
+    "native": "????????",
+    "scenario": [
+      "????????"
+    ],
+    "scenarioOutline": [
+      "???????? ??????"
+    ],
+    "then": [
+      "* ",
+      "?????"
+    ],
+    "when": [
+      "* ",
+      "???????"
+    ]
+  },
+  "kn": {
+    "and": [
+      "* ",
+      "????? "
+    ],
+    "background": [
+      "????????"
+    ],
+    "but": [
+      "* ",
+      "???? "
+    ],
+    "examples": [
+      "??????????"
+    ],
+    "feature": [
+      "??????"
+    ],
+    "given": [
+      "* ",
+      "?????? "
+    ],
+    "name": "Kannada",
+    "native": "?????",
+    "scenario": [
+      "?????????"
+    ],
+    "scenarioOutline": [
+      "??????"
+    ],
+    "then": [
+      "* ",
+      "???? "
+    ],
+    "when": [
+      "* ",
+      "??????????? "
+    ]
+  },
+  "ko": {
+    "and": [
+      "* ",
+      "???"
+    ],
+    "background": [
+      "??"
+    ],
+    "but": [
+      "* ",
+      "???",
+      "?"
+    ],
+    "examples": [
+      "?"
+    ],
+    "feature": [
+      "??"
+    ],
+    "given": [
+      "* ",
+      "??",
+      "??"
+    ],
+    "name": "Korean",
+    "native": "???",
+    "scenario": [
+      "????"
+    ],
+    "scenarioOutline": [
+      "???? ??"
+    ],
+    "then": [
+      "* ",
+      "???"
+    ],
+    "when": [
+      "* ",
+      "??",
+      "??"
+    ]
+  },
+  "lt": {
+    "and": [
+      "* ",
+      "Ir "
+    ],
+    "background": [
+      "Kontekstas"
+    ],
+    "but": [
+      "* ",
+      "Bet "
+    ],
+    "examples": [
+      "Pavyzd?iai",
+      "Scenarijai",
+      "Variantai"
+    ],
+    "feature": [
+      "Savyb?"
+    ],
+    "given": [
+      "* ",
+      "Duota "
+    ],
+    "name": "Lithuanian",
+    "native": "lietuvi? kalba",
+    "scenario": [
+      "Scenarijus"
+    ],
+    "scenarioOutline": [
+      "Scenarijaus ?ablonas"
+    ],
+    "then": [
+      "* ",
+      "Tada "
+    ],
+    "when": [
+      "* ",
+      "Kai "
+    ]
+  },
+  "lu": {
+    "and": [
+      "* ",
+      "an ",
+      "a "
+    ],
+    "background": [
+      "Hannergrond"
+    ],
+    "but": [
+      "* ",
+      "awer ",
+      "m? "
+    ],
+    "examples": [
+      "Beispiller"
+    ],
+    "feature": [
+      "Funktionalit?it"
+    ],
+    "given": [
+      "* ",
+      "ugeholl "
+    ],
+    "name": "Luxemburgish",
+    "native": "L?tzebuergesch",
+    "scenario": [
+      "Szenario"
+    ],
+    "scenarioOutline": [
+      "Plang vum Szenario"
+    ],
+    "then": [
+      "* ",
+      "dann "
+    ],
+    "when": [
+      "* ",
+      "wann "
+    ]
+  },
+  "lv": {
+    "and": [
+      "* ",
+      "Un "
+    ],
+    "background": [
+      "Konteksts",
+      "Situ?cija"
+    ],
+    "but": [
+      "* ",
+      "Bet "
+    ],
+    "examples": [
+      "Piem?ri",
+      "Paraugs"
+    ],
+    "feature": [
+      "Funkcionalit?te",
+      "F??a"
+    ],
+    "given": [
+      "* ",
+      "Kad "
+    ],
+    "name": "Latvian",
+    "native": "latvie?u",
+    "scenario": [
+      "Scen?rijs"
+    ],
+    "scenarioOutline": [
+      "Scen?rijs p?c parauga"
+    ],
+    "then": [
+      "* ",
+      "Tad "
+    ],
+    "when": [
+      "* ",
+      "Ja "
+    ]
+  },
+  "mk-Cyrl": {
+    "and": [
+      "* ",
+      "? "
+    ],
+    "background": [
+      "????????",
+      "????????"
+    ],
+    "but": [
+      "* ",
+      "?? "
+    ],
+    "examples": [
+      "???????",
+      "?????????"
+    ],
+    "feature": [
+      "??????????????",
+      "?????? ???????",
+      "???????"
+    ],
+    "given": [
+      "* ",
+      "?????? ",
+      "?????? "
+    ],
+    "name": "Macedonian",
+    "native": "??????????",
+    "scenario": [
+      "????????",
+      "?? ??????"
+    ],
+    "scenarioOutline": [
+      "??????? ?? ?????????",
+      "?????",
+      "???????"
+    ],
+    "then": [
+      "* ",
+      "????? "
+    ],
+    "when": [
+      "* ",
+      "???? "
+    ]
+  },
+  "mk-Latn": {
+    "and": [
+      "* ",
+      "I "
+    ],
+    "background": [
+      "Kontekst",
+      "Sodrzhina"
+    ],
+    "but": [
+      "* ",
+      "No "
+    ],
+    "examples": [
+      "Primeri",
+      "Scenaria"
+    ],
+    "feature": [
+      "Funkcionalnost",
+      "Biznis potreba",
+      "Mozhnost"
+    ],
+    "given": [
+      "* ",
+      "Dadeno ",
+      "Dadena "
+    ],
+    "name": "Macedonian (Latin)",
+    "native": "Makedonski (Latinica)",
+    "scenario": [
+      "Scenario",
+      "Na primer"
+    ],
+    "scenarioOutline": [
+      "Pregled na scenarija",
+      "Skica",
+      "Koncept"
+    ],
+    "then": [
+      "* ",
+      "Togash "
+    ],
+    "when": [
+      "* ",
+      "Koga "
+    ]
+  },
+  "mn": {
+    "and": [
+      "* ",
+      "??? ",
+      "?????? "
+    ],
+    "background": [
+      "???????"
+    ],
+    "but": [
+      "* ",
+      "?????? ",
+      "????? "
+    ],
+    "examples": [
+      "?????????"
+    ],
+    "feature": [
+      "?????",
+      "??????????"
+    ],
+    "given": [
+      "* ",
+      "???????? ?? ",
+      "??? "
+    ],
+    "name": "Mongolian",
+    "native": "??????",
+    "scenario": [
+      "??????"
+    ],
+    "scenarioOutline": [
+      "???????? ??????????"
+    ],
+    "then": [
+      "* ",
+      "??????? ",
+      "????? ????? "
+    ],
+    "when": [
+      "* ",
+      "????? "
+    ]
+  },
+  "nl": {
+    "and": [
+      "* ",
+      "En "
+    ],
+    "background": [
+      "Achtergrond"
+    ],
+    "but": [
+      "* ",
+      "Maar "
+    ],
+    "examples": [
+      "Voorbeelden"
+    ],
+    "feature": [
+      "Functionaliteit"
+    ],
+    "given": [
+      "* ",
+      "Gegeven ",
+      "Stel "
+    ],
+    "name": "Dutch",
+    "native": "Nederlands",
+    "scenario": [
+      "Scenario"
+    ],
+    "scenarioOutline": [
+      "Abstract Scenario"
+    ],
+    "then": [
+      "* ",
+      "Dan "
+    ],
+    "when": [
+      "* ",
+      "Als ",
+      "Wanneer "
+    ]
+  },
+  "no": {
+    "and": [
+      "* ",
+      "Og "
+    ],
+    "background": [
+      "Bakgrunn"
+    ],
+    "but": [
+      "* ",
+      "Men "
+    ],
+    "examples": [
+      "Eksempler"
+    ],
+    "feature": [
+      "Egenskap"
+    ],
+    "given": [
+      "* ",
+      "Gitt "
+    ],
+    "name": "Norwegian",
+    "native": "norsk",
+    "scenario": [
+      "Scenario"
+    ],
+    "scenarioOutline": [
+      "Scenariomal",
+      "Abstrakt Scenario"
+    ],
+    "then": [
+      "* ",
+      "S? "
+    ],
+    "when": [
+      "* ",
+      "N?r "
+    ]
+  },
+  "pa": {
+    "and": [
+      "* ",
+      "??? "
+    ],
+    "background": [
+      "??????"
+    ],
+    "but": [
+      "* ",
+      "?? "
+    ],
+    "examples": [
+      "????????"
+    ],
+    "feature": [
+      "??????",
+      "????????",
+      "??? ?????"
+    ],
+    "given": [
+      "* ",
+      "???? ",
+      "????? ?? "
+    ],
+    "name": "Panjabi",
+    "native": "??????",
+    "scenario": [
+      "?????"
+    ],
+    "scenarioOutline": [
+      "????? ?????",
+      "????? ??? ????"
+    ],
+    "then": [
+      "* ",
+      "?? "
+    ],
+    "when": [
+      "* ",
+      "???? "
+    ]
+  },
+  "pl": {
+    "and": [
+      "* ",
+      "Oraz ",
+      "I "
+    ],
+    "background": [
+      "Za?o?enia"
+    ],
+    "but": [
+      "* ",
+      "Ale "
+    ],
+    "examples": [
+      "Przyk?ady"
+    ],
+    "feature": [
+      "W?a?ciwo??",
+      "Funkcja",
+      "Aspekt",
+      "Potrzeba biznesowa"
+    ],
+    "given": [
+      "* ",
+      "Zak?adaj?c ",
+      "Maj?c ",
+      "Zak?adaj?c, ?e "
+    ],
+    "name": "Polish",
+    "native": "polski",
+    "scenario": [
+      "Scenariusz"
+    ],
+    "scenarioOutline": [
+      "Szablon scenariusza"
+    ],
+    "then": [
+      "* ",
+      "Wtedy "
+    ],
+    "when": [
+      "* ",
+      "Je?eli ",
+      "Je?li ",
+      "Gdy ",
+      "Kiedy "
+    ]
+  },
+  "pt": {
+    "and": [
+      "* ",
+      "E "
+    ],
+    "background": [
+      "Contexto",
+      "Cen?rio de Fundo",
+      "Cenario de Fundo",
+      "Fundo"
+    ],
+    "but": [
+      "* ",
+      "Mas "
+    ],
+    "examples": [
+      "Exemplos",
+      "Cen?rios",
+      "Cenarios"
+    ],
+    "feature": [
+      "Funcionalidade",
+      "Caracter?stica",
+      "Caracteristica"
+    ],
+    "given": [
+      "* ",
+      "Dado ",
+      "Dada ",
+      "Dados ",
+      "Dadas "
+    ],
+    "name": "Portuguese",
+    "native": "portugu?s",
+    "scenario": [
+      "Cen?rio",
+      "Cenario"
+    ],
+    "scenarioOutline": [
+      "Esquema do Cen?rio",
+      "Esquema do Cenario",
+      "Delinea??o do Cen?rio",
+      "Delineacao do Cenario"
+    ],
+    "then": [
+      "* ",
+      "Ent?o ",
+      "Entao "
+    ],
+    "when": [
+      "* ",
+      "Quando "
+    ]
+  },
+  "ro": {
+    "and": [
+      "* ",
+      "Si ",
+      "?i ",
+      "?i "
+    ],
+    "background": [
+      "Context"
+    ],
+    "but": [
+      "* ",
+      "Dar "
+    ],
+    "examples": [
+      "Exemple"
+    ],
+    "feature": [
+      "Functionalitate",
+      "Func?ionalitate",
+      "Func?ionalitate"
+    ],
+    "given": [
+      "* ",
+      "Date fiind ",
+      "Dat fiind ",
+      "Dat? fiind",
+      "Dati fiind ",
+      "Da?i fiind ",
+      "Da?i fiind "
+    ],
+    "name": "Romanian",
+    "native": "rom?n?",
+    "scenario": [
+      "Scenariu"
+    ],
+    "scenarioOutline": [
+      "Structura scenariu",
+      "Structur? scenariu"
+    ],
+    "then": [
+      "* ",
+      "Atunci "
+    ],
+    "when": [
+      "* ",
+      "Cand ",
+      "C?nd "
+    ]
+  },
+  "ru": {
+    "and": [
+      "* ",
+      "? ",
+      "? ???? ?? ",
+      "????? "
+    ],
+    "background": [
+      "???????????",
+      "????????"
+    ],
+    "but": [
+      "* ",
+      "?? ",
+      "? ",
+      "????? "
+    ],
+    "examples": [
+      "???????"
+    ],
+    "feature": [
+      "???????",
+      "????????????????",
+      "??????????",
+      "????????"
+    ],
+    "given": [
+      "* ",
+      "???????? ",
+      "???? ",
+      "????? ",
+      "???? "
+    ],
+    "name": "Russian",
+    "native": "???????",
+    "scenario": [
+      "????????"
+    ],
+    "scenarioOutline": [
+      "????????? ????????"
+    ],
+    "then": [
+      "* ",
+      "?? ",
+      "????? ",
+      "????? "
+    ],
+    "when": [
+      "* ",
+      "????? "
+    ]
+  },
+  "sk": {
+    "and": [
+      "* ",
+      "A ",
+      "A tie? ",
+      "A taktie? ",
+      "A z?rove? "
+    ],
+    "background": [
+      "Pozadie"
+    ],
+    "but": [
+      "* ",
+      "Ale "
+    ],
+    "examples": [
+      "Pr?klady"
+    ],
+    "feature": [
+      "Po?iadavka",
+      "Funkcia",
+      "Vlastnos?"
+    ],
+    "given": [
+      "* ",
+      "Pokia? ",
+      "Za predpokladu "
+    ],
+    "name": "Slovak",
+    "native": "Slovensky",
+    "scenario": [
+      "Scen?r"
+    ],
+    "scenarioOutline": [
+      "N??rt Scen?ru",
+      "N??rt Scen?ra",
+      "Osnova Scen?ra"
+    ],
+    "then": [
+      "* ",
+      "Tak ",
+      "Potom "
+    ],
+    "when": [
+      "* ",
+      "Ke? ",
+      "Ak "
+    ]
+  },
+  "sl": {
+    "and": [
+      "In ",
+      "Ter "
+    ],
+    "background": [
+      "Kontekst",
+      "Osnova",
+      "Ozadje"
+    ],
+    "but": [
+      "Toda ",
+      "Ampak ",
+      "Vendar "
+    ],
+    "examples": [
+      "Primeri",
+      "Scenariji"
+    ],
+    "feature": [
+      "Funkcionalnost",
+      "Funkcija",
+      "Mo?nosti",
+      "Moznosti",
+      "Lastnost",
+      "Zna?ilnost"
+    ],
+    "given": [
+      "Dano ",
+      "Podano ",
+      "Zaradi ",
+      "Privzeto "
+    ],
+    "name": "Slovenian",
+    "native": "Slovenski",
+    "scenario": [
+      "Scenarij",
+      "Primer"
+    ],
+    "scenarioOutline": [
+      "Struktura scenarija",
+      "Skica",
+      "Koncept",
+      "Oris scenarija",
+      "Osnutek"
+    ],
+    "then": [
+      "Nato ",
+      "Potem ",
+      "Takrat "
+    ],
+    "when": [
+      "Ko ",
+      "Ce ",
+      "?e ",
+      "Kadar "
+    ]
+  },
+  "sr-Cyrl": {
+    "and": [
+      "* ",
+      "? "
+    ],
+    "background": [
+      "????????",
+      "??????",
+      "????????"
+    ],
+    "but": [
+      "* ",
+      "??? "
+    ],
+    "examples": [
+      "???????",
+      "?????????"
+    ],
+    "feature": [
+      "??????????????",
+      "?????????",
+      "???????"
+    ],
+    "given": [
+      "* ",
+      "?? ???? ",
+      "?? ???? ",
+      "?? ???? "
+    ],
+    "name": "Serbian",
+    "native": "??????",
+    "scenario": [
+      "????????",
+      "??????"
+    ],
+    "scenarioOutline": [
+      "????????? ?????????",
+      "?????",
+      "???????"
+    ],
+    "then": [
+      "* ",
+      "???? "
+    ],
+    "when": [
+      "* ",
+      "???? ",
+      "??? "
+    ]
+  },
+  "sr-Latn": {
+    "and": [
+      "* ",
+      "I "
+    ],
+    "background": [
+      "Kontekst",
+      "Osnova",
+      "Pozadina"
+    ],
+    "but": [
+      "* ",
+      "Ali "
+    ],
+    "examples": [
+      "Primeri",
+      "Scenariji"
+    ],
+    "feature": [
+      "Funkcionalnost",
+      "Mogu?nost",
+      "Mogucnost",
+      "Osobina"
+    ],
+    "given": [
+      "* ",
+      "Za dato ",
+      "Za date ",
+      "Za dati "
+    ],
+    "name": "Serbian (Latin)",
+    "native": "Srpski (Latinica)",
+    "scenario": [
+      "Scenario",
+      "Primer"
+    ],
+    "scenarioOutline": [
+      "Struktura scenarija",
+      "Skica",
+      "Koncept"
+    ],
+    "then": [
+      "* ",
+      "Onda "
+    ],
+    "when": [
+      "* ",
+      "Kada ",
+      "Kad "
+    ]
+  },
+  "sv": {
+    "and": [
+      "* ",
+      "Och "
+    ],
+    "background": [
+      "Bakgrund"
+    ],
+    "but": [
+      "* ",
+      "Men "
+    ],
+    "examples": [
+      "Exempel"
+    ],
+    "feature": [
+      "Egenskap"
+    ],
+    "given": [
+      "* ",
+      "Givet "
+    ],
+    "name": "Swedish",
+    "native": "Svenska",
+    "scenario": [
+      "Scenario"
+    ],
+    "scenarioOutline": [
+      "Abstrakt Scenario",
+      "Scenariomall"
+    ],
+    "then": [
+      "* ",
+      "S? "
+    ],
+    "when": [
+      "* ",
+      "N?r "
+    ]
+  },
+  "ta": {
+    "and": [
+      "* ",
+      "??????  ",
+      "??????? "
+    ],
+    "background": [
+      "???????"
+    ],
+    "but": [
+      "* ",
+      "?????  "
+    ],
+    "examples": [
+      "??????????????????",
+      "?????????",
+      " ???????????"
+    ],
+    "feature": [
+      "??????",
+      "???? ????",
+      "?????"
+    ],
+    "given": [
+      "* ",
+      "?????????????? "
+    ],
+    "name": "Tamil",
+    "native": "?????",
+    "scenario": [
+      "??????"
+    ],
+    "scenarioOutline": [
+      "?????? ?????????",
+      "?????? ??????????"
+    ],
+    "then": [
+      "* ",
+      "?????????? "
+    ],
+    "when": [
+      "* ",
+      "???????? "
+    ]
+  },
+  "th": {
+    "and": [
+      "* ",
+      "??? "
+    ],
+    "background": [
+      "??????"
+    ],
+    "but": [
+      "* ",
+      "??? "
+    ],
+    "examples": [
+      "??????????????",
+      "???????????????"
+    ],
+    "feature": [
+      "????????",
+      "????????????????????",
+      "??????????"
+    ],
+    "given": [
+      "* ",
+      "???????? "
+    ],
+    "name": "Thai",
+    "native": "???",
+    "scenario": [
+      "?????????"
+    ],
+    "scenarioOutline": [
+      "?????????????",
+      "?????????????????????"
+    ],
+    "then": [
+      "* ",
+      "??????? "
+    ],
+    "when": [
+      "* ",
+      "????? "
+    ]
+  },
+  "tl": {
+    "and": [
+      "* ",
+      "????? "
+    ],
+    "background": [
+      "???????"
+    ],
+    "but": [
+      "* ",
+      "???? "
+    ],
+    "examples": [
+      "????????"
+    ],
+    "feature": [
+      "?????"
+    ],
+    "given": [
+      "* ",
+      "??????????? "
+    ],
+    "name": "Telugu",
+    "native": "??????",
+    "scenario": [
+      "?????????"
+    ],
+    "scenarioOutline": [
+      "????"
+    ],
+    "then": [
+      "* ",
+      "??????? "
+    ],
+    "when": [
+      "* ",
+      "? ??????????? "
+    ]
+  },
+  "tlh": {
+    "and": [
+      "* ",
+      "'ej ",
+      "latlh "
+    ],
+    "background": [
+      "mo'"
+    ],
+    "but": [
+      "* ",
+      "'ach ",
+      "'a "
+    ],
+    "examples": [
+      "ghantoH",
+      "lutmey"
+    ],
+    "feature": [
+      "Qap",
+      "Qu'meH 'ut",
+      "perbogh",
+      "poQbogh malja'",
+      "laH"
+    ],
+    "given": [
+      "* ",
+      "ghu' noblu' ",
+      "DaH ghu' bejlu' "
+    ],
+    "name": "Klingon",
+    "native": "tlhIngan",
+    "scenario": [
+      "lut"
+    ],
+    "scenarioOutline": [
+      "lut chovnatlh"
+    ],
+    "then": [
+      "* ",
+      "vaj "
+    ],
+    "when": [
+      "* ",
+      "qaSDI' "
+    ]
+  },
+  "tr": {
+    "and": [
+      "* ",
+      "Ve "
+    ],
+    "background": [
+      "Ge?mi?"
+    ],
+    "but": [
+      "* ",
+      "Fakat ",
+      "Ama "
+    ],
+    "examples": [
+      "?rnekler"
+    ],
+    "feature": [
+      "?zellik"
+    ],
+    "given": [
+      "* ",
+      "Diyelim ki "
+    ],
+    "name": "Turkish",
+    "native": "T?rk?e",
+    "scenario": [
+      "Senaryo"
+    ],
+    "scenarioOutline": [
+      "Senaryo tasla??"
+    ],
+    "then": [
+      "* ",
+      "O zaman "
+    ],
+    "when": [
+      "* ",
+      "E?er ki "
+    ]
+  },
+  "tt": {
+    "and": [
+      "* ",
+      "??? ",
+      "?? "
+    ],
+    "background": [
+      "?????"
+    ],
+    "but": [
+      "* ",
+      "????? ",
+      "???? "
+    ],
+    "examples": [
+      "????????",
+      "????????"
+    ],
+    "feature": [
+      "?????????",
+      "??????????????"
+    ],
+    "given": [
+      "* ",
+      "????? "
+    ],
+    "name": "Tatar",
+    "native": "???????",
+    "scenario": [
+      "????????"
+    ],
+    "scenarioOutline": [
+      "??????????? ????????"
+    ],
+    "then": [
+      "* ",
+      "???????? "
+    ],
+    "when": [
+      "* ",
+      "???? "
+    ]
+  },
+  "uk": {
+    "and": [
+      "* ",
+      "? ",
+      "? ????? ",
+      "?? "
+    ],
+    "background": [
+      "??????????"
+    ],
+    "but": [
+      "* ",
+      "??? "
+    ],
+    "examples": [
+      "????????"
+    ],
+    "feature": [
+      "??????????"
+    ],
+    "given": [
+      "* ",
+      "?????????? ",
+      "??????????, ?? ",
+      "????? ",
+      "???? "
+    ],
+    "name": "Ukrainian",
+    "native": "??????????",
+    "scenario": [
+      "????????"
+    ],
+    "scenarioOutline": [
+      "????????? ????????"
+    ],
+    "then": [
+      "* ",
+      "?? ",
+      "???? "
+    ],
+    "when": [
+      "* ",
+      "???? ",
+      "???? "
+    ]
+  },
+  "ur": {
+    "and": [
+      "* ",
+      "??? "
+    ],
+    "background": [
+      "?? ????"
+    ],
+    "but": [
+      "* ",
+      "???? "
+    ],
+    "examples": [
+      "??????"
+    ],
+    "feature": [
+      "??????",
+      "??????? ?? ?????",
+      "??????"
+    ],
+    "given": [
+      "* ",
+      "??? ",
+      "?????? ",
+      "??? ??? "
+    ],
+    "name": "Urdu",
+    "native": "????",
+    "scenario": [
+      "????????"
+    ],
+    "scenarioOutline": [
+      "???? ???? ?? ????"
+    ],
+    "then": [
+      "* ",
+      "??? ",
+      "?? "
+    ],
+    "when": [
+      "* ",
+      "?? "
+    ]
+  },
+  "uz": {
+    "and": [
+      "* ",
+      "?? "
+    ],
+    "background": [
+      "?????"
+    ],
+    "but": [
+      "* ",
+      "????? ",
+      "????? ",
+      "???? "
+    ],
+    "examples": [
+      "????????"
+    ],
+    "feature": [
+      "??????????"
+    ],
+    "given": [
+      "* ",
+      "???? "
+    ],
+    "name": "Uzbek",
+    "native": "???????",
+    "scenario": [
+      "????????"
+    ],
+    "scenarioOutline": [
+      "???????? ???????????"
+    ],
+    "then": [
+      "* ",
+      "???? "
+    ],
+    "when": [
+      "* ",
+      "???? "
+    ]
+  },
+  "vi": {
+    "and": [
+      "* ",
+      "V? "
+    ],
+    "background": [
+      "B?i c?nh"
+    ],
+    "but": [
+      "* ",
+      "Nh?ng "
+    ],
+    "examples": [
+      "D? li?u"
+    ],
+    "feature": [
+      "T?nh n?ng"
+    ],
+    "given": [
+      "* ",
+      "Bi?t ",
+      "Cho "
+    ],
+    "name": "Vietnamese",
+    "native": "Ti?ng Vi?t",
+    "scenario": [
+      "T?nh hu?ng",
+      "K?ch b?n"
+    ],
+    "scenarioOutline": [
+      "Khung t?nh hu?ng",
+      "Khung k?ch b?n"
+    ],
+    "then": [
+      "* ",
+      "Th? "
+    ],
+    "when": [
+      "* ",
+      "Khi "
+    ]
+  },
+  "zh-CN": {
+    "and": [
+      "* ",
+      "??",
+      "??",
+      "??"
+    ],
+    "background": [
+      "??"
+    ],
+    "but": [
+      "* ",
+      "??"
+    ],
+    "examples": [
+      "??"
+    ],
+    "feature": [
+      "??"
+    ],
+    "given": [
+      "* ",
+      "??",
+      "??",
+      "??"
+    ],
+    "name": "Chinese simplified",
+    "native": "????",
+    "scenario": [
+      "??",
+      "??"
+    ],
+    "scenarioOutline": [
+      "????",
+      "????"
+    ],
+    "then": [
+      "* ",
+      "??"
+    ],
+    "when": [
+      "* ",
+      "?"
+    ]
+  },
+  "zh-TW": {
+    "and": [
+      "* ",
+      "??",
+      "??",
+      "??"
+    ],
+    "background": [
+      "??"
+    ],
+    "but": [
+      "* ",
+      "??"
+    ],
+    "examples": [
+      "??"
+    ],
+    "feature": [
+      "??"
+    ],
+    "given": [
+      "* ",
+      "??",
+      "??",
+      "??"
+    ],
+    "name": "Chinese traditional",
+    "native": "????",
+    "scenario": [
+      "??",
+      "??"
+    ],
+    "scenarioOutline": [
+      "????",
+      "????"
+    ],
+    "then": [
+      "* ",
+      "??"
+    ],
+    "when": [
+      "* ",
+      "?"
+    ]
+  }
+}

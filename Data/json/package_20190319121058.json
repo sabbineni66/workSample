@@ -1,0 +1,43 @@
+{
+  "name": "margbarg",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An app to catalog stuff and make goals relating to said stuff.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Paul Coroneos <coroneos>",
+	"license": "UNLICENSED",
+  "dependencies": {
+    "body-parser": "*",
+    "compression": "*",
+    "cookie-parser": "*",
+    "debug": "*",
+    "express": "*",
+    "express-react-views": "*",
+    "jsx-loader": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "react": "*",
+    "react-dom": "*",
+    "request": "*",
+    "serve-favicon": "*"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "colors": "*",
+    "serve-index": "*",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.0"
+  },
+  "engines": {
+    "node": "6.x"
+  }
+}

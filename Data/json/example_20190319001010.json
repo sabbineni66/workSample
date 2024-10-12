@@ -1,0 +1,52 @@
+{
+  "name": "Test API",
+  "slug": "example",
+  "api_id": "example",
+  "org_id": "neos",
+  "enable_context_vars": true,
+  "enable_session": true,
+  "auth": {
+    "auth_header_name": "Authorization"
+  },
+  "version_data": {
+    "not_versioned": true,
+    "versions": {
+      "Default": {
+        "name": "Default",
+        "use_extended_paths": true,
+        "extended_paths": {
+          "hard_timeouts": [{
+            "path": "{rest}",
+            "method": "GET",
+            "timeout": 1
+          }]
+        },
+        "global_headers": {
+          "X-Request-Identifier": "$tyk_context.request_id"
+        }
+      }
+    }
+  },
+  "proxy": {
+    "listen_path": "/example/",
+    "target_url": "http://httpbin.org/",
+    "strip_listen_path": true
+  },
+  "cache_options": {
+    "cache_timeout": 60,
+    "enable_cache": true,
+    "cache_all_safe_requests": false,
+    "enable_upstream_cache_control": true,
+    "cache_response_codes": [200]
+  },
+  "active": true,
+  "custom_middleware": {
+    "post": [
+      {
+        "name": "request_id",
+        "path": "middleware/request_id.js",
+        "require_session": false
+      }
+    ]
+  }
+}

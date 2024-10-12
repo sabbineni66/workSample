@@ -1,0 +1,5 @@
+apache_config_root: '/etc/apache2/sites-available'
+apache_log_root: '/var/log/apache2'
+apache_ssl_root: '/etc/apache2/ssl'
+god_config_root: '/etc/god'
+app_root: '/var/app'

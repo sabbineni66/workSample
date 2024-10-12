@@ -1,0 +1,16 @@
+{
+  "name": "language-openscad",
+  "version": "0.4.3",
+  "private": true,
+  "description": "OpenSCAD language support for Atom",
+  "repository": "https://github.com/rubyist/language-openscad",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {},
+  "keywords": [
+    "scad",
+    "OpenSCAD"
+  ]
+}

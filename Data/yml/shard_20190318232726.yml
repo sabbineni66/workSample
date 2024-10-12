@@ -1,0 +1,24 @@
+name: robommo
+version: 0.1.0
+
+authors:
+  - Marten Veldthuis <marten@veldthuis.com>
+
+executables:
+  - robommo
+
+targets:
+  robommo:
+    main: src/robommo.cr
+  bot-nothing:
+    main: bots/nothing.cr
+  bot-simple:
+    main: bots/simple.cr
+
+crystal: 0.24.2
+
+license: MIT
+
+dependencies:
+  ANSI:
+    github: Sevensidedmarble/Crystal-ANSI

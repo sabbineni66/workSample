@@ -1,0 +1,11 @@
+{
+  "name" : "youtube-aud.io",
+  "version": "1.0.0",
+  "dependencies": {
+    "coffee": "1.3.3",
+    "express": "2.5.11"
+  },
+  "engines": {
+    "node": "v0.8.11",
+  }
+}

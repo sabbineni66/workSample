@@ -1,0 +1,11 @@
+{
+  "title": "No-bullshit Tulpa Book",
+  "plugins": [
+    "ga"
+  ],
+  "pluginsConfig": {
+    "ga": {
+      "token": "UA-266459-20"
+    }
+  }
+}

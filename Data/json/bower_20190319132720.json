@@ -1,0 +1,29 @@
+{
+  "name": "remoteStorage",
+  "version": "1.0.0",
+  "homepage": "https://github.com/sandropaganotti/remoteStorage",
+  "authors": [
+    "Sandro Paganotti <sandro.paganotti@gmail.com>"
+  ],
+  "description": "remoteStorage store files remotely",
+  "main": "client/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.20",
+    "bootstrap-sass-official": "~3.2.0",
+    "angular-resource": "~1.2.20"
+  },
+  "devDependencies": {
+    "mocha": "~1.20.1",
+    "chai": "~1.9.1",
+    "angular-mocks": "~1.2.20"
+  }
+}

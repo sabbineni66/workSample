@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+import1:
+  id: 1
+  path: <%= "#{RAILS_ROOT}/spec/fixtures/files/rails.png" %>
+  gallery_id: 1
+  total: 3
+
+import2:
+  id: 2
+  path: <%= "#{RAILS_ROOT}/spec/fixtures/files/rails-2.png" %>
+  gallery_id: 1
+  total: 3
+
+import3:
+  id: 3
+  path: <%= "#{RAILS_ROOT}/spec/fixtures/files/rails-3.png" %>
+  gallery_id: 1
+  total: 3
+
+import4:
+  id: 4
+  path: <%= "#{RAILS_ROOT}/spec/fixtures/files/rails-3.png" %>
+  gallery_id: 2
+  total: 1

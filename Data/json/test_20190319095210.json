@@ -1,0 +1,31 @@
+{
+  "email": "fake@example.com",
+  "use_prod": true,
+  "allow_remote_debug": true,
+  "tls_dir": "./testdata/tls",
+  "config_check_interval": "3m",
+  "start_renew_duration": "3h",
+  "secrets": [
+    {
+      "namespace": "default",
+      "name": "test",
+      "domains": ["example.com"]
+    },
+    {
+      "namespace": "default",
+      "name": "missingtest",
+      "use_rsa": true,
+      "domains": ["www.example.com", "alt.example.com"]
+    },
+    {
+      "namespace": "staging",
+      "name": "missingtest",
+      "domains": ["test.example.com"]
+    },
+    {
+      "namespace": "",
+      "name": "nonamespace",
+      "domains": ["test.example.com"]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+sqlite:
+  :adapter: sqlite
+  :dbfile: vendor/plugins/trackable/test/trackable_plugin.sqlite.db

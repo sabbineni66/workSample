@@ -1,0 +1,32 @@
+---
+layout: nil
+categories: blog
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xml:lang="en"
+      xml:base="http://www.knurd.in" >
+ <id>http://www.knurd.in/{{ page.categories | join:'/' }}</id>
+ <title>Knurd - roop's blog</title>
+ <link href="http://www.knurd.in/{{ page.categories | join:'/' }}/atom.xml" rel="self"/>
+ <link href="http://www.knurd.in/{{ page.categories | join:'/' }}/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <author>
+   <name>Roopesh Chander</name>
+   <email>roopeshchander@gmail.com</email>
+ </author>
+
+ {% for post in site.posts limit:10 %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://www.knurd.in{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://www.knurd.in{{ post.id }}</id>
+   <content type="html"
+   {% if post.lang %} xml:lang="{{ post.lang }}" lang="{{ post.lang }}"
+   {% else %} xml:lang="en" lang="en" {% endif %}
+   >{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+
+</feed>

@@ -1,0 +1,34 @@
+{
+  "global": {
+    "header": "SASS Business",
+    "signup": "Signup",
+    "required": "Required",
+    "login": "Login",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "skip_to_content": "Skip to Content"
+  },
+  "homepage": {
+    "intro": "We do sass",
+    "sub_intro": "And do it better than anyone else",
+    "teaser": "Signup Now before anyone else does",
+    "section1header": "Trust Us",
+    "section1body": "We have a long history",
+    "section2header": "Trust Us",
+    "section2body": "We have a long history",
+    "section3header": "Trust Us",
+    "section3body": "We have a long history"
+  },
+  "signup": {
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "repeat": "Repeat Password",
+    "example_email": "example@example.com",
+    "match": "Your need to re-enter the same password"
+  },
+  "login": {
+    "username": "Username",
+    "password": "Password"
+  }
+}

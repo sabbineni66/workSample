@@ -1,0 +1,55 @@
+{
+  "variables": {
+    "BuildDirectory": "/home/centos/build",
+    "BuildTime": "{{ isotime \"2006-01-02T15-04-05Z\" }}",
+    "DeviceName": "/dev/xvdf"
+  },
+  "builders": [{
+    "type": "amazon-ebssurrogate",
+
+    "source_ami_filter": {
+      "filters": {
+        "name": "CentOS Linux 7*",
+        "owner-id": "410186602215",
+        "virtualization-type": "hvm"
+      },
+      "most_recent": true
+    },
+
+    "instance_type": "m4.large",
+    "ssh_username": "centos",
+
+    "launch_block_device_mappings": [
+      {
+        "device_name": "{{ user `DeviceName` }}",
+        "delete_on_termination": true,
+        "volume_size": 8,
+        "volume_type": "gp2"
+      }
+    ],
+    "sriov_support": true,
+    "ena_support": true,
+
+    "ami_name": "amoeba-{{ user `BuildTime` }}",
+    "ami_virtualization_type": "hvm",
+    "ami_root_device": {
+      "source_device_name": "{{ user `DeviceName` }}",
+      "device_name": "/dev/xvda",
+      "delete_on_termination": true,
+      "volume_size": 8,
+      "volume_type": "gp2"
+    },
+    "tags": {
+      "Name": "amoeba-{{ user `BuildTime` }}",
+      "BuildTime": "{{user `BuildTime` }}"
+    }
+  }],
+
+  "provisioners": [
+    {"type": "shell", "inline": "mkdir {{ user `BuildDirectory` }}"},
+    {"type": "file", "source": "files", "destination": "{{ user `BuildDirectory` }}"},
+    {"type": "file", "source": "build.sh", "destination": "{{ user `BuildDirectory` }}/build.sh"},
+    {"type": "shell", "inline": "sudo {{ user `BuildDirectory` }}/build.sh {{ user `DeviceName` }} {{ user `BuildDirectory` }}"}
+  ]
+}
+

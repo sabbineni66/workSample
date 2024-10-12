@@ -1,0 +1,67 @@
+{
+    // Place your settings in this file to overwrite the default settings
+    "workbench.editor.enablePreview": false,
+    "javascript.validate.enable": false,
+    // "editor.formatOnSave": true,
+
+    // "[javascript]": {
+    //   "editor.formatOnSave": true
+    // },
+
+    // "[json]": {
+    //   "editor.formatOnSave": true
+    // },
+    "editor.minimap.maxColumn": 80,
+    "prettier.singleQuote": true,
+    "prettier.printWidth": 80,
+    "prettier.jsxBracketSameLine": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.idea": true,
+        "**/.vscode": true,
+        // "**/deps": true, //mix deps
+        "**/rel": true, //mix projects release folder
+        "**/_build": true,
+        // "**/build": true,
+        "**/dist": true,
+        "**/.svn": true,
+        "**/log": true,
+        "**/.hg": true,
+        "**/.DS_Store": true
+    },
+    "files.trimTrailingWhitespace": true,
+    // Insert snippets when their prefix matches. Works best when 'quickSuggestions' aren't enabled.
+    "editor.tabCompletion": true,
+    "editor.wordWrapColumn": 80,
+
+    "editor.fontSize": 22,
+    "files.associations": {
+        "*.wpy": "vue",
+        "*.vue": "vue",
+        "*.json": "json",
+        "*.erb": "erb",
+        "*.scss.erb": "scss",
+        "*.html.erb": "html",
+        "*.js.erb": "javascript"
+    },
+    "window.zoomLevel": 0,
+    "editor.wordWrap": true,
+    "workbench.welcome.enabled": false,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "[javascript]": {},
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "all",
+    "explorer.confirmDragAndDrop": false,
+    "extensions.autoUpdate": false,
+
+    "standard.autoFixOnSave": false,
+
+    "[ruby]": {
+        "editor.formatOnSave": true
+    },
+    "[elixir]": {
+        "editor.formatOnSave": true
+    },
+    "a": "b"
+
+}

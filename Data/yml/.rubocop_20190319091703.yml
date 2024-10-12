@@ -1,0 +1,27 @@
+AllCops:
+  TargetRubyVersion: 2.4.2
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+
+Layout/AlignParameters:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/factories.rb'
+    - 'spec/**/*_spec.rb'
+
+Metrics/LineLength:
+  Max: 80
+  IgnoredPatterns: ['\A\s*#']
+
+Style/BlockComments:
+  Exclude:
+    - 'spec/spec_helper.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

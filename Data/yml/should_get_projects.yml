@@ -1,0 +1,120 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.pivotaltracker.com/services/v5/projects
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Host:
+      - www.pivotaltracker.com
+      Content-Type:
+      - application/json
+      X-Trackertoken:
+      - 1bb3efd2cacd614b697838751feb94da
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.14
+      X-Runtime:
+      - '52'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Etag:
+      - '"3b5279b475b1d3b6079ad14df31e00b9"'
+      Server:
+      - nginx/1.2.2 + Phusion Passenger 3.0.14 (mod_rails/mod_rack)
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-TrackerToken,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,X-Tracker-Warn-Unless-Project-Version-Is
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "atom_enabled": false,
+            "version": 1,
+            "name": "Peetee Test Project",
+            "velocity_averaged_over": 3,
+            "kind": "project",
+            "created_at": "2013-12-07T01:25:33Z",
+            "has_google_domain": false,
+            "point_scale_is_custom": false,
+            "current_iteration_number": 1,
+            "number_of_done_iterations_to_show": 12,
+            "updated_at": "2013-12-07T01:25:33Z",
+            "enable_incoming_emails": true,
+            "initial_velocity": 10,
+            "enable_following": true,
+            "account_id": 595468,
+            "start_time": "2013-12-02T00:00:00Z",
+            "enable_tasks": true,
+            "enable_planned_mode": false,
+            "week_start_day": "Monday",
+            "iteration_length": 1,
+            "time_zone": {
+              "kind": "time_zone",
+              "olson_name": "America/Los_Angeles",
+              "offset": "-08:00"
+            },
+            "id": 971936,
+            "bugs_and_chores_are_estimatable": false,
+            "public": true,
+            "point_scale": "0,1,2,3"
+          },
+          {
+            "atom_enabled": false,
+            "version": 7,
+            "name": "Peetee",
+            "velocity_averaged_over": 3,
+            "kind": "project",
+            "created_at": "2013-11-25T17:01:16Z",
+            "has_google_domain": false,
+            "point_scale_is_custom": false,
+            "current_iteration_number": 1,
+            "number_of_done_iterations_to_show": 12,
+            "updated_at": "2013-11-25T17:01:16Z",
+            "enable_incoming_emails": true,
+            "initial_velocity": 10,
+            "enable_following": true,
+            "account_id": 53831,
+            "start_time": "2013-12-02T05:00:00Z",
+            "enable_tasks": true,
+            "enable_planned_mode": false,
+            "week_start_day": "Monday",
+            "iteration_length": 1,
+            "time_zone": {
+              "kind": "time_zone",
+              "olson_name": "America/New_York",
+              "offset": "-05:00"
+            },
+            "id": 964498,
+            "bugs_and_chores_are_estimatable": false,
+            "public": true,
+            "point_scale": "0,1,2,3"
+          }
+        ]
+    http_version: 
+  recorded_at: Sat, 07 Dec 2013 01:33:12 GMT
+recorded_with: VCR 2.8.0

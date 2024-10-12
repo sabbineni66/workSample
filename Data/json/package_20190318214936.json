@@ -1,0 +1,27 @@
+{
+  "name": "gondor",
+  "version": "0.5.9",
+  "description": "Gondor API Client",
+  "homepage": "http://eldarion.cloud",
+  "author": "Brian Rosner <brosner@eldarion.com>",
+  "main": "lib/index.js",
+  "license": "BSD",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "with-query": "^1.0.2"
+  },
+  "engine": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "babel -s inline -d lib src",
+    "prepublish": "npm run build"
+  }
+}

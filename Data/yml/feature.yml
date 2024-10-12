@@ -1,0 +1,52 @@
+features:
+  - name: project
+    controller:
+      methods:
+        index: true
+        show: true
+        new: true
+        create: true
+        edit: true
+        update: true
+        destroy: true
+    model:
+      attributes:
+        name: string
+        user_id: integer
+        description: text
+  - name: task
+    controller:
+      methods:
+        index: true
+        show: true
+        new: false
+        create: false
+        edit: false
+        update: false
+        destroy: true
+    model:
+      attributes:
+        name: string
+        project_id: integer
+        description: text
+        priority: integer
+  - name: items
+    controller:
+      methods:
+        index: true
+        show: false
+        new: false
+        create: false
+        edit: false
+        update: false
+        destroy: false
+  - name: user
+    model:
+      attributes:
+        email: string
+        password_digest: string
+  - name: setting
+    model:
+      attributes:
+        name: string
+        user: references

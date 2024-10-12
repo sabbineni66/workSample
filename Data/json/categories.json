@@ -1,0 +1,43 @@
+[
+  {
+    "id": "css-frameworks",
+    "title": "CSS Frameworks",
+    "libraries": []
+  },
+  {
+    "id": "state",
+    "title": "State Management",
+    "libraries": [
+      {
+        "id": "1",
+        "name": "baobab-react",
+        "description": "React integration for Baobab, a persistent and optionally immutable data tree with cursors",
+        "github": "Yomguithereal/baobab-react",
+        "npm": "baobab-react",
+        "categoryId": "state"
+      },
+      {
+        "id": "2",
+        "name": "unstated",
+        "description": "State so simple, it goes without saying",
+        "github": "jamiebuilds/unstated",
+        "npm": "unstated",
+        "categoryId": "state"
+      }
+    ]
+  },
+  {
+    "id": "forms",
+    "title": "Forms",
+    "libraries": [
+      {
+        "id": "3",
+        "name": "react-forms",
+        "description": "",
+        "github": "prometheusresearch/react-forms",
+        "npm": "react-forms",
+        "categoryId": "forms"
+      }
+    ]
+  }
+]

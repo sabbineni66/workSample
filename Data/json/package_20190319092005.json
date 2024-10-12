@@ -1,0 +1,28 @@
+{
+  "name": "beard",
+  "version": "0.6.0",
+  "description": "More than a mustache.",
+  "license": "MIT",
+  "keywords": [
+    "templating engine",
+    "node"
+  ],
+  "repository": "git://github.com/shanebo/beard.git",
+  "author": "Shane Thacker <shane@steadymade.com>",
+  "contributors": [
+    "Joe Osburn <joe@jnodev.com>"
+  ],
+  "engine": ">= 0.4.1",
+  "main": "./beard",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "traversy": "0.0.2"
+  },
+  "devDependencies": {
+    "mocha": "4.1.0",
+    "chai": "4.1.2",
+    "brisky-performance": "1.4.2"
+  }
+}

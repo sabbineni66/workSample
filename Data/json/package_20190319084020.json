@@ -1,0 +1,14 @@
+{
+    "name": "uptown"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express":  ">= 2.4.0"
+    , "jade":     ">= 0.0.1"
+    , "login":    ">= 0.6.9"
+    , "pg":       ">= 0.5.4"
+  	, "uptown":	  ">= 0.0.1" 
+    , "connect-redis": ">= 1.0.7"
+    , "postmark": ">= 0.1.2"
+  }
+}

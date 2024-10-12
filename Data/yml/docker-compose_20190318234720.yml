@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  node:
+    build: .
+    working_dir: /extension
+    volumes:
+      - .:/extension
+
+      - /run/user/1000/keyring:/run/user/1000/keyring
+      - ~/.zshrc:/root/.zshrc
+      - ~/.oh-my-zsh:/root/.oh-my-zsh
+      - ~/.zshrc:/home/app/.zshrc
+      - ~/.oh-my-zsh:/home/app/.oh-my-zsh
+
+

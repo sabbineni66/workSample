@@ -1,0 +1,12 @@
+{
+  "name": "purescript-jquery-example",
+  "description": "",
+  "dependencies": {
+        "purescript-either": "*",
+        "purescript-jquery": "*",
+        "purescript-arrays": "*",
+        "purescript-maybe": "*",
+        "jquery": "*"
+  }
+}
+

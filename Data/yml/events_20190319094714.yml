@@ -1,0 +1,104 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+disabled:
+  user: verified
+  description: disabled event
+  state: disabled
+
+scheduled:
+  user: verified
+  description: scheduled event
+  state: scheduled
+  scheduled_at: 2008-09-08 07:06:00 EST
+  repeating: false
+
+waiting:
+  user: verified
+  description: waiting event
+  state: waiting
+  scheduled_at: 2008-09-08 07:06:00 EST
+  repeating: false
+
+active:
+  user: verified
+  description: active event
+  state: active
+  scheduled_at: 2008-09-08 07:06:00 EST
+  repeating: false
+
+active_every_hour:
+  user: verified
+  description: active event
+  state: active
+  scheduled_at: 2008-09-08 07:06:00 EST
+  repeating: true
+  interval: 1
+  frequency: hourly
+  repeats: forever
+
+active_once:
+  user: verified
+  description: active event
+  state: active
+  scheduled_at: 2008-09-08 07:06:00 EST
+  repeating: false
+
+every_ten_minutes:
+  user: verified
+  description: every ten minutes
+  state: disabled
+  scheduled_at: 2008-09-08 07:06:00 EST
+  repeating: true
+  interval: 10
+  frequency: minutely
+  repeats: forever
+
+every_three_hours:
+  user: verified
+  description: every three hours
+  state: disabled
+  scheduled_at: 2008-09-08 07:06:00 EST
+  repeating: true
+  interval: 3
+  frequency: hourly
+  repeats: forever
+
+every_other_day:
+  user: verified
+  description: every other day
+  state: disabled
+  scheduled_at: 2007-12-31 07:06:00 EDT
+  repeating: true
+  interval: 2
+  frequency: daily
+  repeats: forever
+
+weekly:
+  user: verified
+  description: weekly event
+  state: disabled
+  scheduled_at: 2008-09-08 07:06:00 EST
+  repeating: true
+  interval: 1
+  frequency: weekly
+  repeats: forever
+
+monthly:
+  user: verified
+  description: monthly event
+  state: disabled
+  scheduled_at: 2007-12-31 07:06:00 EDT
+  repeating: true
+  interval: 1
+  frequency: monthly
+  repeats: forever
+
+yearly:
+  user: verified
+  description: yearly event
+  state: disabled
+  scheduled_at: 2008-09-08 07:06:00 EST
+  repeating: true
+  interval: 1
+  frequency: yearly
+  repeats: forever

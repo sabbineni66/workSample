@@ -1,0 +1,51 @@
+en:
+  activerecord:
+    attributes:
+      enquiry:
+        name: Name
+        email: E-mail
+        phone: Phone number
+        message: Message
+      item:
+        price:  Price
+      item_translation:
+        name: Name
+        description: Description
+  helpers:
+    submit:
+      enquiry:
+        create: Contact
+  common:
+    please_wait: Please wait...
+    slogan: A marketplace to sell your unused items.
+  enquiries:
+    enquiry:
+      header: Contact now
+      sent_header: Your enquiry was sent
+      sent_description: Seller will receive an email in a few moments. You will receive an email reply or callback by a phone.
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"
+    hints:
+      item:
+        price: Price of the item should be EUR
+        condition_id: Choose a condition matches to your item
+        category_id: Choose a specific category
+        translations:
+          name: Main item information
+          description: Provide as many information as possible
+  layouts:
+    application:
+      header:
+        sell: Sell your item
+        for_free: For free
+  components:
+    image_uploader:
+      delete: Delete
+      choose_photos: Choose photos
+      drag_text: or drag them with mouse here

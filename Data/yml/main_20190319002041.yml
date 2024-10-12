@@ -1,0 +1,9 @@
+--- 
+- main: 
+    arguments: 
+    - int: argc
+    - char **: argv
+    - char **: envp
+    storage: ""
+    desc: main
+    return: int

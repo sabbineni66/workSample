@@ -1,0 +1,45 @@
+{
+  "name": "hapi-thinky",
+  "version": "0.2.0",
+  "description": "Hapi plugin for rethinkdb's thinky orm",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node node_modules/lab/bin/lab -a code -t 100 -L -v",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shinzui/hapi-thinky.git"
+  },
+  "keywords": [
+    "hapi",
+    "hapijs",
+    "rethinkdb",
+    "thinky"
+  ],
+  "author": "Nadeem Bitar <nadeem@productatelier.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shinzui/hapi-thinky/issues"
+  },
+  "homepage": "https://github.com/shinzui/hapi-thinky#readme",
+  "dependencies": {
+    "glue": ">=3.3.0",
+    "hoek": ">=4.0.2",
+    "thinky": "~2.3.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "code": ">=3.0.2",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^10.0.0",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^6.0.0",
+    "lab": "^10.9.0"
+  },
+  "peerDependencies": {
+    "hapi": ">10.0.0 <15.0"
+  }
+}

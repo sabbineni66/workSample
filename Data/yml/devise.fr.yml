@@ -1,0 +1,92 @@
+fr:
+  errors:
+    messages:
+      expired: "a expir?, merci d'en faire une nouvelle demande"
+      not_found: "n'a pas ?t? trouv?(e)"
+      already_confirmed: "a d?j? ?t? valid?(e)"
+      not_locked: "n'?tait pas verrouill?(e)"
+      not_saved:
+        one: "1 erreur a emp?ch? ce(tte) %{resource} d'?tre sauvegard?(e) :"
+        other: "%{count} erreurs ont emp?ch? ce(tte) %{resource} d'?tre sauvegard?(e) :"
+
+  devise:
+    failure:
+      already_authenticated: "Vous ?tes d?j? connect? !"
+      unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
+      unconfirmed: "Vous devez valider votre compte pour continuer."
+      locked: "Votre compte est verrouill?."
+      invalid: "Email ou mot de passe incorrects."
+      invalid_token: "Jeton d'authentification incorrect."
+      timeout: "Votre session est expir?e, veuillez vous reconnecter pour continuer."
+      inactive: "Votre compte n'est pas encore activ?."
+    sessions:
+      user:
+        signed_in: Connect?.
+        signed_out: D?connect?.
+    passwords:
+      send_instructions: 'Vous allez recevoir les instructions de r?initialisation du mot de passe dans quelques instants'
+      updated: 'Votre mot de passe a ?t? ?dit? avec succ?s, vous ?tes maintenant connect?'
+      updated_not_active: 'Votre mot de passe a ?t? chang? avec succ?s.'
+      send_paranoid_instructions: "Si votre e-mail existe dans notre base de donn?es, vous allez recevoir un lien de r?initialisation par e-mail"
+    confirmations:
+      send_instructions: 'Vous allez recevoir les instructions n?cessaires ? la confirmation de votre compte dans quelques minutes'
+      send_paranoid_instructions: 'Si votre e-mail existe dans notre base de donn?es, vous allez bient?t recevoir un e-mail contenant les instructions de confirmation de votre compte.'
+      confirmed: 'Votre compte a ?t? valid?, vous ?tes maintenant connect?'
+    registrations:
+      signed_up: 'Bienvenu, vous ?tes connect?'
+      signed_up_but_unconfirmed: 'Un message contenant un lien de confirmation a ?t? envoy? ? votre adresse email. Ouvrez ce lien pour activer votre compte.'
+      signed_up_but_inactive: "Vous ?tes bien enregistr?. Vous ne pouvez cependant pas vous connecter car votre compte n'est pas encore activ?."
+      signed_up_but_locked: "Vous ?tes bien enregistr?. Vous ne pouvez cependant pas vous connecter car votre compte est verrouill?."
+      updated: 'Votre compte a ?t? modifi? avec succ?s.'
+      update_needs_confirmation: "Votre compte a bien ?t? mis ? jour mais nous devons v?rifier votre nouvelle adresse email. Merci de v?rifier vos emails et de cliquer sur le lien de confirmation pour finaliser la validation de votre nouvelle adresse."
+      destroyed: 'Votre compte a ?t? supprim? avec succ?s. Nous esp?rons vous revoir bient?t.'
+    unlocks:
+      send_instructions: 'Vous allez recevoir les instructions n?cessaires au d?verrouillage de votre compte dans quelques instants'
+      unlocked: 'Votre compte a ?t? d?verrouill? avec succ?s, vous ?tes maintenant connect?.'
+      send_paranoid_instructions: 'Si votre compte existe, vous allez bient?t recevoir un email contenant les instructions pour le d?verrouiller.'
+    omniauth_callbacks:
+      success: 'Authentifi? avec succ?s via %{kind}.'
+      failure: "Nous n'avons pas pu vous authentifier via %{kind} : '%{reason}'."
+    mailer:
+      confirmation_instructions:
+        subject: "Instructions de confirmation"
+      reset_password_instructions:
+        subject: "Instructions pour changer le mot de passe"
+      unlock_instructions:
+        subject: "Instructions pour d?verrouiller le compte"
+
+    # Views
+    sessions:
+      new:
+        title: Qui ?tes-vous ?
+        remember_me: Se souvenir de moi
+        submit: C'est moi
+        submitting: Connexion?
+      user:
+        signed_in: "Connect? avec succ?s"
+    registrations:
+      new:
+        title: Cr?er un compte
+        submit: Cr?er un compte et se connecter
+        submitting: Cr?ation du compte?
+      edit:
+        title: Compte
+        email_label: Email
+        password_label: Mot de passe
+        password_help: (laisser vide si vous ne voulez pas le changer)
+        current_password_label: Mot de passe actuel
+        current_password_help: (on a besoin que vous confirmiez votre mot de passe actuel pour valider les changements)
+        submit: Mettre ? jour mon compte
+        submitting: Mise ? jour?
+
+    passwords:
+      new:
+        title: Mot de passe oubli? ?
+        submit: Envoyez-moi un email pour r?cup?rer mon mot de passe
+        submitting: Envoi de l'email?
+      edit:
+        title: Modifier mon mot de passe
+        new_password: Nouveau mot de passe
+        new_password_confirmation: Confirmer le mot de passe
+        submit: Modifier mon mot de passe
+        submitting: Modification du mot de passe?

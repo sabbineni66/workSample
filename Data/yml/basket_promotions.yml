@@ -1,0 +1,9 @@
+- id: 001
+  minimum_spend: 60
+  discount: 10
+- id: 002
+  minimum_spend: 100
+  discount: 20
+- id: 003
+  minimum_spend: 1000
+  discount: 50

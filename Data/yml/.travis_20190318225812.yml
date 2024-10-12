@@ -1,0 +1,13 @@
+gemfile:
+  - Gemfile
+language: ruby
+rvm:
+  - 1.9.3
+  - 2.0.0
+  - 2.1.0
+notifications:
+  email: false
+bundler_args: --without guard
+before_script: sudo service cassandra status
+services:
+ - cassandra

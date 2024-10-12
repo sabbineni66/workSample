@@ -1,0 +1,16 @@
+{
+  "preTitle": "What We Do",
+  "title": "We develop advanced software for the financial sector.",
+  "intro": "Storm Software Plc, \"Storm\", is a developer of advanced software for the financial sector and its related partners. The development of such software focuses on monitoring commercial transactions through Playback? and real time movement and tracking of commercial documents by Ola?.\n\nStorm also creates and develops software for algorithmic derivative and equity trading funds, alongside a managed control and monitoring service. Allied to software development, Storm provides an employment and placement service for IT sector professionals in all categories of the industry.",
+  "bullets": [
+    {
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam a metus vitae ullamcorper."
+    },
+    {
+      "body": "Maecenas ac velit lacinia, feugiat dolor in, maximus odio. Duis tempor lacinia nisi et vestibulum."
+    },
+    {
+      "body": "Sed posuere tincidunt tortor, sit amet consequat nisi interdum ac. Nunc quis mi a dui laoreet euismod eget quis ante."
+    }
+  ]
+}

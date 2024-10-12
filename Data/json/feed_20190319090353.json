@@ -1,0 +1,231 @@
+{
+	"version": "https://jsonfeed.org/version/1",
+	"title": "Ole Begemann",
+	"home_page_url": "https://ole.micro.blog/",
+	"feed_url": "https://ole.micro.blog/feed.json",
+	"items": [
+		
+		{
+			"id": "http://ole.micro.blog/2018/06/23/suz-hinton-on.html",
+	      	
+			"title": "Suz Hinton on impostor syndrome",
+			
+			"content_html": "<p><a href=\"http://noopkat.com/\">Suz Hinton</a> was a <a href=\"https://changelog.com/podcast/288\">guest on The Changelog podcast</a>. Starting <a href=\"https://changelog.com/podcast/288#t=00:15:56.26\">at 15:56</a>, she tells the story how her <a href=\"https://twitch.tv/noopkat\">live-coding on Twitch</a> caught Microsoft?s attention and eventually resulted in a job offer.</p>\n\n<p>And even though she was obviously successful and people liked what she did, she couldn?t shake off the <a href=\"https://en.wikipedia.org/wiki/Impostor_syndrome\">impostor syndrome</a>:</p>\n\n<blockquote>\n  <p>I think it?s quite hilarious that it happened that way, because the biggest fear I had about getting started with streaming was? everyone kind of barrels through something they don?t know how to do, and they tend to do that in privacy; most people only push out their very polished commit even in the workplace. And a lot of people are quite intimidated about pairing with most senior developers, because they?re worried about their reputation, and being found out to be impostors, and all that kind of self-esteem stuff.</p>\n\n  <p>So I thought that if I stream myself? I always joke that you are at most 50% of the programmer you actually are when you?re not under pressure, having a couple hundred people watching you code. So I feel that on Twitch I?m not representing the best programmer that I can be; I?m actually representing a much worse programmer than I am. And so I thought that if I start streaming and people assume that this is the best that I can do, maybe this will actually make me unhireable instead.</p>\n\n  <p>So I think it?s really funny that Microsoft reached out, because I was like, ?are you sure? Because there?s a lot of crap that I?ve written on this show.?</p>\n</blockquote>\n",
+			"date_published": "2018-06-23T17:15:17+02:00",
+			"url": "https://ole.micro.blog/2018/06/23/suz-hinton-on.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2018/05/21/julia-evans-no.html",
+	      	
+			"content_html": "<p><a href=\"https://twitter.com/b0rk/status/997335952765972480\">Julia Evans</a>:</p>\n\n<blockquote>\n  <p>No seriously, what if we replaced tech books with informative concise 30-page zines?</p>\n</blockquote>\n\n<p>Julia?s <a href=\"https://jvns.ca/zines/\">comics and zines</a> about system tools and programming are great. I love this format, it?s much more approachable than a 300-page book.</p>\n",
+			"date_published": "2018-05-21T17:24:41+02:00",
+			"url": "https://ole.micro.blog/2018/05/21/julia-evans-no.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2018/05/20/the-broken-promise.html",
+	      	
+			"title": "The broken promise of re-use",
+			
+			"content_html": "<p><a href=\"https://blog.codecentric.de/en/2015/10/the-broken-promise-of-re-use/\">Uwe Friedrichsen</a>:</p>\n\n<blockquote>\n  <p>Re-use is the holy grail of IT. ? I do not know about your experiences but I have never really seen it working the promised way.</p>\n</blockquote>\n\n<p>Great read.</p>\n\n<blockquote>\n  <p>The point about re-use is that mostly everything that would be re-used often enough that it makes sense to invest the effort to make it re-usable has been implemented already.</p>\n</blockquote>\n\n<p>Exactly. Almost no developer writes their own strings library, networking stack, or UI framework. These components are reused millions of times, saving developers tons of time <em>and</em> enabling us to do things we otherwise wouldn?t know how to do.</p>\n\n<p>Even if your organization doesn?t reuse any self-written code, your overall percentage of code ?hiding? inside reused components will still be very high.</p>\n\n<p>In other words: reuse works, but best on lower levels of abstraction that the one you?re working on. Application developers reuse a UI library; The developers of the UI library reuse a strings library; the developers of the strings library reuse the <a href=\"http://site.icu-project.org\">ICU libs</a> for Unicode processing; and so on.</p>\n\n<blockquote>\n  <p>Re-use emerges. Don?t plan for it. It takes a lot of work, trial and error and actual experience with real clients to design a good re-usable component.</p>\n</blockquote>\n",
+			"date_published": "2018-05-20T11:01:43+02:00",
+			"url": "https://ole.micro.blog/2018/05/20/the-broken-promise.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2018/04/18/matt-diephousehttpstwittercommdiepstatus-in.html",
+	      	
+			"content_html": "<p><a href=\"https://twitter.com/mdiep/status/978727299301429248\">Matt Diephouse</a>:</p>\n\n<blockquote>\n  <p>In the Elm architecture, Commands are Messages that are sent to the effectful world and Messages are Commands that are sent to the pure world.</p>\n</blockquote>\n",
+			"date_published": "2018-04-18T18:03:20+02:00",
+			"url": "https://ole.micro.blog/2018/04/18/matt-diephousehttpstwittercommdiepstatus-in.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2018/04/16/one-of-my.html",
+	      	
+			"content_html": "<p>One of my main takeaways from reading <a href=\"https://www.amazon.com/Stuff-Matters-Exploring-Marvelous-Materials/dp/0544236041\">Stuff Matters</a> by Mark Miodownik is what a fascinating subject <a href=\"https://en.wikipedia.org/wiki/Materials_science\">materials science</a> is.</p>\n\n<p>You can work in so many different fields, from nanotechnology or biotech to construction materials or the space industry.</p>\n\n<p>When I started university 20 years ago I think I had heard the name ?materials science?, but I had no idea what it was about. Knowing what I know now, I might have picked it.</p>\n\n<p>I guess what I want to say is this: study materials science!</p>\n\n<p><img src=\"http://ole.micro.blog/uploads/2018/3b9b94d7fb.jpg\" width=\"333\" height=\"500\" /></p>\n",
+			"date_published": "2018-04-16T20:55:47+02:00",
+			"url": "https://ole.micro.blog/2018/04/16/one-of-my.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2018/03/26/the-oral-history.html",
+	      	
+			"title": "The Oral History of Avie Tevanian",
+			
+			"content_html": "<p><a href=\"https://en.wikipedia.org/wiki/Avie_Tevanian\">Avie Tevanian</a>, former head of software engineering at Apple and creator of the <a href=\"https://en.wikipedia.org/wiki/Mach_(kernel)\">Mach kernel</a> that powers macOS and iOS, gave a lengthy (4.5 hours in total) <a href=\"https://www.youtube.com/watch?v=vwCdKU9uYnE\">two-part interview</a> to the Computer History Museum in 2017.</p>\n\n<p>Tevanian <a href=\"https://daringfireball.net/2003/07/the_good_the_bad_and_the_avie\">was a controversial figure</a> in the pre-OS X Apple enthusiast community because of his role in bringing ?legacy? technologies like file extensions to the Mac. At any rate, he was a hugely influential figure in the early days of OS X.</p>\n\n<p>If you can find the time, the entire interview is worth watching. <a href=\"https://www.youtube.com/watch?v=vwCdKU9uYnE\">Part 1</a> is about Tevanian?s pre-Apple life and career, while <a href=\"https://www.youtube.com/watch?v=NtpIFrOGTHk\">part 2</a> focuses on his time at Apple.</p>\n\n<h2 id=\"some-quotes-i-found-particularly-interesting\">Some quotes I found particularly interesting</h2>\n\n<p>On joining NeXT and not going to Microsoft in 1988 (after creating Mach at CMU) (<a href=\"https://www.youtube.com/watch?v=vwCdKU9uYnE&amp;t=1h41m\">part 1 at 1:41</a>):</p>\n\n<blockquote>\n  <p>If I had gone to Microsoft, NT probably would not have existed. It would have been something different.</p>\n</blockquote>\n\n<p>On Objective-C vs. C++ (<a href=\"https://www.youtube.com/watch?v=vwCdKU9uYnE&amp;t=2h8m55s\">part 1 at 2:09</a>):</p>\n\n<blockquote>\n  <p>We never considered C++ as a development language for NeXTSTEP, but at some point [after pressure from customers who wanted to use C++] we built a version of C++ we called Objective-C++, which let it coexist with Objective-C. It never got used very much. It became more of a checklist item for certain customers who wanted it.</p>\n</blockquote>\n\n<p>On WebObjects (<a href=\"https://www.youtube.com/watch?v=vwCdKU9uYnE&amp;t=2h26m50s\">part 1 at 2:27</a>):</p>\n\n<blockquote>\n  <p>If we hadn?t got bought by Apple, WebObjects would have become a huge business. We had a huge head start. There was no competition.</p>\n</blockquote>\n\n<p>On Gil Amelio (<a href=\"https://www.youtube.com/watch?v=NtpIFrOGTHk&amp;t=41m9s\">part 2 at 0:41</a>):</p>\n\n<blockquote>\n  <p>He gave me sort of free rein to do whatever I thought was right. His gut was to go with me. That was in part because he trusted me, but also because Steve was telling him, ?trust this guy?.</p>\n</blockquote>\n\n<p>On John Rubinstein (<a href=\"https://www.youtube.com/watch?v=NtpIFrOGTHk&amp;t=49m47s\">part 2 at 0:50</a>):</p>\n\n<blockquote>\n  <p>John and I had a wonderful yet strenuous relationship because we had to work together, yet we often had competing goals. His goal was to get a new hardware product out every 9 to 12 months and have the software for it. My goal was to not worry about the hardware schedule and just get the features right for the next release.</p>\n</blockquote>\n\n<p>On leaving Apple (<a href=\"https://www.youtube.com/watch?v=NtpIFrOGTHk&amp;t=1h34m10s\">part 2 at 1:34</a>):</p>\n\n<blockquote>\n  <p>In retrospect I think [leaving Apple] was a huge mistake for both of us [Avie and Steve Jobs]. For me, I left just before the main inflection point of the company having massive success [the iPhone], and part of me misses being there to experience that part of it having laid all the groundwork for it.</p>\n\n  <p>And it was wrong for Steve because I think he really lost something by not having me around to bounce ideas off or get sanity checks on.</p>\n</blockquote>\n\n<p>The Computer History Museum also has <a href=\"http://archive.computerhistory.org/resources/access/text/2017/06/102706885-05-01-acc.pdf\">a transcript of the interview</a>.</p>\n",
+			"date_published": "2018-03-26T21:09:18+02:00",
+			"url": "https://ole.micro.blog/2018/03/26/the-oral-history.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2018/03/17/i-just-spent.html",
+	      	
+			"content_html": "<p>I just spent hours taking notes in a book in Apple?s <a href=\"https://www.apple.com/ibooks/\">iBooks app</a>. Almost needless to say, the app is a silo ? it?s incredibly hard if not impossible to export these notes from iBooks in a form that can be shared with others.</p>\n\n<p>The way the big tech companies actively obstruct the free exchange of data (which their customers have created and own!) is a sad comment on the state of the industry.</p>\n",
+			"date_published": "2018-03-17T16:28:28+01:00",
+			"url": "https://ole.micro.blog/2018/03/17/i-just-spent.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2018/03/12/when-you-activate.html",
+	      	
+			"content_html": "<p>When you activate the <a href=\"https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreData/Performance.html#//apple_ref/doc/uid/TP40001075-CH25-SW13\"><code class=\"highlighter-rouge\">-com.apple.CoreData.SQLDebug 1</code></a> flag to analyze your app?s SQL usage, keep in mind that SQL requests made by other frameworks your app links against will also show up in the log, if those frameworks use Core Data internally.</p>\n\n<p>I noticed this in an app that works with <a href=\"https://developer.apple.com/documentation/photos\">Photos.framework</a>. Internal Core Data fetches made by Photos showed up in the Xcode console side by side with my own app?s SQL statements.</p>\n\n<p>This was quite confusing until I grokked what was going on.</p>\n",
+			"date_published": "2018-03-12T18:54:57+01:00",
+			"url": "https://ole.micro.blog/2018/03/12/when-you-activate.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2018/01/25/michael-lopp-how.html",
+	      	
+			"content_html": "<p>Michael Lopp, <a href=\"https://daringfireball.net/linked/2018/01/24/how-to-write\">How to write a blog post</a>:</p>\n\n<blockquote>\n  <p>Randomly think of a thing. Let it bump around your head a bit. If the bumping gets too loud, start writing the words.</p>\n\n  <p>?</p>\n\n  <p>When you are close to done, print it out on paper. Sit somewhere else with your favorite pen and edit your work harshly. If this piece is important, let someone else edit harshly.</p>\n</blockquote>\n\n<p><a href=\"https://daringfireball.net/linked/2018/01/24/how-to-write\">John Gruber</a>:</p>\n\n<blockquote>\n  <p>There?s nothing magic about printing on paper and editing with a pen. To me it?s all about changing context, putting my brain in an at least slightly different mode. That?s why I love Lopp?s imperative to ?Sit in a different place? ? you need to see your own words in a different light.</p>\n</blockquote>\n",
+			"date_published": "2018-01-25T15:32:00+01:00",
+			"url": "https://ole.micro.blog/2018/01/25/michael-lopp-how.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2018/01/02/andy-matuschak-functioning.html",
+	      	
+			"title": "Andy Matuschak: Functioning as a Functionalist",
+			
+			"content_html": "<p><a href=\"https://www.youtube.com/watch?v=rJosPrqBqrA\">Andy Matuschak</a>:</p>\n\n<p>The 3 I?s of value types:</p>\n\n<ul>\n  <li>Inert</li>\n  <li>Isolated</li>\n  <li>Interchangeable</li>\n</ul>\n\n<p><strong>Values are dead</strong>. In contrast, objects <strong>behave and respond</strong>.</p>\n\n<p>Many dead values can make one living identity.</p>\n\n<p>Objects:</p>\n\n<ul>\n  <li>Represent identity</li>\n  <li>Manage state transitions</li>\n  <li>Perform side effects</li>\n</ul>\n\n<p>Value: Inert data.\nIdentity: Values related in time.\nState: An identity?s value at some time.</p>\n\n<p>Think of your program as two layers: the object layer and the value layer. <strong>Aim to move all the interesting stuff into the value layer.</strong> Your business logic should be modeled as transformations of immutable values.</p>\n\n<p><img src=\"http://ole.micro.blog/uploads/2018/aa822258cd.jpg\" width=\"600\" height=\"450\" /></p>\n",
+			"date_published": "2018-01-02T14:59:35+01:00",
+			"url": "https://ole.micro.blog/2018/01/02/andy-matuschak-functioning.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2018/01/02/finding-happiness-in.html",
+	      	
+			"title": "Finding Happiness in Functional Programming ",
+			
+			"content_html": "<p><a href=\"https://www.youtube.com/watch?v=A0VaIKK2ijM\">Brandon Williams</a>:</p>\n\n<ul>\n  <li>\n    <p>Isolation of effects (side-effects and co-effects) from purity:</p>\n\n    <ul>\n      <li>\n        <p>Side-effects: an expression makes an observable change to the outside world.</p>\n      </li>\n      <li>\n        <p>Co-effects: the state of the world the expression needs in order to execute.</p>\n      </li>\n    </ul>\n\n    <p>Thomas Petricek: <a href=\"http://tomasp.net/blog/2014/why-coeffects-matter/\">Coeffects: The next big programming challenge</a>.</p>\n\n    <p>The effect/co-effect duality is exactly what makes testing hard.</p>\n  </li>\n  <li>\n    <p>Code to the interface you wish you had, not the interface you were given.</p>\n\n    <p>Example of an interface we were given: UIKit. Find a way of using it that makes us happy, ideally without building a gigantic abstraction layer on top.</p>\n\n    <p>Solution: use pure functions as much as possible, in particular lenses. Lenses are composable/chainable and allow you to model transformations abstractly, independent of a particular value.</p>\n  </li>\n</ul>\n\n<p>Results:</p>\n\n<ul>\n  <li>Testing is way easier. Model very complex user flows without ever touching the UI.</li>\n  <li>Test-driven development. Being able to define the flow of a UI action before implementing it. Test-driven bug fixing.</li>\n  <li>Playground-driven development. Being able to create a view in a fully isolated way without having to set up the whole app.</li>\n  <li>Screenshot testing falls out of this. Being able to set up the most complicated state (language, screen size, app state) for every view.</li>\n  <li>Event tracking/analytics becomes testable.</li>\n</ul>\n\n<p><a href=\"https://speakerdeck.com/mbrandonw/finding-happiness-in-functional-programming\">The slides are on Speaker Deck</a>.</p>\n\n<p><img src=\"http://ole.micro.blog/uploads/2018/3cc7f4c7aa.jpg\" width=\"600\" height=\"335\" /></p>\n",
+			"date_published": "2018-01-02T14:17:47+01:00",
+			"url": "https://ole.micro.blog/2018/01/02/finding-happiness-in.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2018/01/01/definite-optimism-as.html",
+	      	
+			"title": "Definite optimism as human capital",
+			
+			"content_html": "<p><a href=\"http://danwang.co/definite-optimism-as-human-capital/\">Dan Wang</a>:</p>\n\n<blockquote>\n  <p>Why do we treat innovative capacity as some kind of fixed stock, constant across time and between countries, ready to be activated as soon as policymakers have finally gotten around to legislating the right conditions in place?</p>\n</blockquote>\n\n<p>And:</p>\n\n<blockquote>\n  <p>I wonder if economists overrate the easier-to-observe policy factors and under-theorize the idea that positive visions of the future drive long-term growth. To put it in a different way, I wish that they would consider definite optimism as human capital.</p>\n</blockquote>\n\n<p>And:</p>\n\n<blockquote>\n  <p>To have a positive vision, people must first expand their imaginations. And I submit that an interest in science fiction, the material world, and proximity to industry all help to refine that optimism. I mean to promote imagination by direct injection.</p>\n</blockquote>\n\n<hr />\n\n<blockquote>\n  <p>The fewer the manufacturing workers and engineers, the more removed everyone is from the particulars of industrial processes, and the more remote that knowledge becomes in each successive generation. We become think tankers and app designers and restaurant hosts, while the details of the industrial world become further and loftier abstractions.</p>\n</blockquote>\n\n<p>And:</p>\n\n<blockquote>\n  <p>Until we?ve perfected asteroid mining and super-skyscrapers and fusion rockets and Jupiter colonies and matter compilers, we can?t be satisfied with innovation confined mostly to the digital world.</p>\n</blockquote>\n\n<p>And:</p>\n\n<blockquote>\n  <p>There are plenty of service jobs that are meant to cancel out the efforts of other service jobs. One firm spends a few million dollars to hire a dozen ad agencies to convince you to purchase its car insurance policies; another firm hires a different dozen agencies and puts out other ads. One firm or person decides to sue another, creating the need for two sets of lawyers.</p>\n</blockquote>\n",
+			"date_published": "2018-01-01T15:46:46+01:00",
+			"url": "https://ole.micro.blog/2018/01/01/definite-optimism-as.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/12/20/pakal-de-bonchamp.html",
+	      	
+			"content_html": "<p>Pakal De Bonchamp, <a href=\"https://medium.com/@pakaldebonchamp/rest-is-the-new-soap-97ff6c09896d\">REST is the new SOAP</a>:</p>\n\n<blockquote>\n  <p>For decades, about every programming language has functioned with the same workflow: sending inputs to a callable, and getting results or errors as output. This worked well. Quite well.</p>\n\n  <p>With REST, this has turned into an insane work of mapping apples to oranges, and praising HTTP specifications to better violate them minutes later.</p>\n</blockquote>\n\n<p>And:</p>\n\n<blockquote>\n  <p>Almost-transparent remote procedure call was what 99% people really needed, and existing protocols, as imperfect as they were, did the job just fine. This mass monomania for the lowest common denominator of the web, HTTP, has mainly resulted in a huge waste of time and grey matter.</p>\n\n  <p>REST promised simplicity and delivered complexity.\nREST promised robustness and delivered fragility.\nREST promised interoperability and delivered heterogeneity.\nREST is the new SOAP.</p>\n</blockquote>\n",
+			"date_published": "2017-12-20T13:57:28+01:00",
+			"url": "https://ole.micro.blog/2017/12/20/pakal-de-bonchamp.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/12/10/jared-sinclar-writing.html",
+	      	
+			"content_html": "<p>Jared Sinclar, writing on Black Pixel?s engineering blog: <a href=\"https://medium.com/bpxl-craft/the-value-is-the-boundary-7c4d65322896\">The Value is the Boundary</a> ? Managing view controller complexity:</p>\n\n<ul>\n  <li>Decompose implicit behavior into three distinct value types: <strong>events, updates, actions.</strong></li>\n</ul>\n\n<blockquote>\n  <p>By converting the implicit behaviors into explicit value types, we can now isolate the expected behaviors inside pure functions, which are easily unit tested. <strong>This reduces the view controller implementation to a very thin layer that dutifully updates its views with simple imperative statements.</strong></p>\n</blockquote>\n\n<p>The <strong>core</strong> (a reference type) ?is the arbiter of truth; it owns a reference to the current model. Events are passed to the core from the view controller, or from a variety of other objects with focused responsibilities. The core forwards events and the current model to the evaluator.</p>\n\n<p>The <strong>evaluator</strong> ?returns three things: 1) an updated model, 2) a set of UI updates, and 3) a set of actions.?</p>\n\n<p><img src=\"http://ole.micro.blog/uploads/2017/925783773f.jpg\" width=\"600\" height=\"461\" /></p>\n",
+			"date_published": "2017-12-10T15:59:28+01:00",
+			"url": "https://ole.micro.blog/2017/12/10/jared-sinclar-writing.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/12/01/kent-beck-one.html",
+	      	
+			"content_html": "<p>Kent Beck, <a href=\"https://www.facebook.com/notes/kent-beck/one-bite-at-a-time-partitioning-complexity/1716882961677894/\">One Bite At A Time: Partitioning Complexity</a>:</p>\n\n<blockquote>\n  <p>[J]ust because I can?t handle lots of complexity at once, it doesn?t mean I can?t program. I can program, but because of my weakness I use a style that partitions complexity instead of consuming it whole.</p>\n</blockquote>\n\n<blockquote>\n  <p>The classic problem partitioning strategy is to make the code work <em>then</em> make is clean <em>then</em> make it fast (if necessary).</p>\n</blockquote>\n\n<blockquote>\n  <p>If I?m changing the structure of the code (refactoring), then I don?t ever change it?s behavior. ? If I?m changing the interface by which some logic is invoked, I never change the logic itself at the same time.</p>\n</blockquote>\n\n<blockquote>\n  <p>What really slows me down is not programming slowly, it is getting overwhelmed, losing my confidence, and not programming at all.</p>\n</blockquote>\n\n<blockquote>\n  <p>I <em>want</em> to be a genius programmer. I <em>ought</em> to be able to handle this. <em>This time it?s different.</em> Then I look up, realize I?ve been two hours without green tests, revert, take a walk, sit down, and go back to eating one bite at a time.</p>\n</blockquote>\n",
+			"date_published": "2017-12-01T23:03:06+01:00",
+			"url": "https://ole.micro.blog/2017/12/01/kent-beck-one.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/11/26/ben-sandofsky-the.html",
+	      	
+			"content_html": "<p>Ben Sandofsky, <a href=\"https://medium.com/@sandofsky/the-presentation-model-6aeaaab607a0\">The Presentation Model</a>:</p>\n\n<blockquote>\n  <p>As far back as 1988, Smalltalk developers realized there are really two types of models in the an app: the <em>Domain Model</em>, which deals with business logic, and the <em>Application Model</em>, which deals with how it?s represented on screen. The latter is bit ambiguous, so I prefer Martin Fowler?s 2004 rebranding, a <em>Presentation Model</em>.</p>\n</blockquote>\n\n<p>And:</p>\n\n<blockquote>\n  <p>Apple?s MVC is technically a <em>Model-View-Presenter</em> pattern. For whatever reason, Apple rebranded it.</p>\n</blockquote>\n\n<p>How is this different from MVVM? In Microsoft?s original codification of MVVM, the developer uses <strong>data bindings</strong> to connect the view model to the view. Also, the view model provides the implementations of UI events; it <em>replaces</em> the controller.</p>\n\n<blockquote>\n  <p>Most people say MVVM when they?re really talking about something much closer to a Presentation Model.</p>\n</blockquote>\n",
+			"date_published": "2017-11-26T18:12:06+01:00",
+			"url": "https://ole.micro.blog/2017/11/26/ben-sandofsky-the.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/11/26/dave-delong-a.html",
+	      	
+			"content_html": "<p>Dave DeLong, <a href=\"https://davedelong.com/blog/2017/11/06/a-better-mvc-part-2-fixing-encapsulation/\">A Better MVC</a>:</p>\n\n<blockquote>\n  <p><strong>In general, a view controller should manage either sequence or UI, but not both.</strong></p>\n</blockquote>\n\n<p>And:</p>\n\n<blockquote>\n  <p>Where I tend to diverge from the ?traditional? flow controller implementation [a.k.a. the <em>Coordinator</em> pattern] is that I believe that <strong>these sorts of controllers should really just be view controllers</strong> higher up in the parent view controller chain. This saves you from having to hack a new kind of responder chain object in to <code class=\"highlighter-rouge\">UIViewController</code>, and it means you don?t end up with a third parallel hierarchy of control to maintain in sync with the other two (the View hierarchy and the view controller hierarchy).</p>\n</blockquote>\n\n<p>And:</p>\n\n<blockquote>\n  <p>The huge advantage of this approach is that <strong>system features come free.</strong> Trait collection propagation is free. View lifecycle callbacks are free. Safe area layout margins are generally free. The responder chain and preferred UI state callbacks are free. And future additions to <code class=\"highlighter-rouge\">UIViewController</code> are also free.</p>\n\n  <p>In exchange, you have to suffer through cleaner code, smaller view controllers, and a few more delegate protocols, which unfortunately just make your code more isolated and testable. How on earth will you survive?? ??</p>\n</blockquote>\n",
+			"date_published": "2017-11-26T17:50:56+01:00",
+			"url": "https://ole.micro.blog/2017/11/26/dave-delong-a.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/11/26/greg-lhotellier-in.html",
+	      	
+			"content_html": "<p>Greg Lhotellier in <a href=\"https://www.youtube.com/watch?v=SU6h0-THvbA\">MVC-RS</a>:</p>\n\n<p>MVC-Router-Storage</p>\n\n<p><strong>Storage</strong></p>\n\n<p>The Model layer should not be tightly coupled to the persistence layer (file system/database/network).</p>\n\n<p>The Storage layer:</p>\n\n<ul>\n  <li>talks to the Persistence layer</li>\n  <li>converts raw data to Model instances</li>\n</ul>\n\n<p>Makes the Model layer simpler and truly reusable, and the persistence technology easy to change.</p>\n\n<p><strong>Router</strong></p>\n\n<p>View controllers should not know anything about their parents or siblings. Should not contain navigation/presentation logic for related view controllers.</p>\n\n<p>The Router sits above the other layers. It knows Storage, Models, and Controllers.</p>\n\n<p>The Router:</p>\n\n<ul>\n  <li>talks to the Storage</li>\n  <li><a href=\"http://khanlou.com/2015/01/the-coordinator/\">coordinates</a> the Controllers</li>\n  <li>manages the ?chrome?, i.e. buttons in navigation bars (because the view controllers should not have to care about their parent environment)</li>\n</ul>\n\n<p>The Controller layer will never ask the Storage for data. The Router passes data to the Controller. Controllers delegate back to the Router for presenting the next view controller.</p>\n",
+			"date_published": "2017-11-26T17:45:47+01:00",
+			"url": "https://ole.micro.blog/2017/11/26/greg-lhotellier-in.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/11/17/from-design-patterns.html",
+	      	
+			"title": "From design patterns to category theory",
+			
+			"content_html": "<p><a href=\"http://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/\">Mark Seemann</a>:</p>\n\n<ul>\n  <li>\n    <p>Design patterns are useful not only because they offer solutions to common problems, but also (and perhaps more importantly) because they provide a <em>shared vocabulary</em>.</p>\n  </li>\n  <li>\n    <p>However, design patterns as used in OOP are often ambiguously specified, or programmers don?t follow the patterns to the letter.</p>\n  </li>\n  <li>\n    <p>Math also provides a set of <em>universal abstractions</em>, and those are specified more rigorously.</p>\n  </li>\n</ul>\n\n<blockquote>\n  <p>By an interesting coincidence, the ?things? in category theory are called <em>objects</em>, and while they aren?t objects in the sense that we think of in object-oriented design, there <em>is</em> some equivalence. Category theory concerns itself with how objects map to other objects. A functional programmer would interpret such <em>morphisms</em> as functions, but in a sense, you can also think of them as well-defined behaviour that?s associated with data.</p>\n\n  <p>The objects of category theory are universal abstractions. Some of them, it turns out, coincide with known design patterns. The difference is, however, that category theory concepts are governed by specific laws.</p>\n</blockquote>\n",
+			"date_published": "2017-11-17T20:43:35+01:00",
+			"url": "https://ole.micro.blog/2017/11/17/from-design-patterns.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/11/15/driving-viewstate-through.html",
+	      	
+			"title": "Driving View-State through Data",
+			
+			"content_html": "<p>Matt Gallagher in <a href=\"https://academy.realm.io/posts/try-swift-nyc-2017-matt-gallagher-driving-view-state-through-data/\">Driving View-State through Data</a>:</p>\n\n<p>The Model-View-Controller <em>change pattern</em> describes how data flows through an MVC app:</p>\n\n<ul>\n  <li>\n    <p>All actions flow through the model. Controllers then observe the model for changes. Controllers don?t react to UI events directly (other than propagating the event to the model).</p>\n  </li>\n  <li>\n    <p>Multiple controllers don?t directly coordinate with each other. Coordination occurs indirectly through model observations.</p>\n  </li>\n</ul>\n\n<p>Why not do the same for <em>view state</em>? We usually use a different pipeline for view state where controllers interact directly with each other, but that?s fickle and quickly grows out of control.</p>\n\n<p><img src=\"http://ole.micro.blog/uploads/2017/270149bf1d.jpg\" width=\"600\" height=\"336\" /><img src=\"http://ole.micro.blog/uploads/2017/8f94212fff.jpg\" width=\"600\" height=\"338\" /></p>\n",
+			"date_published": "2017-11-15T12:42:35+01:00",
+			"url": "https://ole.micro.blog/2017/11/15/driving-viewstate-through.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/11/15/the-two-sides.html",
+	      	
+			"title": "The Two Sides of Writing Testable Code",
+			
+			"content_html": "<p>Brandon Williams in <a href=\"https://academy.realm.io/posts/try-swift-brandon-williams-writing-testable-code/\">The Two Sides of Writing Testable Code</a>:</p>\n\n<blockquote>\n  <p>Testing has completely transformed the way I write code. <em>I only write code if it can be tested.</em> It?s a great boundary to force myself to write code in a functional style. And I?ve slowly started to think of my test code as the actual code that I care about, not the implementation.</p>\n\n  <p>?</p>\n\n  <p>The two things that make testing difficult are <strong>effects</strong> (a function produces hidden output) and <strong>co-effects</strong> (the hidden input a function depends on).</p>\n\n  <p>To tame effects, think of them as <em>data</em>. Describe the effect rather than actually perform it.</p>\n\n  <p>To tame co-effects, put them all in one big global struct (e.g. <code class=\"highlighter-rouge\">Environment</code>), and don?t ever access a global unless it?s through that struct.</p>\n</blockquote>\n",
+			"date_published": "2017-11-15T12:27:01+01:00",
+			"url": "https://ole.micro.blog/2017/11/15/the-two-sides.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/11/08/the-worst-possible.html",
+	      	
+			"title": "The worst possible application",
+			
+			"content_html": "<p><a href=\"https://www.cocoawithlove.com/blog/worst-possible-application.html\">Matt Gallagher</a>:</p>\n\n<blockquote>\n  <p>I?m going to use the following rules for a separated Model and View:</p>\n\n  <ol>\n    <li>A Model interface must cleanly encapsulate all application state and must not reference any view or application frameworks.</li>\n    <li>Non-Model components may invoke mutating actions on the Model interface but the interface must present these as requests to perform an action, not primitive data operations.</li>\n    <li>After performing an action on the Model interface, a non-Model component must not immediately update or refresh any non-Model state. Updates dependent on Model data may occur only in response to change notifications from the Model.</li>\n  </ol>\n</blockquote>\n",
+			"date_published": "2017-11-08T12:09:15+01:00",
+			"url": "https://ole.micro.blog/2017/11/08/the-worst-possible.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/11/06/the-design-of.html",
+	      	
+			"title": "The Design of Everyday Things",
+			
+			"content_html": "<p>As a follow-up to my post <a href=\"https://oleb.net/blog/2017/07/mental-models-in-api-design/\">Mental models in API design</a>, here are some more notes I took when I read <a href=\"https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things\"><em>The Design of Everyday Things</em></a>.</p>\n\n<p><strong>Make things visible. Use natural mappings.</strong></p>\n\n<blockquote>\n  <p>The principle of natural mappings: the relationship between controls and actions should be apparent to the user.</p>\n</blockquote>\n\n<p>Example: car dashboard.</p>\n\n<blockquote>\n  <p>Things are visible. There are good mappings, natural relationships, between the controls and the things controlled. Single controls often have single functions. There is good feedback. The system is understandable. In general, the relationship among the user?s intentions, the required actions, and the results are sensible, nonarbitrary, and meaningful.</p>\n</blockquote>\n\n<p><strong>More functions makes it harder to learn.</strong></p>\n\n<blockquote>\n  <p>The same technology that simplifies life by providing more functions in each device also complicates life by making the device harder to learn, harder to use. This is <strong>the paradox of technology.</strong> The paradox of technology should never be used as an excuse for poor design.</p>\n</blockquote>\n\n<p>Applied to API design: additions to the standard library must be considered carefully. Every additional API makes things harder to learn. The same goes for language features.</p>\n\n<p>I touched on this <a href=\"https://oleb.net/blog/2017/07/mental-models-in-api-design/\">in the previous post</a>.</p>\n\n<p>Also: software. The more features a program has, the harder it becomes to use.</p>\n\n<p><a href=\"https://en.wikipedia.org/wiki/Gulf_of_evaluation\"><strong>The gulf of evaluation</strong></a></p>\n\n<blockquote>\n  <p>The amount of effort that the person must exert to interpret the physical state of the system and to determine how well the expectations and intentions have been met. The gulf is small when the system provides information about its state in a form that is easy to get, is easy to interpret, and matches the way the person thinks of the system.</p>\n</blockquote>\n\n<p>Software fails at this all the time, and developer tools are no exception. Coding is a constant fight with cryptic error messages, bad debugging tools, and general lack of live feedback.</p>\n\n<p>Applied to API design: make an effort to provide good error messages, both to end users and the developers using your code.</p>\n\n<p>Examples: bad debugging tools, bad error messages, no live feedback, obscure code signing or linker errors.</p>\n\n<blockquote>\n  <p><strong>Visibility: Make relevant parts visible.</strong></p>\n</blockquote>\n\n<p>Code completion.</p>\n\n<blockquote>\n  <p><strong>Feedback: Give each action an immediate and obvious effect.</strong></p>\n</blockquote>\n\n<p>Swift Playgrounds.</p>\n\n<p><strong>Iterative design</strong></p>\n\n<p>The iterative design process:</p>\n\n<blockquote>\n  <p>Once a satisfactory product has been achieved, further change may be counterproductive, especially if the product is successful. You have to know when to stop.</p>\n</blockquote>\n\n<p>You won?t achieve the perfect design.</p>\n\n<blockquote>\n  <p><strong>Design is the successive application of constraints until only a unique product is left.</strong>\n? (Richard W. Pew)</p>\n</blockquote>\n\n<p><strong>Design Principles</strong></p>\n\n<p>The book closes with:</p>\n\n<blockquote>\n  <p>Design should:</p>\n\n  <ul>\n    <li>Make it easy to determine what actions are possible at any moment (make use of constraints).</li>\n  </ul>\n</blockquote>\n\n<p>Types can make illegal states impossible.\nDesign types to guide readers and users of your code to the right way to use it.</p>\n\n<blockquote>\n  <ul>\n    <li>Make things visible, including the conceptual model of the system, the alternative actions, and the results of actions.</li>\n    <li>Make it easy to evaluate the current state of the system.</li>\n    <li>Follow natural mappings between intentions and the required actions; between actions and the resulting effect; and between the information that is visible and the interpretation of the system state.</li>\n  </ul>\n\n  <p>In other words, make sure that (1) the user can figure out what to do, and (2) the user can tell what is going on.</p>\n</blockquote>\n",
+			"date_published": "2017-11-06T20:28:06+01:00",
+			"url": "https://ole.micro.blog/2017/11/06/the-design-of.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/09/27/thomas-hoepker-ddr.html",
+	      	
+			"content_html": "<p><a href=\"https://www.amazon.de/dp/3775728139/\">Thomas Hoepker, DDR Ansichten</a>: tolle Fotos aus der DDR der 1960-er und 70-er sowie der Wendezeit. Am meisten geflasht haben mich aber die Notizen von Hoepkers damaliger Frau Eva Windm?ller w?hrend einer Sachsenreise des Paars im Fr?hjahr 1990. Die damalige Hoffnung und Begeisterung der Menschen f?r den Westen ist greifbar, vor allem im Kontrast zu Windm?llers Schilderung der uns?glichen Umweltverschmutzung in den Braunkohlerevieren.</p>\n\n<blockquote>\n  <p>Im Nachmittagslicht vor dem Altar sieht Pfarrer Dallmann mit seinen warmen braunen Augen und dem gewellten langen Haar wie Jesus in Jeans aus. Er hat zwei Gesichter, das eine k?mpferisch, das andere verletzlich. ?Was hatten wir f?r hohe Ziele im Oktober / November?, sagt er. ?Der Welt eine Alternative bieten wollten wir, S?dafrika und S?damerika eingeschlossen. Christen und Marxisten und Kapitalisten und Atheisten sollten zum Wohl der Menschheit zusammenarbeiten.? Aber wie das so sei bei vielen gro?en Revolutionen: ?Die Menschen waren nicht danach. Ich erlebe eine historische Stunde und bin mittendrin und muss merken, wie innerhalb von Wochen, ja Tagen das wegrutscht. Wof?r haben wir gek?mpft? F?r die <em>Bild</em>-Zeitung und Schrottautos aus dem Westen.? Es sei schon seltsam, bemerkt er auf dem R?ckweg zum Haus. ?Jetzt sind wir schon wieder ein bisschen in der Opposition.?</p>\n</blockquote>\n",
+			"date_published": "2017-09-27T11:45:45+02:00",
+			"url": "https://ole.micro.blog/2017/09/27/thomas-hoepker-ddr.html"
+		},
+		
+		{
+			"id": "http://ole.micro.blog/2017/09/26/113820.html",
+	      	
+			"content_html": "<p><a href=\"http://idlewords.com/2017/09/anatomy_of_a_moral_panic.htm\">Maciej Ceg?owski</a>:</p>\n\n<blockquote>\n  <p>The real story of machine learning is not how it promotes home bomb-making, but that it?s being deployed at scale with minimal ethical oversight, in the service of a business model that relies entirely on psychological manipulation and mass surveillance. The capacity to manipulate people at scale is being sold to the highest bidder, and has infected every aspect of civic life, including democratic elections and journalism.</p>\n\n  <p>Together with climate change, <strong>this algorithmic takeover of the public sphere is the biggest news story of the early 21st century.</strong> We desperately need journalists to cover it.</p>\n</blockquote>\n",
+			"date_published": "2017-09-26T13:38:20+02:00",
+			"url": "https://ole.micro.blog/2017/09/26/113820.html"
+		}
+		
+	]
+}

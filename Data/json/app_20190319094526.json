@@ -1,0 +1,15 @@
+{
+  "name": "VSCode Mac",
+  "description": "The resource for VSCode on the Mac",
+  "repository": "https://github.com/BobWalsh/vscodemac",
+  "logo": "",
+  "keywords": ["vscode", "visual studio code mac"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static"
+    }
+  ]
+}

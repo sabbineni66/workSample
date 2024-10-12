@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "port": 4000,
+  "databasePath": "test.db",
+  "samplingPeriod": 5000,
+  "device": "/dev/ROBOT",
+  "testMode": true
+}

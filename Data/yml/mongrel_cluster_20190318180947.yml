@@ -1,0 +1,7 @@
+cwd: /home/dru/www/enroll/current
+port: "3000"
+environment: development
+address: 192.168.0.73
+pid_file: log/development.pid
+servers: 3
+

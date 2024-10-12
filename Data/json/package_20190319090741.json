@@ -1,0 +1,32 @@
+{
+  "name": "zscii",
+  "version": "0.1.0",
+  "description": "ZSCII-encoded string handling",
+  "main": "index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "test": "testem"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pd/zscii.git"
+  },
+  "keywords": [
+    "game",
+    "zork",
+    "zmachine",
+    "encoding"
+  ],
+  "author": "Kyle Hargraves",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "chai": "~1.5.0",
+    "mocha": "~1.9.0",
+    "testem": "~0.2.83",
+    "browserify": "~2.12.0"
+  },
+  "dependencies": {}
+}

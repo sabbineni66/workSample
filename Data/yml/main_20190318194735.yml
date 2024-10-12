@@ -1,0 +1,10 @@
+---
+
+- name: install qemu
+  pacman: name=qemu state=installed
+  tags: qemu
+
+- name: autoload kvm module
+  copy: src=kvm.conf dest=/etc/modules-load.d/kvm.conf
+  notify: load kvm module into kernel
+  tags: qemu

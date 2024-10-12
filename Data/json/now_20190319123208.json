@@ -1,0 +1,16 @@
+{
+  "env": {
+    "NODE_ENV": "production",
+    "POSTS_API": "https://wp.demar.ee",
+    "CFUL_ACCESS_TOKEN": "e89286e6aa944167f89edb8c16232a72a28b157318dd3af41219619f92709b4d",
+    "CFUL_PREVIEW_TOKEN": "4d67b1ce786fd29b9a4f48a0174d4a38146f770d9c2305d02b16646adad8e9a8",
+    "CFUL_SPACE_ID": "66qr5ab8znjw"
+  },
+  "name": "dd-next",
+  "type": "npm",
+  "public": true,
+  "alias": [
+    "dd-next",
+    "next.demaree.space"
+  ]
+}

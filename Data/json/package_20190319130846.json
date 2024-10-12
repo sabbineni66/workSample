@@ -1,0 +1,24 @@
+{
+  "name": "metro-ui",
+  "theme": "ui",
+  "main": "lib/metro-ui",
+  "version": "2.2.2",
+  "description": "Theme designed to make Atom look more native on Windows 10",
+  "repository": "https://github.com/Cirex/atom-metro-ui",
+  "license": "MIT",
+  "author": {
+    "name": "Benjamin Bloch",
+    "email": "cirex@aethernet.org"
+  },
+  "engines": {
+    "atom": ">=1.0.0"
+  },
+  "keywords": [
+    "adaptive",
+    "windows",
+    "metro"
+  ],
+  "dependencies": {
+    "winreg": "0.0.12"
+  }
+}

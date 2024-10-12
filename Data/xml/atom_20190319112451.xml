@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[striking sparks]]></title>
+  <link href="http://pritesh.mehta.name/atom.xml" rel="self"/>
+  <link href="http://pritesh.mehta.name/"/>
+  <updated>2013-07-01T17:13:00+01:00</updated>
+  <id>http://pritesh.mehta.name/</id>
+  <author>
+    <name><![CDATA[Pritesh Mehta]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[rbenvinator chef and jenkins]]></title>
+    <link href="http://pritesh.mehta.name/blog/2013/07/01/rbenvinator-chef-and-jenkins/"/>
+    <updated>2013-07-01T16:57:00+01:00</updated>
+    <id>http://pritesh.mehta.name/blog/2013/07/01/rbenvinator-chef-and-jenkins</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>

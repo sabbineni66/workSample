@@ -1,0 +1,17 @@
+{
+	"gitbook": ">=3.2.1",
+  "title": "Outland",
+  "root": "docs",
+  "plugins": [
+    "github", 
+    "-search",
+    "-highlight",
+    "-sharing"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/dehora/outland"
+    }
+  }
+
+}

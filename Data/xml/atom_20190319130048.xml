@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Reading-list | Jason Morrison]]></title>
+  <link href="http://jayunit.net/blog/categories/reading-list/atom.xml" rel="self"/>
+  <link href="http://jayunit.net/"/>
+  <updated>2014-03-02T22:53:57-08:00</updated>
+  <id>http://jayunit.net/</id>
+  <author>
+    <name><![CDATA[Jason Morrison]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Reading List: February 2014]]></title>
+    <link href="http://jayunit.net/2014/03/02/reading-list-february-2014/"/>
+    <updated>2014-03-02T22:07:00-08:00</updated>
+    <id>http://jayunit.net/2014/03/02/reading-list-february-2014</id>
+    <content type="html"><![CDATA[<p>I am maintaining a reading list:</p>
+
+<p><a href="http://jayunit.net/reading-list">http://jayunit.net/reading-list</a></p>
+
+<p>I&rsquo;m choosing a theme per month, with several works on the theme.
+I&rsquo;ll try to collect notes at the end of each month about what I read and wrote,
+what I thought, and how I might revisit that theme in the future.</p>
+
+<p>Take &ldquo;reading&rdquo; loosely &ndash; presentations and podcasts definitely count.</p>
+
+<h1>What did I complete in February?</h1>
+
+<p>My high level goals for February were to:</p>
+
+<ul>
+<li>Read about <a href="https://www.meteor.com/">Meteor</a>,
+<a href="http://www.haskell.org/haskellwiki/Functional_Reactive_Programming">FRP</a>,
+and <a href="http://facebook.github.io/react/">React</a>.</li>
+<li>Do some toy projects with these.</li>
+<li>Skim a finance book.</li>
+</ul>
+
+
+<h2>Meteor</h2>
+
+<h3>What did I read?</h3>
+
+<ul>
+<li>Read the <a href="http://book.discovermeteor.com">Discover Meteor</a> book.</li>
+<li>Watched the <a href="http://2012.realtimeconf.com/video/matt-debergalis">RealtimeConf 2012 talk</a>.</li>
+<li>Listened to the <a href="http://javascriptjabber.com/076-jsj-meteor-js-with-marcus-phillips-and-fred-zirdung/">JavascriptJabber podcast episode on Meteor</a>.</li>
+<li>Understood more about Deps from the <a href="http://www.slideshare.net/fitc_slideshare/meteor-reactivestyle">Programming in the Reactive Style with Meteor JS slides</a>.</li>
+<li>Went to a <a href="https://www.meteor.com/blog/2014/02/14/pete-hunt-talks-facebook-react">Meteor Devshop talk</a>
+about <a href="http://facebook.github.io/react/">React</a> and <a href="https://github.com/benjamn/react-meteor">react-meteor</a>.</li>
+<li>Built a <a href="https://github.com/jasonm/toy-meteor-chat">toy chat app in Meteor</a>.</li>
+</ul>
+
+
+<h3>Thoughts:</h3>
+
+<p>Lots of interesting ideas, but I&rsquo;m not sure I&rsquo;ll use Meteor.  Maybe I&rsquo;ll use
+parts (DDP).</p>
+
+<ul>
+<li>Isomorphic (same code for the client and server) is interesting.  I would have to
+build a large app to see demonstrated advantages, but can imagine.</li>
+<li>Seems to work best when all used together, but no reason you couldn&rsquo;t
+extract e.g. DDP or Deps and use in an existing application.  (Right?)</li>
+<li>There are three places to get packages &ndash;
+<a href="http://docs.meteor.com/#usingpackages">core</a>,
+<a href="https://atmosphere.meteor.com/">Atmosphere</a>, and,
+<a href="http://meteorhacks.com/complete-npm-integration-for-meteor.html">as of June 2013, NPM</a>.
+It&rsquo;s nice that they bless a small set of core packages as a stdlib of sorts,
+although I don&rsquo;t understand the need for Atmosphere and NPM to be separate.</li>
+<li><p>The <a href="http://docs.meteor.com/#deps">Deps</a> module, especially <code>Deps.autorun</code>,
+is a particularly elegant approach to automatic dependency registration that
+avoids the need for static analysis.  The clever part relies
+JavaScript&rsquo;s single-threaded nature, and tracks the current computation
+as <code>Deps.currentComputation</code>.</p>
+
+<ul>
+<li>At first I thought this could break down if you depend on a boolean
+expression <code>a() &amp;&amp; b()</code>.  If <code>a()</code> returns <code>false</code>, the language
+short-circuits evaluation so that <code>b()</code> is never invoked, so the
+dependency is not registered.  However, once <code>a()</code> returns <code>true</code>, <code>b()</code>
+will get run and the dependency is registered correctly.  There must
+be some shortcomings?  External data is a clear example, but that is
+covered by the more explicit <code>Deps.Dependency</code> facilities.</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>Questions:</h3>
+
+<ul>
+<li>What effect does DDP and the use of a document storage model inform data
+modeling?  How would you build a system like DDP atop a relational model?
+One system I work on uses multiple steps of data mapping (SQL &ndash;> Python
+objects &ndash;> JSON &ndash;> Backbone models and back).  This seems like unnecessary
+layers of complexity, and replicating a datastore into the client, like
+minimongo does, seems like a preferable situation in many cases.  How
+might you introduce DDP to an existing rich-client application without
+rewriting it in Meteor?</li>
+<li>How do you build for reliability atop DDP and RPC?  (E.g. ensuring all
+RPC endpoints are idempotent.)  How does DDP navigate timeout/retry/backoff?
+See <a href="http://awwx.ws">Andrew Wilcox</a>&rsquo;s
+<a href="https://github.com/awwx/meteor-offline-data">meteor-offline-data</a> work.</li>
+<li><p>How does operational transform (OT) fit in?
+Compare to the <a href="https://github.com/codeparty/derby">Derby</a> framework and
+its <a href="https://github.com/codeparty/racer">Racer</a> library, which uses
+<a href="http://sharejs.org/">ShareJS</a> for OT:</p>
+
+<ul>
+<li>OT is one approach to conflict resolution.  I assume there are many.  What
+are the tradeoffs?</li>
+<li><p>What other conflict resolution approaches exist?  Maybe some in
+the <a href="http://thinkdistributed.io/blog/2013/08/28/causality.html">thinkdistributed.io Causality episode</a>.</p>
+
+<blockquote><p>The correctness problems of OT led to introduction of transformationless post-OT schemes, such as WOOT, Logoot and Causal Trees (CT). &ldquo;Post-OT&rdquo; schemes decompose the document into atomic operations, but they workaround the need to transform operations by employing a combination of unique symbol identifiers, vector timestamps and/or tombstones.</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Operational_transformation">http://en.wikipedia.org/wiki/Operational_transformation</a></p></blockquote></li>
+<li><p>If you use OT, can you use tree-structured data?
+Is the scope of OT limited to a document?  Can you coordinate operations across
+documents?</p></li>
+</ul>
+</li>
+</ul>
+
+
+<h3>What would I study about this next?</h3>
+
+<ul>
+<li>How does the very new (documented February 27)
+<a href="https://github.com/meteor/meteor/wiki/Using-Blaze">Blaze rendering system</a>
+compare to React?</li>
+<li>How well does Meteor play with other libraries?  I recall seeing a
+&ldquo;modularized&rdquo; version of Meteor where some parts were available a la carte.
+What does it look like to involve something like Backbone for models?  React
+for DOM computation?</li>
+<li>What is the multi-server story (for performance and for availability)?  I
+think that the <a href="https://www.meteor.com/blog/2014/02/24/meteor-071-oplog-support-for-complex-queries-meteor-developer-accounts">new oplog work</a>
+is supposed to support this.</li>
+<li><a href="https://trello.com/c/Gf6YxFp2/42-sql-support">SQL bindings</a></li>
+</ul>
+
+
+<h2>Functional Reactive Programming (FRP)</h2>
+
+<h3>What did I read?</h3>
+
+<ul>
+<li>Read <a href="http://conal.net/fran/tutorial.htm">Composing Reactive Animations</a> as
+an introduction to the concepts.</li>
+<li>Read <a href="http://conal.net/papers/icfp97/icfp97.pdf">Functional Reactive Animation</a>
+
+<ul>
+<li>Read somewhat thoroughly.  General ideas of facts / behaviors over
+implementation is nice.  I learned about the idea of using integration
+to determine a value at a point in time rather than continual
+time-chunked evaluation, refreshed some of my Haskell notation,
+and thought about the general idea of declaring behaviors and letting
+the implementation handle optimizations and discretization.</li>
+</ul>
+</li>
+<li>Skimmed <a href="http://conal.net/papers/push-pull-frp/push-pull-frp.pdf">Push-Pull Functional Reactive Programming</a>
+
+<ul>
+<li>I started this, but got bogged down in notation and FP/Haskell concepts.  I
+should revisit this after reviewing Monads/Monoids/Applicatives in
+March, probably from learnyouahaskell.com.</li>
+</ul>
+</li>
+<li>Listened to the <a href="http://javascriptjabber.com/061-jsj-functional-reactive-programming-with-juha-paananen-and-joe-fiorini/">JavascriptJabber podcast episode on Functional Reactive Programming</a></li>
+</ul>
+
+
+<p>There are a bunch more resources <a href="https://github.com/jasonm/reading-list/wiki/2014-February">in my 2014-February reading-list page</a>
+that I collected but didn&rsquo;t get to.</p>
+
+<h3>Thoughts:</h3>
+
+<p>Seems like a solid theoretical underpinning for complex dataflow apps.</p>
+
+<p>FRP concepts (behaviors) have similarities to promises &ndash; they represent an
+abstraction of a value.  Promises represent a future value.  Behaviors
+represent a value which may vary continuously over time, they are functions of
+time.</p>
+
+<p>From reading the papers, I also learned a more general concept &ndash; that of a
+paper separately introducing formal semantics from a specific implementation.
+I haven&rsquo;t read enough CS papers to know how typical this is.</p>
+
+<p>That reminds me of a <a href="http://thinkdistributed.io">thinkdistributed.io</a>
+podcast on Raft (a consensus algorithm) which was designed for
+understandability, seemingly a novel goal in CS research.  The result is a
+large number of (attempted) implementations, because the theory was so
+approachable.  Does the Raft paper propose a formal semantics?  See in
+May/June.</p>
+
+<h3>Questions:</h3>
+
+<p>I&rsquo;d like to try out <a href="https://github.com/baconjs/bacon.js">https://github.com/baconjs/bacon.js</a> and read about
+underlying ideas.</p>
+
+<h3>If I were to study further/return to this, what would I look at?</h3>
+
+<p>I didn&rsquo;t get to read too much about FRP.  I would like to try some of
+the JS implementations to build some small dataflow applications.
+I&rsquo;d like to build some medium-sized React.js apps and compare that
+experience to the FRP libraries.</p>
+
+<h1>React.js</h1>
+
+<h3>What did I read?</h3>
+
+<p>First, I read about React from other people:</p>
+
+<ul>
+<li>Read many of <a href="http://swannodette.github.io/2013/12/17/the-future-of-javascript-mvcs/">David Nolen&rsquo;s articles about Om and React</a> (seriously just go read David&rsquo;s entire blog, it&rsquo;s the inspiration for so much of my reading this year)</li>
+<li>Grasped a key idea in React with <a href="http://www.lispcast.com/react-another-level-of-indirection">Eric Normand&rsquo;s &ldquo;React: Another Level of Indirection&rdquo;</a></li>
+<li>Finally got the big picture from <a href="http://2013.jsconf.eu/speakers/pete-hunt-react-rethinking-best-practices.html">Pete Hunt&rsquo;s &ldquo;React: Rethinking Best Practices&rdquo;</a> talk</li>
+<li>Read about React&rsquo;s <a href="http://calendar.perfplanet.com/2013/diff/">fast tree-diff algorithm</a> which underpins its virtual DOM implementation</li>
+<li>Read a (biased? :) comparison by Pete Hunt of <a href="http://skulbuny.com/2013/10/31/react-vs-angular/">React vs Angular</a></li>
+<li>Read about <a href="http://joelburget.com/backbone-to-react/">Khan Academy engineers' experience of adopting React</a></li>
+<li>Listened to <a href="http://javascriptjabber.com/073-jsj-react-with-pete-hunt-and-jordan-walke/">the JavascriptJabber podcasts episode on React</a></li>
+</ul>
+
+
+<p>Then I react the docs themselves:</p>
+
+<ul>
+<li>Read the <a href="http://facebook.github.io/react/docs/tutorial.html">React tutorial</a></li>
+<li>Read the <a href="http://facebook.github.io/react/docs/getting-started.html">React guides</a></li>
+</ul>
+
+
+<p>And aimed to get my hands dirty:</p>
+
+<ul>
+<li>Reviewed my friend <a href="http://brandontilley.com/2014/02/24/creating-chrome-extensions-with-react.html">Brandon Tilley&rsquo;s article on Creating Chrome Extensions with React</a></li>
+<li>Went to a <a href="https://www.meteor.com/blog/2014/02/14/pete-hunt-talks-facebook-react">Meteor Devshop talk</a>
+about <a href="http://facebook.github.io/react/">React</a> and <a href="https://github.com/benjamn/react-meteor">react-meteor</a>.</li>
+<li>Wrote a <a href="https://github.com/jasonm/toy-viewport-splitter">negligible amount of code</a></li>
+</ul>
+
+
+<h3>Thoughts:</h3>
+
+<p>Looks good, I want to do more with it.</p>
+
+<p>The design of React is very appealing; using functional composition, cohering
+templates with view logic, implementing synthetic DOM events atop delegation,
+and providing an <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ff684178">immediate mode atop the DOM&rsquo;s retained mode</a>
+Not sure on the JSX syntax, but I think I&rsquo;ll like it as soon as I install
+<a href="https://github.com/mxw/vim-jsx">vim-jsx</a>.</p>
+
+<h3>If I were to study further/return to this, what would I look at?</h3>
+
+<ul>
+<li>Build something more substantial with React</li>
+<li><a href="https://github.com/swannodette/om">Om</a>, a CLJS wrapper atop React enjoying
+advantages from immutable data structures and presumably other CLJS
+fanciness</li>
+<li>What does <a href="https://groups.google.com/forum/#!msg/clojure/XQ4wuUc0bCk/vpCxosZvbyMJ">this discussion</a> mean by &ldquo;UI as value&rdquo;?</li>
+</ul>
+
+
+<h3>People:</h3>
+
+<p><a href="https://twitter.com/sgrove">https://twitter.com/sgrove</a>
+<a href="https://twitter.com/floydophone">https://twitter.com/floydophone</a>
+<a href="https://twitter.com/swannodette">https://twitter.com/swannodette</a></p>
+
+<h2>Finance</h2>
+
+<p>On my friend <a href="https://twitter.com/100ideas">Mac Cowell</a>&rsquo;s recommendation, I
+skimmed some of <a href="http://www.amazon.com/Little-Still-Market-Books-Profits/dp/0470624159">The Little Blue Book That Still Beats the Market</a>.
+I maintain a healthy level of skepticism, but underneath the &ldquo;wow it&rsquo;s pure
+magic!&rdquo; skin appears to be a proxy for value investing that identifies
+underpriced companies.  Time will tell if broad dissemination of this
+valuation strategy will correct the underpricing, or if it holds.</p>
+
+<p>I&rsquo;d like to, as an exercise, build a software implementation of this strategy
+and backtest it.  I&rsquo;d also like to understand if there is affordable
+historical market information that avoids
+<a href="http://en.wikipedia.org/wiki/Survivorship_bias">survivorship bias</a>, and to understand what
+other <a href="http://seekingalpha.com/article/363901-the-perils-of-backtesting-technical-strategies">backtesting blind spots</a>
+I may have.</p>
+
+<p>I&rsquo;ll follow this up (also on Mac&rsquo;s recommendation) with Graham and Zweig&rsquo;s
+<a href="http://www.amazon.com/The-Intelligent-Investor-Definitive-Investing/dp/0060555661">The Intelligent Investor</a>,
+maybe in March or April.</p>
+
+<p>Links from an hour-ish of searching about building trading simulations:</p>
+
+<ul>
+<li>Data sources:
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/5774218/algorithmic-trading-simulator-benchmark-data">StackOverflow: &ldquo;algorithmic trading simulator/benchmark data&rdquo;</a>
+
+<ul>
+<li><a href="https://market-archive.appspot.com/">Market Archive</a> &ndash; no idea of
+trustworthiness</li>
+<li><a href="http://quant.caltech.edu/historical-stock-data.html">Caltech Quantitative Finance Group</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Survivorship_bias">Survivorship bias</a></li>
+</ul>
+</li>
+<li>Tools:
+
+<ul>
+<li><a href="https://www.quantopian.com">Quantopian</a>
+
+<ul>
+<li><a href="https://www.quantopian.com/posts/using-the-fetcher-with-quandl">Can I use fundamental data in Quantopian?</a></li>
+</ul>
+</li>
+<li><a href="http://gbeced.github.io/pyalgotrade/">PyAlgoTrade</a></li>
+<li><a href="https://www.interactivebrokers.com/en/?f=tws&amp;p1=papertrader">Interactive Brokers' toolset</a> &ndash; Quantopian is privately testing IB API integration, so that&rsquo;s promising</li>
+</ul>
+</li>
+</ul>
+
+
+<h1>Retrospective</h1>
+
+<p>The pace for this month was quite high, but I enjoyed keeping up with it.
+I&rsquo;ve found it helpful to schedule reading nights on my calendar to try
+and block some time off for paying attention.</p>
+
+<p>I could not read some of the FRP papers for lack of understanding of
+some foundational functional programming concepts (applicatives, monoids),
+so I will read on those next month.</p>
+
+<p>I wish I had done more hands-on programming with these new tools.</p>
+
+<p>The part I have enjoyed the most is discussing these ideas with others.
+I&rsquo;d like to try small reading groups or journal clubs around some of my
+future readings.</p>
+
+<p>Next, onto <a href="https://github.com/jasonm/reading-list/wiki/2014-March">March reading: including Clojure, FP concepts, and core.async</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

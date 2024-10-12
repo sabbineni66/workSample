@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "reactnd-flashcards",
+    "description": "Flashcards Project - Udacity's React Nanodegree - 3rd Project using ReactNative",
+    "slug": "reactnd-flashcards",
+    "privacy": "public",
+    "sdkVersion": "27.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}

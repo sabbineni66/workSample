@@ -1,0 +1,31 @@
+{
+  "name": "Entrant",
+  "version": "0.1.0",
+  "description": "Fit Entry check-in",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhsu/entrant"
+  },
+  "author": "Joe Hsu",
+  "license": "MIT",
+  "homepage": "https://github.com/jhsu/entrant",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^10.1.3",
+    "electron-prebuilt": "^0.28.1",
+    "gulp": "^3.8.11",
+    "gulp-atom": "^0.1.0",
+    "gulp-install": "^0.4.0",
+    "gulp-less": "^3.0.3",
+    "react": "^0.13.2",
+    "reactify": "^1.1.0",
+    "request": "^2.57.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
