@@ -70,6 +70,7 @@ def main():
     if uploaded_files:
         start_time = time.time()  # Track the time for performance
 
+        
         file_contents_list = []
         file_names = []
 
